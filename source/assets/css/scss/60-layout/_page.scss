@@ -1,0 +1,269 @@
+/*
+ * page wrapper and ".page-content" rules -- being phased out and replaced with ".page-layout" rules
+ */
+
+.page-wrapper {
+
+  min-height: 100vh;
+  margin: auto;
+
+  .no-cssvmaxunit & {
+
+    min-height: 100%;
+
+  }
+
+  /* NOTE: Set position and background color so things can behind this element when needed */
+
+  position: relative;
+  z-index: 1;
+  background: $white;
+
+  /* NOTE: Adjust *alert block" z-index */
+
+  .alert-block-wrapper {
+
+    z-index: -2; /* NOTE: Keeps this component below the desktop nav menus */
+
+  }
+
+}
+
+.page-content {
+
+  min-height: 600px; /* NOTE: magic number -- improves display on short pages */
+
+  .no-cssvmaxunit & {
+
+    flex: auto;
+
+  }
+
+  /* NOTE: Keep content below desktop menu */
+
+  position: relative;
+  z-index: -2;
+
+  &__item {
+
+    @include clearfix;
+    width: 100%;
+    max-width: $component-max-width;
+    padding: 0 1.5rem;
+    margin: 0 auto 3rem; /* NOTE: The top/bottom margin will change as we refine the vertical rhythm */
+    background: salmon; /* NOTE: useful to weed out old markup */
+    
+    &--wide {
+
+      max-width: none;
+      padding: 0;
+
+    }
+
+    &--with-bg {
+
+      background: $core-off-white;
+
+    }
+
+    &--with-bg-purple {
+      
+      background: $accent-purple;
+      
+    }
+
+    &--with-bg-dark {
+
+      background: $core-blue
+
+    }
+
+    &--touch-next {
+      
+      margin-bottom: 0;
+
+      & + * {
+
+        margin-top: 0;
+
+      }
+
+    }
+
+    /* NOTE: due to flexbox constraints, remove top margin of first children that aren't .grid elements (.grid elements need it) */
+
+    > *:first-child:not(.grid) {
+
+      margin-top: 0;
+
+    }
+
+    > .grid { /* NOTE: this is when a ".page-item" element includes a .page__item-inner element */
+
+      margin-bottom: 0; /* NOTE: prevents unnecessary space between ".page-content__item" elements */
+
+    }
+
+    /* NOTE: Images added within SharePoint's content editor web part */
+
+    /*
+      On smaller screens, images display at full width, regardless of an
+      alignment-related inline styles or classes.
+
+      On wider screens, the images align left/right if an inline style or class reflects that.
+
+      Images have a max-width of 350 pixels. To prepare for retina screens,
+      the images should naturally be 700 pixels wide.
+    */
+
+    .img--cms-added {
+
+      border-radius: $radius;
+      margin: 1rem auto;
+
+      &[align] {
+
+        float: none; /* This overrides inline "align:left" and "align:right" declarations */
+
+      }
+
+    }
+
+    /* NOTE SharePoint fix -- when ".page-content__item" is a child of another ".page-content__item" element, remove any padding/margin */
+
+    .page-content__item {
+
+      padding: 0;
+      margin: 0;
+
+    }
+
+  }
+
+  &__item-inner {
+
+    padding: 0 1.5rem;
+    max-width: $component-max-width;
+    margin: auto;
+
+    /* NOTE: remove top margin from first child, botton margin from last child */
+
+    > *:first-child {
+
+      //
+
+    }
+
+    > *:last-child {
+
+      //
+
+    }
+
+  }
+
+  &__divider {
+
+    //
+
+  }
+
+}
+
+@include sb-media($small-breakpoint) {
+
+  .page-content__item {
+
+    padding: 2rem;
+
+    &--wide {
+
+      padding: 0;
+
+    }
+
+  }
+
+  .page-content__item-inner {
+
+    padding: 2rem;
+
+  }
+
+}
+
+@include sb-media($medium-breakpoint) {
+
+  .page-content, 
+  .page-layout {
+
+    //
+
+    &__item, 
+    &__section {
+
+      padding: 0 $page-side-padding;
+
+      &--wide {
+
+        padding: 0;
+
+      }
+
+    }
+
+    &__item-inner {
+
+      padding: 2.5rem;
+
+    }
+
+  }
+
+}
+
+@include sb-media($large-breakpoint) {
+
+  .page-content {
+
+    &__item {
+
+      //
+
+      &--wide {
+
+        padding: 0;
+
+      }
+
+      /* NOTE SharePoint fix -- when ".page-content__item" is a child of another ".page-content__item" element, remove any padding/margin */
+
+      .page-content__item {
+
+        padding: 0;
+        margin: 0;
+
+      }
+
+    }
+
+  }
+
+}
+
+/* NOTE: Remove bottom margin for last ".page-content__item" so its bottom lines up with the sidebar's bottom (when sidebar is sticky). */
+/* NOTE: This is a very specific rule, which only works in Pattern Lab. In dev, each .page-content__item is wrapped in a parent element, so targeting :last-child this way will not work */
+
+.page-grid__cell > .page-content__item:last-child {
+
+  margin-bottom: 0;
+
+  /* NOTE: target last child in .page-content__item */
+
+  > *:last-child {
+
+    margin-bottom: 0;
+
+  }
+
+}

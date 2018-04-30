@@ -1,0 +1,39 @@
+{{# card }}
+
+<div class="card {{ card-modifier }}">
+
+  <a class="card__link-wrapper" href="">
+
+    {{# img-name }}
+    <div class="card__img-wrapper">
+      <img class="card__img" srcset="
+        ../../assets/images/{{ img-name }}@1x.{{ img-type }} 1x,
+        ../../assets/images/{{ img-name }}@2x.{{ img-type }} 2x" alt="…">
+    </div>
+    {{/ img-name }}
+
+    <div class="card__text-wrapper">
+
+      <p class="card__primary-text">
+        {{{ primary-text }}}
+      </p>
+
+      {{# secondary-text }}
+      <p class="card__secondary-text {{ secondary-text-modifier }}">
+        {{{ secondary-text }}}
+      </p>
+      {{/ secondary-text }}
+
+      {{# summary-text }}
+      <p class="card__summary-text">
+        {{{ summary-text }}}
+      </p>
+      {{/ summary-text }}
+
+    </div>
+
+  </a>
+
+</div>
+
+{{/ card }}

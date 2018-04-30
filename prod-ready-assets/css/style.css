@@ -1,0 +1,1407 @@
+/*
+ * base / reset
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header,
+footer,
+nav,
+section,
+article,
+figure,
+picture,
+iframe {
+  display: block;
+}
+
+html,
+body,
+div,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+li,
+form,
+legend,
+label,
+table,
+header,
+footer,
+nav,
+section,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * base / main
+ */
+html {
+  font-size: 1rem;
+}
+
+html,
+body {
+  font: normal normal normal 100%/1.5 "TransportNewLight_gdi", Helvetica, Arial, sans-serif;
+  color: #0b0c0c;
+  background: white;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  /* NOTE: This was added so the desktop menus are visible when viewing that component/organism on its own */
+}
+
+body {
+  /* NOTE: https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust */
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  /* NOTE: since the mobile header is sticky, the top padding here is used as a placeholder */
+  padding: 60px 0 0;
+  /* NOTE: top value is magic number -- based on mobile header height */
+  /* NOTE: Font smoothing (non-standard) -- https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth */
+  -webkit-font-smoothing: antialiased;
+  /* NOTE: IE Edge is giving wide horizontal scrollbar -- hide overflow to fix */
+  /* NOTE: the mobile nav is hidden at the $large-breakpoint, so the padding can be set to zero */
+}
+.mod_no-flexboxlegacy body {
+  overflow-x: hidden;
+}
+@media (min-width: 64em) {
+  body {
+    padding: 0;
+  }
+}
+
+/*
+ * component grid
+ */
+.grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+.no-flexbox .grid {
+  width: calc(100% + 1em);
+}
+.no-flexbox .grid:before, .no-flexbox .grid:after {
+  content: " ";
+  display: table;
+}
+.no-flexbox .grid:after {
+  clear: both;
+}
+.no-flexboxlegacy .grid:before, .no-flexboxlegacy .grid:after {
+  content: " ";
+  display: table;
+}
+.no-flexboxlegacy .grid:after {
+  clear: both;
+}
+.grid__cell {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.grid__cell--inherit {
+  -ms-flex: inherit;
+  flex: inherit;
+}
+.grid__cell-inner {
+  width: 100%;
+  /* grid demo rule */
+}
+.grid__cell-inner--demo {
+  background: #ecf0f3;
+  padding: 1rem;
+}
+.no-flexbox .grid__cell-inner {
+  display: block;
+}
+
+.grid--flex-cells > .grid__cell {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.grid--top {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.grid--bottom {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.grid--center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.grid--justifyCenter {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.grid__cell--top {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.grid__cell--bottom {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
+.grid__cell--center {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.grid__cell--autoSize {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.grid--fit > .grid__cell {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.grid--full > .grid__cell {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+}
+
+.grid--1of2 > .grid__cell {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  width: 50%;
+}
+
+.grid--1of3 > .grid__cell {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 33.3333%;
+  -ms-flex: 0 0 33.3333%;
+  flex: 0 0 33.3333%;
+  width: 33.3333%;
+}
+
+.grid--1of4 > .grid__cell {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  width: 25%;
+}
+
+.grid--1of5 > .grid__cell {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 20%;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  width: 20%;
+}
+
+@media (min-width: 30em) {
+  .small-grid--fit > .grid__cell {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .small-grid--full > .grid__cell {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+
+  .small-grid--1of2 > .grid__cell {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
+  .no-flexboxlegacy .small-grid--1of2 > .grid__cell {
+    float: left;
+    width: 50%;
+  }
+
+  .small-grid--1of3 > .grid__cell {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.3333%;
+    -ms-flex: 0 0 33.3333%;
+    flex: 0 0 33.3333%;
+  }
+  .no-flexboxlegacy .small-grid--1of3 > .grid__cell {
+    float: left;
+    width: 33.3333%;
+  }
+
+  .small-grid--1of4 > .grid__cell {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+  }
+  .no-flexboxlegacy .small-grid--1of4 > .grid__cell {
+    float: left;
+    width: 25%;
+  }
+
+  .small-grid--1of5 > .grid__cell {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 20%;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+  }
+  .no-flexboxlegacy .small-grid--1of5 > .grid__cell {
+    float: left;
+    width: 20%;
+  }
+}
+@media (min-width: 48em) {
+  .med-grid--fit > .grid__cell {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .med-grid--full > .grid__cell {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+
+  .med-grid--1of2 > .grid__cell {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
+  .no-flexboxlegacy .med-grid--1of2 > .grid__cell {
+    flex: 1;
+  }
+
+  .med-grid--1of3 > .grid__cell {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.3333%;
+    -ms-flex: 0 0 33.3333%;
+    flex: 0 0 33.3333%;
+  }
+  .no-flexboxlegacy .med-grid--1of3 > .grid__cell {
+    float: left;
+    width: 33.3333%;
+  }
+
+  .med-grid--1of4 > .grid__cell {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+  }
+  .no-flexboxlegacy .med-grid--1of4 > .grid__cell {
+    float: left;
+    width: 25%;
+  }
+
+  .med-grid--1of5 > .grid__cell {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 20%;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+  }
+  .no-flexboxlegacy .med-grid--1of5 > .grid__cell {
+    float: left;
+    width: 20%;
+  }
+}
+@media (min-width: 64em) {
+  .large-grid--fit > .grid__cell {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .large-grid--full > .grid__cell {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+
+  .large-grid--1of2 > .grid__cell {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
+  .no-flexboxlegacy .large-grid--1of2 > .grid__cell {
+    float: left;
+    width: 50%;
+  }
+
+  .large-grid--1of3 > .grid__cell {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.3333%;
+    -ms-flex: 0 0 33.3333%;
+    flex: 0 0 33.3333%;
+  }
+  .no-flexboxlegacy .large-grid--1of3 > .grid__cell {
+    float: left;
+    width: 33.3333%;
+  }
+
+  .large-grid--1of4 > .grid__cell {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+  }
+  .no-flexboxlegacy .large-grid--1of4 > .grid__cell {
+    float: left;
+    width: 25%;
+  }
+
+  .large-grid--1of5 > .grid__cell {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 20%;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+  }
+  .no-flexboxlegacy .large-grid--1of5 > .grid__cell {
+    float: left;
+    width: 20%;
+  }
+}
+.grid--gutters {
+  margin: -1em 0 1em -1em;
+}
+
+.grid--gutters > .grid__cell {
+  padding: 1em 0 0 1em;
+}
+
+.grid--guttersLg {
+  margin: -1.5em 0 1.5em -1.5em;
+}
+
+.grid--guttersLg > .grid__cell {
+  padding: 1.5em 0 0 1.5em;
+}
+
+.grid--guttersXl {
+  margin: -2em 0 2em -2em;
+}
+
+.grid--guttersXl > .grid__cell {
+  padding: 2em 0 0 2em;
+}
+
+.grid--gutters-doubleXl {
+  margin: -3em 0 3em -3em;
+}
+
+.grid--gutters-doubleXl > .grid__cell {
+  padding: 3em 0 0 3em;
+}
+
+@media (min-width: 30em) {
+  .small-grid--gutters {
+    margin: -1em 0 1em -1em;
+  }
+
+  .small-grid--gutters > .grid__cell {
+    padding: 1em 0 0 1em;
+  }
+
+  .small-grid--guttersLg {
+    margin: -1.5em 0 1.5em -1.5em;
+  }
+
+  .small-grid--guttersLg > .grid__cell {
+    padding: 1.5em 0 0 1.5em;
+  }
+
+  .small-grid--guttersXl {
+    margin: -2em 0 2em -2em;
+  }
+
+  .small-grid--guttersXl > .grid__cell {
+    padding: 2em 0 0 2em;
+  }
+}
+@media (min-width: 48em) {
+  .med-grid--gutters {
+    margin: -1em 0 1em -1em;
+  }
+
+  .med-grid--gutters > .grid__cell {
+    padding: 1em 0 0 1em;
+  }
+
+  .med-grid--guttersLg {
+    margin: -1.5em 0 1.5em -1.5em;
+  }
+
+  .med-grid--guttersLg > .grid__cell {
+    padding: 1.5em 0 0 1.5em;
+  }
+
+  .med-grid--guttersXl {
+    margin: -2em 0 2em -2em;
+  }
+
+  .med-grid--guttersXl > .grid__cell {
+    padding: 2em 0 0 2em;
+  }
+}
+@media (min-width: 64em) {
+  .large-grid--gutters {
+    margin: -1em 0 1em -1em;
+  }
+
+  .large-grid--gutters > .grid__cell {
+    padding: 1em 0 0 1em;
+  }
+
+  .large-grid--guttersLg {
+    margin: -1.5em 0 1.5em -1.5em;
+  }
+
+  .large-grid--guttersLg > .grid__cell {
+    padding: 1.5em 0 0 1.5em;
+  }
+
+  .large-grid--guttersXl {
+    margin: -2em 0 2em -2em;
+  }
+
+  .large-grid--guttersXl > .grid__cell {
+    padding: 2em 0 0 2em;
+  }
+}
+/* grid cell modifiers */
+.grid__cell--full.grid__cell {
+  /* added specificity to override default .grid__cell rule */
+  -webkit-box-flex: 100%;
+  -webkit-flex: 100%;
+  -ms-flex: 100%;
+  flex: 100%;
+}
+
+.no-flexbox .grid__cell.grid__cell--full {
+  display: block !important;
+  width: 100% !important;
+}
+
+.grid__cell--1of2 {
+  width: 50% !important;
+  -webkit-box-flex: 0 !important;
+  -webkit-flex: none !important;
+  -ms-flex: none !important;
+  flex: none !important;
+}
+.no-flexbox .grid__cell--1of2 {
+  float: left;
+}
+
+.grid__cell--1of3 {
+  width: 33.3333% !important;
+  -webkit-box-flex: 0 !important;
+  -webkit-flex: none !important;
+  -ms-flex: none !important;
+  flex: none !important;
+}
+
+.grid__cell--1of4 {
+  width: 25% !important;
+  -webkit-box-flex: 0 !important;
+  -webkit-flex: none !important;
+  -ms-flex: none !important;
+  flex: none !important;
+}
+
+.grid__cell--1of5 {
+  width: 20% !important;
+  -webkit-box-flex: 0 !important;
+  -webkit-flex: none !important;
+  -ms-flex: none !important;
+  flex: none !important;
+}
+
+@media (min-width: 30em) {
+  .grid .small-grid__cell--1of2 {
+    width: 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+
+  .grid .small-grid__cell--1of3 {
+    width: 33.3333%;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+
+  .grid .small-grid__cell--1of4 {
+    width: 25%;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+
+  .grid .small-grid__cell--1of5 {
+    width: 20%;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+}
+@media (min-width: 48em) {
+  .grid .med-grid__cell--1of2 {
+    width: 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+
+  .grid .med-grid__cell--1of3 {
+    width: 33.3333%;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+
+  .grid .med-grid__cell--2of5 {
+    width: 40%;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+
+  .grid .med-grid__cell--1of4 {
+    width: 25%;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+
+  .grid .med-grid__cell--1of5 {
+    width: 20%;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+}
+/*
+ * utility / icon modifiers -- icon-related rules/fixes
+ */
+/* general */
+[class^="icon-"],
+[class*=" icon-"] {
+  text-align: center;
+  /* NOTE: resolves issue in IE 9 -- without this, some icons seem to left-align the icon character */
+}
+
+.icon--circled, .material-icons--circled {
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -ms-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  border: 2px solid;
+  border-radius: 50%;
+  padding: .5rem;
+  /* NOTE: use explicit dimensions in IE 9 -- otherwise, element displays as an oval  */
+}
+.no-csstransitions .icon--circled,
+.no-csstransitions .material-icons--circled {
+  font-size: 0;
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+}
+.no-csstransitions .icon--circled:before,
+.no-csstransitions .material-icons--circled:before {
+  display: block;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.material-icons--circled {
+  /* NOTE: fix for padding issue in IE 11 */
+  /* NOTE: override IE 9-specific rule above dealing with dimensions */
+}
+.no-flexboxlegacy .material-icons--circled {
+  padding: 10px 8px 6px;
+  /* NOTE: magic numbers */
+}
+.no-csstransitions .material-icons--circled {
+  font-size: 1em;
+  text-align: center;
+}
+
+a:hover .icon--circled,
+a:hover .material-icons--circled {
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+[class^="icon-"][class$="--success"],
+[class*=" icon-"][class$="--success"] {
+  color: #588023;
+}
+
+[class^="icon-"][class$="--error"],
+[class*=" icon-"][class$="--error"] {
+  color: #a83338;
+}
+
+[class^="icon-"][class$="--warning"],
+[class*=" icon-"][class$="--warning"] {
+  color: #9a6f09;
+}
+
+.icon--large {
+  font-size: 1.5rem;
+}
+
+/* NOTE: spinning icons */
+[class^="icon-"][class$="-spinning"],
+[class*=" icon-"][class$="-spinning"],
+[class^="material-icons"][class$="--spinning"],
+[class*=" material-icons"][class$="--spinning"] {
+  /* NOTE: In order to animate, must be set to display: -webkit-box;
+   * NOTE: IE doesn't require a 'display' value -- if set to display:block, IE 11 has display issues
+   */
+  display: -webkit-box;
+  width: 1em;
+  height: 1em;
+  /* NOTE: keep icon horizontally/vertically centered */
+  text-align: center;
+  line-height: 1em;
+  -webkit-animation-name: icon-spin;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: icon-spin;
+  -moz-animation-duration: 1s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: icon-spin;
+  -ms-animation-duration: 1s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  animation-name: icon-spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@-ms-keyframes icon-spin {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(-360deg);
+  }
+}
+@-moz-keyframes icon-spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes icon-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@keyframes icon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+/*
+ * utility / visibility
+ */
+[hidden],
+.hidden {
+  display: none !important;
+}
+
+.u-visible {
+  display: block;
+}
+
+/*
+ * NOTE: hide only visually, but have it available for screen readers:
+ *       http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+/* NOTE: using both class names since they're both being used */
+.visually-hidden,
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * NOTE: extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard:
+ *       https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * NOTE: hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * utility
+ */
+.u-nobr {
+  white-space: nowrap;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-no-text-transform {
+  text-transform: none;
+}
+
+.u-text-left {
+  text-align: left;
+  /* NOTE: override rules that affect alignment */
+}
+table td .u-text-left {
+  text-align: left;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+.u-float-right {
+  float: right;
+}
+
+.u-text-no-wrap {
+  white-space: nowrap;
+}
+
+.u-required {
+  color: #a83338;
+}
+
+.u-error {
+  color: #a83338;
+}
+
+.u-no-top-margin {
+  margin-top: 0;
+}
+
+/* NOTE: font sizes */
+.u-font-size {
+  margin: 0 0 1rem;
+}
+.u-font-size:last-child {
+  margin: 0;
+}
+.u-font-size--alpha {
+  font-size: 3rem;
+}
+.u-font-size--alpha-alt {
+  font-size: 3.157rem;
+}
+.u-font-size--beta {
+  font-size: 2.25rem;
+}
+.u-font-size--beta-alt {
+  font-size: 2.369rem;
+}
+.u-font-size--gamma {
+  font-size: 1.5em;
+}
+.u-font-size--gamma-alt {
+  font-size: 1.777rem;
+}
+.u-font-size--delta {
+  font-size: 1.3125rem;
+}
+.u-font-size--delta-alt {
+  font-size: 1.333rem;
+}
+.u-font-size--epsilon {
+  font-size: 1.125rem;
+}
+.u-font-size--epsilon-alt {
+  font-size: 1rem;
+}
+.u-font-size--zeta {
+  font-size: 1rem;
+}
+.u-font-size--zeta-alt {
+  font-size: 0.75rem;
+}
+.u-font-size--eta {
+  font-size: 0.8rem;
+}
+
+.u-color-white {
+  color: white;
+}
+
+/*
+ * utility / lists
+ */
+.u-clean-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+ * utility / background colors
+ */
+/* generic */
+.u-bg-white {
+  background-color: white;
+}
+
+.u-bg-black {
+  background-color: #0b0c0c;
+}
+
+.u-bg-dark-gray {
+  background-color: #5f6c7b;
+}
+
+.u-bg-medium-gray {
+  background-color: #95a0ad;
+}
+
+.u-bg-light-gray {
+  background-color: #ecf0f3;
+}
+
+/* core */
+.u-bg-core-black {
+  background-color: #0b0c0c;
+}
+
+.u-bg-core-blue {
+  background-color: #092940;
+}
+
+.u-bg-core-gray {
+  background-color: #5f6c7b;
+}
+
+.u-bg-core-light-gray {
+  background-color: #95a0ad;
+}
+
+.u-bg-core-off-white {
+  background-color: #ecf0f3;
+}
+
+.u-bg-core-white {
+  background-color: white;
+}
+
+/* accent */
+.u-bg-accent-cool-gray {
+  background-color: #6a7681;
+}
+
+.u-bg-accent-warm-gray {
+  background-color: #757575;
+}
+
+.u-bg-accent-light-blue {
+  background-color: #3f7d97;
+}
+
+.u-bg-accent-blue {
+  background-color: #397aac;
+}
+
+.u-bg-accent-indigo {
+  background-color: #00376d;
+}
+
+.u-bg-accent-deep-purple {
+  background-color: #662e6b;
+}
+
+.u-bg-accent-purple {
+  background-color: #701c45;
+}
+
+.u-bg-accent-red {
+  background-color: #a83338;
+}
+
+.u-bg-accent-orange {
+  background-color: #c05411;
+}
+
+.u-bg-accent-olive {
+  background-color: #9a6f09;
+}
+
+.u-bg-accent-green {
+  background-color: #588023;
+}
+
+.u-bg-accent-turquoise {
+  background-color: #3c807d;
+}
+
+.u-bg-accent-turquoise-light {
+  background-color: #4c9490;
+}
+
+.u-bg-accent-turquoise-dark {
+  background-color: #235f5d;
+}
+
+/* note -- reuses colors from accent palette */
+.u-bg-note-blue {
+  background-color: #397aac;
+}
+
+.u-bg-note-green {
+  background-color: #588023;
+}
+
+.u-bg-note-orange {
+  background-color: #c05411;
+}
+
+.u-bg-note-red {
+  background-color: #a83338;
+}
+
+/*
+ * utility / background images
+ */
+/* generic */
+.u-bg-img-white {
+  background-color: white;
+}
+
+.u-bg-img-black {
+  background-color: #0b0c0c;
+}
+
+.u-bg-img-dark-gray {
+  background-color: #5f6c7b;
+}
+
+.u-bg-img-medium-gray {
+  background-color: #95a0ad;
+}
+
+.u-bg-img-light-gray {
+  background-color: #ecf0f3;
+}
+
+/* core */
+.u-bg-img-core-black {
+  background-color: #0b0c0c;
+  background-image: url(../../assets/images/bg/bg_poly-core-black.jpg);
+}
+
+.u-bg-img-core-blue {
+  background-color: #092940;
+  background-image: url(../../assets/images/bg/bg_poly-core-blue.jpg);
+}
+
+.u-bg-img-core-gray {
+  background-color: #5f6c7b;
+  background-image: url(../../assets/images/bg/bg_poly-core-gray.jpg);
+}
+
+.u-bg-img-core-light-gray {
+  background-color: #95a0ad;
+  background-image: url(../../assets/images/bg/bg_poly-core-light-gray.jpg);
+}
+
+.u-bg-img-core-off-white {
+  background-color: #ecf0f3;
+  background-image: url(../../assets/images/bg/bg_poly-core-off-white.jpg);
+}
+
+.u-bg-img-core-white {
+  background-color: white;
+  background-image: url(../../assets/images/bg/bg_poly-core-white.jpg);
+}
+
+/* accent */
+.u-bg-img-accent-cool-gray {
+  background-color: #6a7681;
+  background-image: url(../../assets/images/bg/bg_poly-accent-cool-gray.jpg);
+}
+
+.u-bg-img-accent-warm-gray {
+  background-color: #757575;
+  background-image: url(../../assets/images/bg/bg_poly-accent-warm-gray.jpg);
+}
+
+.u-bg-img-accent-light-blue {
+  background-color: #3f7d97;
+  background-image: url(../../assets/images/bg/bg_poly-accent-light-blue.jpg);
+}
+
+.u-bg-img-accent-blue {
+  background-color: #397aac;
+  background-image: url(../../assets/images/bg/bg_poly-accent-blue.jpg);
+}
+
+.u-bg-img-accent-indigo {
+  background-color: #00376d;
+  background-image: url(../../assets/images/bg/bg_poly-accent-indigo.jpg);
+}
+
+.u-bg-img-accent-deep-purple {
+  background-color: #662e6b;
+  background-image: url(../../assets/images/bg/bg_poly-accent-deep-purple.jpg);
+}
+
+.u-bg-img-accent-purple {
+  background-color: #701c45;
+  background-image: url(../../assets/images/bg/bg_poly-accent-purple.jpg);
+}
+
+.u-bg-img-accent-red {
+  background-color: #a83338;
+  background-image: url(../../assets/images/bg/bg_poly-accent-red.jpg);
+}
+
+.u-bg-img-accent-orange {
+  background-color: #c05411;
+  background-image: url(../../assets/images/bg/bg_poly-accent-orange.jpg);
+}
+
+.u-bg-img-accent-olive {
+  background-color: #9a6f09;
+  background-image: url(../../assets/images/bg/bg_poly-accent-olive.jpg);
+}
+
+.u-bg-img-accent-green {
+  background-color: #588023;
+  background-image: url(../../assets/images/bg/bg_poly-accent-green.jpg);
+}
+
+.u-bg-img-accent-turquoise {
+  background-color: #3c807d;
+  background-image: url(../../assets/images/bg/bg_poly-accent-turquoise.jpg);
+}
+
+.u-bg-img-accent-turquoise-light {
+  background-color: #4c9490;
+  background-image: url(../../assets/images/bg/bg_poly-accent-turquoise-light.jpg);
+}
+
+.u-bg-img-accent-turquoise-dark {
+  background-color: #235f5d;
+  background-image: url(../../assets/images/bg/bg_poly-accent-turquoise-dark.jpg);
+}
+
+/* note -- reuses colors/images from accent palette */
+.u-bg-img-note-blue {
+  background-color: #397aac;
+  background-image: url(../../assets/images/bg/bg_poly-accent-blue.jpg);
+}
+
+.u-bg-img-note-green {
+  background-color: #588023;
+  background-image: url(../../assets/images/bg/bg_poly-accent-green.jpg);
+}
+
+.u-bg-img-note-orange {
+  background-color: #c05411;
+  background-image: url(../../assets/images/bg/bg_poly-accent-orange.jpg);
+}
+
+.u-bg-img-note-red {
+  background-color: #a83338;
+  background-image: url(../../assets/images/bg/bg_poly-accent-red.jpg);
+}
+
+/*
+ * utility / text colors
+ */
+/* generic */
+.u-text-white,
+a.u-text-white,
+a.u-text-white:visited
+a.u-text-white:hover {
+  color: white;
+}
+
+.u-text-black {
+  color: #0b0c0c;
+}
+
+.u-text-dark-gray {
+  color: #5f6c7b;
+}
+
+.u-text-medium-gray {
+  color: #95a0ad;
+}
+
+.u-text-light-gray {
+  color: #ecf0f3;
+}
+
+/* core */
+.u-text-core-black {
+  color: #0b0c0c;
+}
+
+.u-text-core-blue,
+a.u-text-core-blue,
+a.u-text-core-blue:visited
+a.u-text-core-blue:hover {
+  color: #092940;
+}
+
+.u-text-core-gray {
+  color: #5f6c7b;
+}
+
+.u-text-core-light-gray {
+  color: #95a0ad;
+}
+
+.u-text-core-off-white {
+  color: #ecf0f3;
+}
+
+.u-text-core-white {
+  color: white;
+}
+
+/* accent */
+.u-text-accent-cool-gray {
+  color: #6a7681;
+}
+
+.u-text-accent-warm-gray {
+  color: #757575;
+}
+
+.u-text-accent-light-blue {
+  color: #3f7d97;
+}
+
+.u-text-accent-blue {
+  color: #397aac;
+}
+
+.u-text-accent-indigo {
+  color: #00376d;
+}
+
+.u-text-accent-deep-purple {
+  color: #662e6b;
+}
+
+.u-text-accent-purple {
+  color: #701c45;
+}
+
+.u-text-accent-red {
+  color: #a83338;
+}
+
+.u-text-accent-orange {
+  color: #c05411;
+}
+
+.u-text-accent-olive {
+  color: #9a6f09;
+}
+
+.u-text-accent-green {
+  color: #588023;
+}
+
+.u-text-accent-turquoise {
+  color: #3c807d;
+}
+
+/* note */
+.u-text-note-blue {
+  color: #397aac;
+}
+
+.u-text-note-green {
+  color: #588023;
+}
+
+.u-text-note-orange {
+  color: #c05411;
+}
+
+.u-text-note-red {
+  color: #a83338;
+}
+
+/*
+ * utility / spacing
+ */
+.u-margin-bottom {
+  margin-bottom: 1rem;
+}
+.u-margin-bottom-2x {
+  margin-bottom: 2rem;
+  /* NOTE: adding child selector to resolve specificity issue */
+}
+.page-layout__section .u-margin-bottom-2x {
+  margin-bottom: 2rem;
+}
+.u-no-top-margin {
+  margin-top: 0;
+}
+.u-double-bottom-margin {
+  margin-bottom: 2rem;
+}
+
+/*
+ * utility / media
+ */
+.u-rounded {
+  border-radius: 4px;
+}
+
+/*
+ * utility / display -- show/hide depending on viewport width
+ */
+.u-display--medium {
+  display: none;
+}
+@media (min-width: 48em) {
+  .u-display--medium {
+    display: block;
+  }
+}
+@media (min-width: 48em) {
+  .u-display--small-only {
+    display: none;
+  }
+}
+@media (min-width: 64em) {
+  .u-display--medium-only {
+    display: none;
+  }
+}
+.u-display--large-only {
+  display: none;
+}
+@media (min-width: 64em) {
+  .u-display--large-only {
+    display: block;
+  }
+}
+@media (min-width: 64em) {
+  .u-display--small-medium-only {
+    display: none;
+  }
+}
+
+/* NOTE: IE 9/10 doesn't support media queries */
+
+/*# sourceMappingURL=style.css.map */

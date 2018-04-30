@@ -1,0 +1,98 @@
+{{# wide-nav }}
+<nav class="wide-nav {{ modifier }} {{ parameter_modifier }} {{ wide-nav_modifier }}" role="navigation">
+
+  <div class="wide-nav__inner-wrapper">
+
+    <ul class="wide-nav__list" role="menubar" aria-label="NCDOT Menu">
+
+      {{# item }}
+
+      <li class="wide-nav__list-item {{ wide-nav-list-item-modifier }}" role="presentation">
+
+        <a class="wide-nav__link {{ modifier }}" href="{{ url }}" role="menuitem" aria-haspopup="true" aria-selected="false" id="{{ id }}" tabindex="{{ tabindex }}">
+          {{{ text }}}
+          <i class="icon-keyboard-arrow-down"></i>
+        </a>
+
+        {{# sub-menu }}
+
+        <div class="wide-nav-sub" aria-label="submenu" aria-labelledby="{{ primary-menu-item-ID }}" aria-hidden="true" aria-expanded="false">
+
+          <div class="wide-nav-sub__inner-wrapper">
+
+            <h1 class="heading wide-nav-sub__title">
+              {{# url}}
+              <a href="{{ url }}">
+              {{/ url }}
+                {{ text }}
+              {{# url}}
+              </a>
+              {{/ url}}
+            </h1>
+
+            <ul class="wide-nav-sub__list grid grid--guttersLg grid--1of4" role="menu">
+
+              {{# sub-menu-item }}
+
+              <li class="wide-nav-sub__list-item grid__cell {{ modifier }}" role="presentation">
+
+                <a class="wide-nav-sub__link" href="{{ url }}" role="menuitem" tabindex="">
+                  {{ text }}
+                </a>
+
+                {{# sub-sub-menu }}
+
+                <div class="wide-nav-sub-sub {{ modifier }}">
+                  <ul class="wide-nav-sub-sub__list" role="menu">
+
+                    {{# sub-sub-menu-item }}
+                    <li class="wide-nav-sub-sub__list-item" role="presentation">
+                      <a class="wide-nav-sub-sub__link" href="{{ url }}" role="menuitem" tabindex="">
+                        {{ text }}
+                      </a>
+                    </li>
+                    {{/ sub-sub-menu-item }}
+
+                  </ul>
+                </div>
+
+                {{/ sub-sub-menu }}
+
+              </li>
+
+              {{/ sub-menu-item }}
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        {{/ sub-menu }}
+
+      </li>
+
+      {{/ item }}
+
+      {{!
+      NOTE: Disregard this element
+      <li class="wide-nav__more-container" data-width="78">
+        <a class="wide-nav__more-btn" href="#">
+          <span class="hidden">
+            More
+          </span>
+          <i class="icon-hellip">
+          </i>
+        </a>
+        <ul class="wide-nav__more-list">
+
+        </ul>
+      </li>
+      }}
+
+    </ul>
+
+  </div>
+
+</nav>
+{{/ wide-nav }}

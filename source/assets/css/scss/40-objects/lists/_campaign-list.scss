@@ -1,0 +1,274 @@
+/*
+ * campaign list
+ */
+
+.campaign-list {
+
+  @include clean-list;
+  margin: 0;
+  padding: 1rem 0 0;
+
+  &__item {
+
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding: 0 0 1rem;
+    border-bottom: 1px solid $core-light-gray;
+    margin: 0 0 1rem;
+
+    &:last-child {
+
+      margin: 0;
+      border: 0;
+
+    }
+
+  }
+
+  &__img-wrapper {
+
+    display: block;
+    margin: 0 0 1rem;
+
+  }
+
+  &__img {
+
+    //
+
+  }
+
+  &__text-wrapper {
+
+    //
+
+  }
+
+  &__item-heading {
+    
+    font-size: $font-size--eta;
+    margin: 0 0 .5rem;
+
+  }
+
+  &__text {
+
+    margin: 0;
+
+  }
+
+  &--color-bg {
+
+    color: $white;
+    background: $core-gray; /* NOTE: placeholder color since the text is white -- this may be overwritten when the component is included within other components */
+    border-color: $white;
+
+  }
+
+  &.grid--gutters {
+
+    margin: -1em 0 0 -1em;
+
+  }
+
+  &.grid--guttersLg {
+    
+    margin: -1.5em 0 0 -1.5em;
+
+  }
+    
+  &--split {
+
+    border-top: 0;
+
+    .campaign-list__item {
+
+      border: 0;
+      margin: 0;
+      
+      .campaign-list__item-inner {
+
+        display: -ms-flex;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;    
+        flex-direction: column;    
+        padding: 0 0 1rem;
+        border-bottom: 1px solid $core-light-gray;
+
+      }
+
+      &:last-child {
+
+        //
+
+        .campaign-list__item-inner {
+
+          border-bottom-width: 0;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  @include sb-media(20em) {
+    
+    &__item {
+      
+      -webkit-flex-direction: row;
+      flex-direction: row;
+
+    }
+
+    .campaign-list__item-inner {
+      
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;    
+      flex-direction: row;    
+
+    }
+
+    .campaign-list__img-wrapper {
+      
+      -webkit-flex: 0 0 20%;
+      flex: 0 0 20%;
+      margin: 0 1rem 0 0;
+
+    }
+    
+    .campaign-list__item > .campaign-list__img-wrapper {
+      
+      -webkit-flex: 0 0 20%;
+      flex: 0 0 20%;
+      margin: 0 1rem 0 0;
+
+    }
+
+    &--split {
+      
+      .campaign-list__item {
+
+        //
+
+        .campaign-list__item-inner {
+
+          -webkit-flex-direction: row;    
+          flex-direction: row;    
+
+        }
+
+      }
+
+      .campaign-list__img-wrapper {
+
+        -webkit-flex: 0 0 20%;
+        flex: 0 0 20%;
+        margin: 0 1rem 0 0;
+
+      }
+
+    }
+
+  }
+
+  @include sb-media(30em) {
+
+    .campaign-list__img-wrapper {
+      
+      -webkit-flex: 0 0 200px;
+      flex: 0 0 200px;
+
+    }
+
+  }
+  
+  @include sb-media($large-breakpoint) {
+
+    &__item-heading {
+
+      font-size: $font-size--default;
+
+    }
+
+    &__img-wrapper {
+
+      -webkit-flex: 0 0 200px;
+      flex: 0 0 200px;
+
+    }
+
+    &--split {
+      
+      //
+
+      .campaign-list__item {
+
+        //
+
+        /* NOTE: on wide screens, remove bottom border of element for last item in both columns (items are floated left/right, so we have to be specific) */
+
+        &:last-child, 
+        //&:nth-last-child(2):nth-child(even),
+        &:nth-last-child(1):nth-child(odd), 
+        &:nth-last-child(2):nth-child(odd) {
+
+          .campaign-list__item-inner {
+
+            border: 0;
+
+          }
+          
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.no-flexbox {
+
+  .campaign-list {
+
+    //
+
+    &__item {
+
+      display: block;
+      overflow: hidden; 
+
+    }
+
+    &__item-inner {
+
+      overflow: hidden;
+      
+    }
+
+    &__img-wrapper {
+
+      display: block;
+      width: 200px;
+      float: left; 
+      margin: 0 1rem 0 0;
+
+      img {
+
+        border: 0;
+
+      }
+      
+    }
+
+  }
+
+}

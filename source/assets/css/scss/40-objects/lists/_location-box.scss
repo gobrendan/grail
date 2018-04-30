@@ -1,0 +1,227 @@
+/*
+ * location box
+ */
+
+.location-box {
+
+  //
+
+  &__heading {
+
+    //
+
+  }
+
+  &__subheading {
+
+    margin: .5rem 0;
+
+  }
+
+  &__p {
+
+    margin: 0 0 1rem;
+
+    &:last-child {
+
+      margin: 0;
+
+    }
+
+  }
+
+  &__a {
+
+    font: $font-italic;
+    color: $core-gray;
+
+  }
+
+  &__address {
+
+    margin: 0 0 2rem;
+
+  }
+
+  &__map {
+
+    //
+
+  }
+
+  &__list {
+
+    @include clean-list;
+    margin: 0;
+
+  }
+
+  &__list-item {
+
+    @include clearfix;
+    margin: 0 0 .5rem;
+
+    i {
+
+      display: block;
+      float: left;
+      line-height: 1.5;
+      margin: 0 .25rem 0 0;
+
+    }
+
+    span {
+
+      display: block;
+      width: calc(100% - 20px);  /* NOTE: magic number -- second number is width of icon plus its margin */
+      float: left;
+
+    }
+
+    &:last-child {
+
+      margin: 0;
+
+    }
+
+  }
+
+  &__top {
+
+    @include clearfix;
+    margin: 0 0 2rem;
+
+  }
+
+  &__grid {
+
+    //
+
+  }
+
+  &__grid-cell {
+
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: $core-gray;
+
+    &:first-child {
+
+      border-top-width: 1px;
+
+    }
+
+    &:last-child {
+
+      border-width: 0;
+
+    }
+
+    &:first-child {
+
+      .location-box__grid-cell-inner {
+
+        //
+
+      }
+
+    }
+
+  }
+
+  &__grid-cell-inner {
+
+    padding: 1rem 0;
+
+  }
+
+  @include sb-media($medium-breakpoint) {
+
+    &__subheading {
+
+      margin-top: 0;
+
+    }
+
+    &__address {
+
+      width: 35%;
+      float: left;
+      margin: 0;
+
+    }
+
+    &__map {
+
+      width: 65%;
+      height: 220px;
+      float: right;
+
+    }
+
+    &__grid {
+
+      //
+
+    }
+
+    &__grid-cell {
+
+      border-width: 0 1px 0 0;
+
+      &:first-child {
+
+        border-top: 0;
+
+      }
+
+      &:last-child {
+
+        //
+
+      }
+
+      &:first-child {
+
+        .location-box__grid-cell-inner {
+
+          padding-left: 0;
+
+        }
+
+      }
+
+    }
+
+    &__grid-cell-inner {
+
+      padding: 1rem 1rem 0;
+      border-top: 1px solid $core-gray;
+
+    }
+
+  }
+
+}
+
+.location-box-list {
+
+  @include clean-list;
+
+  &__item {
+
+    padding: 0 0 2rem;
+    border-bottom: 1px solid $core-gray;
+    margin: 0 0 2rem;
+
+    &:last-child {
+
+      padding: 0;
+      border: 0;
+      margin: 0;
+
+    }
+
+  }
+
+}

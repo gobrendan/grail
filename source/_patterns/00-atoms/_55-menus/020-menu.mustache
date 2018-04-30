@@ -1,0 +1,15 @@
+{{# menu }}
+
+<div class="menu-wrapper {{ menu-wrapper-modifier }}">
+
+  <select class="custom-select" {{# default-text }}data-default-text="{{ default-text }}"{{/ default-text }}>
+    {{# item }}
+    <option>
+      {{ text }}
+    </option>
+    {{/ item }}
+  </select>
+
+</div>
+
+{{/ menu }}

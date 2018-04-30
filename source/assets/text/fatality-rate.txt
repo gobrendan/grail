@@ -1,0 +1,366 @@
+{
+    "ArrayOfCountyData": {
+        "lastUpdate": "10/31/2016",
+        "CountyData": [
+            {
+                "CountyName": "Statewide",
+                "CrashCount": "238042",
+                "FatalityCount": "1175",
+                "InjuryCount": "105655",
+                "CrashRateByYear": [
+                    {
+                        "Year": "2000",
+                        "Crashes": "231124",
+                        "Fatalities": "1560",
+                        "Injuries": "141159",
+                        "VMT": "892.46",
+                        "CrashRate": "258.97",
+                        "FatalityRate": "1.75",
+                        "InjuryRate": "150.67"
+                    },
+                    {
+                        "Year": "2001",
+                        "Crashes": "225323",
+                        "Fatalities": "1533",
+                        "Injuries": "134115",
+                        "VMT": "915.71",
+                        "CrashRate": "246.06",
+                        "FatalityRate": "1.67",
+                        "InjuryRate": "146.46"
+                    },
+                    {
+                        "Year": "2002",
+                        "Crashes": "234234",
+                        "Fatalities": "1579",
+                        "Injuries": "133360",
+                        "VMT": "936.86",
+                        "CrashRate": "250.02",
+                        "FatalityRate": "1.69",
+                        "InjuryRate": "142.35"
+                    },
+                    {
+                        "Year": "2003",
+                        "Crashes": "248021",
+                        "Fatalities": "1562",
+                        "Injuries": "134709",
+                        "VMT": "937.63",
+                        "CrashRate": "264.52",
+                        "FatalityRate": "1.67",
+                        "InjuryRate": "143.67"
+                    },
+                    {
+                        "Year": "2004",
+                        "Crashes": "248510",
+                        "Fatalities": "1579",
+                        "Injuries": "133153",
+                        "VMT": "956.27",
+                        "CrashRate": "259.87",
+                        "FatalityRate": "1.65",
+                        "InjuryRate": "139.24"
+                    },
+                    {
+                        "Year": "2005",
+                        "Crashes": "233980",
+                        "Fatalities": "1552",
+                        "Injuries": "124135",
+                        "VMT": "1008.61",
+                        "CrashRate": "231.98",
+                        "FatalityRate": "1.54",
+                        "InjuryRate": "123.08"
+                    },
+                    {
+                        "Year": "2006",
+                        "Crashes": "235982",
+                        "Fatalities": "1560",
+                        "Injuries": "120410",
+                        "VMT": "1016.48",
+                        "CrashRate": "232.16",
+                        "FatalityRate": "1.53",
+                        "InjuryRate": "118.46"
+                    },
+                    {
+                        "Year": "2007",
+                        "Crashes": "241967",
+                        "Fatalities": "1704",
+                        "Injuries": "120120",
+                        "VMT": "1035.98",
+                        "CrashRate": "233.56",
+                        "FatalityRate": "1.64",
+                        "InjuryRate": "115.95"
+                    },
+                    {
+                        "Year": "2008",
+                        "Crashes": "235422",
+                        "Fatalities": "1466",
+                        "Injuries": "112614",
+                        "VMT": "1014.63",
+                        "CrashRate": "232.03",
+                        "FatalityRate": "1.44",
+                        "InjuryRate": "110.99"
+                    },
+                    {
+                        "Year": "2009",
+                        "Crashes": "231177",
+                        "Fatalities": "1346",
+                        "Injuries": "109908",
+                        "VMT": "1025.9",
+                        "CrashRate": "225.34",
+                        "FatalityRate": "1.31",
+                        "InjuryRate": "107.13"
+                    },
+                    {
+                        "Year": "2010",
+                        "Crashes": "237558",
+                        "Fatalities": "1329",
+                        "Injuries": "109463",
+                        "VMT": "1023.85",
+                        "CrashRate": "232.02",
+                        "FatalityRate": "1.3",
+                        "InjuryRate": "106.91"
+                    },
+                    {
+                        "Year": "2011",
+                        "Crashes": "233140",
+                        "Fatalities": "1225",
+                        "Injuries": "107125",
+                        "VMT": "1037.38",
+                        "CrashRate": "224.74",
+                        "FatalityRate": "1.18",
+                        "InjuryRate": "103.26"
+                    },
+                    {
+                        "Year": "2012",
+                        "Crashes": "238642",
+                        "Fatalities": "1275",
+                        "Injuries": "110413",
+                        "VMT": "1044.65",
+                        "CrashRate": "228.44",
+                        "FatalityRate": "1.22",
+                        "InjuryRate": "105.69"
+                    },
+                    {
+                        "Year": "2013",
+                        "Crashes": "247112",
+                        "Fatalities": "1283",
+                        "Injuries": "108889",
+                        "VMT": "1051.44",
+                        "CrashRate": "235.02",
+                        "FatalityRate": "1.22",
+                        "InjuryRate": "103.56"
+                    },
+                    {
+                        "Year": "2014",
+                        "Crashes": "252305",
+                        "Fatalities": "1283",
+                        "Injuries": "110640",
+                        "VMT": "1080.4",
+                        "CrashRate": "233.53",
+                        "FatalityRate": "1.19",
+                        "InjuryRate": "102.41"
+                    },
+                    {
+                        "Year": "2015",
+                        "Crashes": "279726",
+                        "Fatalities": "1387",
+                        "Injuries": "123657",
+                        "VMT": "1118.72",
+                        "CrashRate": "250.04",
+                        "FatalityRate": "1.24",
+                        "InjuryRate": "110.53"
+                    },
+                    {
+                        "Year": "2016",
+                        "Crashes": "238042",
+                        "Fatalities": "1175",
+                        "Injuries": "105655",
+                        "VMT": "963.36",
+                        "CrashRate": "247.1",
+                        "FatalityRate": "1.22",
+                        "InjuryRate": "109.67"
+                    }
+                ]
+            },
+
+            {
+                "CountyName": "Wake",
+                "CrashCount": "28645",
+                "FatalityCount": "63",
+                "InjuryCount": "10512",
+                "CrashRateByYear": [
+                    {
+                        "Year": "2000",
+                        "Crashes": "22704",
+                        "Fatalities": "64",
+                        "Injuries": "10102",
+                        "VMT": "62.03",
+                        "CrashRate": "365.99",
+                        "FatalityRate": "1.03",
+                        "InjuryRate": "149.36"
+                    },
+                    {
+                        "Year": "2001",
+                        "Crashes": "22459",
+                        "Fatalities": "54",
+                        "Injuries": "9735",
+                        "VMT": "66.03",
+                        "CrashRate": "340.14",
+                        "FatalityRate": "0.82",
+                        "InjuryRate": "147.44"
+                    },
+                    {
+                        "Year": "2002",
+                        "Crashes": "23793",
+                        "Fatalities": "77",
+                        "Injuries": "9483",
+                        "VMT": "67.64",
+                        "CrashRate": "351.78",
+                        "FatalityRate": "1.14",
+                        "InjuryRate": "140.21"
+                    },
+                    {
+                        "Year": "2003",
+                        "Crashes": "24748",
+                        "Fatalities": "75",
+                        "Injuries": "9912",
+                        "VMT": "68.6",
+                        "CrashRate": "360.76",
+                        "FatalityRate": "1.09",
+                        "InjuryRate": "144.49"
+                    },
+                    {
+                        "Year": "2004",
+                        "Crashes": "25465",
+                        "Fatalities": "71",
+                        "Injuries": "10130",
+                        "VMT": "69.64",
+                        "CrashRate": "365.64",
+                        "FatalityRate": "1.02",
+                        "InjuryRate": "145.45"
+                    },
+                    {
+                        "Year": "2005",
+                        "Crashes": "23957",
+                        "Fatalities": "59",
+                        "Injuries": "9425",
+                        "VMT": "76.51",
+                        "CrashRate": "313.12",
+                        "FatalityRate": "0.77",
+                        "InjuryRate": "123.19"
+                    },
+                    {
+                        "Year": "2006",
+                        "Crashes": "26169",
+                        "Fatalities": "78",
+                        "Injuries": "9783",
+                        "VMT": "76.73",
+                        "CrashRate": "341.05",
+                        "FatalityRate": "1.02",
+                        "InjuryRate": "127.5"
+                    },
+                    {
+                        "Year": "2007",
+                        "Crashes": "26557",
+                        "Fatalities": "61",
+                        "Injuries": "9876",
+                        "VMT": "82.19",
+                        "CrashRate": "323.13",
+                        "FatalityRate": "0.74",
+                        "InjuryRate": "120.17"
+                    },
+                    {
+                        "Year": "2008",
+                        "Crashes": "25519",
+                        "Fatalities": "74",
+                        "Injuries": "9463",
+                        "VMT": "84.73",
+                        "CrashRate": "301.18",
+                        "FatalityRate": "0.87",
+                        "InjuryRate": "111.68"
+                    },
+                    {
+                        "Year": "2009",
+                        "Crashes": "25262",
+                        "Fatalities": "71",
+                        "Injuries": "9040",
+                        "VMT": "92.7",
+                        "CrashRate": "272.5",
+                        "FatalityRate": "0.77",
+                        "InjuryRate": "97.52"
+                    },
+                    {
+                        "Year": "2010",
+                        "Crashes": "26354",
+                        "Fatalities": "76",
+                        "Injuries": "9196",
+                        "VMT": "90.79",
+                        "CrashRate": "290.27",
+                        "FatalityRate": "0.84",
+                        "InjuryRate": "101.29"
+                    },
+                    {
+                        "Year": "2011",
+                        "Crashes": "26145",
+                        "Fatalities": "63",
+                        "Injuries": "9017",
+                        "VMT": "95.38",
+                        "CrashRate": "274.11",
+                        "FatalityRate": "0.66",
+                        "InjuryRate": "94.54"
+                    },
+                    {
+                        "Year": "2012",
+                        "Crashes": "27299",
+                        "Fatalities": "70",
+                        "Injuries": "9774",
+                        "VMT": "96.17",
+                        "CrashRate": "283.86",
+                        "FatalityRate": "0.73",
+                        "InjuryRate": "101.63"
+                    },
+                    {
+                        "Year": "2013",
+                        "Crashes": "28783",
+                        "Fatalities": "74",
+                        "Injuries": "10133",
+                        "VMT": "99.71",
+                        "CrashRate": "288.68",
+                        "FatalityRate": "0.74",
+                        "InjuryRate": "101.63"
+                    },
+                    {
+                        "Year": "2014",
+                        "Crashes": "29871",
+                        "Fatalities": "63",
+                        "Injuries": "10612",
+                        "VMT": "102.59",
+                        "CrashRate": "291.16",
+                        "FatalityRate": "0.61",
+                        "InjuryRate": "103.44"
+                    },
+                    {
+                        "Year": "2015",
+                        "Crashes": "33026",
+                        "Fatalities": "67",
+                        "Injuries": "11628",
+                        "VMT": "109.08",
+                        "CrashRate": "302.77",
+                        "FatalityRate": "0.61",
+                        "InjuryRate": "106.6"
+                    },
+                    {
+                        "Year": "2016",
+                        "Crashes": "28645",
+                        "Fatalities": "63",
+                        "Injuries": "10512",
+                        "VMT": "93.93",
+                        "CrashRate": "304.96",
+                        "FatalityRate": "0.67",
+                        "InjuryRate": "111.91"
+                    }
+                ]
+            }
+
+        ],
+        "_xmlns": ""
+    }
+}

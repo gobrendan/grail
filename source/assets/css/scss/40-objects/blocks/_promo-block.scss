@@ -1,0 +1,107 @@
+/*
+ * promo block
+ */
+
+.promo-block {
+
+  max-width: 74.25rem; /* NOTE: value should be in variable */
+  margin-bottom: 0; /* NOTE: the "margin-bottom" value overrides ".grid" rule */
+
+  &__grid-cell {
+
+    //
+
+    &:first-child {
+
+      //
+
+    }
+
+    &:last-child {
+
+      //
+
+    }
+
+  }
+
+  &__img-wrapper {
+
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    background: $core-off-white;
+    padding-top: 66.5%; /* NOTE: this value is a result of dividing height by width -- 399/600 */
+
+    .promo-block__img {
+
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      right: 0;
+
+    }
+
+  }
+
+  &__img {
+
+    //
+
+  }
+
+  &__heading {
+
+    margin: 0 0 .5rem;
+
+  }
+
+  &__date {
+
+    color: $core-gray;
+
+  }
+
+  &__p {
+
+    //
+
+  }
+
+  &__city {
+
+    text-transform: uppercase;
+
+  }
+
+}
+
+/* NOTE: IE 9 grid fallbacks */
+
+.no-flexbox.no-flexboxlegacy.no-flexboxtweener {
+
+  .promo-block {
+
+    @include clearfix;
+
+    &__grid-cell {
+
+      width: 50%;
+
+      &:first-child {
+
+        float: left;
+
+      }
+
+      &:last-child {
+
+        float: right;
+
+      }
+
+    }
+
+  }
+
+}

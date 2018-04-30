@@ -1,0 +1,90 @@
+/*
+ * elements / tables
+ */
+
+table, 
+%table {
+
+  // @extend %table;
+  width: 100%;
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 1rem;
+
+  /* NOTE: the following 'equal columns' approach can be problematic on smaller screens.  */
+
+  &.table--equal-columns {
+
+    table-layout: fixed;
+
+  }
+
+  caption {
+
+    // @extend .visually-hidden;
+    @extend %visually-hidden;
+
+  }
+
+}
+
+.table-heading, 
+%table-heading {
+
+  // @extend %table-heading;
+  color: $accent-cool-gray;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 10px;
+
+}
+
+th,
+td, 
+%table-cell {
+
+  // @extend %table-cell;
+  padding: 1rem;
+  font-weight: normal;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $core-light-gray;
+  vertical-align: middle;
+  
+}
+
+th {
+
+  @extend %th;
+
+}
+
+thead td { /* NOTE: in the CMS, some tables <thead> elements might have <td>s instead of <th>s  */
+
+  @extend %th;
+
+}
+
+td, 
+%td {
+
+  // @extend %td;
+  border-color: $table-td-border-color;
+  vertical-align: middle;
+
+}
+
+tbody {
+
+  tr {
+
+    &:nth-child(even) {
+
+      @extend %table-row-alt;
+
+    }
+
+  }
+
+}

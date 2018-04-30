@@ -1,0 +1,64 @@
+//
+// tables
+//
+
+%table {
+
+  // width: 100%;
+  // border: 0;
+  // border-collapse: collapse;
+  // border-spacing: 0;
+  // margin: 0 0 1rem;
+
+}
+
+%table-heading {
+
+  // color: $accent-cool-gray;
+  // text-align: left;
+  // padding: 0;
+  // margin: 0 0 10px;
+
+}
+
+%table-row-alt {
+
+  background: $core-off-white;
+
+}
+
+%table-cell {
+
+  // padding: 1rem;
+  // font-weight: normal;
+  // border-width: 1px;
+  // border-style: solid;
+  // border-color: $core-light-gray;
+  // vertical-align: middle;
+
+}
+
+%th {
+
+  font-family: $font-medium-family;
+  font-weight: normal; /* NOTE: override user agent stylesheet */
+  background: $core-blue;
+  color: $core-white;
+  border-color: $table-th-border-color;
+  text-align: left;
+  vertical-align: middle;
+
+}
+
+%td {
+
+  // border-color: $table-td-border-color;
+  // vertical-align: middle;
+
+}
+
+%th-with-icon {
+
+  padding: 1rem 2rem 1rem 1rem; /* Increase right-padding to make room for icon */
+
+}

@@ -1,0 +1,29 @@
+/*
+ * sharepoint "out of the box" component -- list
+ */
+
+.sp-list {
+
+  @include clean-list;
+  display: block;
+
+  border-width: 1px 0 0 1px;
+  border-style: solid;
+  border-color: $core-light-gray;
+
+  li {
+
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: $core-light-gray;
+    padding: 1rem;
+
+    &:nth-child(even) {
+
+      background: $core-off-white;
+
+    }
+  
+  }
+
+}

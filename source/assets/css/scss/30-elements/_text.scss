@@ -1,0 +1,105 @@
+/*
+ * elements / text
+ */
+
+a, 
+%a {
+
+  // @extend %transition;
+  @include transition($transition);
+  color: $accent-blue;
+  text-decoration: underline; /* NOTE: this is needed to overwrite SharePoint's default CSS -- SharePoint removes underline */
+
+  &:visited {
+
+    color: $accent-blue;
+
+  }
+
+  &:hover {
+
+    color: $accent-blue;
+    text-decoration: none;
+
+  }
+
+  &:focus {
+
+    //
+
+  }
+
+  &:active {
+
+    //
+
+  }
+
+}
+
+p {
+
+  margin: 1rem 0; 
+
+}
+
+blockquote {
+
+  margin: 1em 0 1em 2em;
+  padding: 0 0 0 1em;
+  border-left: 2px solid $core-off-white;
+
+}
+
+small {
+
+  font-size: $font-size--eta;
+
+}
+
+b,
+strong {
+
+  font: $font-heavy;
+
+}
+
+i,
+em {
+
+  //
+
+}
+
+/* NOTE: prevent sup/sub from affecting line-height */
+/* https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height/ */
+
+sup,
+sub {
+
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+
+}
+
+sub {
+
+  top: 0.4em;
+
+}
+
+mark,
+cite,
+kbd,
+ins,
+code,
+samp,
+var,
+dfn {
+
+  background: $core-off-white;
+  padding: 0.25em 0.5em .5em;
+  text-decoration: none; /* NOTE: for <ins> element -- only underline links and clickable text */
+
+}

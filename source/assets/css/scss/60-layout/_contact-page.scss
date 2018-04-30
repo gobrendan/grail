@@ -1,0 +1,27 @@
+/*
+ * contact page
+ */
+
+.contact-page {
+
+  //
+
+  &__details {
+
+    @include clearfix;
+
+  }
+
+  &__print-link {
+
+    //
+
+    @include sb-media($medium-breakpoint) {
+
+      float: right;
+
+    }
+
+  }
+
+}

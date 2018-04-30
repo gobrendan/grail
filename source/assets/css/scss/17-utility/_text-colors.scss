@@ -1,0 +1,179 @@
+/*
+ * utility / text colors
+ */
+
+/* generic */
+
+.u-text-white, 
+a.u-text-white, 
+a.u-text-white:visited
+a.u-text-white:hover {
+
+  color: $core-white;
+
+}
+
+.u-text-black {
+
+  color: $core-black;
+
+}
+
+.u-text-dark-gray {
+
+  color: $core-gray;
+
+}
+
+.u-text-medium-gray {
+
+  color: $core-light-gray;
+
+}
+
+.u-text-light-gray {
+
+  color: $core-off-white;
+
+}
+
+/* core */
+
+.u-text-core-black {
+
+  color: $core-black;
+
+}
+
+.u-text-core-blue, 
+a.u-text-core-blue, 
+a.u-text-core-blue:visited
+a.u-text-core-blue:hover {
+
+  color: $core-blue;
+
+}
+
+.u-text-core-gray {
+
+  color: $core-gray;
+
+}
+
+.u-text-core-light-gray {
+
+  color: $core-light-gray;
+
+}
+
+.u-text-core-off-white {
+
+  color: $core-off-white;
+
+}
+
+.u-text-core-white {
+
+  color: $core-white;
+
+}
+
+/* accent */
+
+.u-text-accent-cool-gray {
+
+  color: $accent-cool-gray;
+
+}
+
+.u-text-accent-warm-gray {
+
+  color: $accent-warm-gray;
+
+}
+
+.u-text-accent-light-blue {
+
+  color: $accent-light-blue;
+
+}
+
+.u-text-accent-blue {
+
+  color: $accent-blue;
+
+}
+
+.u-text-accent-indigo {
+
+  color: $accent-indigo;
+
+}
+
+.u-text-accent-deep-purple {
+
+  color: $accent-deep-purple;
+
+}
+
+.u-text-accent-purple {
+
+  color: $accent-purple;
+
+}
+
+.u-text-accent-red {
+
+  color: $accent-red;
+
+}
+
+.u-text-accent-orange {
+
+  color: $accent-orange;
+
+}
+
+.u-text-accent-olive {
+
+  color: $accent-olive;
+
+}
+
+.u-text-accent-green {
+
+  color: $accent-green;
+
+}
+
+.u-text-accent-turquoise {
+
+  color: $accent-turquoise;
+
+}
+
+/* note */
+
+.u-text-note-blue {
+
+  color: $note-blue;
+
+}
+
+.u-text-note-green {
+
+  color: $note-green;
+
+}
+
+.u-text-note-orange {
+
+  color: $note-orange;
+
+}
+
+.u-text-note-red {
+
+  color: $note-red;
+
+}

@@ -1,0 +1,37 @@
+{
+
+  "data" : [
+
+    {
+      "county" : "Alamance",
+      "address" : "124 W. Elm Street<br>Graham, NC 27253",
+      "phone" : "<a href='tel:336-228-1312'>336-228-1312</a>",
+      "website" : "http://www.alamance-nc.com",
+      "email" : "gerald.york@alamance-nc.com",
+      "fax" : "<a href='tel:336-570-6333'>336-570-6333</a>",
+      "mailbox" : ""
+    },
+
+    {
+      "county" : "Alexander",
+      "address" : "75 1st St. SW Courthouse Annex<br>Suite 2<br>Taylorsville, NC 28681",
+      "phone" : "<a href='tel:828-632-4346'>828-632-4346</a>",
+      "website" : "http://www.co.alexander.nc.us",
+      "email" : "lstocks@co.alexander.nc.us",
+      "fax" : "828-632-1100",
+      "mailbox" : "P.O. Box 38<br>Taylorsville, NC 28681"
+    },
+
+    {
+      "county" : "Alleghany",
+      "address" : "County Admin Building<br>348 South Main Street<br>Sparta, NC 28675",
+      "phone" : "<a href='tel:336-372-8291'>336-372-8291</a>",
+      "website" : "http://www.alleghanycounty-nc.gov",
+      "email" : "alleappr@skybest.com",
+      "fax" : "336-372-7003",
+      "mailbox" : "P.O. Box 1027<br>Sparta, NC 28675-1027"
+    }
+
+  ]
+
+}

@@ -1,0 +1,36 @@
+{{# heroine }}
+
+<div class="heroine {{ modifier }}">
+
+  <div class="heroine__menu {{ menu-wrapper-modifier }}">
+
+    {{# login-btn }}
+    <a href="" class="btn heroine__login-btn"><i class="icon-account"></i>myDMV<br>LOGIN</a>
+    {{/ login-btn }}
+
+    {{> organisms-location-picker-markup }}
+  </div>
+
+  <div class="heroine__img-wrapper {{ img-wrapper-modifier }}">
+    {{> atoms-img-advanced }}
+  </div>
+  
+  <div class="heroine__inner-wrapper">
+
+    <a class="heroine__text-box" href="">
+
+      <h1 class="heading heading--alpha heroine__heading">
+        {{{ heading }}}
+      </h1>
+
+      <p class="heroine__p">
+        {{{ p }}}
+      </p>
+
+    </a>
+
+  </div>
+
+</div>
+
+{{/ heroine }}

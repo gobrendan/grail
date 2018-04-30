@@ -1,0 +1,332 @@
+/* 
+ * dmv block
+ */
+
+.dmv-block {
+
+  margin: auto;
+
+  &__inner-wrapper {
+
+    display: -ms-flex; 
+    display: -webkit-flex; 
+    display: flex; 
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap; /* NOTE: useful when "__heading" is included at same level as "__item" elements */    
+    flex-wrap: wrap; /* NOTE: useful when "__heading" is included at same level as "__item" elements */    
+    margin: auto;
+    max-width: 72rem; /* NOTE: value should be in variable -- mimics max-width for headings and .page-content__section--inner wrapper */
+
+  }
+
+  &__heading {
+    
+    font-size: $font-size--gamma;
+    position: relative;
+    -webkit-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin: 0 0 1rem;
+
+  }
+
+  .heading__pre-text {
+    
+    font-family: $font-medium-family;
+    color: $accent-light-blue;
+    margin: 0 0 .25rem;
+
+  }
+
+  &__sub-heading {
+    
+    font-size: $font-size--epsilon;
+    font-family: $font-normal-family;
+    margin: 0 0 1rem;
+
+    b {
+
+      display: inline-block;
+      font-family: $font-medium-family;
+
+    }
+
+  }
+
+  &__item {
+    
+    //
+
+    &--map-wrapper {
+
+      display: none;
+      position: relative;
+
+    }
+    
+    &--list-wrapper {
+
+      .grid__cell:first-child {
+
+        margin: 0 0 1rem;
+
+      }
+
+    }
+
+  }
+  
+  &__map {
+
+    height: auto; /* NOTE: override default/explicit .bing-map height */
+    min-height: 450px;  /* NOTE: value should be in variable -- mimics default .bing-map height value */
+
+  }
+
+  &__location-list {
+
+    font-size: $font-size--eta;
+    margin: 0 0 2rem;
+
+    .list__item:before {
+
+      display: none;
+
+    }
+
+    .list__item-inner {
+      
+      width: auto;
+      float: none;
+    
+    }
+
+  }
+
+  &__link-list {
+
+    //
+
+  }
+
+  /* NOTE: highly custom modifier for DMV homepage, adds divider between "Select your location" and "Documents..." columns */
+
+  &--w-divider {
+
+    /* NOTE: see rule in medium breakpoint */
+
+  }
+
+  .grid {
+    
+    margin-bottom: 0;
+
+  }
+
+  @include sb-media($medium-breakpoint) {
+    
+    .grid__cell {
+
+      &:nth-child(1) {
+
+        position: relative;
+        padding-right: 1.5rem;
+        -webkit-flex: 0 0 65%;
+        flex: 0 0 65%;
+
+      }
+
+    }
+
+    /* NOTE: highly custom modifier for DMV homepage, adds divider between "Select your location" and "Documents..." columns */
+
+    &--w-divider {
+
+      .dmv-block__item:last-of-type .grid__cell:first-child {
+
+        //
+
+        &:after {
+
+          display: block;
+          content: "";
+          width: 1px;
+          position: absolute;
+          background: $core-light-gray;
+          top: 1.5em; /* NOTE: matches grid items top padding */
+          bottom: 0;
+          right: 0;
+
+        }
+
+      }
+
+    }
+    
+  }
+
+  @include sb-media($large-breakpoint) {
+
+    &__inner-wrapper {
+
+      -webkit-flex-direction: row;
+      flex-direction: row;
+
+    }
+
+    &__item {
+
+      /*
+      NOTE: IE 11 has trouble acknowledging calc() when used in flexbox shorthand -- use width instead
+      */
+
+      -webkit-flex: 0 0 auto;
+      flex: 0 0 auto;
+      width: calc(50% - 1rem); /* NOTE: magic number -- might want this in a variable */
+
+      &__heading {
+        
+        margin: 0 auto 1rem;
+
+      }
+      
+      &:first-of-type { /* NOTE: use "first of type" instead of "first child" since the "first child" might be a heading element  */
+
+        margin: 0;
+
+      }
+
+      &:last-of-type {
+  
+        margin-left: auto;
+  
+      }
+
+      &--map-wrapper {
+
+        display: -ms-flex;
+        display: -webkit-flex;
+        display: flex;
+        align-items: stretch;
+
+      }
+
+      &--list-wrapper {
+        
+        .grid__cell:first-child {
+
+          margin: 0;
+
+        }
+
+      }
+
+      .dmv-block__location-list {
+        
+        //
+  
+        .list__item:before {
+  
+          display: block;
+  
+        }
+
+        .list__item-inner {
+
+          width: calc(100% - 44px); /* NOTE: magic number */
+          float: right;
+        
+        }
+    
+      }
+
+    }
+
+  }
+
+  @include sb-media($medium-breakpoint) {
+    
+    .grid__cell {
+
+      &:nth-child(1) {
+
+        position: relative;
+        padding-right: 1.5rem;
+        -webkit-flex: 0 0 60%; /* NOTE: the percentage here matches the IE 11 tweak below  */
+        flex: 0 0 60%;         /* NOTE: the percentage here matches the IE 11 tweak below  */
+
+      }
+
+    }
+
+  }
+
+}
+
+.no-flexbox.no-flexboxlegacy {
+
+  .dmv-block {
+
+    &__inner-wrapper {
+
+      display: block;
+      overflow: hidden;
+
+    }
+
+    &__item {
+
+      //
+
+      &--map-wrapper {
+
+        display: block;
+        float: left;
+
+      }
+
+      &--list-wrapper {
+
+        float: right; 
+
+      }
+
+    }
+
+  }
+
+}
+
+/* NOTE: IE 11 needs this flex-basis tweak on smaller screens -- otherwise, contents goes off screen in smaller screens */
+
+.flexbox.flexboxtweener {
+
+  .dmv-block__item--list-wrapper {
+
+    .grid__cell:first-child {
+      
+      flex-basis: calc(100% - 1.5em); 
+    }
+
+  } 
+
+}
+
+@include sb-media($medium-breakpoint) {
+
+  .flexbox.flexboxtweener {
+
+    .dmv-block__item--list-wrapper {
+
+      .grid__cell:first-child {
+        
+        -webkit-flex-basis: 60%; /* NOTE: the percentage here matches the nth-child rule above (includes a note; search for this value) */
+        flex-basis: 60%; /* NOTE: the percentage here matches the nth-child rule above (includes a note; search for this value) */
+
+      }
+
+    } 
+
+  }
+
+}

@@ -1,0 +1,123 @@
+/*
+ * page layout
+ */
+
+.page-layout {
+
+  min-height: 600px; /* NOTE: magic number -- improves display on short pages */
+
+  /* NOTE: Keep content below desktop menu */
+
+  // position: relative;
+  // z-index: -2;
+
+  /* 
+  NOTE: overflow declaration resolves issue where heroine component 
+  add horizontal scrollbar to page -- safer to fix that here than in the 
+  heroine component (i.e., in case the location picker needs to overflow) 
+  */
+
+  overflow: hidden; 
+    
+  &__section {
+
+    @include clearfix;
+    width: 100%;
+    padding: 0 $page-side-padding;
+    margin: 0 auto 2rem; 
+
+    /* NOTE: remove top margin for first-of-type elements in <section> wrappers */
+    /* NOTE: mostly used to improve top margins from first-of-type headings -- we'd targer heading alone, but we have a wide array of them (Pattern Lab-specific and SharePoint-specific) */
+
+    :first-child {
+
+      margin-top: 0;
+
+    }
+
+    :last-child {
+
+      //
+
+    }
+
+    /* NOTE: adjust top margins for grid element to match original grid rules -- negative top margins is necessary for grid display */
+
+    .grid--gutters {
+
+      margin-top: -1em; 
+
+    }
+
+    .grid--guttersLg {
+
+      margin-top: -1.5em; 
+
+    }
+
+    .grid--guttersXl {
+
+      margin-top: -2em; 
+
+    }
+
+    &--full { /* NOTE: children/components go full width */
+      
+      max-width: none;
+      padding: 0;
+
+    }
+
+    &--w-bg { /* NOTE: works in conjunction with bg utility classes (i.e., "u-bg-light-gray" */
+
+      background: $core-gray; /* NOTE: this is a placeholder color -- the utility class will override this */
+      padding: $page-side-padding; /* NOTE: since there's a background color, include padding for top/bottom */
+      
+    }
+
+    &--touch-next {
+
+      margin-bottom: 0;
+
+    }
+
+    /* NOTE SharePoint fix: when ".page-layout__section" elements are nested within each other, remove padding/margin */
+
+    .page-layout__section {
+      
+      padding: 0;
+      margin: 0; 
+
+    }
+
+    /* NOTE: component overrides */
+
+    .card-set {
+
+      margin-bottom: 0;
+
+    }
+
+    .feature-block, 
+    .feature-block--video.feature-block--color-bg {
+
+      padding: 0;
+
+    }
+  
+  }
+
+  &__section-inner { /* NOTE: this is a direct child of any "__section" element */
+
+    max-width: 72rem; /* NOTE: this value should be in a variable */
+    margin: auto; 
+    
+    .page-layout__section--full & {
+      
+      max-width: none;
+
+    }
+
+  }
+
+}

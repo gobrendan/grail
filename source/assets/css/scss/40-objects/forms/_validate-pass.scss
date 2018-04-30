@@ -1,0 +1,45 @@
+/*
+ * validate pass -- form used in Commuter Pass modal on Ferry Reservations page
+ */
+
+.validate-pass {
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  &__input {
+
+    margin: 0 1rem 0 0;
+
+  }
+
+  &__btn {
+
+    //
+
+  }
+
+  /* IE 9 tweaks */
+
+  .no-flexbox.no-flexboxlegacy.no-flexboxtweener & {
+
+    @include clearfix;
+
+    &__input {
+
+      float: left;
+      width: calc(100% - 115px);
+
+    }
+
+    &__btn {
+
+      float: right;
+
+    }
+
+  }
+
+}

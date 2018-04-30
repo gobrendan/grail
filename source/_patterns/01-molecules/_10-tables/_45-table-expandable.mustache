@@ -1,0 +1,24 @@
+{{# table-expandable }}
+
+<div class="table-wrapper {{ table-wrapper-class }} {{ table-wrapper-modifier }}" id="{{ table-wrapper-ID }}">
+
+  <table class="js-table--expandable {{ table-modifier }}" id="{{ table-ID }}">
+    <thead>
+      <tr>
+        <th>
+          <!-- header for arrow column -->
+        </th>
+
+        {{# headers }}
+        <th class="{{ header-class }}">
+          {{ header-text }}
+        </th>
+        {{/ headers }}
+
+      </tr>
+    </thead>
+  </table>
+
+</div>
+
+{{/ table-expandable }}

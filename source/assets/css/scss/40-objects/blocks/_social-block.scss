@@ -1,0 +1,279 @@
+/*
+ * social block
+ */
+
+.social-block {
+
+  max-width: $component-max-width;    
+  border-width: 1px 0 0 1px;  
+  border-style: solid;  
+  border-color: $accent-warm-gray;    
+  margin: auto; 
+
+  &__item {
+
+    //
+
+  }
+
+  &__sub-grid {
+
+    // 
+
+  }
+
+  &__sub-grid-item {
+
+    //
+
+    &--double-wide-square {
+      
+      //
+      
+    }
+      
+    &--double-wide-rectangle {
+      
+      //
+      
+    }
+      
+  }
+
+  &--alt {
+
+    //
+
+    .social-block__item {
+
+      //
+
+      &:nth-child(1) {
+        
+        //
+
+      }
+
+      &:nth-child(2) {
+        
+        //
+
+      }
+
+      &:nth-child(3) {
+
+        //
+
+      }
+      
+    }
+
+  }
+
+  &--wide-only {
+
+    display: none; 
+    
+  }
+
+  /* NOTE: nesting the "social block" selector to overrwrite default grid rules (specificity) */
+
+  .social-block {
+    
+    //
+    
+    &__item {
+  
+      //
+  
+    }
+  
+    &__sub-grid {
+  
+      // 
+  
+    }
+  
+    &__sub-grid-item {
+  
+      //
+  
+      &--double-wide-square {
+        
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        
+      }
+        
+      &--double-wide-rectangle {
+        
+        -ms-flex: 0 0 100%;        
+        flex: 0 0 100%;
+        
+      }
+        
+    }
+
+  }
+
+  /* NOTE: overwride default "social box" styling when used in "social block" component */
+
+  .social-box, 
+  .social-box--double-wide {
+
+    max-width: 100%;
+
+  }
+
+  .social-box {
+
+    border-width: 0 1px 1px 0;
+
+    /* NOTE: use position/z-index declarations to resolve border display issue in IE 10 */
+
+    position: relative;
+    z-index: 99; /* NOTE: this value should be in a variable, or should it simply be "+1"? */
+
+  }
+
+}
+
+/* NOTE: browser-related issues */
+
+.no-flexbox .social-block.grid, 
+.no-flexbox .social-block__sub-grid.grid {
+  
+  width: 100%; /* NOTE: override default ".no-flexbox .grid" rule to improve display in IE 10; added specificity required */
+
+}
+
+.no-flexboxlegacy {
+
+  .small-grid--1of2 > .grid__cell {
+
+    &.social-block__sub-grid-item--double-wide-rectangle {
+
+      width: 100%; /* NOTE: override default .no-flexboxlegacy > .grid" rule for "double wide" items; added specificity required */
+
+    }
+
+  }
+
+}
+
+@include sb-media($medium-breakpoint) {
+  
+  .social-block {
+    
+    //
+
+    &--alt {
+      
+      //
+  
+      .social-block__item {
+  
+        //
+
+        &:nth-child(1), 
+        &:nth-child(3) {
+  
+          flex: 0 0 25%;
+  
+        }
+  
+        &:nth-child(2) {
+          
+          flex: 0 0 50%;
+  
+        }
+        
+      }
+  
+    }
+    
+
+    &--wide-only {
+
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      list-style: none;
+
+    }
+
+  }
+      
+}
+
+@include sb-media($large-breakpoint) {
+  
+  .social-block {
+
+    //
+
+    /* NOTE: the "--alt" modifier is for three-column "social block" components -- single, double, single */
+
+    &--alt {
+      
+      //
+  
+      .social-block__item {
+  
+        //
+
+        &:nth-child(1), 
+        &:nth-child(3) {
+  
+          -webkit-box-flex: 0 0 25%;
+          -webkit-flex: 0 0 25%;
+          -ms-flex: 0 0 25%;      
+          flex: 0 0 25%;
+
+          .no-flexboxlegacy & {
+
+            width: 25%;
+
+            .social-block__sub-grid-item {
+
+              width: 100%;
+              float: none;
+
+            }
+
+          }
+  
+        }
+  
+        &:nth-child(2) {
+          
+          -webkit-box-flex: 0 0 50%;
+          -webkit-flex: 0 0 50%;
+          -ms-flex: 0 0 50%;      
+          flex: 0 0 50%;
+
+          .no-flexboxlegacy & {
+            
+            width: 50%;
+
+          }
+  
+        }
+
+        .no-flexboxlegacy & {
+
+          float: left;
+
+        }
+        
+      }
+  
+    }
+      
+  }
+  
+}

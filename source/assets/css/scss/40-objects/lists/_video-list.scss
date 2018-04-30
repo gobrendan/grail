@@ -1,0 +1,192 @@
+/*
+ * video list
+ */
+
+.video-list {
+
+  @include clean-list;
+  margin: 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid $core-gray;
+
+  &__item {
+
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 1rem;
+    border-bottom: 1px solid $core-gray;
+    margin: 0 0 1rem;
+
+    &:last-child {
+
+      margin: 0;
+
+    }
+
+  }
+
+  &__img-wrapper, 
+  .video-wrapper {
+
+    margin: 0 0 1rem;
+
+  }
+
+  &__img-wrapper {
+
+    display: none;
+    
+  }
+
+  &__img {
+
+    //
+
+  }
+
+  .video-wrapper {
+
+    //
+
+  }
+
+  &__text-wrapper {
+
+    //
+
+  }
+
+  &__item-heading {
+
+    font-size: $font-size--zeta;
+    margin: 0 0 .5rem;
+
+  }
+
+  &__item-details {
+
+    margin: 0;
+
+  }
+
+  &--color-bg {
+
+    color: $white;
+    background: $core-gray; /* NOTE: placeholder color since the text is white -- this may be overwritten when the component is included within other components */
+    border-color: $white;
+
+    a {
+
+      color: $white; 
+
+    }
+
+    .video-list__item {
+
+      border-color: $white;
+      
+    }
+
+  }
+
+  @include sb-media($large-breakpoint) {
+
+    &__item {
+      
+      flex-direction: row;
+
+    }
+
+    &__img-wrapper {
+
+      display: block;
+      flex: 0 0 200px;
+      margin: 0 1rem 0 0;
+      
+      a {
+
+        display: block;
+        position: relative;
+        height: 0;
+        padding-top: 56.25%;
+
+        img {
+
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+
+        }
+
+        i {
+
+          // @include vertical-align;
+          // position: absolute;
+          // font-size: 4rem;
+          // width: 100%;
+          // left: 0;
+          // color: red;
+
+        }
+
+      }
+
+    }
+
+    &__play-btn {
+
+      display: block;
+      background-image: url(../../assets/images/youtube-icon-image.svg);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-size: 68px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &:hover {
+
+        background-image: url(../../assets/images/youtube-icon-image-red.svg);
+        
+      }
+
+    }
+
+    .video-wrapper {
+
+      display: none;
+
+    }
+
+  }
+
+}
+
+.no-flexbox.no-flexboxlegacy {
+
+  .video-list {
+
+    //
+
+    &__item {
+
+      display: block;
+      overflow: hidden; 
+
+    }
+
+    &__img-wrapper {
+
+      display: block;
+      width: 200px;
+      float: left; 
+      margin: 0 1rem 0 0;
+
+    }
+
+  }
+
+}

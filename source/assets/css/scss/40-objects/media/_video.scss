@@ -1,0 +1,41 @@
+/*
+ * Video
+ */
+
+.video-wrapper {
+
+  position: relative;
+
+  &--fluid-width {
+
+    padding-top: 56.25%; /*  Relative sizing for '560 x 315' dimensions (YouTube videos) */
+
+    iframe {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+    }
+
+  }
+
+  &--instagram {
+
+    padding-top: 100%;
+
+    .video-wrapper__video {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+    }
+
+  }
+
+}

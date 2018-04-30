@@ -1,0 +1,85 @@
+<form class="form">
+
+  <h1 class="heading--gamma form-title">
+
+    Live validation
+
+  </h1>
+
+  <fieldset class="fieldset fieldset--alt">
+
+    <label class="fieldset__label visuallyhidden">
+      First name
+    </label>
+
+    <input type="text" placeholder="First name" pattern="[a-z A-Z ' , -]{2,20}" maxlength="20" required class="text-field--alt fieldset__input" onkeyup="charCount(this)">
+
+    <div class="fieldset__helper-text character-count fieldset__character-count">
+      First name is required
+
+      <span class="character-count__numbers character-count__numbers--float-right">
+        <span class="character-count__total">
+          0
+        </span>
+        <span class="character-count__max">
+          / 20
+        </span>
+      </span>
+
+    </div>
+
+  </fieldset>
+
+  <fieldset class="fieldset fieldset--alt">
+
+    <label class="fieldset__label visuallyhidden">
+      Last name
+    </label>
+
+    <input type="text" placeholder="Last name" pattern="[a-z A-Z ' , -]{2,20}" maxlength="20" required class="text-field--alt fieldset__input" onkeyup="charCount(this)">
+
+    <div class="fieldset__helper-text character-count fieldset__character-count">
+      Last name is required
+
+      <span class="character-count__numbers character-count__numbers--float-right">
+        <span class="character-count__total">
+          0
+        </span>
+        <span class="character-count__max">
+          / 20
+        </span>
+      </span>
+
+    </div>
+
+  </fieldset>
+
+  <fieldset class="fieldset fieldset--alt">
+
+    <label class="fieldset__label visuallyhidden">
+      Date of birth
+    </label>
+
+    <input type="text" placeholder="Date of birth" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" required maxlength="10" class="text-field--alt fieldset__input">
+
+    <div class="fieldset__helper-text">
+      MM/DD/YYYY
+    </div>
+
+  </fieldset>
+
+  <fieldset class="fieldset fieldset--alt">
+
+    <label class="fieldset__label visuallyhidden">
+      Social security
+    </label>
+
+    <input type="text" placeholder="###-##-####" pattern="\d{3}-\d{2}-\d{4}" required maxlength="11" class="text-field--alt fieldset__input">
+
+    <div class="fieldset__helper-text">
+      ###-##-####
+    </div>
+
+  </fieldset>
+
+</form>

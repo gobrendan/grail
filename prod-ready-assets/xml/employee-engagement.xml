@@ -1,0 +1,7 @@
+<EmployeeEngagement xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/NCDOT.WebApps.DOT.Dashboard.Objects">
+	<AverageEmployeeEngagement>5.3</AverageEmployeeEngagement>
+	<DiscretionaryEffort>5.84</DiscretionaryEffort>
+	<EmotionalCommitment>5.29</EmotionalCommitment>
+	<IntentToStay>4.78</IntentToStay>
+	<RationalCommitment>0</RationalCommitment>
+</EmployeeEngagement>

@@ -1,0 +1,510 @@
+{{# isotope }}
+
+<div class="isotope">
+
+  {{# filter }}
+
+  <div class="isotope__btn-group isotope__filters-btn-group">
+    <button class="btn isotope__btn is-checked" data-filter="*">
+      Show All
+    </button>
+    <button class="btn isotope__btn" data-filter=".isotope__item--press">
+      <i class="icon-newspaper">
+      </i>
+      Press Releases
+    </button>
+    <button class="btn isotope__btn" data-filter=".isotope__item--events">
+      <i class="icon-event">
+      </i>
+      Events
+    </button>
+    <button class="btn isotope__btn" data-filter=".isotope__item--youtube">
+      <i class="icon-youtube">
+      </i>
+      YouTube
+    </button>
+    <button class="btn isotope__btn" data-filter=".isotope__item--facebook">
+      <i class="icon-facebook">
+      </i>
+      Facebook
+    </button>
+    <button class="btn isotope__btn" data-filter=".isotope__item--twitter">
+      <i class="icon-twitter">
+      </i>
+      Twitter
+    </button>
+    <button class="btn isotope__btn" data-filter=".isotope__item--instagram">
+      <i class="icon-instagram">
+      </i>
+      Instagram
+    </button>
+  </div>
+
+  {{/ filter }}
+
+  {{# item-group }}
+
+  <div class="isotope__item-group {{ modifier }}">
+
+    {{> atoms-isotope-no-results-message }}
+
+    <div class="isotope__item isotope__item--instagram" data-category="instagram">
+      <div class="isotope__item-inner">
+        <a class="isotope__img-wrapper" href="">
+          <img class="isotope__img" src="https://scontent-atl3-1.cdninstagram.com/t51.2885-15/e35/18947353_1690613414575942_7279720269638270976_n.jpg">
+        </a>
+        <div class="isotope__header">
+          <a class="isotope__category" href="">
+            <i class="icon-instagram isotope__icon">
+            </i>
+            <span class="isotope__heading">
+              Instagram
+            </span>
+          </a>
+          <a class="isotope__time" href="">
+            9/22 &bull; 8:12 AM
+          </a>
+        </div>
+        <p class="isotope__p">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur adipiscing elit.
+        </p>
+        <a class="isotope__more" href="">
+          Read more
+        </a>
+      </div>
+    </div>
+
+    <div class="isotope__item isotope__item--youtube" data-category="youtube">
+      <div class="isotope__item-inner">
+        <div class="isotope__video">
+          {{> atoms-video }}
+        </div>
+        <div class="isotope__header">
+          <a class="isotope__category" href="">
+            <i class="icon-youtube isotope__icon">
+            </i>
+            <span class="isotope__heading">
+              YouTube
+            </span>
+          </a>
+          <a class="isotope__time" href="">
+            9/22 &bull; 8:12 AM
+          </a>
+        </div>
+        <p class="isotope__p">
+          Raleigh is home to North Carolina State University and is part of the Research Triangle area, together with Durham (home of Duke University) and Chapel Hill (home of the University of North Carolina at Chapel Hill).
+        </p>
+        <a class="isotope__more" href="">
+          Read more
+        </a>
+      </div>
+    </div>
+
+    <div class="isotope__item isotope__item--press" data-category="press">
+      <div class="isotope__item-inner">
+        <a class="isotope__img-wrapper" href="">
+          <img class="isotope__img" src="../../assets/images/isotope-demo-3.jpg">
+        </a>
+        {{^ project-title }}
+        <div class="isotope__header">
+          <a class="isotope__category" href="">
+            <i class="icon-newspaper isotope__icon">
+            </i>
+            <span class="isotope__heading">
+              News
+            </span>
+          </a>
+          <a class="isotope__time" href="">
+            9/22 &bull; 12:16 PM
+          </a>
+        </div>
+        {{/ project-title }}
+        <p class="isotope__p">
+          <a class="isotope__title" href="">
+            Project title lorem ipsum dolor sit amet, consectetur adipiscing elit praesent vel interdum nunc, ac hendrerit lectus
+          </a>
+          As the remnants of Tropical Storm Julia continue to impact North Carolina, counties north of Albemarle Sound &ndash; Bertie, Chowan, Camden Currituck, Gates, Hertford, Perquimans and Pasquotank &ndash; in the northeastern part of the state&hellip;"
+        </p>
+        <a class="isotope__more" href="">
+          Read more
+        </a>
+      </div>
+    </div>
+
+    <div class="isotope__item isotope__item--facebook" data-category="facebook">
+      <div class="isotope__item-inner">
+        <a class="isotope__img-wrapper" href="">
+          <img class="isotope__img" src="../../assets/images/isotope-demo-1.jpg">
+        </a>
+        <div class="isotope__header">
+          <a class="isotope__category" href="">
+            <i class="icon-facebook isotope__icon">
+            </i>
+            <span class="isotope__heading">
+              Facebook
+            </span>
+          </a>
+          <a class="isotope__time" href="">
+            9/28 &bull; 12:15 PM
+          </a>
+        </div>
+        <p class="isotope__p">
+          The start of fall means less daylight! If you walk or ride your bike to work, your trip home may be in the dark. Wearing light clothing and using reflectors and lights can all help boost your visibility.
+        </p>
+        <a class="isotope__more" href="">
+          Read more
+        </a>
+      </div>
+    </div>
+
+    <div class="isotope__item isotope__item--facebook" data-category="facebook">
+      <div class="isotope__item-inner">
+        <div class="isotope__header">
+          <a class="isotope__category" href="">
+            <i class="icon-facebook isotope__icon">
+            </i>
+            <span class="isotope__heading">
+              Facebook
+            </span>
+          </a>
+          <a class="isotope__time" href="">
+            9/24 &bull; 8:30 AM
+          </a>
+        </div>
+        <p class="isotope__p">
+          The Birkhead Wilderness Route Scenic Byway in Randolph County features the Uwharrie Mountains, considered by some within the vicinity of Lassiter Mill. The Birkhead Mountain, Robbins Branch and experts to be the oldest&hellip;
+        </p>
+        <a class="isotope__more" href="">
+          Read more
+        </a>
+      </div>
+    </div>
+
+    <div class="isotope__item isotope__item--instagram" data-category="instagram">
+      <div class="isotope__item-inner">
+        <div class="isotope__video">
+          <div class="video-wrapper video-wrapper--instagram">
+            <video class="video-wrapper__video" controls controlsList="nodownload" poster='https://scontent-iad3-1.cdninstagram.com/t51.2885-15/e15/19425148_454818434883361_5000585673468542976_n.jpg'>
+              <source src='https://scontent-iad3-1.cdninstagram.com/t50.2886-16/19423411_1794602470793195_5861263524352753664_n.mp4' type='video/mp4'>
+            </video>
+          </div>
+        </div>
+        <div class="isotope__header">
+          <a class="isotope__category" href="">
+            <i class="icon-instagram isotope__icon">
+            </i>
+            <span class="isotope__heading">
+              Instagram
+            </span>
+          </a>
+          <a class="isotope__time" href="">
+            9/22 &bull; 8:12 AM
+          </a>
+        </div>
+        <p class="isotope__p">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur adipiscing elit.
+        </p>
+        <a class="isotope__more" href="">
+          Read more
+        </a>
+      </div>
+    </div>
+
+    <div class="isotope__item isotope__item--twitter" data-category="twitter">
+      <div class="isotope__item-inner">
+        <a class="isotope__img-wrapper" href="">
+          <img class="isotope__img" src="../../assets/images/isotope-demo-2.jpg">
+        </a>
+        <div class="isotope__header">
+          <a class="isotope__category" href="">
+            <i class="icon-twitter isotope__icon">
+            </i>
+            <span class="isotope__heading">
+              Twitter
+            </span>
+          </a>
+          <a class="isotope__time" href="">
+            9/23 &bull; 11:21 AM
+          </a>
+        </div>
+        <p class="isotope__p">
+          Next week, NC ferries start transitioning to off-season schedules, starting with the Pamlico Sound routes&hellip;
+        </p>
+        <a class="isotope__more" href="">
+          Read more
+        </a>
+      </div>
+    </div>
+
+    <div class="isotope__item isotope__item--twitter" data-category="twitter">
+      <div class="isotope__item-inner">
+        <div class="isotope__header">
+          <a class="isotope__category" href="">
+            <i class="icon-twitter isotope__icon">
+            </i>
+            <span class="isotope__heading">
+              Twitter
+            </span>
+          </a>
+          <a class="isotope__time" href="">
+            9/22 &bull; 3:44 PM
+          </a>
+        </div>
+        <p class="isotope__p">
+          NCDOT Secretary Nick Tennyson is touring areas hit by TS Julia to assess flood damage, meet with local officials and speak to media.
+        </p>
+        <a class="isotope__more" href="">
+          Read more
+        </a>
+      </div>
+    </div>
+
+    <div class="isotope__item isotope__item--press" data-category="press">
+      <div class="isotope__item-inner">
+        <a class="isotope__img-wrapper" href="">
+          <img class="isotope__img" src="../../assets/images/isotope-demo-3.jpg">
+        </a>
+        <div class="isotope__header">
+          <a class="isotope__category" href="">
+            <i class="icon-newspaper isotope__icon">
+            </i>
+            <span class="isotope__heading">
+              News
+            </span>
+          </a>
+          <a class="isotope__time" href="">
+            9/22 &bull; 12:16 PM
+          </a>
+        </div>
+        <p class="isotope__p">
+          <span class="isotope__title">
+            Northeastern NC Roads Affected by Remnants of Tropical Storm Julia
+          </span>
+          As the remnants of Tropical Storm Julia continue to impact North Carolina, counties north of Albemarle Sound &ndash; Bertie, Chowan, Camden Currituck, Gates, Hertford, Perquimans and Pasquotank &ndash; in the northeastern part of the state&hellip;"
+        </p>
+        <a class="isotope__more" href="">
+          Read more
+        </a>
+      </div>
+    </div>
+
+    <div class="isotope__item isotope__item--events" data-category="events">
+      <div class="isotope__item-inner">
+        <a class="isotope__img-wrapper" href="">
+          <img class="isotope__img" src="../../assets/images/isotope-demo-1.jpg">
+        </a>
+        <div class="isotope__header">
+          <a class="isotope__category" href="">
+            <i class="icon-event isotope__icon">
+            </i>
+            <span class="isotope__heading">
+              Events
+            </span>
+          </a>
+          <a class="isotope__time" href="">
+            9/22 &bull; 12:16 PM
+          </a>
+        </div>
+        <p class="isotope__p">
+          <span class="isotope__title">
+            Veterans Job Fair
+          </span>
+          North Carolina Department of Public Safety Division of Adult Correction/Juvenile Justice offers challenging careers with great advancement opportunities! For more information about this event select and open the pdf file attachment for details.
+        </p>
+
+        <ul class="isotope__bullets">
+          <li class="isotope__bullets-item">
+
+            <i class="icon-time isotope__bullets-icon">
+            </i>
+
+            <p class="isotope__bullets-text">
+              Friday, November 10 at 9:00 AM
+              <span class="isotope__bullets-sub-text">
+                Starts in about 9 hours
+              </span>
+            </p>
+
+          </li>
+          <li class="isotope__bullets-item">
+
+            <i class="icon-pin isotope__bullets-icon">
+            </i>
+
+            <p class="isotope__bullets-text">
+              NC Joint Force Headquarters
+              <span class="isotope__bullets-sub-text">
+                1636 Gold Star Drive, Raleigh NC, 27607
+              </span>
+            </p>
+
+          </li>
+          <li class="isotope__bullets-item">
+
+            <i class="icon-checked isotope__bullets-icon">
+            </i>
+
+            <p class="isotope__bullets-text">
+              RSVP Mandatory. ID/Drivers License Required
+              <span class="isotope__bullets-sub-text">
+                <a href="">
+                  rsvp.nc-tickets.com
+                </a>
+              </span>
+            </p>
+
+          </li>
+        </ul>
+
+        <a class="isotope__more" href="">
+          Read more
+        </a>
+
+      </div>
+    </div>
+
+    <div class="isotope__item isotope__item--facebook" data-category="facebook">
+      <div class="isotope__item-inner">
+        <a class="isotope__img-wrapper" href="">
+          <img class="isotope__img" src="../../assets/images/isotope-demo-1.jpg">
+        </a>
+        <div class="isotope__header">
+          <a class="isotope__category" href="">
+            <i class="icon-facebook isotope__icon">
+            </i>
+            <span class="isotope__heading">
+              Facebook
+            </span>
+          </a>
+          <a class="isotope__time" href="">
+            9/28 &bull; 12:15 PM
+          </a>
+        </div>
+        <p class="isotope__p">
+          The start of fall means less daylight! If you walk or ride your bike to work, your trip home may be in the dark. Wearing light clothing and using reflectors and lights can all help boost your visibility.
+        </p>
+        <a class="isotope__more" href="">
+          Read more
+        </a>
+      </div>
+    </div>
+
+    <div class="isotope__item isotope__item--facebook" data-category="facebook">
+      <div class="isotope__item-inner">
+        <div class="isotope__header">
+          <a class="isotope__category" href="">
+            <i class="icon-facebook isotope__icon">
+            </i>
+            <span class="isotope__heading">
+              Facebook
+            </span>
+          </a>
+          <a class="isotope__time" href="">
+            9/24 &bull; 8:30 AM
+          </a>
+        </div>
+        <p class="isotope__p">
+          The Birkhead Wilderness Route Scenic Byway in Randolph County features the Uwharrie Mountains, considered by some within the vicinity of Lassiter Mill. The Birkhead Mountain, Robbins Branch and experts to be the oldest&hellip;
+        </p>
+        <a class="isotope__more" href="">
+          Read more
+        </a>
+      </div>
+    </div>
+
+    <div class="isotope__item isotope__item--twitter" data-category="twitter">
+      <div class="isotope__item-inner">
+        <a class="isotope__img-wrapper" href="">
+          <img class="isotope__img" src="../../assets/images/isotope-demo-2.jpg">
+        </a>
+        <div class="isotope__header">
+          <a class="isotope__category" href="">
+            <i class="icon-twitter isotope__icon">
+            </i>
+            <span class="isotope__heading">
+              Twitter
+            </span>
+          </a>
+          <a class="isotope__time" href="">
+            9/23 &bull; 11:21 AM
+          </a>
+        </div>
+        <p class="isotope__p">
+          Next week, NC ferries start transitioning to off-season schedules, starting with the Pamlico Sound routes&hellip;
+        </p>
+        <a class="isotope__more" href="">
+          Read more
+        </a>
+      </div>
+    </div>
+
+    <div class="isotope__item isotope__item--twitter" data-category="twitter">
+      <div class="isotope__item-inner">
+        <div class="isotope__header">
+          <a class="isotope__category" href="">
+            <i class="icon-twitter isotope__icon">
+            </i>
+            <span class="isotope__heading">
+              Twitter
+            </span>
+          </a>
+          <a class="isotope__time" href="">
+            9/22 &bull; 3:44 PM
+          </a>
+        </div>
+        <p class="isotope__p">
+          NCDOT Secretary Nick Tennyson is touring areas hit by TS Julia to assess flood damage, meet with local officials and speak to media.
+        </p>
+        <a class="isotope__more" href="">
+          Read more
+        </a>
+      </div>
+    </div>
+
+    <div class="isotope__item isotope__item--press" data-category="press">
+      <div class="isotope__item-inner">
+        <a class="isotope__img-wrapper" href="">
+          <img class="isotope__img" src="../../assets/images/isotope-demo-3.jpg">
+        </a>
+        <div class="isotope__header">
+          <a class="isotope__category" href="">
+            <i class="icon-newspaper isotope__icon">
+            </i>
+            <span class="isotope__heading">
+              News
+            </span>
+          </a>
+          <a class="isotope__time" href="">
+            9/22 &bull; 12:16 PM
+          </a>
+        </div>
+        <p class="isotope__p">
+          <span class="isotope__title">
+            Northeastern NC Roads Affected by Remnants of Tropical Storm Julia
+          </span>
+          As the remnants of Tropical Storm Julia continue to impact North Carolina, counties north of Albemarle Sound &ndash; Bertie, Chowan, Camden Currituck, Gates, Hertford, Perquimans and Pasquotank &ndash; in the northeastern part of the state&hellip;"
+        </p>
+        <a class="isotope__more" href="">
+          Read more
+        </a>
+      </div>
+    </div>
+
+
+  </div>
+
+  {{/ item-group }}
+
+  {{# load-more }}
+
+  <div class="isotope__footer">
+    <button class="btn isotope__load-more">
+      Load More
+    </button>
+  </div>
+
+  {{/ load-more }}
+
+</div>
+
+{{/ isotope }}

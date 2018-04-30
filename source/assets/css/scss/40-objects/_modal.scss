@@ -1,0 +1,300 @@
+/*
+ * modal
+ */
+
+.modal {
+
+  position: relative;
+  z-index: $z-index--top; /* NOTE: This helps keeps the modal above the .wide-nav component */
+
+  &__dialog {
+
+    @include translate(0, -500%);
+    @include transition-transform(0.3s ease-out);
+
+    background: $white;
+    padding: 1rem;
+    width: 100%;
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+
+    position: fixed;
+    top: -100%;
+    z-index: 11;
+    right: 0;
+    left: 0;
+    z-index: 11;
+
+    &__small {
+
+      max-width: 300px;
+
+    }
+
+    &--medium {
+
+      max-width: 550px;
+
+    }
+
+    &--large {
+
+      max-width: 700px;
+
+    }
+
+  }
+
+  &__header {
+
+    padding: 0 2.75rem 1rem 0; /* NOTE: right padding prevents heading text from underlapping "close" button, which is absolutely-positioned */
+    border-bottom: 1px solid $core-off-white;
+    margin: 0 0 1rem;
+
+  }
+
+  &__heading {
+
+    font-size: $font-size--epsilon;
+    margin: 0;
+
+  }
+
+  &__btn {
+
+    //
+
+    &--x {
+
+      font-size: 2rem;
+      right: .25em; /* NOTE: magic number -- maintains somewhat consistent spacing on top and right side */
+      position: absolute;
+      top: .25rem;
+      text-decoration: none;
+
+      &:hover {
+
+        text-decoration: none;
+
+      }
+
+    }
+
+    &--close {
+
+      //
+
+    }
+
+  }
+
+  &__content {
+
+    //
+
+  }
+
+  &__footer {
+
+    padding: 2rem 0 0; /* NOTE: space between "__content" and "__footer" handled in "__footer" just in case "__footer" is not included */
+
+  }
+
+  &__img {
+
+    //
+
+  }
+
+  &__p {
+
+    //
+
+    &:last-of-type {
+
+      margin-bottom: 0;
+
+    }
+
+  }
+
+  &__map {
+
+    //
+
+  }
+
+  &__hr {
+
+    height: 1px;
+    background: $core-off-white;
+    margin: 2rem 0;
+
+
+  }
+
+  &:before { /* NOTE: modal background */
+
+    content: "";
+    display: none;
+    background: rgba($core-black-hex, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+
+  }
+
+  &:target {
+
+    &:before {
+
+      display: block;
+
+    }
+
+    .modal__dialog {
+
+      @include translate(0, 0);
+      top: 20%;
+
+    }
+
+  }
+
+  .carousel {
+
+    margin: 0;
+    
+  }
+
+  .photo-block {
+
+    max-width: 800px; /* NOTE: matches dimenstion noted in TDD */
+
+  }
+
+    /* NOTE: customizations for modal that includes "photo block" carousel -- these might be changed to be default settings */
+  /* NOTE: the purpose of the cusomizations is make sure hidden modal content can be viewed by scrolling the page */
+
+  &--tall {
+
+    // position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: -999; /* NOTE: this value should be in a variable */
+
+    .modal__dialog {
+
+      position: absolute;
+
+      &--full-width {
+        
+        // max-width: 75rem;
+        // max-width: calc(94vh - 50px);
+        max-width: 815px;
+  
+      }
+
+    }
+
+    /* NOTE: the "__background" element should replace the :before pseudo element -- markup edits/additions will be needed in dev */
+
+    .modal__background {
+
+      display: none;
+      background: rgba($core-black-hex, .5);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      cursor: default; 
+
+    }
+
+    &:target {
+
+      z-index: $z-index--top; 
+      
+      .modal__dialog {
+        
+        //
+
+        &--full-width {
+
+          top: 60px; /* NOTE: magic number -- mimics height of mobile header */
+    
+        }
+  
+      }
+
+      &:before {
+        
+        display: none; /* NOTE: this will ultimately be removed -- see note about "__background" element above */
+  
+      }
+
+      .modal__background {
+
+        display: block;
+
+      }
+
+    }
+      
+    @media (min-width: 75rem) and (min-height: 1024px) {
+
+      .modal__dialog {
+        
+        //
+  
+        &--full-width {
+          
+          max-width: 75rem;
+    
+        }
+  
+      }
+
+    }
+  
+  }
+
+  &--no-heading {
+
+    .modal__heading {
+
+      display: none;
+
+    }
+
+    .modal__header {
+
+      @include clearfix; 
+      padding: 0; 
+      border-bottom-width: 0; 
+
+    }
+
+    .modal__btn--x {
+
+      line-height: 1;
+      position: relative; 
+      right: 0; 
+      top: 0; 
+      float: right; 
+
+    }
+
+  }
+
+}

@@ -1,0 +1,145 @@
+/*
+ * route form
+ */
+
+.route-form {
+
+  background: rgba(0,0,0,.75); /* NOTE: this value should be in a variable */
+  padding: 2rem;
+  border-radius: $radius;
+
+  &__heading {
+
+    color: $white;
+    padding: 0 0 1rem;
+    border-bottom: 5px solid;
+    margin: 0 0 2rem;
+
+  }
+
+  &__field-grid {
+
+    //
+
+    &.form-grid { /* NOTE: chanined selector for increased specificity */
+
+      margin-bottom: 2rem; /* NOTE: be careful editing this element's margin -- this element reuses the .grid class, which has special top/right/left margins */
+
+      /* NOTE: in IE 9, the .grid and its children are displaying at display:table/display:table-cell, respectively, which is causing the children to display on the same line. Since the children are always stacked, set to display:block. Given the children are always stacked, this component could be refactored to not use .grid rules. */
+
+      .no-flexbox.no-flexboxlegacy.no-flexboxtweener & {
+
+        display: block;
+
+        .grid__cell {
+
+          display: block;
+          float: none;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  &__field-grid-item {
+
+    //
+
+  }
+
+  &__action-grid {
+
+    margin-bottom: 0;
+
+  }
+
+  &__action-grid-item {
+
+    //
+
+    @include sb-media($small-breakpoint) {
+
+      &:last-child {
+
+        text-align: right; /* NOTE: be careful editing this element's margin -- this element reuses the .grid class, which has special top/right/left margins */
+
+      }
+
+    }
+
+  }
+
+  &__link {
+
+    color: $white;
+
+    @include sb-media(24em) {
+
+      white-space: nowrap;
+
+    }
+
+    &:hover,
+    &:visited {
+
+      color: $white;
+
+    }
+
+  }
+
+  /* NOTE: overrides -- look for opportunities to BEM-ify these */
+
+  .fieldset__label {
+
+    color: $white;
+
+  }
+
+  .selectboxit-container {
+
+    max-width: none;
+
+    /* NOTE: in IE 11, the custom select elements are touching the right edge of the componnet (padding isn't sticking), so this tweak is needed */
+
+    .flexbox.no-flexboxlegacy.flexboxtweener & {
+
+      width: calc(100% - 2rem);
+
+    }
+
+  }
+
+  .selectboxit-text {
+
+    color: $black;
+
+  }
+
+}
+
+/* NOTE: override grid rules to help form (text block) display on medium screens
+   - min-width value/breakpoint matches what's used in "hero" rules
+   - this is basically making the form display with normal grid margins/padding in between these breakpoints rather than Xl margins/padding 
+ */
+
+@media (min-width: $large-breakpoint) and (max-width: 1200px) { 
+
+  .route-form__field-grid {
+
+    margin: -1em 0 1em -1em;
+
+  }
+
+  /* NOTE: descendant selector used for specificity */
+
+  .route-form__field-grid > .route-form__field-grid-item {
+
+    padding: 1em 0 0 1em;
+
+  }
+
+}

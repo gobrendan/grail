@@ -1,0 +1,29 @@
+{{# card-video }}
+
+<div class="card card--video">
+
+  {{> atoms-video }}
+
+  <div class="card__text-wrapper">
+
+    <p class="card__primary-text">
+
+      <a href='{{ url }}'>
+        {{ primary-text }}
+      </a>
+
+    </p>
+
+    {{# secondary-text }}
+    <p class="card__secondary-text">
+
+      {{{ secondary-text }}}
+
+    </p>
+    {{/ secondary-text }}
+
+  </div>
+
+</div>
+
+{{/ card-video }}

@@ -1,0 +1,359 @@
+/*
+ * Custom -- overrides and new rules
+ */
+
+.sg-acc-panel {
+
+  width: 18rem;
+
+}
+
+#sg-patterns {
+
+  padding: 0 2rem;
+
+}
+
+.sg-pattern {
+
+  position: static !important; /* NOTE: in styleguide.css, the value is set to "relative," which is causing a minor display issue with the "table--alt component */ 
+
+}
+
+.sg-colors {
+
+  font-size: .75em;
+  list-style: none;
+  padding: 0;
+  margin: -1rem;
+
+}
+
+.sg-colors:before,
+.sg-colors:after {
+
+  content: " ";
+  display: table;
+
+}
+
+.sg-colors:after {
+
+  clear: both;
+
+}
+
+.sg-colors li {
+
+  border: 0;
+  padding: 0;
+  margin: 1rem;
+  float: left;
+
+}
+
+.sg-swatch {
+
+  display: block;
+  height: 8em;
+  width: 8em;
+  margin: 0 0 .5rem;
+  background-size: cover;
+
+}
+
+.sg-label {
+
+  display: block;
+  font-size: 100%;
+  text-transform: none;
+  line-height: 1.5;
+
+}
+
+.sg-clean-list {
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+/* Increase width of PL menus when viewing on desktop */
+
+@media all and (min-width: 72em) {
+
+  .sg-nav > li > ol {
+
+    width: 18em;
+
+  }
+
+}
+
+/* Float icons so they're not in a tall list */
+
+.sg-icon-list {
+
+  list-style: none;
+  padding: 0;
+  margin: -1rem;
+
+}
+
+.sg-icon-list:before,
+.sg-icon-list:after {
+
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden;
+
+}
+
+.sg-icon-list:after {
+
+  clear: both;
+
+}
+
+.sg-icon-list li {
+
+  float: left;
+  margin: 1rem;
+
+}
+
+.sg-icon-list li:last-child {
+
+  margin: 1rem;
+
+}
+
+/* Show icon class name or code when hovering */
+
+.sg-icon-list i {
+
+  position: relative;
+  cursor: default;
+
+}
+
+.sg-icon-list:not(.sg-icon-list--MD) i:after {
+
+  display: none;
+  font-family: sans-serif; /* helpful for Material Design icons, since those <i> elements use the MD font by default */
+  content: attr(class);
+  color: #A83338;
+  background: white;
+  border: 1px solid gray;
+  padding: .5rem;
+  white-space: nowrap;
+  position: absolute;
+  top: 100%;
+  z-index: 9;
+
+}
+
+.sg-icon-list i:hover {
+
+  color: #A83338;
+
+}
+
+.sg-icon-list i:hover:after {
+
+  display: block;
+
+}
+
+.sg-icon-list__icon--hover {
+
+  font-size: 1rem;
+  cursor: default;
+  color: #A83338;
+
+}
+
+.sg-icon-list__icon-name {
+
+  font-family: sans-serif; /* Prevents Material Design CSS from turning icon name into an icon */
+  display:block;
+  font-weight:bold;
+  margin-bottom: 10px;
+
+}
+
+.sg-icon-list__icon-detail {
+
+  display: block;
+  font-family: sans-serif; /* helpful for Material Design icons, since those <i> elements use the MD font by default */
+  content: attr(class);
+  color: #A83338;
+  background: white;
+  border: 1px solid gray;
+  padding: .5rem;
+  white-space: nowrap;
+  position: absolute;
+  top: 100%;
+  z-index: 9;
+
+}
+
+/*
+ * Specific demos -- e.g. demoing white text buttons
+ */
+
+.sg-padded-demo {
+
+  padding: 2rem;
+
+}
+
+/*
+ * Colors
+ */
+
+/* Core palette */
+
+.sg-bg-core-black {
+  background: rgb(11, 12, 12);
+}
+.sg-bg-core-blue {
+  background: rgb(9, 41, 64);
+}
+.sg-bg-core-gray {
+  background: rgb(95, 108, 123);
+}
+.sg-bg-core-light-gray {
+  background: rgb(149, 160, 173);
+}
+.sg-bg-core-off-white {
+  background: rgb(236, 240, 243);
+}
+.sg-bg-core-white {
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(236, 240, 243);
+}
+
+/* Accent palette */
+
+.sg-bg-accent-cool-gray {
+  background: rgb(106, 118, 129);
+}
+.sg-bg-accent-warm-gray {
+  background: rgb(117, 117, 117);
+}
+.sg-bg-accent-light-blue {
+  background: rgb(63, 125, 151);
+}
+.sg-bg-accent-blue {
+  background: rgb(57, 122, 172);
+}
+.sg-bg-accent-indigo {
+  background: rgb(0, 55, 109);
+}
+.sg-bg-accent-deep-purple {
+  background: rgb(102, 46, 107);
+}
+.sg-bg-accent-purple {
+  background: rgb(112, 28, 69);
+}
+.sg-bg-accent-red {
+  background: rgb(168, 51, 56);
+}
+.sg-bg-accent-orange {
+  background: rgb(192, 84, 17);
+}
+.sg-bg-accent-olive {
+  background: rgb(154, 111, 9);
+}
+.sg-bg-accent-green {
+  background: rgb(88, 128, 35);
+}
+.sg-bg-accent-turquoise {
+  background: rgb(60, 128, 125);
+}
+.sg-bg-accent-turquoise-light {
+  background: rgb(76, 144, 148);
+}
+.sg-bg-accent-turquoise-dark {
+  background: rgb(36, 95, 93);
+}
+
+/* Notification palette */
+
+.sg-bg-note-blue {
+  background: rgb(57, 122, 172);
+}
+.sg-bg-note-green {
+  background: rgb(88, 128, 35);
+}
+.sg-bg-note-orange {
+  background: rgb(192, 84, 17);
+}
+.sg-bg-note-red {
+  background: rgb(168, 51, 56);
+}
+
+/*
+ * Headings
+ */
+
+/* Temporarily hide heading details (variables and em sizes) */
+
+.heading .sg-label {
+
+  display: none;
+
+}
+
+/*
+ * Headings
+ */
+
+.sg-heading {
+
+  font-weight: normal;
+  color: #808080; /* same color as .sg-pattern-head */
+  margin: 0 0 1rem;
+
+}
+
+.sg-heading--alpha {
+
+    font-size: 1.6em;
+
+}
+
+.sg-heading--beta {
+
+  font-size: 1.4em;
+
+}
+
+/* NOTE: font demos */
+
+.sg-font-normal {
+
+  font: normal normal normal 100%/1.5 'TransportNewLight_gdi', Helvetica, Arial, sans-serif;
+
+}
+
+.sg-font-medium {
+
+  font: normal normal normal 100%/1.5 'TransportNewMedium_gdi', Helvetica, Arial, sans-serif;
+
+}
+
+.sg-font-heavy {
+
+  font: normal normal normal 100%/1.5 'TransportNewHeavy_gdi', Helvetica, Arial, sans-serif;
+
+}
+
+.sg-font-italic {
+
+  font: italic normal normal 100%/1.5 'Georgia', serif;
+
+}

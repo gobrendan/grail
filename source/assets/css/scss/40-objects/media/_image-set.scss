@@ -1,0 +1,65 @@
+/*
+ * image set
+ */
+
+.image-set {
+
+  //
+
+  &__grid {
+
+    //
+
+  }
+
+  &__grid-cell {
+
+    //
+
+  }
+
+  img {
+
+    width: 145px; 
+    margin: auto; 
+
+  }
+
+  // &--img-auto-width {
+
+  //   //
+    
+  //   img {
+
+  //     width: auto;
+
+  //   }
+
+  // }
+
+}
+
+/* NOTE: IE 9 fixes */
+
+.no-flexbox.no-flexwrap {
+
+  .image-set {
+
+    //
+
+    &__grid {
+
+      @include clearfix;
+
+    }
+
+    &__grid-cell {
+
+      width: 50%; 
+      float: left; 
+
+    }
+
+  }
+
+}

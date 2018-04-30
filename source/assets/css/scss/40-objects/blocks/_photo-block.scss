@@ -1,0 +1,94 @@
+/*
+ * photo block
+ */
+
+ .photo-block {
+  
+    max-width: 1200px; /* NOTE: value should be in variable */
+    margin-bottom: 0; /* NOTE: the "margin-bottom" value overrides ".grid" rule */
+    
+    &__img-wrapper {
+  
+      // position: relative;
+      // height: 0;
+      // overflow: hidden;
+      background: $core-off-white;
+      // padding-top: 66.5%; /* NOTE: this value is a result of dividing height by width -- 399/600 */
+      margin: 0 0 1rem;
+  
+      .photo-block__img {
+  
+        // position: absolute !important;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+  
+      }
+  
+    }
+  
+    &__img {
+  
+      //
+  
+    }
+  
+    &__heading {
+  
+      margin: 0 0 1rem;
+  
+    }
+  
+    &__caption {
+  
+      margin: 0;
+  
+    }
+
+    /* NOTE: carousel container and arrows -- should be refactored and migrated to _unslider.overrides */
+
+    &__carousel-arrows {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 0;
+      overflow: hidden;
+      padding-top: 66.5%; /* NOTE: this should be in variable since it should mimic value for "__img-wrapper" padding */
+      z-index: 99999999;      
+
+    }
+
+    &__carousel-arrow {
+
+      @include vertical-align;
+      position: absolute;
+      // top: 50%;
+      color: $white;
+      text-decoration: none;
+      font-size: 4em;
+      line-height: 70px;
+      height: 70px;
+
+      &:hover {
+
+        color: $white;
+
+      }
+
+      &.prev {
+
+        left: 0;
+
+      }
+
+      &.next {
+        
+        right: 0;
+        
+      }
+
+    }
+  
+  }

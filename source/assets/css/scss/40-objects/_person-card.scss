@@ -1,0 +1,192 @@
+/*
+ * person card
+ */
+
+.person-card {
+
+  border: 2px solid $core-off-white;
+  border-radius: 3px;
+  max-width: 47.5rem;
+  margin: auto;
+
+  &__grid {
+
+    margin-bottom: 0; /* NOTE: overrides default .grid declaration */
+
+  }
+
+  &__grid-cell {
+
+    &:first-child {
+
+      order: 2;
+      padding: 0 30px 30px;
+
+    }
+
+    &:last-child {
+
+      order: 1;
+      padding: 30px;
+
+    }
+
+  }
+
+  &__list {
+
+    @include clean-list;
+    margin: 0;
+
+  }
+
+  &__list-item {
+
+    //
+
+    &--dept {
+
+      color: $accent-cool-gray;
+      margin: 0 0 1.25rem;
+
+    }
+
+    &--address {
+
+      margin: 0 0 1.25rem;
+
+    }
+
+    &--name {
+
+      font-size: $font-size--delta;
+      font-family: $font-medium-family;
+      color: $core-blue;
+      margin: 0 0 1.25rem;
+
+    }
+
+    &--phone {
+
+      font-size: 18px;
+      font-family: $font-medium-family;
+
+    }
+
+    &--email {
+
+      //
+
+    }
+
+  }
+
+  &__img-wrapper {
+
+    //
+
+  }
+
+  &__img {
+
+    max-width: 180px; /* NOTE: magic number */
+    margin: 0 0 1.25rem;
+
+  }
+
+  &__job-title {
+
+    font: $font-italic;
+    font-size: 21px;
+    color: $core-blue;
+    margin: 0;
+
+  }
+
+  &:after {
+
+    // display: block;
+    // content: "";
+    // height: 50px;
+    //
+    // @include gradient-H($accent-green, $accent-indigo);
+
+  }
+
+  @include sb-media($medium-breakpoint) {
+
+    &__grid-cell {
+
+      &:first-child {
+
+        order: 1;
+        padding: 60px 30px 60px 60px;
+
+      }
+
+      &:last-child {
+
+        order: 2;
+        padding: 60px 60px 60px 30px;
+
+      }
+
+    }
+
+    &__list {
+
+      text-align: right;
+
+    }
+
+    &__img-wrapper {
+
+      text-align: center;
+
+    }
+
+    &__img {
+
+      margin: 0 auto 1.25rem;
+
+    }
+
+    &__job-title {
+
+      font-size: 1.5rem;
+
+    }
+
+  }
+
+}
+
+/* NOTE: IE 9 fixes */
+
+.no-flexbox.no-flexwrap {
+
+  .person-card {
+
+    //
+
+    &__grid {
+
+      @include clearfix; 
+
+    }
+
+    &__grid-cell {
+
+      float: left; 
+
+      &:first-child {
+
+        width: 60%; 
+
+      }
+
+    }
+
+  }
+
+}

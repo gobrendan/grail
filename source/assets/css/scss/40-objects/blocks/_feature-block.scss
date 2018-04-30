@@ -1,0 +1,677 @@
+/* 
+ * feature block
+ */
+
+.feature-block {
+
+  margin: auto;
+
+  &__inner-wrapper {
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap; /* NOTE: useful when "__heading" is included at same level as "__item" elements */    
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin: auto;
+
+  }
+
+  &__item {
+
+    &:first-of-type {
+
+      margin: 0 0 3rem;
+
+    }
+
+    &--single {
+      
+      margin: auto;
+      width: 100%;
+
+      &:first-of-type {
+
+        margin: auto;
+        
+      }
+
+    }
+
+
+
+  }
+
+  &__heading {
+
+    font-size: $font-size--delta-fixed;
+    position: relative;
+    -webkit-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin: 0 0 1rem;
+
+    @include sb-media($medium-breakpoint) {
+
+      font-size: $font-size--gamma-fixed;
+
+    }
+
+  }
+
+  &__heading-more {
+
+    display: table;
+    margin-top: .5rem;
+
+    @include sb-media(23.44em) { /* NOTE: breakpoint value is magic number -- possible improvement here would be to wrap the heading text in <span> and mimic flexbox-based solution used for headings on homepages */
+    
+      display: inline-block;
+      font-size: 1rem;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+
+    }
+
+  }
+
+  &__heading-more:visited {
+
+    //
+
+  }
+
+  &__heading-icon {
+
+    display: inline-block;
+    float: right;
+    text-decoration: none;
+
+    &:visited {
+
+      //
+
+    }
+
+    &:hover {
+
+      //
+
+    }
+
+    i {
+
+      //
+
+    }
+
+    &--trans {
+
+      color: $white;
+
+      &:hover, 
+      &:visited {
+
+        color: $white;
+
+      }
+
+    }
+
+  }
+
+  &__sub-heading {
+
+    font-size: $font-size--epsilon;
+    font-family: $font-normal-family;
+    margin: 0 0 1rem;
+
+  }
+
+  &__p {
+
+    margin-bottom: 0; /* NOTE: might want to refactor this -- might try including wrapper around multiple P elements, setting last item's bottom margin to zero */
+
+  }
+
+  &__map {
+
+    height: 200px;
+    max-width: 400px;
+
+  }
+
+  &__list {
+
+    //
+        
+    &--smaller-text {
+
+      //
+
+      li {
+
+        font-size: $font-size--eta;
+
+      }
+
+    }
+
+  }
+
+  &--video {
+
+    &.feature-block--color-bg {
+      
+      padding: 2.5rem $page-side-padding;
+
+    }
+
+    .video-wrapper {
+
+      margin-bottom: 1rem;
+
+    }
+
+    .video-list {
+
+      background: transparent;
+      padding-top: 0;
+      border-top-width: 0;
+
+    }
+
+    .video-list__item {
+
+      padding-bottom: 0;
+      border-bottom-width: 0;
+      margin: 0 0 2rem;
+
+      &:last-child {
+
+        margin: 0; 
+
+      }
+
+    }
+
+    .feature-block__p {
+
+      margin: 0 0 1rem; 
+
+    }
+
+    .feature-block__item {
+      
+      &:first-of-type {
+      
+        margin: 0 0 1rem;
+
+      }
+
+    }
+
+  }
+
+  .simple-list--dark {
+
+    padding: 0;
+
+  }
+
+  .grid {
+
+    margin-bottom: 0;
+
+  }
+
+  .heading__pre-text {
+    
+    font-family: $font-medium-family;
+    color: $accent-light-blue;
+    margin: 0 0 .25rem;
+
+  }
+
+  &--color-bg {
+
+    padding: 2rem 1.5rem;    
+    background: $core-off-white;
+    
+  }
+
+  &--dark-bg {
+
+    background: $core-gray;    
+
+    .feature-block__heading, 
+    .feature-block__p {
+
+      color: $white;
+      
+    }
+
+  }
+
+  &--image-bg {
+
+    .simple-list__link {
+
+      color: $white;
+
+    }
+
+    .simple-list__img {
+
+      width: 36px;
+      height: 36px;
+      -webkit-flex: 0 0 36px;
+      flex: 0 0 36px;
+
+      @include sb-media($medium-breakpoint) {
+
+        width: 72px;
+        height: 72px;
+        -webkit-flex: 0 0 72px;
+        flex: 0 0 72px;
+
+      }
+
+    }
+
+    .simple-list__link {
+
+      font-size: $font-size--eta;
+
+      @include sb-media($medium-breakpoint) {
+        
+        font-size: 1rem;
+
+      }
+
+    }
+
+  }
+
+  &--traffic-impacts {
+
+    .feature-block__inner-wrapper {
+
+      display: block;
+
+    }
+
+    .feature-block__item {
+
+      margin: 0;
+
+      &:first-of-type {
+        
+        position: relative;
+
+      }
+
+      &:last-of-type {
+
+        display: none; 
+
+      }
+
+    }
+
+    .table-wrapper {
+
+      &::-webkit-scrollbar {
+
+        width: 20px;
+        height: 18px;
+
+      }
+
+      &::-webkit-scrollbar-thumb {
+      
+        height: 6px;
+        border-left: 10px solid rgba(0,0,0,0);
+        background-clip: padding-box;
+        background-color: $core-gray;
+
+      }
+
+    }
+
+    table {
+
+      margin: 0;
+
+    }
+
+    .feature-block__heading-more {
+
+      display: none; /* NOTE: for the "Traffic Impacts" component, the View All" link is hidden on smaller screens and a button us displayed */
+
+      @include sb-media($medium-breakpoint) {
+
+        display: block;
+
+      }
+
+    }
+
+  }
+
+  &--simple-list {
+
+    //
+    
+    @include sb-media($medium-breakpoint) {
+
+      padding: 2.5rem $page-side-padding 1.5rem;
+      
+    }
+
+  }
+
+  &--dmv {
+
+    /* NOTE: custom adjustment for location text -- this should be refactored */
+
+    .heading {
+
+      b {
+
+        font-family: $font-medium-family;
+
+      }
+
+    }
+
+    @include sb-media($medium-breakpoint) {
+
+      .grid__cell {
+
+        &:nth-child(1) {
+
+          position: relative;
+          padding-right: 1.5rem;
+          -webkit-flex: 0 0 65%;
+          flex: 0 0 65%;
+
+          &:after {
+
+            // content: "";
+            // display: block;
+            // position: absolute;
+            // right: 0;
+            // bottom: 0;
+            // width: 1px;
+            // top: 1.5em;
+            // background: $core-light-gray;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  } 
+
+  &--initiatives {
+
+    //
+
+    .feature-block__inner-wrapper {
+
+      display: block; /* NOTE: using "display:block" resolves weird spacing issue in SharePoint; value changes at wide screen breakpoint */
+
+    }
+
+  }
+
+  @include sb-media($medium-breakpoint) {
+
+    &--traffic-impacts {
+
+      .table-wrapper {
+
+        margin: 0;
+        
+      }
+
+    }
+
+    &--color-bg {
+      
+      padding: 2rem $page-side-padding;
+
+    }    
+  
+  }
+
+  @include sb-media($large-breakpoint) {
+
+    &__inner-wrapper {
+
+      -webkit-flex-direction: row;
+      flex-direction: row;
+
+    }
+
+    &__item {
+
+      // -ms-flex: 0 0 calc(50% - 1.5rem); /* NOTE: magic number -- might want this in a variable */
+      // flex: 0 0 calc(50% - 1.5rem); /* NOTE: magic number -- might want this in a variable */
+
+      /*
+      NOTE: IE 11 has trouble acknowledging calc() when used in flexbox shorthand -- use width instead
+      */
+
+      -ms-flex: 0 0 auto; 
+      -webkit-flex: 0 0 auto; 
+      flex: 0 0 auto;
+      width: calc(50% - 1.5rem); /* NOTE: magic number -- might want this in a variable */
+
+      &__heading {
+        
+        margin: 0 auto 1rem;
+
+      }
+      
+      &:first-of-type { /* NOTE: use "first of type" instead of "first child" since the "first child" might be a heading element  */
+
+        margin: 0;
+
+      }
+
+      &:last-of-type {
+  
+        margin-left: auto;
+  
+      }
+
+      &--single {
+
+        -ms-flex: 0 0 100%;
+        -webkit-flex: 0 0 100%;
+        flex: 0 0 100%;
+        // background: url(../../assets/images/sample-image--feature-block-bg@2x.jpg);
+
+      }
+  
+    }
+
+    &--color-bg {
+
+      //
+
+    }
+
+    &--traffic-impacts {
+
+      .table-wrapper {
+
+        /* NOTE: on wider screens, match the height of the .table-wrapper with the map component */
+            
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        overflow-y: scroll;
+  
+      }
+
+      .feature-block__inner-wrapper {
+        
+        display: -ms-flex;
+        display: -webkit-flex;
+        display: flex;
+        
+      }
+
+      .feature-block__item {
+  
+        &:first-of-type {
+          
+          //
+  
+        }
+
+        &:last-of-type {
+          
+          display: block; 
+          
+        }
+  
+      }
+
+    }
+
+    &--video {
+      
+      &.feature-block--color-bg {
+        
+        padding: 2.5rem $page-side-padding;
+  
+      }
+  
+      .video-wrapper {
+  
+        margin-bottom: 0;
+  
+      }
+  
+      .video-list {
+  
+        padding-top: 1rem;
+        border-top-width: 1px;
+  
+      }
+  
+      .video-list__item {
+  
+        padding-bottom: 1rem;
+        border-bottom-width: 1px;
+        margin: 0 0 1rem;
+  
+        &:last-child {
+  
+          margin: 0; 
+  
+        }
+  
+      }
+  
+      .feature-block__p {
+  
+        margin: 1rem 0 0; 
+  
+      }
+  
+      .feature-block__item {
+        
+        &:first-of-type {
+        
+          margin: 0;
+  
+        }
+  
+      }
+  
+    }
+
+    &--initiatives {
+
+      //
+  
+      .feature-block__inner-wrapper {
+  
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        
+      }
+  
+    }
+
+  }
+
+}
+
+.no-flexbox.no-flexboxlegacy {
+
+  .feature-block {
+
+    //
+
+    &--traffic-impacts {
+
+      //
+
+      .feature-block__inner-wrapper {
+
+        overflow: hidden; 
+
+      }
+
+      .feature-block__item {
+
+        min-height: 450px;
+
+        &:first-of-type {
+  
+          float: left;
+  
+        }
+  
+        &:last-of-type {
+  
+          float: right; 
+  
+        }
+  
+      }
+
+    }
+
+  }
+
+}
+
+.flexboxtweener {
+
+  .feature-block {
+
+    .grid {
+
+      display: block;
+      width: 100%;
+
+    }
+
+  }
+
+}

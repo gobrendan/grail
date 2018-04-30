@@ -1,0 +1,56 @@
+/*
+ * base / main
+ */
+
+html {
+
+  font-size: 1rem;
+
+}
+
+html,
+body {
+
+  font: $font;
+  color: $black;
+  background: $core-white;
+  height: 100%;
+  position: relative;
+  z-index: 1; /* NOTE: This was added so the desktop menus are visible when viewing that component/organism on its own */
+
+}
+
+body {
+
+  /* NOTE: https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust */
+
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  // text-size-adjust: 100%;
+
+  /* NOTE: since the mobile header is sticky, the top padding here is used as a placeholder */
+
+  padding: 60px 0 0; /* NOTE: top value is magic number -- based on mobile header height */
+
+  /* NOTE: Font smoothing (non-standard) -- https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth */
+
+  -webkit-font-smoothing: antialiased;
+
+  /* NOTE: IE Edge is giving wide horizontal scrollbar -- hide overflow to fix */
+
+  .mod_no-flexboxlegacy & {
+
+    overflow-x: hidden;
+
+  }
+
+  /* NOTE: the mobile nav is hidden at the $large-breakpoint, so the padding can be set to zero */
+
+  @include sb-media($large-breakpoint) {
+
+    padding: 0;
+
+  }
+
+}

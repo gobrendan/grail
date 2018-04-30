@@ -1,0 +1,305 @@
+/*
+ * tables
+ */
+
+.table {
+
+  //
+
+  &--two-column {
+
+    td {
+
+      //
+
+    }
+
+    td:first-child {
+
+      text-align: right;
+      font-weight: bold;
+      padding: 0 .5rem .5rem 0;
+
+    }
+
+    td:last-child {
+
+      padding: 0 0 .5rem .5rem;
+
+    }
+
+    tr:last-child {
+
+      td {
+
+        padding-bottom: 0;
+
+      }
+
+    }
+
+  }
+
+  &--alt {
+
+    table-layout: fixed;
+
+    th,
+    td {
+
+      padding: 0; /* NOTE: the <span> will take care of the padding */
+      text-align: center;
+
+      &:first-child {
+
+        > span {
+
+          // border-left-width: 8px;
+          padding: 5px 10px 5px 14px;
+
+          &:before {
+
+            width: 8px;
+
+          }
+
+        }
+
+      }
+
+      &:last-child {
+
+        > span {
+
+          // border-right-width: 8px;
+          padding: 5px 14px 5px 10px;
+
+          &:after {
+
+            width: 8px;
+            
+          }
+
+        }
+
+      }
+
+      > span {
+
+        display: block;
+        position: relative;
+  
+        &:before {
+          
+          content: "";
+          display: block;
+          width: 4px;
+          // background: $core-light-gray;
+          position: absolute;
+          left: 0;
+          top: -2rem;
+          bottom: -2rem;
+  
+        }
+  
+        &:after {
+          
+          content: "";
+          display: block;
+          width: 4px;
+          // background: $core-light-gray;
+          position: absolute;
+          right: 0;
+          top: -2rem;
+          bottom: -2rem;
+  
+        }
+  
+      }
+
+    }
+
+    th {
+
+      font-size: .75rem;
+      font-family: $font-heavy-family;
+      background-color: $core-off-white;
+      color: $core-blue;
+      text-transform: uppercase;
+      border-width: 1px 0;
+      border-style: solid;
+      border-color: $core-blue;
+      overflow: hidden; /* NOTE: prevents pseudo elements from going outside of the cell */
+
+      span {
+
+        padding: 5px 10px;
+        // border-color: red;
+
+        &:after, 
+        &:before {
+
+          background-color: darken($core-off-white, 5%); /* NOTE: maybe this value should be in a variable */
+          font-size: 1rem;
+
+        }
+
+      }
+
+    }
+
+    td {
+
+      font-size: 1.625rem; /* NOTE: this value should be in a variable */
+      font-family: $font-italic-family;
+      border-width: 1px 0;
+      border-style: solid;
+      border-color: $core-blue;
+      overflow: hidden; /* NOTE: prevents pseudo elements from going outside of the cell */
+
+      span {
+
+        padding: 5px 10px;
+        white-space: nowrap;
+
+        sup {
+
+          position: static; /*  */
+
+        }
+
+        &:after, 
+        &:before {
+
+          background: $core-off-white;
+
+        }
+
+      }
+
+    }
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+
+      font-size: 2rem;
+      vertical-align: middle;
+
+    }
+
+  }
+
+}
+
+/* NOTE: auto width -- selector has higher specificity to override DataTables-related rules */
+
+table.table--auto-width {
+
+  width: auto;
+
+}
+
+/* NOTE: no background colors or borders, inline-block for cells -- selector has higher specificity to override DataTables-related rules */
+
+table.table--clean {
+
+  width: auto;
+
+  /* NOTE: using child selectors to override specificity in other declarations */
+
+  th {
+
+    background: transparent;
+
+  }
+
+  tbody tr,
+  tbody tr:nth-child(odd) {
+
+    background: transparent;
+
+  }
+
+  thead th,
+  tbody td {
+
+    vertical-align: top;
+    padding: 0 .5rem .5rem 0;
+    border: 0;
+
+  }
+
+  thead th {
+
+    //
+
+  }
+
+  tbody td {
+
+    //
+
+  }
+
+  tr,
+  tbody tr:nth-child(even) { /* NOTE: second rule is complex to override specificity in "zebra striping" declarations */
+
+    background: transparent;
+
+  }
+
+  tbody tr:last-child {
+
+    td {
+
+      //padding-bottom: 0; // This should be taken care of by either adding a margin to the table or adjusting the padding in its parent element
+
+    }
+
+  }
+
+}
+
+.table--inline-cells {
+
+  thead th,
+  tbody td {
+
+    display: inline-block;
+
+  }
+
+}
+
+.td--slim {
+
+  width: 100px; /* NOTE: magic number */
+
+}
+
+/* NOTE: alignment modifier */
+
+.table--vertical-top {
+
+  td {
+
+    vertical-align: top;
+
+  }
+
+}
+
+/* NOTE: cell content -- not sure where this is being used */
+
+.cell-content {
+
+  display: block;
+  margin: 0 0 .25rem;
+
+  &:last-child {
+
+    margin: 0;
+
+  }
+
+}

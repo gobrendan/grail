@@ -1,0 +1,258 @@
+/*
+ * nav list
+ */
+
+.nav-list {
+
+  // @extend %clean-list;
+  // @extend %clearfix;
+  @include clean-list;
+  @include clearfix;
+  background: $core-blue;
+
+  &__item {
+
+    border-bottom: 1px solid $core-blue;
+
+    &:first-child {
+
+      //
+
+    }
+
+  }
+
+  &__link {
+
+    color: $white;
+    display: block;
+    padding: 1.25rem 0;
+    vertical-align: middle;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover,
+    &:visited { /* NOTE: including :visited will override related SharePoint rule */
+
+      color: $white;
+
+    }
+
+  }
+
+  &__link-text {
+
+    display: inline-block;
+
+  }
+
+  &__link-icon {
+
+    float: right;
+    font-size: 36px;
+    margin: -5px 15px 0 0;
+
+  }
+
+  /* NOTE: when used in site header */
+
+  &--header {
+
+    //
+
+    .nav-list__link {
+
+      //
+
+    }
+
+  }
+
+  /* NOTE: when used in site footer */
+
+  &--footer {
+
+    margin: 0 0 1.875rem;
+
+  }
+
+  /* NOTE: when centered */
+
+  &--centered {
+
+    //
+
+  }
+
+  /* NOTE: when used on light/white background */
+
+  &--dark {
+
+    .nav-list__link {
+
+      color: $core-blue;
+
+      &:hover,
+      &:visited { /* NOTE: including :visited will override related SharePoint rule */
+
+        color: $core-blue;
+
+      }
+
+    }
+
+  }
+
+}
+
+@include sb-media($medium-breakpoint) {
+
+  .nav-list {
+
+    position: relative; /* Needed for positioning of pseudo (see below) */
+
+    &__item {
+
+      float: left;
+      width: calc(50% - 1rem);
+
+      &:nth-child(odd) {
+
+        margin-right: 1rem;
+
+      }
+
+      &:nth-child(even) {
+
+        margin-left: 1rem;
+
+      }
+
+    }
+
+  }
+
+}
+
+@include sb-media($large-breakpoint) {
+
+  .nav-list {
+
+    font-family: $font-medium-family;
+
+    &__item {
+
+      border: 0; /* NOTE: responsive-related override */
+      width: auto;
+
+      &:not(:last-child) {
+
+        margin: 0 8px 0 0 !important;
+
+      }
+
+      /* NOTE: hide "cover up" line, not necessary on wider screens -- details above in related rule */
+
+      &:nth-child(2) {
+
+        &:after {
+
+          display: none;
+
+        }
+
+      }
+
+      /* NOTE: override nth-child selectors */
+
+      &:nth-child(odd) {
+
+        //
+
+      }
+
+      &:nth-child(even) {
+
+        margin-left: 0;
+
+      }
+
+    }
+
+    &__link {
+
+      display: block;
+      font-size: 0.75rem;
+      color: $white;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0 5px;
+
+      &:hover {
+
+        color: $white; /* NOTE: needed due to specificity of <a> rule */
+        opacity: .8; /* NOTE: this value should be in a variable */
+
+        /* NOTE: targeting the span is a little easier than the explicit '.nav-list__link-text' selector */
+
+        span {
+
+          border-bottom: 0;
+
+        }
+
+      }
+
+    }
+
+    &__link-text {
+
+      display: inline-block; /* NOTE: setting this declaration gives us more control over line-height */
+      line-height: 13px; /* NOTE: this value should be in a variable */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* NOTE: this value should be in a variable */
+
+    }
+
+    &__link-icon {
+
+      display: none;
+
+    }
+
+    &--header {
+
+      .nav-list__link {
+
+        line-height: 80px; /* NOTE: magic number -- helps vertically-align components in "site header" */
+
+      }
+
+    }
+
+    &--footer {
+
+      margin-bottom: 2em;
+
+    }
+
+    &--centered {
+
+      display: table; /* NOTE: might want to try a flexbox solution */
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+
+    &--dark {
+
+      .nav-list__link-text {
+
+        border-bottom: 1px solid $core-gray; /* NOTE: this value should be in a variable */
+
+      }
+
+    }
+
+  }
+
+}

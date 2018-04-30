@@ -1,0 +1,85 @@
+/*
+ * text
+ */
+
+.caption { 
+
+  // font: $font-italic;
+  // font-size: $font-size--eta;
+  // margin: .5rem 0 0;
+
+  @extend %caption;
+
+}
+
+[href^="tel"],
+[href^="tel"]:hover,
+[href^="tel"]:visited {
+
+  text-decoration: underline;
+
+  .no-touchevents & {
+
+    color: inherit;
+    text-decoration: none;
+    cursor: text;
+
+  }
+
+}
+
+.input-helper,
+.form-helper {
+
+  font: $font-italic;
+
+  a {
+
+    color: $core-gray;
+
+  }
+
+  &--error {
+
+    color: $error-color;
+
+  }
+
+}
+
+.input-helper {
+
+  margin: .25rem 0 0;
+
+}
+
+.form-helper {
+
+  color: $core-gray;
+
+}
+
+.footnote {
+
+  font: $font-italic;
+  font-size: $font-size--eta;
+  position: relative;
+  padding-left: 1ch; /* makes room for the asterisk -- check IE support */
+  margin: .5rem 0 0;
+
+  &__sup {
+
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+  }
+
+}
+
+.RSS-link {
+
+  //
+
+}

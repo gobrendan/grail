@@ -1,0 +1,212 @@
+/*
+ * base / social icons -- relies on Icomoon icons
+ */
+
+.social-icon {
+  
+  display: block;
+  background: $core-light-gray;
+  color: $white;
+  width: 3rem;
+  text-align: center;
+  height: 3rem;
+  text-decoration: none;
+  line-height: 3rem;
+  position: relative; 
+
+  &:hover, 
+  &:visited {
+
+    color: white; 
+
+  }
+
+  &--twitter {
+    
+    background: $twitter-color;
+    
+    &:hover {
+
+      background: darken($twitter-color, 20%);
+
+    }
+
+  }
+
+  // &--twitter-trans {
+    
+  //   background: transparentize($twitter-color, .5);
+
+  //   &:hover {
+
+  //     background: darken($twitter-color, 20%);
+
+  //   }
+          
+  // }
+    
+  // &--instagram {
+
+  //   background: rgba(245,0,0,1); /* NOTE: for browser that don't support gradients (IE 9) */    
+  //   background: $instagram-color;
+
+  //   i {
+
+  //     position: relative;
+  //     z-index: 10;
+
+  //   }
+
+  //   &:after {
+
+  //     content: "";
+  //     display: block;
+  //     position: absolute;
+  //     top: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     background: rgba(185,0,180, 0); 
+  //     transition: background .15s ease-out;
+
+  //   }
+
+  //   &:hover {
+      
+  //     &:after {
+
+  //       background: rgba(185,0,180, 1); 
+
+  //     }
+
+  //   }
+            
+  // }
+
+  &--facebook {
+
+    background: $facebook-color;
+
+    &:hover {
+      
+      background: darken($facebook-color, 20%);
+
+    }
+
+  }
+
+  // &--facebook-trans {
+    
+  //   background: transparentize($facebook-color, .5);
+    
+  //   &:hover {
+      
+  //     background: darken($facebook-color, 20%);
+
+  //   }
+
+  // }      
+
+  // &--flickr {
+
+  //   background: $flickr-color;
+
+  //   &:hover {
+      
+  //     background: lighten($flickr-color, 20%);
+
+  //   }
+
+  // }   
+
+  // &--instagram-trans {
+    
+  //   background: rgba(245,0,0,.5); /* NOTE: for browser that don't support gradients (IE 9) */    
+  //   background: $instagram-color-trans;
+
+  //   i {
+      
+  //     position: relative;
+  //     z-index: 10;
+
+  //   }
+
+  //   &:after {
+      
+  //     content: "";
+  //     display: block;
+  //     position: absolute;
+  //     top: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     background: rgba(185,0,180, 0); 
+  //     transition: background .15s ease-out;
+
+  //   }
+
+  //   &:hover {
+      
+  //     &:after {
+        
+  //       background: rgba(185,0,180, 1); 
+
+  //     }
+
+  //   }
+
+  // }
+
+  &--instagram-trans {
+    
+    color: $white;
+    background: transparentize($core-gray, .5);
+
+    &:hover, 
+    &:hover:visited {
+      
+      background: $core-gray;
+
+    }
+
+  }
+
+  &--instagram-light {
+    
+    color: $white;
+    background: transparentize($white, .5);
+
+    &:hover, 
+    &:hover:visited {
+      
+      background: $core-gray;
+
+    }
+
+  }
+
+  &--flickr-trans {
+    
+    background: transparentize($flickr-color, .5);
+
+    &:hover {
+      
+      background: $core-gray;
+
+    }
+
+  }
+   
+  &--flickr-light {
+    
+    color: $white;
+    background: transparentize($white, .5);
+
+    &:hover, 
+    &:hover:visited {
+      
+      background: $core-gray;
+
+    }
+
+  }
+
+}

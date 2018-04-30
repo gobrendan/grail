@@ -1,0 +1,112 @@
+/*
+ * dashboard
+ */
+
+/* NOTE: animations -- we should refactor and use BEM-like class names */
+
+.table--alt {
+
+	.fadeOut {
+
+		color: $white;
+		transition: color .5s ease-in;
+
+		[class^="icon-"][class$="--success"],
+		[class*=" icon-"][class$="--success"] {
+
+			color: $white;
+			transition: color .5s ease-in;
+
+		}
+
+		[class^="icon-"][class$="--error"],
+		[class*=" icon-"][class$="--error"] {
+
+			color: $white;
+			transition: color .5s ease-in;
+
+		}
+
+	}
+
+	.fadeIn {
+
+		//opacity: 1;
+		color: inherit;
+
+		[class^="icon-"][class$="--success"],
+		[class*=" icon-"][class$="--success"] {
+
+			color: $success-color;
+
+		}
+
+		[class^="icon-"][class$="--error"],
+		[class*=" icon-"][class$="--error"] {
+
+			color: $error-color;
+
+		}
+
+	}
+
+}
+
+.table--alt td span.stamp {
+
+	position: absolute;
+	border: none;
+	display: block;
+
+}
+
+.table--alt .numberToBeCounted {
+
+	display: inline;
+	border: none;
+	padding: 0;
+
+}
+
+/* NOTE: responsive image solution ("padding-top" technique) */
+
+.svg-wrapper {
+
+	/* NOTE -- for SVG responsivenes, use "padding-top" solution */
+
+	position: relative;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	padding-top: 41.55%; /* NOTE: magic number */
+
+	margin: 0 0 2rem;
+
+	svg {
+
+		/* NOTE: scale your svg to the display container */
+
+		width: 100%; 
+		max-width: 100%; 
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+	}
+
+	&--nc-map {
+
+		//
+
+	}
+
+	/* NOTE: hide Dashboard maps on touch screens due to usability issues -- rely on <select> menu */
+
+	.touchevents & {
+
+		display: none;
+
+	}
+
+}

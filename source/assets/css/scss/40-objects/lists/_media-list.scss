@@ -1,0 +1,147 @@
+/*
+ * Media list
+ */
+
+.media-list {
+
+  @include clean-list;
+
+  &__item {
+
+    display: flex;
+    margin: 0 0 2rem;
+
+    &:last-child {
+
+      margin: 0;
+
+    }
+
+  }
+
+  &__img {
+
+    border-radius: 4px; /* NOTE: this value should be in a variable */
+
+    &--normal {
+
+      border-radius: 0;
+
+    }
+
+  }
+
+  &__img-wrapper {
+
+    flex: 0 0 50px;
+    margin: 5px 1rem 0 0; /* NOTE: top value is magic number -- improves alignment for image and content */
+    align-self: flex-start;
+
+  }
+
+  &__text {
+
+    //
+
+  }
+
+  &__heading {
+
+    margin: 0 0 .5rem;
+
+  }
+
+  &__desc {
+
+    margin: 0 0 .5rem;
+
+  }
+
+  &__notes {
+
+    color: $accent-cool-gray;
+
+  }
+
+}
+
+@include sb-media(27em) {
+
+  .media-list {
+
+    //
+
+    &__item {
+
+      margin: 0 0 2.75rem;
+
+    }
+
+    &__img {
+
+      //
+
+    }
+
+    &__img-wrapper {
+
+      flex: 0 0 107px; /* NOTE: magic number -- improves alignment for image and content */
+
+    }
+
+    &__text {
+
+      //
+
+    }
+
+    &__heading {
+
+      //
+
+    }
+
+    &__desc {
+
+      //
+
+    }
+
+    &__notes {
+
+      //
+
+    }
+
+  }
+
+}
+
+.no-flexbox {
+
+  .media-list {
+
+    &__item {
+
+      @include clearfix;
+      display: block;
+
+    }
+
+    &__img-wrapper {
+
+      float: left;
+      width: 107px;
+      min-height: 107px; /* NOTE: magic number -- height of doctype icons */
+
+    }
+
+    &__img {
+
+      border: 0;
+
+    }
+
+  }
+
+}

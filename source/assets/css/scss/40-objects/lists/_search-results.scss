@@ -1,0 +1,104 @@
+/*
+ * search results
+ */
+
+.search-results {
+
+  @include clean-list;
+
+  &__item {
+
+    @include clearfix;
+    padding: 1.875rem 0;
+    border-bottom: 1px solid $core-off-white;
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+
+      border: 0;
+
+    }
+
+  }
+
+  &__map {
+
+    height: 200px;
+    max-width: 500px;
+    margin: 1rem 0 0;
+    order: 2;
+
+  }
+
+  &__details {
+
+    order: 1;
+
+  }
+
+  &__heading {
+
+    font-size: $font-size--delta;
+    margin: 0 0 .625rem;
+
+  }
+
+  &__link
+  &__text,
+  &__date {
+
+    font-family: $font-medium-family;
+
+  }
+
+  &__link {
+
+    //
+
+  }
+
+  &__text,
+  &__date {
+
+    font-size: $font-size--eta;
+    text-transform: uppercase;
+    color: $accent-cool-gray;
+    margin: 0;
+
+  }
+
+  &__brief,
+  &__inspection-types {
+
+    margin: .5rem 0 0;
+
+  }
+
+  &__inspection-types {
+
+    font: $font-italic;
+
+  }
+
+  @include sb-media($medium-breakpoint) {
+
+    &__item {
+
+      display: block;
+
+    }
+
+    &__map {
+
+      width: 100px;
+      float: right;
+      width: 50%; 
+      max-width: 100%;
+      margin: 0 0 1rem 1rem;
+
+    }
+
+  }
+
+}

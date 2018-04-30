@@ -1,0 +1,124 @@
+/*
+ * cart -- used on Ferry Reservations page
+ */
+
+.cart {
+
+  border: 1px solid $core-gray;
+  border-radius: $radius;
+
+  &__inner-wrapper {
+
+    padding: 1rem;
+
+  }
+
+  &__hr {
+
+    background: $core-light-gray;
+    height: 1px;
+    margin: 2rem 0;
+
+  }
+
+  &__heading {
+
+    font-size: $font-size--delta;
+    color: $black;
+    margin: 0 0 1.5rem;
+
+    &:after {
+
+      display: none;
+
+    }
+
+  }
+
+  &__list {
+
+    @include clean-list;
+    font-size: $font-size--eta;
+    margin: 0 0 1rem;
+
+  }
+
+  &__item-wrapper {
+
+    margin: 0 0 1.5rem;
+
+    &:last-child {
+
+      padding: 0;
+      border: 0;
+      margin: 0;
+
+    }
+
+  }
+
+  &__item-heading {
+
+    font-size: 1rem;
+    color: $black;
+    margin: 0 0 .5rem;
+
+  }
+
+  &__item {
+
+    @include clean-list;
+    margin: 0;
+
+  }
+
+  &__item-detail {
+
+    &:not(.cart__item-detail--links) {
+
+      border-bottom: 1px solid $core-off-white; 
+      padding: .25rem 0;
+
+    }
+
+    &--links {
+
+      padding-top: .5rem;
+
+    }
+
+  }
+
+  &__total {
+
+    font-size: $font-size--delta;
+    font-family: $font-medium-family;
+
+  }
+
+  &__detail-label {
+
+    //
+
+  }
+
+  &__detail-value {
+
+    float: right;
+
+  }
+
+  &__footer {
+
+    background: $core-gray;
+    padding: 1rem;
+
+    a {
+
+      color: $white;
+
+    }
+
+  }
+
+}

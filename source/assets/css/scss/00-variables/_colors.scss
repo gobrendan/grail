@@ -1,0 +1,70 @@
+//
+// colors
+//
+
+// core palette
+
+$core-black :               rgb(11, 12, 12);    // #0B0C0C
+$core-blue :                rgb(9, 41, 64);     // #092940
+$core-gray :                rgb(95, 108, 123);  // #5F6C7B
+$core-light-gray :          rgb(149, 160, 173); // #95A0AD
+$core-off-white :           rgb(236, 240, 243); // #ECF0F3
+$core-white :               rgb(255, 255, 255); // #FFFFFF
+
+$core-black-hex :           #0B0C0C;
+
+// accent palette
+
+$accent-cool-gray :         rgb(106, 118, 129); // #6A7681
+$accent-warm-gray :         rgb(117, 117, 117); // #757575
+$accent-light-blue :        rgb(63, 125, 151);  // #3F7D97
+$accent-blue :              rgb(57, 122, 172);  // #397AAC #4c7c95
+$accent-indigo :            rgb(0, 55, 109);    // #00376D
+$accent-deep-purple :       rgb(102, 46, 107);  // #662E6B
+$accent-purple :            rgb(112, 28, 69);   // #701C45
+$accent-red :               rgb(168, 51, 56);   // #A83338
+$accent-orange :            rgb(192, 84, 17);   // #C05411
+$accent-olive :             rgb(154, 111, 9);   // #9A6F09
+$accent-green :             rgb(88, 128, 35);   // #588023
+$accent-turquoise :         rgb(60, 128, 125);  // #3C807D
+$accent-turquoise-light :   rgb(76, 148, 144);  // #4c9490
+$accent-turquoise-dark :    rgb(35, 95, 93);    // #245f5d
+
+// notification palette -- reuses colors from accent palette
+
+$note-blue :                $accent-blue;
+$note-green :               $accent-green;
+$note-orange :              $accent-orange;
+$note-red :                 $accent-red;
+
+// generic
+
+$white :                    $core-white;
+$black :                    $core-black;
+
+$dark-gray :                $core-gray;
+$medium-gray :              $core-light-gray;
+$light-gray :               $core-off-white;
+
+$default-text-color :       $black;
+$link-color :               $accent-blue;
+$link-hover-color :         #3389cc; // This value should be in a variable
+
+$success-color :            $note-green;
+$error-color :              $note-red;
+$error-bg-color :           #f7e3e4; // This was taken from a current NC site; this should be refactored to use one of the existing colors
+
+// third-party colors
+
+$facebook-color :           #3b5998;
+$twitter-color :            #1da1f3;
+
+$instagram-color :          linear-gradient(-135deg, rgba(20,0,200,1), rgba(185,0,180, 1), rgba(245,0,0,1)); // #1400c8,#b900b4,#f50000
+$instagram-color-trans :    linear-gradient(-135deg, rgba(20,0,200,.5), rgba(185,0,180, .5), rgba(245,0,0,.5));
+$instagram-color-dark :     #242020; // color used for dark glyph icon -- https://en.instagram-brand.com/assets
+
+$flickr-color:              #151517; // hex equivalent of rgba(21,21,23,.95);
+
+// unique colors -- maybe we can update to use existing color palette?
+
+$side-nav-indented-bg-color : #051825; 

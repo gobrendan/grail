@@ -1,0 +1,436 @@
+/*
+ * hero
+ */
+
+.hero {
+
+  max-width: $component-max-width;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+
+  &__inner-wrapper {
+
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+
+  }
+
+  /* NOTE: For proper positioning of elements, the __img element is *not* included in __inner-wrapper */
+
+  &__img-wrapper {
+
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-top: 39.473684%; /* NOTE: this value is a result of dividing the image height by width */
+    
+    .hero__img {
+
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      right: 0;
+
+    }
+
+  }
+
+  &__img {
+
+    position: relative;
+    z-index: 1; /* NOTE: image is below other content */
+    max-height: 600px; /* NOTE: magic number -- should be in variable since it's applied to __img too */
+
+  }
+
+  &__text-block {
+
+    color: $core-blue;
+    background: $core-off-white; /* NOTE: this value should be in a variable or we should use existing variable */
+    padding: 1.875rem 1.25rem; /* NOTE: we might want the left/right padding in a variable */
+
+    &--trans {
+
+      //
+
+    }
+
+    &--no-frame.hero__text-block { /* NOTE: using chained selector for increased specificity */
+
+      background: transparent;
+      padding: 0;
+      border: 0;
+      box-shadow: none;
+
+    }
+
+    &--amtrak-wrapper {
+
+      //
+
+    }
+
+    > *:last-child {
+
+      margin-bottom: 0; /* NOTE: we might want to refactor this, perhaps include a "__last-child" modifier for last child */
+
+    }
+
+  }
+
+  &__heading {
+
+    font-size: 1.3125rem;
+    margin: 0 0 1.875rem;
+
+  }
+
+  &__p {
+
+    margin-bottom: 1.875rem;
+
+    &--answer-count {
+
+      font-family: $font-heavy-family;
+      margin-bottom: 1rem;
+
+    }
+
+  }
+
+  &__btn {
+
+    //
+
+  }
+
+}
+
+.hero--full-width {
+
+  max-width: none;
+
+  .hero__inner-wrapper {
+
+    // max-width: $component-max-width;
+    max-width: 72rem; /* NOTE: this value should be in a variable */
+
+  }
+
+  /* NOTE: For proper positioning of elements, the __img element is *not* included in __inner-wrapper */
+
+  .hero__img-wrapper {
+
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-top: 37.152778%; /* NOTE: this value is a result of dividing height by width -- 535 / 1140 */
+
+    .hero__img {
+
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      right: 0;
+
+    }
+
+  }
+
+  .hero__img {
+
+    //
+
+  }
+
+  .hero__text-block {
+
+    //
+
+  }
+
+  .hero__heading {
+
+    //
+
+    &:after {
+
+      content: "";
+      display: block;
+      height: 0;
+      border-style: solid;
+      border-bottom-width: .25rem;
+      margin-top: 1.3125rem;
+
+    }
+
+  }
+
+}
+
+.hero--overflow-visible {
+
+  overflow: visible;
+
+}
+
+.hero--advanced {
+
+  max-width: none;
+
+  .hero__img {
+
+    display: none; /* NOTE: full-width hero images hidden by default, but are displayed on wider screens (see below) */
+
+  }
+
+  .hero__text-block {
+
+    //
+
+  }
+
+  .hero__heading {
+
+    //
+
+    &:after {
+
+      content: "";
+      display: block;
+      height: 0;
+      border-style: solid;
+      border-bottom-width: .25rem;
+      margin-top: 1.3125rem;
+
+    }
+
+  }
+
+}
+
+.hero--light-text {
+
+  //
+
+}
+
+.hero--dark {
+
+  background: $core-blue;
+
+  .hero__text-block {
+
+    color: $white;
+    background: $core-gray;
+
+  }
+
+}
+
+.hero--carousel {
+
+  margin-bottom: 38px; /* NOTE: matches controls height, this should be in variable */
+
+}
+
+@include sb-media($large-breakpoint) {
+
+  .hero {
+
+    height: auto;
+    margin: 0 auto;
+
+    &__inner-wrapper {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+    }
+
+    &__img {
+
+      display: block;
+      position: relative;
+      z-index: 1; /* NOTE: image is below other content */
+
+    }
+
+    &__text-block {
+
+      @include vertical-align;
+      position: absolute;
+      left: 100px;
+      z-index: 2; /* NOTE: text block is above image */
+      width: 456px;
+      height: auto;
+      background: rgba(255,255,255, .9); /* NOTE: this value should be in a variable */
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25); /* NOTE: this value should be in a variable */
+
+      &--trans {
+
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+
+        .hero__heading {
+
+          font-size: 2.25rem; /* NOTE: this value should be in a variable */
+
+          &:after {
+
+            content: "";
+            display: block;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 .25rem; /* NOTE: this value should be in a variable */
+            margin-top: 1.3125rem; /* NOTE: this value should be in a variable */
+
+          }
+        }
+
+      }
+
+      &--amtrak-wrapper {
+
+        max-width: 500px;
+        width: 100%;
+
+        background: transparent;
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+
+        top: 1rem;
+        right: 1rem;
+        left: auto;
+
+      }
+
+    }
+
+    &--text-right {
+
+      .hero__text-block {
+
+        /* NOTE: reset left value and set right value */
+
+        left: auto;
+        right: 100px; /* NOTE: this value should be in a variable */
+
+      }
+
+    }
+
+    &--dark {
+
+      .hero__text-block {
+
+        background: transparent;
+
+      }
+
+    }
+
+    &--full-width {
+
+      max-height: 535px; /* NOTE: this matches height dimension for "hero full width" images */
+
+      .hero__img {
+
+        display: block;
+        max-width: 1440px; /* NOTE: this value should be in a variable */
+        margin: 0 auto; /* NOTE: necessary since images don't stretch to the full width of the viewport */
+
+      }
+
+      .hero__text-block {
+
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
+
+      }
+
+      .hero__heading {
+
+        font-size: 2.25rem; /* NOTE: this value should be in a variable */
+
+      }
+
+    }
+
+    &--advanced {
+
+      max-height: 400px;
+      overflow: hidden;
+      min-height: 0;
+
+      .hero__img {
+
+        display: block;
+        margin: 0 auto; /* NOTE: necessary since images don't stretch to the full width of the viewport */
+
+      }
+
+      .hero__text-block {
+
+        //
+      }
+
+      .hero__heading {
+
+        font-size: 2.25rem; /* NOTE: this value should be in a variable */
+
+      }
+
+    }
+
+    &--light-text {
+
+      .hero__heading {
+
+        color: $white;
+
+      }
+
+      .hero__p {
+
+        color: $white;
+
+      }
+
+      .hero__btn {
+
+        color: $core-white;
+        background: transparent;
+        border-color: $core-white;
+
+        &:hover {
+
+          box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2); /* NOTE: this value should be in a variable */
+
+        }
+
+      }
+
+    }
+
+    &--carousel {
+
+      margin-bottom: 72px; /* NOTE: magic number -- matches controls height, this should be in variable; height of element should be precise */
+
+    }
+
+  }
+
+}

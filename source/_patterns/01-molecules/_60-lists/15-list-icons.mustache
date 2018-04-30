@@ -1,0 +1,18 @@
+{{# list-icons }}
+
+<ul class="list-icons {{ list-classes }}">
+
+  {{# item }}
+
+  <li class="list-icons__item">
+    <a class="list-icons__link {{ link-modifier }}" href="{{ url }}">
+      <i class="{{ icon-classes }}"></i>
+      <span class="list-icons__text">
+        {{ text }}
+      </span>
+    </a>
+  </li>
+
+  {{/ item }}
+
+{{/ list-icons }}

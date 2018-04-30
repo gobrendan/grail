@@ -1,0 +1,67 @@
+/*
+ * alert toggle
+ */
+
+.alert-toggle {
+
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 10001;
+
+  &__icon,
+  &__count {
+
+    //
+
+  }
+
+  &__icon {
+
+    font-size: 24px;
+    vertical-align: middle;
+
+  }
+
+  &__count {
+
+    line-height: 25px; /* NOTE: improves alignment of icon and text */
+    vertical-align: bottom;
+
+  }
+
+  &:hover {
+
+    color: $white;
+    text-decoration: none;
+
+  }
+
+  &.active {
+
+    /* NOTE: class toggled with JS */
+
+  }
+
+}
+
+/* NOTE: modifier is nested here, which means higher specificity. The .site-header Sass partial includes a rule that colors this element white. We should refactor so we have two color-related modifiers (i.e, --light and --dark) */
+
+.site-header {
+
+  .alert-toggle {
+
+    &.alert-toggle--dark {
+
+      color: $core-blue;
+
+      &:hover {
+
+        color: $core-blue;
+
+      }
+
+    }
+
+  }
+
+}

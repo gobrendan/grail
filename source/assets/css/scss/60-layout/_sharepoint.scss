@@ -1,0 +1,415 @@
+/*
+ * SharePoint-related
+ */
+
+$sharepoint-ribbon-height : 65px;
+$mobile-header-height :     60px;
+$fixed-item-total-height :  $sharepoint-ribbon-height + $mobile-header-height;
+
+/* NOTE: SharePoint ribbon element */
+
+#ms-designer-ribbon {
+
+  height: $sharepoint-ribbon-height;
+
+}
+
+/* NOTE: ".sp-anonymous" class appended to <body> when user not logged in */
+
+.sp-anonymous {
+
+  /* NOTE: hide ribbon when user not logged in */
+
+  #ms-designer-ribbon {
+
+    //display: none;
+
+  }
+
+}
+
+/* NOTE: ".sp-authenticated" class appended to <body> when user is logged in */
+
+.sp-authenticated {
+
+  padding-top: $fixed-item-total-height;
+
+  /* NOTE: display ribbon when user is logged in */
+
+  #ms-designer-ribbon {
+
+    //display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+  
+
+  }
+
+  /* NOTE: adjust "mobile header" top value so it doesn't overlap ribbon */
+
+  .mobile-header {
+
+    top: $sharepoint-ribbon-height;
+
+  }
+
+  @include sb-media($large-breakpoint) {
+
+    padding-top: $sharepoint-ribbon-height;
+
+  }
+
+}
+
+/* NOTE: SharePoint's CSS is giving a border to "input[type=text]" elements -- override that */
+
+.search-box {
+
+  //
+
+  &__text-input {
+
+    &[type=text] {
+
+      border: 0;
+
+    }
+
+  }
+
+}
+
+#dmvTest {
+
+  margin: 0 0 1rem;
+
+}
+
+/* NOTE: remove top margin for first child elements in SharePoint-specific wrapper */
+/* NOTE: this is handled in the pattern library by targeting the first child of .page-content__item wrappers; the components in SharePoint sometimes have other wrappers */
+
+.ms-rtestate-field > *:first-child {
+
+  margin-top: 0;
+
+}
+
+/* NOTE: override SharePoint's input[type=button] rules */
+
+input[type=button].btn, 
+input[type=reset].btn, 
+input[type=submit].btn,
+input[type='submit'].btn, 
+button.btn {
+
+  color: $core-white;
+  background: $core-blue;
+  display: inline-block;
+  text-align: left;
+  border: 2px solid $core-blue;
+  border-radius: 4px; /* NOTE: this value should be in a variable */
+  padding: 11px 15px; /* NOTE: we might want this in a variable -- height of buttons should match text inputs and custom menu/select */
+  line-height: 1.5;
+  text-decoration: none;
+  transition: $transition;
+  cursor: pointer; /* NOTE: helpful when used on <button> and <input type='submit'> elements */
+
+  font-size: $font-size--default;
+  vertical-align: top; 
+  min-width: 0;
+  margin: 0;
+
+  &:hover {
+
+    color: $core-white;
+    background: $core-blue;
+    text-decoration: none;
+    box-shadow: 0 0 0 5px rgba(9, 41, 64, 0.2); /* NOTE we might want this rgba() value in a variable */
+
+  }
+
+  &--w-icon {
+
+    position: relative;
+
+    &:after {
+
+      @include vertical-align;
+      display: block;
+      content: "";
+      position: absolute;
+      font-size: 1.5rem;
+      font-family: 'custom-icomoon' !important; /* (document why !important is being used) */
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* better font rendering */
+
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+
+    }
+
+    &-left {
+
+      padding-left: 45px; /* NOTE: this value should be in a variable */
+
+      &:after {
+
+        left: 10px;
+        content: "\e90e";
+
+      }
+
+    }
+
+    &-right {
+
+      padding-right: 45px; /* NOTE: this value should be in a variable */
+
+      &:after {
+
+        right: 10px;
+        content: "\e90f";
+
+      }
+
+    }
+
+  }
+
+  &--w-icon-spinning {
+
+    &:after {
+
+      content: "\e918"; /* NOTE: "loop" icon from Icomoon set */
+
+      display: block;
+      width: 1em;
+      height: 1em;
+
+      /* keep icon horizontally/vertically centered */
+
+      text-align: center;
+      line-height: 1em;
+
+      -webkit-animation-name: icon-spin;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+
+      -moz-animation-name: icon-spin;
+      -moz-animation-duration: 1s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: linear;
+
+      -ms-animation-name: icon-spin;
+      -ms-animation-duration: 1s;
+      -ms-animation-iteration-count: infinite;
+      -ms-animation-timing-function: linear;
+
+      animation-name: icon-spin;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+
+      margin-top: -12px; /* half the height of the icon */
+
+    }
+
+  }
+
+  &--accent,
+  &--accent:hover, 
+  &--accent:visited {
+
+    background: $accent-blue;
+    border-color: $accent-blue;
+
+  }
+
+  &--ghost,
+  &--ghost:hover, 
+  &--ghost:visited {
+
+    color: $core-blue;
+    background: transparent;
+
+  }
+
+  &--ghost-alt,
+  &--ghost-alt:hover, 
+  &--ghost-alt:visited {
+
+    color: $core-light-gray;
+    background: transparent;
+    border-color: $core-light-gray;
+
+  }
+
+  &--ghost-inverted,
+  &--ghost-inverted:hover, 
+  &--ghost-inverted:visited {
+
+    color: $core-white;
+    background: transparent;
+    border-color: $core-white;
+
+    &:hover {
+
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2); /* NOTE: This value should be in a variable */
+
+    }
+
+  }
+
+  &--disabled,
+  &--disabled:hover, 
+  &--disabed:visited {
+
+    color: $core-light-gray;
+    background: transparent;
+    border-color: $core-light-gray;
+    pointer-events: none;
+    cursor: default;
+
+  }
+
+  &.btn--accent.btn--ghost,
+  &.btn--accent.btn--ghost:hover, 
+  &.btn--accent.btn--ghost:visited {
+
+    color: $accent-blue;
+    border-color: $accent-blue;
+
+  }
+
+}
+
+/* NOTE: side nav overrides (SharePoint's "Quick Launch" component) */
+
+.side-nav {
+
+  .ms-core-listMenu-item {
+
+    text-decoration: underline;
+
+    &:hover {
+
+      text-decoration: none;
+
+    }
+
+  }
+
+  .ms-core-listMenu-selected, 
+  .ms-core-listMenu-selected:hover {
+
+    background: $core-gray; 
+    text-decoration: none;
+
+  }
+
+  li > a.ms-core-listMenu-item.ms-core-listMenu-selected:hover {
+
+    background-color: $core-gray; 
+    text-decoration: none;
+
+  }
+
+  .ms-core-listMenu-verticalBox > 
+  .ms-core-listMenu-item, 
+  .ms-core-listMenu-verticalBox li.static > .ms-core-listMenu-item {
+
+    font-family: $font-medium-family;
+    padding: 1rem 1.875rem;
+
+  }
+
+  .ms-core-listMenu-item, 
+  .ms-core-listMenu-item:link, 
+  .ms-core-listMenu-item:visited, 
+  .ms-tv-item:link, 
+  .ms-tv-item:visited, 
+  .ms-tv-header:link, 
+  .ms-tv-header:visited {
+
+    color: $white; 
+
+  }
+
+  li > a.ms-core-listMenu-item:hover, 
+  li > a.ms-core-listMenu-item:active {
+
+    background-color: transparent;
+
+  }
+
+  .ms-core-listMenu-verticalBox li.static > ul.static > li.static > .ms-core-listMenu-item {
+
+    padding-left: 1.875rem;
+
+    &.ms-core-listMenu-selected, 
+    &.ms-core-listMenu-selected:hover {
+      
+      font-family: $font-normal-family;
+      padding-left: calc(1.875rem * 2);
+      margin-left: -1.875rem;
+
+    }
+
+  }
+
+  li.static ul.static {
+
+    background: $side-nav-indented-bg-color; 
+    padding-left: 1.875rem;
+    margin: 0;
+
+  }
+
+  li.static ul.static .ms-core-listMenu-item {
+
+    font-family: $font-normal-family;
+
+  }
+
+}
+
+/* NOTE: hide "x" from "search box" text input component */
+
+.search-box__text-input::-ms-clear {
+
+  display: none; 
+  
+}
+
+/* NOTE: In SharePoint, some components aren't wrapped in ".page-layout__section", which is responsible for bottom margins. 
+         To resolve, we target SharePoint-specific component wrappers and .page-layout__section elements inside them */
+
+.ms-webpart-zone {
+
+  //
+
+  .ms-webpartzone-cell {
+
+    margin-bottom: 2rem;
+    // border: 2px solid green;
+
+    .page-layout__section {
+
+      margin-bottom: 0;
+      // border: 2px solid red;
+
+    }
+
+  }
+
+}

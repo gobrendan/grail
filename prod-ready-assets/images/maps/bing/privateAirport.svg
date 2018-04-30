@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 88.1 87.9" style="enable-background:new 0 0 88.1 87.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.24;}
+	.st1{fill:#397AAC;stroke:#000000;stroke-width:0.5;stroke-miterlimit:10;}
+	.st2{fill:#FFFFFF;}
+</style>
+<title>Slice 1</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="pin-shadow-01" transform="translate(10.000000, 69.000000)" class="st0">
+		<path id="Shape" d="M49.2-0.3C28.4-1.7,7,0.2,1.2,4.2s-0.7,8.1,20,14.6l1.3,0.1c33.7-2.6,48.6-5.4,54.3-9.4
+			C82.4,5.6,69.9,1.2,49.2-0.3L49.2-0.3z"/>
+	</g>
+	<g id="pin" transform="translate(1.000000, 1.000000)">
+		<path id="Shape_1_" class="st1" d="M32-0.8c-18,0-32.7,14.4-32.7,32.5c0,17.9,8.6,31.5,32.2,54.5h1.1c23.6-23,32.2-36.5,32.2-54.5
+			C64.8,13.6,50-0.8,32-0.8L32-0.8z"/>
+	</g>
+	
+		<g id="smallplane" transform="translate(34.001364, 33.420000) scale(-1, 1) translate(-34.001364, -33.420000) translate(16.000000, 15.000000)">
+		<g id="Group">
+			
+				<rect id="Rectangle-path" x="28.4" y="4.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 6.965 24.4651)" class="st2" width="9.2" height="-2.1"/>
+			<path id="Shape_2_" class="st2" d="M31.9,30.9c0.4,0.4,1,0.4,1.5,0l2.9-2.9c0.4-0.4,0.5-1.1,0.1-1.6l-8.8-11.4
+				c-0.2-0.2-0.3-0.4-0.3-0.7s0.1-0.5,0.3-0.7l4.1-4.1l0.9-0.9c0-0.4-0.1-0.8-0.4-1L29.3,5c-0.3-0.3-0.6-0.5-1-0.7l-1,1l-4.1,4.1
+				c-0.4,0.4-1.1,0.5-1.6,0.1L10.2,0.7C10,0.5,9.7,0.4,9.4,0.4S8.9,0.5,8.7,0.7L5.8,3.6C5.6,3.8,5.5,4,5.5,4.3
+				c0,0.3,0.1,0.5,0.3,0.7l9.6,10.6c0.4,0.4,0.4,1,0,1.4l-5.1,5c-0.4,0.4-1.1,0.5-1.6,0.1l-3.3-2.4c-0.6-0.2-1.3-0.1-1.7,0.3
+				l-2.2,2.2c-0.2,0.2-0.3,0.4-0.3,0.7c0,0.3,0.1,0.5,0.3,0.7l5.1,5.1L8,30.3l5.1,5c0.2,0.2,0.4,0.3,0.7,0.3c0.3,0,0.5-0.1,0.7-0.3
+				l2.2-2.2c0.4-0.4,0.5-1.1,0.1-1.6l-2.5-3.3c-0.4-0.5-0.3-1.2,0.1-1.6l5-5.1c0.2-0.2,0.4-0.3,0.7-0.3c0.3,0,0.5,0.1,0.7,0.3
+				L31.9,30.9z"/>
+		</g>
+	</g>
+</g>
+</svg>

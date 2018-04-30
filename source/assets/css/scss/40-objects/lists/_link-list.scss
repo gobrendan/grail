@@ -1,0 +1,112 @@
+/*
+ * link group
+ */
+
+.link-group {
+
+  // @extend %clearfix;  
+  @include clearfix;  
+  font-family: $font-medium-family;
+  
+  &__list-wrapper {
+
+    //
+
+  }
+
+  &__list {
+
+    // @extend %clean-list;
+    // @extend %clearfix;
+    @include clean-list;
+    @include clearfix;
+    margin: 0;
+
+  }
+
+  &__item {
+    
+    display: block;
+
+  }
+  
+  &__link {
+
+    display: block;
+    font-size: $font-size--eta;
+    text-transform: uppercase;
+    padding: .25rem 0;
+
+  }
+
+  &--on-dark {
+    
+    background: $core-blue;
+    
+    .link-group__link {
+
+      color: $white;
+
+      &:hover,
+      &:visited { /* NOTE: including :visited will override related SharePoint rule */
+  
+        color: $white;
+  
+      }
+
+    }
+
+  } 
+
+  @include sb-media($small-breakpoint) {
+    
+    &__list-wrapper {
+      
+      float: left;
+      width: calc(50% - .5rem);
+  
+      &:first-child {
+  
+        margin-right: 1rem;
+  
+      }
+  
+    }
+
+  }
+
+  @include sb-media($large-breakpoint) {
+
+    text-align: center;
+
+    &__list-wrapper {
+      
+      float: none;
+      width: auto;
+      display: inline-block;
+
+      &:first-child {
+
+        width: auto; 
+        margin: 0;
+
+      }
+      
+    }
+    
+    &__list {
+
+      //
+
+    }
+
+    &__item {
+
+      display: inline-block;
+      margin: 0 .5rem;
+
+    }
+      
+  }
+
+}

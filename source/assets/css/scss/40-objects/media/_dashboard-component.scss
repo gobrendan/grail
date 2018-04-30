@@ -1,0 +1,781 @@
+/*
+ * dashboard component
+ */
+
+.dashboard-component {
+
+  margin: 2rem 0;
+
+  &__heading {
+
+    @include clearfix;
+    font-size: 1.25rem;
+    background: $core-off-white;
+    padding: .5rem;
+    margin: 0 0 1rem;
+
+    &-inner {
+
+      display: block;
+
+      &--first {
+
+        display: block;
+
+        @include sb-media(42em) { /* NOTE: breakpoint is magic number -- sensible point at which to float the '--last' element to the right */
+
+          float: left;
+
+        }
+
+      }
+
+      &--last {
+
+        font-size: $font-size--eta;
+        display: block;
+        padding: .5rem 0 0;
+
+        @include sb-media(42em) { /* NOTE: breakpoint is magic number -- sensible point at which to float the '--last' element to the right */
+
+          float: right;
+          line-height: 1.5rem; /* NOTE: vertically centers text with "--first" text */
+          padding: 0;
+
+        }
+
+        &:empty {
+
+          display: none; /* NOTE: This is helpful in SharePoint, since the markup is included there even if this element doesn't have any content. */
+                         /* NOTE: In Pattern Lab, the element is appended via JS only when it has content. */
+
+        }
+
+      }
+
+    }
+
+  }
+
+  &__details {
+
+    //
+
+    .no-flexbox & {
+
+      padding-left: 1rem;
+
+    }
+
+  }
+
+  &__grid {
+
+    text-align: center;
+
+  }
+
+  &__grid-cell {
+
+    //
+
+    .gauge-box__gauge {
+
+      margin: auto; /* NOTE: centers the gauge when it's included in a grid */
+
+    }
+
+  }
+
+  &:last-child {
+
+    margin: 0;
+
+  }
+
+}
+
+.gauge-box {
+
+  // 
+
+  &__heading {
+
+    text-align: center; 
+    margin: 0;
+
+  }
+
+  &__gauge-wrapper {
+
+    //
+
+  }
+
+  &__gauge {
+
+    // margin: 0 0 1rem; 
+    // border: 1px solid red;
+
+    /* NOTE: the following "table" and "div" rules target elements added by the Google Charts API */
+
+    table {
+
+      width: 100% !important; /* NOTE: !important used to override inline declaration */
+
+    }
+
+    div[dir=ltr] {
+
+      margin: auto !important; /* NOTE: !important used to override inline declaration */
+
+    }
+
+    canvas {
+
+      display: block;
+      width: 200px !important;
+      height: 200px !important; 
+      margin: auto;
+      // border: 1px solid orange;
+
+    }
+
+  }
+
+  &__details {
+
+    // font-size: $font-size--eta;
+
+    .no-flexbox & {
+
+      padding-left: 1rem;
+
+    }
+    
+  }
+
+  @include sb-media($small-breakpoint) {
+
+    &__gauge {
+
+      //
+
+      canvas {
+
+        width: 300px !important;
+        height: 300px !important;
+    
+      }
+
+    }
+
+  }
+
+  @include sb-media($medium-breakpoint) {
+
+    &__heading {
+
+      text-align: left; 
+      font-size: $font-size--gamma;
+  
+    }
+
+    &__gauge-wrapper {
+
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+
+      -ms-flex-align: center;
+      align-items: center;
+
+      .no-flexbox & {
+
+        display: table;
+
+        > * {
+
+          display: table-cell;
+          vertical-align: middle;
+
+        }
+
+      }
+
+    }
+
+    &__gauge {
+
+      -webkit-flex: 300px 0 0;
+      -ms-flex: 300px 0 0;
+      flex: 300px 0 0;
+      width: 300px; 
+      margin: 0 1rem 0 0;
+
+      canvas {
+
+        //
+    
+      }
+
+    }
+
+  }
+
+}
+
+.chart-box {
+
+  margin: 2rem 0;
+
+  &__chart {
+
+    height: 220px; /* magic number -- takes into accounbt horizontal scrollbar in some browsers */
+    overflow-x: auto;
+    overflow-y: hidden;
+
+  }
+
+}
+
+.table-box {
+
+  //
+
+  &__table {
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+  }
+
+}
+
+.image-box {
+
+  //
+
+  &__img {
+
+    //
+
+  }
+
+}
+
+/* NOTE: the following classes are used only in SharePoint -- the rules here make sure the gauges wrapper margins are consistent between Pattern Lab and SharePoint */
+
+.dashboard-component-details { /* NOTE: this element is only used in SharePoint --  */
+
+  margin: 0 0 2rem; 
+
+  @include sb-media($medium-breakpoint) {
+
+    margin: 0;
+
+  }
+
+}
+
+/* NOTE: the following rules for the map tooltips */
+
+.ncsvgmap-tooltip {
+
+  //z-index: $z-index--top;
+  z-index: 999999999999999;
+  width: 200px; /* NOTE: magic number -- a higher number makes sure longer text doesn't break to two lines */
+  margin-left: -100px !important; /* NOTE: half the width; using !important to override any inline declaration from JS (I was having trouble controlling margin from JS) */
+  font-size: 1rem;
+  line-height: 140%;
+  padding: .5rem;
+  background-color: $core-gray;
+  text-align: center;
+  color: $white;
+
+}
+
+.ncsvgmap-tooltip:after {
+
+  position: relative;
+  display: block;
+  content: "";
+  bottom: -16px;
+  height: 0;
+  width: 0;
+  margin: -10px auto 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid $core-gray;
+
+}
+
+.ncsvgmap-tooltip-above:before {
+
+  position: relative;
+  display: block;
+  content: "";
+  top: -16px;
+  height: 0;
+  width: 0;
+  margin: 0 auto -10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid $core-gray;
+
+}
+
+.ncsvgmap-tooltip-above:after {
+
+  display: none;
+
+}
+
+.ncsvgmap-tooltip-right:after {
+
+  margin: -10px 10% 0 auto;
+
+}
+
+.ncsvgmap-tooltip-right:before {
+
+  margin: 0 10% -10px auto;
+
+}
+
+.ncsvgmap-tooltip-left:after {
+  
+  margin: -10px auto 0 10%;
+
+}
+
+.ncsvgmap-tooltip-left:before {
+
+  margin: 0 auto -10px 10%;
+
+}
+
+#mapStage {
+
+  // position: relative !important;
+  // opacity: 0;
+
+}
+
+.ncsvgmap-circle {
+
+  // fill: red;
+  // stroke: black;
+  // stroke-width: 3px;
+
+}
+
+g.outline {
+
+  stroke: $white;
+  stroke-width: 2px;
+  display: none;
+
+}
+
+.county-hover {
+  
+  opacity: 0;
+
+}
+
+#side-display {
+  
+  fill-opacity: 0;
+
+}
+
+#state-outline {
+
+  fill-opacity: 0;
+  stroke: $core-gray;
+  stroke-width: 0px;
+
+}
+
+div.ncsvgmap-sidedisplay {
+
+  z-index: 1;
+  overflow: hidden;
+  padding: 10px 10px 10px 64px;
+  font-size: 150%;
+  font-weight: bold;
+  font-family: sans-serif;
+
+}
+
+// #mapStage.ncsvgmap-fadein {
+//     -webkit-animation: ncsvgmap-fadein 10s;
+//     -moz-animation: ncsvgmap-fadein 10s;
+//     animation: ncsvgmap-fadein 10s;
+//     opacity: 1;
+// }
+
+// @-webkit-keyframes ncsvgmap-fadein {
+//     0% {
+//         opacity: 0.0;
+//     }
+//     100% {
+//         opacity: 1.0;
+//     }
+// }
+
+// @-moz-keyframes ncsvgmap-fadein {
+//     0% {
+//         opacity: 0.0;
+//     }
+//     100% {
+//         opacity: 1.0;
+//     }
+// }
+
+// @keyframes ncsvgmap-fadein {
+//     0% {
+//         opacity: 0.0;
+//     }
+//     100% {
+//         opacity: 1.0;
+//     }
+// }
+
+g.county > g {
+
+  stroke: $white;
+  stroke-width: 2px;
+  fill-opacity: 1 !important;
+  fill: $accent-blue;
+
+  fill-opacity: 1;
+  -webkit-transition: -webkit-transform .15s ease-out;
+  -moz-transition: -moz-transform .15s ease-out;
+  transition: transform .15s ease-out;
+
+  &:hover {
+
+    opacity: 0.75;
+    
+  }
+
+  &.active {
+
+    fill: $core-blue;
+
+    /* NOTE: city hover state; no hover state needed for active city */
+
+    &:hover {
+      
+      //stroke: $core-gray !important;
+      cursor: pointer;
+      opacity: 1;
+
+    }
+
+  }
+
+}
+
+.ncsvgmap-hover {
+
+  //
+
+}
+
+/* NOTE: Customer Satisfaction */
+
+#customerSatisfactionChart > table,
+#ProgressChart > table,
+#StateComparisonChart > table  {
+
+  width: auto;
+
+}
+
+/* NOTE: specific divisions and counties */
+
+/* Division 1 */
+
+#bertie,
+#camden,
+#chowan,
+#currituck,
+#dare,
+#gates,
+#hertford,
+#hyde,
+#martin,
+#northampton,
+#pasquotank,
+#perquimans,
+#tyrrell,
+#washington {
+
+  //
+
+  &.active {
+
+    //
+
+  }
+
+}
+
+/* Division 2 */
+
+#beaufort,
+#carteret,
+#craven,
+#greene,
+#jones,
+#lenoir,
+#pamlico,
+#pitt {
+
+  //
+
+  &.active {
+
+    //
+
+  }
+
+}
+
+/* Division 3 */
+
+#brunswick,
+#duplin,
+#new-hanover,
+#onslow,
+#pender,
+#sampson {
+
+  //
+
+  &.active {
+
+    //
+
+  }
+
+}
+
+/* Division 4 */
+
+#edgecombe,
+#halifax,
+#johnston,
+#nash,
+#wayne,
+#wilson {
+
+  //
+
+  &.active {
+
+    //
+
+  }
+
+}
+
+/* Division 5 */
+
+#durham,
+#franklin,
+#granville,
+#person,
+#vance,
+#wake,
+#warren {
+
+  //
+
+  &.active {
+
+    //
+
+  }
+
+}
+
+/* Division 6 */
+
+#bladen,
+#columbus,
+#cumberland,
+#harnett,
+#robeson {
+
+  //
+
+  &.active {
+
+    //
+
+  }
+
+}
+
+/* Division 7 */
+
+#alamance,
+#caswell,
+#guilford,
+#orange,
+#rockingham {
+
+  //
+
+  &.active {
+
+    //
+
+  }
+
+}
+
+/* Division 8 */
+
+#chatham,
+#hoke,
+#lee,
+#montgomery,
+#moore,
+#randolph,
+#richmond,
+#scotland {
+
+  //
+
+  &.active {
+
+    //
+
+  }
+
+}
+
+/* Division 9 */
+
+#davidson,
+#davie,
+#forsyth,
+#rowan,
+#stokes {
+
+  //
+
+  &.active {
+
+    //
+
+  }
+
+}
+
+/*Division 10*/
+
+#anson,
+#cabarrus,
+#mecklenburg,
+#stanly,
+#union {
+
+  //
+
+  &.active {
+
+    //
+
+  }
+
+}
+
+/* Division 11 */
+
+#alleghany,
+#ashe,
+#avery,
+#caldwell,
+#surry,
+#watauga,
+#wilkes,
+#yadkin {
+
+  //
+
+  &.active {
+
+    //
+
+  }
+
+}
+
+/* Division 12 */
+
+#alexander {
+
+  //
+
+  &.active {
+
+    //
+
+  }
+
+}
+
+/* Division 13 */
+
+#madison,
+#buncombe,
+#burke,
+#catawba,
+#cleveland,
+#gaston,
+#iredell,
+#lincoln,
+#mcdowell,
+#mitchell,
+#rutherford,
+#yancey {
+
+  //
+
+  &.active {
+
+    //
+
+  }
+
+}
+
+/* Division 14 */
+
+#cherokee,
+#clay,
+#graham,
+#haywood,
+#henderson,
+#jackson,
+#macon,
+#polk,
+#swain,
+#transylvania {
+
+  //
+
+  &.active {
+
+    //
+
+  }
+
+}

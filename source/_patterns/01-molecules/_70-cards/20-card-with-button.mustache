@@ -1,0 +1,39 @@
+{{# card-with-button }}
+
+<div class="card card--with-button {{ card-modifier }}">
+
+  <div class="card__text-wrapper">
+
+    {{# icon }}
+    <i class="{{ icon }} card__icon"></i>
+    {{/ icon }}
+
+    <p class="card__primary-text">
+
+      {{ primary-text }}
+
+    </p>
+
+    <p class="card__secondary-text">
+
+      {{{ secondary-text }}}
+
+    </p>
+
+    {{# button-text }}
+    <a class="btn btn--ghost-inverted" href="">
+      {{ button-text }}
+    </a>
+    {{/ button-text }}
+
+    {{# extra-text }}
+    <span class="card__extra-text">
+      {{ extra-text }}
+    </span>
+    {{/ extra-text }}
+
+  </div>
+
+</div>
+
+{{/ card-with-button }}

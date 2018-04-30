@@ -1,0 +1,14 @@
+{
+    "ArrayOfCountyData": {
+        "CountyData": [
+           {
+                "CountyName": "Statewide",
+                "AverageClearanceTime": "69"
+           },
+           {
+                "CountyName": "Wake",
+                "AverageClearanceTime": "54"
+           }
+        ]
+    }
+}

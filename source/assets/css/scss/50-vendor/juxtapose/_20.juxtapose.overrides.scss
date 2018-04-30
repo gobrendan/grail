@@ -1,0 +1,52 @@
+/*
+ * Juxtapose overrides, fixes and modifiers
+ */
+
+div.juxtapose {
+
+  width: 100% !important; /* NOTE: added !important to override inline width -- the "responsive" JS option doesn't seem to work with when not using iframe */
+  max-width: $site-max-width; /* NOTE: apply sensible max-width */
+  // max-width: 720px; /* Width of "Rodanthe" image */
+
+  div.jx-image img {
+
+    width: auto; /* NOTE: overrides default "img" width declaration */
+    max-width: none; /* NOTE: overrides declaration in default CSS; needed to resolve IE display issue */
+
+  }
+
+  .jx-knightlab {
+
+    display: none; /* NOTE: hide Knightlab (plugin vendor) logo */
+
+  }
+
+  div.jx-image.jx-right div.jx-label {
+
+    border-radius: 0 0 0 5px;
+
+  }
+
+  div.jx-image.jx-left div.jx-label {
+
+    border-radius: 0 0 5px;
+
+  }
+
+  // &--horizontal {
+  //
+  //   //
+  //
+  // }
+  //
+  // &--vertical {
+  //
+  //   div.jx-image img {
+  //
+  //     width: 100%; /* overrides default "img" width declaration */
+  //
+  //   }
+  //
+  // }
+
+}

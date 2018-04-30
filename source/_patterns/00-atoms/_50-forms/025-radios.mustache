@@ -1,0 +1,23 @@
+{{# radios }}
+
+<ul class="input-group {{ list-modifier }}" id="{{ id }}">
+
+  {{# item }}
+
+  <li class="input-group__item {{ list-item-modifier }}">
+
+    {{# answer-confirmation }}
+    {{{ answer-confirmation }}}
+    {{/ answer-confirmation }}
+
+    <input type="radio" class="radio-input" name="{{ name }}" value="{{ value }}" id="{{ id }}" {{# checked }}checked="checked"{{/ checked }} />
+    <label class="custom-input-label" for="{{ id }}">
+      {{ label }}
+    </label>
+  </li>
+
+  {{/ item }}
+
+</ul>
+
+{{/ radios }}

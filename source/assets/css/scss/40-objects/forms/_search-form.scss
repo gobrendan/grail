@@ -1,0 +1,61 @@
+/*
+ * search form
+ */
+
+.search-form {
+
+  border-bottom: 3px solid $core-off-white;
+  padding: 0 0 2rem;
+  margin: 0 0 2rem;
+
+  &__count {
+
+    //
+
+  }
+
+  &__grid {
+
+    margin-bottom: 0;
+
+  }
+
+  &__btn {
+
+    //
+
+  }
+
+  &__btn-group {
+
+    margin: 0;
+
+  }
+
+  fieldset {
+
+    margin: 0;
+
+  }
+
+  .grid__cell {
+
+    //
+
+    &--buttons {
+
+      display: flex;
+      align-items: flex-end;
+
+    }
+
+  }
+
+  .selectboxit-container .selectboxit,
+  .selectboxit-container .selectboxit-options {
+
+    max-width: none;
+
+  }
+
+}

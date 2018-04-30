@@ -1,0 +1,51 @@
+/*
+ * input layered
+ */
+
+.input-layered {
+
+  position: relative;
+
+  &__textarea {
+
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+  }
+
+  &__count {
+
+    font: $font-italic;
+    font-size: $font-size--eta;
+    line-height: 1;
+    color: $core-gray;
+    position: absolute;
+    top: 5px;
+    right: .5rem;
+    z-index: 2;
+    margin: 0;
+    background: $white;
+
+  }
+
+  &__count-max {
+
+    //
+
+    &:after {
+
+      display: inline;
+      content: "/"attr(data-maxlength);
+
+    }
+
+  }
+
+  &__count-max--over {
+
+    color: $error-color;
+
+  }
+
+}

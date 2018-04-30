@@ -1,0 +1,39 @@
+/*
+ * menu wrapper -- wrapper for <select> elements, specifically the "custom select" elements
+ *
+ * NOTE: we might want to refactor and/or move this file to a more general location, which might make things easier if we change the custom <select> plugin we're using
+ */
+
+.menu-wrapper {
+  
+  position: relative;
+  z-index: $z-index--top; /* NOTE: apply z-index so menus show up above each other when active */
+
+  &--error {
+
+    .selectboxit-btn,
+    .selectboxit-list,
+
+    .selectboxit-btn.selectboxit-enabled:hover,
+    .selectboxit-btn.selectboxit-enabled:focus,
+    .selectboxit-btn.selectboxit-enabled:active {
+
+      border-color: $error-color;
+
+    }
+
+  }
+
+  &--max-width {
+
+    max-width: 500px;
+
+  }
+
+  &--centered {
+
+    margin: auto;
+
+  }
+
+}

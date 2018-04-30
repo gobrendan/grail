@@ -1,0 +1,41 @@
+/*
+ * link block group
+ */
+
+.link-block-group {
+
+  //
+
+  &__cell {
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+  }
+
+  .page-layout__section & {
+
+    margin-bottom: 0;
+
+  }
+
+}
+
+.no-flexbox.no-flexboxtweener {
+
+  .link-block-group {
+
+    display: table;
+    width: 100%;
+
+    &__cell {
+
+      display: table-cell;
+
+    }
+
+  }
+
+}

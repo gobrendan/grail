@@ -1,0 +1,121 @@
+{{# form-step }}
+
+<div class="form-step {{ modifier }}">
+
+  {{# question-img }}
+  {{> atoms-img-single-src }}
+  {{/ question-img }}
+
+  {{# heading }}
+  <h3 class="heading heading--gamma form-step__heading">
+
+    <span class="form-step__number">
+      {{ number }}
+    </span>
+
+    {{ heading }}
+
+  </h3>
+  {{/ heading }}
+
+  {{# item }}
+
+  <fieldset class="fieldset form-step__fieldset">
+
+    {{# text-input }}
+    {{# label }}
+    <label for="{{ id }}">
+      {{{ label }}}
+    </label>
+    {{/ label }}
+    <input class="input-text" id="{{ id }}" type="{{ type }}" placeholder="{{ placeholder }}">
+    <i class="fieldset__icon icon-error">
+    </i>
+    {{# input-helper }}
+    <p class="input-helper">
+      {{{ input-helper }}}
+    </p>
+    {{/ input-helper }}
+    {{/ text-input }}
+
+    {{# textarea }}
+    {{# label }}
+    <label for="{{ id }}">
+      {{{ label }}}
+    </label>
+    {{/ label }}
+    {{> molecules-input-layered }}
+    {{# input-helper }}
+    <p class="input-helper">
+      {{{ input-helper }}}
+    </p>
+    {{/ input-helper }}
+    {{/ textarea }}
+
+    {{# checkboxes }}
+    {{# label }}
+    <label for="{{ id }}">
+      {{{ label }}}
+    </label>
+    {{/ label }}
+    {{> atoms-checkboxes }}
+    {{# input-helper }}
+    <p class="input-helper">
+      {{{ input-helper }}}
+    </p>
+    {{/ input-helper }}
+    {{/ checkboxes }}
+
+    {{# answer-choices }}
+    {{> molecules-answer-choices }}
+    {{/ answer-choices }}
+
+    {{# radios }}
+    {{# label }}
+    <label for="{{ id }}">
+      {{{ label }}}
+    </label>
+    {{/ label }}
+    {{> atoms-radios }}
+    {{# input-helper }}
+    <p class="input-helper">
+      {{{ input-helper }}}
+    </p>
+    {{/ input-helper }}
+    {{/ radios }}
+
+    {{# incorrect-answer }}
+    <div class="wrong_answer showing">
+      Incorrect Answer Chosen
+    </div>
+    {{/ incorrect-answer }}
+
+    {{# table }}
+    {{# label }}
+    <label for="{{ id }}">
+      {{{ label }}}
+    </label>
+    {{/ label }}
+    {{> atoms-table }}
+    {{# input-helper }}
+    <p class="input-helper">
+      {{{ input-helper }}}
+    </p>
+    {{/ input-helper }}
+    {{/ table }}
+
+    {{# form-grid }}
+    {{> molecules-form-grid-report }}
+    {{/ form-grid }}
+
+    {{# form-grid-events }}
+    {{> molecules-form-grid-events }}
+    {{/ form-grid-events }}
+
+  </fieldset>
+
+  {{/ item }}
+
+</div>
+
+{{/ form-step }}

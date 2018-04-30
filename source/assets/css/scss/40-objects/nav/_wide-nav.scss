@@ -1,0 +1,534 @@
+/*
+ * wide nav -- used for desktop/primary navigation
+ */
+
+.wide-nav {
+
+  display: none; /* NOTE: hide by default, display on wider screens (see media query below) */
+
+  &__inner-wrapper {
+
+    max-width: $component-max-width;
+    padding: 0 $page-side-padding;
+    margin: 0 auto;
+
+  }
+
+  &__list {
+
+    @include clean-list;
+    @include clearfix;
+    margin: 0;
+
+  }
+
+  & > li,
+  &__list-item {
+
+    display: block;
+    float: left;
+
+    &.hidden {
+
+      display: none;
+
+    }
+
+    &:hover {
+
+      .wide-nav__link {
+
+        background-color: rgba(0,0,0,0.5); /* NOTE: This value should be in a variable */
+
+      }
+
+    }
+
+  }
+
+  &__list-item--login {
+
+    position: absolute;
+    right: 0; 
+
+    .wide-nav__link {
+
+      font-size: 12px;
+      text-align: center;
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      line-height: 1.6;
+      background: $accent-purple;
+      border-top: 4px solid $accent-orange;
+      text-transform: none;
+      flex-direction: column;
+      justify-content: center;
+
+    }
+
+    @include sb-media(75em) { /* NOTE: value should be in a variable -- this breakpoint matches the one for the "heroine__menu" elemenmt */
+
+      position: relative;
+      right: auto; 
+      float: right;
+
+    }
+
+  }
+
+  &__link { // &__more-btn 
+
+    font-size: 1rem;
+    display: block;
+    line-height: 1;
+    display: block;
+    text-transform: capitalize;
+    font-family: $font-medium-family;
+    color: $core-off-white;
+    text-decoration: none;
+    position: relative;
+    padding: 2rem calc(1.25rem - 5px); /* NOTE: left/right value is magic number -- keeps items from breaking to two lines on ~iPad-width screens */
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover {
+
+      text-decoration: none;
+      color: $core-off-white;
+      background-color: rgba(0,0,0,.25); /* NOTE: This value should be in a variable */
+
+    }
+
+    &:visited {
+
+      color: $core-off-white; /* NOTE: including :visited will override related SharePoint rule */
+
+    }
+
+    &:focus {
+
+      outline: 1px dotted $core-gray; 
+
+    }
+
+    i {
+
+      display: none; /* NOTE: hide arrow icons unless the element has the "--with-menu" modifier */
+
+    }
+
+    i.icon-account {
+
+      display: block; /* NOTE: always display the account icon (for "LOGIN" link) */
+      font-size: 1.5rem; 
+      
+    }
+
+    &--with-menu {
+
+      text-decoration: none;
+      padding-right: 40px;
+
+      i { /* NOTE: We might want to give this element a class */
+
+        @include vertical-align();
+        // @extend %transition;
+        @include transition($transition);
+
+        transform-origin: center;
+
+        position: absolute; /* Override mixin */
+        font-size: 1.5rem;
+        display: block;
+        right: calc(1.25rem - 5px); 
+
+      }
+
+      &:hover {
+
+        text-decoration: none;
+
+      }
+
+    }
+
+    &.active {
+
+      background-color: rgba(0,0,0,.25); /* NOTE: This value should be in a variable */
+
+      i { /* NOTE: We might want to give this element a class */
+
+        transform: translateY(-50%) rotate(180deg); /* NOTE: We might want this value in a variable */
+
+      }
+
+    }
+
+    &--highlighted,
+    &.active {
+
+      &:hover {
+
+        background-color: rgba(0,0,0,0.5); /* NOTE: This value should be in a variable */
+
+      }
+
+    }
+
+  }
+
+  &__link {
+
+    &--highlighted {
+
+      background-color: rgba(0,0,0,.25); /* NOTE: This value should be in a variable */
+
+    }
+
+  }
+
+  @include sb-media($large-breakpoint) {
+
+    display: block;
+    position: relative; /* NOTE: This helps positioning of menus -- don't include z-index since it interferes with stacking */
+    z-index: auto;
+    background-color: $accent-warm-gray;
+    background-image: url(../../assets/images/bg/bg_poly-accent-warm-gray.jpg);
+    background-position: center;
+    margin: 0;
+
+    &--no-margin {
+    
+      margin-bottom: 0;
+    
+    }
+
+    &--extra-margin {
+
+      margin-bottom: 2rem;
+
+    }
+
+    &--centered {
+
+      .wide-nav__list {
+
+        text-align: center;
+
+      }
+
+      .wide-nav__list-item {
+
+        display: inline-block;
+        float: none;
+
+        &:not(:first-child) {
+
+          margin-left: -6px; /* NOTE: inline-block elements have additional space between them */
+
+        }
+
+      }
+
+      .wide-nav-sub {
+
+        text-align: left;
+
+      }
+
+    }
+
+    /* NOTE: sticky when scrolling -- class added/removed via JS */
+
+    &--stuck {
+      
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: $z-index--top;
+
+    }
+
+    /* NOTE: background color/image modifiers */
+
+    &--green {
+
+      background-color: $accent-green;
+      background-image: url(../../assets/images/bg/bg_poly-accent-green.jpg);
+
+    }
+
+    &--olive {
+
+      background-color: $accent-green;
+      background-image: url(../../assets/images/bg/bg_poly-accent-olive.jpg);
+
+    }
+
+    &--purple {
+
+      background-color: $accent-purple;
+      background-image: url(../../assets/images/bg/bg_poly-accent-purple.jpg);
+
+    }
+
+    &--turquoise {
+
+      background-color: $accent-turquoise;
+      background-image: url(../../assets/images/bg/bg_poly-accent-turquoise.jpg);
+
+    }
+
+    &--orange {
+
+      background-color: $accent-orange;
+      background-image: url(../../assets/images/bg/bg_poly-accent-orange.jpg);
+
+    }
+
+    &--red {
+
+      background-color: $accent-red;
+      background-image: url(../../assets/images/bg/bg_poly-accent-red.jpg);
+
+    }
+
+  }
+
+}
+
+.wide-nav-sub {
+
+  background: $white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 80px; /* height of nav buttons */
+  z-index: -1;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .2s ease-out;
+  z-index: 50; /* keeps menu above other comonents, like "alert block" and "breadcrumbs" -- might no longer be necessary, testing needed to verify */
+
+  /* Use pseudo element to act as a bottom border for menu -- this keeps the "border" from displaying when the menu is closed */
+
+  &:after {
+
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: $core-off-white; /* value should be in a variable */
+
+  }
+
+  &.active {
+
+    max-height: 600px; /* magic number -- should be larger than maximum height of element */
+    transition: max-height .2s ease-in;
+
+  }
+
+  &__inner-wrapper {
+
+    max-width: $component-max-width;
+    margin: 0 auto;
+    padding: 0 $page-side-padding 1rem;
+
+  }
+
+  &__title {
+
+    display: inline-block; /* Inline-block is preferred so the hover/click doesn't happen unless you're literally on the text */
+    font-size: 2.25rem;
+    font-family: $font-medium-family;
+    line-height: 1.25;
+    color: $core-gray;
+    padding: 0;
+    margin: 2rem auto 1.875rem;
+
+    a {
+
+      color: $accent-blue; /* perhaps the <a> should have its own class (__title-link) */
+
+    }
+
+  }
+
+  &__list {
+
+    @include clean-list;
+    //@include clearfix;
+    margin: -1.5em 0 3em -1.5em; /* mimic .grid--guttersLg but add some extra space/margin to bottom */
+
+    .no-flexbox & {
+
+      flex: 0;
+
+    }
+
+  }
+
+  &__list-item {
+
+    &--with-split-list {
+
+      flex: 0 0 50% !important; /* Override ".grid--1of4 > .grid__cell" rule */
+
+      .wide-nav-sub-sub__list-item {
+
+        width: 50%;
+        float: left;
+
+      }
+
+      /* adjustments for non-flexbox-supporting browsers (mostly IE 9/10) */
+
+      .no-flexboxlegacy & {
+
+        max-width: 50% !important;
+
+      }
+
+      .no-flexbox & {
+
+        width: 50% !important;
+
+      }
+
+    }
+
+    /* adjustments for browsers that don't support completely (or at all) */
+
+    .no-flexboxlegacy & {
+
+      max-width: 25%;
+
+    }
+
+    .no-flexbox & {
+
+      width: 25%;
+      float: left;
+
+    }
+
+  }
+
+  /* Remove top-padding for all but first 4 items -- this overrides grid item's default padding */
+  /* Using added specificity to override grid item rules */
+
+  .wide-nav-sub__list {
+
+    .wide-nav-sub__list-item {
+
+      //
+
+      &:nth-child(n+5) {
+
+        padding-top: 0;
+
+      }
+
+    }
+
+  }
+
+  &__link {
+
+    font-size: 14px;
+    font-family: $font-medium-family;
+    display: block;
+    padding: 16px 0;
+    border-top: 1px solid $core-off-white;
+
+  }
+
+  &:hover {
+
+    //
+
+  }
+
+  /* adjustments for non-flexbox-supporting browsers (mostly IE 9/10) */
+
+  .no-flexboxlegacy & {
+
+    //
+
+  }
+
+  .no-flexbox & {
+
+    //
+
+  }
+
+}
+
+.wide-nav-sub:hover ~ .wide-nav__link {
+
+  //
+
+}
+
+.wide-nav-sub-sub {
+
+  &__list {
+
+    // @extend .wide-nav-sub__list;
+
+    @include clean-list;
+    //@include clearfix;
+    margin: -1.5em 0 3em -1.5em; /* mimic .grid--guttersLg but add some extra space/margin to bottom */
+
+    .no-flexbox & {
+
+      flex: 0;
+
+    }
+
+    margin: 0;
+
+  }
+
+  &__list-item {
+
+    //
+
+  }
+
+  &__link {
+
+    // @extend .wide-nav-sub__link;
+
+    font-size: 14px;
+    font-family: $font-medium-family;
+    display: block;
+    padding: 16px 0;
+    // border-top: 1px solid $core-off-white;
+    border: 0;
+    color: $core-light-gray;
+
+    &:hover,
+    &:visited {
+
+      color: $core-light-gray;
+
+    }
+
+  }
+
+  &--split-list {
+
+    //
+
+  }
+
+}

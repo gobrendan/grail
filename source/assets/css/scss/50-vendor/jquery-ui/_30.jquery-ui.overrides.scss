@@ -1,0 +1,240 @@
+/*
+ * jQuery UI overrides
+ */
+
+/* NOTE: added specificity (nesting in 'body') to override Amtrak's jQuery UI CSS file, which is injected into the <head> from an Amtrak JS file */
+
+body { 
+
+  .ui-datepicker {
+
+    border: 1px solid $accent-cool-gray; /* NOTE: This value should be in a variable */
+    border-radius: 4px; /* NOTE: This value should be in a variable */
+    background: $white;
+    padding: 0;
+    width: 100%; /* NOTE: prevents div from changing width depending on selected month */
+    max-width: 320px;
+    z-index: 10 !important; /* NOTE: this keeps widget above other items -- z-index is widely used in layout due to sticky nav elements, modals, etc. */
+    margin: 1px 0 0; /* NOTE: provides space between input and widget */
+
+    table {
+
+      margin: 0;
+      border: 1px solid transparent; /* NOTE: this declaration resolves issue in Chrome regarding rounded corners */
+
+    }
+
+    th {
+
+      background: $white;
+      color: $accent-cool-gray;
+
+    }
+
+    tr:nth-child(even) {
+
+      background: $white;
+
+    }
+
+    td a {
+      
+      text-align: center;
+      padding: 0.625rem;
+      border-radius: 2px;
+      transition: all 0.15s ease-in-out;
+
+      &:hover {
+
+        background: $core-off-white;
+
+      }
+
+    }
+
+    .ui-datepicker-header {
+
+      background: $accent-cool-gray;
+      color: $white;
+      padding: 0.3125rem 0; /* NOTE: This value should be in a variable */
+      border: 0;
+      border-radius: 0;
+
+    }
+
+    .ui-datepicker-title {
+
+      font-family: $font-medium-family;
+      line-height: 2.5rem;
+      font-size: 1rem;
+      font-weight: normal;
+
+    }
+
+    .ui-datepicker-prev,
+    .ui-datepicker-next {
+
+      font-size: 1.6875rem;
+      color: $white;
+      text-decoration: none;
+      cursor: pointer;
+      text-align: center;
+      border: 2px solid $white;
+      width: 2.0rem;
+      height: 2.0rem;
+      border-radius: 50%;
+      overflow: hidden;
+      top: 8px; /* NOTE: default jQuery UI CSS takes care of position declaration ("position: absolute") */
+
+      &:before {
+
+        font-size: 1.675rem;
+        position: absolute;
+        top: 50%;
+        margin-top: -19px;
+        font-family: 'custom-icomoon';
+        width: 30px;
+        left: 50%;
+        margin-left: -14px;
+        border-radius: 0;
+        border: 0;
+
+      }
+
+      &:hover {
+
+        color: $white;
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2); /* NOTE: This value should be in a variable */
+
+      }
+
+    }
+
+    /* NOTE: increased specificity (targeting 'a' element) needed for datepicker when used in Amtrak widget */
+
+    a.ui-datepicker-prev,
+    a.ui-datepicker-next {
+
+      font-size: 1.6875rem;
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+
+        color: $white;
+
+      }
+
+    }
+
+    /* use Icomoon icon instead of triangle image */
+
+    .ui-datepicker-prev {
+
+      left: 1rem;
+
+      &:before {
+
+        content: "\e909";
+        left: 12px;
+
+      }
+
+    }
+
+    span.ui-icon.ui-icon-circle-triangle-w,
+    span.ui-icon.ui-icon-circle-triangle-e {
+
+      display: none;
+
+    }
+
+    .ui-datepicker-next {
+
+      right: 1rem;
+
+      &:before {
+
+        content: "\e90a";
+
+      }
+
+    }
+
+    .ui-datepicker-prev.ui-corner-all,
+    .ui-datepicker-next.ui-corner-all {
+
+      font-size: 1rem;
+      font-weight: normal;
+
+      &.ui-state-hover {
+
+        background: transparent;
+
+      }
+
+    }
+
+    .ui-datepicker-prev-hover,
+    .ui-datepicker-next-hover {
+
+      top: 8px;
+
+    }
+
+    .ui-datepicker-prev-hover {
+
+      left: 1rem;
+
+    }
+
+    .ui-datepicker-next-hover {
+
+      right: 1rem;
+
+    }
+
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default {
+      
+      background: $white;
+      border: 0;
+      font-weight: normal;
+
+      &:hover {
+        
+        border: 0;
+
+      }
+
+    }
+
+    a.ui-state-hover:hover {
+      
+      color: $accent-blue;
+
+    }
+
+    /* NOTE: current day */
+
+    .ui-state-highlight,
+    .ui-state-highlight:hover {
+
+      color: $white;
+      background: $accent-blue;
+
+    }
+
+    /* NOTE: increased specificity (targeting 'a' element) needed for datepicker when used in Amtrak widget */
+
+    a.ui-state-highlight,
+    a.ui-state-highlight:hover {
+
+      color: $white;
+
+    }
+
+  }
+
+}

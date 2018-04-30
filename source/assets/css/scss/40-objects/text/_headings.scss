@@ -1,0 +1,235 @@
+/*
+ * headings
+ */
+
+.heading {
+
+  @extend %heading; 
+
+  &__pre-text {
+
+    display: block;
+    font-size: 66%; /* NOTE: use percentage so text size is relative with with parent element sizing */
+    font-family: $font-normal-family;
+
+  }
+
+  &__post-text {
+
+    display: block;
+    font-size: 66%; /* NOTE: use percentage so text size is relative with with parent element sizing */
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: $accent-blue;
+
+  }
+
+  &--no-top-margin {
+
+    margin-top: 0;
+
+  }
+
+  &--no-bottom-margin {
+
+    margin-bottom: 0;
+
+  }
+
+  &--uppercase {
+
+    text-transform: uppercase;
+
+  }
+
+  &--bordered {
+
+    &:after {
+
+      content: "";
+      display: block;
+      height: 0;
+      border-bottom: .25rem solid; /* border color inherits text color */
+      margin-top: .625rem;
+
+    }
+
+  }
+
+}
+
+.heading--alpha {
+
+  @extend %heading--alpha; 
+
+}
+
+.heading--beta { 
+
+  @extend %heading--beta; 
+
+}
+
+.heading--gamma {
+
+  @extend %heading--gamma; 
+
+}
+
+.heading--delta {
+
+  @extend %heading--delta;
+
+}
+
+.heading--epsilon {
+
+  @extend %heading--epsilon;
+
+}
+
+.heading--zeta {
+
+  @extend %heading--zeta;
+
+}
+
+.page-title {
+
+  @extend %page-title;
+
+}
+
+.section-title {
+
+  @extend %section-title;
+
+}
+
+.section-title {
+
+  //
+
+  &--alt {
+
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 100%;
+
+    font-size: $font-size--delta-fixed;
+    position: relative;
+    margin: 0; 
+
+    &:after {
+
+      display: none; 
+
+    }
+
+    /* NOTE: the show/hide change here should be component-specific (handled in DMV block component) */
+
+    .section-title__pre-text {
+      
+      display: none;
+      -webkit-flex: 0 0 100%;
+      flex: 0 0 100%;
+      font-size: 1rem;
+      color: $accent-light-blue;
+      margin: 0 0 .25rem;
+
+      @include sb-media($large-breakpoint) {
+
+        display: block;
+
+      }
+
+    }
+
+    .section-title__text {
+      
+      margin: 0 auto 1rem 0;
+      padding: 0 1rem 0 0;
+      
+    }
+
+    .section-title__more {
+
+      font-size: 1rem;
+      margin: 0 0 1rem;
+
+    }
+
+    .simple-list {
+
+      margin: 0 0 1rem;
+
+    }
+
+    .simple-list__item--inline, 
+    .simple-list__item--inline:last-child {
+
+      margin-bottom: 0;
+
+    }
+
+    .simple-list__item--inline {
+    
+      float: left;
+      margin: 0 1rem 0 0;
+    
+    }
+
+    .simple-list [class^="icon-"], 
+    .simple-list [class*=" icon-"], 
+    .simple-list [class^="material-icons"], 
+    .simple-list [class*=" material-icons"] {
+
+      margin: 0;
+
+    }
+
+    @include sb-media($medium-breakpoint) {
+
+      font-size: $font-size--gamma-medium ;
+      margin: 0 auto 1.5rem;
+
+      .section-title__text {
+      
+        margin: 0 auto 0 0;
+        
+      }
+
+      .section-title__more {
+
+        margin: auto 0 0 0;
+
+      }
+
+      .simple-list {
+
+        margin: 0;
+  
+      }
+
+    }
+
+    @include sb-media($large-breakpoint) {
+
+      font-size: $font-size--gamma;
+  
+      .simple-list {
+  
+        float: right;
+        margin: 0;
+  
+      }
+
+    }
+
+  }
+
+}

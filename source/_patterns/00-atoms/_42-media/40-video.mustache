@@ -1,0 +1,10 @@
+{{# video }}
+<div class="video-wrapper {{ modifier }}">
+  <iframe class="video-wrapper__video" src="{{{ url }}}" data-video="{{ data-video }}" frameborder="0" id="video" allowfullscreen></iframe>
+
+  {{# hidden-thumb-single }}
+  {{> atoms-img-single-src }}
+  {{/ hidden-thumb-single }}
+
+</div>
+{{/ video }}

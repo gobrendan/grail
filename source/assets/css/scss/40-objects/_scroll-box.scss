@@ -1,0 +1,191 @@
+/*
+ * Scroll Box
+ */
+
+.scroll-box {
+  
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  align-items: center;
+  margin: auto;
+
+  &__item {
+    
+    flex: 0 0 250px;
+    margin: 0 1rem 0 0;
+    
+    &:last-child {
+
+      margin: 0;
+
+    }
+
+    /* NOTE: adjust "order" on smaller screens to make sure second item is at least partially visible */
+
+    &:nth-child(1) {
+
+      order: 1;
+
+    }
+
+    &:nth-child(n+3) {
+
+      order: 3;
+      
+    }
+      
+    &--1x1 {
+
+      //
+
+    }
+    
+    &--2x1, 
+    &--16x9 {
+        
+      flex: 0 0 500px;
+
+    }
+
+    &--1x2 {
+
+      max-width: 200px;
+
+      .social-box {
+
+        max-width: 200px;
+
+      }
+
+    }
+
+    &--16x9 {
+
+      //
+
+    }
+
+    &--2x1, 
+    &--16x9 {
+        
+      flex: 0 0 600px;
+
+      &:nth-child(1):first-of-type {
+
+        order: 3; /* NOTE: on smaller screens (smaller than 600 pixels, put 2x1 items last -- makes it so more than one item is visible at a time when first viewing the component */
+
+      }
+      
+    }
+
+    &--text {
+      
+      //
+
+      /* NOTE: when a 1x2 item is a --text item, display as a 1x1 */
+
+      &.scroll-box__item--1x2 {
+
+        max-width: none;
+        
+        .social-box {
+  
+          max-width: 300px;
+  
+        }
+
+        .social-box { 
+          
+          .social-box__inner-wrapper {
+
+            padding-top: 100%;
+
+          }
+  
+        }
+
+      }
+      
+    }
+
+    &--image {
+      
+      //
+      
+    }
+
+    &--video {
+      
+      //
+      
+    }
+
+    /* NOTE: reset "order" value on wider screens */
+
+    @include sb-media($medium-breakpoint) {
+      
+      &--2x1, 
+      &--16x9 {
+          
+        //
+  
+        &:nth-child(1):first-of-type {
+  
+          order: initial;
+  
+        }
+        
+      }
+
+    }
+    
+  }
+
+  .social-box {
+
+    //
+
+    &--2x1 {
+
+      .social-box__inner-wrapper {
+
+        padding-top: calc(50% - 1px); /* NOTE: this resolves display bug (element is 1px too tall otherwise) */
+
+      }
+
+    }
+
+  }
+
+  .social-box__text {
+
+    font-size: .8rem;
+
+  }
+
+  /* NOTE: when used inside component wrapper, take left/right padding into account and allow component to touch sides of viewport */
+
+  .page-layout__section & {
+
+    margin-left: -$page-side-padding; 
+    margin-right: -$page-side-padding; 
+    padding: 0px $page-side-padding; 
+
+    &__item { 
+
+      //
+
+      &:last-child {
+
+        padding-right: $page-side-padding; 
+        flex: 0 0 calc(250px + $page-side-padding); 
+
+      }
+
+    }
+
+  }
+
+}

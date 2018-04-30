@@ -1,0 +1,35 @@
+{{# event-list }}
+
+<ul class="event-list {{ modifier }}">
+
+  {{# item }}
+
+  <li class="event-list__item {{ modifier }}">
+
+    {{# date-number }}
+    <div class="event-list__date-number">
+      {{> molecules-ico-box }}
+    </div>
+    {{/ date-number }}
+
+    <div class="event-list__item-inner">
+
+      {{# date }}
+      <span class="event-list__date">
+        {{ date }}
+      </span>
+      {{/ date }}
+
+      <a class="event-list__link" href="">
+        {{{ text }}}
+      </a>
+
+    </div>
+
+  </li>
+
+  {{/ item }}
+
+</ul>
+
+{{/ event-list }}

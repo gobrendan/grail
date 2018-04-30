@@ -1,0 +1,81 @@
+{
+  "paths" : {
+    "source" : {
+      "root": "./source/",
+      "patterns" : "./source/_patterns/",
+      "data" : "./source/_data/",
+      "meta": "./source/_meta/",
+      "annotations" : "./source/_annotations/",
+      "styleguide" : "./node_modules/styleguidekit-assets-default/dist/",
+      "patternlabFiles" : "./node_modules/styleguidekit-mustache-default/views/",
+      "js" : "./source/assets/js/",
+      "json" : "./source/assets/json/",
+      "xml" : "./source/assets/xml/",
+      "text" : "./source/assets/text/",
+      "images" : "./source/assets/images/",
+      "video" : "./source/assets/video/",
+      "fonts" : "./source/assets/fonts/",
+      "css" : "./source/assets/css/",
+      "favicon" : "./source/"
+    },
+    "public" : {
+      "root" : "./public/",
+      "patterns" : "./public/patterns/",
+      "data" : "./public/styleguide/data/",
+      "annotations" : "./public/annotations/",
+      "styleguide" : "./public/styleguide/",
+      "js" : "./public/assets/js/",
+      "json" : "./public/assets/json/",
+      "xml" : "./public/assets/xml/",
+      "text" : "./public/assets/text/",
+      "images" : "./public/assets/images/",
+      "video" : "./public/assets/video/",
+      "fonts" : "./public/assets/fonts/",
+      "css" : "./public/assets/css/",
+      "favicon" : "./public/",
+      "js-concat" : "./public/assets/js/concat/",
+      "assets" : "./public/assets/"
+    },
+    "prodReadyAssets" : "./prod-ready-assets/"
+  },
+  "styleGuideExcludes": [
+    "templates",
+    "pages"
+  ],
+  "defaultPattern": "viewall-atoms-colors",
+  "cleanPublic" : true,
+  "patternExtension": "mustache",
+  "ignored-extensions" : ["scss", "DS_Store", "less"],
+  "ignored-directories" : ["scss"],
+  "debug": false,
+  "ishControlsHide": {
+    "s": false,
+    "m": false,
+    "l": false,
+    "full": false,
+    "random": true,
+    "disco": true,
+    "hay": true,
+    "mqs": false,
+    "find": false,
+    "views-all": false,
+    "views-annotations": false,
+    "views-code": false,
+    "views-new": false,
+    "tools-all": false,
+    "tools-docs": true
+  },
+  "ishMinimum": "240",
+  "ishMaximum": "2600",
+  "patternStateCascade": ["inprogress", "inreview", "complete"],
+  "patternExportPatternPartials": [],
+  "patternExportDirectory": "./pattern_exports/",
+  "baseurl" : "",
+  "cacheBust": true,
+  "starterkitSubDir": "dist",
+  "outputFileSuffixes": {
+    "rendered": "",
+    "rawTemplate": "",
+    "markupOnly": ".markup-only"
+  }
+}

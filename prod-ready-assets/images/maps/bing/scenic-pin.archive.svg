@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 88.1 87.9" style="enable-background:new 0 0 88.1 87.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.24;}
+	.st1{fill:#3F7D97;stroke:#000000;stroke-width:0.5;stroke-miterlimit:10;}
+	.st2{display:none;}
+	.st3{display:inline;}
+	.st4{fill:#FFFFFF;}
+</style>
+<title>Slice 1</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1_1_">
+	<g id="passengerAirport" transform="translate(1.000000, 1.000000)">
+		<g id="Page-1">
+			<g id="pin-shadow-01" transform="translate(9.000000, 68.000000)" class="st0">
+				<path id="Shape" d="M49.2-0.3C28.4-1.7,7,0.2,1.2,4.2s-0.7,8.1,20,14.6l1.3,0.1c33.7-2.6,48.6-5.4,54.3-9.4
+					C82.4,5.6,69.9,1.2,49.2-0.3L49.2-0.3z"/>
+			</g>
+			<g id="pin">
+				<path id="Shape_1_" class="st1" d="M32-0.8c-18,0-32.7,14.4-32.7,32.5c0,17.9,8.6,31.5,32.2,54.5h1.1
+					c23.6-23,32.2-36.5,32.2-54.5C64.8,13.6,50-0.8,32-0.8L32-0.8z"/>
+			</g>
+		</g>
+	</g>
+	<g id="Group" transform="translate(15.000000, 21.000000)" class="st2">
+		<g id="scenic-tiny" class="st3">
+			<path id="Shape_2_" class="st4" d="M17,8.5c-1.8,0-2.9,1.2-2.9,2.9s1.2,2.9,2.9,2.9s2.9-1.2,2.9-2.9S18.7,8.5,17,8.5"/>
+			<path id="Shape_3_" class="st4" d="M17-0.3C9.1-0.3,2,4.7-0.6,11.4C2,18.1,9.1,23.1,17,23.1s14.9-5,17.5-11.7
+				C31.9,4.7,25.1-0.3,17-0.3z M17,18.7c-3.8,0-7.3-3.2-7.3-7.3s3.2-7.3,7.3-7.3s7.3,3.2,7.3,7.3S21,18.7,17,18.7z"/>
+		</g>
+	</g>
+</g>
+<path class="st4" d="M36.2,18.1l-8,10.7l6.1,8.1l-3.4,2.6c-3.6-4.8-9.6-12.8-9.6-12.8L8.4,43.8h47.1L36.2,18.1z"/>
+</svg>

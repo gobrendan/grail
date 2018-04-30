@@ -1,0 +1,25 @@
+@if($unslider-dot-navigation){
+	.#{$unslider-namespace}-nav, %#{$unslider-namespace}-nav {
+		ol {
+			list-style: none;
+			text-align: center;
+
+			li {
+				display: inline-block;
+				width: 6px;
+				height: 6px;
+				margin: 0 4px !important; /* NOTE: this overrides a declaration for generic ul/li list items -- might want to refactor since use !important is not recommended */
+				background: $core-off-white;
+				border-radius: 5px;
+				overflow: hidden;
+				text-indent: -999em;
+				cursor: pointer;
+
+				&.unslider-active {
+					background: $unslider-dot-colour;
+					cursor: default;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,132 @@
+/*
+ * base / doctype icons
+ */
+
+.icon-doctype {
+
+  display: block;
+  width: 3em;
+  height: 3em;
+  border-radius: 4px; /* NOTE: value should be in variable */
+
+  &--doc {
+
+    background-image: url('../../assets/images/icons/i_doctype-doc.svg');
+
+  }
+
+  &--doc-alt {
+
+    background-image: url('../../assets/images/icons/i_doctype-doc-alt.svg');
+
+  }
+
+  &--pdf {
+
+    background-image: url('../../assets/images/icons/i_doctype-pdf.svg');
+
+  }
+
+  &--pdf-alt {
+
+    background-image: url('../../assets/images/icons/i_doctype-pdf-alt.svg');
+
+  }
+
+  &--ppt {
+
+    background-image: url('../../assets/images/icons/i_doctype-ppt.svg');
+
+  }
+
+  &--ppt-alt {
+
+    background-image: url('../../assets/images/icons/i_doctype-ppt-alt.svg');
+
+  }
+
+  &--xls {
+
+    background-image: url('../../assets/images/icons/i_doctype-xls.svg');
+
+  }
+
+  &--xls-alt {
+
+    background-image: url('../../assets/images/icons/i_doctype-xls-alt.svg');
+
+  }
+
+  &--photo {
+
+    background-image: url('../../assets/images/icons/i_doctype-photo.svg');
+
+  }
+
+  &--photo-alt {
+
+    background-image: url('../../assets/images/icons/i_doctype-photo-alt.svg');
+
+  }
+
+  &--text {
+
+    background-image: url('../../assets/images/icons/i_doctype-text.svg');
+
+  }
+
+  &--text-alt {
+
+    background-image: url('../../assets/images/icons/i_doctype-text-alt.svg');
+
+  }
+
+  &--web {
+
+    background-image: url('../../assets/images/icons/i_doctype-web.svg');
+
+  }
+
+  &--web-alt {
+
+    background-image: url('../../assets/images/icons/i_doctype-web-alt.svg');
+
+  }
+
+  &--connect {
+
+    background-image: url('../../assets/images/icons/i_doctype-connect.svg');
+
+  }
+
+  &--connect-alt {
+
+    background-image: url('../../assets/images/icons/i_doctype-connect-alt.svg');
+
+  }
+
+  &--zip {
+
+    background-image: url('../../assets/images/icons/i_doctype-zip.svg');
+
+  }
+
+  &--zip-alt {
+
+    background-image: url('../../assets/images/icons/i_doctype-zip-alt.svg');
+
+  }
+
+  &--audio {
+
+    background-image: url('../../assets/images/icons/i_doctype-audio.svg');
+
+  }
+
+  &--audio-alt {
+
+    background-image: url('../../assets/images/icons/i_doctype-audio-alt.svg');
+
+  }
+
+}

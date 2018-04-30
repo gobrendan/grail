@@ -1,0 +1,42 @@
+/*
+ * stats block
+ */
+
+.stats-block {
+
+  margin-bottom: 0;
+
+  &__count {
+
+    font-size: 3rem;
+    line-height: 1;
+    color: $accent-blue;
+    margin: 0 0 .5rem;
+
+  }
+
+  &__heading {
+
+    margin: 0 0 1rem;
+
+  }
+
+  &__details {
+
+    //
+
+    &:last-child {
+
+      margin: 0;
+
+    }
+
+  }
+
+  &__grid-cell {
+
+    //
+
+  }
+
+}

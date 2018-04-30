@@ -1,0 +1,102 @@
+{{# table }}
+<div class="table-wrapper {{ table-wrapper-class }} {{ table-wrapper-modifier }}" id="{{ table-wrapper-ID }}">
+
+  {{# heading }}
+  
+  {{/ heading }}
+
+  <!--
+  <div class="table-heading">
+    {{ heading }}
+  </div>
+  -->
+
+  <table class="{{ table-class }} {{ table-modifier }}" id="{{ table-id }}">
+
+    {{! NOTE: The following <caption> element is meant to be a descendant of the <table> element }}
+
+    {{# table-caption }}
+    <caption>
+      {{ table-caption }}
+    </caption>
+    {{/ table-caption}}
+
+    {{# thead }}
+    <thead>
+      {{# row }}
+      <tr>
+        {{# cell }}
+        <th class="{{ class }}" scope="col">
+          {{# span }}
+          <span>
+          {{/ span }}
+          {{{ text }}}
+          {{# span }}
+        </span>
+          {{/ span }}
+        </th>
+        {{/ cell }}
+      </tr>
+      {{/ row }}
+    </thead>
+    {{/ thead }}
+    {{# tbody }}
+    <tbody>
+      {{# row }}
+      <tr>
+        {{# cell }}
+        <td class="{{ class }}" {{# colspan }}colspan="{{ colspan }}"{{/ colspan }}>
+
+          {{# shape }}
+          {{{ shape }}}
+          {{/ shape }}
+
+          {{# span }}
+          <span class="{{ span-class }}" id="{{ span-ID }}" {{{ span-data-attributes }}}>
+          {{/ span }}
+
+          {{# text }}
+
+          {{# url }}
+          <a href=''>
+          {{/ url }}
+
+          {{{ text }}}
+
+          {{# url }}
+          </a>
+          {{/ url }}
+
+          {{/ text }}
+
+          {{# address }}
+          <br>
+          <a href=''>
+            {{{ address }}}
+          </a>
+          {{/ address }}
+
+          {{# input }}
+          <input class="input-text {{ class }}" id="{{ id }}" type="{{ type }}" placeholder="{{ placeholder }}" maxlength="{{ maxlength }}">
+          {{/ input }}
+
+          {{# span }}
+          </span>
+          {{/ span }}
+
+        </td>
+        {{/ cell }}
+      </tr>
+      {{/ row }}
+    {{/ tbody }}
+    </tbody>
+  </table>
+
+  {{# caption }}
+  <p class="table-wrapper__caption {{ caption-modifier }}">
+    {{ caption }}
+  </p>
+  {{/ caption }}
+
+</div>
+{{/ table }}

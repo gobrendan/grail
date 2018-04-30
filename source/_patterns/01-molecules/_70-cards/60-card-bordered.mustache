@@ -1,0 +1,41 @@
+{{# card-bordered }}
+
+<div class="card {{ card-modifier }}">
+
+  <a class="card__img-wrapper" href="">
+    <img class="card__img" srcset="
+      ../../assets/images/{{ img-name }}@1x.{{ img-type }} 1x,
+      ../../assets/images/{{ img-name }}@2x.{{ img-type }} 2x" alt="…">
+  </a>
+
+  <div class="card__text-wrapper">
+
+    {{# date }}
+    <p class="card__date" contenteditable="false">
+      {{{ date }}}
+    </p>
+    {{/ date }}
+
+    {{# primary-text }}
+    <p class="card__primary-text" contenteditable="false">
+      {{{ primary-text }}}
+    </p>
+    {{/ primary-text }}
+
+    {{# secondary-text }}
+    <p class="card__secondary-text" contenteditable="false">
+      {{{ secondary-text }}}
+    </p>
+    {{/ secondary-text }}
+
+    {{# button-text }}
+    <a class="btn {{ button-modifier }}" href="" contenteditable="false">
+      {{ button-text }}
+    </a>
+    {{/ button-text }}
+
+  </div>
+
+</div>
+
+{{/ card-bordered }}

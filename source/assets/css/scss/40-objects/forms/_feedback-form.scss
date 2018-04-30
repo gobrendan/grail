@@ -1,0 +1,124 @@
+/*
+ * feedback form
+ */
+
+.feedback-form {
+
+  max-height: 0;
+  overflow: hidden;
+  max-width: 70rem; /* NOTE: if this component was placed inside a ".page-content__item wrapper," this max-width value could be changed to "$component-max-width" */
+  position: relative;
+  text-align: center;
+  transition: all .75s; 
+  padding: 0 1.875rem;
+  border: 1px solid $white;
+  margin: 0 auto;
+
+  &__cancel-btn {
+
+    font-size: 1.5rem;
+    color: $accent-cool-gray;
+    text-decoration: none;
+    line-height: 1;
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+
+    &:hover {
+
+      color: $core-light-gray;
+      text-decoration: none;
+
+    }
+
+  }
+
+  &__icon {
+
+    display: block; /* NOTE: forces line break between this element and the __heading element */
+    font-size: 3rem;
+    color: $accent-blue;
+
+  }
+
+  &__heading {
+
+    display: inline-block; /* NOTE: keeps the bottom border from going full width */
+    font-family: $font-normal-family;
+    padding-bottom: .5rem;
+    border-bottom: 10px solid $accent-blue;
+    margin: 0;
+
+  }
+
+  &__p {
+
+    color: $accent-cool-gray;
+    margin: 1.875rem 0;
+
+  }
+
+  &__subheading {
+
+    margin: 0 0 1.5rem;
+
+  }
+
+  &__fieldset {
+
+    max-width: 540px; /* NOTE: magic number */
+    margin: 0 auto 1rem;
+
+    &:last-of-type {
+
+      margin-bottom: 2rem;
+
+    }
+
+  }
+
+  &__btn {
+
+    //
+
+  }
+
+  &--open {
+
+    max-height: 2000px; /* NOTE: applying larger-than-necessary max-height improves transition when opening/closing in modern browsers */
+    padding: 1.875rem 1.875rem 2.875rem;
+    border-color: $accent-cool-gray;
+    border-radius: 4px;
+    margin: 0 auto 1.875rem;
+
+  }
+
+  /* NOTE: IE fixes */
+
+  .no-csstransitions & {
+
+    max-height: none;
+    padding: 1.875rem 1.875rem 2.875rem;
+    border-color: $accent-cool-gray;
+    border-radius: 4px;
+    margin: 0 auto 1.875rem;
+
+  }
+
+}
+
+/* NOTE: for old IE, since transitions don't work, hide element by default and rely on JS to open/display (only do this when component is included in a template/page) */
+
+.no-csstransitions {
+  
+  .page-wrapper {
+
+    .feedback-form {
+
+      display: none; 
+
+    }
+
+  }
+
+}

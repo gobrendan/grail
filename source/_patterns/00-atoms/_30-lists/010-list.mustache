@@ -1,0 +1,47 @@
+{{# list }}
+
+<{{ type }} {{# class }}class="{{ class }}"{{/ class }}>
+
+  {{# item }}
+  <li class="{{ class }}">
+
+    {{# inner }}
+    <div class="list__item-inner">
+    {{/ inner }}
+
+    {{{ text }}}
+
+    {{# inner }}
+    </div>
+    {{/ inner }}
+
+    {{# sub-list }}
+
+    <{{ type }} {{# class }}class="{{ class }}"{{/ class }}>
+
+      {{# item }}
+      <li class="{{ class }}">
+
+        {{# inner }}
+        <div class="list__item-inner">
+        {{/ inner }}
+
+        {{{ text }}}
+
+        {{# inner }}
+        </div>
+        {{/ inner }}
+
+      </li>
+      {{/ item }}
+
+    </{{ type }}>
+
+    {{/ sub-list }}
+
+  </li>
+  {{/ item }}
+
+</{{ type}}>
+
+{{/ list }}

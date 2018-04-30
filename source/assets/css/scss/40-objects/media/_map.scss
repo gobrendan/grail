@@ -1,0 +1,39 @@
+/*
+ * map
+ */
+
+.map-wrapper {
+
+  height: 0;
+  padding-top: 56.25%; /*  relative sizing -- matches YouTube video dimensions */
+  position: relative;
+  overflow: hidden;
+  background: $core-gray;
+  border: 1px solid $core-blue;
+
+  /* prevent mouse scrolling from zooming map -- improves experience when scrolling page */
+
+  &__overlay {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+  }
+
+  /* map element -- populated with map via JS */
+
+  &__map {
+
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+  }
+
+}

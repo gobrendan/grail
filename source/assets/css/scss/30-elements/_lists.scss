@@ -1,0 +1,38 @@
+/*
+ * elements / lists
+ */
+
+ul,
+ol {
+
+  padding: 0 0 0 40px;
+  margin: $margin;
+
+}
+
+ul {
+
+  list-style-type: disc;
+
+}
+
+ol {
+
+  list-style-type: decimal;
+
+}
+
+/* NOTE: target li elements whose parent ul/ol elements don't have a class attribute -- targeting this way prevents specificity issues */
+
+ul:not([class]) > li,
+ol:not([class]) > li {
+
+  margin-bottom: 1rem;
+
+  &:last-child {
+
+    margin-bottom: 0;
+
+  }
+
+}

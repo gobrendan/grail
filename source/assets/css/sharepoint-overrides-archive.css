@@ -1,0 +1,1231 @@
+/*
+ * SharePoint overrides
+ */
+/*
+ * General
+ */
+/* SharePoint is hiding the scrollbars */
+body {
+  overflow-y: visible !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: inherit;
+}
+
+.ncdotstate-field h1,
+h1.ncdotElement-H1,
+.ncdotstate-field h2,
+h2.ncdotElement-H2 {
+  color: inherit;
+}
+
+.ms-rtestate-field h1,
+h1.ms-rteElement-H1,
+.ms-rtestate-field h2,
+h2.ms-rteElement-H2 {
+  color: inherit;
+}
+
+.ms-rtestate-field p {
+  margin: 1rem 0;
+}
+
+.ms-cui-menu {
+  position: fixed !important;
+  z-index: 100000 !important;
+}
+
+.ms-dlgContent {
+  z-index: 100001 !important;
+}
+
+/* without this, a horizontal scrollbar is displayed when using full width heroes */
+/* will check to see if this causes any other issues but it shouldn't */
+.ms-webpart-cell-vertical {
+  table-layout: fixed;
+}
+
+/* Hide the suitebar button from gear menu */
+#suiteBarButtons li[text_original="Design Manager"] {
+  display: none;
+}
+
+#suiteBarButtons li[text_original="Getting Started"] {
+  display: none;
+}
+
+.ms-core-menu-list li[text="About Me"],
+.ms-core-menu-list li[text="Change the look"] {
+  display: none;
+}
+
+/* embed preview in dialog box - overrides Sharepoint inline styles*/
+.ms-rte-embeddialog-preview {
+  width: auto !important;
+  height: auto !important;
+}
+
+/* Adjust img declarations for ribbon, and edit mode icons, to make them visible */
+#ms-designer-ribbon img,
+.ms-webpart-menuArrowImg,
+table.ms-listviewtable img,
+table.ms-ToolPaneOuter img,
+img.ms-taxonomy-browser-button,
+.ms-dlgFrameContainer img,
+.ms-dlgLoadingTextDiv img,
+img.ms-dlgCloseBtnImg,
+.ms-spellcheck-warning img,
+.ms-summaryLinksToolbar img,
+.ms-cui-img-16by16 img,
+.ms-dtinput img {
+  width: auto;
+  height: auto;
+  max-width: none;
+}
+
+/* in ribbon Design tab*/
+.ms-cui-cbx label {
+  display: inline;
+}
+
+/* event and project page - edit mode*/
+.ms-formfieldvaluecontainer td {
+  border: none;
+}
+
+.ms-taxonomy-fieldeditor {
+  width: 95% !important;
+}
+
+.ms-dtinput {
+  border: 0;
+}
+
+.event-summary {
+  width: 100%;
+}
+
+.long-edit .ms-formfieldcontainer {
+  display: block;
+}
+
+.long-edit .summary-note {
+  display: block;
+}
+
+.long-edit textarea.ms-long {
+  height: 40px;
+}
+
+/* Change box-sizing value for some elements */
+span#fullscreenmodebox,
+span#ms-help,
+div#Ribbon > *,
+input.ms-cui-cb-input,
+#suiteBar a,
+.ms-webpart-controlBox,
+.ms-dlgTitle,
+.js-callout-content {
+  box-sizing: content-box;
+}
+
+#pageStatusBar[class],
+.ms-status-msg {
+  margin-bottom: 0;
+}
+
+.page_content__item .ms-rtestate-field {
+  display: block !important;
+}
+
+/*
+ * Search box
+ */
+
+.site-header .ms-srch-sb-border,
+.site-header .ms-srch-sb-border:hover,
+.mobile-search-box .ms-srch-sb-border,
+.mobile-search-box .ms-srch-sb-border:hover {
+  border: 0;
+}
+
+.site-header .search-box__button:visited,
+.site-header .ms-srch-sb-searchLink:visited,
+.mobile-search-box .search-box__button:visited,
+.mobile-search-box .ms-srch-sb-searchLink:visited {
+  color: #6f7785;
+
+  /* default and :visited colors are the same */
+}
+
+/* Places SP search anchor on top of ours to direct to the SP search results */
+.site-header .ms-srch-sb > .ms-srch-sb-searchLink,
+.mobile-search-box .ms-srch-sb > .ms-srch-sb-searchLink {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 50px;
+  height: 40px;
+  background: transparent;
+  z-index: 2;
+}
+
+.site-header .ms-srch-sb > .ms-srch-sb-searchLink:hover,
+.mobile-search-box .ms-srch-sb > .ms-srch-sb-searchLink:hover {
+  background-color: transparent;
+}
+
+/* Override rule for text input */
+.site-header div#SearchBox .ms-srch-sb-prompt,
+.mobile-search-box div#SearchBox .ms-srch-sb-prompt {
+  width: calc(100% - 50px) !important;
+
+  /* width of component minus width of search button */
+  border: 0;
+  box-shadow: none;
+  height: 2.5rem;
+  padding: 0.625rem !important;
+  border-radius: 4px 0 0 4px;
+  background: white;
+}
+
+.dataTables_wrapper .dataTables_filter input,
+.input-text,
+.textarea {
+  padding: 0.84rem 0.9375rem !important;
+}
+
+/* When search box is in :focus state, a class is appended -- override this rule to search field display doesn't change */
+.site-header .ms-srch-sb-borderFocused,
+.mobile-search-box .ms-srch-sb-borderFocused {
+  border: 0;
+}
+
+.site-header .ms-srch-sb-borderFocused > input,
+.mobile-search-box .ms-srch-sb-borderFocused > input {
+  width: calc(100% - 50px) !important;
+
+  /* width of component minus width of search button */
+  border: 0;
+  box-shadow: none;
+  height: 2.5rem;
+  padding: 0.625rem !important;
+  border-radius: 4px 0 0 4px;
+  background: white;
+}
+
+/* extends white background to full width rather than just the input field*/
+.site-header div#SearchBox,
+.mobile-search-box div#SearchBox {
+  background-color: white;
+  border-radius: 4px;
+}
+
+/* stretches the width of the whole input filed container - uses most of the white space so there is not a large unclickable area */
+.site-header div#SearchBox .ms-srch-sb,
+.mobile-search-box div#SearchBox .ms-srch-sb {
+  width: calc(100% - 15px);
+}
+
+/*
+ * Breadcrumbs
+ */
+/* Hide "edit" link in breadcrumbs and Quick launch navigation */
+#DeltaTopNavigation .ms-core-listMenu-root .ms-listMenu-editLink,
+li.static.ms-verticalAlignTop.ms-listMenu-editLink.ms-navedit-editArea {
+  display: none;
+}
+
+/* Override SharePoint's "a:visited" rule */
+.wide-nav__link:visited,
+.wide-nav__more-btn:visited {
+  color: #ecf0f3;
+
+  /* default and :visited colors are the same */
+}
+
+.nav-list__link:visited {
+  color: white;
+
+  /* default and :visited colors are the same */
+}
+
+.hero__btn:visited,
+.hero__btnDefault:visited,
+.text-hero__btn:visited,
+.video-hero__btn:visited,
+.arrow-controls__btn:visited,
+.twitter-feed a,
+.twitter-feed a:visited,
+.btn--ghost-inverted:visited,
+.alert-block a,
+alert-block a:visited,
+.back-up__btn:visited,
+.text-label--tag:visited,
+.link-block__link:visited {
+  color: white;
+
+  /* default and :visited colors are the same */
+}
+
+.hero__btn.btn--ghost:visited {
+  color: #092940;
+}
+
+/* social media links in the footer */
+.social-list__link:visited {
+  color: white;
+}
+
+/* Override SharePoint's "a:visited" rule */
+.wide-nav-sub__title:visited,
+.wide-nav-sub__link:visited {
+  color: #397aac;
+
+  /* default and :visited colors are the same */
+}
+
+/*restores SP defaults for ribbon and edit mode web part zones - matches unbranded system pages */
+body #ms-designer-ribbon,
+body .edit-mode-panel,
+body .ms-SPZoneLabel,
+body .ms-ToolPaneOuter,
+body input.ms-cui-cb-input {
+  font-family: "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+/* removes table borders in edit mode */
+
+#MSO_tblPageBody td,
+.ms-cui-gallery td {
+  border: none;
+}
+
+/*in edit ribbon*/
+input.ms-cui-cb-input,
+input.ms-cui-spn-txtbx,
+input.ms-cui-tb {
+  border-radius: 0;
+}
+
+/* overrides SP style in page layouts gallery */
+.ms-cui-gallerybutton-a {
+  overflow: visible;
+  text-align: left;
+}
+
+.ms-cui-gallerybutton-Size72by96 {
+  width: inherit;
+  height: inherit;
+  overflow: visible;
+}
+
+.mobile-header__menu-btn:visited,
+.mobile-header__site-title:visited,
+.mobile-header__search-btn:visited {
+  color: white;
+
+  /* default and :visited colors are the same */
+}
+
+/* edits to the Web Part Adder dialog */
+
+.ms-core-webpartadder {
+  z-index: 100;
+
+  /* this needs to show above the edit mode ribbon */
+}
+
+#ms-designer-ribbon {
+  background-color: #e1e1e1;
+}
+
+#ms-designer-ribbon .ms-wpadder-sectionhead,
+#ms-designer-ribbon .ms-wpadder-wpname {
+  font-size: 1em;
+}
+
+#ms-designer-ribbon img,
+.ms-ToolPaneOuter img {
+  display: inline-block;
+}
+
+#ms-designer-ribbon td {
+  padding: 0;
+  border: none;
+}
+
+/* Edits to the web part tool pane*/
+table.ms-ToolPaneOuter td {
+  padding: inherit;
+  border: none;
+}
+
+table.ms-ToolPaneOuter td label {
+  display: inline-block;
+  font-family: inherit;
+}
+
+/*List View Styles - this will need more tweaks as we add content */
+.ms-vh2-nofilter,
+.ms-vh2-nofilter-notextalign,
+.ms-vh2-nofilter-perm,
+.ms-vh a,
+.ms-vh2,
+.ms-vh2 a {
+  color: white;
+}
+
+/*overrides SP border around content editor*/
+.ms-WPBorder {
+  border: none;
+}
+
+/* overrides SP web part margin */
+.ms-webpartzone-cell {
+  margin: 0;
+}
+
+.ms-formfieldcontainer {
+  padding: 5px;
+}
+
+.edit-mode-panel.title-edit {
+  border-bottom: 1px solid #c6c6c6;
+}
+
+/* CQWP */
+
+.page-content .dfwp-column {
+  float: none;
+  padding: 0;
+}
+
+/* Tables */
+.ms-rteTable-default > tbody > tr > th,
+.ms-rteTable-default > tbody > tr.ms-rteTableFooterRow-default,
+.ms-rteTable-0 > tbody > tr > th,
+.ms-rteTable-0 > tbody > tr.ms-rteTableFooterRow-0,
+.ms-rteTable-1 > tbody > tr > th,
+.ms-rteTable-1 > tbody > tr.ms-rteTableFooterRow-1,
+.ms-rteTable-2 > tbody > tr > th,
+.ms-rteTable-2 > tbody > tr.ms-rteTableFooterRow-2,
+.ms-rteTable-3 > tbody > tr > th,
+.ms-rteTable-3 > tbody > tr.ms-rteTableFooterRow-3,
+.ms-rteTable-4 > tbody > tr > th,
+.ms-rteTable-4 > tbody > tr.ms-rteTableFooterRow-4,
+.ms-rteTable-5 > tbody > tr > th,
+.ms-rteTable-5 > tbody > tr.ms-rteTableFooterRow-5,
+.ms-rteTable-6 > tbody > tr > th,
+.ms-rteTable-6 > tbody > tr.ms-rteTableFooterRow-6,
+.ms-rteTable-7 > tbody > tr > th,
+.ms-rteTable-7 > tbody > tr.ms-rteTableFooterRow-7,
+.ms-rteTable-8 > tbody > tr > th,
+.ms-rteTable-8 > tbody > tr.ms-rteTableFooterRow-8,
+.ms-rteTable-9 > tbody > tr > th,
+.ms-rteTable-9 > tbody > tr.ms-rteTableFooterRow-9,
+.ms-rteTable-10 > tbody > tr > th,
+.ms-rteTable-10 > tbody > tr.ms-rteTableFooterRow-10 {
+  color: white;
+}
+
+table.dataTable thead th,
+table.dataTable thead td,
+table.dataTable tbody th,
+table.dataTable tbody td,
+th,
+td {
+  padding: 1rem;
+}
+
+th {
+  color: white;
+  border-color: #0f466d;
+}
+
+td {
+  border-color: #95a0ad;
+}
+
+/* Contact Us - multiples*/
+.text-block .grid__cell-inner p:last-child {
+  margin-bottom: 1.5rem;
+}
+
+.treeView {
+  user-select: none;
+  -moz-user-select: none;
+  position: relative;
+  padding-left: 0;
+}
+
+.treeView a {
+  font-size: 12px;
+}
+
+.treeView ul {
+  margin: 0 0 0 -1.5em;
+  padding: 0 0 0 1.5em;
+}
+
+.treeView ul ul {
+  background: url("../../assets/images/list-item-contents.png") repeat-y left;
+}
+
+.treeView li.lastChild > ul {
+  background-image: none;
+}
+
+.treeView li {
+  margin: 0;
+  padding: 0;
+  background: url("../../assets/images/list-item-root.png") no-repeat top left;
+  list-style-position: inside;
+  list-style-image: url("../../assets/images/button.png");
+  cursor: auto;
+}
+
+.treeView li.collapsibleListOpen {
+  list-style-image: url("../../assets/images/button-open.png");
+  cursor: pointer;
+}
+
+.treeView li.collapsibleListClosed {
+  list-style-image: url("../../assets/images/button-closed.png");
+  cursor: pointer;
+}
+
+.treeView li li {
+  background-image: url("../../assets/images/list-item.png");
+  padding-left: 1.5em;
+}
+
+.treeView li.lastChild {
+  background-image: url("../../assets/images/list-item-last.png");
+}
+
+.treeView li.collapsibleListOpen {
+  background-image: url("../../assets/images/list-item-open.png");
+}
+
+.treeView li.collapsibleListOpen.lastChild {
+  background-image: url("../../assets/images/list-item-last-open.png");
+}
+
+/* DMV Sample Questions */
+#dmvTest {
+  margin: 0 0 3rem;
+}
+
+.dmv-test-score {
+  margin: 0 auto 3rem;
+}
+
+/* Heading styles */
+p.ncdotElement-DOTParagraph {
+  -ms-name: "Paragraph";
+  margin: 1rem 0;
+}
+
+h2.ncdotElement-heading--beta {
+  -ms-name: "h2 Heading--beta";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  font-size: 2.25rem;
+  color: #092940;
+  margin: 0.83em 0;
+}
+
+h3.ncdotElement-heading--gamma {
+  -ms-name: "h3 Heading--gamma";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  font-size: 1.3125rem;
+  color: #092940;
+  margin: 1em 0;
+}
+
+h4.ncdotElement-heading--delta {
+  -ms-name: "h4 Heading--delta";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  color: #092940;
+  font-size: 1.3125rem;
+  margin: 1.33em 0;
+}
+
+h5.ncdotElement-heading--epsilon {
+  -ms-name: "h5 Heading--epsilon";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  color: #092940;
+  font-size: 1.125rem;
+  margin: 1.67em 0;
+}
+
+h6.ncdotElement-heading--zeta {
+  -ms-name: "h6 Heading--zeta";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  color: #092940;
+  font-size: 1rem;
+  margin: 2.33em 0;
+}
+
+p.ncdotElement-caption {
+  -ms-name: "Caption";
+  font: italic normal normal 100%/1.5 "Georgia", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  margin: 0.5rem 0 0;
+}
+
+h2.ncdotElement-DOTSectionTitle {
+  -ms-name: "Section Title";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  color: #092940;
+  line-height: 1.25;
+  margin: 1.875rem 0 3.75rem;
+  margin-bottom: 1.875rem;
+}
+
+h2.ncdotElement-DOTSectionTitle:after {
+  content: "";
+  display: block;
+  background-color: #00376d;
+  margin-top: 1.3125rem;
+  height: 0.25rem;
+}
+
+h2.ncdotElement-DOTHeading {
+  -ms-name: "Heading";
+  font-size: 2.25rem;
+  color: #092940;
+  margin: 0.83em 0;
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+}
+
+h3.ncdotElement-DOTSubheading {
+  -ms-name: "SubHeading";
+  font-size: 1.3125rem;
+  color: #092940;
+  margin: 1em 0;
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+}
+
+@media (min-width: 48em) {
+  h3.ncdotElement-DOTSubheading {
+    font-size: 1.5em;
+  }
+
+  h2.ncdotElement-DOTSectionTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  h2.ncdotElement-DOTSectionTitle {
+    font-size: 2.25rem;
+  }
+}
+
+h1.ncdotElement-heading--alpha {
+  -ms-name: "h1 Heading--alpha";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  font-size: 3rem;
+  color: #092940;
+  line-height: 1.25;
+  margin: 1.875rem 0 3.75rem;
+}
+
+@media (min-width: 48em) {
+  h3.ncdotElement-heading--gamma {
+    font-size: 1.5em;
+  }
+}
+
+/* OLD HEADING STYLE - LEAVING IN CSS SO WE DON'T LOSE ANY FORMATTING FOR WORK DONE BEFORE 1/09/17 */
+p.ms-rteElement-caption {
+  -ms-name: "Caption";
+  font: italic normal normal 100%/1.5 "Georgia", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  margin: 0.5rem 0 0;
+}
+
+h2.ms-rteElement-heading--beta {
+  -ms-name: "h2 Heading--beta";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  font-size: 2.25rem;
+  color: #092940;
+  margin: 0.83em 0;
+}
+
+h3.ms-rteElement-heading--gamma {
+  -ms-name: "h3 Heading--gamma";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  font-size: 1.3125rem;
+  color: #092940;
+  margin: 1em 0;
+}
+
+@media (min-width: 48em) {
+  h3.ms-rteElement-heading--gamma {
+    font-size: 1.5em;
+  }
+}
+
+h4.ms-rteElement-heading--delta {
+  -ms-name: "h4 Heading--delta";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  color: #092940;
+  font-size: 1.3125rem;
+  margin: 1.33em 0;
+}
+
+h5.ms-rteElement-heading--epsilon {
+  -ms-name: "h5 Heading--epsilon";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  color: #092940;
+  font-size: 1.125rem;
+  margin: 1.67em 0;
+}
+
+h6.ms-rteElement-heading--zeta {
+  -ms-name: "h6 Heading--zeta";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  color: #092940;
+  font-size: 1rem;
+  margin: 2.33em 0;
+}
+
+/* Heading styles */
+h2.ms-rteElement-DOTSectionTitle {
+  -ms-name: "Section Title";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  color: #092940;
+  line-height: 1.25;
+  margin: 1.875rem 0 3.75rem;
+  margin-bottom: 1.875rem;
+}
+
+h2.ms-rteElement-DOTSectionTitle:after {
+  content: "";
+  display: block;
+  background-color: #00376d;
+  margin-top: 1.3125rem;
+  height: 0.25rem;
+}
+
+h2.ms-rteElement-DOTHeading {
+  -ms-name: "Heading";
+  font-size: 2.25rem;
+  color: #092940;
+  margin: 0.83em 0;
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+}
+
+h3.ms-rteElement-DOTSubheading {
+  -ms-name: "SubHeading";
+  font-size: 1.3125rem;
+  color: #092940;
+  margin: 1em 0;
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+}
+
+@media (min-width: 48em) {
+  h3.ms-rteElement-DOTSubheading {
+    font-size: 1.5em;
+  }
+
+  h2.ms-rteElement-DOTSectionTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  h2.ms-rteElement-DOTSectionTitle {
+    font-size: 2.25rem;
+  }
+}
+
+h1.ms-rteElement-heading--alpha {
+  -ms-name: "h1 Heading--alpha";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  font-size: 3rem;
+  color: #092940;
+  line-height: 1.25;
+  margin: 1.875rem 0 3.75rem;
+}
+
+/* Heading styles - used for second rich text editor on a page, in Press Release Page Layout - Right Page Content Top  */
+p.ncdot2Element-DOTParagraph {
+  -ms-name: "Paragraph";
+  margin: 1rem 0;
+}
+
+h2.ncdot2Element-heading--beta {
+  -ms-name: "h2 Heading--beta";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  font-size: 2.25rem;
+  color: #092940;
+  margin: 0.83em 0;
+}
+
+h3.ncdot2Element-heading--gamma {
+  -ms-name: "h3 Heading--gamma";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  font-size: 1.3125rem;
+  color: #092940;
+  margin: 1em 0;
+}
+
+@media (min-width: 48em) {
+  h3.ncdot2Element-heading--gamma {
+    font-size: 1.5em;
+  }
+}
+
+h4.ncdot2Element-heading--delta {
+  -ms-name: "h4 Heading--delta";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  color: #092940;
+  font-size: 1.3125rem;
+  margin: 1.33em 0;
+}
+
+h5.ncdot2Element-heading--epsilon {
+  -ms-name: "h5 Heading--epsilon";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  color: #092940;
+  font-size: 1.125rem;
+  margin: 1.67em 0;
+}
+
+h6.ncdot2Element-heading--zeta {
+  -ms-name: "h6 Heading--zeta";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  color: #092940;
+  font-size: 1rem;
+  margin: 2.33em 0;
+}
+
+p.ncdot2Element-caption {
+  -ms-name: "Caption";
+  font: italic normal normal 100%/1.5 "Georgia", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  margin: 0.5rem 0 0;
+}
+
+h2.ncdot2Element-DOTSectionTitle {
+  -ms-name: "Section Title";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  color: #092940;
+  line-height: 1.25;
+  margin: 1.875rem 0 3.75rem;
+  margin-bottom: 1.875rem;
+}
+
+h2.ncdot2Element-DOTSectionTitle:after {
+  content: "";
+  display: block;
+  background-color: #00376d;
+  margin-top: 1.3125rem;
+  height: 0.25rem;
+}
+
+h2.ncdot2Element-DOTHeading {
+  -ms-name: "Heading";
+  font-size: 2.25rem;
+  color: #092940;
+  margin: 0.83em 0;
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+}
+
+h3.ncdot2Element-DOTSubheading {
+  -ms-name: "SubHeading";
+  font-size: 1.3125rem;
+  color: #092940;
+  margin: 1em 0;
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+}
+
+@media (min-width: 48em) {
+  h3.ncdot2Element-DOTSubheading {
+    font-size: 1.5em;
+  }
+
+  h2.ncdot2Element-DOTSectionTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  h2.ncdot2Element-DOTSectionTitle {
+    font-size: 2.25rem;
+  }
+}
+
+h1.ncdot2Element-heading--alpha {
+  -ms-name: "h1 Heading--alpha";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  font-size: 3rem;
+  color: #092940;
+  line-height: 1.25;
+  margin: 1.875rem 0 3.75rem;
+}
+
+/* Heading styles - used for third rich text editor on a page, in Press Release Page Layout - Right Page Content Bottom  */
+p.ncdot3Element-DOTParagraph {
+  -ms-name: "Paragraph";
+  margin: 1rem 0;
+}
+
+h2.ncdot3Element-heading--beta {
+  -ms-name: "h2 Heading--beta";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  font-size: 2.25rem;
+  color: #092940;
+  margin: 0.83em 0;
+}
+
+h3.ncdot3Element-heading--gamma {
+  -ms-name: "h3 Heading--gamma";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  font-size: 1.3125rem;
+  color: #092940;
+  margin: 1em 0;
+}
+
+@media (min-width: 48em) {
+  h3.ncdot3Element-heading--gamma {
+    font-size: 1.5em;
+  }
+}
+
+h4.ncdot3Element-heading--delta {
+  -ms-name: "h4 Heading--delta";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  color: #092940;
+  font-size: 1.3125rem;
+  margin: 1.33em 0;
+}
+
+h5.ncdot3Element-heading--epsilon {
+  -ms-name: "h5 Heading--epsilon";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  color: #092940;
+  font-size: 1.125rem;
+  margin: 1.67em 0;
+}
+
+h6.ncdot3Element-heading--zeta {
+  -ms-name: "h6 Heading--zeta";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  color: #092940;
+  font-size: 1rem;
+  margin: 2.33em 0;
+}
+
+p.ncdot3Element-caption {
+  -ms-name: "Caption";
+  font: italic normal normal 100%/1.5 "Georgia", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  margin: 0.5rem 0 0;
+}
+
+h2.ncdot3Element-DOTSectionTitle {
+  -ms-name: "Section Title";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  color: #092940;
+  line-height: 1.25;
+  margin: 1.875rem 0 3.75rem;
+  margin-bottom: 1.875rem;
+}
+
+h2.ncdot3Element-DOTSectionTitle:after {
+  content: "";
+  display: block;
+  background-color: #00376d;
+  margin-top: 1.3125rem;
+  height: 0.25rem;
+}
+
+h2.ncdot3Element-DOTHeading {
+  -ms-name: "Heading";
+  font-size: 2.25rem;
+  color: #092940;
+  margin: 0.83em 0;
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+}
+
+h3.ncdot3Element-DOTSubheading {
+  -ms-name: "SubHeading";
+  font-size: 1.3125rem;
+  color: #092940;
+  margin: 1em 0;
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+}
+
+@media (min-width: 48em) {
+  h3.ncdot3Element-DOTSubheading {
+    font-size: 1.5em;
+  }
+
+  h2.ncdot3Element-DOTSectionTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  h2.ncdot3Element-DOTSectionTitle {
+    font-size: 2.25rem;
+  }
+}
+
+h1.ncdot3Element-heading--alpha {
+  -ms-name: "h1 Heading--alpha";
+  font-family: "TransportNewMedium_gdi", Helvetica, Arial, sans-serif;
+  font-size: 3rem;
+  color: #092940;
+  line-height: 1.25;
+  margin: 1.875rem 0 3.75rem;
+}
+
+.ui-autocomplete {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 3;
+  float: left;
+  display: none;
+  min-width: 160px;
+  padding: 4px 0;
+  margin: 0 0 10px 25px;
+  list-style: none;
+  background-color: #ffffff;
+  border-color: #ccc;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  cursor: pointer;
+}
+
+.ui-menu-item {
+  font-size: 14px;
+  margin: 10px;
+  line-height: 18px;
+}
+
+.ui-state-highlight {
+  font-weight: bold;
+}
+
+.ui-state-hover,
+.ui-state-active {
+  color: #ffffff !important;
+  text-decoration: none;
+  background-color: #0088cc;
+  background-image: none;
+}
+
+/* hides Sharepoint's no js warning under the search box in the header */
+div#ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_noscript {
+  display: none;
+}
+
+/* hides the ribbon on mobile */
+
+@media (max-width: 36em) {
+  .sp-authenticated #ms-designer-ribbon {
+    display: none;
+  }
+
+  .sp-authenticated .mobile-header {
+    top: 0 !important;
+  }
+
+  .sp-authenticated {
+    padding-top: 60px !important;
+  }
+
+  #ctl00_Ribbon {
+    display: none;
+  }
+}
+
+.news-release-stamp {
+  text-align: center;
+  padding: 0.75rem 1rem 3.75rem;
+  margin: 0 auto;
+}
+
+@media print {
+  .sp-authenticated #ms-designer-ribbon,
+  .mobile-header,
+  #alert-count-wrapper,
+  #alertBlock,
+  .sp-authenticated #ms-designer-ribbon,
+  #SearchBox,
+  a.search-box__button,
+  .nav-list--header,
+  .wide-nav,
+  .side-nav,
+  .back-up,
+  footer {
+    display: none;
+  }
+}
+
+.amtrak-page .cds_find-a-station {
+  position: absolute !important;
+  top: 0 !important;
+  height: 99% !important;
+  overflow-y: scroll;
+}
+
+.ui-dialog-titlebar {
+  margin-top: 10px !important;
+}
+
+.icon--circled.is-checked {
+  background: #092940;
+  border-color: #397aac;
+  color: #fff;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0; /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+g.county > g.active {
+  fill: #ff0000 !important;
+}
+
+.ncsvgmap-hover:hover {
+  cursor: pointer;
+}
+
+.ui-autocomplete {
+  z-index: 1000 !important;
+}
+
+.breadcrumbs__item:after {
+  padding: 0 0.25em !important;
+  /* display: inline-block !important; */
+}
+
+@media (min-width: 64em) {
+  .hero__text-block--amtrak-wrapper {
+    max-width: 550px;
+  }
+}
+
+.location-selector__error {
+  font-size: 12px;
+  color: red;
+  margin: 0 5px;
+  font-style: italic;
+  display: none;
+}
+
+.edit-mode-panel {
+  color: #bf0000;
+}
+
+.video-wrapper--fluid-width a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-wrapper__video-play {
+  height: 72px;
+  width: 72px;
+  left: 50%;
+  top: 50%;
+  margin-left: -36px;
+  margin-top: -36px;
+  position: absolute;
+  background: url("//i.imgur.com/TxzC70f.png") no-repeat;
+  cursor: pointer;
+}
+
+.video-wrapper__video {
+  opacity: 1;
+}
+
+.video-wrapper__video:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.YouTubeDialog {
+  position: absolute !important;
+  height: auto !important;
+  width: auto !important;
+  border: 2px solid #000 !important;
+  background-color: #fff !important;
+}
+
+.YouTubeDialog .ui-dialog-title {
+  font-size: 13px;
+  margin-left: 10px;
+}

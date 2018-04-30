@@ -1,0 +1,251 @@
+/*
+ * elements / custom inputs -- styled checkboxes and radios
+ */
+
+.checkbox-input,
+.radio-input {
+
+  display: none; /* NOTE: hide native inputs -- to be replaced with psuedo elements below */
+
+  & + .custom-input-label {
+
+    display: inline-block;
+    margin: 0; /* NOTE: override default label margin */
+    cursor: pointer;
+    position: relative;
+    padding-left: 34px; /* NOTE: magic number; make room for custom input */
+
+    &:before {
+
+      display: block;
+      width: 24px; /* NOTE: this value should be in variable */
+      height: 24px; /* NOTE: this value should be in variable */
+
+      line-height: 1;
+      text-align: center;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      -webkit-transition: all 0.15s ease-in-out;
+      -moz-transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out; /* NOTE: these values should be in a mixin, extend or placeholder */
+
+    }
+
+  }
+
+}
+
+.checkbox-input {
+
+  & + .custom-input-label {
+
+    &:before {
+
+      font-size: 20px;
+      z-index: 2;
+      color: $core-white; /* NOTE: make icon white so it's invisible until element is checked, which gives it dark background */
+      content: '';
+      border: 2px solid $accent-cool-gray;
+      border-radius: 4px; /* NOTE: this value should be in a variable */
+
+    }
+
+  }
+
+  &:checked {
+
+    & + .custom-input-label {
+
+      &:before {
+
+        font-family: 'custom-icomoon';
+        content: "\e902";
+        border: 2px solid $accent-blue;
+        background: $accent-blue;
+
+      }
+
+    }
+
+  }
+
+  &.error {
+
+    & + .custom-input-label {
+
+      &:before {
+
+        border-color: $error-color;
+
+      }
+
+    }
+
+  }
+
+}
+
+.radio-input {
+
+  & + .custom-input-label {
+
+    &:before,
+    &:after {
+
+      color: $core-gray;
+      border-radius: 50%;
+
+    }
+
+    &:before {
+
+      font-size: 1.5rem;
+      line-height: 23px;
+      font-family: 'custom-icomoon';
+      content: "\e925";
+      width: auto;
+      height: auto;
+
+    }
+
+    &:hover {
+
+      &:before,
+      &:after {
+
+        color: $accent-blue;
+
+      }
+
+    }
+
+  }
+
+  &:checked {
+
+    & + .custom-input-label {
+
+      &:before,
+      &:after {
+
+        color: $accent-blue;
+
+      }
+
+      &:after {
+
+        font-size: 1.5rem;
+        font-family: 'custom-icomoon';
+        display: block;
+        content: "\e926";
+        position: absolute;
+        left: 0;
+        top: -.375rem; /* NOTE: magic number -- helps position 'checked' icon properly */
+
+      }
+
+    }
+
+  }
+
+}
+
+/* NOTE: IE browsers (all of them) need a positioning tweak */
+
+@include IE10-plus {
+
+  .radio-input {
+
+    &:checked {
+
+      & + .custom-input-label {
+
+        &:after {
+
+          top: -7px !important; /* NOTE: magic number -- helps position 'checked' icon properly */
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+/* NOTE: target IE9 and below by using the ".no-csstransitions" hook -- provided by Modernizr */
+
+.no-csstransitions {
+
+  .radio-input {
+
+    &:checked {
+
+      & + .custom-input-label {
+
+        &:after {
+
+          top: -7px !important; /* NOTE: magic number -- helps position 'checked' icon properly */
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.checkbox-input,
+.radio-input {
+
+  & + .custom-input-label {
+
+    &:hover {
+
+      &:before {
+
+        box-shadow: 0 0 0 5px rgba(57, 122, 172, 0.2); /* NOTE: his value should be in a variable */
+
+      }
+
+    }
+
+  }
+
+}
+
+.checkbox-input + {
+
+  & .custom-input-label {
+
+    &:hover {
+
+      &:before {
+
+        border: 2px solid $accent-blue;
+
+      }
+
+    }
+
+  }
+
+}
+
+.checkbox-wrapper {
+
+  margin: 1rem 0;
+
+  &--double-margin {
+
+    margin: 2rem 0;
+
+  }
+
+}

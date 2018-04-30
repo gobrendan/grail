@@ -1,0 +1,111 @@
+/*
+ * Fieldsets
+ */
+
+.fieldset {
+
+  //
+
+  &__label {
+
+    // font-size: $form-label-text-size;
+    // color: $form-label-text-color;
+    // text-transform: uppercase;
+
+  }
+
+  &__input {
+
+    //
+
+  }
+
+  &:last-child {
+
+    margin: 0;
+
+  }
+
+  &__helper-text {
+
+    font-size: $form-helper-text-size;
+    color: $form-helper-text-color;
+    line-height: 1.25;
+    padding: .5em 0 0;
+
+  }
+
+  &__helper-text--error {
+
+    color: $form-error-color;
+
+  }
+
+  &__helper-link {
+
+    font: $font-italic;
+    font-size: $form-helper-text-size;
+    color: $form-helper-text-color;
+    line-height: 1.25;
+    padding: .5em 0 0;
+
+  }
+
+  &--error {
+
+    //
+
+  }
+
+  /* Alternative fieldsets -- may become default; these use 'floated label' technique */
+
+  &--alt {
+
+    position: relative; /* necessary for 'floated label' technique */
+    margin: 0 0 1.75rem; /* adjust marge to make room for label -- related to 'float label' technique */
+
+  }
+
+  &__label--alt {
+
+    font-size: $font-size--default;
+    color: $form-label-text-color;
+    text-transform: none;
+    position:absolute;
+    left: 0;
+    top: .15em; /* matches input's top padding -- this should be in a variable */
+
+    pointer-events:none; /* prevents label from being targeted by mouse --  https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events */
+
+    /* Since IE 10 doesn't support pointer-events, apply proper cursor in conjunction with input's "for" attribute */
+
+    cursor: text;
+
+    /* Transisions should be in a mixin */
+
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+
+  }
+
+  &--inline-wide {
+
+    .fieldset__label {
+
+      padding: 0 1rem 0 0;
+
+    }
+
+    .fieldset__label,
+    select,
+    .selectboxit-container {
+
+      display: inline-block;
+      vertical-align: middle;
+
+    }
+
+  }
+
+}
