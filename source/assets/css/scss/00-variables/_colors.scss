@@ -2,6 +2,29 @@
 // colors
 //
 
+$color-blue-saphire :       #1A546B;
+$color-french-blue :        #0071BC;
+$color-pale-aqua :          #BED9F6;
+$color-mikado-yellow :      #FECD0D;
+$color-carmine-pink :       #F13741;
+$color-rare-black :         #343434;
+$color-light-gray :         #D0D4E0;
+$color-soft-white :         #fafafa;
+
+$button-text-color :          $color-soft-white;
+$button-bg-color :            $color-blue-saphire;
+$button-hover-text-color :    $color-soft-white;
+$button-hover-bg-color :      $color-french-blue;
+$button-focus-outline-color : $color-light-gray; 
+
+$button-disabled-text-color : rgb(230, 236, 238); // no RGBA/opacity so button display is consistent when overlaying various colors/images
+$button-disabled-bg-color :   rgb(87, 127, 144);  // no RGBA/opacity so button display is consistent when overlaying various colors/images
+
+
+
+///////////////////
+
+
 // core palette
 
 $core-black :               rgb(11, 12, 12);    // #0B0C0C

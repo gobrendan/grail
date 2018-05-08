@@ -6,5 +6,6 @@ patternlab.json
 Thumbs.db
 .idea/
 public
+.ftpauth
 
 .gitkeep

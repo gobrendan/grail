@@ -1,5 +1,626 @@
 {
 
+  "pl-color-palette" : [
+
+    {
+
+      "item" : [
+
+        {
+
+          "name" : "Blue Saphire", 
+          "variable" : "$color-blue-saphire", 
+          "hex-value" : "#1A546B", 
+          "rgb-value" : "rgb(26,84,107)", 
+          "utility-class" : "u-c-blue-saphire", 
+          "bg-utility-class" : "u-bg-blue-saphire"
+
+        }, 
+
+        {
+
+          "name" : "French Blue", 
+          "variable" : "$color-french-blue", 
+          "hex-value" : "#0071BC", 
+          "rgb-value" : "rgb(0,113,188)", 
+          "utility-class" : "u-c-french-blue", 
+          "bg-utility-class" : "u-bg-french-blue"
+
+        }, 
+
+        {
+
+          "name" : "Pale Aqua", 
+          "variable" : "$color-french-blue", 
+          "hex-value" : "#BED9F6", 
+          "rgb-value" : "rgb(190,217,246)", 
+          "utility-class" : "u-c-pale-aqua", 
+          "bg-utility-class" : "u-bg-pale-aqua"
+
+        }, 
+
+        {
+
+          "name" : "Mikado Yellow", 
+          "variable" : "$color-mikado-yellow", 
+          "hex-value" : "#FECD0D", 
+          "rgb-value" : "rgb(254,205,13)", 
+          "utility-class" : "u-c-mikado-yellow", 
+          "bg-utility-class" : "u-bg-mikado-yellow"
+
+        }, 
+
+        {
+
+          "name" : "Deep Carmine Pink", 
+          "variable" : "$color-carmine-pink", 
+          "hex-value" : "#F13741", 
+          "rgb-value" : "rgb(241,55,65)", 
+          "utility-class" : "u-c-carmine-pink", 
+          "bg-utility-class" : "u-bg-carmine-pink"
+
+        }, 
+
+        {
+
+          "name" : "Light Gray", 
+          "variable" : "$color-light-gray", 
+          "hex-value" : "#D0D4E0", 
+          "rgb-value" : "rgb(208,212,224)", 
+          "utility-class" : "u-c-light-gray", 
+          "bg-utility-class" : "u-bg-light-gray"
+
+        }, 
+
+        {
+
+          "name" : "Soft White", 
+          "variable" : "$color-soft-white", 
+          "hex-value" : "#fafafa", 
+          "rgb-value" : "rgb(250,250,250)", 
+          "utility-class" : "u-c-soft-white", 
+          "bg-utility-class" : "u-bg-soft-white"
+
+        }, 
+
+        {
+
+          "name" : "Rare Black", 
+          "variable" : "$color-rare-black", 
+          "hex-value" : "#343434", 
+          "rgb-value" : "rgb(52,52,52)", 
+          "utility-class" : "u-c-rare-black", 
+          "bg-utility-class" : "u-bg-rare-black"
+
+        }
+
+      ]
+      
+    }
+
+  ],
+
+  "pl-font-palette" : [
+
+    {
+
+      "item" : [
+
+        {
+
+          "name" : "Cabin", 
+          "font-family-variable" : "$font-family-cabin", 
+          "font-variable" : "$font-cabin", 
+          "font-family-utility-class" : "u-f-family-cabin", 
+          "font-name-utility-class" : "u-f-cabin", 
+          "font-utility-class" : "u-f-cabin"
+
+        }, 
+
+        {
+
+          "name" : "Open Sans", 
+          "font-family-variable" : "$font-family-open-sans", 
+          "font-variable" : "$font-open-sans", 
+          "font-family-utility-class" : "u-f-family-open-sans", 
+          "font-name-utility-class" : "u-f-open-sans", 
+          "font-utility-class" : "u-f-open-sans"
+
+        }
+
+      ]
+
+    }
+
+  ], 
+
+  "pl-button-palette" : [
+
+    {
+
+      "item" : [
+
+        {
+
+          "modifier" : "", 
+          "text" : "Primary", 
+          "class" : "btn" 
+
+        }, 
+
+        {
+
+          "modifier" : "btn--disabled", 
+          "text" : "Primary", 
+          "class" : "btn btn--disabled"
+
+        }, 
+
+        {
+
+          "modifier" : "btn--light", 
+          "text" : "Primary Light", 
+          "class" : "btn btn--light"
+
+        }, 
+
+        {
+
+          "modifier" : "btn--light", 
+          "text" : "Primary Light", 
+          "class" : "btn btn--light btn--disabled"
+
+        }, 
+
+        {
+
+          "modifier" : "", 
+          "text" : "Secondary", 
+          "class" : "btn btn--secondary" 
+
+        }, 
+
+        {
+
+          "modifier" : "btn--secondary btn--disabled", 
+          "text" : "Secondary", 
+          "class" : "btn btn--secondary btn--disabled"
+
+        }, 
+
+        {
+
+          "modifier" : "btn--light", 
+          "text" : "Secondary Light", 
+          "class" : "btn btn--secondary btn--light"
+
+        }, 
+
+        {
+
+          "modifier" : "btn--light", 
+          "text" : "Secondary Light", 
+          "class" : "btn btn--secondary btn--light btn--disabled"
+
+        }
+
+      ]
+
+    }
+
+  ], 
+
+  "card" : [
+
+    {
+
+      "modifier" : "", 
+      "img" : [
+
+        {
+    
+          "URL-1x" : "../../assets/images/sample-image@1x.jpg",
+          "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+          "class" : "card__media",
+          "alt-text" : "sample image"
+    
+        }
+    
+      ],
+      "heading" : "Lorem ipsum dolor", 
+      "p" : "Dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc."
+
+    }
+
+  ], 
+
+  "card-bordered" : [
+
+    {
+
+      "card" : [
+        
+        {
+          
+          "modifier" : "card--bordered",
+          "img" : [
+
+            {
+        
+              "URL-1x" : "../../assets/images/sample-image@1x.jpg",
+              "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+              "class" : "card__media",
+              "alt-text" : "sample image"
+        
+            }
+        
+          ],
+          "heading" : "Lorem ipsum dolor", 
+          "p" : "Dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc."    
+
+        }
+
+      ]
+
+    }
+
+  ], 
+
+  "card-padded" : [
+
+    {
+
+      "card" : [
+        
+        {
+          
+          "modifier" : "card--padded", 
+          "img" : [
+
+            {
+        
+              "URL-1x" : "../../assets/images/sample-image@1x.jpg",
+              "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+              "class" : "card__media",
+              "alt-text" : "sample image"
+        
+            }
+        
+          ],
+          "heading" : "Lorem ipsum dolor", 
+          "p" : "Dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc."    
+
+        }
+
+      ]
+
+    }
+
+  ], 
+
+  "card-set" : [
+
+    {
+
+      "item" : [
+
+        {
+
+          "card" : [
+
+            {
+        
+              "modifier" : "", 
+              "img" : [
+        
+                {
+            
+                  "URL-1x" : "../../assets/images/sample-image@1x.jpg",
+                  "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                  "class" : "card__media",
+                  "alt-text" : "sample image"
+            
+                }
+            
+              ],
+              "heading" : "Lorem ipsum dolor", 
+              "p" : "Dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc."
+        
+            }
+        
+          ]
+
+        }, 
+
+        {
+
+          "card" : [
+
+            {
+        
+              "modifier" : "", 
+              "img" : [
+        
+                {
+            
+                  "URL-1x" : "../../assets/images/sample-image@1x.jpg",
+                  "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                  "class" : "card__media",
+                  "alt-text" : "sample image"
+            
+                }
+            
+              ],
+              "heading" : "Lorem ipsum dolor", 
+              "p" : "Dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc."
+        
+            }
+        
+          ]
+
+        }, 
+
+        {
+
+          "card" : [
+
+            {
+        
+              "modifier" : "", 
+              "img" : [
+        
+                {
+            
+                  "URL-1x" : "../../assets/images/sample-image@1x.jpg",
+                  "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                  "class" : "card__media",
+                  "alt-text" : "sample image"
+            
+                }
+            
+              ],
+              "heading" : "Lorem ipsum dolor", 
+              "p" : "Dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc."
+        
+            }
+        
+          ]
+
+        }
+
+      ]
+
+    }
+
+  ], 
+
+  "card-set-bordered" : [
+
+    {
+
+      "card-set" : [
+
+        {
+
+          "item" : [
+
+            {
+
+              "card" : [
+    
+                {
+                      
+                  "modifier" : "card--bordered",
+                  "img" : [
+        
+                    {
+                
+                      "URL-1x" : "../../assets/images/sample-image@1x.jpg",
+                      "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                      "class" : "card__media",
+                      "alt-text" : "sample image"
+                
+                    }
+                
+                  ],
+                  "heading" : "Lorem ipsum dolor", 
+                  "p" : "Dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc."    
+        
+                }
+            
+              ]
+
+            }, 
+
+            {
+
+              "card" : [
+    
+                {
+                      
+                  "modifier" : "card--bordered",
+                  "img" : [
+        
+                    {
+                
+                      "URL-1x" : "../../assets/images/sample-image@1x.jpg",
+                      "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                      "class" : "card__media",
+                      "alt-text" : "sample image"
+                
+                    }
+                
+                  ],
+                  "heading" : "Lorem ipsum dolor", 
+                  "p" : "Dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc."    
+        
+                }
+            
+              ]
+
+            }, 
+
+            {
+
+              "card" : [
+    
+                {
+                      
+                  "modifier" : "card--bordered",
+                  "img" : [
+        
+                    {
+                
+                      "URL-1x" : "../../assets/images/sample-image@1x.jpg",
+                      "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                      "class" : "card__media",
+                      "alt-text" : "sample image"
+                
+                    }
+                
+                  ],
+                  "heading" : "Lorem ipsum dolor", 
+                  "p" : "Dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc."    
+        
+                }
+            
+              ]
+
+            }
+
+          ]
+
+        }
+
+      ]
+
+    }
+
+  ], 
+
+  "card-set-padded" : [
+
+    {
+
+      "card-set" : [
+
+        {
+
+          "item" : [
+
+            {
+
+              "card" : [
+    
+                {
+                      
+                  "modifier" : "card--padded",
+                  "img" : [
+        
+                    {
+                
+                      "URL-1x" : "../../assets/images/sample-image@1x.jpg",
+                      "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                      "class" : "card__media",
+                      "alt-text" : "sample image"
+                
+                    }
+                
+                  ],
+                  "heading" : "Lorem ipsum dolor", 
+                  "p" : "Dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc."    
+        
+                }
+            
+              ]
+
+            }, 
+
+            {
+
+              "card" : [
+    
+                {
+                      
+                  "modifier" : "card--padded",
+                  "img" : [
+        
+                    {
+                
+                      "URL-1x" : "../../assets/images/sample-image@1x.jpg",
+                      "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                      "class" : "card__media",
+                      "alt-text" : "sample image"
+                
+                    }
+                
+                  ],
+                  "heading" : "Lorem ipsum dolor", 
+                  "p" : "Dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc."    
+        
+                }
+            
+              ]
+
+            }, 
+
+            {
+
+              "card" : [
+    
+                {
+                      
+                  "modifier" : "card--padded",
+                  "img" : [
+        
+                    {
+                
+                      "URL-1x" : "../../assets/images/sample-image@1x.jpg",
+                      "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                      "class" : "card__media",
+                      "alt-text" : "sample image"
+                
+                    }
+                
+                  ],
+                  "heading" : "Lorem ipsum dolor", 
+                  "p" : "Dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc."    
+        
+                }
+            
+              ]
+
+            }
+
+          ]
+
+        }
+
+      ]
+
+    }
+
+  ], 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
   "body-class" : "sp-anonymous",
 
   "page-title": "Page Title",
@@ -9544,1489 +10165,10 @@
 
   ],
 
-  "card" : {
-
-    "card-modifier" : "",
-    "img-name" : "sample-image--ocean",
-    "img-type" : "jpg",
-    "primary-text" : "Card Title",
-    "secondary-text" : "Card description. Ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc.",
-    "summary-text" : false
-
-  },
-
-  "card-framed" : {
-
-    "card-modifier" : "card--framed",
-    "img-name" : "sample-image--ocean",
-    "img-type" : "jpg",
-    "primary-text" : "Card Title",
-    "secondary-text" : "Card description. Ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc.",
-    "summary-text" : false
-
-  },
-
-  "card-alt" : {
-
-    "card-modifier" : "card--alt card--alt-orange card--framed",
-    "icon" : "icon-pie-chart",
-    "primary-text" : "Card Title",
-    "secondary-text" : "Card description. Ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc."
-
-  },
-
-  "card-with-button" : {
-
-    "card-modifier" : "card--alt card--alt-orange",
-    "icon" : "icon-pie-chart",
-    "primary-text" : "Card Title",
-    "secondary-text" : "Card description. Ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc.",
-    "button-text" : "Button Text"
-
-  },
-
-  "card-no-link" : {
-
-    "card-modifier" : "card--alt card--alt-orange",
-    "icon" : "icon-pie-chart",
-    "primary-text" : "Card Title",
-    "secondary-text" : "Card description. Ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc."
-
-  },
-
-  "card-trans" : {
-
-    "card-modifier" : "card--trans",
-    "img-name-big" : "sample-image--train-station",
-    "img-name-small" : "sample-image--train-station-square",
-    "img-type" : "jpg",
-    "primary-text" : "Card Title",
-    "secondary-text" : "Card description"
-
-  },
-
-  "card-person" : {
-
-    "card-modifier" : "card--framed card--person",
-    "img-name-big" : "people/ann-dishong",
-    "img-name-small" : "people/ann-dishong",
-    "img-type" : "jpg",
-    "primary-text" : "First Last Name",
-    "secondary-text" : "Person Title"
-
-  },
-
-  "card-video" : {
-
-    "video" : [
-
-      {
-
-        "modifier" : "video-wrapper--fluid-width",
-        "url" : "https://www.youtube.com/embed/9a9Yra-RdpQ"
-
-      }
-
-    ],
-    "primary-text" : "Law Enforcement Safety",
-    "url" : "https://www.youtube.com/embed/9a9Yra-RdpQ"
-
-  },
-
-  "card-bordered" : {
-
-    "card-modifier" : "card--bordered",
-    "img-name" : "sample-image--sky",
-    "img-type" : "jpg", 
-    "date" : "January 1, 2017", 
-    "primary-text" : "Lorem Ipsum and Dolor",
-    "secondary-text" : "Ipsum dolor sit amet, consectetur adipiscing gruit gimel elit. Praesent vel interdum nunc.",
-    "button-modifier" : "btn--ghost btn--accent",
-    "button-text" : "Lorem Felit"
-
-  },
-
-  "card-basic" : {
-    
-    "card-modifier" : "card--basic",
-    "img-name" : "sample-image--roy-cooper",
-    "img-type" : "jpg",
-    "primary-text" : "Ipsum dolor sit amet, consectetur adipiscing gruit gimel elit. Praesent vel interdum nunc."
-
-  },
-
-  "card-basic-date" : {
-
-    "card-modifier" : "card--basic card--date",
-    "img-name" : false, 
-    "img-type" : false, 
-    "date" : false, 
-    "date-number" : true, 
-    "primary-text" : "Ipsum dolors sit amet, consectetur adipiscing gruit gimel elit."    
-
-  },
-
-  "card-solid" : {
-    
-    "card-modifier" : "card--solid card--solid-green",
-    "icon" : "icon-pie-chart",
-    "primary-text" : "Card Title"
-
-  }, 
 
   "heading_1" : "Etiam vitae odio vel ipsum",
 
-  "card-set" : [
 
-    {
-
-      "section-modifier" : "",
-      "card-set-modifier" : "grid grid--guttersLg grid--full small-grid--1of2 med-grid--1of3 large-grid--1of4",
-      "item" : [
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card" : {
-
-            "card-modifier" : "card-set_card card--framed",
-            "img-name" : "card--sample-image",
-            "img-type" : "png",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card Type"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card" : {
-
-            "card-modifier" : "card-set_card card--framed",
-            "img-name" : "card--sample-image",
-            "img-type" : "png",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card Type"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card" : {
-
-            "card-modifier" : "card-set_card card--framed",
-            "img-name" : "card--sample-image-2",
-            "img-type" : "png",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card Type"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card" : {
-
-            "card-modifier" : "card-set_card card--framed",
-            "img-name" : "card--sample-image",
-            "img-type" : "png",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card Type Etiam purus nisl, pellentesque eu arcu non, luctus malesuada magna."
-
-          }
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "card-set-unframed" : [
-
-    {
-
-      "section-modifier" : "",
-      "card-set-modifier" : "grid grid--guttersLg grid--full small-grid--1of2 med-grid--1of3 large-grid--1of4",
-      "item" : [
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card" : {
-
-            "card-modifier" : "card-set_card",
-            "img-name" : "card--sample-image",
-            "img-type" : "png",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card Type"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card" : {
-
-            "card-modifier" : "card-set_card",
-            "img-name" : "card--sample-image",
-            "img-type" : "png",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card Type"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card" : {
-
-            "card-modifier" : "card-set_card",
-            "img-name" : "card--sample-image-2",
-            "img-type" : "png",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card Type"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card" : {
-
-            "card-modifier" : "card-set_card",
-            "img-name" : "card--sample-image",
-            "img-type" : "png",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card Type Etiam purus nisl, pellentesque eu arcu non, luctus malesuada magna."
-
-          }
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "card-set-three-items" : [
-
-    {
-
-      "section-modifier" : "",
-      "card-set-modifier" : "grid grid--guttersLg grid--full small-grid--1of2 med-grid--1of3",
-      "item" : [
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card" : {
-
-            "card-modifier" : "card-set_card card--framed",
-            "img-name" : "card--sample-image",
-            "img-type" : "png",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card Type"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card" : {
-
-            "card-modifier" : "card-set_card card--framed",
-            "img-name" : "card--sample-image",
-            "img-type" : "png",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card Type Etiam purus nisl, pellentesque eu arcu non, luctus malesuada magna."
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card" : {
-
-            "card-modifier" : "card-set_card card--framed",
-            "img-name" : "card--sample-image",
-            "img-type" : "png",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card Type"
-
-          }
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "card-set-people" : [
-
-    {
-
-      "section-modifier" : "",
-      "card-set-modifier" : "grid grid--guttersLg grid--full small-grid--1of2 med-grid--1of4 large-grid--1of5",
-      "item" : [
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/ann-dishong",
-            "img-name-small" : "people/ann-dishong",
-            "img-type" : "jpg",
-            "primary-text" : "Ann Dishong",
-            "secondary-text" : "Governance Director"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/anne-lasley",
-            "img-name-small" : "people/anne-lasley",
-            "img-type" : "jpg",
-            "primary-text" : "Anne Lasley",
-            "secondary-text" : "Director of Human Resources"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/beau-memory",
-            "img-name-small" : "people/beau-memory",
-            "img-type" : "jpg",
-            "primary-text" : "Beau Memory",
-            "secondary-text" : "Executive Director of N.C. Turnpike Authority"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/carr-mclamb",
-            "img-name-small" : "people/carr-mclamb",
-            "img-type" : "jpg",
-            "primary-text" : "J. Carr McLamb Jr.",
-            "secondary-text" : "General Counsel"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/crystal-feldman",
-            "img-name-small" : "people/crystal-feldman",
-            "img-type" : "jpg",
-            "primary-text" : "Crystal Feldman",
-            "secondary-text" : "Deputy Secretary for Communications"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/david-tyeryar",
-            "img-name-small" : "people/david-tyeryar",
-            "img-type" : "jpg",
-            "primary-text" : "David Tyeryar",
-            "secondary-text" : "Chief Financial Officer"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/eric-boyette",
-            "img-name-small" : "people/eric-boyette",
-            "img-type" : "jpg",
-            "primary-text" : "Eric Boyette",
-            "secondary-text" : "Chief Information Officer"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/keith-weatherly",
-            "img-name-small" : "people/keith-weatherly",
-            "img-type" : "jpg",
-            "primary-text" : "Keith Weatherly",
-            "secondary-text" : "Deputy Secretary for Transit"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/kelly-thomas",
-            "img-name-small" : "people/kelly-thomas",
-            "img-type" : "jpg",
-            "primary-text" : "Kelly Thomas",
-            "secondary-text" : "DMV Commissioner"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/marci-wright",
-            "img-name-small" : "people/marci-wright",
-            "img-type" : "jpg",
-            "primary-text" : "Marci Wright",
-            "secondary-text" : "Director, Office of Civil Rights"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/mary-morton",
-            "img-name-small" : "people/mary-morton",
-            "img-type" : "jpg",
-            "primary-text" : "Mary Morton",
-            "secondary-text" : "Inspector General"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/mike-holder",
-            "img-name-small" : "people/mike-holder",
-            "img-type" : "jpg",
-            "primary-text" : "Mike Holder",
-            "secondary-text" : "Chief Engineer"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/nick-tennyson",
-            "img-name-small" : "people/nick-tennyson",
-            "img-type" : "jpg",
-            "primary-text" : "Nick Tennyson",
-            "secondary-text" : "Transportation Secretary"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/patrick-norman",
-            "img-name-small" : "people/patrick-norman",
-            "img-type" : "jpg",
-            "primary-text" : "Patrick Norman",
-            "secondary-text" : "Director of Planning and Programming"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/rodger-rochelle",
-            "img-name-small" : "people/rodger-rochelle",
-            "img-type" : "jpg",
-            "primary-text" : "Rodger Rochelle",
-            "secondary-text" : "Director of Technical Services"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/walt-gray",
-            "img-name-small" : "people/walt-gray",
-            "img-type" : "jpg",
-            "primary-text" : "Walt Gray",
-            "secondary-text" : "Chief Deputy Secretary"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/wayne-branch",
-            "img-name-small" : "people/wayne-branch",
-            "img-type" : "jpg",
-            "primary-text" : "Wayne Branch",
-            "secondary-text" : "Director of Customer Service Strategies"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-person" : {
-
-            "card-modifier" : "card--framed card--person",
-            "img-name-big" : "people/wesley-fricks",
-            "img-name-small" : "people/wesley-fricks",
-            "img-type" : "jpg",
-            "primary-text" : "Wesley Fricks",
-            "secondary-text" : "Deputy Secretary for Interagency Affairs"
-
-          }
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "card-set-alt" : [
-
-    {
-
-      "section-modifier" : "",
-      "card-set-alt-modifier" : "grid grid--guttersLg grid--full small-grid--1of2 med-grid--1of3 large-grid--1of4",
-      "item" : [
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-alt" : {
-
-            "card-modifier" : "card-set_card card--alt card--alt-turquoise card--framed",
-            "icon" : "icon-pie-chart",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card description. Etiam purus nisl, pellentesque eu arcu non, luctus malesuada magna."
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-alt" : {
-
-            "card-modifier" : "card-set_card card--alt card--alt-turquoise card--framed",
-            "icon" : "icon-pie-chart",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card description. Etiam purus nisl, pellentesque eu arcu non, luctus malesuada magna."
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-alt" : {
-
-            "card-modifier" : "card-set_card card--alt card--alt-turquoise card--framed",
-            "icon" : "icon-pie-chart",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card description. Pellentesque eu arcu non, luctus malesuada magna. Aenean dapibus nisi luctus."
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-alt" : {
-
-            "card-modifier" : "card-set_card card--alt card--alt-turquoise card--framed",
-            "icon" : "icon-pie-chart",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card description. Etiam purus nisl, pellentesque eu arcu non, luctus malesuada magna. Aenean dapibus nisi luctus, pellentesque eu arcu non, luctus."
-
-          }
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "card-set-alt-buttons" : [
-
-    {
-
-      "section-modifier" : "",
-      "card-set-alt-modifier" : "grid grid--guttersLg grid--full small-grid--1of2 med-grid--1of3 large-grid--1of4",
-      "item" : [
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-with-button" : {
-
-            "card-modifier" : "card-set_card card--alt card--alt-blue",
-            "icon" : "icon-pie-chart",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card description. Etiam purus nisl, pellentesque eu arcu non, luctus malesuada magna.",
-            "button-text" : "Button Text"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-with-button" : {
-
-            "card-modifier" : "card-set_card card--alt card--alt-blue",
-            "icon" : "icon-call",
-            "primary-text" : "Telephone",
-            "secondary-text" : "Card description. Etiam purus nisl, pellentesque eu arcu non, luctus malesuada magna.",
-            "button-text" : false,
-            "extra-text" : "(800) 123-4567"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-with-button" : {
-
-            "card-modifier" : "card-set_card card--alt card--alt-blue",
-            "icon" : "",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card description. Etiam purus nisl, pellentesque eu arcu non, luctus malesuada magna. Aenean dapibus nisi luctus.",
-            "button-text" : "Button Text"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-with-button" : {
-
-            "card-modifier" : "card-set_card card--alt card--alt-blue",
-            "icon" : "icon-pie-chart",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card description. Etiam purus nisl, pellentesque eu arcu non, luctus malesuada magna.",
-            "button-text" : "Button Text"
-
-          }
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "card-set-no-link" : [
-
-    {
-
-      "section-modifier" : "",
-      "card-set-alt-modifier" : "grid grid--guttersLg grid--full small-grid--1of2 med-grid--1of3 large-grid--1of4",
-      "item" : [
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-no-link" : {
-
-            "card-modifier" : "card-set_card card--alt card--alt-blue",
-            "icon" : "icon-pie-chart",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card description. Etiam purus nisl, pellentesque eu arcu non, luctus malesuada magna."
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-no-link" : {
-
-            "card-modifier" : "card-set_card card--alt card--alt-blue",
-            "icon" : "icon-pie-chart",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card description. Etiam purus nisl, pellentesque eu arcu non, luctus malesuada magna. Aenean dapibus nisi luctus."
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-no-link" : {
-
-            "card-modifier" : "card-set_card card--alt card--alt-blue",
-            "icon" : "icon-pie-chart",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card description. Etiam purus nisl, pellentesque eu arcu non, luctus malesuada magna."
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-no-link" : {
-
-            "card-modifier" : "card-set_card card--alt card--alt-blue",
-            "icon" : "icon-pie-chart",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card description. Etiam purus nisl, pellentesque eu arcu non, luctus malesuada magna."
-
-          }
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "card-set-trans" : [
-
-    {
-
-      "section-modifier" : "",
-      "card-set-trans-modifier" : "grid grid--guttersLg grid--full small-grid--1of2 med-grid--1of3 large-grid--1of4",
-      "item" : [
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-trans" : {
-
-            "card-modifier" : "card--trans",
-            "img-name-big" : "sample-image--train-station",
-            "img-name-small" : "sample-image--train-station-square",
-            "img-type" : "jpg",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Lorem Ipsum Oter Flamingo Parto Elem Lorem Ipsum Oter"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-trans" : {
-
-            "card-modifier" : "card--trans",
-            "img-name-big" : "sample-image--train-station",
-            "img-name-small" : "sample-image--train-station-square",
-            "img-type" : "jpg",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card description"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-trans" : {
-
-            "card-modifier" : "card--trans",
-            "img-name-big" : "sample-image--train-station",
-            "img-name-small" : "sample-image--train-station-square",
-            "img-type" : "jpg",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card description"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-trans" : {
-
-            "card-modifier" : "card--trans",
-            "img-name-big" : "sample-image--train-station",
-            "img-name-small" : "sample-image--train-station-square",
-            "img-type" : "jpg",
-            "primary-text" : "Card Title",
-            "secondary-text" : "Card description"
-
-          }
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "card-set-video" : [
-
-    {
-
-      "section-modifier" : "",
-      "card-set-video-modifier" : "grid grid--guttersLg grid--full small-grid--1of2 med-grid--1of3 large-grid--1of4",
-      "item" : [
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-video" : {
-
-            "video" : [
-
-              {
-
-                "modifier" : "video-wrapper--fluid-width",
-                "url" : "https://www.youtube.com/embed/9a9Yra-RdpQ"
-
-              }
-
-            ],
-            "primary-text" : "Law Enforcement Safety Lorem Ipsum Oter Flamingo Parto Elem",
-            "url" : "https://www.youtube.com/embed/9a9Yra-RdpQ"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-video" : {
-
-            "video" : [
-
-              {
-
-                "modifier" : "video-wrapper--fluid-width",
-                "url" : "https://www.youtube.com/embed/9a9Yra-RdpQ"
-
-              }
-
-            ],
-            "primary-text" : "Law Enforcement Safety",
-            "url" : "https://www.youtube.com/embed/9a9Yra-RdpQ"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-video" : {
-
-            "video" : [
-
-              {
-
-                "modifier" : "video-wrapper--fluid-width",
-                "url" : "https://www.youtube.com/embed/9a9Yra-RdpQ"
-
-              }
-
-            ],
-            "primary-text" : "Law Enforcement Safety",
-            "url" : "https://www.youtube.com/embed/9a9Yra-RdpQ"
-
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-video" : {
-
-            "video" : [
-
-              {
-
-                "modifier" : "video-wrapper--fluid-width",
-                "url" : "https://www.youtube.com/embed/9a9Yra-RdpQ"
-
-              }
-
-            ],
-            "primary-text" : "Law Enforcement Safety",
-            "url" : "https://www.youtube.com/embed/9a9Yra-RdpQ"
-
-          }
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "card-set-bordered" : [
-    
-    {
-
-      "section-modifier" : "",
-      "card-set-bordered-modifier" : "card-set--bordered grid grid--guttersLg grid--full small-grid--1of2 med-grid--1of3",
-      "item" : [
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-bordered" : {
-            
-            "card-modifier" : "card--bordered",
-            "img-name" : "sample-image--sky",
-            "img-type" : "jpg", 
-            "date" : false, 
-            "primary-text" : "Lorem Ipsum and Dolor",
-            "secondary-text" : "Consectetur adipiscing gruit gimel elit. Praesent vel interdum nunc.",
-            "button-modifier" : "btn--ghost btn--accent",
-            "button-text" : "Lorem Felit"
-    
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-bordered" : {
-            
-            "card-modifier" : "card--bordered",
-            "img-name" : "sample-image--sky",
-            "img-type" : "jpg", 
-            "date" : "January 1, 2017", 
-            "primary-text" : "Lorem Ipsum and Dolor",
-            "secondary-text" : "Ipsum dolor sit amet, consectetur adipiscing gruit gimel elit. Praesent vel interdum nunc.",
-            "button-modifier" : "btn--ghost btn--accent",
-            "button-text" : "Lorem Felit"
-        
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-bordered" : {
-            
-            "card-modifier" : "card--bordered",
-            "img-name" : "sample-image--sky",
-            "img-type" : "jpg", 
-            "date" : "January 1, 2017", 
-            "primary-text" : "Lorem Ipsum and Dolor",
-            "secondary-text" : "Ipsum dolor sit amet, consectetur adipiscing gruit gimel elit. Praesent vel interdum nunc.",
-            "button-modifier" : "btn--ghost btn--accent",
-            "button-text" : "Lorem Felit"
-        
-          }
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "card-set-basic" : [
-    
-    {
-
-      "section-modifier" : "",
-      "card-set-basic-modifier" : "card-set--basic grid grid--guttersLg grid--full small-grid--1of2 med-grid--1of3 large-grid--1of4",
-      "item" : [
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-basic" : {
-            
-            "card-modifier" : "card--basic",
-            "img-name" : "sample-image--roy-cooper",
-            "img-type" : "jpg",
-            "primary-text" : "Ipsum dolor sit amet, consectetur adipiscing gruit gimel elit. Praesent vel interdum nunc."
-        
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-basic" : {
-            
-            "card-modifier" : "card--basic",
-            "img-name" : "sample-image--roy-cooper",
-            "img-type" : "jpg",
-            "primary-text" : "Ipsum dolor sit amet, consectetur adipiscing gruit gimel elit. Praesent vel interdum nunc."
-        
-          }
-
-        },
-
-        {
-          
-          "grid-cell-modifier" : "",
-          "card-basic" : {
-            
-            "card-modifier" : "card--basic card--date",
-            "img-name" : false, 
-            "img-type" : false, 
-            "date" : false, 
-            "date-number" : true, 
-            "primary-text" : "Ipsum dolors sit amet, consectetur adipiscing gruit gimel elit."    
-                    
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-basic" : {
-            
-            "card-modifier" : "card--basic",
-            "img-name" : "sample-image--roy-cooper",
-            "img-type" : "jpg",
-            "primary-text" : "Ipsum dolor sit amet, consectetur adipiscing gruit gimel elit. Praesent vel interdum nunc."
-        
-          }
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "card-set-solid" : [
-    
-    {
-
-      "section-modifier" : "",
-      "card-set-solid-modifier" : "grid grid--guttersLg grid--full small-grid--1of2 med-grid--1of3 large-grid--1of4",
-      "item" : [
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-solid" : {
-
-            "card-modifier" : "card--solid card--solid-green",
-            "icon" : "icon-pie-chart",
-            "primary-text" : "Card Title"
-        
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-solid" : {
-            
-            "card-modifier" : "card--solid card--solid-green",
-            "icon" : "icon-pie-chart",
-            "primary-text" : "Card Title"
-        
-          }
-            
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-solid" : {
-            
-            "card-modifier" : "card--solid card--solid-green",
-            "icon" : "icon-pie-chart",
-            "primary-text" : "Card Title"
-        
-          }
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-solid" : {
-            
-            "card-modifier" : "card--solid card--solid-green",
-            "icon" : "icon-pie-chart",
-            "primary-text" : "Card Title"
-        
-          }
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "card-carousel" : [
-    
-    {
-
-      "item" : [
-
-        {
-          
-          "card" : false, 
-          "card-framed" : false, 
-          "card-video" : false,
-          "card-basic" : false,
-          "card-bordered" : {
-
-            "card-modifier" : "card--bordered",
-            "img-name" : "sample-image--kid",
-            "img-type" : "jpg", 
-            "date" : "June 20, 2017", 
-            "primary-text" : "Aenean dapibus nisi eu nisi gravida",
-            "secondary-text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc, ac hendrerit lectus.",
-            "button-modifier" : "btn--ghost btn--accent",
-            "button-text" : "Lorem Ipsum"
-
-          }
-
-        },
-
-        {
-
-          "card" : false, 
-          "card-framed" : false, 
-          "card-video" : false,
-          "card-basic" : false,
-          "card-bordered" : {
-
-            "card-modifier" : "card--bordered",
-            "img-name" : "sample-image--license",
-            "img-type" : "jpg", 
-            "date" : "June 15, 2017", 
-            "primary-text" : "Lorem ipsum dolor vel interdum nun",
-            "secondary-text" : "Fusce ac libero euismod, tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc, ac hendrerit lectus.",
-            "button-modifier" : "btn--ghost btn--accent",
-            "button-text" : "Lorem Ipsum"
-            
-          }
-
-        },
-
-        {
-
-          "card" : false, 
-          "card-framed" : false, 
-          "card-video" : false,
-          "card-basic" : false,
-          "card-bordered" : {
-
-            "card-modifier" : "card--bordered",
-            "img-name" : "sample-image--cooper",
-            "img-type" : "jpg", 
-            "date" : "June 12, 2017", 
-            "primary-text" : "Dapibus aenean nisi eu nisi gravida",
-            "secondary-text" : "Consectetur adipiscing elit. Praesent vel interdum nunc, ac hendrerit lectus. Praesent vel interdum nunc.",
-            "button-modifier" : "btn--ghost btn--accent",
-            "button-text" : "Lorem Ipsum"
-            
-          }
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "card-set-carousel" : [
-
-    {
-
-      "heading" : "Lorem Ipsum", 
-      "carousel-modifier" : "carousel--no-arrows"
-
-    }
-
-  ],
-
-  "card-set-mix" : [
-
-    {
-
-      "section-modifier" : "",
-      "card-set-modifier" : "card-set--mix grid grid--guttersLg grid--full small-grid--1of2 med-grid--1of3 large-grid--1of4",
-      "item" : [
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-basic" : [
-            
-            {
-
-              "card-basic" : {
-    
-                "card-modifier" : "card--basic card--basic-big-text",
-                "img-name" : "sample-image--dmv-online",
-                "img-type" : "jpg",
-                "text-wrapper-modifier" : "u-text-center", 
-                "primary-text" : "Anytime, Any Place: NCDMV"
-            
-              }
-
-            }
-
-          ], 
-          "card-solid" : false
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-basic" : [
-            
-            {
-
-              "card-basic" : {
-    
-                "card-modifier" : "card--basic card--basic-big-text",
-                "img-name" : "sample-image--azalea",
-                "img-type" : "jpg",
-                "text-wrapper-modifier" : "u-text-center", 
-                "primary-text" : "NCDMV Visits the 2017 Azalea Festival"
-            
-              }
-
-            }
-
-          ], 
-          "card-solid" : false
-
-        },
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-basic" : false, 
-          "card-solid" : [
-
-            {
-
-              "card-solid" : {
-    
-                "card-modifier" : "card--solid card--solid-alt u-bg-accent-deep-purple",
-                "icon" : "icon-directions-car",
-                "text-wrapper-modifier" : "u-text-center", 
-                "primary-text" : "Latest Driver Manual for the State of North Carolina"
-            
-              }
-
-            }
-
-          ]
-
-        }, 
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-basic" : false, 
-          "card-solid" : [
-
-            {
-
-              "card-solid" : {
-    
-                "card-modifier" : "card--solid card--solid-alt u-bg-core-blue",
-                "icon" : false, 
-                "date-number" : 12, 
-                "text-wrapper-modifier" : "u-text-center", 
-                "primary-text" : "Announcement for an event on August 12, 2017"
-            
-              }
-
-            }
-
-          ]
-
-        }, 
-    
-        {
-
-          "grid-cell-modifier" : "",
-          "card-basic" : false, 
-          "card-solid" : [
-
-            {
-
-              "card-solid" : {
-    
-                "card-modifier" : "card--solid card--solid-alt u-bg-accent-deep-purple",
-                "icon" : "icon-directions-car",
-                "text-wrapper-modifier" : "u-text-center", 
-                "primary-text" : "Latest Driver Manual for the State of North Carolina"
-            
-              }
-
-            }
-
-          ]
-
-        }, 
-
-        {
-
-          "grid-cell-modifier" : "",
-          "card-basic" : false, 
-          "card-solid" : [
-
-            {
-
-              "card-solid" : {
-    
-                "card-modifier" : "card--solid card--solid-alt u-bg-core-blue",
-                "icon" : false, 
-                "date-number" : 12, 
-                "text-wrapper-modifier" : "u-text-center", 
-                "primary-text" : "Announcement for an event on August 12, 2017"
-            
-              }
-
-            }
-
-          ]
-
-        }
-
-      ]
-
-    }
-
-  ],
 
   "heading_2" : "Aenean dapibus nisi eu nisi gravida",
 
@@ -15221,168 +14363,6 @@
     
   ], 
 
-  "results-list" : [
-
-    {
-
-      "item" : [
-
-        {
-
-          "heading" : "Heading",
-          "card-set" : [
-
-            {
-
-              "section-modifier" : "",
-              "card-set-modifier" : "grid grid--gutters grid--guttersLg grid--full med-grid--fit med-grid--1of2 large-grid--fit results-grid results-grid--column",
-              "item" : [
-
-                {
-
-                  "grid-cell-modifier" : "",
-                  "card" : {
-
-                    "card-modifier" : "card--framed",
-                    "primary-text" : "Event Title",
-                    "secondary-text" : "Date and/or other details",
-                    "summary-text" : "General questions: TC Freeman, NCDOT Aviation Safety and Education Specialist, tfreeman@ncdot.gov or 919-814-0559."
-
-                  }
-
-                },
-
-                {
-
-                  "grid-cell-modifier" : "",
-                  "card" : {
-
-                    "card-modifier" : "card--framed",
-                    "primary-text" : "Event Title",
-                    "secondary-text" : "Date and/or other details",
-                    "summary-text" : "General questions: TC Freeman, NCDOT Aviation Safety and Education Specialist, tfreeman@ncdot.gov or 919-814-0559."
-
-                  }
-
-                },
-
-                {
-
-                  "grid-cell-modifier" : "",
-                  "card" : {
-
-                    "card-modifier" : "card--framed",
-                    "primary-text" : "Event Title",
-                    "secondary-text" : "Date and/or other details",
-                    "summary-text" : "General questions: TC Freeman, NCDOT Aviation Safety and Education Specialist, tfreeman@ncdot.gov or 919-814-0559."
-
-                  }
-
-                },
-
-                {
-
-                  "grid-cell-modifier" : "",
-                  "card" : {
-
-                    "card-modifier" : "card--framed",
-                    "primary-text" : "Event Title",
-                    "secondary-text" : "Date and/or other details",
-                    "summary-text" : "General questions: TC Freeman, NCDOT Aviation Safety and Education Specialist, tfreeman@ncdot.gov or 919-814-0559."
-
-                  }
-
-                }
-
-              ]
-
-            }
-
-          ]
-
-        },
-
-        {
-
-          "heading" : "Heading",
-          "card-set" : [
-
-            {
-
-              "section-modifier" : "",
-              "card-set-modifier" : "grid grid--gutters grid--guttersLg grid--full med-grid--fit med-grid--1of2 large-grid--fit results-grid results-grid--column",
-              "item" : [
-
-                {
-
-                  "grid-cell-modifier" : "",
-                  "card" : {
-
-                    "card-modifier" : "card--framed",
-                    "primary-text" : "Event Title",
-                    "secondary-text" : "Date and/or other details",
-                    "summary-text" : "General questions: TC Freeman, NCDOT Aviation Safety and Education Specialist, tfreeman@ncdot.gov or 919-814-0559."
-
-                  }
-
-                },
-
-                {
-
-                  "grid-cell-modifier" : "",
-                  "card" : {
-
-                    "card-modifier" : "card--framed",
-                    "primary-text" : "Event Title",
-                    "secondary-text" : "Date and/or other details",
-                    "summary-text" : "General questions: TC Freeman, NCDOT Aviation Safety and Education Specialist, tfreeman@ncdot.gov or 919-814-0559."
-
-                  }
-
-                },
-
-                {
-
-                  "grid-cell-modifier" : "",
-                  "card" : {
-
-                    "card-modifier" : "card--framed",
-                    "primary-text" : "Event Title",
-                    "secondary-text" : "Date and/or other details",
-                    "summary-text" : "General questions: TC Freeman, NCDOT Aviation Safety and Education Specialist, tfreeman@ncdot.gov or 919-814-0559."
-
-                  }
-
-                },
-
-                {
-
-                  "grid-cell-modifier" : "",
-                  "card" : {
-
-                    "card-modifier" : "card--framed",
-                    "primary-text" : "Event Title",
-                    "secondary-text" : "Date and/or other details",
-                    "summary-text" : "General questions: TC Freeman, NCDOT Aviation Safety and Education Specialist, tfreeman@ncdot.gov or 919-814-0559."
-
-                  }
-
-                }
-
-              ]
-
-            }
-
-          ]
-
-        }
-
-      ]
-
-    }
-
-  ],
-
   "media" : [
 
     {
@@ -15426,64 +14406,6 @@
 
           "heading" : "",
           "something-exist" : true
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "program" : [
-
-    {
-
-      "item" : [
-
-        {
-
-          "hero-exists" : true
-
-        },
-
-        {
-
-          "video-hero-exists" : true
-
-        },
-
-        {
-
-          "text-hero-exists" : true
-
-        },
-
-        {
-
-          "heading" : "Heading lorem ipsum",
-          "card-set-alt-exists" : true
-
-        },
-
-        {
-
-          "heading" : "Heading lorem ipsum",
-          "stats-block-exists" : true
-
-        },
-
-        {
-
-          "heading" : "",
-          "hero-full-width-exists" : true
-
-        },
-
-        {
-
-          "heading" : "",
-          "text-block-transparent-exists" : true
 
         }
 
@@ -16197,47 +15119,6 @@
     }
 
   ], 
-  
-  "simple-list-with-icons" : [
-
-    {
-
-      "simple-list" : [
-
-        {
-
-          "item" : [
-
-            {
-
-              "icon" : "card",
-              "text" : "Lorem ipsum dolor sita amet"
-
-            },
-
-            {
-
-              "icon" : "government-building",
-              "text" : "Sed aliquet tempus vulputate"
-
-            },
-
-            {
-
-              "icon" : "newspaper",
-              "text" : "Praesent vel interdum nunc"
-
-            }
-
-          ]
-
-        }
-
-      ]
-
-    }
-
-  ],
 
   "simple-list-with-material-icons" : [
 
@@ -16269,50 +15150,6 @@
 
               "icon" : "",
               "MD-icon" : "&#xE860;",
-              "text" : "Praesent vel interdum nunc"
-
-            }
-
-          ]
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "simple-list-with-icons-spaced" : [
-
-    {
-
-      "simple-list" : [
-
-        {
-
-          "item" : [
-
-            {
-
-              "modifier" : "",
-              "icon" : "card",
-              "text" : "Lorem ipsum dolor sita amet"
-
-            },
-
-            {
-
-              "modifier" : "",
-              "icon" : "government-building",
-              "text" : "Sed aliquet tempus vulputate"
-
-            },
-
-            {
-
-              "modifier" : "",
-              "icon" : "newspaper",
               "text" : "Praesent vel interdum nunc"
 
             }
@@ -16359,100 +15196,6 @@
               "modifier" : "simple-list__item--inline",
               "icon" : "newspaper",
               "text" : "Praesent vel"
-
-            }
-
-          ]
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "simple-list-group" : [
-
-    {
-
-      "item" : [
-
-        {
-
-          "modifier" : "simple-list-group__item",
-          "simple-list" : [
-
-            {
-
-              "item" : [
-
-                {
-
-                  "modifier" : "",
-                  "icon" : "card",
-                  "text" : "Lorem ipsum dolor sita amet"
-
-                },
-
-                {
-
-                  "modifier" : "",
-                  "icon" : "government-building",
-                  "text" : "Sed aliquet tempus vulputate"
-
-                },
-
-                {
-
-                  "modifier" : "",
-                  "icon" : "newspaper",
-                  "text" : "Praesent vel interdum nunc"
-
-                }
-
-              ]
-
-            }
-
-          ]
-
-        },
-
-        {
-
-          "modifier" : "simple-list-group__item",
-          "simple-list" : [
-
-            {
-
-              "item" : [
-
-                {
-
-                  "modifier" : "",
-                  "icon" : "card",
-                  "text" : "Lorem ipsum dolor sita amet"
-
-                },
-
-                {
-
-                  "modifier" : "",
-                  "icon" : "government-building",
-                  "text" : "Sed aliquet tempus vulputate"
-
-                },
-
-                {
-
-                  "modifier" : "",
-                  "icon" : "newspaper",
-                  "text" : "Praesent vel interdum nunc"
-
-                }
-
-              ]
 
             }
 
@@ -16889,226 +15632,6 @@
         }
 
       ]
-
-    }
-
-  ],
-
-  "site-footer" : [
-
-    {
-
-      "modifier" : "",
-      "site-footer-top" : true,
-      "dot-contact" : true, 
-      "dmv-contact" : false, 
-      "nc-by-train-contact" : false,
-      "site-footer-divisions" : true,
-      "simple-list" : [
-
-        {
-
-          "modifier" : "simple-list--split",
-          "item" : [
-
-            {
-
-              "modifier" : "",
-              "icon" : "flight",
-              "text" : "Aviation"
-
-            },
-
-            {
-
-              "modifier" : "",
-              "icon" : "directions-bike",
-              "text" : "Bicycle/Pedestrian"
-
-            },
-
-            {
-
-              "modifier" : "",
-              "icon" : "card",
-              "text" : "Division of Motor Vehicles"
-
-            },
-
-            {
-
-              "modifier" : "",
-              "icon" : "directions-boat",
-              "text" : "Ferry"
-
-            },
-
-            {
-
-              "modifier" : "",
-              "icon" : "loop",
-              "text" : "Global TransPark"
-
-            },
-
-            {
-
-              "modifier" : "",
-              "icon" : "highway",
-              "text" : "Highway"
-
-            },
-
-            {
-
-              "modifier" : "",
-              "icon" : "anchor",
-              "text" : "Ports"
-
-            },
-
-            {
-
-              "modifier" : "",
-              "icon" : "directions-bus",
-              "text" : "Public Transportation"
-
-            },
-
-            {
-
-              "modifier" : "",
-              "icon" : "directions-railway",
-              "text" : "Rail"
-
-            },
-
-            {
-
-              "modifier" : "",
-              "icon" : "local-atm",
-              "text" : "Turnpike"
-
-            }
-
-          ]
-
-        }
-
-      ],
-      "site-footer-go-mobile" : false,
-      "site-footer-social-column" : false,
-      "site-footer-twitter-column" : [
-
-        {
-
-          "social-list" : true
-
-        }
-
-      ],
-      "site-footer-bottom" : [
-
-        {
-
-          "link-group" : [
-            
-            {
-    
-              "link-group-classes" : "link-group--on-dark",
-              "single-column" : false, 
-              "dual-column" : [
-    
-                {
-    
-                  "column" : [
-    
-                    {
-    
-                      "list-classes" : "", 
-                      "item" : [
-            
-                        {
-            
-                          "item-classes" : "", 
-                          "link-classes" : "", 
-                          "url" : "", 
-                          "text" : "NC.gov Home"
-            
-                        },
-            
-                        {
-                          
-                          "item-classes" : "", 
-                          "link-classes" : "", 
-                          "url" : "", 
-                          "text" : "Employee Directory"
-            
-                        }, 
-            
-                        {
-                          
-                          "item-classes" : "", 
-                          "link-classes" : "", 
-                          "url" : "", 
-                          "text" : "Accessibility"
-            
-                        }
-            
-                      ]
-    
-                    }, 
-    
-                    {
-                      
-                      "list-classes" : "", 
-                      "item" : [ 
-                          
-                        {
-                          
-                          "item-classes" : "", 
-                          "link-classes" : "", 
-                          "url" : "", 
-                          "text" : "Terms of Use"
-            
-                        },
-            
-                        {
-                          
-                          "item-classes" : "", 
-                          "link-classes" : "", 
-                          "url" : "", 
-                          "text" : "Privacy Policy"
-            
-                        }, 
-            
-                        {
-                          
-                          "item-classes" : "", 
-                          "link-classes" : "", 
-                          "url" : "", 
-                          "text" : "NC OpenBook"
-            
-                        }
-            
-                      ]
-    
-                    }
-    
-                  ]
-    
-                }
-    
-              ]
-    
-            }
-          
-          ]
-
-        }
-
-      ],
-      "nothing-compares-logo" : true
 
     }
 
@@ -21695,416 +20218,6 @@
 
   ], 
 
-  "traveler-resources" : [
-    
-    {
-
-      "heading" : "Traveler Resources", 
-      "card-set-basic" : [
-        
-        {
-    
-          "section-modifier" : "",
-          "card-set-basic-modifier" : "card-set--basic grid grid--guttersLg grid--full grid--1of2 large-grid--1of5",
-          "item" : [
-    
-            {
-    
-              "grid-cell-modifier" : "",
-              "card-basic" : {
-                
-                "card-modifier" : "card--basic card--basic-big-text",
-                "img-name" : "sample-image--ferry-services",
-                "img-type" : "jpg",
-                "primary-text-modifier" : "u-text-center",
-                "primary-text" : "Ferry Services"
-            
-              }
-    
-            },
-    
-            {
-    
-              "grid-cell-modifier" : "",
-              "card-basic" : {
-                
-                "card-modifier" : "card--basic card--basic-big-text",
-                "img-name" : "sample-image--ncbytrain",
-                "img-type" : "jpg",
-                "primary-text-modifier" : "u-text-center",
-                "primary-text" : "NC By Train"
-            
-              }
-    
-            },
-    
-            {
-              
-              "grid-cell-modifier" : "",
-              "card-basic" : {
-                
-                "card-modifier" : "card--basic card--basic-big-text",
-                "img-name" : "sample-image--rest-areas",
-                "img-type" : "jpg",
-                "primary-text-modifier" : "u-text-center",
-                "primary-text" : "Rest Areas"
-                        
-              }
-    
-            },
-    
-            {
-    
-              "grid-cell-modifier" : "",
-              "card-basic" : {
-                
-                "card-modifier" : "card--basic card--basic-big-text",
-                "img-name" : "sample-image--quick-pass",
-                "img-type" : "jpg",
-                "primary-text-modifier" : "u-text-center",
-                "primary-text" : "Toll Roads"
-            
-              }
-    
-            }, 
-
-                  
-            {
-              
-              "grid-cell-modifier" : "",
-              "card-basic" : {
-                
-                "card-modifier" : "card--basic card--basic-big-text",
-                "img-name" : "sample-image--traffic-map-live",
-                "img-type" : "jpg",
-                "primary-text-modifier" : "u-text-center",
-                "primary-text" : "Traffic Map - Live"
-            
-              }
-    
-            }
-    
-          ]
-    
-        }
-    
-      ]
-
-    }
-
-  ], 
-
   "cart" : true, 
-
-  "travelor-resources-card-set" : [
-
-    {
-
-      "card-set-basic" : [
-          
-        {
-    
-          "section-modifier" : "",
-          "card-set-basic-modifier" : "card-set--basic grid grid--guttersLg grid--full grid--1of2 large-grid--1of5",
-          "item" : [
-    
-            {
-    
-              "grid-cell-modifier" : "",
-              "card-basic" : {
-                
-                "card-modifier" : "card--basic card--basic-big-text",
-                "img-name" : "sample-image--ferry-services",
-                "img-type" : "jpg",
-                "primary-text-modifier" : "u-text-center",
-                "primary-text" : "Ferry Services"
-            
-              }
-    
-            },
-    
-            {
-    
-              "grid-cell-modifier" : "",
-              "card-basic" : {
-                
-                "card-modifier" : "card--basic card--basic-big-text",
-                "img-name" : "sample-image--ncbytrain",
-                "img-type" : "jpg",
-                "primary-text-modifier" : "u-text-center",
-                "primary-text" : "NC By Train"
-            
-              }
-    
-            },
-    
-            {
-              
-              "grid-cell-modifier" : "",
-              "card-basic" : {
-                
-                "card-modifier" : "card--basic card--basic-big-text",
-                "img-name" : "sample-image--rest-areas",
-                "img-type" : "jpg",
-                "primary-text-modifier" : "u-text-center",
-                "primary-text" : "Rest Areas"
-                        
-              }
-    
-            },
-    
-            {
-    
-              "grid-cell-modifier" : "",
-              "card-basic" : {
-                
-                "card-modifier" : "card--basic card--basic-big-text",
-                "img-name" : "sample-image--quick-pass",
-                "img-type" : "jpg",
-                "primary-text-modifier" : "u-text-center",
-                "primary-text" : "Toll Roads"
-            
-              }
-    
-            }, 
-    
-            {
-              
-              "grid-cell-modifier" : "",
-              "card-basic" : {
-                
-                "card-modifier" : "card--basic card--basic-big-text",
-                "img-name" : "sample-image--traffic-map-live",
-                "img-type" : "jpg",
-                "primary-text-modifier" : "u-text-center",
-                "primary-text" : "Traffic Map - Live"
-            
-              }
-    
-            }, 
-
-            {
-              
-              "grid-cell-modifier" : "",
-              "card-basic" : {
-                
-                "card-modifier" : "card--basic card--basic-big-text",
-                "img-name" : "sample-image--traffic-map-live",
-                "img-type" : "jpg",
-                "primary-text-modifier" : "u-text-center",
-                "primary-text" : "Traffic Map - Live"
-            
-              }
-    
-            }
-    
-          ]
-    
-        }
-    
-      ]
-
-    }
-
-  ], 
-
-  "featured-content-card-set" : [
-
-    {
-
-      "card-set-basic" : [
-        
-        {
-    
-          "section-modifier" : "",
-          "card-set-basic-modifier" : "card-set card-set--basic  grid grid--guttersLg grid--full small-grid--1of2 med-grid--1of3 large-grid--1of4", 
-          "item" : [
-    
-            {
-    
-              "grid-cell-modifier" : "",
-              "card-basic" : {
-                
-                "card-modifier" : "card--basic card--basic-big-text",
-                "img-name" : "sample-image--dmv-online",
-                "img-type" : "jpg",
-                "primary-text-modifier" : "u-text-center",
-                "primary-text" : "Anytime, Any Place: NCDMV"
-            
-              }
-    
-            },
-    
-            {
-    
-              "grid-cell-modifier" : "",
-              "card-basic" : {
-                
-                "card-modifier" : "card--basic card--basic-big-text",
-                "img-name" : "sample-image--azalea",
-                "img-type" : "jpg",
-                "primary-text-modifier" : "u-text-center",
-                "primary-text" : "NCDMV Visits the 2017 Azalea Festival"
-            
-              }
-    
-            },
-    
-            {
-              
-              "grid-cell-modifier" : "",
-              "card-basic" : {
-                
-                "card-modifier" : "card--basic card--basic-big-text card--no-gradient u-bg-accent-deep-purple",
-                "img-name" : "258x178-accent-deep-purple", 
-                "img-type" : "png", 
-                "primary-text-modifier" : "u-text-center",                  
-                "date" : false, 
-                "date-number" : false, 
-                "icon-class" : "card--basic__icon icon-directions-car", 
-                "primary-text" : "Latest Driver Manual for the State of North Carolina"
-
-              }
-    
-            },
-
-            {
-    
-              "grid-cell-modifier" : "",
-              "card-basic" : {
-                
-                "card-modifier" : "card--basic card--basic-big-text card--date u-bg-core-blue",
-                "img-name" : false, 
-                "img-type" : false, 
-                "primary-text-modifier" : "u-text-center",                  
-                "date" : false, 
-                "date-number" : true, 
-                "primary-text" : "Announcement for an event on August 12, 2017", 
-                "ico-box" : [
-
-                  {
-
-                    "number" : "12"
-
-                  }
-
-                ]
-              
-              }, 
-
-              
-    
-            }, 
-
-            {
-    
-              "grid-cell-modifier" : "",
-              "card-basic" : {
-                
-                "card-modifier" : "card--basic card--basic-big-text card--date u-bg-core-blue",
-                "img-name" : false, 
-                "img-type" : false, 
-                "primary-text-modifier" : "u-text-center",                  
-                "date" : false, 
-                "date-number" : true, 
-                "primary-text" : "Announcement for an event on August 12, 2017", 
-                "ico-box" : [
-
-                  {
-
-                    "number" : "12"
-
-                  }
-
-                ]
-              
-              }
-              
-            }
-    
-          ]
-    
-        }
-    
-      ]
-
-    }
-
-  ], 
-
-  "slick-carousel" : [
-    
-    {
-
-      "item" : [
-
-        {
-          
-          "card" : false, 
-          "card-framed" : false, 
-          "card-video" : false,
-          "card-basic" : false,
-          "card-bordered" : {
-
-            "card-modifier" : "card--bordered",
-            "img-name" : "sample-image--kid",
-            "img-type" : "jpg", 
-            "date" : "June 20, 2017", 
-            "primary-text" : "Aenean dapibus nisi eu nisi gravida",
-            "secondary-text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc, ac hendrerit lectus.",
-            "button-modifier" : "btn--ghost btn--accent",
-            "button-text" : "Lorem Ipsum"
-
-          }
-
-        },
-
-        {
-
-          "card" : false, 
-          "card-framed" : false, 
-          "card-video" : false,
-          "card-basic" : false,
-          "card-bordered" : {
-
-            "card-modifier" : "card--bordered",
-            "img-name" : "sample-image--license",
-            "img-type" : "jpg", 
-            "date" : "June 15, 2017", 
-            "primary-text" : "Lorem ipsum dolor vel interdum nun",
-            "secondary-text" : "Fusce ac libero euismod, tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc, ac hendrerit lectus.",
-            "button-modifier" : "btn--ghost btn--accent",
-            "button-text" : "Lorem Ipsum"
-            
-          }
-
-        },
-
-        {
-
-          "card" : false, 
-          "card-framed" : false, 
-          "card-video" : false,
-          "card-basic" : false,
-          "card-bordered" : {
-
-            "card-modifier" : "card--bordered",
-            "img-name" : "sample-image--cooper",
-            "img-type" : "jpg", 
-            "date" : "June 12, 2017", 
-            "primary-text" : "Dapibus aenean nisi eu nisi gravida",
-            "secondary-text" : "Consectetur adipiscing elit. Praesent vel interdum nunc, ac hendrerit lectus. Praesent vel interdum nunc.",
-            "button-modifier" : "btn--ghost btn--accent",
-            "button-text" : "Lorem Ipsum"
-            
-          }
-
-        }
-
-      ]
-
-    }
-
-  ]
 
 }

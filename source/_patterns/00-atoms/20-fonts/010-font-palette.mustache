@@ -1,0 +1,54 @@
+{{# pl-font-palette }}
+
+<div class="grid pl-palette pl-palette--fonts">
+
+  {{# item }}
+
+  <div class="grid__item pl-palette__item">
+
+    <div class="pl-palette__box pl-palette__box--fonts">
+
+      <div class="pl-palette__swatch pl-palette__swatch--font {{ bg-utility-class }}">
+
+        <p class="pl-palette__heading pl-palette__heading--big {{ font-name-utility-class }}">
+          {{ name }} 
+        </p>
+        <p class="{{ font-name-utility-class }}">
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+          abcdefghijklmnopqrstuvwxyz<br>
+          0123456789
+        </p>
+        <p class="u-f-italic {{ font-name-utility-class }}">
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+          abcdefghijklmnopqrstuvwxyz<br>
+          0123456789
+        </p>
+        
+      </div>
+      
+      <div class="pl-palette__details">
+        <ul class="pl-palette__list">
+          <li class="pl-palette__list-item">
+            {{ font-family-variable }}
+          </li>
+          <li class="pl-palette__list-item">
+            {{ font-variable }}
+          </li>
+          <li class="pl-palette__list-item">
+            .{{ font-family-utility-class }}
+          </li>
+          <li class="pl-palette__list-item">
+            .{{ font-utility-class }}
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+
+  </div>
+
+  {{/ item }}
+
+</div>
+
+{{/ pl-font-palette }}

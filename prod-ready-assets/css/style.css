@@ -75,8 +75,6 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   /* NOTE: since the mobile header is sticky, the top padding here is used as a placeholder */
-  padding: 60px 0 0;
-  /* NOTE: top value is magic number -- based on mobile header height */
   /* NOTE: Font smoothing (non-standard) -- https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth */
   -webkit-font-smoothing: antialiased;
   /* NOTE: IE Edge is giving wide horizontal scrollbar -- hide overflow to fix */
@@ -92,570 +90,271 @@ body {
 }
 
 /*
- * component grid
+ * elements / text
+ */
+a {
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -ms-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  color: #397aac;
+  text-decoration: underline;
+  /* NOTE: this is needed to overwrite SharePoint's default CSS -- SharePoint removes underline */
+}
+a:visited {
+  color: #397aac;
+}
+a:hover {
+  color: #397aac;
+  text-decoration: none;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+blockquote {
+  margin: 1em 0 1em 2em;
+  padding: 0 0 0 1em;
+  border-left: 2px solid #ecf0f3;
+}
+
+small {
+  font-size: 0.8rem;
+}
+
+b,
+strong {
+  font: normal normal normal 100%/1.5 "TransportNewHeavy_gdi", Helvetica, Arial, sans-serif;
+}
+
+/* NOTE: prevent sup/sub from affecting line-height */
+/* https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height/ */
+sup,
+sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+
+sub {
+  top: 0.4em;
+}
+
+mark,
+cite,
+kbd,
+ins,
+code,
+samp,
+var,
+dfn {
+  background: #ecf0f3;
+  padding: 0.25em 0.5em .5em;
+  text-decoration: none;
+  /* NOTE: for <ins> element -- only underline links and clickable text */
+}
+
+/*
+ * media
+ */
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+ * grid
  */
 .grid {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
+  display: grid;
 }
-.no-flexbox .grid {
-  width: calc(100% + 1em);
-}
-.no-flexbox .grid:before, .no-flexbox .grid:after {
-  content: " ";
-  display: table;
-}
-.no-flexbox .grid:after {
-  clear: both;
-}
-.no-flexboxlegacy .grid:before, .no-flexboxlegacy .grid:after {
-  content: " ";
-  display: table;
-}
-.no-flexboxlegacy .grid:after {
-  clear: both;
-}
-.grid__cell {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-.grid__cell--inherit {
-  -ms-flex: inherit;
-  flex: inherit;
-}
-.grid__cell-inner {
-  width: 100%;
-  /* grid demo rule */
-}
-.grid__cell-inner--demo {
-  background: #ecf0f3;
+.grid--demo {
+  grid-gap: 1rem;
+  grid-template-columns: minmax(0, 1fr) 50%;
   padding: 1rem;
+  border: 1px solid #ccc;
 }
-.no-flexbox .grid__cell-inner {
+.grid--demo__item {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+/*
+ * buttons
+ */
+.btn {
+  display: inline-block;
+  font-size: .9rem;
+  font-weight: bold;
+  color: #fafafa;
+  background-color: #1A546B;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in-out;
+  letter-spacing: 0.03rem;
+  cursor: pointer;
+  /* useful for <button> and <input type='submit'> elements */
+}
+.btn:hover {
+  color: #fafafa;
+  background: #0071BC;
+  text-decoration: none;
+}
+.btn:focus {
+  outline: 2px solid #D0D4E0;
+}
+.btn:visited {
+  /* NOTE: including the :visited pseudo overrides SharePoint's :visited rule */
+  color: white;
+  background: #092940;
+  border: 2px solid #092940;
+}
+.btn:disabled, .btn:disabled:hover, .btn--disabled, .btn--disabled:hover {
+  color: #e6ecee;
+  background-color: #577f90;
+  cursor: default;
+}
+
+/* NOTE: firefox fixes -- decrease height (top/bottom padding) by 1px each to match size of a.btn elements */
+@-moz-document url-prefix() {
+  button.btn,
+  input[type='input'].btn,
+  input[type='submit'].btn {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+}
+/* NOTE: IE 9 fixes -- improve icon alignment */
+/*
+ * button group
+ */
+.btn-group {
+  text-align: center;
+  margin: 2rem 0;
+  /* NOTE: we might want to refactor or add a new class name for the toggle, specifically the hide/show media query -- some toggles might be OK for smaller screens */
+}
+.btn-group__icon {
+  font-size: 1.5rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.btn-group .btn {
+  display: inline-block;
+  border-right-width: 0;
+  border-radius: 0;
+}
+.btn-group .btn:not(:first-child) {
+  margin-left: -8px;
+  /* NOTE: this account for the extra space in between "inline-block" elements */
+}
+.btn-group .btn:first-child {
+  border-top-left-radius: 4px;
+  /* NOTE: this value should be in a variable */
+  border-bottom-left-radius: 4px;
+  /* NOTE: this value should be in a variable */
+}
+.btn-group .btn:last-child {
+  border-top-right-radius: 4px;
+  /* NOTE: this value should be in a variable */
+  border-bottom-right-radius: 4px;
+  /* NOTE: this value should be in a variable */
+  border-right-width: 2px;
+  /* NOTE: this value should be in a variable */
+}
+.btn-group--bordered {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #95a0ad;
+}
+.btn-group--spaced:before, .btn-group--spaced:after {
+  content: " ";
+  display: table;
+}
+.btn-group--spaced:after {
+  clear: both;
+}
+.btn-group--spaced .btn {
   display: block;
-}
-
-.grid--flex-cells > .grid__cell {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.grid--top {
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-}
-
-.grid--bottom {
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-}
-
-.grid--center {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.grid--justifyCenter {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.grid__cell--top {
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-}
-
-.grid__cell--bottom {
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
-  align-self: flex-end;
-}
-
-.grid__cell--center {
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.grid__cell--autoSize {
-  -webkit-box-flex: 0;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-}
-
-.grid--fit > .grid__cell {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.grid--full > .grid__cell {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 100%;
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
-}
-
-.grid--1of2 > .grid__cell {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 50%;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  width: 50%;
-}
-
-.grid--1of3 > .grid__cell {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 33.3333%;
-  -ms-flex: 0 0 33.3333%;
-  flex: 0 0 33.3333%;
-  width: 33.3333%;
-}
-
-.grid--1of4 > .grid__cell {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 25%;
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
-  width: 25%;
-}
-
-.grid--1of5 > .grid__cell {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 20%;
-  -ms-flex: 0 0 20%;
-  flex: 0 0 20%;
-  width: 20%;
-}
-
-@media (min-width: 30em) {
-  .small-grid--fit > .grid__cell {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-
-  .small-grid--full > .grid__cell {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-  }
-
-  .small-grid--1of2 > .grid__cell {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 50%;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-  }
-  .no-flexboxlegacy .small-grid--1of2 > .grid__cell {
-    float: left;
-    width: 50%;
-  }
-
-  .small-grid--1of3 > .grid__cell {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 33.3333%;
-    -ms-flex: 0 0 33.3333%;
-    flex: 0 0 33.3333%;
-  }
-  .no-flexboxlegacy .small-grid--1of3 > .grid__cell {
-    float: left;
-    width: 33.3333%;
-  }
-
-  .small-grid--1of4 > .grid__cell {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 25%;
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-  }
-  .no-flexboxlegacy .small-grid--1of4 > .grid__cell {
-    float: left;
-    width: 25%;
-  }
-
-  .small-grid--1of5 > .grid__cell {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 20%;
-    -ms-flex: 0 0 20%;
-    flex: 0 0 20%;
-  }
-  .no-flexboxlegacy .small-grid--1of5 > .grid__cell {
-    float: left;
-    width: 20%;
-  }
-}
-@media (min-width: 48em) {
-  .med-grid--fit > .grid__cell {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-
-  .med-grid--full > .grid__cell {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-  }
-
-  .med-grid--1of2 > .grid__cell {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 50%;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-  }
-  .no-flexboxlegacy .med-grid--1of2 > .grid__cell {
-    flex: 1;
-  }
-
-  .med-grid--1of3 > .grid__cell {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 33.3333%;
-    -ms-flex: 0 0 33.3333%;
-    flex: 0 0 33.3333%;
-  }
-  .no-flexboxlegacy .med-grid--1of3 > .grid__cell {
-    float: left;
-    width: 33.3333%;
-  }
-
-  .med-grid--1of4 > .grid__cell {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 25%;
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-  }
-  .no-flexboxlegacy .med-grid--1of4 > .grid__cell {
-    float: left;
-    width: 25%;
-  }
-
-  .med-grid--1of5 > .grid__cell {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 20%;
-    -ms-flex: 0 0 20%;
-    flex: 0 0 20%;
-  }
-  .no-flexboxlegacy .med-grid--1of5 > .grid__cell {
-    float: left;
-    width: 20%;
-  }
-}
-@media (min-width: 64em) {
-  .large-grid--fit > .grid__cell {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-
-  .large-grid--full > .grid__cell {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-  }
-
-  .large-grid--1of2 > .grid__cell {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 50%;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-  }
-  .no-flexboxlegacy .large-grid--1of2 > .grid__cell {
-    float: left;
-    width: 50%;
-  }
-
-  .large-grid--1of3 > .grid__cell {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 33.3333%;
-    -ms-flex: 0 0 33.3333%;
-    flex: 0 0 33.3333%;
-  }
-  .no-flexboxlegacy .large-grid--1of3 > .grid__cell {
-    float: left;
-    width: 33.3333%;
-  }
-
-  .large-grid--1of4 > .grid__cell {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 25%;
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-  }
-  .no-flexboxlegacy .large-grid--1of4 > .grid__cell {
-    float: left;
-    width: 25%;
-  }
-
-  .large-grid--1of5 > .grid__cell {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 20%;
-    -ms-flex: 0 0 20%;
-    flex: 0 0 20%;
-  }
-  .no-flexboxlegacy .large-grid--1of5 > .grid__cell {
-    float: left;
-    width: 20%;
-  }
-}
-.grid--gutters {
-  margin: -1em 0 1em -1em;
-}
-
-.grid--gutters > .grid__cell {
-  padding: 1em 0 0 1em;
-}
-
-.grid--guttersLg {
-  margin: -1.5em 0 1.5em -1.5em;
-}
-
-.grid--guttersLg > .grid__cell {
-  padding: 1.5em 0 0 1.5em;
-}
-
-.grid--guttersXl {
-  margin: -2em 0 2em -2em;
-}
-
-.grid--guttersXl > .grid__cell {
-  padding: 2em 0 0 2em;
-}
-
-.grid--gutters-doubleXl {
-  margin: -3em 0 3em -3em;
-}
-
-.grid--gutters-doubleXl > .grid__cell {
-  padding: 3em 0 0 3em;
-}
-
-@media (min-width: 30em) {
-  .small-grid--gutters {
-    margin: -1em 0 1em -1em;
-  }
-
-  .small-grid--gutters > .grid__cell {
-    padding: 1em 0 0 1em;
-  }
-
-  .small-grid--guttersLg {
-    margin: -1.5em 0 1.5em -1.5em;
-  }
-
-  .small-grid--guttersLg > .grid__cell {
-    padding: 1.5em 0 0 1.5em;
-  }
-
-  .small-grid--guttersXl {
-    margin: -2em 0 2em -2em;
-  }
-
-  .small-grid--guttersXl > .grid__cell {
-    padding: 2em 0 0 2em;
-  }
-}
-@media (min-width: 48em) {
-  .med-grid--gutters {
-    margin: -1em 0 1em -1em;
-  }
-
-  .med-grid--gutters > .grid__cell {
-    padding: 1em 0 0 1em;
-  }
-
-  .med-grid--guttersLg {
-    margin: -1.5em 0 1.5em -1.5em;
-  }
-
-  .med-grid--guttersLg > .grid__cell {
-    padding: 1.5em 0 0 1.5em;
-  }
-
-  .med-grid--guttersXl {
-    margin: -2em 0 2em -2em;
-  }
-
-  .med-grid--guttersXl > .grid__cell {
-    padding: 2em 0 0 2em;
-  }
-}
-@media (min-width: 64em) {
-  .large-grid--gutters {
-    margin: -1em 0 1em -1em;
-  }
-
-  .large-grid--gutters > .grid__cell {
-    padding: 1em 0 0 1em;
-  }
-
-  .large-grid--guttersLg {
-    margin: -1.5em 0 1.5em -1.5em;
-  }
-
-  .large-grid--guttersLg > .grid__cell {
-    padding: 1.5em 0 0 1.5em;
-  }
-
-  .large-grid--guttersXl {
-    margin: -2em 0 2em -2em;
-  }
-
-  .large-grid--guttersXl > .grid__cell {
-    padding: 2em 0 0 2em;
-  }
-}
-/* grid cell modifiers */
-.grid__cell--full.grid__cell {
-  /* added specificity to override default .grid__cell rule */
-  -webkit-box-flex: 100%;
-  -webkit-flex: 100%;
-  -ms-flex: 100%;
-  flex: 100%;
-}
-
-.no-flexbox .grid__cell.grid__cell--full {
-  display: block !important;
-  width: 100% !important;
-}
-
-.grid__cell--1of2 {
-  width: 50% !important;
-  -webkit-box-flex: 0 !important;
-  -webkit-flex: none !important;
-  -ms-flex: none !important;
-  flex: none !important;
-}
-.no-flexbox .grid__cell--1of2 {
   float: left;
+  margin: 0 .5rem 0 0;
+  /* NOTE: margin matches Isotope component -- perhaps that value should be put in a variable */
+  border-right-width: 2px;
+  /* NOTE: we might want a variable for the border width value */
+  border-radius: 4px;
 }
-
-.grid__cell--1of3 {
-  width: 33.3333% !important;
-  -webkit-box-flex: 0 !important;
-  -webkit-flex: none !important;
-  -ms-flex: none !important;
-  flex: none !important;
+.btn-group--spaced .btn:first-child, .btn-group--spaced .btn:last-child {
+  border-radius: 4px;
 }
-
-.grid__cell--1of4 {
-  width: 25% !important;
-  -webkit-box-flex: 0 !important;
-  -webkit-flex: none !important;
-  -ms-flex: none !important;
-  flex: none !important;
+.btn-group--spaced .btn:not(:first-child) {
+  margin-left: 0;
 }
-
-.grid__cell--1of5 {
-  width: 20% !important;
-  -webkit-box-flex: 0 !important;
-  -webkit-flex: none !important;
-  -ms-flex: none !important;
-  flex: none !important;
+.btn-group--no-wrap {
+  text-align: left;
+  white-space: nowrap;
 }
-
-@media (min-width: 30em) {
-  .grid .small-grid__cell--1of2 {
-    width: 50%;
-    -webkit-box-flex: 0;
-    -webkit-flex: none;
-    -ms-flex: none;
-    flex: none;
-  }
-
-  .grid .small-grid__cell--1of3 {
-    width: 33.3333%;
-    -webkit-box-flex: 0;
-    -webkit-flex: none;
-    -ms-flex: none;
-    flex: none;
-  }
-
-  .grid .small-grid__cell--1of4 {
-    width: 25%;
-    -webkit-box-flex: 0;
-    -webkit-flex: none;
-    -ms-flex: none;
-    flex: none;
-  }
-
-  .grid .small-grid__cell--1of5 {
-    width: 20%;
-    -webkit-box-flex: 0;
-    -webkit-flex: none;
-    -ms-flex: none;
-    flex: none;
-  }
+.btn-group--no-wrap .btn {
+  display: inline-block;
+  /* NOTE: overrides "--spaced" display declaration when both classes are used */
+  float: none;
+  /* NOTE: overrides "--spaced" float declaration when both classes are used */
+}
+.btn-group--toggle {
+  display: none;
+  /* NOTE: generally not necessary for smaller screens -- no need to toggle a grid layout on smaller screens */
+  margin: 0 0 1.875rem;
 }
 @media (min-width: 48em) {
-  .grid .med-grid__cell--1of2 {
-    width: 50%;
-    -webkit-box-flex: 0;
-    -webkit-flex: none;
-    -ms-flex: none;
-    flex: none;
-  }
-
-  .grid .med-grid__cell--1of3 {
-    width: 33.3333%;
-    -webkit-box-flex: 0;
-    -webkit-flex: none;
-    -ms-flex: none;
-    flex: none;
-  }
-
-  .grid .med-grid__cell--2of5 {
-    width: 40%;
-    -webkit-box-flex: 0;
-    -webkit-flex: none;
-    -ms-flex: none;
-    flex: none;
-  }
-
-  .grid .med-grid__cell--1of4 {
-    width: 25%;
-    -webkit-box-flex: 0;
-    -webkit-flex: none;
-    -ms-flex: none;
-    flex: none;
-  }
-
-  .grid .med-grid__cell--1of5 {
-    width: 20%;
-    -webkit-box-flex: 0;
-    -webkit-flex: none;
-    -ms-flex: none;
-    flex: none;
+  .btn-group--toggle {
+    display: block;
   }
 }
+
+/*
+ * card
+ */
+.card {
+  max-width: 600px;
+  /* magic numer */
+}
+.card__media {
+  margin: 0 0 1rem;
+}
+.card__heading {
+  font-size: 1.25rem;
+  margin: 0 0 .5rem;
+}
+.card__p {
+  margin: 0;
+}
+.card--bordered {
+  border: 1px solid #ccc;
+}
+.card--bordered .card__heading {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.card--bordered .card__p {
+  margin: 0 1rem 1rem;
+}
+.card--padded {
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+/*
+ * card set
+ */
+.card-set {
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
 /*
  * utility / icon modifiers -- icon-related rules/fixes
  */
@@ -949,9 +648,47 @@ table td .u-text-left {
   margin: 0;
 }
 
+.u-list--clean {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 /*
- * utility / background colors
+ * backgrounds
  */
+.u-bg-blue-saphire {
+  background-color: #1A546B;
+}
+
+.u-bg-french-blue {
+  background-color: #0071BC;
+}
+
+.u-bg-pale-aqua {
+  background-color: #BED9F6;
+}
+
+.u-bg-mikado-yellow {
+  background-color: #FECD0D;
+}
+
+.u-bg-carmine-pink {
+  background-color: #F13741;
+}
+
+.u-bg-rare-black {
+  background-color: #343434;
+}
+
+.u-bg-light-gray {
+  background-color: #D0D4E0;
+}
+
+.u-bg-soft-white {
+  background-color: #fafafa;
+}
+
 /* generic */
 .u-bg-white {
   background-color: white;
@@ -1222,6 +959,10 @@ table td .u-text-left {
 /*
  * utility / text colors
  */
+.u-c-blue-saphire {
+  color: #1A546B;
+}
+
 /* generic */
 .u-text-white,
 a.u-text-white,
@@ -1403,5 +1144,96 @@ a.u-text-core-blue:hover {
 }
 
 /* NOTE: IE 9/10 doesn't support media queries */
+/*
+ * fonts
+ */
+.u-f-cabin {
+  font: normal normal normal 100%/1.5 "Cabin", sans-serif;
+}
+
+.u-f-open-sans {
+  font: normal normal normal 100%/1.5 "Open Sans", sans-serif;
+}
+
+.u-f-italic {
+  font-style: italic;
+}
+
+/*
+ * palette
+ */
+.pl-palette {
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.pl-palette__box {
+  padding: 1rem;
+  border: 1px solid #D0D4E0;
+}
+.pl-palette__swatch--color {
+  height: 0;
+  padding-top: 100%;
+  margin: 0 0 1rem;
+}
+.pl-palette__swatch--font {
+  border-bottom: 1px solid #D0D4E0;
+  margin-bottom: 1rem;
+  overflow: scroll;
+}
+.pl-palette__swatch--button {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #D0D4E0;
+  margin-bottom: 1rem;
+}
+.pl-palette__heading {
+  font-weight: bold;
+  white-space: nowrap;
+}
+.pl-palette__heading--big {
+  font-weight: normal;
+  font-size: 2rem;
+  margin: 0;
+  /* this class is used on a <p> element for font palette -- might want to change to heading or list markup */
+}
+.pl-palette__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pl-palette__list-item {
+  margin: 0 0 .25rem;
+}
+.pl-palette__list-item--heading {
+  font-weight: bold;
+}
+.pl-palette__list-item:last-child {
+  margin: 0;
+}
+.pl-palette--fonts {
+  /* adjust grid item width so more of alphabet is visible */
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+}
+@media (min-width: 40em) {
+  .pl-palette--fonts {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+.pl-palette--buttons {
+  /* adjust grid item width so CSS classes remain on one line on wider screens */
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+}
+@media (min-width: 48em) {
+  .pl-palette--buttons {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

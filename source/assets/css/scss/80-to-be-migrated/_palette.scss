@@ -1,0 +1,133 @@
+/*
+ * palette
+ */
+
+.pl-palette {
+
+  @include grid(true, 1rem, repeat(auto-fill, minmax(200px, 1fr)), auto); 
+
+  &__item {
+
+    //
+
+  }
+
+  &__box {
+
+    padding: 1rem;
+    border: 1px solid $color-light-gray;
+  
+  }
+
+  &__swatch { 
+
+    //
+
+    &--color {
+
+      height: 0;
+      padding-top: 100%;
+      margin: 0 0 1rem; 
+
+    }
+
+    &--font {
+
+      border-bottom: 1px solid $color-light-gray; 
+      margin-bottom: 1rem; 
+      overflow: scroll; 
+
+    }
+
+    &--button {
+
+      padding-bottom: 1rem; 
+      border-bottom: 1px solid $color-light-gray; 
+      margin-bottom: 1rem; 
+
+    } 
+
+  }
+
+  &__heading {
+
+    font-weight: bold; 
+    white-space: nowrap; 
+
+    &--big {
+
+      font-weight: normal; 
+      font-size: 2rem; 
+      margin: 0; /* this class is used on a <p> element for font palette -- might want to change to heading or list markup */
+
+    }
+
+  }
+
+  &__details {
+
+    //
+
+  }
+
+  &__list {
+
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+  
+  }
+
+  &__list-item {
+  
+    margin: 0 0 .25rem; 
+
+    &--heading {
+
+      font-weight: bold; 
+
+    }
+
+    &:last-child {
+
+      margin: 0; 
+
+    }
+
+  }
+
+  &--colors {
+
+    //
+    
+  }
+
+  &--fonts {
+    
+    /* adjust grid item width so more of alphabet is visible */
+
+    @include grid(false, 1rem, repeat(auto-fill, minmax(100%, 1fr)), auto); 
+
+    @include sb-media(40em) {
+
+      @include grid(false, 1rem, repeat(auto-fill, minmax(300px, 1fr)), auto); 
+
+    }
+
+  } 
+
+  &--buttons {
+
+    /* adjust grid item width so CSS classes remain on one line on wider screens */
+
+    @include grid(false, 1rem, repeat(auto-fill, minmax(100%, 1fr)), auto); 
+
+    @include sb-media(48em) {
+
+      @include grid(false, 1rem, repeat(auto-fill, minmax(340px, 1fr)), auto); 
+
+    }
+
+  }
+
+}

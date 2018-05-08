@@ -18,6 +18,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-bell');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-ftp-push');
 
   //
   // Pattern Lab config
@@ -261,6 +262,31 @@ module.exports = function (grunt) {
 
     bsReload: {
       css: path.resolve(paths().public.root + '**/*.css')
+    }, 
+
+    //
+    // FTP Push
+    //
+
+    ftp_push: {
+      your_target: {
+        options: {
+          authKey: "serverA",
+          host: "ftp.gobrendan.com",
+          dest: "/lab/grail/pattern-lab/",
+          port: 21, 
+          incrementalUpdates: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: '.', 
+            src: [
+              "*"
+            ]
+          }
+        ]
+      }
     }
 
   });
@@ -275,6 +301,7 @@ module.exports = function (grunt) {
   grunt.registerTask('pl_css', ['pl', 'css']);  
   grunt.registerTask('assets', ['sass', 'cssmin', 'copy', 'compress', 'bell']);
   grunt.registerTask('c', ['copy', 'bell']); 
+  grunt.registerTask('ftp', ['ftp_push']); 
 
   grunt.registerTask('postcss', ['postcss:dist']); 
 

@@ -1,0 +1,53 @@
+/*
+ * card
+ */
+
+.card {
+
+  max-width: 600px; /* magic numer */
+
+  &__media {
+
+    margin: 0 0 1rem;
+
+  }
+
+  &__heading {
+
+    font-size: 1.25rem; 
+    margin: 0 0 .5rem;
+
+  }
+
+  &__p {
+
+    margin: 0;
+
+  }
+
+  &--bordered {
+
+    border: 1px solid #ccc;
+
+    .card__heading {
+
+      margin-left: 1rem;
+      margin-right: 1rem;
+
+    }
+    .card__p {
+
+      margin: 0 1rem 1rem;
+
+    }
+
+  }
+
+  &--padded {
+ 
+    padding: 1rem;
+    border: 1px solid #ccc;
+
+  }
+  
+}

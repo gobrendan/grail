@@ -12,7 +12,11 @@
 //
 
 @mixin sb-media($query) {
+
   @media ('min-width:' + $query) {
+
     @content;
+
   }
+  
 }

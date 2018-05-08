@@ -1,0 +1,44 @@
+{{# pl-color-palette }}
+
+<div class="grid pl-palette pl-palette--colors">
+
+  {{# item }}
+
+  <div class="grid__item pl-palette__item">
+
+    <div class="pl-palette__box pl-palette__box--colors">
+
+      <div class="pl-palette__swatch pl-palette__swatch--color {{ bg-utility-class }}">
+      </div>
+      
+      <div class="pl-palette__details">
+        <ul class="pl-palette__list">
+          <li class="pl-palette__list-item pl-palette__heading">
+            {{ name }} 
+          </li>
+          <li class="pl-palette__list-item">
+            {{ variable }}
+          </li>
+          <li class="pl-palette__list-item">
+            {{ hex-value }}
+          </li>
+          <li class="pl-palette__list-item">
+            {{ rgb-value }}
+          </li>
+          <li class="pl-palette__list-item">
+            .{{ utility-class }}
+          </li>
+          <li class="pl-palette__list-item">
+            .{{ bg-utility-class }}
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+
+  {{/ item }}
+
+</div>
+
+{{/ pl-color-palette }}
