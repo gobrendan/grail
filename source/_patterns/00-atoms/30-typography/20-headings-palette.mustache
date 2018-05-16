@@ -1,0 +1,33 @@
+{{# pl-heading-palette }}
+
+<div class="grid pl-palette pl-palette--headings">
+
+  {{# item }}
+
+  <div class="grid__item pl-palette__item">
+
+    <div class="pl-palette__box pl-palette__box--heading">
+
+      <div class="pl-palette__swatch pl-palette__swatch--heading">
+        <h{{ level }} class="heading{{# modifier }} {{ modifier }}{{/ modifier }}">
+          {{ text }}
+        </h{{ level }}>
+      </div>
+
+      <div class="pl-palette__details">
+        <ul class="pl-palette__list">
+          <li class="pl-palette__list-item">
+            {{ class }}
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+
+  </div>
+
+  {{/ item }}
+
+</div>
+
+{{/ pl-heading-palette }}

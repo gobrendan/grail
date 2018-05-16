@@ -5,49 +5,61 @@
 
 .u-bg-blue-saphire {
 
-  background-color: $color-blue-saphire;
+  @include custom-property(background-color, --color-blue-saphire, $color-blue-saphire);
 
 }
 
 .u-bg-french-blue {
 
-  background-color: $color-french-blue;
+  @include custom-property(background-color, --color-french-blue, $color-french-blue);
 
 }
 
 .u-bg-pale-aqua {
 
-  background-color: $color-pale-aqua;
+  @include custom-property(background-color, --color-pale-aqua, $color-pale-aqua);
+
+}
+
+.u-bg-deep-aqua {
+
+  @include custom-property(background-color, --color-deep-aqua, $color-deep-aqua);
 
 }
 
 .u-bg-mikado-yellow {
 
-  background-color: $color-mikado-yellow;
+  @include custom-property(background-color, --color-mikado-yellow, $color-mikado-yellow);
 
 }
 
 .u-bg-carmine-pink {
 
-  background-color: $color-carmine-pink;
+  @include custom-property(background-color, --color-carmine-pink, $color-carmine-pink);
+
+}
+
+.u-bg-burnt-orange {
+
+  @include custom-property(background-color, --color-burnt-orange, $color-burnt-orange);
 
 }
 
 .u-bg-rare-black {
 
-  background-color: $color-rare-black;
+  @include custom-property(background-color, --color-rare-black, $color-rare-black);
 
 }
 
 .u-bg-light-gray {
 
-  background-color: $color-light-gray;
+  @include custom-property(background-color, --color-light-gray, $color-light-gray);
 
 }
 
 .u-bg-soft-white {
 
-  background-color: $color-soft-white;
+  @include custom-property(background-color, --color-soft-white, $color-soft-white);
 
 }
 

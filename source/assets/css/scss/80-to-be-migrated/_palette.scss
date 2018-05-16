@@ -17,6 +17,17 @@
     padding: 1rem;
     border: 1px solid $color-light-gray;
   
+    &--heading {
+
+      // display: grid; 
+      // height: 100%;
+      // grid-template-rows: minmax(min-content, 1fr) auto;
+
+      padding: 0; 
+      border: 0; 
+
+    }
+
   }
 
   &__swatch { 
@@ -46,6 +57,22 @@
       margin-bottom: 1rem; 
 
     } 
+
+    &--heading {
+
+      // border-bottom: 1px solid $color-light-gray; 
+      margin-bottom: 1rem; 
+      // overflow: scroll; 
+
+    }
+
+    &--icon {
+
+      padding-bottom: 1rem; 
+      border-bottom: 1px solid $color-light-gray; 
+      margin-bottom: 1rem; 
+
+    }
 
   }
 
@@ -128,6 +155,40 @@
 
     }
 
+  }
+
+  &--headings {
+
+    // @include grid(true, 1rem, repeat(auto-fill, minmax(240px, 1fr)), auto);     
+
+    display: block;
+
+    .pl-palette__item {
+
+      margin: 0 0 2rem; 
+
+      &:last-child {
+
+        margin: 0; 
+
+      }
+
+    }
+
+    /* when viewing heading palette, use same margin value for all headings -- removes unnecessary whitepsace */
+
+    .heading {
+
+      margin: 0 0 1rem; 
+
+    }
+
+  }
+
+  &--icons {
+
+    @include grid(false, 1rem, repeat(auto-fill, minmax(190px, 1fr)), auto); 
+    
   }
 
 }

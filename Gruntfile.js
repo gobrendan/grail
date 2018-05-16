@@ -90,7 +90,7 @@ module.exports = function (grunt) {
           './public/assets/css/sharepoint-overrides.css': './source/assets/css/sharepoint-overrides.scss'
         }
       }
-    },
+    }, 
 
     //
     // CSS min

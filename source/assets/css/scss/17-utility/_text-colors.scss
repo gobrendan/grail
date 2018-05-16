@@ -4,185 +4,60 @@
 
 .u-c-blue-saphire {
 
-  color: #1A546B;
-}
-
-
-////////
-
-
-/* generic */
-
-.u-text-white, 
-a.u-text-white, 
-a.u-text-white:visited
-a.u-text-white:hover {
-
-  color: $core-white;
+  @include custom-property(color, --color-blue-saphire, $color-blue-saphire);
 
 }
 
-.u-text-black {
+.u-c-french-blue {
 
-  color: $core-black;
-
-}
-
-.u-text-dark-gray {
-
-  color: $core-gray;
+  @include custom-property(color, --color-french-blue, $color-french-blue);
 
 }
 
-.u-text-medium-gray {
+.u-c-pale-aqua {
 
-  color: $core-light-gray;
-
-}
-
-.u-text-light-gray {
-
-  color: $core-off-white;
+  @include custom-property(color, --color-pale-aqua, $color-pale-aqua);
 
 }
 
-/* core */
+.u-c-deep-aqua {
 
-.u-text-core-black {
-
-  color: $core-black;
+  @include custom-property(color, --color-deep-aqua, $color-deep-aqua);
 
 }
 
-.u-text-core-blue, 
-a.u-text-core-blue, 
-a.u-text-core-blue:visited
-a.u-text-core-blue:hover {
+.u-c-mikado-yellow {
 
-  color: $core-blue;
+  @include custom-property(color, --color-mikado-yellow, $color-mikado-yellow);
 
 }
 
-.u-text-core-gray {
+.u-c-carmine-pink {
 
-  color: $core-gray;
-
-}
-
-.u-text-core-light-gray {
-
-  color: $core-light-gray;
+  @include custom-property(color, --color-carmine-pink, $color-carmine-pink);
 
 }
 
-.u-text-core-off-white {
+.u-c-burnt-orange {
 
-  color: $core-off-white;
-
-}
-
-.u-text-core-white {
-
-  color: $core-white;
+  @include custom-property(color, --color-burnt-orange, $color-burnt-orange);
 
 }
 
-/* accent */
+.u-c-rare-black {
 
-.u-text-accent-cool-gray {
-
-  color: $accent-cool-gray;
+  @include custom-property(color, --color-rare-black, $color-rare-black);
 
 }
 
-.u-text-accent-warm-gray {
+.u-c-light-gray {
 
-  color: $accent-warm-gray;
-
-}
-
-.u-text-accent-light-blue {
-
-  color: $accent-light-blue;
+  @include custom-property(color, --color-light-gray, $color-light-gray);
 
 }
 
-.u-text-accent-blue {
+.u-c-soft-white {
 
-  color: $accent-blue;
-
-}
-
-.u-text-accent-indigo {
-
-  color: $accent-indigo;
-
-}
-
-.u-text-accent-deep-purple {
-
-  color: $accent-deep-purple;
-
-}
-
-.u-text-accent-purple {
-
-  color: $accent-purple;
-
-}
-
-.u-text-accent-red {
-
-  color: $accent-red;
-
-}
-
-.u-text-accent-orange {
-
-  color: $accent-orange;
-
-}
-
-.u-text-accent-olive {
-
-  color: $accent-olive;
-
-}
-
-.u-text-accent-green {
-
-  color: $accent-green;
-
-}
-
-.u-text-accent-turquoise {
-
-  color: $accent-turquoise;
-
-}
-
-/* note */
-
-.u-text-note-blue {
-
-  color: $note-blue;
-
-}
-
-.u-text-note-green {
-
-  color: $note-green;
-
-}
-
-.u-text-note-orange {
-
-  color: $note-orange;
-
-}
-
-.u-text-note-red {
-
-  color: $note-red;
+  @include custom-property(color, --color-soft-white, $color-soft-white);
 
 }

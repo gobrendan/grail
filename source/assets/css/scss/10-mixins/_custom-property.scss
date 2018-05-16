@@ -1,0 +1,19 @@
+//
+// use custom property with optional fallback
+//
+// Examples:
+// @include variable(background, --primary-color, $primary-color);
+// @include variable(background, --primary-color);
+//
+
+@mixin custom-property($property, $variable, $fallback:null) {
+
+  @if $fallback {
+
+    #{$property}: $fallback;
+
+  }
+
+  #{$property}: var($variable);
+
+}

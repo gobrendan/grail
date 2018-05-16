@@ -5,20 +5,13 @@
 a, 
 %a {
 
-  // @extend %transition;
-  @include transition($transition);
-  color: $accent-blue;
-  text-decoration: underline; /* NOTE: this is needed to overwrite SharePoint's default CSS -- SharePoint removes underline */
-
-  &:visited {
-
-    color: $accent-blue;
-
-  }
+  // @include transition($transition);
+  @include custom-property(color, --link-color, $link-color);
+  text-decoration: underline; 
 
   &:hover {
 
-    color: $accent-blue;
+    @include custom-property(color, --link-color-hover, $link-color-hover);
     text-decoration: none;
 
   }
@@ -35,6 +28,12 @@ a,
 
   }
 
+  &:visited {
+
+    //
+
+  }
+
 }
 
 p {
@@ -46,21 +45,23 @@ p {
 blockquote {
 
   margin: 1em 0 1em 2em;
-  padding: 0 0 0 1em;
-  border-left: 2px solid $core-off-white;
+  padding: 0 0 0 1em; 
+  border-left-width: 2px;
+  border-left-style: solid; 
+  @include custom-property(border-left-color, --color-light-gray, $color-light-gray);
 
 }
 
 small {
 
-  font-size: $font-size--eta;
+  //
 
 }
 
 b,
 strong {
 
-  font: $font-heavy;
+  //
 
 }
 
@@ -71,8 +72,8 @@ em {
 
 }
 
-/* NOTE: prevent sup/sub from affecting line-height */
-/* https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height/ */
+/* prevent 'sup' and 'sub' elements from affecting line-height 
+   https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height */
 
 sup,
 sub {
@@ -89,17 +90,31 @@ sub {
 
 }
 
+abbr {
+
+  text-decoration: none;
+  border-bottom-width: 1px; 
+  border-bottom-style: solid;
+  @include custom-property(border-bottom-color, --color-light-gray, $color-light-gray);
+
+}
+
 mark,
 cite,
 kbd,
-ins,
 code,
 samp,
-var,
+var, 
+ins, 
 dfn {
 
-  background: $core-off-white;
-  padding: 0.25em 0.5em .5em;
-  text-decoration: none; /* NOTE: for <ins> element -- only underline links and clickable text */
+  @include custom-property(background-color, --color-light-gray, $color-light-gray);
+  padding: .25em .5em;
+
+}
+
+ins {
+
+  text-decoration: none; 
 
 }

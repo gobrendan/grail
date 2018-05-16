@@ -7,30 +7,31 @@
   display:            inline-block; 
   font-size:          .9rem; 
   font-weight:        bold; 
-  color:              $button-text-color; 
-  background-color:   $button-bg-color; 
-  padding:            $button-padding; 
+  @include            custom-property(color, --btn-text-color, $btn-text-color);
+  @include            custom-property(background-color, --btn-bg-color, $btn-bg-color);
+  padding:            $btn-padding; 
+  border-radius:      .25rem;
   text-decoration:    none; 
   text-transform:     uppercase; 
-  transition:         $button-transition; 
-  letter-spacing:     $button-letter-spacing; 
+  transition:         $btn-transition; 
+  letter-spacing:     $btn-letter-spacing; 
   cursor:             pointer; /* useful for <button> and <input type='submit'> elements */
 
   &:hover {
     
-    color:            $button-hover-text-color;
-    background:       $button-hover-bg-color;
+    color:            $btn-hover-text-color;
+    background:       $btn-hover-bg-color;
     text-decoration:  none; 
 
   }
 
   &:focus {
 
-    outline:          $button-focus-outline-width solid $button-focus-outline-color; 
+    outline:          $btn-focus-outline-width solid $btn-focus-outline-color; 
 
   }
 
-  &:visited { /* NOTE: including the :visited pseudo overrides SharePoint's :visited rule */
+  &:visited { 
 
     color:            $core-white;
     background:       $core-blue;
@@ -43,275 +44,100 @@
   &--disabled, 
   &--disabled:hover {
 
-    color: $button-disabled-text-color; 
-    background-color: $button-disabled-bg-color; 
+    color: $btn-disabled-text-color; 
+    background-color: $btn-disabled-bg-color; 
     cursor: default; 
 
   }
 
-  // &--w-icon {
+  &--light {
 
-  //   position: relative;
+    color:              $btn-light-text-color; 
+    background-color:   $btn-light-bg-color; 
 
-  //   &:after {
+    &:hover {
 
-  //     @include vertical-align;
-  //     display: block;
-  //     content: "";
-  //     position: absolute;
-  //     font-size: 1.5rem;
-  //     font-family: 'custom-icomoon' !important; /* NOTE: document why !important is being used */
-  //     speak: none;
-  //     font-style: normal;
-  //     font-weight: normal;
-  //     font-variant: normal;
-  //     text-transform: none;
-  //     line-height: 1;
+      color:            $btn-light-hover-text-color;
+      background:       $btn-light-hover-bg-color;  
 
-  //     /* better font rendering */
+    }
 
-  //     -webkit-font-smoothing: antialiased;
-  //     -moz-osx-font-smoothing: grayscale;
+    &:focus {
 
-  //   }
+      //
 
-  //   &-left {
+    }
 
-  //     padding-left: 45px; /* NOTE: this value should be in a variable */
+    &:disabled, 
+    &:disabled:hover, 
+    &.btn--disabled, 
+    &.btn--disabled:hover {
 
-  //     &:after {
+      color: $btn-light-disabled-text-color; 
+      background-color: $btn-light-disabled-bg-color; 
+  
+    }
 
-  //       left: 10px;
-  //       content: "\e90e";
+  }
 
-  //     }
+  &--secondary {
 
-  //   }
+    color:              $btn-secondary-text-color; 
+    background-color:   $btn-secondary-bg-color; 
 
-  //   &-right {
+    &:hover {
 
-  //     padding-right: 45px; /* NOTE: this value should be in a variable */
+      color:            $btn-secondary-hover-text-color;
+      background:       $btn-secondary-hover-bg-color;  
 
-  //     &:after {
+    }
 
-  //       right: 10px;
-  //       content: "\e90f"; 
+    &:focus {
 
-  //     }
+      //
 
-  //   }
+    }
 
-  // }
+    &:disabled, 
+    &:disabled:hover, 
+    &.btn--disabled, 
+    &.btn--disabled:hover {
 
-  // &--w-icon-spinning {
+      color: $btn-secondary-disabled-text-color; 
+      background-color: $btn-secondary-disabled-bg-color; 
+  
+    }
 
-  //   &:after {
+    &.btn--light {
 
-  //     content: "\e918"; /* NOTE: "loop" icon from Icomoon set */
-
-  //     /* In order to animate, must be set to display: -webkit-box;
-  //      * IE doesn't require a 'display' value. If set to display:block, IE 11 has display issues
-  //      */
-
-  //     display: -webkit-box;
-
-  //     width: 1em;
-  //     height: 1em;
-
-  //     /* keep icon horizontally/vertically centered */
-
-  //     text-align: center;
-  //     line-height: 1em;
-
-  //     -webkit-animation-name: icon-spin;
-  //     -webkit-animation-duration: 1s;
-  //     -webkit-animation-iteration-count: infinite;
-  //     -webkit-animation-timing-function: linear;
-
-  //     -moz-animation-name: icon-spin;
-  //     -moz-animation-duration: 1s;
-  //     -moz-animation-iteration-count: infinite;
-  //     -moz-animation-timing-function: linear;
-
-  //     -ms-animation-name: icon-spin;
-  //     -ms-animation-duration: 1s;
-  //     -ms-animation-iteration-count: infinite;
-  //     -ms-animation-timing-function: linear;
-
-  //     animation-name: icon-spin;
-  //     animation-duration: 1s;
-  //     animation-iteration-count: infinite;
-  //     animation-timing-function: linear;
-
-  //     margin-top: -12px; /* half the height of the icon */
-
-  //   }
-
-  // }
-
-  // &[type='submit'] {
-
-  //   -webkit-appearance: none; /* override default webkit style on iphone (rounded corners, gradient background) */
-  //   width: auto; /* override 'input' width -- we might want to handle this in the 'inputs' partials */
-
-  // }
-
-  // &--accent,
-  // &--accent:hover, 
-  // &--accent:visited {
-
-  //   background: $accent-blue;
-  //   border-color: $accent-blue;
-
-  // }
-
-  // &--ghost,
-  // &--ghost:hover, 
-  // &--ghost:visited {
-
-  //   color: $core-blue;
-  //   background: transparent;
-
-  // }
-
-  // &--ghost-alt,  
-  // &--ghost-alt:hover,
-  // &--ghost-alt:visited {
-
-  //   color: $core-light-gray;
-  //   background: transparent;
-  //   border-color: $core-light-gray;
-
-  // }
-
-  // &--ghost-inverted,
-  // &--ghost-inverted:hover, 
-  // &--ghost-inverted:visited {
-
-  //   color: $core-white;
-  //   background: transparent;
-  //   border-color: $core-white;
-
-  //   &:hover {
-
-  //     box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2); /* NOTE: This value should be in a variable */
-
-  //   }
-
-  // }
-
-  // &--disabled,
-  // &--disabled:hover, 
-  // &--disabed:visited {
-
-  //   color: $core-light-gray;
-  //   background: transparent;
-  //   border-color: $core-light-gray;
-  //   pointer-events: none;
-  //   cursor: default;
-
-  // }
-
-  // &.btn--accent.btn--ghost, 
-  // &.btn--accent.btn--ghost:hover,
-  // &.btn--accent.btn--ghost:visited {
-
-  //   color: $accent-blue;
-  //   border-color: $accent-blue;
-
-  // }
-
-}
-
-/* NOTE: firefox fixes -- decrease height (top/bottom padding) by 1px each to match size of a.btn elements */
-
-@include firefox-only-mq {
-
-  button.btn,
-  input[type='input'].btn,
-  input[type='submit'].btn {
-
-    padding-top: 9px;
-    padding-bottom: 9px;
+      color:              $btn-secondary-light-text-color; 
+      background-color:   $btn-secondary-light-bg-color; 
+  
+      &:hover {
+  
+        color:            $btn-secondary-light-hover-text-color; 
+        background:       $btn-secondary-light-hover-bg-color; 
+  
+      }
+  
+      &:focus {
+  
+        //
+  
+      }
+  
+      &:disabled, 
+      &:disabled:hover, 
+      &.btn--disabled, 
+      &.btn--disabled:hover {
+  
+        color: $btn-secondary-light-disabled-text-color; 
+        background-color: $btn-secondary-light-disabled-bg-color; 
+    
+      }
+  
+    }
 
   }
 
 }
-
-/* NOTE: IE 9 fixes -- improve icon alignment */
-
-// .no-flexbox.no-flexwrap {
-
-//   .btn--w-icon-spinning:after {
-    
-//     top: 10px !important; 
-//     margin: 0 !important; 
-//     -ms-transform: none !important; 
-//     transform: none !important; 
-
-//   }
-
-// }
-
-// @-ms-keyframes icon-spin {
-
-//   from {
-
-//     -ms-transform: rotate(0deg);
-
-//   }
-
-//   to {
-
-//     -ms-transform: rotate(360deg);
-
-//   }
-
-// }
-
-// @-moz-keyframes icon-spin {
-
-//   from {
-
-//     -moz-transform: rotate(0deg);
-
-//   }
-
-//   to {
-
-//     -moz-transform: rotate(360deg);
-
-//   }
-
-// }
-
-// @-webkit-keyframes icon-spin {
-
-//   from {
-
-//     -webkit-transform: rotate(0deg);
-//   }
-
-//   to {
-
-//     -webkit-transform: rotate(360deg);
-
-//   }
-
-// }
-
-// @keyframes icon-spin {
-
-//   from {
-
-//       transform: rotate(0deg);
-
-//   }
-
-//   to {
-
-//       transform: rotate(360deg);
-
-//   }
-
-// }

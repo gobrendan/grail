@@ -1,4 +1,27 @@
 /*
+ * custom properties
+ */
+:root {
+  /* color palette */
+  --color-blue-saphire: #1A546B;
+  --color-french-blue: #0071BC;
+  --color-pale-aqua: #BED9F6;
+  --color-deep-aqua: #92c6fe;
+  --color-mikado-yellow: #FECD0D;
+  --color-carmine-pink: #F13741;
+  --color-burnt-orange: #ff5b06;
+  --color-rare-black: #343434;
+  --color-light-gray: #D0D4E0;
+  --color-soft-white: #fafafa;
+  /* link */
+  --link-color: var(--color-blue-saphire);
+  --link-color-hover: var(--color-french-blue);
+  /* button */
+  --btn-text-color: var(--color-soft-white);
+  --btn-bg-color: var(--color-blue-saphire);
+}
+
+/*
  * base / reset
  */
 html {
@@ -52,24 +75,34 @@ figure {
 }
 
 /*
+ * base / fonts
+ */
+/* NOTE: icons */
+@font-face {
+  font-family: "icon-set";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../assets/fonts/icon-set.eot");
+  src: url("../../assets/fonts/icon-set.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/icon-set.ttf") format("truetype"), url("../../assets/fonts/icon-set.woff") format("woff"), url("../../assets/fonts/icon-set.svg#svgicon-set") format("svg");
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+}
+/* NOTE: text */
+/*
  * base / main
  */
 html {
   font-size: 1rem;
 }
 
-html,
 body {
   font: normal normal normal 100%/1.5 "TransportNewLight_gdi", Helvetica, Arial, sans-serif;
   color: #0b0c0c;
   background: white;
-  height: 100%;
-  position: relative;
-  z-index: 1;
-  /* NOTE: This was added so the desktop menus are visible when viewing that component/organism on its own */
-}
-
-body {
   /* NOTE: https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust */
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -83,30 +116,236 @@ body {
 .mod_no-flexboxlegacy body {
   overflow-x: hidden;
 }
-@media (min-width: 64em) {
-  body {
-    padding: 0;
-  }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon-set' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\e601";
+}
+
+.icon-twitter:before {
+  content: "\e603";
+}
+
+.icon-instagram:before {
+  content: "\e90d";
+}
+
+.icon-youtube:before {
+  content: "\e954";
+}
+
+.icon-news:before {
+  content: "\e932";
+}
+
+.icon-online:before {
+  content: "\e933";
+}
+
+.icon-arrow-up:before {
+  content: "\e900";
+}
+
+.icon-arrow-down:before {
+  content: "\e901";
+}
+
+.icon-arrow-left:before {
+  content: "\e909";
+}
+
+.icon-arrow-right:before {
+  content: "\e90a";
+}
+
+.icon-check:before {
+  content: "\e902";
+}
+
+.icon-search:before {
+  content: "\e60b";
+}
+
+.icon-launch:before {
+  content: "\e895";
+}
+
+.icon-align-bottom:before {
+  content: "\e904";
+}
+
+.icon-align-top:before {
+  content: "\e905";
+}
+
+.icon-align-center:before {
+  content: "\e906";
+}
+
+.icon-download:before {
+  content: "\e94d";
+}
+
+.icon-arrow-backward:before {
+  content: "\e90e";
+}
+
+.icon-arrow-forward:before {
+  content: "\e90f";
+}
+
+.icon-hamburger:before {
+  content: "\e907";
+}
+
+.icon-close:before {
+  content: "\e908";
+}
+
+.icon-hellip:before {
+  content: "\e90b";
+}
+
+.icon-play-circle:before {
+  content: "\e910";
+}
+
+.icon-loop:before {
+  content: "\e918";
+}
+
+.icon-mail:before {
+  content: "\e91e";
+}
+
+.icon-list:before {
+  content: "\e91f";
+}
+
+.icon-module:before {
+  content: "\e920";
+}
+
+.icon-arrow-rounded:before {
+  content: "\e924";
+}
+
+.icon-label:before {
+  content: "\e950";
+}
+
+.icon-remove:before {
+  content: "\e951";
+}
+
+.icon-add:before {
+  content: "\e952";
+}
+
+.icon-event:before {
+  content: "\e953";
+}
+
+.icon-info:before {
+  content: "\e922";
+}
+
+.icon-time:before {
+  content: "\e928";
+}
+
+.icon-circle:before {
+  content: "\e925";
+}
+
+.icon-circle-filled:before {
+  content: "\e926";
+}
+
+.icon-pin:before {
+  content: "\e935";
+}
+
+.icon-checked:before {
+  content: "\e936";
+}
+
+.icon-close-box:before {
+  content: "\e948";
+}
+
+.icon-create:before {
+  content: "\e955";
+}
+
+.icon-account:before {
+  content: "\e957";
+}
+
+.icon-document:before {
+  content: "\e958";
+}
+
+.icon-photo:before {
+  content: "\e921";
+}
+
+.icon-cancel:before {
+  content: "\e94c";
+}
+
+.icon-error:before {
+  content: "\e90c";
+}
+
+.icon-comment:before {
+  content: "\e91c";
+}
+
+.icon-pie:before {
+  content: "\e934";
+}
+
+.icon-card:before {
+  content: "\e91a";
+}
+
+.icon-check-circle:before {
+  content: "\e949";
+}
+
+.icon-home:before {
+  content: "\e94a";
+}
+
+.icon-location:before {
+  content: "\e94f";
 }
 
 /*
  * elements / text
  */
 a {
-  -webkit-transition: all 0.15s ease-in-out;
-  -moz-transition: all 0.15s ease-in-out;
-  -ms-transition: all 0.15s ease-in-out;
-  -o-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
   color: #397aac;
+  color: var(--link-color);
   text-decoration: underline;
-  /* NOTE: this is needed to overwrite SharePoint's default CSS -- SharePoint removes underline */
-}
-a:visited {
-  color: #397aac;
 }
 a:hover {
-  color: #397aac;
+  color: #0071BC;
+  color: var(--link-color-hover);
   text-decoration: none;
 }
 
@@ -117,20 +356,14 @@ p {
 blockquote {
   margin: 1em 0 1em 2em;
   padding: 0 0 0 1em;
-  border-left: 2px solid #ecf0f3;
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #D0D4E0;
+  border-left-color: var(--color-light-gray);
 }
 
-small {
-  font-size: 0.8rem;
-}
-
-b,
-strong {
-  font: normal normal normal 100%/1.5 "TransportNewHeavy_gdi", Helvetica, Arial, sans-serif;
-}
-
-/* NOTE: prevent sup/sub from affecting line-height */
-/* https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height/ */
+/* prevent 'sup' and 'sub' elements from affecting line-height 
+   https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height */
 sup,
 sub {
   vertical-align: baseline;
@@ -142,20 +375,41 @@ sub {
   top: 0.4em;
 }
 
+abbr {
+  text-decoration: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #D0D4E0;
+  border-bottom-color: var(--color-light-gray);
+}
+
 mark,
 cite,
 kbd,
-ins,
 code,
 samp,
 var,
+ins,
 dfn {
-  background: #ecf0f3;
-  padding: 0.25em 0.5em .5em;
-  text-decoration: none;
-  /* NOTE: for <ins> element -- only underline links and clickable text */
+  background-color: #D0D4E0;
+  background-color: var(--color-light-gray);
+  padding: .25em .5em;
 }
 
+ins {
+  text-decoration: none;
+}
+
+/*
+ * list
+ */
+ul,
+ol {
+  padding: 0 0 0 2rem;
+  margin: 0;
+}
+
+/* NOTE: target li elements whose parent ul/ol elements don't have a class attribute -- targeting this way prevents specificity issues */
 /*
  * media
  */
@@ -193,8 +447,11 @@ img {
   font-size: .9rem;
   font-weight: bold;
   color: #fafafa;
+  color: var(--btn-text-color);
   background-color: #1A546B;
+  background-color: var(--btn-bg-color);
   padding: 0.75rem 1.5rem;
+  border-radius: .25rem;
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.15s ease-in-out;
@@ -211,7 +468,6 @@ img {
   outline: 2px solid #D0D4E0;
 }
 .btn:visited {
-  /* NOTE: including the :visited pseudo overrides SharePoint's :visited rule */
   color: white;
   background: #092940;
   border: 2px solid #092940;
@@ -221,17 +477,43 @@ img {
   background-color: #577f90;
   cursor: default;
 }
-
-/* NOTE: firefox fixes -- decrease height (top/bottom padding) by 1px each to match size of a.btn elements */
-@-moz-document url-prefix() {
-  button.btn,
-  input[type='input'].btn,
-  input[type='submit'].btn {
-    padding-top: 9px;
-    padding-bottom: 9px;
-  }
+.btn--light {
+  color: #1A546B;
+  background-color: #BED9F6;
 }
-/* NOTE: IE 9 fixes -- improve icon alignment */
+.btn--light:hover {
+  color: #1A546B;
+  background: #92c6fe;
+}
+.btn--light:disabled, .btn--light:disabled:hover, .btn--light.btn--disabled, .btn--light.btn--disabled:hover {
+  color: rgba(87, 127, 144, 0.8);
+  background-color: #BED9F6;
+}
+.btn--secondary {
+  color: #fafafa;
+  background-color: #F13741;
+}
+.btn--secondary:hover {
+  color: #fafafa;
+  background: #ff5b06;
+}
+.btn--secondary:disabled, .btn--secondary:disabled:hover, .btn--secondary.btn--disabled, .btn--secondary.btn--disabled:hover {
+  color: #e6ecee;
+  background-color: #f86f72;
+}
+.btn--secondary.btn--light {
+  color: #bc0711;
+  background-color: #ffa8aa;
+}
+.btn--secondary.btn--light:hover {
+  color: #bc0711;
+  background: #f3999b;
+}
+.btn--secondary.btn--light:disabled, .btn--secondary.btn--light:disabled:hover, .btn--secondary.btn--light.btn--disabled, .btn--secondary.btn--light.btn--disabled:hover {
+  color: #e6ecee;
+  background-color: #f3999b;
+}
+
 /*
  * button group
  */
@@ -313,6 +595,35 @@ img {
   .btn-group--toggle {
     display: block;
   }
+}
+
+/*
+ * heading
+ */
+.heading {
+  font: normal normal normal 100%/1.5 "Cabin", sans-serif;
+  margin: 0 0 1em;
+}
+.heading--alpha, .heading--beta, .heading--gamma, .heading--delta {
+  line-height: 1.2;
+}
+.heading--alpha {
+  font-size: 2.074em;
+}
+.heading--beta {
+  font-size: 1.728em;
+}
+.heading--gamma {
+  font-size: 1.44em;
+}
+.heading--delta {
+  font-size: 1.2em;
+}
+.heading--epsilon {
+  font-size: 1em;
+}
+.heading--zeta {
+  font-size: 0.833em;
 }
 
 /*
@@ -659,34 +970,52 @@ table td .u-text-left {
  */
 .u-bg-blue-saphire {
   background-color: #1A546B;
+  background-color: var(--color-blue-saphire);
 }
 
 .u-bg-french-blue {
   background-color: #0071BC;
+  background-color: var(--color-french-blue);
 }
 
 .u-bg-pale-aqua {
   background-color: #BED9F6;
+  background-color: var(--color-pale-aqua);
+}
+
+.u-bg-deep-aqua {
+  background-color: #92c6fe;
+  background-color: var(--color-deep-aqua);
 }
 
 .u-bg-mikado-yellow {
   background-color: #FECD0D;
+  background-color: var(--color-mikado-yellow);
 }
 
 .u-bg-carmine-pink {
   background-color: #F13741;
+  background-color: var(--color-carmine-pink);
+}
+
+.u-bg-burnt-orange {
+  background-color: #ff5b06;
+  background-color: var(--color-burnt-orange);
 }
 
 .u-bg-rare-black {
   background-color: #343434;
+  background-color: var(--color-rare-black);
 }
 
 .u-bg-light-gray {
   background-color: #D0D4E0;
+  background-color: var(--color-light-gray);
 }
 
 .u-bg-soft-white {
   background-color: #fafafa;
+  background-color: var(--color-soft-white);
 }
 
 /* generic */
@@ -961,124 +1290,52 @@ table td .u-text-left {
  */
 .u-c-blue-saphire {
   color: #1A546B;
+  color: var(--color-blue-saphire);
 }
 
-/* generic */
-.u-text-white,
-a.u-text-white,
-a.u-text-white:visited
-a.u-text-white:hover {
-  color: white;
+.u-c-french-blue {
+  color: #0071BC;
+  color: var(--color-french-blue);
 }
 
-.u-text-black {
-  color: #0b0c0c;
+.u-c-pale-aqua {
+  color: #BED9F6;
+  color: var(--color-pale-aqua);
 }
 
-.u-text-dark-gray {
-  color: #5f6c7b;
+.u-c-deep-aqua {
+  color: #92c6fe;
+  color: var(--color-deep-aqua);
 }
 
-.u-text-medium-gray {
-  color: #95a0ad;
+.u-c-mikado-yellow {
+  color: #FECD0D;
+  color: var(--color-mikado-yellow);
 }
 
-.u-text-light-gray {
-  color: #ecf0f3;
+.u-c-carmine-pink {
+  color: #F13741;
+  color: var(--color-carmine-pink);
 }
 
-/* core */
-.u-text-core-black {
-  color: #0b0c0c;
+.u-c-burnt-orange {
+  color: #ff5b06;
+  color: var(--color-burnt-orange);
 }
 
-.u-text-core-blue,
-a.u-text-core-blue,
-a.u-text-core-blue:visited
-a.u-text-core-blue:hover {
-  color: #092940;
+.u-c-rare-black {
+  color: #343434;
+  color: var(--color-rare-black);
 }
 
-.u-text-core-gray {
-  color: #5f6c7b;
+.u-c-light-gray {
+  color: #D0D4E0;
+  color: var(--color-light-gray);
 }
 
-.u-text-core-light-gray {
-  color: #95a0ad;
-}
-
-.u-text-core-off-white {
-  color: #ecf0f3;
-}
-
-.u-text-core-white {
-  color: white;
-}
-
-/* accent */
-.u-text-accent-cool-gray {
-  color: #6a7681;
-}
-
-.u-text-accent-warm-gray {
-  color: #757575;
-}
-
-.u-text-accent-light-blue {
-  color: #3f7d97;
-}
-
-.u-text-accent-blue {
-  color: #397aac;
-}
-
-.u-text-accent-indigo {
-  color: #00376d;
-}
-
-.u-text-accent-deep-purple {
-  color: #662e6b;
-}
-
-.u-text-accent-purple {
-  color: #701c45;
-}
-
-.u-text-accent-red {
-  color: #a83338;
-}
-
-.u-text-accent-orange {
-  color: #c05411;
-}
-
-.u-text-accent-olive {
-  color: #9a6f09;
-}
-
-.u-text-accent-green {
-  color: #588023;
-}
-
-.u-text-accent-turquoise {
-  color: #3c807d;
-}
-
-/* note */
-.u-text-note-blue {
-  color: #397aac;
-}
-
-.u-text-note-green {
-  color: #588023;
-}
-
-.u-text-note-orange {
-  color: #c05411;
-}
-
-.u-text-note-red {
-  color: #a83338;
+.u-c-soft-white {
+  color: #fafafa;
+  color: var(--color-soft-white);
 }
 
 /*
@@ -1170,6 +1427,10 @@ a.u-text-core-blue:hover {
   padding: 1rem;
   border: 1px solid #D0D4E0;
 }
+.pl-palette__box--heading {
+  padding: 0;
+  border: 0;
+}
 .pl-palette__swatch--color {
   height: 0;
   padding-top: 100%;
@@ -1181,6 +1442,14 @@ a.u-text-core-blue:hover {
   overflow: scroll;
 }
 .pl-palette__swatch--button {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #D0D4E0;
+  margin-bottom: 1rem;
+}
+.pl-palette__swatch--heading {
+  margin-bottom: 1rem;
+}
+.pl-palette__swatch--icon {
   padding-bottom: 1rem;
   border-bottom: 1px solid #D0D4E0;
   margin-bottom: 1rem;
@@ -1234,6 +1503,24 @@ a.u-text-core-blue:hover {
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   }
+}
+.pl-palette--headings {
+  display: block;
+  /* when viewing heading palette, use same margin value for all headings -- removes unnecessary whitepsace */
+}
+.pl-palette--headings .pl-palette__item {
+  margin: 0 0 2rem;
+}
+.pl-palette--headings .pl-palette__item:last-child {
+  margin: 0;
+}
+.pl-palette--headings .heading {
+  margin: 0 0 1rem;
+}
+.pl-palette--icons {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
 }
 
 /*# sourceMappingURL=style.css.map */

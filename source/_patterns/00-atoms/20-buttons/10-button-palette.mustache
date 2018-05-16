@@ -1,0 +1,56 @@
+{{# pl-button-palette }}
+
+<div class="grid pl-palette pl-palette--buttons">
+
+  {{# item }}
+
+  <div class="grid__item pl-palette__item">
+
+    <div class="pl-palette__box pl-palette__box--buttons">
+
+      <div class="pl-palette__swatch pl-palette__swatch--button">
+        <a class="btn{{#modifier }} {{ modifier }}{{/ modifier }}">
+          {{ text }}
+        </a>
+      </div>
+
+      <div class="pl-palette__details">
+        <ul class="pl-palette__list">
+          <li class="pl-palette__list-item">
+            {{ class }}
+          </li>
+        </ul>
+      </div>
+    
+    </div>
+
+  </div>
+
+  {{/ item }}
+
+</div>
+
+{{/ pl-button-palette }}
+
+
+<!--
+
+<a class="btn btn--w-icon btn--w-icon-right">
+  Primary
+</a>
+
+<button class="btn btn--w-icon btn--w-icon-right">
+  Primary
+</button>
+
+<a class="btn btn--w-icon btn--w-icon-left">
+  Primary
+</a>
+
+<button class="btn btn--w-icon btn--w-icon-left">
+  Primary
+</button>
+
+<input type="submit" class="btn" value="Primary">
+
+-->

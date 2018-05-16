@@ -11,16 +11,18 @@ html {
 html,
 body {
 
-  font: $font;
-  color: $black;
-  background: $core-white;
-  height: 100%;
-  position: relative;
-  z-index: 1; /* NOTE: This was added so the desktop menus are visible when viewing that component/organism on its own */
+  //
 
 }
 
 body {
+
+  font: $font;
+  color: $black;
+  background: $core-white;
+  // height: 100%;
+  // position: relative;
+  // z-index: 1; /* NOTE: This was added so the desktop menus are visible when viewing that component/organism on its own */
 
   /* NOTE: https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust */
 
@@ -47,10 +49,10 @@ body {
 
   /* NOTE: the mobile nav is hidden at the $large-breakpoint, so the padding can be set to zero */
 
-  @include sb-media($large-breakpoint) {
+  // @include sb-media($large-breakpoint) {
 
-    padding: 0;
+  //   padding: 0;
 
-  }
+  // }
 
 }

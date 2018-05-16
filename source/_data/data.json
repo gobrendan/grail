@@ -41,6 +41,17 @@
 
         {
 
+          "name" : "Deep Aqua", 
+          "variable" : "$color-deep-aqua", 
+          "hex-value" : "#92c6fe", 
+          "rgb-value" : "rgb(146,198,254)", 
+          "utility-class" : "u-c-deep-aqua", 
+          "bg-utility-class" : "u-bg-deep-aqua"
+
+        }, 
+
+        {
+
           "name" : "Mikado Yellow", 
           "variable" : "$color-mikado-yellow", 
           "hex-value" : "#FECD0D", 
@@ -52,12 +63,23 @@
 
         {
 
-          "name" : "Deep Carmine Pink", 
+          "name" : "Carmine Pink", 
           "variable" : "$color-carmine-pink", 
           "hex-value" : "#F13741", 
           "rgb-value" : "rgb(241,55,65)", 
           "utility-class" : "u-c-carmine-pink", 
           "bg-utility-class" : "u-bg-carmine-pink"
+
+        }, 
+
+        {
+
+          "name" : "Burnt Orange", 
+          "variable" : "$color-burnt-orange", 
+          "hex-value" : "#ff5b06", 
+          "rgb-value" : "rgb(255,91,6)", 
+          "utility-class" : "u-c-burnt-orange", 
+          "bg-utility-class" : "u-bg-burnt-orange"
 
         }, 
 
@@ -100,40 +122,6 @@
 
   ],
 
-  "pl-font-palette" : [
-
-    {
-
-      "item" : [
-
-        {
-
-          "name" : "Cabin", 
-          "font-family-variable" : "$font-family-cabin", 
-          "font-variable" : "$font-cabin", 
-          "font-family-utility-class" : "u-f-family-cabin", 
-          "font-name-utility-class" : "u-f-cabin", 
-          "font-utility-class" : "u-f-cabin"
-
-        }, 
-
-        {
-
-          "name" : "Open Sans", 
-          "font-family-variable" : "$font-family-open-sans", 
-          "font-variable" : "$font-open-sans", 
-          "font-family-utility-class" : "u-f-family-open-sans", 
-          "font-name-utility-class" : "u-f-open-sans", 
-          "font-utility-class" : "u-f-open-sans"
-
-        }
-
-      ]
-
-    }
-
-  ], 
-
   "pl-button-palette" : [
 
     {
@@ -160,13 +148,13 @@
 
           "modifier" : "btn--light", 
           "text" : "Primary Light", 
-          "class" : "btn btn--light"
+          "class" : "btnbtn--light"
 
         }, 
 
         {
 
-          "modifier" : "btn--light", 
+          "modifier" : "btn--light btn--disabled", 
           "text" : "Primary Light", 
           "class" : "btn btn--light btn--disabled"
 
@@ -174,7 +162,7 @@
 
         {
 
-          "modifier" : "", 
+          "modifier" : "btn--secondary", 
           "text" : "Secondary", 
           "class" : "btn btn--secondary" 
 
@@ -190,7 +178,7 @@
 
         {
 
-          "modifier" : "btn--light", 
+          "modifier" : "btn--secondary btn--light", 
           "text" : "Secondary Light", 
           "class" : "btn btn--secondary btn--light"
 
@@ -198,7 +186,7 @@
 
         {
 
-          "modifier" : "btn--light", 
+          "modifier" : "btn--secondary btn--light btn--disabled", 
           "text" : "Secondary Light", 
           "class" : "btn btn--secondary btn--light btn--disabled"
 
@@ -209,6 +197,610 @@
     }
 
   ], 
+
+  "pl-font-palette" : [
+
+    {
+
+      "item" : [
+
+        {
+
+          "name" : "Cabin", 
+          "font-family-variable" : "$font-family-cabin", 
+          "font-variable" : "$font-cabin", 
+          "font-name-utility-class" : "u-f-cabin", 
+          "font-utility-class" : "u-f-cabin", 
+          "font-family-utility-class" : "u-f-family-cabin"
+          
+        }, 
+
+        {
+
+          "name" : "Open Sans", 
+          "font-family-variable" : "$font-family-open-sans", 
+          "font-family-utility-class" : "u-f-family-open-sans", 
+          "font-variable" : "$font-open-sans", 
+          "font-utility-class" : "u-f-open-sans", 
+          "font-name-utility-class" : "u-f-open-sans"
+
+        }
+
+      ]
+
+    }
+
+  ], 
+
+  "pl-heading-palette" : [
+
+    {
+
+      "item" : [
+
+        {
+
+          "level" : "1", 
+          "modifier" : "heading--alpha", 
+          "text" : "Heading Alpha", 
+          "class" : "heading heading--alpha"
+
+        }, 
+
+        {
+
+          "level" : "2", 
+          "modifier" : "heading--beta", 
+          "text" : "Heading Beta", 
+          "class" : "heading heading--beta"
+
+        }, 
+
+        {
+
+          "level" : "3", 
+          "modifier" : "heading--gamma", 
+          "text" : "Heading Gamma", 
+          "class" : "heading heading--gamma"
+
+        }, 
+
+        {
+
+          "level" : "4", 
+          "modifier" : "heading--delta", 
+          "text" : "Heading Delta", 
+          "class" : "heading heading--delta"
+
+        }, 
+
+        {
+
+          "level" : "5", 
+          "modifier" : "heading--epsilon", 
+          "text" : "Heading Epsilon", 
+          "class" : "heading heading--epsilon"
+
+        }, 
+
+        {
+
+          "level" : "6", 
+          "modifier" : "heading--zeta", 
+          "text" : "Heading Zeta", 
+          "class" : "heading heading--zeta"
+
+        }
+
+      ]
+
+    }
+
+  ], 
+
+  "pl-icon-palette" : [
+
+    {
+
+      "item" : [
+
+        {
+          
+          "name" : "Facebook", 
+          "class" : "icon-facebook"
+
+        }, 
+
+        {
+          
+          "name" : "Twitter", 
+          "class" : "icon-twitter"
+
+        }, 
+        
+        {
+          
+          "name" : "Instagram", 
+          "class" : "icon-instagram"
+
+        }, 
+        
+        {
+          
+          "name" : "YouTube", 
+          "class" : "icon-youtube"
+
+        }, 
+        
+        {
+          
+          "name" : "News", 
+          "class" : "icon-news"
+
+        }, 
+        
+        {
+          
+          "name" : "Online", 
+          "class" : "icon-online"
+
+        }, 
+        
+        {
+          
+          "name" : "Arrow Up", 
+          "class" : "icon-arrow-up"
+
+        }, 
+        
+        {
+          
+          "name" : "Arrow Down", 
+          "class" : "icon-arrow-down"
+
+        }, 
+        
+        {
+          
+          "name" : "Arrow Left", 
+          "class" : "icon-arrow-left"
+
+        }, 
+        
+        {
+          
+          "name" : "Arrow Right", 
+          "class" : "icon-arrow-right"
+
+        }, 
+        
+        {
+          
+          "name" : "Check", 
+          "class" : "icon-check"
+
+        }, 
+        
+        {
+          
+          "name" : "Search", 
+          "class" : "icon-search"
+
+        }, 
+        
+        {
+          
+          "name" : "Launch", 
+          "class" : "icon-launch"
+
+        }, 
+        
+        {
+          
+          "name" : "Align Bottom", 
+          "class" : "icon-align-bottom"
+
+        }, 
+        
+        {
+          
+          "name" : "Align Top", 
+          "class" : "icon-align-top"
+
+        }, 
+        
+        {
+          
+          "name" : "Align Center", 
+          "class" : "icon-align-center"
+
+        }, 
+        
+        {
+          
+          "name" : "Download", 
+          "class" : "icon-download"
+
+        }, 
+        
+        {
+          
+          "name" : "Arrow Backward", 
+          "class" : "icon-arrow-backward"
+
+        }, 
+        
+        {
+          
+          "name" : "Arrow Forward", 
+          "class" : "icon-arrow-forward"
+
+        }, 
+        
+        {
+          
+          "name" : "Hamburger", 
+          "class" : "icon-hamburger"
+
+        }, 
+        
+        {
+          
+          "name" : "Close", 
+          "class" : "icon-close"
+
+        }, 
+        
+        {
+          
+          "name" : "Hellip", 
+          "class" : "icon-hellip"
+
+        }, 
+        
+        {
+          
+          "name" : "Play Circle", 
+          "class" : "icon-play-circle"
+
+        }, 
+        
+        {
+          
+          "name" : "Loop", 
+          "class" : "icon-loop"
+
+        }, 
+        
+        {
+          
+          "name" : "Mail", 
+          "class" : "icon-mail"
+
+        }, 
+        
+        {
+          
+          "name" : "List", 
+          "class" : "icon-list"
+
+        }, 
+        
+        {
+          
+          "name" : "Module", 
+          "class" : "icon-module"
+
+        }, 
+        
+        {
+          
+          "name" : "Arrow Rounded", 
+          "class" : "icon-arrow-rounded"
+
+        }, 
+        
+        {
+          
+          "name" : "Label", 
+          "class" : "icon-label"
+
+        }, 
+        
+        {
+          
+          "name" : "Remove", 
+          "class" : "icon-remove"
+
+        }, 
+        
+        {
+          
+          "name" : "Add", 
+          "class" : "icon-add"
+
+        }, 
+        
+        {
+          
+          "name" : "Event", 
+          "class" : "icon-event"
+
+        }, 
+        
+        {
+          
+          "name" : "Info", 
+          "class" : "icon-info"
+
+        }, 
+        
+        {
+          
+          "name" : "Time", 
+          "class" : "icon-time"
+
+        }, 
+        
+        {
+          
+          "name" : "Circle", 
+          "class" : "icon-circle"
+
+        }, 
+        
+        {
+          
+          "name" : "Circle Filled", 
+          "class" : "icon-circle-filled"
+
+        }, 
+        
+        {
+          
+          "name" : "Pin", 
+          "class" : "icon-pin"
+
+        }, 
+        
+        {
+          
+          "name" : "Checked", 
+          "class" : "icon-checked"
+
+        }, 
+        
+        {
+          
+          "name" : "Close Box", 
+          "class" : "icon-close-box"
+
+        }, 
+        
+        {
+          
+          "name" : "Create", 
+          "class" : "icon-create"
+
+        }, 
+        
+        {
+          
+          "name" : "Account", 
+          "class" : "icon-account"
+
+        }, 
+        
+        {
+          
+          "name" : "Document", 
+          "class" : "icon-document"
+
+        }, 
+        
+        {
+          
+          "name" : "Photo", 
+          "class" : "icon-photo"
+
+        }, 
+        
+        {
+          
+          "name" : "Cancel", 
+          "class" : "icon-cancel"
+
+        }, 
+        
+        {
+          
+          "name" : "Error", 
+          "class" : "icon-error"
+
+        }, 
+        
+        {
+          
+          "name" : "Comment", 
+          "class" : "icon-comment"
+
+        }, 
+        
+        {
+          
+          "name" : "Pie", 
+          "class" : "icon-pie"
+
+        }, 
+        
+        {
+          
+          "name" : "Card", 
+          "class" : "icon-card"
+
+        }, 
+        
+        {
+          
+          "name" : "Check Circle", 
+          "class" : "icon-check-circle"
+
+        }, 
+        
+        {
+          
+          "name" : "Home", 
+          "class" : "icon-home"
+
+        }, 
+        
+        {
+          
+          "name" : "Location", 
+          "class" : "icon-location"
+
+        }
+        
+      ]
+
+    }
+
+  ], 
+
+
+
+
+
+  
+  "list" : [
+
+    {
+
+      "type" : "ul", 
+      "modifier" : "", 
+      "item" : [
+
+        {
+
+          "class" : "", 
+          "modifier" : "", 
+          "text" : "List item"
+
+        }, 
+
+        {
+
+          "class" : "", 
+          "modifier" : "", 
+          "text" : "List item"
+
+        }, 
+
+        {
+
+          "class" : "", 
+          "modifier" : "", 
+          "text" : "List item"
+
+        }
+
+      ]
+
+    }
+
+  ], 
+
+  "ordered-list" : [
+
+    {
+
+      "list" : [
+
+        {
+          
+          "type" : "ol", 
+          "modifier" : "", 
+          "item" : [
+    
+            {
+              
+              "class" : "", 
+              "modifier" : "", 
+              "text" : "List item"
+    
+            }, 
+    
+            {
+              
+              "class" : "", 
+              "modifier" : "", 
+              "text" : "List item"
+    
+            }, 
+    
+            {
+              
+              "class" : "", 
+              "modifier" : "", 
+              "text" : "List item"
+    
+            }
+    
+          ]
+    
+        }
+    
+      ]
+
+    }
+
+  ], 
+
+  "custom-bullets-list" : [
+
+    {
+
+      "list" : [
+        
+        {
+    
+          "type" : "ol", 
+          "modifier" : "",
+          "item" : [
+    
+            {
+              
+              "class" : "", 
+              "modifier" : "", 
+              "text" : "List item"
+    
+            }, 
+    
+            {
+              
+              "class" : "", 
+              "modifier" : "", 
+              "text" : "List item"
+    
+            }, 
+    
+            {
+              
+              "class" : "", 
+              "modifier" : "", 
+              "text" : "List item"
+    
+            }
+    
+          ]
+    
+        }
+    
+      ]
+
+    }
+
+  ],
 
   "card" : [
 
@@ -628,198 +1220,6 @@
   "subheading" : "Lorem ipsum dolor",
 
   "noscript" : true,
-
-  "list" : [
-
-    {
-
-      "type" : "ul", 
-      "class" : "",
-      "item" : [
-
-        {
-
-          "class" : "",
-          "text" : "This is a list item in an ordered list"
-
-        },
-
-        {
-          
-          "class" : "",
-          "text" : "An ordered list is a list in which the sequence of items is important. An ordered list does not necessarily contain sequence characters."
-
-        }, 
-
-        {
-          
-          "class" : "",
-          "text" : "Lists can be nested inside of each other", 
-          "sub-list" : [
-            
-            {
-        
-              "type" : "ul", 
-              "class" : "",
-              "item" : [
-        
-                {
-        
-                  "class" : "",
-                  "text" : "This is a nested list item"
-        
-                }, 
-
-                {
-
-                  "class" : "", 
-                  "text" : "This is another nested list item in an ordered list"
-
-                }
-
-              ]
-
-            }
-
-          ]
-
-        }, 
-
-        {
-
-          "class" : "", 
-          "text" : "This is the last list item"
-
-        }
-        
-      ]
-
-    }
-
-  ],
-
-  "ordered-list" : [
-
-    {
-
-      "list" : [
-        
-        {
-    
-          "type" : "ol", 
-          "class" : "",
-          "item" : [
-    
-            {
-    
-              "class" : "",
-              "text" : "This is a list item in an ordered list"
-    
-            },
-    
-            {
-              
-              "class" : "",
-              "text" : "An ordered list is a list in which the sequence of items is important. An ordered list does not necessarily contain sequence characters."
-    
-            }, 
-    
-            {
-              
-              "class" : "",
-              "text" : "Lists can be nested inside of each other", 
-              "sub-list" : [
-                
-                {
-            
-                  "type" : "ol", 
-                  "class" : "",
-                  "item" : [
-            
-                    {
-            
-                      "class" : "",
-                      "text" : "This is a nested list item"
-            
-                    }, 
-    
-                    {
-    
-                      "class" : "", 
-                      "text" : "This is another nested list item in an ordered list"
-    
-                    }
-    
-                  ]
-    
-                }
-    
-              ]
-    
-            }, 
-    
-            {
-    
-              "class" : "", 
-              "text" : "This is the last list item"
-    
-            }
-            
-          ]
-    
-        }
-    
-      ]
-
-    }
-  
-  ],
-
-  "custom-bullets-list" : [
-
-    {
-
-      "list" : [
-        
-        {
-    
-          "type" : "ol", 
-          "class" : "list list--custom-bullets",
-          "item" : [
-    
-            {
-    
-              "class" : "list__item",
-              "inner" : true, 
-              "text" : "This is a list item in an ordered list<br>Text on a new line"
-    
-            },
-    
-            {
-              
-              "class" : "list__item",
-              "inner" : true, 
-              "text" : "This is a list item in an ordered list"
-              
-            }, 
-    
-            {
-    
-              "class" : "list__item",
-              "inner" : true, 
-              "text" : "This is a list item in an ordered list"
-              
-            }
-            
-          ]
-    
-        }
-    
-      ]
-
-    }
-
-  ],
 
   "logo" : [
 
