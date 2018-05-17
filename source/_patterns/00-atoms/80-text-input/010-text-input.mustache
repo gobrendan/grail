@@ -1,0 +1,85 @@
+{{# pl-form-element-palette }}
+
+<div class="grid pl-palette pl-palette--form-elements">
+
+  {{# item }}
+
+  <div class="grid__item pl-palette__item">
+
+    <div class="pl-palette__box pl-palette__box--form-elements">
+
+      <div class="pl-palette__swatch pl-palette__swatch--form-element">
+
+        {{! if type is specified, it's an <input> element }}
+
+        {{# type }} 
+
+        <input name="{{ name }}" class="{{ class }}" id="{{ id }}" type="{{ type }}" placeholder="{{ placeholder }}">
+
+        {{/ type }}
+
+        {{! if type isn't specified, it's a <textarea> element }}
+        
+        {{^ type }} 
+
+        <textarea class="{{ class }}" id="{{ id }}" rows="{{ rows }}" cols="{{ cols }}" placeholder="{{ placeholder }}"></textarea>
+
+        {{/ type }}
+
+      </div>
+      
+      <div class="pl-palette__details">
+        <ul class="pl-palette__list">
+          <li class="pl-palette__list-item pl-palette__heading">
+            {{ name }} 
+          </li>
+          <li class="pl-palette__list-item">
+            {{ class }}
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+
+  {{/ item }}
+
+</div>
+
+{{/ pl-form-element-palette }}
+
+<!--
+<fieldset class="fieldset">
+  <label class="label" for="input-telephone">
+    Telephone Input
+  </label>
+  <input class="input-text" type="tel" id="input-telephone" placeholder="(###) ###-####">
+  {{! <i class="fieldset__icon icon-error">
+  </i> }}
+</fieldset>
+
+<fieldset class="fieldset">
+  <label class="label" for="textarea">
+    Textarea
+  </label>
+  <textarea class="textarea" id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+  <i class="fieldset__icon icon-error">
+  </i>
+</fieldset>
+
+<fieldset class="fieldset">
+  <label class="label label--invalid" for="some-company">
+    Invalid
+  </label>
+  <input class="input-text input-text--invalid" type="text" value="Some kind of bad value" placeholder="Text Input" id="some-company">
+  {{! <i class="fieldset__icon icon-error">
+  </i> }}
+</fieldset>
+
+<fieldset class="fieldset">
+  <label class="label error" for="some-name">
+    Error
+  </label>
+  <input class="input-text error" type="text" value="Some kind of bad value" placeholder="Text Input" id="some-name">
+</fieldset>
+-->

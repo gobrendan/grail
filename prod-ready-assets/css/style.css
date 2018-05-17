@@ -22,6 +22,22 @@
 }
 
 /*
+ * font
+ */
+@font-face {
+  font-family: "icon-set";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../assets/fonts/icon-set.eot");
+  src: url("../../assets/fonts/icon-set.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/icon-set.ttf") format("truetype"), url("../../assets/fonts/icon-set.woff") format("woff"), url("../../assets/fonts/icon-set.svg#svgicon-set") format("svg");
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+}
+/*
  * base / reset
  */
 html {
@@ -74,24 +90,6 @@ figure {
   padding: 0;
 }
 
-/*
- * base / fonts
- */
-/* NOTE: icons */
-@font-face {
-  font-family: "icon-set";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../../assets/fonts/icon-set.eot");
-  src: url("../../assets/fonts/icon-set.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/icon-set.ttf") format("truetype"), url("../../assets/fonts/icon-set.woff") format("woff"), url("../../assets/fonts/icon-set.svg#svgicon-set") format("svg");
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-}
-/* NOTE: text */
 /*
  * base / main
  */
@@ -401,6 +399,54 @@ ins {
 }
 
 /*
+ * heading
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* reset all declarations, use classes/modifiers for styling */
+  font-size: 1rem;
+  font-family: "TransportNewLight_gdi", Helvetica, Arial, sans-serif;
+  /* overrides SharePoint rule in core15.css */
+  font-weight: normal;
+  line-height: 1.2;
+  color: inherit;
+  /* this declaration seemed to be needed by SharePoint */
+  padding: 0;
+  margin: 0 0 0.75em;
+}
+
+.heading {
+  /* sizes loosely based on https://type-scale.com/ */
+  font: normal normal normal 100%/1.5 "Cabin", sans-serif;
+  margin: 0 0 1em;
+}
+.heading--alpha, .heading--beta, .heading--gamma, .heading--delta {
+  line-height: 1.2;
+}
+.heading--alpha {
+  font-size: 2.074em;
+}
+.heading--beta {
+  font-size: 1.728em;
+}
+.heading--gamma {
+  font-size: 1.44em;
+}
+.heading--delta {
+  font-size: 1.2em;
+}
+.heading--epsilon {
+  font-size: 1em;
+}
+.heading--zeta {
+  font-size: 0.833em;
+}
+
+/*
  * list
  */
 ul,
@@ -418,6 +464,219 @@ img {
   width: 100%;
   max-width: 100%;
   height: auto;
+}
+
+/*
+ * fieldset
+ */
+fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0 0 .5rem;
+}
+
+/*
+ * label
+ */
+label {
+  display: block;
+  font-weight: normal;
+  margin: 0 0 .5rem;
+}
+
+/*
+ * text input
+ */
+input[type=text],
+input[type=search],
+input[type=url],
+input[type=number],
+input[type=date],
+input[type=email],
+input[type=password],
+textarea,
+.input-text {
+  font-size: 1rem;
+  border: 1px solid #95a0ad;
+  height: 2.5rem;
+  width: 100%;
+  padding: .75rem;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+}
+input[type=text]:focus,
+input[type=search]:focus,
+input[type=url]:focus,
+input[type=number]:focus,
+input[type=date]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+textarea:focus,
+.input-text:focus {
+  border-color: #0071BC;
+}
+
+textarea,
+textarea.input-text {
+  display: block;
+  /* removes unnecessary space below element */
+  min-height: 100px;
+  overflow: auto;
+  /* without this, scrollbar placeholder is visible in IE 11- */
+  resize: vertical;
+}
+
+input[type=file] {
+  width: 100%;
+  /* NOTE: this input type had an explicit width by default; using "100%" allows it to to be squishy */
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::-webkit-input-placeholder {
+  /* NOTE: Chrome/Opera/Safari */
+  font-style: italic;
+  color: #5f6c7b;
+}
+
+::-moz-placeholder {
+  /* NOTE: Firefox 19+ */
+  font-style: italic;
+  color: #5f6c7b;
+}
+
+:-ms-input-placeholder {
+  /* NOTE: IE 10+ */
+  font-style: italic;
+  color: #5f6c7b;
+}
+
+:-moz-placeholder {
+  /* NOTE: Firefox 18- */
+  font-style: italic;
+}
+
+/* NOTE: Hide Webkit-added pseudo */
+/*       http://geek.michaelgrace.org/2011/06/webkit-search-input-styling/ */
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+/*
+ * checkbox
+ */
+input[type=checkbox] {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+input[type=checkbox] + label {
+  display: inline-block;
+  padding-left: .25rem;
+  margin: 0;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/*
+ * radio
+ */
+input[type=radio] {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+input[type=radio] + label {
+  display: inline-block;
+  padding-left: .25rem;
+  margin: 0;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/*
+ * select
+ */
+/*
+ * video
+ */
+.video--fluid-width {
+  /* 'padding-top' solution */
+  height: 0;
+  position: relative;
+  padding-top: 56.25%;
+  /* 56.25% is used for '560 x 315' dimensions (YouTube videos) */
+}
+.video--fluid-width .video__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+ * table
+ */
+table {
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 1rem;
+  /* bottom margin should be in variable */
+}
+
+.table-heading {
+  color: #6a7681;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+th,
+td {
+  padding: .75rem 1rem;
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: #1A546B;
+}
+
+th,
+thead td {
+  font-weight: bold;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+td {
+  border-color: #D0D4E0;
+  vertical-align: top;
+}
+
+/* zebra-striped rows */
+tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+/*
+ * hr
+ */
+hr {
+  border: 0;
+  height: 2px;
+  /* value should be in variable */
+  background: #D0D4E0;
+  /* value should be in custom property */
+  margin: 2rem auto;
+  /* value should be in variable */
 }
 
 /*
@@ -440,8 +699,21 @@ img {
 }
 
 /*
- * buttons
+ * button
  */
+button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  /* Safari fix -- the 'button' element has additional user-agent declarations */
+  align-items: center;
+  /* for some reason, Webkit adds Flex-related declaration */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+  outline: none;
+}
+
 .btn {
   display: inline-block;
   font-size: .9rem;
@@ -595,35 +867,6 @@ img {
   .btn-group--toggle {
     display: block;
   }
-}
-
-/*
- * heading
- */
-.heading {
-  font: normal normal normal 100%/1.5 "Cabin", sans-serif;
-  margin: 0 0 1em;
-}
-.heading--alpha, .heading--beta, .heading--gamma, .heading--delta {
-  line-height: 1.2;
-}
-.heading--alpha {
-  font-size: 2.074em;
-}
-.heading--beta {
-  font-size: 1.728em;
-}
-.heading--gamma {
-  font-size: 1.44em;
-}
-.heading--delta {
-  font-size: 1.2em;
-}
-.heading--epsilon {
-  font-size: 1em;
-}
-.heading--zeta {
-  font-size: 0.833em;
 }
 
 /*
@@ -1424,6 +1667,8 @@ table td .u-text-left {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .pl-palette__box {
+  height: 100%;
+  /* gives consistent visual heights, specifically for <textarea> demo */
   padding: 1rem;
   border: 1px solid #D0D4E0;
 }
@@ -1450,6 +1695,11 @@ table td .u-text-left {
   margin-bottom: 1rem;
 }
 .pl-palette__swatch--icon {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #D0D4E0;
+  margin-bottom: 1rem;
+}
+.pl-palette__swatch--form-element {
   padding-bottom: 1rem;
   border-bottom: 1px solid #D0D4E0;
   margin-bottom: 1rem;
@@ -1521,6 +1771,19 @@ table td .u-text-left {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+}
+.pl-palette--form-elements {
+  /*  */
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+}
+@media (min-width: 18.75em) {
+  .pl-palette--form-elements {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

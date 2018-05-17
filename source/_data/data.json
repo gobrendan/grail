@@ -667,8 +667,88 @@
 
   ], 
 
+  "pl-form-element-palette" : [
 
+    {
 
+      "item" : [
+
+        {
+          
+          "name" : "Text Input", 
+          "class" : "input-text", 
+          "id" : "", 
+          "type" : "text", 
+          "placeholder" : "Text Input"
+          
+        }, 
+
+        {
+          
+          "name" : "Password", 
+          "class" : "input-text", 
+          "id" : "", 
+          "type" : "password", 
+          "placeholder" : "Password"
+
+        }, 
+
+        {
+          
+          "name" : "Email", 
+          "class" : "input-text", 
+          "id" : "", 
+          "type" : "email", 
+          "placeholder" : "Email"
+
+        },
+
+        {
+          
+          "name" : "Number", 
+          "class" : "input-text", 
+          "id" : "", 
+          "type" : "number", 
+          "placeholder" : "Number"
+
+        }, 
+
+        {
+          
+          "name" : "Search", 
+          "class" : "input-text", 
+          "id" : "", 
+          "type" : "search", 
+          "placeholder" : "Search"
+
+        },
+
+        {
+          
+          "name" : "Web Address", 
+          "class" : "input-text", 
+          "id" : "", 
+          "type" : "url", 
+          "placeholder" : "Web Address"
+
+        }, 
+
+        {
+          
+          "name" : "Multi-line Text", 
+          "class" : "input-text", 
+          "id" : "", 
+          "placeholder" : "Multi-line Text", 
+          "rows" : "", 
+          "cols" : ""
+
+        }
+
+      ]
+
+    }
+
+  ], 
 
 
   
@@ -756,52 +836,443 @@
 
   ], 
 
-  "custom-bullets-list" : [
+  "img" : [
 
     {
 
-      "list" : [
-        
+      "1x-src" : "../../assets/images/sample-image@1x.jpg",
+      "2x-src" : "../../assets/images/sample-image@2x.jpg",
+      "class" : "",
+      "alt" : ""
+
+    }
+
+  ],
+
+  "img-single-src" : [
+
+    {
+
+      "class" : "",
+      "alt" : "",
+      "src" : "../../assets/images/sample-image@2x.jpg"
+
+    }
+
+  ],
+
+  "img-advanced" : [
+
+    {
+
+      "class" : "",
+      "breakpoint" : "30em",
+      "img-name-big" : "sample-image",
+      "img-name-small" : "sample-image",
+      "img-type" : "jpg", 
+      "alt" : ""
+
+    }
+
+  ],
+
+  "video" : [
+
+    {
+
+      "modifier" : "video--fluid-width", 
+      "media" : [
+
         {
-    
-          "type" : "ol", 
-          "modifier" : "",
-          "item" : [
-    
-            {
-              
-              "class" : "", 
-              "modifier" : "", 
-              "text" : "List item"
-    
-            }, 
-    
-            {
-              
-              "class" : "", 
-              "modifier" : "", 
-              "text" : "List item"
-    
-            }, 
-    
-            {
-              
-              "class" : "", 
-              "modifier" : "", 
-              "text" : "List item"
-    
-            }
-    
-          ]
-    
+
+          "modifier" : "", 
+          "url" : "https://www.youtube.com/embed/JIID_InOUdE"
+
         }
-    
+
       ]
 
     }
 
   ],
 
+  "checkbox" : [
+
+    {
+
+      "item" : [
+
+        {
+
+          "checkbox-class" : "", 
+          "name" : "checkbox", 
+          "value" : "checkbox-option-1",
+          "id" : "checkbox-option-1", 
+          "label-class" : "",
+          "label-text" : "Option 1"
+
+        },
+
+        {
+
+          "checkbox-class" : "", 
+          "name" : "checkbox", 
+          "value" : "checkbox-option-2",
+          "id" : "checkbox-option-2", 
+          "label-class" : "",
+          "label-text" : "Option 2"
+
+        },
+
+        {
+
+          "checkbox-class" : "", 
+          "name" : "checkbox", 
+          "value" : "checkbox-option-3",
+          "id" : "checkbox-option-3", 
+          "label-class" : "",
+          "label-text" : "Option 3"
+
+        }
+
+      ]
+
+    }
+
+  ],
+
+  "radio" : [
+
+    {
+
+      "item" : [
+
+        {
+
+          "radio-class" : "", 
+          "name" : "radio", 
+          "value" : "radio-option-1",
+          "id" : "radio-option-1", 
+          "label-class" : "",
+          "label-text" : "Option 1"
+
+        },
+
+        {
+
+          "radio-class" : "", 
+          "name" : "radio", 
+          "value" : "radio-option-2",
+          "id" : "radio-option-2", 
+          "label-class" : "",
+          "label-text" : "Option 2"
+
+        },
+
+        {
+
+          "checkbox-class" : "", 
+          "name" : "radio", 
+          "value" : "radio-option-3",
+          "id" : "radio-option-3", 
+          "label-class" : "",
+          "label-text" : "Option 3"
+
+        }
+
+      ]
+
+    }
+
+  ],
+
+  "select" : [
+
+    {
+
+      "option" : [
+
+        {
+
+          "value" : "", 
+          "text" : "Option 1", 
+          "disabled" : false
+
+        },
+
+        {
+
+          "value" : "", 
+          "text" : "Option 2", 
+          "disabled" : false
+
+        },
+
+        {
+
+          "value" : "", 
+          "text" : "Option 3", 
+          "disabled" : true
+
+        }
+
+      ]
+
+    }
+
+  ],
+
+  "select-optgroup" : [
+
+    {
+
+      "optgroup" : [
+
+        {
+
+          "item" : [
+
+            {
+              
+              "disabled" : false, 
+              "label" : "Group 1", 
+              "option" : [
+
+                {
+        
+                  "value" : "", 
+                  "text" : "Option 1.1", 
+                  "disabled" : false
+        
+                },
+        
+                {
+        
+                  "value" : "", 
+                  "text" : "Option 1.2", 
+                  "disabled" : false
+        
+                }
+
+              ]
+
+            }, 
+
+            {
+              
+              "disabled" : false, 
+              "label" : "Group 2", 
+              "option" : [
+
+                {
+        
+                  "value" : "", 
+                  "text" : "Option 2.1", 
+                  "disabled" : false
+        
+                },
+        
+                {
+        
+                  "value" : "", 
+                  "text" : "Option 2.2", 
+                  "disabled" : false
+        
+                }
+
+              ]
+
+            }, 
+
+            {
+              
+              "disabled" : true, 
+              "label" : "Group 3", 
+              "option" : [
+
+                {
+        
+                  "value" : "", 
+                  "text" : "Option 3.1", 
+                  "disabled" : false
+        
+                },
+        
+                {
+        
+                  "value" : "", 
+                  "text" : "Option 3.2", 
+                  "disabled" : false
+        
+                }
+
+              ]
+
+            }
+
+          ]
+
+        }
+
+      ]
+
+    }
+
+  ],
+
+  "table" : [
+
+    {
+
+      "id" : "",
+      "heading" : "Table heading",
+      "class" : "",
+      "caption" : "Table caption",
+      "thead" : [
+
+        {
+
+          "row" : [
+
+            {
+
+              "cell" : [
+
+                {
+
+                  "class" : "",
+                  "content" : "First Name"
+
+                },
+
+                {
+
+                  "class" : "",
+                  "content" : "Last Name"
+
+                },
+
+                {
+
+                  "class" : "", 
+                  "content" : "Age"
+
+                }
+
+              ]
+
+            }
+
+          ]
+
+        }
+
+      ],
+      "tbody" : [
+
+        {
+
+          "row" : [
+
+            {
+
+              "cell" : [
+
+                {
+
+                  "class" : "",
+                  "content" : "Jack"
+
+                },
+
+                {
+
+                  "class" : "",
+                  "content" : "Tripper"
+
+                },
+
+                {
+
+                  "class" : "",
+                  "content" : "28"
+
+                }
+
+              ]
+
+            },
+
+            {
+
+              "cell" : [
+
+                {
+
+                  "class" : "",
+                  "content" : "Janet"
+
+                },
+
+                {
+
+                  "class" : "",
+                  "content" : "Wood"
+
+                },
+
+                {
+
+                  "class" : "",
+                  "content" : "27"
+
+                }
+
+              ]
+
+            },
+
+            {
+
+              "cell" : [
+
+                {
+
+                  "class" : "",
+                  "content" : "Chrissy"
+
+                },
+
+                {
+
+                  "class" : "",
+                  "content" : "Snow"
+
+                },
+
+                {
+
+                  "class" : "",
+                  "content" : "26"
+
+                }
+
+              ]
+
+            }
+
+          ]
+
+        }
+
+      ]
+
+    }
+
+  ],
+
+
+  
   "card" : [
 
     {
@@ -811,8 +1282,8 @@
 
         {
     
-          "URL-1x" : "../../assets/images/sample-image@1x.jpg",
-          "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+          "1x-src" : "../../assets/images/sample-image@1x.jpg",
+          "2x-src" : "../../assets/images/sample-image@2x.jpg",
           "class" : "card__media",
           "alt-text" : "sample image"
     
@@ -839,8 +1310,8 @@
 
             {
         
-              "URL-1x" : "../../assets/images/sample-image@1x.jpg",
-              "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+              "1x-src" : "../../assets/images/sample-image@1x.jpg",
+              "2x-src" : "../../assets/images/sample-image@2x.jpg",
               "class" : "card__media",
               "alt-text" : "sample image"
         
@@ -871,8 +1342,8 @@
 
             {
         
-              "URL-1x" : "../../assets/images/sample-image@1x.jpg",
-              "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+              "1x-src" : "../../assets/images/sample-image@1x.jpg",
+              "2x-src" : "../../assets/images/sample-image@2x.jpg",
               "class" : "card__media",
               "alt-text" : "sample image"
         
@@ -907,8 +1378,8 @@
         
                 {
             
-                  "URL-1x" : "../../assets/images/sample-image@1x.jpg",
-                  "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                  "1x-src" : "../../assets/images/sample-image@1x.jpg",
+                  "2x-src" : "../../assets/images/sample-image@2x.jpg",
                   "class" : "card__media",
                   "alt-text" : "sample image"
             
@@ -935,8 +1406,8 @@
         
                 {
             
-                  "URL-1x" : "../../assets/images/sample-image@1x.jpg",
-                  "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                  "1x-src" : "../../assets/images/sample-image@1x.jpg",
+                  "2x-src" : "../../assets/images/sample-image@2x.jpg",
                   "class" : "card__media",
                   "alt-text" : "sample image"
             
@@ -963,8 +1434,8 @@
         
                 {
             
-                  "URL-1x" : "../../assets/images/sample-image@1x.jpg",
-                  "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                  "1x-src" : "../../assets/images/sample-image@1x.jpg",
+                  "2x-src" : "../../assets/images/sample-image@2x.jpg",
                   "class" : "card__media",
                   "alt-text" : "sample image"
             
@@ -1007,8 +1478,8 @@
         
                     {
                 
-                      "URL-1x" : "../../assets/images/sample-image@1x.jpg",
-                      "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                      "1x-src" : "../../assets/images/sample-image@1x.jpg",
+                      "2x-src" : "../../assets/images/sample-image@2x.jpg",
                       "class" : "card__media",
                       "alt-text" : "sample image"
                 
@@ -1035,8 +1506,8 @@
         
                     {
                 
-                      "URL-1x" : "../../assets/images/sample-image@1x.jpg",
-                      "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                      "1x-src" : "../../assets/images/sample-image@1x.jpg",
+                      "2x-src" : "../../assets/images/sample-image@2x.jpg",
                       "class" : "card__media",
                       "alt-text" : "sample image"
                 
@@ -1063,8 +1534,8 @@
         
                     {
                 
-                      "URL-1x" : "../../assets/images/sample-image@1x.jpg",
-                      "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                      "1x-src" : "../../assets/images/sample-image@1x.jpg",
+                      "2x-src" : "../../assets/images/sample-image@2x.jpg",
                       "class" : "card__media",
                       "alt-text" : "sample image"
                 
@@ -1111,8 +1582,8 @@
         
                     {
                 
-                      "URL-1x" : "../../assets/images/sample-image@1x.jpg",
-                      "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                      "1x-src" : "../../assets/images/sample-image@1x.jpg",
+                      "2x-src" : "../../assets/images/sample-image@2x.jpg",
                       "class" : "card__media",
                       "alt-text" : "sample image"
                 
@@ -1139,8 +1610,8 @@
         
                     {
                 
-                      "URL-1x" : "../../assets/images/sample-image@1x.jpg",
-                      "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                      "1x-src" : "../../assets/images/sample-image@1x.jpg",
+                      "2x-src" : "../../assets/images/sample-image@2x.jpg",
                       "class" : "card__media",
                       "alt-text" : "sample image"
                 
@@ -1167,8 +1638,8 @@
         
                     {
                 
-                      "URL-1x" : "../../assets/images/sample-image@1x.jpg",
-                      "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+                      "1x-src" : "../../assets/images/sample-image@1x.jpg",
+                      "2x-src" : "../../assets/images/sample-image@2x.jpg",
                       "class" : "card__media",
                       "alt-text" : "sample image"
                 
@@ -3307,94 +3778,6 @@
 
   ],
 
-  "checkboxes" : [
-
-    {
-
-      "item" : [
-
-        {
-
-          "label" : "Option 1",
-          "value" : "checkbox-option-1",
-          "id" : "checkbox-option-1"
-
-        },
-
-        {
-
-          "label" : "Option 2",
-          "value" : "checkbox-option-2",
-          "id" : "checkbox-option-2"
-
-        },
-
-        {
-
-          "label" : "Option 3",
-          "value" : "checkbox-option-3",
-          "id" : "checkbox-option-3"
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "checkbox" : [
-
-    {
-
-      "label" : "Checkbox",
-      "label-text" : "Label text",       
-      "value" : "checkbox-single",
-      "id" : "checkbox-single"
-
-    }
-
-  ],
-
-  "radios" : [
-
-    {
-
-      "item" : [
-
-        {
-
-          "label" : "Option 1",
-          "name" : "radio-options",
-          "value" : "radio-option-1",
-          "id" : "radio-option-1"
-
-        },
-
-        {
-
-          "label" : "Option 2",
-          "name" : "radio-options",
-          "value" : "radio-option-2",
-          "id" : "radio-option-2"
-
-        },
-
-        {
-
-          "label" : "Option 3",
-          "name" : "radio-options",
-          "value" : "radio-option-3",
-          "id" : "radio-option-3"
-
-        }
-
-      ]
-
-    }
-
-  ],
-
   "search-box" : {
 
     "modifier" : "",
@@ -3503,46 +3886,6 @@
         }
 
       ]
-
-    }
-
-  ],
-
-  "img" : [
-
-    {
-
-      "URL-1x" : "../../assets/images/sample-image@1x.jpg",
-      "URL-2x" : "../../assets/images/sample-image@2x.jpg",
-      "class" : "",
-      "alt-text" : ""
-
-    }
-
-  ],
-
-  "img-single-src" : [
-
-    {
-
-      "class" : "",
-      "alt-text" : "",
-      "src" : "../../assets/images/404-error.svg"
-
-    }
-
-  ],
-
-  "img-advanced" : [
-
-    {
-
-      "class" : "",
-      "breakpoint" : "30em",
-      "img-name-big" : "sample-image--train-station",
-      "img-name-small" : "sample-image--train-station-square",
-      "img-type" : "jpg", 
-      "alt" : ""
 
     }
 
@@ -4208,8 +4551,8 @@
 
         {
 
-          "URL-1x" : "../../assets/images/card--runway@1x.jpg",
-          "URL-2x" : "../../assets/images/card--runway@2x.jpg",
+          "1x-src" : "../../assets/images/card--runway@1x.jpg",
+          "2x-src" : "../../assets/images/card--runway@2x.jpg",
           "class" : "thumb__image",
           "alt-text" : ""
 
@@ -4219,364 +4562,6 @@
       "img-single-src" : false, 
       "img-url-fragment" : "../../assets/images/card--runway", 
       "caption" : "Lorem ipsum dolor sit amet consectetur"
-
-    }
-
-  ],
-
-  "table" : [
-
-    {
-
-      "table-wrapper-class" : "",
-      "table-wrapper-modifier" : "",
-      "table-wrapper-ID" : "",
-      "table-id" : "",
-      "heading" : "Table heading",
-      "table-class" : "ms-rteTable-default",
-      "table-modifier" : "",
-      "table-ID" : "",
-      "table-caption" : "Table caption",
-      "caption" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel interdum nunc, ac hendrerit lectus. Ipsum dolor sit amet, consectetur adipiscing elit. Vel interdum nunc, ac hendrerit lectus.",
-      "thead" : [
-
-        {
-
-          "row" : [
-
-            {
-
-              "cell" : [
-
-                {
-
-                  "class" : "u-nobr",
-                  "span" : false,
-                  "span-ID" : "",
-                  "text" : "First Name"
-
-                },
-
-                {
-
-                  "class" : "u-nobr",
-                  "span" : false,
-                  "span-ID" : "",
-                  "text" : "Last Name"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-ID" : "",
-                  "text" : "Age"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-ID" : "",
-                  "text" : "Birthday"
-
-                },
-
-                {
-
-                  "class" : "u-nobr",
-                  "span" : false,
-                  "span-ID" : "",
-                  "text" : "Favorite Color"
-
-                },
-
-                {
-
-                  "class" : "u-nobr",
-                  "span" : false,
-                  "span-ID" : "",
-                  "text" : "Favorite Movie"
-
-                },
-
-                {
-
-                  "class" : "u-nobr",
-                  "span" : false,
-                  "span-ID" : "",
-                  "text" : "Favorite Song"
-
-                },
-
-                {
-
-                  "span" : true,
-                  "span-ID" : "",
-                  "text" : "Location"
-
-                }
-
-              ]
-
-            }
-
-          ]
-
-        }
-
-      ],
-      "tbody" : [
-
-        {
-
-          "row" : [
-
-            {
-
-              "cell" : [
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "Jackie"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "Smith"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "25"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "May 19"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "Red"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "I Am Sam"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "Man in the Mirror"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "Earth"
-
-                }
-
-              ]
-
-            },
-
-            {
-
-              "cell" : [
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "John"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "Gibson"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "44"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "June 12"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "Green"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "Lost Boys"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "Purple Rain"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "Mars"
-
-                }
-
-              ]
-
-            },
-
-            {
-
-              "cell" : [
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "Ben"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "Miller"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "64"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "February 8"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "Yellow"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "Back to the Future"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "Fields of Gold"
-
-                },
-
-                {
-
-                  "span" : false,
-                  "span-class" : "",
-                  "span-data-attributes" : "",
-                  "text" : "Mercury"
-
-                }
-
-              ]
-
-            }
-
-          ]
-
-        }
-
-      ]
 
     }
 
@@ -9878,17 +9863,6 @@
 
   ],
 
-  "video" : [
-
-    {
-
-      "modifier" : "video-wrapper--fluid-width",
-      "url" : "https://www.youtube.com/embed/JIID_InOUdE"
-
-    }
-
-  ],
-
   "carousel" : [
 
     {
@@ -10425,8 +10399,8 @@
 
         {
 
-          "URL-1x" : "../../assets/images/promo-block--sample-1@1x.jpg",
-          "URL-2x" : "../../assets/images/promo-block--sample-1@2x.jpg",
+          "1x-src" : "../../assets/images/promo-block--sample-1@1x.jpg",
+          "2x-src" : "../../assets/images/promo-block--sample-1@2x.jpg",
           "class" : "promo-block__img",
           "alt-text" : ""
 
@@ -10458,8 +10432,8 @@
 
                 {
 
-                  "URL-1x" : "../../assets/images/promo-block--sample-1@1x.jpg",
-                  "URL-2x" : "../../assets/images/promo-block--sample-1@2x.jpg",
+                  "1x-src" : "../../assets/images/promo-block--sample-1@1x.jpg",
+                  "2x-src" : "../../assets/images/promo-block--sample-1@2x.jpg",
                   "class" : "promo-block__img",
                   "alt-text" : ""
 
@@ -10487,8 +10461,8 @@
 
                 {
 
-                  "URL-1x" : "../../assets/images/promo-block--sample-2@1x.jpg",
-                  "URL-2x" : "../../assets/images/promo-block--sample-2@2x.jpg",
+                  "1x-src" : "../../assets/images/promo-block--sample-2@1x.jpg",
+                  "2x-src" : "../../assets/images/promo-block--sample-2@2x.jpg",
                   "class" : "promo-block__img",
                   "alt-text" : ""
 
@@ -10516,8 +10490,8 @@
 
                 {
 
-                  "URL-1x" : "../../assets/images/promo-block--sample-3@1x.jpg",
-                  "URL-2x" : "../../assets/images/promo-block--sample-3@2x.jpg",
+                  "1x-src" : "../../assets/images/promo-block--sample-3@1x.jpg",
+                  "2x-src" : "../../assets/images/promo-block--sample-3@2x.jpg",
                   "class" : "promo-block__img",
                   "alt-text" : ""
 
@@ -11519,8 +11493,8 @@
 
       {
 
-        "URL-1x" : "https://placeholdit.imgix.net/~text?txtsize=33&txt=sample%20image&w=1500&h=750",
-        "URL-2x" : "https://placeholdit.imgix.net/~text?txtsize=33&txt=sample%20image&w=750&h=375",
+        "1x-src" : "https://placeholdit.imgix.net/~text?txtsize=33&txt=sample%20image&w=1500&h=750",
+        "2x-src" : "https://placeholdit.imgix.net/~text?txtsize=33&txt=sample%20image&w=750&h=375",
         "class" : "image-block__image",
         "alt-text" : ""
 
@@ -11718,8 +11692,8 @@
 
           {
 
-            "URL-1x" : "https://placeholdit.imgix.net/~text?txtsize=33&txt=sample%20image&w=1500&h=750",
-            "URL-2x" : "https://placeholdit.imgix.net/~text?txtsize=33&txt=sample%20image&w=750&h=375",
+            "1x-src" : "https://placeholdit.imgix.net/~text?txtsize=33&txt=sample%20image&w=1500&h=750",
+            "2x-src" : "https://placeholdit.imgix.net/~text?txtsize=33&txt=sample%20image&w=750&h=375",
             "class" : "image-block__image",
             "alt-text" : ""
 
@@ -12309,8 +12283,8 @@
 
             {
         
-              "URL-1x" : "../../assets/images/sample-image--video-thumb-b@1x.jpg",
-              "URL-2x" : "../../assets/images/sample-image--video-thumb-b@2x.jpg",
+              "1x-src" : "../../assets/images/sample-image--video-thumb-b@1x.jpg",
+              "2x-src" : "../../assets/images/sample-image--video-thumb-b@2x.jpg",
               "class" : "",
               "alt-text" : ""
         
@@ -12371,8 +12345,8 @@
 
             {
         
-              "URL-1x" : "../../assets/images/sample-image--video-thumb-c@1x.jpg",
-              "URL-2x" : "../../assets/images/sample-image--video-thumb-c@2x.jpg",
+              "1x-src" : "../../assets/images/sample-image--video-thumb-c@1x.jpg",
+              "2x-src" : "../../assets/images/sample-image--video-thumb-c@2x.jpg",
               "class" : "",
               "alt-text" : ""
         
@@ -12415,8 +12389,8 @@
 
             {
         
-              "URL-1x" : "http://via.placeholder.com/200x113/cccccc/cccccc",
-              "URL-2x" : "http://via.placeholder.com/400x226/cccccc/cccccc",
+              "1x-src" : "http://via.placeholder.com/200x113/cccccc/cccccc",
+              "2x-src" : "http://via.placeholder.com/400x226/cccccc/cccccc",
               "class" : "",
               "alt-text" : ""
         
@@ -12435,8 +12409,8 @@
 
             {
         
-              "URL-1x" : "http://via.placeholder.com/200x113/cccccc/cccccc",
-              "URL-2x" : "http://via.placeholder.com/400x226/cccccc/cccccc",
+              "1x-src" : "http://via.placeholder.com/200x113/cccccc/cccccc",
+              "2x-src" : "http://via.placeholder.com/400x226/cccccc/cccccc",
               "class" : "",
               "alt-text" : ""
         
@@ -12455,8 +12429,8 @@
 
             {
         
-              "URL-1x" : "http://via.placeholder.com/200x113/cccccc/cccccc",
-              "URL-2x" : "http://via.placeholder.com/400x226/cccccc/cccccc",
+              "1x-src" : "http://via.placeholder.com/200x113/cccccc/cccccc",
+              "2x-src" : "http://via.placeholder.com/400x226/cccccc/cccccc",
               "class" : "",
               "alt-text" : ""
         
@@ -12492,8 +12466,8 @@
     
                 {
             
-                  "URL-1x" : "http://via.placeholder.com/200x113/cccccc/cccccc",
-                  "URL-2x" : "http://via.placeholder.com/400x226/cccccc/cccccc",
+                  "1x-src" : "http://via.placeholder.com/200x113/cccccc/cccccc",
+                  "2x-src" : "http://via.placeholder.com/400x226/cccccc/cccccc",
                   "class" : "",
                   "alt-text" : ""
             
@@ -12512,8 +12486,8 @@
     
                 {
             
-                  "URL-1x" : "http://via.placeholder.com/200x113/cccccc/cccccc",
-                  "URL-2x" : "http://via.placeholder.com/400x226/cccccc/cccccc",
+                  "1x-src" : "http://via.placeholder.com/200x113/cccccc/cccccc",
+                  "2x-src" : "http://via.placeholder.com/400x226/cccccc/cccccc",
                   "class" : "",
                   "alt-text" : ""
             
@@ -12532,8 +12506,8 @@
     
                 {
             
-                  "URL-1x" : "http://via.placeholder.com/200x113/cccccc/cccccc",
-                  "URL-2x" : "http://via.placeholder.com/400x226/cccccc/cccccc",
+                  "1x-src" : "http://via.placeholder.com/200x113/cccccc/cccccc",
+                  "2x-src" : "http://via.placeholder.com/400x226/cccccc/cccccc",
                   "class" : "",
                   "alt-text" : ""
             
@@ -12552,8 +12526,8 @@
     
                 {
             
-                  "URL-1x" : "http://via.placeholder.com/200x113/cccccc/cccccc",
-                  "URL-2x" : "http://via.placeholder.com/400x226/cccccc/cccccc",
+                  "1x-src" : "http://via.placeholder.com/200x113/cccccc/cccccc",
+                  "2x-src" : "http://via.placeholder.com/400x226/cccccc/cccccc",
                   "class" : "",
                   "alt-text" : ""
             
@@ -12572,8 +12546,8 @@
     
                 {
             
-                  "URL-1x" : "http://via.placeholder.com/200x113/cccccc/cccccc",
-                  "URL-2x" : "http://via.placeholder.com/400x226/cccccc/cccccc",
+                  "1x-src" : "http://via.placeholder.com/200x113/cccccc/cccccc",
+                  "2x-src" : "http://via.placeholder.com/400x226/cccccc/cccccc",
                   "class" : "",
                   "alt-text" : ""
             
@@ -12646,8 +12620,8 @@
     
                 {
             
-                  "URL-1x" : "../../assets/images/sample-image--video-thumb-b@1x.jpg",
-                  "URL-2x" : "../../assets/images/sample-image--video-thumb-b@2x.jpg",
+                  "1x-src" : "../../assets/images/sample-image--video-thumb-b@1x.jpg",
+                  "2x-src" : "../../assets/images/sample-image--video-thumb-b@2x.jpg",
                   "class" : "",
                   "alt-text" : ""
             
@@ -12709,8 +12683,8 @@
     
                 {
             
-                  "URL-1x" : "../../assets/images/sample-image--video-thumb-c@1x.jpg",
-                  "URL-2x" : "../../assets/images/sample-image--video-thumb-c@2x.jpg",
+                  "1x-src" : "../../assets/images/sample-image--video-thumb-c@1x.jpg",
+                  "2x-src" : "../../assets/images/sample-image--video-thumb-c@2x.jpg",
                   "class" : "",
                   "alt-text" : ""
             
@@ -12796,8 +12770,8 @@
         
         {
     
-          "URL-1x" : "../../assets/images/sample-image--DMV@1x.jpg",
-          "URL-2x" : "../../assets/images/sample-image--DMV@2x.jpg",
+          "1x-src" : "../../assets/images/sample-image--DMV@1x.jpg",
+          "2x-src" : "../../assets/images/sample-image--DMV@2x.jpg",
           "class" : "",
           "alt-text" : ""
     
@@ -13375,8 +13349,8 @@
     
                         {
     
-                          "URL-1x" : "../../assets/images/sample-image--thumb-fortify@1x.png",
-                          "URL-2x" : "../../assets/images/sample-image--thumb-fortify@2x.png",
+                          "1x-src" : "../../assets/images/sample-image--thumb-fortify@1x.png",
+                          "2x-src" : "../../assets/images/sample-image--thumb-fortify@2x.png",
                           "class" : "simple-list__img",
                           "alt-text" : ""
     
@@ -13403,8 +13377,8 @@
     
                         {
     
-                          "URL-1x" : "../../assets/images/sample-image--thumb-strategic@1x.png",
-                          "URL-2x" : "../../assets/images/sample-image--thumb-strategic@2x.png",
+                          "1x-src" : "../../assets/images/sample-image--thumb-strategic@1x.png",
+                          "2x-src" : "../../assets/images/sample-image--thumb-strategic@2x.png",
                           "class" : "simple-list__img",
                           "alt-text" : ""
     
@@ -13431,8 +13405,8 @@
     
                         {
     
-                          "URL-1x" : "../../assets/images/sample-image--thumb-transportation@1x.png",
-                          "URL-2x" : "../../assets/images/sample-image--thumb-transportation@2x.png",
+                          "1x-src" : "../../assets/images/sample-image--thumb-transportation@1x.png",
+                          "2x-src" : "../../assets/images/sample-image--thumb-transportation@2x.png",
                           "class" : "simple-list__img",
                           "alt-text" : ""
     
@@ -13459,8 +13433,8 @@
     
                         {
     
-                          "URL-1x" : "../../assets/images/sample-image--thumb-perf@1x.png",
-                          "URL-2x" : "../../assets/images/sample-image--thumb-perf@2x.png",
+                          "1x-src" : "../../assets/images/sample-image--thumb-perf@1x.png",
+                          "2x-src" : "../../assets/images/sample-image--thumb-perf@2x.png",
                           "class" : "simple-list__img",
                           "alt-text" : ""
     
@@ -13487,8 +13461,8 @@
     
                         {
     
-                          "URL-1x" : "../../assets/images/sample-image--thumb-boards@1x.png",
-                          "URL-2x" : "../../assets/images/sample-image--thumb-boards@2x.png",
+                          "1x-src" : "../../assets/images/sample-image--thumb-boards@1x.png",
+                          "2x-src" : "../../assets/images/sample-image--thumb-boards@2x.png",
                           "class" : "simple-list__img",
                           "alt-text" : ""
     
@@ -13515,8 +13489,8 @@
     
                         {
     
-                          "URL-1x" : "../../assets/images/sample-image--thumb-state-logistics@1x.png",
-                          "URL-2x" : "../../assets/images/sample-image--thumb-state-logistics@2x.png",
+                          "1x-src" : "../../assets/images/sample-image--thumb-state-logistics@1x.png",
+                          "2x-src" : "../../assets/images/sample-image--thumb-state-logistics@2x.png",
                           "class" : "simple-list__img",
                           "alt-text" : ""
     
@@ -13569,8 +13543,8 @@
         
                     {
                 
-                      "URL-1x" : "http://via.placeholder.com/200x113/cccccc/cccccc",
-                      "URL-2x" : "http://via.placeholder.com/400x226/cccccc/cccccc",
+                      "1x-src" : "http://via.placeholder.com/200x113/cccccc/cccccc",
+                      "2x-src" : "http://via.placeholder.com/400x226/cccccc/cccccc",
                       "class" : "",
                       "alt-text" : ""
                 
@@ -13589,8 +13563,8 @@
         
                     {
                 
-                      "URL-1x" : "http://via.placeholder.com/200x113/cccccc/cccccc",
-                      "URL-2x" : "http://via.placeholder.com/400x226/cccccc/cccccc",
+                      "1x-src" : "http://via.placeholder.com/200x113/cccccc/cccccc",
+                      "2x-src" : "http://via.placeholder.com/400x226/cccccc/cccccc",
                       "class" : "",
                       "alt-text" : ""
                 
@@ -13609,8 +13583,8 @@
         
                     {
                 
-                      "URL-1x" : "http://via.placeholder.com/200x113/cccccc/cccccc",
-                      "URL-2x" : "http://via.placeholder.com/400x226/cccccc/cccccc",
+                      "1x-src" : "http://via.placeholder.com/200x113/cccccc/cccccc",
+                      "2x-src" : "http://via.placeholder.com/400x226/cccccc/cccccc",
                       "class" : "",
                       "alt-text" : ""
                 
@@ -13629,8 +13603,8 @@
         
                     {
                 
-                      "URL-1x" : "http://via.placeholder.com/200x113/cccccc/cccccc",
-                      "URL-2x" : "http://via.placeholder.com/400x226/cccccc/cccccc",
+                      "1x-src" : "http://via.placeholder.com/200x113/cccccc/cccccc",
+                      "2x-src" : "http://via.placeholder.com/400x226/cccccc/cccccc",
                       "class" : "",
                       "alt-text" : ""
                 
@@ -13649,8 +13623,8 @@
         
                     {
                 
-                      "URL-1x" : "http://via.placeholder.com/200x113/cccccc/cccccc",
-                      "URL-2x" : "http://via.placeholder.com/400x226/cccccc/cccccc",
+                      "1x-src" : "http://via.placeholder.com/200x113/cccccc/cccccc",
+                      "2x-src" : "http://via.placeholder.com/400x226/cccccc/cccccc",
                       "class" : "",
                       "alt-text" : ""
                 
@@ -13850,8 +13824,8 @@
         
         {
     
-          "URL-1x" : "../../assets/images/sample-image--DMV@1x.jpg",
-          "URL-2x" : "../../assets/images/sample-image--DMV@2x.jpg",
+          "1x-src" : "../../assets/images/sample-image--DMV@1x.jpg",
+          "2x-src" : "../../assets/images/sample-image--DMV@2x.jpg",
           "class" : "",
           "alt-text" : ""
     
@@ -13910,8 +13884,8 @@
         
         {
     
-          "URL-1x" : "../../assets/images/sample-image--DMV@1x.jpg",
-          "URL-2x" : "../../assets/images/sample-image--DMV@2x.jpg",
+          "1x-src" : "../../assets/images/sample-image--DMV@1x.jpg",
+          "2x-src" : "../../assets/images/sample-image--DMV@2x.jpg",
           "class" : "",
           "alt-text" : ""
     
@@ -14029,8 +14003,8 @@
         
         {
     
-          "URL-1x" : "../../assets/images/sample-image--DMV@1x.jpg",
-          "URL-2x" : "../../assets/images/sample-image--DMV@2x.jpg",
+          "1x-src" : "../../assets/images/sample-image--DMV@1x.jpg",
+          "2x-src" : "../../assets/images/sample-image--DMV@2x.jpg",
           "class" : "",
           "alt-text" : ""
     
@@ -14155,8 +14129,8 @@
             
             {
         
-              "URL-1x" : "../../assets/images/sample-image--DMV@1x.jpg",
-              "URL-2x" : "../../assets/images/sample-image--DMV@2x.jpg",
+              "1x-src" : "../../assets/images/sample-image--DMV@1x.jpg",
+              "2x-src" : "../../assets/images/sample-image--DMV@2x.jpg",
               "class" : "",
               "alt-text" : ""
         
@@ -14295,8 +14269,8 @@
 
         {
     
-          "URL-1x" : "../../assets/images/closures-block-placeholder@1x.jpg",
-          "URL-2x" : "../../assets/images/closures-block-placeholder@2x.jpg",
+          "1x-src" : "../../assets/images/closures-block-placeholder@1x.jpg",
+          "2x-src" : "../../assets/images/closures-block-placeholder@2x.jpg",
           "class" : "",
           "alt-text" : ""
     
@@ -14869,8 +14843,8 @@
 
                 {
 
-                  "URL-1x" : "../../assets/images/sample-image--road-closed@1x.jpg",
-                  "URL-2x" : "../../assets/images/sample-image--road-closed@2x.jpg",
+                  "1x-src" : "../../assets/images/sample-image--road-closed@1x.jpg",
+                  "2x-src" : "../../assets/images/sample-image--road-closed@2x.jpg",
                   "class" : "thumb__image",
                   "alt-text" : ""
 
@@ -14899,8 +14873,8 @@
 
                 {
 
-                  "URL-1x" : "../../assets/images/sample-image--pipe@1x.jpg",
-                  "URL-2x" : "../../assets/images/sample-image--pipe@2x.jpg",
+                  "1x-src" : "../../assets/images/sample-image--pipe@1x.jpg",
+                  "2x-src" : "../../assets/images/sample-image--pipe@2x.jpg",
                   "class" : "thumb__image",
                   "alt-text" : ""
 
@@ -14929,8 +14903,8 @@
 
                 {
 
-                  "URL-1x" : "../../assets/images/sample-image--highways@1x.jpg",
-                  "URL-2x" : "../../assets/images/sample-image--highways@2x.jpg",
+                  "1x-src" : "../../assets/images/sample-image--highways@1x.jpg",
+                  "2x-src" : "../../assets/images/sample-image--highways@2x.jpg",
                   "class" : "thumb__image",
                   "alt-text" : ""
 
@@ -14959,8 +14933,8 @@
 
                 {
 
-                  "URL-1x" : "../../assets/images/sample-image--bus-a@1x.jpg",
-                  "URL-2x" : "../../assets/images/sample-image--bus-a@2x.jpg",
+                  "1x-src" : "../../assets/images/sample-image--bus-a@1x.jpg",
+                  "2x-src" : "../../assets/images/sample-image--bus-a@2x.jpg",
                   "class" : "thumb__image",
                   "alt-text" : ""
 
@@ -14989,8 +14963,8 @@
 
                 {
 
-                  "URL-1x" : "../../assets/images/sample-image--meeting@1x.jpg",
-                  "URL-2x" : "../../assets/images/sample-image--meeting@2x.jpg",
+                  "1x-src" : "../../assets/images/sample-image--meeting@1x.jpg",
+                  "2x-src" : "../../assets/images/sample-image--meeting@2x.jpg",
                   "class" : "thumb__image",
                   "alt-text" : ""
 
@@ -15019,8 +14993,8 @@
 
                 {
 
-                  "URL-1x" : "../../assets/images/sample-image--bus-b@1x.jpg",
-                  "URL-2x" : "../../assets/images/sample-image--bus-b@2x.jpg",
+                  "1x-src" : "../../assets/images/sample-image--bus-b@1x.jpg",
+                  "2x-src" : "../../assets/images/sample-image--bus-b@2x.jpg",
                   "class" : "thumb__image",
                   "alt-text" : ""
 
@@ -15049,8 +15023,8 @@
 
                 {
 
-                  "URL-1x" : "../../assets/images/sample-image--train@1x.jpg",
-                  "URL-2x" : "../../assets/images/sample-image--train@2x.jpg",
+                  "1x-src" : "../../assets/images/sample-image--train@1x.jpg",
+                  "2x-src" : "../../assets/images/sample-image--train@2x.jpg",
                   "class" : "thumb__image",
                   "alt-text" : ""
 
@@ -15781,8 +15755,8 @@
 
                     {
 
-                      "URL-1x" : "../../assets/images/fortify-image@1x.png",
-                      "URL-2x" : "../../assets/images/fortify-image@2x.png",
+                      "1x-src" : "../../assets/images/fortify-image@1x.png",
+                      "2x-src" : "../../assets/images/fortify-image@2x.png",
                       "class" : "simple-list__img",
                       "alt-text" : ""
 
@@ -15809,8 +15783,8 @@
 
                     {
 
-                      "URL-1x" : "../../assets/images/money-image@1x.png",
-                      "URL-2x" : "../../assets/images/money-image@2x.png",
+                      "1x-src" : "../../assets/images/money-image@1x.png",
+                      "2x-src" : "../../assets/images/money-image@2x.png",
                       "class" : "simple-list__img",
                       "alt-text" : ""
 
@@ -15837,8 +15811,8 @@
 
                     {
 
-                      "URL-1x" : "../../assets/images/checkbox-image@1x.png",
-                      "URL-2x" : "../../assets/images/checkbox-image@2x.png",
+                      "1x-src" : "../../assets/images/checkbox-image@1x.png",
+                      "2x-src" : "../../assets/images/checkbox-image@2x.png",
                       "class" : "simple-list__img",
                       "alt-text" : ""
 
@@ -15865,8 +15839,8 @@
 
                     {
 
-                      "URL-1x" : "../../assets/images/gauge-corner@1x.png",
-                      "URL-2x" : "../../assets/images/gauge-corner@2x.png",
+                      "1x-src" : "../../assets/images/gauge-corner@1x.png",
+                      "2x-src" : "../../assets/images/gauge-corner@2x.png",
                       "class" : "simple-list__img",
                       "alt-text" : ""
 
@@ -15893,8 +15867,8 @@
 
                     {
 
-                      "URL-1x" : "../../assets/images/logos/NC-logo-seal-white@1x.png",
-                      "URL-2x" : "../../assets/images/logos/NC-logo-seal-white@2x.png",
+                      "1x-src" : "../../assets/images/logos/NC-logo-seal-white@1x.png",
+                      "2x-src" : "../../assets/images/logos/NC-logo-seal-white@2x.png",
                       "class" : "simple-list__img",
                       "alt-text" : ""
 
@@ -15921,8 +15895,8 @@
 
                     {
 
-                      "URL-1x" : "../../assets/images/maps/north-carolina-map@1x.png",
-                      "URL-2x" : "../../assets/images/maps/north-carolina-map@2x.png",
+                      "1x-src" : "../../assets/images/maps/north-carolina-map@1x.png",
+                      "2x-src" : "../../assets/images/maps/north-carolina-map@2x.png",
                       "class" : "simple-list__img",
                       "alt-text" : ""
 
@@ -16166,8 +16140,8 @@
 
         {
 
-          "URL-1x" : "../../assets/images/sample-image@1x.jpg",
-          "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+          "1x-src" : "../../assets/images/sample-image@1x.jpg",
+          "2x-src" : "../../assets/images/sample-image@2x.jpg",
           "class" : "media-block__img",
           "alt-text" : ""
 
@@ -16269,6 +16243,7 @@
 
                     {
 
+                      "fieldset-class" : "", 
                       "label" : "Option 1",
                       "value" : "checkbox-option-1",
                       "id" : "checkbox-option-1"
@@ -16277,6 +16252,7 @@
 
                     {
 
+                      "fieldset-class" : "", 
                       "label" : "Option 2",
                       "value" : "checkbox-option-2",
                       "id" : "checkbox-option-2"
@@ -16285,6 +16261,7 @@
 
                     {
 
+                      "fieldset-class" : "", 
                       "label" : "Option 3",
                       "value" : "checkbox-option-3",
                       "id" : "checkbox-option-3"
@@ -20500,8 +20477,8 @@
 
         {
 
-          "URL-1x" : "../../assets/images/promo-block--sample-1@1x.jpg",
-          "URL-2x" : "../../assets/images/promo-block--sample-1@2x.jpg",
+          "1x-src" : "../../assets/images/promo-block--sample-1@1x.jpg",
+          "2x-src" : "../../assets/images/promo-block--sample-1@2x.jpg",
           "class" : "photo-block__img",
           "alt-text" : ""
 

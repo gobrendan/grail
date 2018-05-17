@@ -1,6 +1,22 @@
 /*
- * buttons
+ * button
  */
+
+
+button {
+
+  cursor: pointer;
+  -webkit-appearance: none; /* Safari fix -- the 'button' element has additional user-agent declarations */
+  align-items: center; /* for some reason, Webkit adds Flex-related declaration */
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+
+  outline: none;
+
+}
 
 .btn {
 

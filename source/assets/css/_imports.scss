@@ -1,252 +1,207 @@
 //
-// table of contents
-//
-// settings
-//   variables
-//
-// tools
-//   mixins
-//   placeholders
-//
-// generic
-//   reset
-//
-// base
-//   headings, text, etc. 
-//
-// objects
-//   wrappers, layouts
-//
-// components
-//   header, footer, card, button, etc.
-//
-// utility
-//   helpers
-//
-// ---
-//
-// to be migrated to pl-specific stylesheet
-//   palette
+// setting
 //
 
-//
-// settings
-//
+// variable
 
-  // variables
-    
-    @import "scss/00-variables/breakpoints";
-    @import "scss/00-variables/colors";
-    @import "scss/00-variables/padding";
-    @import "scss/00-variables/IE-targeting";
-    @import "scss/00-variables/fonts";
-    @import "scss/00-variables/logos";
-    @import "scss/00-variables/numeric";
-    @import "scss/00-variables/tables";
-    @import "scss/00-variables/text";
-    @import "scss/00-variables/letter-spacing";
-    @import "scss/00-variables/transitions";
-    @import "scss/00-variables/validation";
-    @import "scss/00-variables/custom-dropdown";
-    @import "scss/00-variables/forms";
-    @import "scss/00-variables/widths";
-    @import "scss/00-variables/custom-properties";
+@import "scss/10-setting/10-variable/breakpoint";
+@import "scss/10-setting/10-variable/color";
+@import "scss/10-setting/10-variable/padding";
+@import "scss/10-setting/10-variable/IE-targeting";
+@import "scss/10-setting/10-variable/font";
+@import "scss/10-setting/10-variable/logo";
+@import "scss/10-setting/10-variable/numeric";
+@import "scss/10-setting/10-variable/table";
+@import "scss/10-setting/10-variable/text";
+@import "scss/10-setting/10-variable/letter-spacing";
+@import "scss/10-setting/10-variable/transition";
+@import "scss/10-setting/10-variable/validation";
+@import "scss/10-setting/10-variable/custom-dropdown";
+@import "scss/10-setting/10-variable/form";
+@import "scss/10-setting/10-variable/width";
+@import "scss/10-setting/10-variable/custom-property";
 
 //
-// tools
+// tool
 //
 
-  // mixins
+// mixin
 
-    @import "scss/10-mixins/custom-property";
-    @import "scss/10-mixins/aspect-ratio";
-    @import "scss/10-mixins/clean-list";
-    @import "scss/10-mixins/clearfix";
-    @import "scss/10-mixins/font-face";
-    @import "scss/10-mixins/media-query";
-    @import "scss/10-mixins/media-query-ie-10-plus";
-    @import "scss/10-mixins/media-query-firefox";
-    @import "scss/10-mixins/rem-to-px";
-    @import "scss/10-mixins/retina";
-    @import "scss/10-mixins/scroll";
-    @import "scss/10-mixins/transition";
-    @import "scss/10-mixins/translate";
-    @import "scss/10-mixins/transition-transform";
-    @import "scss/10-mixins/vertical-align";
-    @import "scss/10-mixins/gradient";
-    @import "scss/10-mixins/flexbox";
-    @import "scss/10-mixins/text-input";
-    @import "scss/10-mixins/grid";
+@import "scss/20-tool/10-mixin/custom-property";
+@import "scss/20-tool/10-mixin/aspect-ratio";
+@import "scss/20-tool/10-mixin/clean-list";
+@import "scss/20-tool/10-mixin/clearfix";
+@import "scss/20-tool/10-mixin/font-face";
+@import "scss/20-tool/10-mixin/media-query";
+@import "scss/20-tool/10-mixin/media-query-ie-10-plus";
+@import "scss/20-tool/10-mixin/media-query-firefox";
+@import "scss/20-tool/10-mixin/rem-to-px";
+@import "scss/20-tool/10-mixin/retina";
+@import "scss/20-tool/10-mixin/scroll";
+@import "scss/20-tool/10-mixin/transition";
+@import "scss/20-tool/10-mixin/translate";
+@import "scss/20-tool/10-mixin/transition-transform";
+@import "scss/20-tool/10-mixin/vertical-align";
+@import "scss/20-tool/10-mixin/gradient";
+@import "scss/20-tool/10-mixin/flexbox";
+@import "scss/20-tool/10-mixin/text-input";
+@import "scss/20-tool/10-mixin/grid";
 
-  // placeholders
+// placeholder
 
-    @import "scss/15-placeholders/general";
-    @import "scss/15-placeholders/headings";
-    @import "scss/15-placeholders/text";
-    @import "scss/15-placeholders/tables";
-    @import "scss/15-placeholders/forms";
-    @import "scss/15-placeholders/lists";
-    @import "scss/15-placeholders/visually-hidden";
+@import "scss/20-tool/20-placeholder/general";
+@import "scss/20-tool/20-placeholder/heading";
+@import "scss/20-tool/20-placeholder/text";
+@import "scss/20-tool/20-placeholder/form";
+@import "scss/20-tool/20-placeholder/list";
+@import "scss/20-tool/20-placeholder/visually-hidden";
+
+// font
+
+@import "scss/20-tool/30-font/font";
 
 //
 // generic 
 //  
-  
-  // reset
 
-    @import "scss/20-base/reset";
+@import "scss/20-generic/reset";
 
 //
 // base
 //
 
-  // headings, text, etc. 
-
-    @import "scss/20-base/fonts";
-    @import "scss/20-base/main";
-    // @import "scss/20-base/doctype.icons";
-    @import "scss/20-base/icomoon.icons";
-    // @import "scss/20-base/material-design.icons";
-    // @import "scss/20-base/credit-card.icons";
-    // @import "scss/20-base/social-box.icons";
-
-    @import "scss/30-elements/text";
-    // @import "scss/30-elements/headings";
-    @import "scss/30-elements/lists";
-    @import "scss/30-elements/media";
-    // @import "scss/30-elements/form-elements";
-    // @import "scss/30-elements/tables";
-    // @import "scss/30-elements/hr";
-    // @import "scss/30-elements/custom-inputs";
+@import "scss/20-base/main"; // should this go in objects?
+@import "scss/20-base/icon";
+@import "scss/20-base/text";
+@import "scss/20-base/heading";
+@import "scss/20-base/list";
+@import "scss/20-base/media";
+@import "scss/20-base/fieldset";
+@import "scss/20-base/label";
+@import "scss/20-base/text-input";
+@import "scss/20-base/checkbox";
+@import "scss/20-base/radio";
+@import "scss/20-base/select"; 
+@import "scss/20-base/video";
+@import "scss/20-base/table";
+@import "scss/20-base/hr";
 
 //
-// objects
+// object
 //
 
-  // wrappers, layouts
-
-    // @import "scss/60-layout/page";
-    // @import "scss/60-layout/page-alt";
-    // @import "scss/60-layout/page-layout";
-    // @import "scss/60-layout/page-grid";
-    // @import "scss/60-layout/component-grid";
-    @import "scss/60-layout/grid";
-    // @import "scss/60-layout/form-grid";
-    // @import "scss/60-layout/sharepoint";
-    // @import "scss/60-layout/contact-page";
+// @import "scss/60-layout/page";
+// @import "scss/60-layout/page-alt";
+// @import "scss/60-layout/page-layout";
+// @import "scss/60-layout/page-grid";
+// @import "scss/60-layout/component-grid";
+@import "scss/60-layout/grid";
+// @import "scss/60-layout/form-grid";
+// @import "scss/60-layout/sharepoint";
 
 //
-// componets
+// component
 //
 
-  // header, footer, card, button, etc.
+@import "scss/41-components/button";
+@import "scss/41-components/button-set";
 
-    @import "scss/41-components/button";
-    @import "scss/41-components/button-set";
+@import "scss/41-components/card"; 
+@import "scss/41-components/card-set"; 
 
-    @import "scss/41-components/heading";
+// @import "scss/50-vendor/datatables/10.datatables.edited"; // NOTE: edits include commenting out some rules
+// @import "scss/50-vendor/datatables/20.datatables-overrides";
+// @import "scss/50-vendor/datatables/30.responsive.datatables.edited"; // NOTE: edits include replacing color values with variables
+// @import "scss/50-vendor/datatables/40.responsive.datatables-overrides";
+// @import "scss/50-vendor/SelectBoxIt/10.selectBoxIt.edited"; // NOTE: some rules commented out; some overrides might be here instead of overrides file
+// @import "scss/50-vendor/SelectBoxIt/20.selectBoxIt.overrides";
+// @import "scss/50-vendor/SelectBoxIt/30.selectBoxIt.overrides.alt"; // NOTE: document use of "alt" when creating alternate versions
+// @import "scss/50-vendor/SelectBoxIt/40.menu-wrapper";
+// @import "scss/50-vendor/slinky/10.jquery.slinky";
+// @import "scss/50-vendor/slinky/20.jquery.slinky.overrides";
+// @import "scss/50-vendor/jquery-ui/10.jquery-ui";
+// @import "scss/50-vendor/jquery-ui/30.jquery-ui.overrides";
+// @import "scss/50-vendor/unslider/variables";
+// @import "scss/50-vendor/unslider/unslider/reset";
+// @import "scss/50-vendor/unslider/unslider/dots";
+// @import "scss/50-vendor/unslider/unslider.overrides";
+// @import "scss/50-vendor/isotope/20.isotope.custom";
+// @import "scss/50-vendor/juxtapose/10.juxtapose";
+// @import "scss/50-vendor/juxtapose/20.juxtapose.overrides";
+// @import "scss/50-vendor/amtrak/amtrak.overrides";
+// @import "scss/50-vendor/amtrak/amtrak.jquery-ui.overrides";
+// @import "scss/50-vendor/slick/20.slick.custom";
 
-    @import "scss/41-components/card"; 
-    @import "scss/41-components/card-set"; 
-    
-    // @import "scss/50-vendor/datatables/10.datatables.edited"; // NOTE: edits include commenting out some rules
-    // @import "scss/50-vendor/datatables/20.datatables-overrides";
-    // @import "scss/50-vendor/datatables/30.responsive.datatables.edited"; // NOTE: edits include replacing color values with variables
-    // @import "scss/50-vendor/datatables/40.responsive.datatables-overrides";
-    // @import "scss/50-vendor/SelectBoxIt/10.selectBoxIt.edited"; // NOTE: some rules commented out; some overrides might be here instead of overrides file
-    // @import "scss/50-vendor/SelectBoxIt/20.selectBoxIt.overrides";
-    // @import "scss/50-vendor/SelectBoxIt/30.selectBoxIt.overrides.alt"; // NOTE: document use of "alt" when creating alternate versions
-    // @import "scss/50-vendor/SelectBoxIt/40.menu-wrapper";
-    // @import "scss/50-vendor/slinky/10.jquery.slinky";
-    // @import "scss/50-vendor/slinky/20.jquery.slinky.overrides";
-    // @import "scss/50-vendor/jquery-ui/10.jquery-ui";
-    // @import "scss/50-vendor/jquery-ui/30.jquery-ui.overrides";
-    // @import "scss/50-vendor/unslider/variables";
-    // @import "scss/50-vendor/unslider/unslider/reset";
-    // @import "scss/50-vendor/unslider/unslider/dots";
-    // @import "scss/50-vendor/unslider/unslider.overrides";
-    // @import "scss/50-vendor/isotope/20.isotope.custom";
-    // @import "scss/50-vendor/juxtapose/10.juxtapose";
-    // @import "scss/50-vendor/juxtapose/20.juxtapose.overrides";
-    // @import "scss/50-vendor/amtrak/amtrak.overrides";
-    // @import "scss/50-vendor/amtrak/amtrak.jquery-ui.overrides";
-    // @import "scss/50-vendor/slick/20.slick.custom";
+// @import "scss/40-objects/text/text-sizes";
+// @import "scss/40-objects/text/character-count";
+// @import "scss/40-objects/text/text";
+// @import "scss/40-objects/text/headings";
+// @import "scss/40-objects/text/count";
+// @import "scss/40-objects/text/results-count";
+// @import "scss/40-objects/media/img";
+// @import "scss/40-objects/media/map";
+// @import "scss/40-objects/media/image-block";
+// @import "scss/40-objects/media/logo";
+// @import "scss/40-objects/media/image-gallery";
+// @import "scss/40-objects/media/thumb";
+// @import "scss/40-objects/media/map-box";
+// @import "scss/40-objects/media/twitter-feed";
+// @import "scss/40-objects/lists/lists";
+// @import "scss/40-objects/lists/simple-list";
+// @import "scss/40-objects/lists/simple-list-block";
+// @import "scss/40-objects/lists/simple-list-group";
+// @import "scss/40-objects/lists/event-list";
+// @import "scss/40-objects/lists/social-list";
+// @import "scss/40-objects/lists/media-list";
+// @import "scss/40-objects/lists/list-icons";
+// @import "scss/40-objects/lists/search-results";
+// @import "scss/40-objects/lists/location-box";
+// @import "scss/40-objects/lists/video-list";
+// @import "scss/40-objects/lists/campaign-list";
+// @import "scss/40-objects/lists/link-list";
+// @import "scss/40-objects/forms/form-fields";
+// @import "scss/40-objects/forms/fieldsets";
+// @import "scss/40-objects/forms/input-group";
+// @import "scss/40-objects/forms/search-box";
+// @import "scss/40-objects/forms/dropdown-wrapper";
+// @import "scss/40-objects/forms/search-form";
+// @import "scss/40-objects/forms/form-step";
+// @import "scss/40-objects/forms/input-layered";
+// @import "scss/40-objects/forms/form-wrapper";
+// @import "scss/40-objects/nav/breadcrumbs";
+// @import "scss/40-objects/nav/nav-list";
+// @import "scss/40-objects/nav/wide-nav";
+// @import "scss/40-objects/nav/side-nav";
+// @import "scss/40-objects/nav/pagination";
+// @import "scss/40-objects/tables/table-wrapper";
+// @import "scss/40-objects/tables/tables";
+// @import "scss/40-objects/tables/table-closures";
+// @import "scss/40-objects/heroine/heroine";
+// @import "scss/40-objects/menus/location-picker";
+// @import "scss/40-objects/tabs";
+// @import "scss/40-objects/iframe";
+// @import "scss/40-objects/modal";
+// @import "scss/40-objects/steps";
+// @import "scss/40-objects/cart";
+// @import "scss/40-objects/social-box";
+// @import "scss/40-objects/shapes";
+// @import "scss/40-objects/ico-box";
+// @import "scss/40-objects/scroll-box";
 
-    // @import "scss/40-objects/text/text-sizes";
-    // @import "scss/40-objects/text/character-count";
-    // @import "scss/40-objects/text/text";
-    // @import "scss/40-objects/text/headings";
-    // @import "scss/40-objects/text/count";
-    // @import "scss/40-objects/text/results-count";
-    // @import "scss/40-objects/media/img";
-    // @import "scss/40-objects/media/video";
-    // @import "scss/40-objects/media/map";
-    // @import "scss/40-objects/media/image-block";
-    // @import "scss/40-objects/media/logo";
-    // @import "scss/40-objects/media/image-gallery";
-    // @import "scss/40-objects/media/thumb";
-    // @import "scss/40-objects/media/map-box";
-    // @import "scss/40-objects/media/twitter-feed";
-    // @import "scss/40-objects/lists/lists";
-    // @import "scss/40-objects/lists/simple-list";
-    // @import "scss/40-objects/lists/simple-list-block";
-    // @import "scss/40-objects/lists/simple-list-group";
-    // @import "scss/40-objects/lists/event-list";
-    // @import "scss/40-objects/lists/social-list";
-    // @import "scss/40-objects/lists/media-list";
-    // @import "scss/40-objects/lists/list-icons";
-    // @import "scss/40-objects/lists/search-results";
-    // @import "scss/40-objects/lists/location-box";
-    // @import "scss/40-objects/lists/video-list";
-    // @import "scss/40-objects/lists/campaign-list";
-    // @import "scss/40-objects/lists/link-list";
-    // @import "scss/40-objects/forms/form-fields";
-    // @import "scss/40-objects/forms/fieldsets";
-    // @import "scss/40-objects/forms/input-group";
-    // @import "scss/40-objects/forms/search-box";
-    // @import "scss/40-objects/forms/dropdown-wrapper";
-    // @import "scss/40-objects/forms/search-form";
-    // @import "scss/40-objects/forms/form-step";
-    // @import "scss/40-objects/forms/input-layered";
-    // @import "scss/40-objects/forms/form-wrapper";
-    // @import "scss/40-objects/nav/breadcrumbs";
-    // @import "scss/40-objects/nav/nav-list";
-    // @import "scss/40-objects/nav/wide-nav";
-    // @import "scss/40-objects/nav/side-nav";
-    // @import "scss/40-objects/nav/pagination";
-    // @import "scss/40-objects/tables/table-wrapper";
-    // @import "scss/40-objects/tables/tables";
-    // @import "scss/40-objects/tables/table-closures";
-    // @import "scss/40-objects/heroine/heroine";
-    // @import "scss/40-objects/menus/location-picker";
-    // @import "scss/40-objects/tabs";
-    // @import "scss/40-objects/iframe";
-    // @import "scss/40-objects/modal";
-    // @import "scss/40-objects/steps";
-    // @import "scss/40-objects/cart";
-    // @import "scss/40-objects/social-box";
-    // @import "scss/40-objects/shapes";
-    // @import "scss/40-objects/ico-box";
-    // @import "scss/40-objects/scroll-box";
+// utility
 
-  // utility
-
-    // helpers
-
-    @import "scss/17-utility/icon-modifiers";
-    @import "scss/17-utility/visibility";
-    @import "scss/17-utility/utility";
-    @import "scss/17-utility/lists";
-    @import "scss/17-utility/bg-colors";
-    @import "scss/17-utility/bg-img";
-    @import "scss/17-utility/text-colors";
-    @import "scss/17-utility/spacing";
-    @import "scss/17-utility/media";
-    @import "scss/17-utility/display";
-    @import "scss/17-utility/fonts";
+@import "scss/17-utility/icon-modifier";
+@import "scss/17-utility/visibility";
+@import "scss/17-utility/utility";
+@import "scss/17-utility/list";
+@import "scss/17-utility/bg-color";
+@import "scss/17-utility/bg-img";
+@import "scss/17-utility/text-color";
+@import "scss/17-utility/spacing";
+@import "scss/17-utility/media";
+@import "scss/17-utility/display";
+@import "scss/17-utility/font";
 
 // to be migrated to pl-specific stylesheet
 
-  // palette
-
-  @import "scss/80-to-be-migrated/palette";
+@import "scss/80-to-be-migrated/palette";

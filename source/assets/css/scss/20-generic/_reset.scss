@@ -1,0 +1,61 @@
+/*
+ * base / reset
+ */
+
+html {
+
+  box-sizing: border-box;
+
+}
+
+*,
+*:before,
+*:after {
+
+  box-sizing: inherit;
+
+}
+
+header,
+footer,
+nav,
+section,
+article,
+figure,
+picture,
+iframe {
+
+	display: block;
+
+}
+
+html,
+body,
+div,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+li,
+form,
+legend,
+label, 
+table,
+header,
+footer,
+nav,
+section,
+figure {
+
+	margin: 0;
+	padding: 0;
+
+}

@@ -1,0 +1,34 @@
+//
+// fonts
+//
+
+$font-family-cabin :        'Cabin', sans-serif;
+$font-cabin :               normal normal normal 100%/1.5 $font-family-cabin;
+
+$font-family-open-sans :    'Open Sans', sans-serif;
+$font-open-sans :           normal normal normal 100%/1.5 $font-family-open-sans;
+
+
+//////////
+
+
+// font families
+
+$font-normal-family : 'TransportNewLight_gdi', Helvetica, Arial, sans-serif;
+$font-medium-family : 'TransportNewMedium_gdi', Helvetica, Arial, sans-serif;
+$font-heavy-family :  'TransportNewHeavy_gdi', Helvetica, Arial, sans-serif;
+$font-italic-family : 'Georgia', serif;
+
+// font shorthands
+
+$font :        normal normal normal 100%/1.5 $font-normal-family;
+$font-light :  $font;
+
+// use built-in italicization in web font, hence use of 'normal' in the value
+
+$font-medium : normal normal normal 100%/1.5 $font-medium-family;
+$font-heavy :  normal normal normal 100%/1.5 $font-heavy-family;
+
+// since Georgia is a system font, use of 'italic' in value makes is OK */
+
+$font-italic : italic normal normal 100%/1.5 $font-italic-family;

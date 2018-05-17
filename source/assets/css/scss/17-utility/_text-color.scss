@@ -1,0 +1,63 @@
+/*
+ * utility / text colors
+ */
+
+.u-c-blue-saphire {
+
+  @include custom-property(color, --color-blue-saphire, $color-blue-saphire);
+
+}
+
+.u-c-french-blue {
+
+  @include custom-property(color, --color-french-blue, $color-french-blue);
+
+}
+
+.u-c-pale-aqua {
+
+  @include custom-property(color, --color-pale-aqua, $color-pale-aqua);
+
+}
+
+.u-c-deep-aqua {
+
+  @include custom-property(color, --color-deep-aqua, $color-deep-aqua);
+
+}
+
+.u-c-mikado-yellow {
+
+  @include custom-property(color, --color-mikado-yellow, $color-mikado-yellow);
+
+}
+
+.u-c-carmine-pink {
+
+  @include custom-property(color, --color-carmine-pink, $color-carmine-pink);
+
+}
+
+.u-c-burnt-orange {
+
+  @include custom-property(color, --color-burnt-orange, $color-burnt-orange);
+
+}
+
+.u-c-rare-black {
+
+  @include custom-property(color, --color-rare-black, $color-rare-black);
+
+}
+
+.u-c-light-gray {
+
+  @include custom-property(color, --color-light-gray, $color-light-gray);
+
+}
+
+.u-c-soft-white {
+
+  @include custom-property(color, --color-soft-white, $color-soft-white);
+
+}

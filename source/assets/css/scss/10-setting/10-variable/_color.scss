@@ -1,0 +1,145 @@
+//
+// colors
+//
+
+// color palette
+
+$color-blue-saphire :         #1A546B; 
+$color-french-blue :          #0071BC; 
+$color-pale-aqua :            #BED9F6; 
+$color-deep-aqua :            #92c6fe; 
+$color-mikado-yellow :        #FECD0D; 
+$color-carmine-pink :         #F13741; 
+$color-burnt-orange :         #ff5b06; 
+$color-rare-black :           #343434; 
+$color-light-gray :           #D0D4E0; 
+$color-soft-white :           #fafafa; 
+
+// button
+
+$btn-text-color :          $color-soft-white; 
+$btn-bg-color :            $color-blue-saphire; 
+$btn-hover-text-color :    $color-soft-white; 
+$btn-hover-bg-color :      $color-french-blue; 
+
+$btn-disabled-text-color : rgb(230, 236, 238); // no RGBA/opacity so button display is consistent when overlaying various colors/images
+$btn-disabled-bg-color :   rgb(87, 127, 144);  // no RGBA/opacity so button display is consistent when overlaying various colors/images
+
+// button light 
+
+$btn-light-text-color :          $color-blue-saphire; 
+$btn-light-bg-color :            $color-pale-aqua; 
+$btn-light-hover-text-color :    $color-blue-saphire; 
+$btn-light-hover-bg-color :      $color-deep-aqua; 
+
+$btn-light-disabled-text-color : rgba(87, 127, 144, .8); 
+$btn-light-disabled-bg-color :   $color-pale-aqua; 
+
+// button secondary
+
+$btn-secondary-text-color :          $color-soft-white; 
+$btn-secondary-bg-color :            $color-carmine-pink; 
+$btn-secondary-hover-text-color :    $color-soft-white; 
+$btn-secondary-hover-bg-color :      $color-burnt-orange; 
+
+$btn-secondary-disabled-text-color : rgb(230, 236, 238); 
+$btn-secondary-disabled-bg-color :   #f86f72; 
+
+// button secondary light
+
+$btn-secondary-light-text-color :          #bc0711; 
+$btn-secondary-light-bg-color :            #ffa8aa; 
+$btn-secondary-light-hover-text-color :    #bc0711; 
+$btn-secondary-light-hover-bg-color :      #f3999b; 
+
+$btn-secondary-light-disabled-text-color : rgb(230, 236, 238);
+$btn-secondary-light-disabled-bg-color :   #f3999b; 
+
+// button general
+
+$btn-focus-outline-color : $color-light-gray; // used for all buttons styles
+
+
+
+
+$link-color :               $color-blue-saphire; 
+$link-color-hover :         $color-french-blue; 
+
+
+
+
+
+
+
+
+
+
+///////////////////
+
+
+// core palette
+
+$core-black :               rgb(11, 12, 12);    // #0B0C0C
+$core-blue :                rgb(9, 41, 64);     // #092940
+$core-gray :                rgb(95, 108, 123);  // #5F6C7B
+$core-light-gray :          rgb(149, 160, 173); // #95A0AD
+$core-off-white :           rgb(236, 240, 243); // #ECF0F3
+$core-white :               rgb(255, 255, 255); // #FFFFFF
+
+$core-black-hex :           #0B0C0C;
+
+// accent palette
+
+$accent-cool-gray :         rgb(106, 118, 129); // #6A7681
+$accent-warm-gray :         rgb(117, 117, 117); // #757575
+$accent-light-blue :        rgb(63, 125, 151);  // #3F7D97
+$accent-blue :              rgb(57, 122, 172);  // #397AAC #4c7c95
+$accent-indigo :            rgb(0, 55, 109);    // #00376D
+$accent-deep-purple :       rgb(102, 46, 107);  // #662E6B
+$accent-purple :            rgb(112, 28, 69);   // #701C45
+$accent-red :               rgb(168, 51, 56);   // #A83338
+$accent-orange :            rgb(192, 84, 17);   // #C05411
+$accent-olive :             rgb(154, 111, 9);   // #9A6F09
+$accent-green :             rgb(88, 128, 35);   // #588023
+$accent-turquoise :         rgb(60, 128, 125);  // #3C807D
+$accent-turquoise-light :   rgb(76, 148, 144);  // #4c9490
+$accent-turquoise-dark :    rgb(35, 95, 93);    // #245f5d
+
+// notification palette -- reuses colors from accent palette
+
+$note-blue :                $accent-blue;
+$note-green :               $accent-green;
+$note-orange :              $accent-orange;
+$note-red :                 $accent-red;
+
+// generic
+
+$white :                    $core-white;
+$black :                    $core-black;
+
+$dark-gray :                $core-gray;
+$medium-gray :              $core-light-gray;
+$light-gray :               $core-off-white;
+
+$default-text-color :       $black;
+$link-color :               $accent-blue;
+$link-hover-color :         #3389cc; // This value should be in a variable
+
+$success-color :            $note-green;
+$error-color :              $note-red;
+$error-bg-color :           #f7e3e4; // This was taken from a current NC site; this should be refactored to use one of the existing colors
+
+// third-party colors
+
+$facebook-color :           #3b5998;
+$twitter-color :            #1da1f3;
+
+$instagram-color :          linear-gradient(-135deg, rgba(20,0,200,1), rgba(185,0,180, 1), rgba(245,0,0,1)); // #1400c8,#b900b4,#f50000
+$instagram-color-trans :    linear-gradient(-135deg, rgba(20,0,200,.5), rgba(185,0,180, .5), rgba(245,0,0,.5));
+$instagram-color-dark :     #242020; // color used for dark glyph icon -- https://en.instagram-brand.com/assets
+
+$flickr-color:              #151517; // hex equivalent of rgba(21,21,23,.95);
+
+// unique colors -- maybe we can update to use existing color palette?
+
+$side-nav-indented-bg-color : #051825; 

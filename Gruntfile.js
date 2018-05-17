@@ -143,7 +143,8 @@ module.exports = function (grunt) {
               '**/*.jpg',
               '**/*.gif',
               '**/*.jpeg',
-              '**/*.svg'
+              '**/*.svg', 
+              '**/*.webp'
             ], dest: path.resolve(paths().public.images) },
             
           { expand: true, cwd: path.resolve(paths().source.video),

@@ -14,9 +14,10 @@
 
   &__box {
 
+    height: 100%; /* gives consistent visual heights, specifically for <textarea> demo */
     padding: 1rem;
     border: 1px solid $color-light-gray;
-  
+    
     &--heading {
 
       // display: grid; 
@@ -67,6 +68,14 @@
     }
 
     &--icon {
+
+      padding-bottom: 1rem; 
+      border-bottom: 1px solid $color-light-gray; 
+      margin-bottom: 1rem; 
+
+    }
+
+    &--form-element {
 
       padding-bottom: 1rem; 
       border-bottom: 1px solid $color-light-gray; 
@@ -189,6 +198,19 @@
 
     @include grid(false, 1rem, repeat(auto-fill, minmax(190px, 1fr)), auto); 
     
+  }
+
+  &--form-elements {
+
+    /*  */
+
+    @include grid(false, 1rem, repeat(auto-fill, minmax(100%, 1fr)), auto); 
+
+    @include sb-media(18.75em) {
+
+      @include grid(false, 1rem, repeat(auto-fill, minmax(300px, 1fr)), auto); 
+
+    }
   }
 
 }

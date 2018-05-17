@@ -1,0 +1,59 @@
+{{# table }}
+
+<table class="{{ class }}" id="{{ id }}">
+
+  {{# thead }}
+
+  <thead>
+
+    {{# row }}
+
+    <tr>
+
+      {{# cell }}
+
+      <th class="{{ class }}" scope="col">
+      
+        {{ content }}
+
+      </th>
+
+      {{/ cell }}
+
+    </tr>
+
+    {{/ row }}
+
+  </thead>
+
+  {{/ thead }}
+
+  {{# tbody }}
+
+  <tbody>
+
+    {{# row }}
+
+    <tr>
+
+      {{# cell }}
+
+      <td class="{{ class }}" colspan="{{ colspan }}">
+
+        {{ content }}
+
+      </td>
+
+      {{/ cell }}
+
+    </tr>
+
+    {{/ row }}
+
+  </tbody>
+
+  {{/ tbody }}
+
+</table>
+
+{{/ table }}

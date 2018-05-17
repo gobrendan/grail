@@ -1,0 +1,200 @@
+//
+// headings
+//
+
+%heading {
+
+  font-family: $font-medium-family;
+  margin: 1rem 0;
+
+}
+
+%heading--alpha {
+
+  font-size: $font-size--alpha-small;
+  color: $core-blue;
+  line-height: 1.25;
+  margin: 0 auto 1.875rem;
+
+  @include sb-media($medium-breakpoint) {
+
+    font-size: $font-size--alpha-medium;
+
+  }
+
+  @include sb-media($large-breakpoint) {
+
+    font-size: $font-size--alpha;
+
+  }
+
+}
+
+%heading--beta {
+
+  font-size: $font-size--beta-small;
+  color: $core-blue;
+  margin: 1em 0; 
+
+  @include sb-media($medium-breakpoint) {
+
+    font-size: $font-size--beta-medium;
+
+  }
+
+  @include sb-media($large-breakpoint) {
+
+    font-size: $font-size--beta;
+
+  }
+
+}
+
+%heading--gamma {
+
+  font-size: $font-size--gamma-small;
+  color: $core-blue;
+  margin: 1em 0; 
+
+  @include sb-media($medium-breakpoint) {
+
+    font-size: $font-size--gamma-medium;
+
+  }
+
+  @include sb-media($large-breakpoint) {
+
+    font-size: $font-size--gamma;
+
+  }
+
+}
+
+%heading--delta {
+
+  font-size: $font-size--delta-small;
+  margin: 1em 0;
+  color: $black; 
+
+  @include sb-media($medium-breakpoint) {
+
+    font-size: $font-size--delta-medium;
+
+  }
+
+  @include sb-media($large-breakpoint) {
+
+    font-size: $font-size--delta;
+
+  }
+
+}
+
+%heading--epsilon {
+
+  font-size: $font-size--epsilon-small;
+  margin: 1em 0;
+  color: $black; 
+
+  @include sb-media($medium-breakpoint) {
+
+    font-size: $font-size--epsilon-medium;
+
+  }
+
+  @include sb-media($large-breakpoint) {
+
+    font-size: $font-size--epsilon;
+
+  }
+
+}
+
+%heading--zeta {
+
+  font-size: $font-size--zeta-small;
+  margin: 1em 0;
+  color: $black; 
+
+  @include sb-media($medium-breakpoint) {
+
+    font-size: $font-size--zeta-medium;
+
+  }
+
+  @include sb-media($large-breakpoint) {
+
+    font-size: $font-size--zeta;
+
+  }
+
+}
+
+%page-title {
+
+  width: 100%;
+  max-width: $component-max-width;
+  padding: 0 $page-side-padding; 
+  margin: 0 auto 1.875rem;
+  // color: green !important; 
+
+  &:after {
+
+    content: "";
+    display: block;
+    background-color: $accent-blue;
+    margin-top: 1.3125rem;
+    height: .625rem;
+
+  }
+
+  &--no-padding {
+
+    padding: 0; /* NOTE: useful when the page title is included within a "page-content__item" wrapper (i.e., the Be Rail Safe pages) */
+
+  }
+
+  @include sb-media($medium-breakpoint) {
+
+    margin: 0 auto 3.75rem;
+
+    &:after {
+
+      width: 50%; 
+
+    }
+
+  }
+
+  @include sb-media($large-breakpoint) {
+
+    //
+
+    &:after {
+
+      width: 260px;
+
+    }
+
+  }
+  
+}
+
+%section-title {
+
+  font-size: $font-size--gamma-small;
+  margin: 0 auto 1.875rem;
+  max-width: 72rem; /* NOTE: value should be in variable -- mimics ".page-layout__section--inner" */
+  // color: red !important; 
+
+  &:after {
+
+    content: "";
+    display: block;
+    height: 0;
+    border-bottom: .25rem solid; 
+    margin-top: .625rem;
+
+  }
+
+}

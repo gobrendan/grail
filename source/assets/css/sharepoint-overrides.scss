@@ -4,25 +4,25 @@
 
 // variables
 
-@import "scss/00-variables/breakpoints";
-@import "scss/00-variables/colors";
-@import "scss/00-variables/IE-targeting";
-@import "scss/00-variables/fonts";
-@import "scss/00-variables/numeric";
-@import "scss/00-variables/text";
+@import "scss/10-setting/10-variable/breakpoint";
+@import "scss/10-setting/10-variable/color";
+@import "scss/10-setting/10-variable/IE-targeting";
+@import "scss/10-setting/10-variable/font";
+@import "scss/10-setting/10-variable/numeric";
+@import "scss/10-setting/10-variable/text";
 
 // mixins
 
-@import "scss/10-mixins/font-face";
-@import "scss/10-mixins/media-query";
-@import "scss/10-mixins/media-query-ie-10-plus";
-@import "scss/10-mixins/media-query-firefox";
-@import "scss/10-mixins/vertical-align";
+@import "scss/20-tool/10-mixin/font-face";
+@import "scss/20-tool/10-mixin/media-query";
+@import "scss/20-tool/10-mixin/media-query-ie-10-plus";
+@import "scss/20-tool/10-mixin/media-query-firefox";
+@import "scss/20-tool/10-mixin/vertical-align";
 
 // placeholders
 
-@import "scss/15-placeholders/headings";
-@import "scss/15-placeholders/text";
+@import "scss/20-tool/20-placeholder/heading";
+@import "scss/20-tool/20-placeholder/text";
 
 /*
  * General
