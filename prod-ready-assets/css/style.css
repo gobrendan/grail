@@ -426,6 +426,9 @@ fieldset {
   border: 0;
   margin: 0 0 .5rem;
 }
+fieldset:last-child {
+  margin: 0;
+}
 
 /*
  * label
@@ -635,11 +638,6 @@ button {
 .gr-c-btn:focus {
   outline: 2px solid #D0D4E0;
 }
-.gr-c-btn:visited {
-  color: white;
-  background: #092940;
-  border: 2px solid #092940;
-}
 .gr-c-btn:disabled, .gr-c-btn:disabled:hover, .gr-c-btn--disabled, .gr-c-btn--disabled:hover {
   color: #e6ecee;
   background-color: #577f90;
@@ -680,89 +678,6 @@ button {
 .gr-c-btn--secondary.gr-c-btn--light:disabled, .gr-c-btn--secondary.gr-c-btn--light:disabled:hover, .gr-c-btn--secondary.gr-c-btn--light.gr-c-btn--disabled, .gr-c-btn--secondary.gr-c-btn--light.gr-c-btn--disabled:hover {
   color: #e6ecee;
   background-color: #f3999b;
-}
-
-/*
- * button group
- */
-.btn-group {
-  text-align: center;
-  margin: 2rem 0;
-  /* NOTE: we might want to refactor or add a new class name for the toggle, specifically the hide/show media query -- some toggles might be OK for smaller screens */
-}
-.btn-group__icon {
-  font-size: 1.5rem;
-  display: inline-block;
-  vertical-align: middle;
-}
-.btn-group .btn {
-  display: inline-block;
-  border-right-width: 0;
-  border-radius: 0;
-}
-.btn-group .btn:not(:first-child) {
-  margin-left: -8px;
-  /* NOTE: this account for the extra space in between "inline-block" elements */
-}
-.btn-group .btn:first-child {
-  border-top-left-radius: 4px;
-  /* NOTE: this value should be in a variable */
-  border-bottom-left-radius: 4px;
-  /* NOTE: this value should be in a variable */
-}
-.btn-group .btn:last-child {
-  border-top-right-radius: 4px;
-  /* NOTE: this value should be in a variable */
-  border-bottom-right-radius: 4px;
-  /* NOTE: this value should be in a variable */
-  border-right-width: 2px;
-  /* NOTE: this value should be in a variable */
-}
-.btn-group--bordered {
-  padding-bottom: 2.5rem;
-  border-bottom: 1px solid #95a0ad;
-}
-.btn-group--spaced:before, .btn-group--spaced:after {
-  content: " ";
-  display: table;
-}
-.btn-group--spaced:after {
-  clear: both;
-}
-.btn-group--spaced .btn {
-  display: block;
-  float: left;
-  margin: 0 .5rem 0 0;
-  /* NOTE: margin matches Isotope component -- perhaps that value should be put in a variable */
-  border-right-width: 2px;
-  /* NOTE: we might want a variable for the border width value */
-  border-radius: 4px;
-}
-.btn-group--spaced .btn:first-child, .btn-group--spaced .btn:last-child {
-  border-radius: 4px;
-}
-.btn-group--spaced .btn:not(:first-child) {
-  margin-left: 0;
-}
-.btn-group--no-wrap {
-  text-align: left;
-  white-space: nowrap;
-}
-.btn-group--no-wrap .btn {
-  display: inline-block;
-  /* NOTE: overrides "--spaced" display declaration when both classes are used */
-  float: none;
-  /* NOTE: overrides "--spaced" float declaration when both classes are used */
-}
-.btn-group--toggle {
-  display: none;
-  /* NOTE: generally not necessary for smaller screens -- no need to toggle a grid layout on smaller screens */
-  margin: 0 0 1.875rem;
-}
-@media (min-width: 48em) {
-  .btn-group--toggle {
-    display: block;
-  }
 }
 
 /*
@@ -907,6 +822,61 @@ input[type=number]::-webkit-outer-spin-button {
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button {
   display: none;
+}
+
+/*
+ * form
+ */
+.gr-c-form__item {
+  margin: 0;
+  /* overrides default 'fieldset' margin -- rely on 'grid-gap' instead */
+}
+.gr-c-form__item--fill {
+  grid-column: span 3;
+}
+.gr-c-form__item--check {
+  position: relative;
+  padding-left: 1rem;
+}
+.gr-c-form__item--check input[type=checkbox] {
+  position: absolute;
+  left: 0;
+  top: .4rem;
+}
+.gr-c-form__item--btn {
+  text-align: right;
+}
+.gr-c-form--signup {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: inherit;
+}
+.gr-c-form--signup .gr-c-form__item--fill {
+  grid-column: inherit;
+}
+@media (min-width: 30em) {
+  .gr-c-form--signup {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gr-c-form--signup .gr-c-form__item--fill {
+    grid-column: span 2;
+  }
+}
+.gr-c-form--payment {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: inherit;
+}
+.gr-c-form--payment .gr-c-form__item--fill {
+  grid-column: inherit;
+}
+@media (min-width: 30em) {
+  .gr-c-form--payment {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .gr-c-form--payment .gr-c-form__item--fill {
+    grid-column: span 3;
+  }
 }
 
 /*

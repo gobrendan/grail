@@ -50,7 +50,7 @@
 // placeholder
 
 @import "scss/20-tool/20-placeholder/general";
-@import "scss/20-tool/20-placeholder/heading";
+// @import "scss/20-tool/20-placeholder/heading";
 @import "scss/20-tool/20-placeholder/text";
 @import "scss/20-tool/20-placeholder/form";
 @import "scss/20-tool/20-placeholder/list";
@@ -102,11 +102,12 @@
 
 @import "scss/60-component/heading"; 
 @import "scss/60-component/button"; 
-@import "scss/60-component/button-set"; 
+// @import "scss/60-component/button-set"; 
 @import "scss/60-component/card"; 
 @import "scss/60-component/card-set"; 
-@import "scss/60-component/video";
-@import "scss/60-component/text-input";
+@import "scss/60-component/video"; 
+@import "scss/60-component/text-input"; 
+@import "scss/60-component/form"; 
 
 // @import "scss/60-component/10-vendor/datatables/10.datatables.edited"; // NOTE: edits include commenting out some rules
 // @import "scss/60-component/10-vendor/datatables/20.datatables-overrides";

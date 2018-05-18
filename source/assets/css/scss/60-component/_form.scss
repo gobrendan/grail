@@ -1,0 +1,114 @@
+/*
+ * form
+ */
+
+.gr-c-form {
+
+  //
+
+  &__item {
+
+    margin: 0; /* overrides default 'fieldset' margin -- rely on 'grid-gap' instead */
+
+    &--fill {
+
+      grid-column: span 3;
+
+    } 
+
+    &--check {
+
+      position: relative; 
+      padding-left: 1rem; 
+
+      input[type=checkbox] {
+
+        position: absolute; 
+        left: 0; 
+        top: .4rem; 
+
+      }
+
+    }
+
+    &--btn {
+
+      text-align: right; 
+
+    }
+
+  }
+
+  &--signup {
+
+    @include grid(false, 1.5rem, inherit, auto); 
+
+    .gr-c-form__item {
+
+      //
+
+      &--fill {
+
+        grid-column: inherit;
+
+      }
+
+    }
+
+    @include mq(30em) {
+
+      grid-template-columns: repeat(2, 1fr);
+
+      .gr-c-form__item {
+
+        //
+  
+        &--fill {
+  
+          grid-column: span 2;
+  
+        }
+        
+      }
+
+    }
+
+  }
+
+  &--payment { 
+
+    @include grid(false, 1.5rem, inherit, auto); 
+
+    .gr-c-form__item {
+
+      //
+
+      &--fill {
+
+        grid-column: inherit;
+
+      }
+
+    }
+
+    @include mq(30em) {
+
+      grid-template-columns: repeat(3, 1fr);
+
+      .gr-c-form__item {
+
+        //
+  
+        &--fill {
+  
+          grid-column: span 3;
+  
+        }
+        
+      }
+
+    }
+
+  }
+
+}

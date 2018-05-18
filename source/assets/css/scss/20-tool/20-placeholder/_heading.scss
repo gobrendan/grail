@@ -16,13 +16,13 @@
   line-height: 1.25;
   margin: 0 auto 1.875rem;
 
-  @include sb-media($medium-breakpoint) {
+  @include mq($medium-breakpoint) {
 
     font-size: $font-size--alpha-medium;
 
   }
 
-  @include sb-media($large-breakpoint) {
+  @include mq($large-breakpoint) {
 
     font-size: $font-size--alpha;
 
@@ -36,13 +36,13 @@
   color: $core-blue;
   margin: 1em 0; 
 
-  @include sb-media($medium-breakpoint) {
+  @include mq($medium-breakpoint) {
 
     font-size: $font-size--beta-medium;
 
   }
 
-  @include sb-media($large-breakpoint) {
+  @include mq($large-breakpoint) {
 
     font-size: $font-size--beta;
 
@@ -56,13 +56,13 @@
   color: $core-blue;
   margin: 1em 0; 
 
-  @include sb-media($medium-breakpoint) {
+  @include mq($medium-breakpoint) {
 
     font-size: $font-size--gamma-medium;
 
   }
 
-  @include sb-media($large-breakpoint) {
+  @include mq($large-breakpoint) {
 
     font-size: $font-size--gamma;
 
@@ -76,13 +76,13 @@
   margin: 1em 0;
   color: $black; 
 
-  @include sb-media($medium-breakpoint) {
+  @include mq($medium-breakpoint) {
 
     font-size: $font-size--delta-medium;
 
   }
 
-  @include sb-media($large-breakpoint) {
+  @include mq($large-breakpoint) {
 
     font-size: $font-size--delta;
 
@@ -96,13 +96,13 @@
   margin: 1em 0;
   color: $black; 
 
-  @include sb-media($medium-breakpoint) {
+  @include mq($medium-breakpoint) {
 
     font-size: $font-size--epsilon-medium;
 
   }
 
-  @include sb-media($large-breakpoint) {
+  @include mq($large-breakpoint) {
 
     font-size: $font-size--epsilon;
 
@@ -116,13 +116,13 @@
   margin: 1em 0;
   color: $black; 
 
-  @include sb-media($medium-breakpoint) {
+  @include mq($medium-breakpoint) {
 
     font-size: $font-size--zeta-medium;
 
   }
 
-  @include sb-media($large-breakpoint) {
+  @include mq($large-breakpoint) {
 
     font-size: $font-size--zeta;
 
@@ -154,7 +154,7 @@
 
   }
 
-  @include sb-media($medium-breakpoint) {
+  @include mq($medium-breakpoint) {
 
     margin: 0 auto 3.75rem;
 
@@ -166,7 +166,7 @@
 
   }
 
-  @include sb-media($large-breakpoint) {
+  @include mq($large-breakpoint) {
 
     //
 

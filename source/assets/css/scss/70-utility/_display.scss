@@ -16,7 +16,7 @@
     
     display: none;
     
-    @include sb-media($medium-breakpoint) {
+    @include mq($medium-breakpoint) {
       
       display: block;
     

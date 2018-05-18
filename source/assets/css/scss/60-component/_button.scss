@@ -19,39 +19,38 @@ button {
 
 .gr-c-btn {
 
-  display:            inline-block; 
-  font-size:          .9rem; 
-  font-weight:        bold; 
-  @include            custom-property(color, --btn-text-color, $btn-text-color);
-  @include            custom-property(background-color, --btn-bg-color, $btn-bg-color);
-  padding:            $btn-padding; 
-  border-radius:      .25rem;
-  text-decoration:    none; 
-  text-transform:     uppercase; 
-  transition:         $btn-transition; 
-  letter-spacing:     $btn-letter-spacing; 
-  cursor:             pointer; /* useful for <button> and <input type='submit'> elements */
+  display:              inline-block; 
+  font-size:            .9rem; 
+  font-weight:          bold; 
+  @include              custom-property(color, --btn-text-color, $btn-text-color);
+  @include              custom-property(background-color, --btn-bg-color, $btn-bg-color);
+  padding:              $btn-padding; 
+  border-radius:        .25rem;
+  text-decoration:      none; 
+  text-transform:       uppercase; 
+  transition:           $btn-transition; 
+  letter-spacing:       $btn-letter-spacing; 
+  cursor:               pointer; /* useful for <button> and <input type='submit'> elements */
 
   &:hover {
     
-    color:            $btn-hover-text-color;
-    background:       $btn-hover-bg-color;
-    text-decoration:  none; 
+    color:              $btn-hover-text-color;
+    background:         $btn-hover-bg-color;
+    text-decoration:    none; 
 
   }
 
   &:focus {
 
-    outline:          $btn-focus-outline-width solid $btn-focus-outline-color; 
+    outline:            $btn-focus-outline-width solid $btn-focus-outline-color; 
 
   }
 
   &:visited { 
 
-    color:            $core-white;
-    background:       $core-blue;
-    border:           2px solid $core-blue;
-
+    // @include            custom-property(color, --btn-text-color, $btn-text-color);
+    // @include            custom-property(background-color, --btn-bg-color, $btn-bg-color);
+  
   } 
 
   &:disabled, 
@@ -59,8 +58,8 @@ button {
   &--disabled, 
   &--disabled:hover {
 
-    color: $btn-disabled-text-color; 
-    background-color: $btn-disabled-bg-color; 
+    color:              $btn-disabled-text-color; 
+    background-color:   $btn-disabled-bg-color; 
     cursor: default; 
 
   }
@@ -88,7 +87,7 @@ button {
     &.gr-c-btn--disabled, 
     &.gr-c-btn--disabled:hover {
 
-      color: $btn-light-disabled-text-color; 
+      color:            $btn-light-disabled-text-color; 
       background-color: $btn-light-disabled-bg-color; 
   
     }
@@ -118,20 +117,20 @@ button {
     &.gr-c-btn--disabled, 
     &.gr-c-btn--disabled:hover {
 
-      color: $btn-secondary-disabled-text-color; 
+      color:            $btn-secondary-disabled-text-color; 
       background-color: $btn-secondary-disabled-bg-color; 
   
     }
 
     &.gr-c-btn--light {
 
-      color:              $btn-secondary-light-text-color; 
-      background-color:   $btn-secondary-light-bg-color; 
+      color:            $btn-secondary-light-text-color; 
+      background-color: $btn-secondary-light-bg-color; 
   
       &:hover {
   
-        color:            $btn-secondary-light-hover-text-color; 
-        background:       $btn-secondary-light-hover-bg-color; 
+        color:          $btn-secondary-light-hover-text-color; 
+        background:     $btn-secondary-light-hover-bg-color; 
   
       }
   
@@ -146,7 +145,7 @@ button {
       &.gr-c-btn--disabled, 
       &.gr-c-btn--disabled:hover {
   
-        color: $btn-secondary-light-disabled-text-color; 
+        color:            $btn-secondary-light-disabled-text-color; 
         background-color: $btn-secondary-light-disabled-bg-color; 
     
       }

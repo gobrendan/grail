@@ -1,17 +1,15 @@
 //
 // media query
 //
-// demo:
-//
 // .box {
 //   width: auto;
-//   @include sb-media(30em) {
+//   @include mq(30em) {
 //     width: 50%;
 //   }
 // }
 //
 
-@mixin sb-media($query) {
+@mixin mq($query) {
 
   @media ('min-width:' + $query) {
 
