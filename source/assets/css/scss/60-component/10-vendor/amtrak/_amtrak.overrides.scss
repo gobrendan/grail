@@ -1,0 +1,1000 @@
+/*
+ * Amtrak widget overrides -- default CSS is dynamically appended to the <head> via Amtrak's API (from its JS file)
+ */
+
+/* NOTE: nesting these rules for increased specificity */
+
+#farefinder,
+#trainstatus {
+
+  font-size: $font-size--eta;
+  padding: 0;
+
+  div.cds_ff_outer {
+
+    padding: 0;
+
+  }
+
+  div.cds_ts_outer {
+
+    //
+
+  }
+
+  div.cds_ff_origin span.cds_ff_field_origin,
+  div.cds_ff_destination span.cds_ff_field_destination {
+
+    padding: 0;
+
+  }
+
+  input.cds_ff_field_origin,
+  input.cds_ff_field_destination {
+
+    @extend %text_input;
+    padding: 5px !important;
+
+  }
+
+  input.cds_ff_field_depart_date_1 {
+
+    @extend %text_input;
+    padding: 5px !important;
+
+  }
+
+  div.cds_ff_trip_type {
+
+    margin: 0 0 1rem;
+
+  }
+
+  a {
+
+    color: $white;
+    text-decoration: underline;
+
+    &:hover {
+
+      color: white;
+      text-decoration: none;
+
+    }
+
+  }
+
+  label {
+
+    font-weight: bold;
+    padding: 0;
+    margin: 0 0 2px;
+
+  }
+
+  .tabs & {
+
+    padding: 0;
+
+  }
+
+
+  /*
+   * tab 1
+   */
+
+  /* NOTE: "One-Way", "Round-Trip" and "Multi-City" labels/fields */
+
+  .cds_ff_oneway,
+  .cds_ff_twoway,
+  .cds_ff_multi {
+
+    display: block;
+    float: left;
+    margin: 0 1rem .5rem 0;
+
+    input {
+
+      margin: 0 .5rem 0 0;
+
+    }
+
+    @include sb-media(25em) {
+
+      //
+
+    }
+
+  }
+
+
+  /* NOTE: "From" and "To" label/fields */
+
+  .cds_ff_origin,
+  .cds_ff_destination {
+
+    margin: 0 0 1rem;
+
+    @include sb-media(25em) {
+
+      float: left;
+      width: 50%;
+
+    }
+
+  }
+
+  .cds_ff_origin {
+
+    //
+
+    @include sb-media(25em) {
+
+      padding-right: .5rem;
+
+    }
+
+  }
+
+  .cds_ff_destination {
+
+    clear: none !important; /* NOTE: allows the fields after this one to clear; improves display */
+
+    @include sb-media(25em) {
+
+      padding-left: .5rem;
+
+    }
+
+  }
+
+
+  /* NOTE: "Departs", "Time", "Returns", and "Time" labels/fields */
+
+  .cds_ff_depart_date_1,
+  .cds_ff_depart_time_1,
+  .cds_ff_depart_date_2.cds_ff_round_trip_field,
+  .cds_ff_depart_time_2.cds_ff_round_trip_field {
+
+    //
+
+  }
+
+  .cds_ff_depart_date_1 {
+
+    margin: 0 0 1rem;
+
+    @include sb-media(25em) {
+
+      float: left;
+      width: 25%;
+      padding: 0 .25rem 0 0;
+
+    }
+
+  }
+
+  .cds_ff_depart_time_1 {
+
+    margin: 0 0 1rem;
+
+    @include sb-media(25em) {
+
+      float: left;
+      width: 25%;
+      padding: 0 .5rem 0 .25rem;
+
+    }
+
+  }
+
+  .cds_ff_field_depart_time_1,
+  .cds_ff_field_depart_time_2 {
+
+    height: 33px; /* NOTE: magic number -- should match height of text inputs */
+    width: 100%; /* NOTE: increased width for improved display */
+
+  }
+
+  .cds_ff_ie7_fix { /* NOTE: while the class names includes "IE7", this is actually a helpful element since the elements above it are floated */
+
+    display: none;
+
+  }
+
+  .cds_ff_depart_date_2.cds_ff_round_trip_field,
+  .cds_ff_depart_time_2.cds_ff_round_trip_field {
+
+    //
+
+    input.cds_ff_field_depart_date_2 {
+
+      @extend %text_input;
+      padding: 5px !important;
+
+    }
+
+  }
+
+  .cds_ff_depart_date_2.cds_ff_round_trip_field {
+
+    margin: 0 0 1rem;
+
+    @include sb-media(25em) {
+
+      float: left;
+      width: 25%;
+      padding: 0 .25rem 0 .5rem;
+
+    }
+
+  }
+
+  .cds_ff_depart_time_2.cds_ff_round_trip_field {
+
+    margin: 0 0 1rem;
+
+    @include sb-media(25em) {
+
+      float: left;
+      width: 25%;
+      padding: 0 0 0 .25rem;
+
+    }
+
+  }
+
+
+  /* NOTE: "Adults", "Seniors", "Children", and "Infants" labels/fields */
+
+  .cds_ff_passenger_count {
+
+    padding: 0;
+    margin: 0 0 1rem;
+
+  }
+
+  .cds_ff_adult_passenger_count,
+  .cds_ff_senior_passenger_count,
+  .cds_ff_child_passenger_count,
+  .cds_ff_infant_passenger_count {
+
+    width: auto;
+    float: none;
+
+    br {
+
+      display: none;
+
+    }
+
+  }
+
+  .cds_ff_adult_passenger_count,
+  .cds_ff_senior_passenger_count,
+  .cds_ff_child_passenger_count {
+
+    margin: 0 0 1rem;
+
+  }
+
+  select.cds_ff_adult_passenger_count,
+  select.cds_ff_senior_passenger_count,
+  select.cds_ff_child_passenger_count,
+  select.cds_ff_infant_passenger_count {
+
+    height: 33px;
+    width: 50px;
+    margin: 0;
+
+  }
+
+  .cds_ff_adult_passenger_count {
+
+    //
+
+    @include sb-media(20em) {
+
+      float: left;
+      width: 50%;
+      padding: 0 .25rem 0 0;
+
+    }
+
+    @include sb-media(36em) {
+
+      width: 25%;
+      margin: 0;
+
+    }
+
+  }
+
+  .cds_ff_senior_passenger_count {
+
+    //
+
+    @include sb-media(20em) {
+
+      float: left;
+      width: 50%;
+      padding: 0 .25rem 0;
+
+    }
+
+    @include sb-media(36em) {
+
+      width: 25%;
+      padding: 0 .25rem 0;
+      margin: 0;
+
+    }
+
+  }
+
+  .cds_ff_child_passenger_count {
+
+    //
+
+    @include sb-media(20em) {
+
+      float: left;
+      width: 50%;
+      padding: 0 .25rem 0;
+      margin: 0;
+
+    }
+
+    @include sb-media(36em) {
+
+      width: 25%;
+      padding: 0 .25rem 0;
+
+    }
+
+  }
+
+  .cds_ff_infant_passenger_count {
+
+    //
+
+    @include sb-media(20em) {
+
+      float: left;
+      width: 50%;
+      padding: 0 0 0 .25rem;
+      margin: 0;
+
+    }
+
+    @include sb-media(36em) {
+
+      width: 25%;
+
+    }
+
+  }
+
+
+  /* NOTE: "Children 13-15 traveling alone" link */
+
+  div > .cds_ff_link {
+
+    display: inline-block; /* NOTE: display as "inline-block" in order for margin to work */
+    margin: 0 0 1rem;
+
+  }
+
+
+  /* NOTE: "Promotion Code" and "Submit" button */
+
+  .cds_ff_pc_submit_wrapper {
+
+    overflow: visible;
+
+  }
+
+  .cds_ff_pc_submit_wrapper {
+
+    margin: 0;
+
+    @include sb-media(24em) {
+
+      //
+
+    }
+
+  }
+
+  .cds_ff_pwd_feature_2p0 div.cds_ff_promo_code {
+
+    float: none;
+    margin: 0 0 1rem;
+
+    @include sb-media(24em) {
+
+      margin: 0;
+
+    }
+
+  }
+
+  .cds_ff_pwd_feature_2p0 div.cds_ff_submit {
+
+    float: none;
+
+  }
+
+  .cds_ff_pwd_feature_2p0 div.cds_ff_promo_code input {
+
+    width: 100%;
+    padding: 5px;
+    max-width: 160px;
+
+  }
+
+  div.cds_ff_submit input[type="Submit"],
+  .cds_ff_pwd_feature_2p0 div.cds_ff_submit input[type="Submit"] {
+
+    font: $font;
+    color: white;
+    background: $core-blue;
+    display: inline-block;
+    text-align: left;
+    border: 2px solid $core-blue;
+    border-radius: 4px;
+    padding: 11px 15px;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+    background: transparent;
+    border-color: $white;
+    margin: 0;
+
+    &:hover {
+
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2);
+
+    }
+
+    @include sb-media(24em) {
+
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+
+    }
+
+  }
+
+
+  /*
+   * tab 2
+   */
+
+  /* NOTE: "Check status or.." */
+
+  .cds_ts_banner {
+
+    font-family: $font-heavy-family;
+    margin: 0 0 1rem;
+
+  }
+
+
+  /* NOTE: wrapper for "Arrival Status" and "Departure Status" fields/labels */
+
+  .cds_ts_status_type {
+
+    @include clearfix;
+    margin: 0 0 1rem;
+
+  }
+
+
+  /* NOTE: "Arrival Status" and "Departure Status" fields/labels */
+
+  .cds_ts_field_status_arrive,
+  .cds_ts_field_status_depart {
+
+    //
+
+    input {
+
+      margin: 0 .5rem 0 0;
+
+    }
+
+  }
+
+  .cds_ts_label {
+
+    //
+
+  }
+
+  .cds_ts_field_status_arrive {
+
+    float: left;
+    margin: 0 0 1rem;
+
+    & + .cds_ts_label {
+
+      float: left;
+      line-height: 19px; /* NOTE: magic number -- matches height of radio input */
+      margin: 0 0 1rem;
+
+      @include sb-media(25em) {
+
+        margin: 0 1rem 0 0;
+
+      }
+
+    }
+
+    @include sb-media(25em) {
+
+      margin: 0;
+
+    }
+
+  }
+
+  .cds_ts_status_type.cds_ts_by_train {
+
+    //
+
+    br {
+
+      display: block;
+      clear: both;
+
+      @include sb-media(25em) {
+
+        display: none;
+
+      }
+
+    }
+
+  }
+
+  .cds_ts_field_status_depart {
+
+    float: left;
+
+    & + .cds_ts_label {
+
+      float: left;
+      line-height: 19px; /* NOTE: magic number -- matches height of radio input */
+
+    }
+
+  }
+
+
+  /* NOTE: wrapper for "Station" label, link and text field */
+
+  .cds_ts_to.cds_ts_arrive,
+  .cds_ts_from.cds_ts_depart {
+
+    //
+
+    @include sb-media(30em) {
+
+      float: left;
+      width: 50%;
+      padding: 0 .5rem 0 0;
+      margin: 0 0 1rem;
+
+    }
+
+  }
+
+  .cds_ts_from.cds_ts_depart {
+
+    // background: green;
+
+    &[style*="display: block"] {
+
+      // 
+
+      & + .cds_ts_to.cds_ts_arrive {
+
+        // background: violet;
+
+      }
+
+    }
+
+    @include sb-media(30em) {
+
+      // background: red;
+
+      &[style*="display: block"] {
+
+        // 
+
+        & + .cds_ts_to.cds_ts_arrive {
+
+          padding: 0 0 0 .5rem;
+          // background: yellow;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .cds_ts_to.cds_ts_arrive {
+
+    // background: blue;
+
+    @include sb-media(30em) {
+
+      // background: orange;
+
+    }
+
+  }
+
+  .cds_ts_train_number.cds_ts_by_train {
+
+    &:not([style*="display: none"]) {
+
+      // background: yellow;
+
+    }
+
+    & + .cds_ts_date {
+
+      // background: tan;
+
+      &:not([style*="display: none"]) {
+
+        // background: green;
+
+        @include sb-media(30em) {
+
+          padding: 0;
+          margin: 0 0 1rem;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .cds_ts_to,
+  .cds_ts_from {
+
+    margin: 0 0 1rem;
+
+  }
+
+
+  /* NOTE: wrapper for "Train/Bus No." label and text field */
+
+  .cds_ts_train_number.cds_ts_by_train {
+
+    //
+
+    @include sb-media(30em) {
+
+      float: left;
+      width: 50%;
+      padding: 0 0 0 .5rem;
+      margin: 0 0 1rem;
+      clear: none;
+
+    }
+
+  }
+
+  .cds_ts_date,
+  .cds_ts_train_number {
+
+    height: auto;
+    margin: 0 0 1rem;
+
+  }
+
+  .cds_ts_date .cds_ts_label,
+  .cds_ts_train_number .cds_ts_label {
+
+    padding: 0;
+    height: auto;
+
+  }
+
+  /* NOTE: wrapper for "Depart Date" label and text field */
+
+  div.cds_ts_date {
+
+    //
+
+    .cds_ts_date { /* NOTE: nexted input has same class name as parent */
+
+      float: none;
+
+    }
+
+    @include sb-media(30em) {
+
+      float: left;
+      width: 25%;
+      padding: 0 0 0 .5rem;
+      margin: 0;
+      clear: none;
+
+    }
+
+  }
+
+  div.cds_ts_from span.cds_ts_field_from,
+  div.cds_ts_to span.cds_ts_field_to {
+
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+  }
+
+  //.cds_ts_field_to,
+  .cds_ts_field_date {
+
+    @extend %text_input;
+    padding: 5px !important;
+    margin: 0;
+
+  }
+
+  .cds_ts_field_to input {
+
+    @extend %text_input;
+    padding: 5px !important;
+    margin: 0;
+
+  }
+
+  .cds_ts_submit {
+
+    text-align: initial;
+    margin: 0 0 1rem;
+
+    input[type=submit] {
+      
+      font: $font;
+      color: white;
+      display: inline-block;
+      text-align: left;
+      background: $core-blue;
+      border: 2px solid $core-blue;
+      border-radius: 4px;
+      padding: 11px 15px;
+      line-height: 1.5;
+      text-decoration: none;
+      transition: all 0.15s ease-in-out;
+      cursor: pointer;
+      background: transparent;
+      border-color: $white;
+      margin: 0;
+
+      &:hover {
+
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2);
+
+      }
+
+      @include sb-media(27em) {
+
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+
+      }
+
+    }
+
+    @include sb-media(27em) {
+
+      margin: 0;
+
+    }
+
+  }
+
+  input[name='wdf_promoCode'] {
+
+    @extend %text_input;
+    padding: 5px !important;
+
+  }
+
+  .cds_ff_link.cds_ff_ptype_rules {
+
+    display: none;
+
+  }
+
+  div.cds_ff_trip_type {
+
+    @include clearfix;
+    margin: 0 0 .5rem;
+
+  }
+
+  img.ui-datepicker-trigger {
+
+    display: none;
+
+  }
+
+  .cds_ff_pwd_feature_2p0 div.cds_ff_promo_code input {
+
+    @extend %text_input;
+    padding: 5px !important;
+
+  }
+
+  .cds_ff_clear {
+
+    display: none; /* <br> element */
+
+  }
+
+  .cds_form,
+  .cds_ts_outer {
+
+    background: rgba(0,0,0,.75);
+    color: $white;
+    padding: 1rem;
+    border-radius: 5px;
+    position: relative;
+
+  }
+
+  /* NOTE: tab 2 */
+
+  span.cds_ts_find_station {
+
+    //line-height: 1;
+
+  }
+
+  label.cds_ts_field_status_arrive {
+
+    //line-height: 1;
+    margin: 0;
+
+  }
+
+  label[for=cds_ts_field_status_arrive],
+  label[for=cds_ts_field_status_depart] {
+
+    line-height: 1;
+
+  }
+
+  .cds_ts_field_status_depart {
+
+    margin: 0 .5rem 0 0;
+
+    input {
+
+      margin: 0;
+
+    }
+
+  }
+
+  #farefinder label,
+  #trainstatus label {
+
+    padding: 0;
+    margin: 0;
+
+  }
+
+  .cds_ts_field_from input {
+
+    @extend %text_input;
+    padding: 5px !important;
+
+  }
+
+  div.cds_ts_train_number span.cds_ts_field_train_number {
+
+    float: none;
+    margin: 0;
+
+  }
+
+  div.cds_ts_train_number input.cds_ts_field_train_number {
+
+    @extend %text_input;
+    padding: 5px !important;
+
+  }
+
+  .cds_ts_late_trains_info {
+
+    //border: 1px solid green;
+    clear: both;
+    margin: 0 0 1rem;
+
+  }
+
+  .cds_ts_hr {
+
+    display: none;
+
+  }
+
+}
+
+.cds_ff_outer,
+.cds_ts_outer {
+
+  margin: 0 !important;
+  padding: 0;
+
+}
+
+.cds_ff_banner {
+
+  display:none !important;
+
+}
+
+/* NOTE: hide the rule lines between field groups */
+
+.cds_ff_hr {
+
+  display: none;
+
+}
+
+.cds_ff_trip_type label {
+
+  display: inline-block;
+
+}
+
+div.cds_ff_outer form div.cds_ff_children_travel_info {
+
+  height: initial !important;
+  width: initial !important;
+
+}
+
+.cds_ff_passenger_count:before {
+
+  content:'';
+  clear: both;
+  float: none;
+
+}
+
+.cds_ff_pass_type_wrapper {
+
+  display: none;
+
+}
+
+.cds_ts_check_status_by_train_number span.nolink {
+
+  color: $white !important;
+
+}
+
+.cds_ts_link {
+
+  color: $white;
+
+}

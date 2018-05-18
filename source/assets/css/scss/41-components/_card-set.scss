@@ -1,9 +1,0 @@
-/*
- * card set
- */
-
-.card-set {
-
-  @include grid(true, 1rem, repeat(auto-fit, minmax(200px, 1fr)), auto);
-
-}

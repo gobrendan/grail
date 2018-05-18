@@ -1,0 +1,47 @@
+/*
+ * table wrapper -- provides extrea level of control over tables, specifically when tables have special features (i.e., DataTables filtering, pagination, etc.)
+ */
+
+.table-wrapper,
+.js-table-wrapper {
+
+  width: 100%; /* NOTE: helps clear items above/below (e.g. elements inserted via DataTables) */
+  margin-bottom: 2rem;
+  overflow: auto; /* NOTE: this declaration makes extra-wide tables swipeable on smaller screens; useful for tables that don't use DataTables' responsive solution */
+
+  table,
+  table.dataTable { /* NOTE: targeting DataTable tables due to specificity */
+
+    box-sizing: border-box; /* NOTE: prevents table from being 1 or 2 pixels too wide (issue found in Firefox and IE Edge) */
+
+  }
+
+  /* NOTE: when included in ".page-layout__section," remove bottom margin */
+
+  .page-layout__section & {
+
+    margin-bottom: 0;
+
+  }
+
+}
+
+.table-wrapper__caption {
+
+  font: $font-italic;
+  font-size: $font-size--eta;
+  position: relative;
+  padding-left: 1ch; /* NOTE: makes room for the asterisk */
+  margin: 0 0 1rem;
+
+  &:before {
+
+    display: block;
+    content: "*";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+  }
+
+}

@@ -2,8 +2,4 @@
  * font
  */
 
-@include font-face(icon-set, icon-set);
-
-// @include font-face(TransportNewLight_gdi, TransportNewLight_gdi);
-// @include font-face(TransportNewMedium_gdi, TransportNewMedium_gdi);
-// @include font-face(TransportNewHeavy_gdi, TransportNewHeavy_gdi);
+@include font-face(gr-icon-set, icon-set);

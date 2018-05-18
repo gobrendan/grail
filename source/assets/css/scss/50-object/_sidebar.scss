@@ -1,0 +1,65 @@
+/*
+ * sidebar
+ */
+
+.sidebar {
+
+  //
+
+  &__heading {
+
+    font-size: 1.3125rem;
+    color: $core-blue;
+    margin: 0 0 1em;
+
+    &:after {
+
+      display: block;
+      content: "";
+      height: 0;
+      border-bottom: .25rem solid;
+      margin-top: 0.625rem;
+
+    }
+
+  }
+
+  &__subheading {
+
+    font-size: 1rem;
+    margin: 0 0 1rem;
+
+  }
+
+  &__simple-list {
+
+    //
+
+  }
+
+  &__p {
+
+    //
+
+  }
+
+  &__section {
+
+    margin: 0 0 2rem;
+
+  }
+
+  &__map {
+
+    height: 200px;
+    margin: 0 0 1rem;
+
+  }
+
+  &--sticky {
+
+    //
+
+  }
+
+}

@@ -1,0 +1,74 @@
+/*
+ * table
+ */
+
+table, 
+%table {
+
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 1rem; /* bottom margin should be in variable */
+
+}
+
+caption {
+
+  //
+
+}
+
+.table-heading, 
+%table-heading {
+
+  color: $accent-cool-gray;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 10px;
+
+}
+
+th,
+td, 
+%table-cell {
+
+  padding: .75rem 1rem;
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: $color-blue-saphire; 
+  
+}
+
+th, 
+thead td, /* prepare for scenario where 'td' is used in place of 'th'  */
+%th {
+
+  font-weight: bold; 
+  text-align: left; 
+  vertical-align: bottom; 
+
+}
+
+td, 
+%td {
+
+  border-color: $color-light-gray; 
+  vertical-align: top;
+
+}
+
+/* zebra-striped rows */
+
+tbody {
+
+  tr {
+
+    &:nth-child(even) {
+
+      background: $color-soft-white; 
+
+    }
+
+  }
+
+}

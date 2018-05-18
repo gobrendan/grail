@@ -1,0 +1,76 @@
+/*
+ * heading
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  /* reset all declarations, use classes/modifiers for styling */
+
+  font-size: $font-size--default;
+  font-family: $font-normal-family; /* overrides SharePoint rule in core15.css */
+  font-weight: normal;
+  line-height: 1.2;
+  color: inherit; /* this declaration seemed to be needed by SharePoint */
+  padding: 0;
+  margin: 0 0 0.75em;
+
+}
+
+.gr-c-heading {
+
+  /* sizes loosely based on https://type-scale.com/ */
+
+  font: $font-cabin; 
+  margin: 0 0 1em;
+
+  &--alpha, 
+  &--beta, 
+  &--gamma, 
+  &--delta {
+
+    line-height: 1.2; 
+
+  }
+
+  &--alpha {
+
+    font-size: 2.074em; 
+
+  }
+
+  &--beta {
+
+    font-size: 1.728em; 
+
+  }
+
+  &--gamma {
+
+    font-size: 1.44em; 
+
+  }
+
+  &--delta {
+
+    font-size: 1.2em; 
+
+  }
+
+  &--epsilon {
+
+    font-size: 1em; 
+
+  }
+
+  &--zeta {
+
+    font-size: 0.833em; 
+
+  }
+
+}

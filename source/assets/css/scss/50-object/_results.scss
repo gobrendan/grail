@@ -1,0 +1,82 @@
+/*
+ * results
+ */
+
+.results {
+
+  //
+
+}
+
+.results-grid {
+
+  margin-bottom: 2rem;
+
+  &:last-child {
+
+    margin-bottom: 0;
+
+  }
+
+  &--column {
+
+    //
+
+    @include sb-media($medium-breakpoint) {
+
+      flex-direction: column; /* NOTE: placing this in a breakpoint resolves weird issue on iPhone 7 where the items were condensed and content was hidden */
+
+    }
+
+  }
+
+  &--row {
+
+    flex-direction: row;
+
+  }
+
+  .card {
+
+    max-width: 100%; /* NOTE: override default ".grid" max-width rule */
+
+  }
+
+  .card__text-wrapper {
+
+    padding: 1rem 1.25rem;
+
+  }
+
+}
+
+.no-flexbox {
+
+  .results-grid {
+
+    @include clearfix;
+    display: block;
+
+    .card-set__item {
+
+      display: block;
+      width: 33.3333%;
+      float: left;
+
+    }
+
+    &--column {
+
+      display: block;
+
+      .card-set__item {
+
+        width: 100%;
+
+      }
+
+    }
+
+  }
+
+}

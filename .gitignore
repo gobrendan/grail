@@ -9,3 +9,5 @@ public
 .ftpauth
 
 .gitkeep
+
+.vscode/*

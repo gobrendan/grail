@@ -1,0 +1,158 @@
+/*
+ * button
+ */
+
+button {
+
+  cursor: pointer;
+  -webkit-appearance: none; /* Safari fix -- the 'button' element has additional user-agent declarations */
+  align-items: center; /* for some reason, Webkit adds Flex-related declaration */
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+
+  outline: none;
+
+}
+
+.gr-c-btn {
+
+  display:            inline-block; 
+  font-size:          .9rem; 
+  font-weight:        bold; 
+  @include            custom-property(color, --btn-text-color, $btn-text-color);
+  @include            custom-property(background-color, --btn-bg-color, $btn-bg-color);
+  padding:            $btn-padding; 
+  border-radius:      .25rem;
+  text-decoration:    none; 
+  text-transform:     uppercase; 
+  transition:         $btn-transition; 
+  letter-spacing:     $btn-letter-spacing; 
+  cursor:             pointer; /* useful for <button> and <input type='submit'> elements */
+
+  &:hover {
+    
+    color:            $btn-hover-text-color;
+    background:       $btn-hover-bg-color;
+    text-decoration:  none; 
+
+  }
+
+  &:focus {
+
+    outline:          $btn-focus-outline-width solid $btn-focus-outline-color; 
+
+  }
+
+  &:visited { 
+
+    color:            $core-white;
+    background:       $core-blue;
+    border:           2px solid $core-blue;
+
+  } 
+
+  &:disabled, 
+  &:disabled:hover, 
+  &--disabled, 
+  &--disabled:hover {
+
+    color: $btn-disabled-text-color; 
+    background-color: $btn-disabled-bg-color; 
+    cursor: default; 
+
+  }
+
+  &--light {
+
+    color:              $btn-light-text-color; 
+    background-color:   $btn-light-bg-color; 
+
+    &:hover {
+
+      color:            $btn-light-hover-text-color;
+      background:       $btn-light-hover-bg-color;  
+
+    }
+
+    &:focus {
+
+      //
+
+    }
+
+    &:disabled, 
+    &:disabled:hover, 
+    &.gr-c-btn--disabled, 
+    &.gr-c-btn--disabled:hover {
+
+      color: $btn-light-disabled-text-color; 
+      background-color: $btn-light-disabled-bg-color; 
+  
+    }
+
+  }
+
+  &--secondary {
+
+    color:              $btn-secondary-text-color; 
+    background-color:   $btn-secondary-bg-color; 
+
+    &:hover {
+
+      color:            $btn-secondary-hover-text-color;
+      background:       $btn-secondary-hover-bg-color;  
+
+    }
+
+    &:focus {
+
+      //
+
+    }
+
+    &:disabled, 
+    &:disabled:hover, 
+    &.gr-c-btn--disabled, 
+    &.gr-c-btn--disabled:hover {
+
+      color: $btn-secondary-disabled-text-color; 
+      background-color: $btn-secondary-disabled-bg-color; 
+  
+    }
+
+    &.gr-c-btn--light {
+
+      color:              $btn-secondary-light-text-color; 
+      background-color:   $btn-secondary-light-bg-color; 
+  
+      &:hover {
+  
+        color:            $btn-secondary-light-hover-text-color; 
+        background:       $btn-secondary-light-hover-bg-color; 
+  
+      }
+  
+      &:focus {
+  
+        //
+  
+      }
+  
+      &:disabled, 
+      &:disabled:hover, 
+      &.gr-c-btn--disabled, 
+      &.gr-c-btn--disabled:hover {
+  
+        color: $btn-secondary-light-disabled-text-color; 
+        background-color: $btn-secondary-light-disabled-bg-color; 
+    
+      }
+  
+    }
+
+  }
+
+}

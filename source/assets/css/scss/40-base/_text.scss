@@ -1,0 +1,120 @@
+/*
+ * elements / text
+ */
+
+a, 
+%a {
+
+  // @include transition($transition);
+  @include custom-property(color, --link-color, $link-color);
+  text-decoration: underline; 
+
+  &:hover {
+
+    @include custom-property(color, --link-color-hover, $link-color-hover);
+    text-decoration: none;
+
+  }
+
+  &:focus {
+
+    //
+
+  }
+
+  &:active {
+
+    //
+
+  }
+
+  &:visited {
+
+    //
+
+  }
+
+}
+
+p {
+
+  margin: 1rem 0; 
+
+}
+
+blockquote {
+
+  margin: 1em 0 1em 2em;
+  padding: 0 0 0 1em; 
+  border-left-width: 2px;
+  border-left-style: solid; 
+  @include custom-property(border-left-color, --color-light-gray, $color-light-gray);
+
+}
+
+small {
+
+  //
+
+}
+
+b,
+strong {
+
+  //
+
+}
+
+i,
+em {
+
+  //
+
+}
+
+/* prevent 'sup' and 'sub' elements from affecting line-height 
+   https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height */
+
+sup,
+sub {
+
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+
+}
+
+sub {
+
+  top: 0.4em;
+
+}
+
+abbr {
+
+  text-decoration: none;
+  border-bottom-width: 1px; 
+  border-bottom-style: solid;
+  @include custom-property(border-bottom-color, --color-light-gray, $color-light-gray);
+
+}
+
+mark,
+cite,
+kbd,
+code,
+samp,
+var, 
+ins, 
+dfn {
+
+  @include custom-property(background-color, --color-light-gray, $color-light-gray);
+  padding: .25em .5em;
+
+}
+
+ins {
+
+  text-decoration: none; 
+
+}

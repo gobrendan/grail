@@ -1,0 +1,156 @@
+/*
+ * card set
+ */
+
+.card-set {
+
+  &__item,
+  &__item-inner {
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+  }
+
+  &__card {
+
+    -ms-flex-grow: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+
+  }
+
+  &--basic {
+
+    //
+
+    .card--basic {
+
+      //
+
+      .card__date-number {
+
+        // display: none;
+        // opacity: .2;
+
+        @include sb-media($small-breakpoint) {
+          
+          // display: block;
+          // opacity: 1;
+  
+        }
+
+      }
+
+      .card__primary-text {
+
+        left: .5rem;
+        right: .5rem;
+        bottom: .5rem;
+        width: auto;
+
+        @include sb-media($small-breakpoint) {
+
+          left: 1rem;
+          right: 1rem;
+          bottom: 1rem;
+  
+        }
+
+      }
+
+      &__icon {
+
+        //
+
+      }
+
+    }
+
+  }
+
+  &--bordered {
+
+    //
+
+    .page-content__item--wide &, 
+    .page-layout__section--wide & {
+
+      margin-bottom: 0;
+
+    }
+
+  }
+
+  .card {
+
+    //
+
+    &--date {
+
+      height: 100%; /* NOTE: resolves display issue in Edge and Firefox */
+
+    }
+
+  }
+
+}
+
+/* NOTE: IE 11 tweaks */
+
+.flexbox.flexboxtweener {
+  
+  .card-set.grid {
+
+    display: block; /* NOTE: improves display in IE 11 */
+
+  }
+
+}
+
+.no-flexbox {
+
+  .card-set {
+
+    width: calc(100% + 1.5rem); /* NOTE: the 1.5 is used to since the card set uses the margins XL styling */
+    display: table;
+    table-layout: fixed;
+
+    &__item {
+
+      display: table-cell;
+
+    }
+
+  }
+
+  .card-set.grid {
+
+    display: block; /* NOTE: improves display in IE 11 */
+
+  }
+
+  .card-set__item {
+
+    float: left;
+
+  }
+
+  &.large-grid--1of4 {
+
+    display: block;
+    @include clearfix;
+
+    & > .grid__cell {
+
+      display: block;
+      float: left;
+      width: 25%;
+
+    }
+
+  }
+
+}

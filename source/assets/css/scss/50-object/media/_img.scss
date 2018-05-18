@@ -1,0 +1,96 @@
+/*
+ * objects/media/img
+ */
+
+
+.img--cms-added {
+
+  margin: 1rem auto;
+
+  &[align=left],
+  &[align=right] {
+
+    float: none;
+
+  }
+
+  @include sb-media($small-breakpoint) {
+
+    &[align=left],
+    &[align=right] {
+  
+      max-width: 40%;
+  
+    }
+
+    &[align=left] {
+
+      float: left;
+      margin: 0 1rem 1rem 0;
+
+    }
+
+    &[align=right] {
+
+      float: right;
+      margin: 0 0 1rem 1rem;
+
+    }
+
+  }
+
+  @include sb-media($medium-breakpoint) {
+
+    &[align=left],
+    &[align=right] {
+  
+      max-width: 350px;
+  
+    }
+    
+  }
+
+}
+
+.profile-img,
+.embedded-img {
+
+  margin: 1rem auto;
+
+  @include sb-media($small-breakpoint) {
+
+    &--left, 
+    &--right {
+
+      max-width: 40%;
+
+    }
+
+    &--left {
+
+      float: left;
+      margin: 0 1rem 1rem 0;
+
+    }
+
+    &--right {
+
+      float: right;
+      margin: 0 0 1rem 1rem;
+
+    }
+
+  }
+
+  @include sb-media($medium-breakpoint) {
+
+    &--left, 
+    &--right {
+
+      max-width: 350px;
+
+    }
+
+  }
+
+}

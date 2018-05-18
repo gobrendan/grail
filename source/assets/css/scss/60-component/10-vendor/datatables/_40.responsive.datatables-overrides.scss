@@ -1,0 +1,70 @@
+/*
+ * responsive datatables overrides -- overrides and additional rules
+ */
+
+$open-button-background: $accent-cool-gray !default;
+$close-button-background: $accent-cool-gray !default;
+
+table.dataTable {
+
+	&.dtr-inline.collapsed > tbody {
+
+		> tr > td:first-child,
+		> tr > th:first-child {
+
+      padding-left: 36px; /* NOTE: magic number */
+
+			&:before {
+
+        @include vertical-align;
+        position: absolute; /* NOTE: overrides "position:relative" declaration from mixin -- this [pseudo] element needs to be absolutely positioned */
+        box-shadow: none;
+        border: 0;
+        width: 24px;
+        height: auto;
+        line-height: 24px;
+        font-family: sans-serif;
+        font-weight: bold;
+
+			}
+
+		}
+
+  }
+
+}
+
+table.dataTable > tbody > tr.child span.dtr-title {
+
+	min-width: 0;
+	display: block;
+	float: left;
+	margin: 0 1rem 0 0;
+
+}
+
+table.dataTable > tbody > tr.child span.dtr-data {
+
+	display: block;
+	float: left;
+
+}
+
+table.dataTable > tbody > tr.child ul.dtr-details > li {
+
+	@include clearfix; /* NOTE: this declaration needed since child elements are floated */
+	// border-bottom-color: $core-light-gray;
+
+}
+
+table.dataTable > tbody > tr.child ul.dtr-details > li:last-child {
+
+	padding-bottom: 0;
+
+}
+
+table.dataTable > tbody > tr.child ul.dtr-details {
+
+	width: 100%;
+
+}

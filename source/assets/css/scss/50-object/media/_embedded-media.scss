@@ -1,0 +1,70 @@
+/*
+ * embedded media
+ */
+
+.embedded-media {
+
+  max-width: 47rem;
+  margin: 0 auto 1rem;
+
+  &__img {
+
+    //
+
+  }
+
+  &__caption {
+
+    font-size: $font-size--eta;
+    color: $core-gray;
+    padding-top: .25rem;
+
+  }
+
+  &--full {
+
+    //
+
+  }
+
+  &--left,
+  &--right {
+
+    @include sb-media($small-breakpoint) {
+
+      max-width: 40%;
+
+    }
+
+    @include sb-media($large-breakpoint) {
+
+      max-width: 350px;
+
+    }
+
+  }
+
+  &--left {
+
+    @include sb-media($small-breakpoint) {
+
+      float: left;
+      margin: 0 1.5rem .5rem 0;
+
+    }
+
+  }
+
+  &--right {
+
+    @include sb-media($small-breakpoint) {
+
+      float: right;
+      margin: 0 0 .5rem 1.5rem;
+
+    }
+
+  }
+
+
+}

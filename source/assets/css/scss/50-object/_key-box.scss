@@ -1,0 +1,54 @@
+/*
+ * key box
+ */
+
+.key-box {
+
+  background: $core-off-white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+
+  &__grid.grid { /* NOTE: chained selector used for increased specificity -- overrides default .grid rule */
+
+    font-size: $font-size--eta;
+
+  }
+
+  &__heading {
+
+    margin: 0 0 1rem;
+
+  }
+
+  &__item {
+
+    //
+
+  }
+
+  &__label {
+
+    display: inline-block;
+    font-family: $font-medium-family;
+
+    &--abbr { /* NOTE: "abbr" stands for abbreviation */
+
+      width: 36px; /* NOTE: magic number -- provides consistent width for improved legibility when stacking (vertically linear) */
+
+    }
+
+  }
+
+  &__meaning {
+
+    //
+
+  }
+
+  &__item {
+
+    //
+
+  }
+
+}

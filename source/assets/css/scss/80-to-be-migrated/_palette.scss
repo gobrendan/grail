@@ -2,7 +2,7 @@
  * palette
  */
 
-.pl-palette {
+.gr-pl-o-palette {
 
   @include grid(true, 1rem, repeat(auto-fill, minmax(200px, 1fr)), auto); 
 
@@ -168,11 +168,9 @@
 
   &--headings {
 
-    // @include grid(true, 1rem, repeat(auto-fill, minmax(240px, 1fr)), auto);     
-
     display: block;
 
-    .pl-palette__item {
+    .gr-pl-o-palette__item {
 
       margin: 0 0 2rem; 
 
@@ -186,7 +184,7 @@
 
     /* when viewing heading palette, use same margin value for all headings -- removes unnecessary whitepsace */
 
-    .heading {
+    .gr-c-heading {
 
       margin: 0 0 1rem; 
 

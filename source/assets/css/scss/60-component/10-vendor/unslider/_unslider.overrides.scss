@@ -1,0 +1,361 @@
+/*
+ * unslider overrides
+ */
+
+.unslider {
+
+  overflow: visible;
+  z-index: 1; /* NOTE: this appears to resolve stacking issue for hero carousel -- the location menu should be above the carousel's "next" button in the stack */
+
+  &-nav {
+
+    position: relative;
+    z-index: $z-index--top;
+    
+  }
+
+}
+
+.carousel--alerts {
+
+  position: relative;
+
+  /* NOTE: hide 'play' and 'pause' buttons */
+
+  .unslider-play,
+  .unslider-pause {
+
+    display: none;
+
+  }
+
+  .unslider-arrow,
+  .unslider__close-btn {
+
+    display: none; /* NOTE: hide on smaller screens -- display:flex on wider screens (see media query below) */
+    align-items: center;
+    justify-content: center;
+
+    color: $white;
+    text-decoration: none;
+    text-align: center;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: auto; /* NOTE: prev/next button positioning uses 'right' property */
+    z-index: 9999; /* NOTE: z-index values should go in variables with notes; this value is less than what's used for sticky wide nav */
+
+    width: 60px; /* NOTE: magic number -- value should be same as ".location-picker__label-text" element; this should be in variable */
+    // border-left: 1px solid rgba(255, 255, 255, 0.25);
+
+    /* NOTE: in IE 9, the buttons are hidden without the following media query block */
+
+    @include sb-media($large-breakpoint) {
+
+      display: block;
+
+    }
+
+  }
+
+  /* NOTE: keep "close" button visible always */
+
+  .unslider__close-btn {
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+  }
+
+  .unslider .prev {
+
+    right: 120px;
+
+  }
+
+  .unslider .next {
+
+    right: 60px;
+
+  }
+
+  .unslider .next,
+  .unslider .prev {
+
+    bottom: 2.5rem; /* NOTE: based on '.alert-block-wrapper' bottom margin and "dot nav" height */
+    transition: none; /* NOTE: this prevent icon from animating when screen is resized */
+
+  }
+
+  .unslider__close-btn {
+
+    right: 0;
+    bottom: 1rem; /* NOTE: this takes into account some bottom margin and "dot" nav */
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: none; /* NOTE: this prevent icon from animating when screen is resized */
+
+  }
+
+  .unslider-nav {
+
+    text-align: center;
+    height: 1.5rem; /* NOTE: this should probably be in a variable -- this value is used as the bottom value for the prev/next buttons */
+
+    li {
+
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin: 0 .25rem;
+      border: 0;
+
+    }
+
+  }
+
+  .unslider-active {
+
+    border-radius: 4px;
+
+  }
+
+  .alert-block-wrapper,
+  .alert-block {
+
+    /* NOTE: The following used to help keep alert carousel items the same height */
+    /* NOTE: The position declaration is handled in the JS */
+
+    top: 0;
+    bottom: 0;
+    width: 100%;
+
+  }
+
+  /* NOTE: hide list items except for "active" item -- this resolves issue where all list items stack then condense */
+  
+  .carousel__list-wrapper li {
+
+    display: none;
+
+    &.unslider-active {
+
+      display: block;
+
+    }
+
+  }
+
+  .no-flexbox & {
+
+    @include sb-media($large-breakpoint) {
+
+      .alert-block__message {
+
+        padding: 0 196px 0 1rem;
+        margin: 0;
+
+      }
+
+      .unslider {
+
+        .prev,
+        .next,
+        .unslider__close-btn {
+
+          i {
+
+            position: absolute;
+            top: 50%;
+            margin-top: -8px;
+            left: 50%;
+            margin-left: -8px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+@include sb-media($large-breakpoint) {
+
+  .carousel--alerts {
+
+    .unslider {
+
+      &-arrow,
+      &__close-btn {
+
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+
+      }
+
+    }
+
+    /* NOTE: overrides for when element is inside carousel */
+
+    .alert-block-wrapper {
+
+      max-width: 100%;
+      padding: 0;
+
+    }
+
+    .unslider-arrow,
+    .unslider__close-btn {
+  
+      border-left: 1px solid rgba(255, 255, 255, 0.25);
+  
+    }
+
+  }
+
+  .carousel--single {
+
+    .alert-block__message {
+
+      margin: 0;
+
+    }
+
+  }
+
+}
+
+.carousel--heros {
+
+  .unslider-arrow {
+
+    display: none;
+
+    @include sb-media($large-breakpoint) {
+
+      display: block;
+
+      &.prev,
+      &.next {
+
+        @include vertical-align;
+        position: absolute;
+        text-decoration: none;
+
+        position: absolute;
+        z-index: 99;
+
+        width: 40px;
+        height: 40px;
+        line-height: 38px;
+        border-radius: 50%;
+        color: $white;
+        font-size: 28px;
+        border: 2px solid $white;
+        text-align: center;
+
+        &:hover {
+
+          color: $white;
+          background: rgba(0,0,0,.6); /* NOTE: value should be in a variable */
+          box-shadow: 0 0 0 8px rgba(255,255,255,.25); /* NOTE: value should be in a variable */
+
+        }
+
+      }
+
+      &.prev {
+
+        left: 1.875rem;
+
+      }
+
+      &.next {
+
+        right: 1.875rem;
+
+      }
+
+    }
+
+  }
+
+}
+
+.carousel--heros,
+.carousel--promo-blocks, 
+.carousel--photo-blocks {
+
+  .unslider-nav {
+
+    position: absolute;
+    width: 100%;
+    bottom: -2.5rem;
+
+    ol li {
+
+      border: 3px solid $core-gray;
+      border-radius: 50%;
+      background: $white;
+      width: 15px;
+      height: 15px;
+      margin: 0 6px;
+
+      &.unslider-active {
+
+        background: $core-gray;
+
+      }
+
+    }
+
+  }
+
+}
+
+.carousel--promo-blocks {
+
+  .unslider-arrow {
+
+    display: none;
+
+  }
+
+}
+
+.carousel--photo-blocks {
+  
+  .unslider-arrow {
+
+    // 
+
+  }
+
+  .unslider-nav {
+
+    display: none; /* NOTE: "dot" pagination unnecessary for this carousel since the left/right buttons are present */
+  
+  }
+
+}
+
+.carousel-overlay {
+
+  position: absolute;
+  background: rgba(0,0,0,.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+
+}

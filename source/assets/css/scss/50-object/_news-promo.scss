@@ -1,0 +1,50 @@
+/*
+ * news promo
+ */
+
+.news-promo {
+
+  margin: 0 0 3.75rem;
+
+  &:last-child {
+
+    margin: 0;
+
+  }
+
+  img { /* NOTE: can we add a BEM class to this image so we can target it that way? */
+
+    margin: 0 0 1.875rem;
+
+  }
+
+  &__heading {
+
+    margin: 0 0 1rem;
+
+  }
+
+  &__date {
+
+    display: block;
+    font-size: .875rem; /* NOTE: this value should be in a variable */
+    font-family: $font-normal-family;
+    color: $accent-cool-gray; 
+    text-transform: uppercase;
+    margin: 0 0 1.875rem;
+
+  }
+
+  &__p {
+
+    //
+
+    &:last-child {
+
+      margin-bottom: 0;
+
+    }
+
+  }
+
+}

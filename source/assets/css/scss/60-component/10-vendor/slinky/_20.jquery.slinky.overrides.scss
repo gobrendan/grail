@@ -1,0 +1,349 @@
+/*
+ * Slinky -- responsive navigation, original rules commented out and included for reference
+ */
+
+.slinky-menu-wrapper {
+
+  background: $core-blue; 
+
+  transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  z-index: 99999; /* NOTE: This value should be in a variable */
+
+  /* By default, the menu is off screen */
+
+  top: 100%;
+
+  /* Override inline height property -- this makes the component appear stuck to bottom of screen */
+
+  height: auto !important;
+  bottom: 0;
+
+  /* Transparent/black overlay behind nav when active */
+
+  &.active {
+
+    &:before {
+
+      // 
+
+    }
+
+  }
+
+  .list-icons {
+
+    background: transparent;
+
+  }
+
+  .simple-list {
+
+    margin: 2rem 2rem 3.25rem;
+
+  }
+
+  @include sb-media($large-breakpoint) {
+
+    //width: 50%; /* NOTE: use sensible width on slightly wider screens */
+    display: none;
+
+    .simple-list--split .simple-list__link {
+
+      font-size: .8rem;
+
+    }
+
+    .simple-list--split [class^="icon-"], 
+    .simple-list--split [class*=" icon-"], 
+    .simple-list--split [class^="material-icons"], 
+    .simple-list--split [class*=" material-icons"] {
+
+      display: none;
+
+    }
+
+  }
+
+}
+
+.js-slinky-close-btn {
+
+  font-size: 14px;
+  display: block;
+  position: relative;
+  font-family: $font-normal-family;
+  text-transform: uppercase;
+  background: $core-blue;
+  padding-left: 3.7rem;
+  text-decoration: none;
+  color: $white;
+  line-height: 62px; /* NOTE: magic number -- matches height of "mobile header" component */
+  
+  &:before {
+
+    /* NOTE: use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'custom-icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 2.25rem;
+    position: absolute;
+    float: none;
+    margin: 0;
+
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    content: "\e908";
+    left: 1.25rem;
+
+    font-size: 28px;
+
+  }
+
+  &:hover,
+  &:visited {
+
+    text-decoration: none;
+    color: $white;
+
+  }
+
+}
+
+/* NOTE: required rules -- changing these may break the menu */
+
+.slinky-menu {
+
+  margin-bottom: 1.25rem; /* adds space between this element and "list-icons__group" component */
+
+  ul {
+
+    padding: 0;
+
+    transition: all 0.15s ease-in-out;
+    -webkit-transition: all 0.15s ease-in-out;
+
+  }
+
+  li {
+
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid $white;
+    margin: 0;
+
+  }
+
+  ul:not([class]) {
+
+    li {
+
+      margin: 0; /* NOTE: the added specificity is used here to override the margin declaration for <ul> elements with no "class" (see default <ul>/<li> rules) */
+
+    }
+
+  }
+
+}
+
+.slinky-menu ul,
+.slinky-menu li {
+
+  //
+
+}
+
+.slinky-menu ul {
+
+  //
+
+}
+
+.slinky-menu a {
+
+  font-size: 14px;
+  color: $white;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-family: $font-medium-family;
+  padding: 1.38rem $page-side-padding;
+
+  background-color: transparent; /* NOTE: use "background-color" instead of just "background" so this doesn't affect site logo link */
+
+  &:hover,
+  &:visited {
+
+    color: $white;
+    background-color: transparent; /* NOTE: use "background-color" instead of just "background" so this doesn't affect site logo link */
+
+  }
+
+}
+
+.slinky-menu li ul {
+
+  padding: 0;
+
+}
+
+.slinky-menu .header {
+
+  background: transparent;
+
+}
+
+.slinky-menu h2 ~ a.back {
+
+  position: relative;
+  font-family: $font-normal-family;
+  background: $core-blue;
+
+}
+
+.slinky-menu h2 {
+
+  font-size: 1.125rem;
+  font-family: $font-medium-family;
+  background: $white;
+  margin: 0;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  color: $core-blue;
+  text-transform: capitalize;
+  padding: 20px;
+  padding: 1.25rem;
+
+}
+
+/* Default theme */
+
+.slinky-menu .header {
+
+  //
+
+}
+
+.slinky-menu h2 {
+
+  //
+
+}
+
+.slinky-menu a {
+
+  //
+
+}
+
+.slinky-menu a:hover {
+
+  //
+
+}
+
+.slinky-menu a.next:after {
+
+  //
+
+}
+
+.slinky-menu a.back:before {
+
+  //
+
+}
+
+.slinky-menu a.next:after,
+.slinky-menu a.back:before {
+
+  /* NOTE: use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'custom-icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-size: 2.25rem;
+  position: absolute;
+  float: none;
+  margin: 0;
+
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+}
+
+.slinky-menu a.next:after {
+
+  content: "\e90a";
+  right: 1rem;
+
+}
+
+.slinky-menu a.back:before {
+
+  content: "\e909";
+  left: 1rem;
+
+}
+
+.slinky-menu a.next {
+
+  padding-right: 3.7rem;
+
+}
+
+.slinky-menu a.back {
+
+  padding-left: 3.25rem;
+
+}
+
+/* NOTE: modifiers */
+
+.slinky-menu--be-rail-safe {
+
+  .logo {
+
+    height: 100px;
+
+  }
+
+}
+
+.slinky-menu--nc-by-train {
+
+  .logo.logo--mobile { /* NOTE; using chained selector for higher specificity -- could be refactored */
+
+    background-size: contain;
+
+  }
+
+}

@@ -1,0 +1,585 @@
+/*
+ * carousel -- mostly, if not all, related to Unslider carousels
+ */
+
+.alerts-carousel-wrapper { 
+
+  /* NOTE: height is initally zero, the height is set when the init happens, the transition allows it to animate into view */
+
+  height: 0;
+  overflow: hidden;
+  background: $core-gray;
+  transition: height .4s;
+
+}
+
+.carousel {
+
+  max-width: $component-max-width;
+  margin: 0 auto 1rem;
+  position: relative;
+
+  &--alerts {
+
+    margin: 0 auto 14px;
+
+  }
+
+  &--alerts-new {
+
+    max-width: 70rem; /* NOTE: since there's no side padding, this number is less than the "$component-max-width" value; this should be in a variable */
+    margin: auto;
+    overflow: visible !important; /* NOTE: this overrides inline style that's applied when closing/opening component */
+
+    .carousel__list-wrapper {
+
+      overflow: visible !important; //
+
+    }
+
+    .alert-block-wrapper {
+
+      margin: auto;
+
+    }
+
+    .alert-block__icon-wrapper i {
+
+      font-size: 1.52rem;
+
+    }
+
+    .alert-block__message-text {
+
+      font-size: $font-size--eta;
+      margin: 1rem 0;
+
+    }
+
+    .unslider-nav {
+
+      display: none;
+
+    }
+
+    .unslider .next, 
+    .unslider .prev, 
+    .unslider__close-btn {
+
+      bottom: 0;
+
+      span {
+
+        @extend %visually-hidden;
+
+      }
+
+    }
+
+    .alert-block__item {
+
+      &:before, 
+      &:after {
+
+        content: "";
+        display: block;
+        position: absolute;
+        left: -100%;
+        bottom: 0;
+        top: 0;
+        right: -100%;
+
+      }
+
+      &:before {
+
+        background: rgba(11, 12, 12, 0.25); /* NOTE: this value should be in a variable */ 
+        z-index: -1;
+
+      }
+        
+      &:after {
+
+        z-index: -2;
+
+      }
+
+      &--info:after {
+
+        background: $accent-blue;
+
+      }
+
+      &--success:after {
+        
+        background: $accent-green;
+        
+      }
+    
+      &--warning:after {
+        
+        background: $accent-orange;
+        
+      }
+        
+      &--breaking:after {
+        
+        background: $accent-red;
+        
+      }
+      
+    }
+
+  }
+
+  &--heros {
+
+    //
+
+  }
+
+  &--promo-blocks {
+
+    //
+
+  }
+  
+  // &--cards {
+
+  //   overflow-x: hidden; /* NOTE: this prevents horizontal scrollbar on smaller screens / touch devices */
+  //   margin: 0 auto; /* NOTE: no bottom margin needed since this component is wrapped in a <section>, which has its own margins */
+
+  //   .carousel__list-wrapper {
+
+  //     margin-bottom: 1rem; /* NOTE: this adds space between carousel items and nav dots */
+  //     overflow: visible !important; /* NOTE: in conjunction with declaration above, this overrides inline style added by Unslider plugin */
+
+  //   }
+
+  //   .unslider {
+
+  //     // width: 80%;
+  //     width: calc(100% - 4rem);
+  //     margin: auto;
+
+  //   }
+
+  //   li.grid__cell {
+
+  //     padding: 0 .5rem; /* NOTE: in conjunction with declarations above, this allows space for next/previous slide to be in view */
+
+  //     @include sb-media($medium-breakpoint) {
+        
+  //       padding: 0 .75rem;
+
+  //       &:first-of-type {
+
+  //         padding-left: 0;
+
+  //       }
+
+  //       &:last-of-type {
+
+  //         padding-right: 0;
+
+  //       }
+
+  //     }
+
+  //   }
+
+  //   li.grid__cell.u-visible {
+      
+  //     //
+
+  //     @include sb-media($medium-breakpoint) {
+
+  //       padding: 0 .75rem;
+
+  //     }
+
+  //   }
+
+  //   .grid--gutters {
+
+  //     //
+      
+  //     @include sb-media($medium-breakpoint) {
+        
+  //       margin: -1em 0 1em -1em;
+
+  //     }
+
+  //   }
+
+  //   .grid--guttersLg {
+
+  //     //
+
+  //     @include sb-media($medium-breakpoint) {
+
+  //       margin: -1.5em 0 1.5em -1.5em;
+
+  //     }
+
+  //   }
+
+  //   .unslider-carousel {
+
+  //     position: absolute !important;
+
+  //     @include sb-media($medium-breakpoint) {
+        
+  //       position: relative !important;
+  
+  //     }
+
+  //   }
+
+  //   .unslider-arrow {
+
+  //     @include vertical-align;
+  //     font-size: 3rem;
+  //     position: absolute;
+  //     text-decoration: none;
+  //     opacity: .4;
+
+  //     &.prev {
+
+  //       // border: 1px solid red;
+  //       left: -2rem;
+
+  //     }
+
+  //     &.next {
+
+  //       // border: 1px solid green;
+  //       right: -2rem;
+
+  //     }
+
+  //   }
+
+  //   .unslider-nav ol li {
+
+  //     width: 10px;
+  //     height: 10px;
+  //     background-color: $core-light-gray;
+
+  //   }
+
+  //   .unslider-nav ol li.unslider-active {
+
+  //     background-color: $accent-orange;
+
+  //   }
+
+  //   .unslider-nav {
+
+  //     // position: absolute;
+  //     // bottom: -2rem;
+  //     // width: 100%;
+      
+  //   }
+
+  //   .page-layout__section & {
+
+  //     // margin: 0 -$page-side-padding; 
+  //     margin: 0 -2.5rem; 
+
+  //   }
+
+    // .card__img-wrapper, 
+    // .video-wrapper {
+
+    //   /* 
+    //   NOTE: using the padding-top solution on a flex child doesn't 
+    //   work well for Edge and Firefox -- using display:table on the child seems to fix it 
+    //   https://stackoverflow.com/questions/33502702/flex-elements-ignore-percent-padding-in-firefox 
+    //   */
+
+    //   display: table; 
+    //   width: 100%;
+
+    // }
+
+  // }
+
+  &--full-width {
+
+    //
+
+  }
+
+  &--social-block {
+
+    // width: 80%; /* NOTE: descreased width allows for seeing part of next and previos slides; signals to mobile users there's more to see */
+    overflow-x: hidden; /* NOTE: this prevents horizontal scrollbar on smaller screens / touch devices */
+    
+    .carousel__list-wrapper {
+
+      overflow: visible !important; /* NOTE: in conjunction with declaration above, this overrides inline style added by Unslider plugin */
+
+    }
+
+    .unslider {
+
+      width: 80%;
+      margin: auto;
+
+    }
+
+    li.grid__cell {
+
+      padding: 0 .5rem; /* NOTE: in conjunction with declarations above, this allows space for next/previous slide to be in view */
+
+      @include sb-media($medium-breakpoint) {
+        
+        padding: 0 .75rem;
+
+        &:first-of-type {
+
+          padding-left: 0;
+
+        }
+
+        &:last-of-type {
+
+          padding-right: 0;
+
+        }
+
+      }
+
+    }
+
+    li.grid__cell.u-visible {
+      
+      //
+
+      @include sb-media($medium-breakpoint) {
+
+        padding: 0 .75rem;
+
+      }
+
+    }
+
+    .grid--gutters {
+
+      //
+      
+      @include sb-media($medium-breakpoint) {
+        
+        margin: -1em 0 1em -1em;
+
+      }
+
+    }
+
+    .grid--guttersLg {
+
+      //
+
+      @include sb-media($medium-breakpoint) {
+
+        margin: -1.5em 0 1.5em -1.5em;
+
+      }
+
+    }
+
+    .unslider-carousel {
+
+      position: absolute !important;
+
+      @include sb-media($medium-breakpoint) {
+        
+        position: relative !important;
+  
+      }
+
+    }
+
+    .unslider-arrow {
+
+      @include vertical-align;
+      font-size: 3rem;
+      position: absolute;
+      text-decoration: none;
+
+      &.prev {
+
+        // border: 1px solid red;
+        left: -2rem;
+
+      }
+
+      &.next {
+
+        // border: 1px solid green;
+        right: -2rem;
+
+      }
+
+    }
+
+    .unslider-nav ol li {
+
+      width: 10px;
+      height: 10px;
+      background-color: $core-light-gray;
+
+    }
+
+    .unslider-nav ol li.unslider-active {
+
+      background-color: $accent-orange;
+
+    }
+
+    .unslider-nav {
+
+      // position: absolute;
+      // bottom: -2rem;
+      // width: 100%;
+      
+    }
+
+    @include sb-media($medium-breakpoint) {
+
+      display: none;
+
+    }
+          
+    .social-box {
+
+      @include vertical-align;
+      border: 0;
+
+      @include sb-media($medium-breakpoint) {
+
+        top: auto;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+
+      }
+
+    }
+
+  }
+
+  &--no-arrows {
+
+    .unslider-arrow {
+
+      display: none !important; /* NOTE: review why !important is needed, looks like it's overriding inline style */
+
+    }
+
+  }
+
+  &--blue-dots {
+
+    .unslider-nav ol li.unslider-active {
+
+      background-color: $core-blue;
+
+    }
+
+  }
+
+  &--deep-purple-dots {
+
+    .unslider-nav ol li.unslider-active {
+
+      background-color: $accent-deep-purple;
+
+    }
+
+  }
+
+  &--trans-dots {
+
+    .unslider-nav ol li {
+
+      background-color: rgba(255,255,255,.25);
+
+    }
+
+    .unslider-nav ol li.unslider-active {
+
+      background-color: $white;
+
+    }
+
+  }
+
+  ul {
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+  }
+
+  @include sb-media($large-breakpoint) {
+
+    &--alerts {
+
+      padding: 0 $page-side-padding; 
+      margin: 30px auto 14px; /* NOTE: increase top margin on wider screens */
+
+    }
+
+    &--alerts-new {
+
+      padding: 0;
+      margin: auto;
+
+      .alert-block__item,
+      .alert-block__icon-wrapper, 
+      .unslider__close-btn {
+
+        border-radius: 0;
+
+      }
+
+    }
+
+    &--heros {
+
+      //
+
+    }
+
+    &--promo-blocks {
+
+      //
+
+    }
+
+    /*
+    &--cards {
+
+      //
+
+    }
+    */
+
+    &--social-block {
+
+      //
+
+    }
+
+    &--full-width {
+
+      max-width: none;
+
+    }
+
+  }
+
+}

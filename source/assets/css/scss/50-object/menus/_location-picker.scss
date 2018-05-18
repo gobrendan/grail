@@ -1,0 +1,590 @@
+/*
+ * location picker
+ */
+
+.location-picker {
+
+  font-size: $font-size--eta;
+  position: relative;
+  float: left;
+
+  &__label {
+    
+    @include clearfix;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: $white;
+    background: $accent-purple;
+    text-decoration: none;
+    padding: 1rem;
+
+    &-text, 
+    &-location {
+
+      white-space: nowrap; /* NOTE: prevent line wrapping, prevent location icon from wrapping */
+      
+    }
+
+    &-text {
+
+      display: block;
+      float: left;
+      font-family: $font-medium-family;
+      background: $accent-purple;
+      margin-right: .5rem;
+      position: relative;
+      z-index: 1;
+
+    }
+
+    &-location {
+
+      float: left;
+
+      &--selected {
+
+        border-left-width: 0;
+
+      }
+
+    }
+
+    &-icon {
+
+      font-size: 1rem;
+      vertical-align: middle;
+
+    }
+
+    &:hover {
+
+      color: $white;
+      background: $accent-purple;
+      text-decoration: none;
+      
+    }
+
+  }
+
+  &__form {
+
+    font-size: 1rem; /* NOTE: needed since the parent element has a font-size of zero */
+    background: $core-off-white;    
+    border-color: $accent-purple;
+    border-style: solid;
+    border-width: 1px;
+    max-width: 500px;
+
+    /* NOTE: since the placeholder is long, visually hide it (make transparent) on smaller screens; adjust its color at wider viewport width */
+    /* NOTE: using "__form" element as parent here since this element is sometimes displayed on its own (without "location-picker" parent) */
+
+    .search-box__text-input::-webkit-input-placeholder { 
+
+      color: transparent;
+
+    }
+
+    .search-box__text-input::-moz-placeholder { 
+
+      color: transparent;
+
+    }
+    
+  }
+
+  // &__form-title {
+
+  //   display: none; /* NOTE: this might be removed altogether */
+  //   background: $white;
+  //   padding: 1rem;
+
+  // }
+
+  &__input {
+
+    //
+
+  }
+
+  &__btn {
+
+    //
+
+  }
+
+  &__results {
+
+    list-style: none;
+    padding: 0;
+    border-top: 1px solid $white;
+    margin: 0;
+
+    &-item {
+
+      //
+
+    }
+
+    &-link, 
+    &-link:visited {  
+
+      display: block;
+      font-size: $font-size--eta;
+      color: $black;
+      padding: .5rem 1rem;
+      text-decoration: none;
+
+      &:hover {
+        
+        color: $black;
+        text-decoration: none;
+        background: $core-light-gray;
+
+      }
+
+    }
+
+  }
+
+  &__search-box {
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 100%;
+    border: 0;
+    border-radius: 0;
+
+    .search-box__text-input {
+
+      font-size: $font-size--default;
+      // font-size: $font-size--eta;
+      border-radius: 0;
+      padding: 1rem;
+      height: auto;
+      border: 0;
+      width: 100%;
+      background: $core-off-white; 
+
+      &:hover {
+
+        border: 0;
+        
+      }
+      
+    }
+
+    &--small {
+
+      .search-box__text-input {
+
+        padding: 5px;
+
+      }
+
+      .search-box__button, 
+      .search-box__button:visited, 
+      .search-box__button:hover {
+
+        padding: 5px 1rem 5px 5px;
+        white-space: nowrap;
+
+      }
+
+    }
+
+  }
+
+  &__search-btn {
+
+    font-size: 1rem;
+    width: auto;
+    padding: 1rem;
+    line-height: 1.5;
+    // line-height: 1;
+    border-radius: 0;
+    position: relative;
+
+  }
+
+  &__search-btn, 
+  &__search-btn:visited, 
+  &__search-btn:hover {
+
+    color: $accent-blue;
+    text-decoration: none;
+
+  }
+
+  &__search-btn-text {
+
+    display: inline-block;
+    text-decoration: underline;
+
+  }
+
+  &__search-btn-icon {
+
+    display: inline-block;
+    margin-left: 4px;
+
+  }
+
+  .location-picker__label {
+
+    color: $white;
+    width: 100%;
+
+  }
+
+  .location-picker__form {
+
+    clear: both;
+    max-width: 100%;
+
+    @include sb-media($large-breakpoint) {
+
+      min-width: 395px; /* NOTE: magic number -- makes room for entire placeholder to be visible */
+
+    }
+
+  }
+
+  &--max-width {
+
+    max-width: 550px; /* NOTE: magic number */
+
+  }
+
+  &--turquoise {
+
+    .location-picker__label {
+      
+      background: $accent-turquoise;
+  
+      &-text {
+  
+        background: $accent-turquoise;
+  
+      }
+  
+      &-location {
+  
+        border-left-color: $accent-turquoise-dark;
+  
+      }
+  
+      &:hover {
+  
+        background: $accent-turquoise;
+        
+      }
+  
+    }
+
+    .location-picker__form {
+
+      border-color: $accent-turquoise;
+
+    }
+
+  }
+
+  &--orange {
+    
+    .location-picker__label {
+      
+      background: $accent-orange;
+  
+      &-text {
+      
+        background: $accent-orange;
+  
+      }
+  
+      &-location {
+  
+        border-left-color: $accent-purple;
+  
+      }
+  
+      &:hover {
+  
+        background: $accent-orange;
+        
+      }
+  
+    }
+
+    .location-picker__form {
+
+      border-color: $accent-orange;
+
+    }
+
+  }
+
+  &--selected {
+
+    //
+
+  }
+
+  &--unselected {
+
+    //
+
+  }
+    
+}
+
+@include sb-media($small-breakpoint) {
+
+  //
+
+  .location-picker__form { /* NOTE: using "__form" element as parent here since this element is sometimes displayed on its own (without "location-picker" parent) */
+
+    /* NOTE: make placeholder visible on wider screens (override initial "color:transparent" declaration) */
+
+    .search-box__text-input::-webkit-input-placeholder { 
+
+      color: $core-gray; 
+
+    }
+
+    .search-box__text-input::-moz-placeholder { 
+
+      color: $core-gray; 
+
+    }
+
+  }
+
+  .location-picker__label {
+
+    font-size: $font-size--default;
+
+    &-icon {
+
+      font-size: 1.5rem;
+
+    }
+
+  }
+
+  .location-picker__label-text {
+
+    margin-right: 2rem;
+
+    &:after {
+
+      content: "";
+      display: block;
+      background: $accent-purple;
+      position: absolute;
+      left: -1rem;
+      bottom: -1rem;
+      z-index: -1;
+      right: -1rem;
+      top: -1rem;
+      border-right: 1px solid $accent-orange;
+
+    }
+
+  }
+
+  .location-picker--turquoise {
+
+    //
+
+    .location-picker__label-text {
+
+      //
+
+      &:after {
+
+        background: $accent-turquoise;
+        border-right-color: $accent-turquoise-dark;
+
+      }
+
+    }
+
+  }
+
+}
+
+@include sb-media($large-breakpoint) {
+
+  .location-picker__label {
+
+    background: rgba(112, 28, 69, .75);
+
+  }
+
+  .location-picker--orange {
+
+    .location-picker__label {
+
+      background: rgba(192, 84, 17, .75);
+
+    }
+
+  }
+
+  .location-picker--turquoise {
+
+    .location-picker__label {
+
+      background: rgba(60, 128, 125, .75);
+
+    }
+
+  }
+
+}
+
+/* NOTE: IE 11 adjustments */
+
+.flexbox.flexboxtweener { 
+
+  .location-picker {
+
+    //
+
+    .search-box__clear-btn, 
+    .clear_input {
+
+      right: 0;
+
+    }
+
+  }
+
+  .location-picker__search-box {
+
+    @include clearfix;
+
+  }
+
+  .search-box__text-input-wrapper, 
+  .clear_input_div { /* NOTE: ".clear_input_div" is used in SharePoint */
+
+    float: left;
+    width: calc(100% - 120px); /* NOTE: magic number -- second value is approximate width of "Find Me" button */
+
+  }
+
+  .location-picker__search-btn {
+
+    position: absolute;
+    min-width: 120px;
+
+  }
+
+}
+
+@include sb-media($small-breakpoint) {
+
+  .flexbox.flexboxtweener { 
+
+    .location-picker {
+  
+      //
+  
+      .search-box__clear-btn, 
+      .clear_input {
+  
+        right: .5rem;
+  
+      }
+  
+    }
+  
+  }
+
+}
+
+@include sb-media($large-breakpoint) {
+
+  .flexbox.flexboxtweener { 
+
+    .search-box__text-input-wrapper, 
+    .clear_input_div { /* NOTE: ".clear_input_div" is used in SharePoint */
+
+      -webkit-flex: 0 0 280px;
+      flex: 0 0 280px;
+  
+    }
+
+  }
+
+}
+
+/* NOTE: IE 9/10 adjustments */
+
+.no-flexbox.no-flexboxlegacy {
+
+  .location-picker {
+
+    //
+
+    &__label {
+
+      display: block;
+
+    }
+
+    &__form {
+
+      /* NOTE: neither the 'hidden' class or attribute are being picked up by IE 9, so a multiple class selector is needed */
+
+      &.hidden {
+
+        display: none;
+
+      }
+
+    }
+
+    &__results {
+
+      /* NOTE: neither the 'hidden' class or attribute are being picked up by IE 9, so a multiple class selector is needed */
+
+      &.hidden {
+
+        display: none;
+
+      }
+
+    }
+
+  }
+
+  .location-picker__search-box {
+
+    @include clearfix;
+
+  }
+
+  .search-box__text-input-wrapper, 
+  .clear_input_div { /* NOTE: ".clear_input_div" is used in SharePoint */
+
+    float: left;
+    width: calc(100% - 120px); /* NOTE: magic number -- second value is approximate width of "Find Me" button */
+
+  }
+
+  .location-picker__search-btn {
+
+    position: absolute;
+    min-width: 120px;
+
+  }
+
+}

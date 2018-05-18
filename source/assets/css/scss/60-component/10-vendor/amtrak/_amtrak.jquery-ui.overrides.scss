@@ -1,0 +1,263 @@
+/*
+ * AmtrakjQuery UI overrides
+ */
+
+/* NOTE: general jQuery autocomplete overrides, elements are appended to bottom of DOM (not inside above container) -- might want to maintain these in separate Sass partial */
+
+.ui-menu .ui-menu-item a {
+
+  cursor: pointer;
+  border: 1px solid transparent; /* NOTE: prevents jumpiness when hovering links */
+
+}
+
+.ui-menu .ui-menu-item a.ui-state-focus,
+.ui-menu .ui-menu-item a.ui-state-active {
+
+  margin: 0 !important;
+
+}
+
+/* NOTE: jQuery UI modals */
+
+.ui-widget-overlay { /* NOTE: jQuery UI modal background */
+
+  background: rgba(0,0,0,.75); /* NOTE: this value should be in a variable */
+
+}
+
+.ui-dialog {
+
+  font-size: $font-size--zeta;
+  border-radius: 0;
+
+}
+
+.ui-dialog-titlebar {
+
+  //
+
+}
+
+
+
+
+.amtrak-page {
+
+  //
+
+  .cds_find-a-station {
+
+    position: relative !important;
+    left: 0 !important;
+    width: 100% !important;
+    top: auto !important;
+
+    border: 0;
+    padding: 0 1.25rem 1.25rem;
+    background: $core-off-white;
+    border-radius: 0;
+
+    @include sb-media($large-breakpoint) {
+
+      padding: 1.25rem;
+
+    }
+
+  }
+
+  .ui-dialog .ui-dialog-titlebar {
+
+    background: transparent;
+
+    padding: 0 2.75rem 1rem 0; /* NOTE: mimics modal header styling -- should refactor into mixin */
+    border-width: 0 0 1px;
+    border-bottom-color: $core-light-gray;
+    border-radius: 0;
+    margin: 0 0 1rem;
+
+  }
+
+  .ui-dialog .ui-dialog-title {
+
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1;
+
+    font-family: $font-medium-family;
+
+  }
+
+  .ui-dialog .ui-dialog-titlebar-close,
+  .ui-dialog .ui-dialog-titlebar-close.ui-state-hover {
+
+    font-size: 1.5rem;
+    font-weight: normal;
+    right: 0;
+    position: absolute;
+    top: 0;
+    text-decoration: none;
+    width: auto;
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    color: $accent-blue;
+    top: auto;
+    bottom: .75rem;
+    line-height: 1;
+    background: transparent;
+
+    /* NOTE: hide span and use :after pseudo element to include icon */
+
+    span {
+
+      display: none;
+
+    }
+
+    &:after {
+
+      display: block;
+      font-family: 'custom-icomoon';
+      content: "\e908";
+
+    }
+
+  }
+
+  .ui-dialog .ui-dialog-content {
+
+    font-size: 1rem;
+    padding: 0;
+
+  }
+
+
+  /* NOTE: "By City" and "By State" toggle header */
+
+  .cds_fas_lower_header {
+
+    padding: 0;
+    margin: 0 0 1rem;
+
+  }
+
+  div.cds_fas_lower_header span.cds_fas_lower_header_left,
+  div.cds_fas_lower_header span.cds_fas_lower_header_mode_left {
+
+    margin: 0 1rem 0 0;
+
+  }
+
+  div.cds_fas_lower_header span.cds_fas_lower_header_right {
+
+    width: auto;
+    float: none;
+
+
+  }
+
+  div.cds_fas_lower_header span.cds_fas_lower_header_right,
+  div.cds_fas_lower_header span.cds_fas_lower_header_mode_right {
+
+    float: none;
+
+  }
+
+  .ui-widget-content a {
+
+    // @extend a;
+    @extend %a;
+
+  }
+
+
+  /* NOTE: ABC links */
+
+  div.cds_fas_letters_parent_holder {
+
+    padding: 0;
+    margin: 0 0 1rem;
+
+  }
+
+  div.cds_fas_letters_parent_holder a.cds_fas_link {
+
+    // @extend a;
+    @extend %a;
+    color: red; 
+
+  }
+
+  div.cds_fas_station_letter_title {
+
+    padding: 0;
+    margin: 0 0 1rem;
+
+  }
+
+  div.cds_fas_station_list_left,
+  div.cds_fas_station_list_right {
+
+    width: 100%;
+    float: none;
+
+    @include sb-media($large-breakpoint) {
+
+      width: calc(50% - 1rem);
+      float: left;
+
+    }
+
+  }
+
+  div.cds_fas_station_list_right {
+
+    margin: 0 0 1rem;
+
+    @include sb-media($large-breakpoint) {
+
+      float: right;
+
+    }
+
+  }
+
+  div.cds_fas_footer {
+
+    display: none;
+
+  }
+
+  div.cds_fas_country_Canada_letters,
+  div.cds_fas_country_US_letters {
+
+    padding: 0;
+    margin: 0 0 1rem;
+
+  }
+
+  div.cds_fas_letters_parent_holder span.cds_fas_country_name {
+
+    width: 4rem;
+
+  }
+
+  div.cds_fas_letters_parent_holder span.cds_fas_country_letters {
+
+    width: calc(100% - 5rem);
+
+  }
+
+  /* NOTE: modal background */
+
+  .ui-widget-overlay {
+
+    display: none;
+
+  }
+
+}

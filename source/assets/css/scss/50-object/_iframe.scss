@@ -1,0 +1,16 @@
+/*
+ * iframe
+ */
+
+.iframe {
+
+  //
+
+  &--tims {
+
+    width: 100%; 
+    height: 1000px; /* NOTE: magic number, provides ample room for viewing the frame's src */
+
+  }
+
+}
