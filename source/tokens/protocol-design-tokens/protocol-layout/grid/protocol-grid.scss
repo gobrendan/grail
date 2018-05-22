@@ -1,0 +1,6 @@
+$gutter-width: 32px;
+
+// CSS Grid
+$grid-gap-column: $gutter-width;
+$grid-gap-row: $gutter-width;
+$grid-gap: $grid-gap-column $grid-gap-row;

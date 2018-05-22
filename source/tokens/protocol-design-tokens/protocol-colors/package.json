@@ -1,0 +1,29 @@
+{
+  "name": "@mozilla-protocol/colors",
+  "version": "2.1.0",
+  "description": "Variables for Mozilla's brand and interface color palette",
+  "main": "colors/protocol-colors.js",
+  "style": "protocol-colors.scss",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozilla/protocol-design-tokens.git"
+  },
+  "keywords": [
+    "mozilla",
+    "colors",
+    "css",
+    "json"
+  ],
+  "author": "Michael McCombie <mmccombie@mozilla.com>",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/mozilla/protocol-design-tokens/issues?q=is%3Aissue+is%3Aopen+label%3A%22tokens%3A+colors%22"
+  },
+  "homepage": "https://github.com/mozilla/protocol-design-tokens/tree/master/protocol-colors#readme",
+  "devDependencies": {
+    "protocol-colors": "^2.0.4"
+  }
+}

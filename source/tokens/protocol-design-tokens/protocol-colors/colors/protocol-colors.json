@@ -1,0 +1,14 @@
+{
+  "black": {
+    "base": {
+      "hex": "#000001",
+      "map": "primary"
+    }
+  },
+  "white": {
+    "base": {
+      "hex": "#ffffff",
+      "map": "secondary"
+    }
+  }
+}

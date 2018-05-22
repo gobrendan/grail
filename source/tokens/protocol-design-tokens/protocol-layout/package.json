@@ -1,0 +1,26 @@
+{
+  "name": "@mozilla-protocol/layout",
+  "version": "2.0.1",
+  "description": "Variables for Mozilla's layout units and settings",
+  "main": "protocol-layout.js",
+  "style": "protocol-layout.scss",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozilla/protocol-design-tokens.git"
+  },
+  "keywords": [
+    "mozilla",
+    "layout",
+    "css",
+    "json"
+  ],
+  "author": "Michael McCombie <mmccombie@mozilla.com>",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/mozilla/protocol-design-tokens/issues?q=is%3Aissue+is%3Aopen+label%3A%22tokens%3A+layout%22"
+  },
+  "homepage": "https://github.com/mozilla/protocol-design-tokens/tree/master/protocol-layout#readme"
+}

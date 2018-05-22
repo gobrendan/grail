@@ -1,0 +1,38 @@
+{
+  "name": "protocol-design-tokens",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tokens for Mozilla's Protocol design system",
+  "scripts": {
+    "lint-js": "./node_modules/.bin/eslint .",
+    "lint-css": "./node_modules/.bin/stylelint '**/*.css' '**/*.scss'",
+    "build-assets": "cd ./protocol-assets/ && node build.js",
+    "build-colors": "cd ./protocol-colors/ && node build.js",
+    "build-layout": "cd ./protocol-layout/ && node build.js",
+    "pre-test": "npm run lint-js && npm run lint-css",
+    "test": "npm run build-assets && npm run build-colors && npm run build-layout"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozilla/protocol-design-tokens.git"
+  },
+  "keywords": [
+    "design",
+    "system",
+    "tokens",
+    "colors",
+    "variables"
+  ],
+  "author": "Mozilla",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/mozilla/protocol-design-tokens/issues"
+  },
+  "homepage": "https://github.com/mozilla/protocol-design-tokens#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  },
+  "dependencies": {
+    "stylelint": "^9.2.0"
+  }
+}

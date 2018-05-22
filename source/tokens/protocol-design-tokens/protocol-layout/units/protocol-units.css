@@ -1,0 +1,41 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Protocol Colors CSS Variables v2.0.1 */
+
+:root {
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  --spacing-base: var(--spacing-md);
+
+  --padding-xs: var(--spacing-xs);
+  --padding-sm: var(--spacing-sm);
+  --padding-md: var(--spacing-md);
+  --padding-lg: var(--spacing-lg);
+  --padding-xl: var(--spacing-xl);
+  --padding-xxl: var(--spacing-xxl);
+  --padding-base: var(--spacing-base);
+
+  --margin-xs: var(--spacing-xs);
+  --margin-sm: var(--spacing-sm);
+  --margin-md: var(--spacing-md);
+  --margin-lg: var(--spacing-lg);
+  --margin-xl: var(--spacing-xl);
+  --margin-xxl: var(--spacing-xxl);
+  --margin-base: var(--spacing-base);
+
+  --layout-xxs: 16px;
+  --layout-xs: 24px;
+  --layout-sm: 32px;
+  --layout-md: 48px;
+  --layout-lg: 64px;
+  --layout-xl: 96px;
+  --layout-xxl: 160px;
+  --layout-base: var(--layout-md);
+
+}

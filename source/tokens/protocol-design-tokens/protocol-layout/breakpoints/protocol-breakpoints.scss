@@ -1,0 +1,26 @@
+// Content Sizes
+$content-xs: 300px;
+$content-sm: 460px;
+$content-md: 740px;
+$content-lg: 980px;
+$content-xl: 1380px;
+$content-max: 1420px;
+
+// Screen Sizes
+$screen-xs: $content-xs + $gutter-width !default;
+$screen-sm: $content-sm + $gutter-width !default;
+$screen-md: $content-md + $gutter-width !default;
+$screen-lg: $content-lg + $gutter-width !default;
+$screen-xl: $content-xl + $gutter-width !default;
+
+// Media Queries
+$media-xs: 'screen and (min-width:' + $screen-xs + ')';
+$media-sm: 'screen and (min-width:' + $screen-sm + ')';
+$media-md: 'screen and (min-width:' + $screen-md + ')';
+$media-lg: 'screen and (min-width:' + $screen-lg + ')';
+$media-xl: 'screen and (min-width:' + $screen-xl + ')';
+
+$media-short: '(max-height: 600px)';
+$media-tall: '(min-height: 600px)';
+
+$media-high-res: 'only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi)';

@@ -1,0 +1,39 @@
+{
+  "spacing": {
+    "xs": 4,
+    "sm": 8,
+    "md": 16,
+    "lg": 24,
+    "xl": 32,
+    "xxl": 48,
+    "base": "spacing-md"
+  },
+  "padding": {
+    "xs": "spacing-xs",
+    "sm": "spacing-sm",
+    "md": "spacing-md",
+    "lg": "spacing-lg",
+    "xl": "spacing-xl",
+    "xxl": "spacing-xxl",
+    "base": "spacing-base"
+  },
+  "margin": {
+    "xs": "spacing-xs",
+    "sm": "spacing-sm",
+    "md": "spacing-md",
+    "lg": "spacing-lg",
+    "xl": "spacing-xl",
+    "xxl": "spacing-xxl",
+    "base": "spacing-base"
+  },
+  "layout": {
+    "xxs": 16,
+    "xs": 24,
+    "sm": 32,
+    "md": 48,
+    "lg": 64,
+    "xl": 96,
+    "xxl": 160,
+    "base": "layout-md"
+  }
+}

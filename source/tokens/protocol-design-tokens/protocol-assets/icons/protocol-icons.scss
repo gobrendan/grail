@@ -1,0 +1,115 @@
+$imagedir:'/icons/lib/';
+
+// Background Image
+@mixin icon-background($filename,$position:0 0,$repeat: no-repeat) {
+    background: transparent url(#{$imagedir}#{$filename}) $repeat $position;
+}
+.icon-facebook {
+    @include icon-background('facebook.svg');
+}
+.icon-firefox {
+    @include icon-background('firefox.svg');
+}
+.icon-github {
+    @include icon-background('github.svg');
+}
+.icon-instagram {
+    @include icon-background('instagram.svg');
+}
+.icon-pocket {
+    @include icon-background('pocket.svg');
+}
+.icon-twitter {
+    @include icon-background('twitter.svg');
+}
+.icon-youtube {
+    @include icon-background('youtube.svg');
+}
+
+// Insert Before
+@mixin icon-background-before($height, $left, $img) {
+  height: $height;
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    content: '';
+    display: block;
+    height: $height;
+    position: absolute;
+    top: 0;
+    width: $side-width;
+    z-index: -1;
+  }
+
+  &:before {
+    background-image: $img;
+    left: $left;
+  }
+}
+
+.icon-before-facebook {
+    @include icon-background-before('facebook.svg');
+}
+.icon-before-firefox {
+    @include icon-background-before('firefox.svg');
+}
+.icon-before-github {
+    @include icon-background-before('github.svg');
+}
+.icon-before-instagram {
+    @include icon-background-before('instagram.svg');
+}
+.icon-before-pocket {
+    @include icon-background-before('pocket.svg');
+}
+.icon-before-twitter {
+    @include icon-background-before('twitter.svg');
+}
+.icon-before-youtube {
+    @include icon-background-before('youtube.svg');
+}
+
+// Insert After
+@mixin icon-background-after($height, $right, $img) {
+  height: $height;
+  position: relative;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    display: block;
+    height: $height;
+    position: absolute;
+    top: 0;
+    width: $side-width;
+    z-index: -1;
+  }
+
+  &:after {
+    background-image: $img;
+    right: $right;
+  }
+}
+
+.icon-after-facebook {
+    @include icon-background-after('facebook.svg');
+}
+.icon-after-firefox {
+    @include icon-background-after('firefox.svg');
+}
+.icon-after-github {
+    @include icon-background-after('github.svg');
+}
+.icon-after-instagram {
+    @include icon-background-after('instagram.svg');
+}
+.icon-after-pocket {
+    @include icon-background-after('pocket.svg');
+}
+.icon-after-twitter {
+    @include icon-background-after('twitter.svg');
+}
+.icon-after-youtube {
+    @include icon-background-after('youtube.svg');
+}
