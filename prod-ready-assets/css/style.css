@@ -28,8 +28,8 @@
   font-family: "gr-icon-set";
   font-style: normal;
   font-weight: normal;
-  src: url("../../assets/fonts/icon-set.eot");
-  src: url("../../assets/fonts/icon-set.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/icon-set.ttf") format("truetype"), url("../../assets/fonts/icon-set.woff") format("woff"), url("../../assets/fonts/icon-set.svg#svgicon-set") format("svg");
+  src: url("../../assets/fonts/gr-icon-set.eot");
+  src: url("../../assets/fonts/gr-icon-set.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/gr-icon-set.ttf") format("truetype"), url("../../assets/fonts/gr-icon-set.woff") format("woff"), url("../../assets/fonts/gr-icon-set.svg#svggr-icon-set") format("svg");
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
   /* Support for Safari and Chrome. */
@@ -626,7 +626,7 @@ button {
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.15s ease-in-out;
-  letter-spacing: 0.03rem;
+  letter-spacing: .03rem;
   cursor: pointer;
   /* useful for <button> and <input type='submit'> elements */
 }

@@ -7,17 +7,12 @@
 @import "scss/10-setting/10-variable/breakpoint";
 @import "scss/10-setting/10-variable/color";
 @import "scss/10-setting/10-variable/padding";
-@import "scss/10-setting/10-variable/IE-targeting";
 @import "scss/10-setting/10-variable/font";
-@import "scss/10-setting/10-variable/logo";
 @import "scss/10-setting/10-variable/numeric";
-@import "scss/10-setting/10-variable/table";
 @import "scss/10-setting/10-variable/text";
-@import "scss/10-setting/10-variable/letter-spacing";
 @import "scss/10-setting/10-variable/transition";
 @import "scss/10-setting/10-variable/validation";
 @import "scss/10-setting/10-variable/custom-dropdown";
-@import "scss/10-setting/10-variable/form";
 @import "scss/10-setting/10-variable/width";
 @import "scss/10-setting/10-variable/custom-property";
 
@@ -50,7 +45,6 @@
 // placeholder
 
 @import "scss/20-tool/20-placeholder/general";
-// @import "scss/20-tool/20-placeholder/heading";
 @import "scss/20-tool/20-placeholder/text";
 @import "scss/20-tool/20-placeholder/form";
 @import "scss/20-tool/20-placeholder/list";
@@ -87,14 +81,7 @@
 // object
 //
 
-// @import "scss/60-layout/page";
-// @import "scss/60-layout/page-alt";
-// @import "scss/60-layout/page-layout";
-// @import "scss/60-layout/page-grid";
-// @import "scss/60-layout/component-grid";
 @import "scss/50-object/grid";
-// @import "scss/60-layout/form-grid";
-// @import "scss/60-layout/sharepoint";
 
 //
 // component
@@ -102,91 +89,11 @@
 
 @import "scss/60-component/heading"; 
 @import "scss/60-component/button"; 
-// @import "scss/60-component/button-set"; 
 @import "scss/60-component/card"; 
 @import "scss/60-component/card-set"; 
 @import "scss/60-component/video"; 
 @import "scss/60-component/text-input"; 
 @import "scss/60-component/form"; 
-
-// @import "scss/60-component/10-vendor/datatables/10.datatables.edited"; // NOTE: edits include commenting out some rules
-// @import "scss/60-component/10-vendor/datatables/20.datatables-overrides";
-// @import "scss/60-component/10-vendor/datatables/30.responsive.datatables.edited"; // NOTE: edits include replacing color values with variables
-// @import "scss/60-component/10-vendor/datatables/40.responsive.datatables-overrides";
-// @import "scss/60-component/10-vendor/SelectBoxIt/10.selectBoxIt.edited"; // NOTE: some rules commented out; some overrides might be here instead of overrides file
-// @import "scss/60-component/10-vendor/SelectBoxIt/20.selectBoxIt.overrides";
-// @import "scss/60-component/10-vendor/SelectBoxIt/30.selectBoxIt.overrides.alt"; // NOTE: document use of "alt" when creating alternate versions
-// @import "scss/60-component/10-vendor/SelectBoxIt/40.menu-wrapper";
-// @import "scss/60-component/10-vendor/slinky/10.jquery.slinky";
-// @import "scss/60-component/10-vendor/slinky/20.jquery.slinky.overrides";
-// @import "scss/60-component/10-vendor/jquery-ui/10.jquery-ui";
-// @import "scss/60-component/10-vendor/jquery-ui/30.jquery-ui.overrides";
-// @import "scss/60-component/10-vendor/unslider/variables";
-// @import "scss/60-component/10-vendor/unslider/unslider/reset";
-// @import "scss/60-component/10-vendor/unslider/unslider/dots";
-// @import "scss/60-component/10-vendor/unslider/unslider.overrides";
-// @import "scss/60-component/10-vendor/isotope/20.isotope.custom";
-// @import "scss/60-component/10-vendor/juxtapose/10.juxtapose";
-// @import "scss/60-component/10-vendor/juxtapose/20.juxtapose.overrides";
-// @import "scss/60-component/10-vendor/amtrak/amtrak.overrides";
-// @import "scss/60-component/10-vendor/amtrak/amtrak.jquery-ui.overrides";
-// @import "scss/60-component/10-vendor/slick/20.slick.custom";
-
-// @import "scss/50-object/text/text-sizes";
-// @import "scss/50-object/text/character-count";
-// @import "scss/50-object/text/text";
-// @import "scss/50-object/text/headings";
-// @import "scss/50-object/text/count";
-// @import "scss/50-object/text/results-count";
-// @import "scss/50-object/media/img";
-// @import "scss/50-object/media/map";
-// @import "scss/50-object/media/image-block";
-// @import "scss/50-object/media/logo";
-// @import "scss/50-object/media/image-gallery";
-// @import "scss/50-object/media/thumb";
-// @import "scss/50-object/media/map-box";
-// @import "scss/50-object/media/twitter-feed";
-// @import "scss/50-object/lists/lists";
-// @import "scss/50-object/lists/simple-list";
-// @import "scss/50-object/lists/simple-list-block";
-// @import "scss/50-object/lists/simple-list-group";
-// @import "scss/50-object/lists/event-list";
-// @import "scss/50-object/lists/social-list";
-// @import "scss/50-object/lists/media-list";
-// @import "scss/50-object/lists/list-icons";
-// @import "scss/50-object/lists/search-results";
-// @import "scss/50-object/lists/location-box";
-// @import "scss/50-object/lists/video-list";
-// @import "scss/50-object/lists/campaign-list";
-// @import "scss/50-object/lists/link-list";
-// @import "scss/50-object/forms/form-fields";
-// @import "scss/50-object/forms/fieldsets";
-// @import "scss/50-object/forms/input-group";
-// @import "scss/50-object/forms/search-box";
-// @import "scss/50-object/forms/dropdown-wrapper";
-// @import "scss/50-object/forms/search-form";
-// @import "scss/50-object/forms/form-step";
-// @import "scss/50-object/forms/input-layered";
-// @import "scss/50-object/forms/form-wrapper";
-// @import "scss/50-object/nav/breadcrumbs";
-// @import "scss/50-object/nav/nav-list";
-// @import "scss/50-object/nav/wide-nav";
-// @import "scss/50-object/nav/side-nav";
-// @import "scss/50-object/nav/pagination";
-// @import "scss/50-object/tables/table-wrapper";
-// @import "scss/50-object/tables/tables";
-// @import "scss/50-object/tables/table-closures";
-// @import "scss/50-object/heroine/heroine";
-// @import "scss/50-object/menus/location-picker";
-// @import "scss/50-object/tabs";
-// @import "scss/50-object/iframe";
-// @import "scss/50-object/modal";
-// @import "scss/50-object/steps";
-// @import "scss/50-object/cart";
-// @import "scss/50-object/social-box";
-// @import "scss/50-object/shapes";
-// @import "scss/50-object/ico-box";
-// @import "scss/50-object/scroll-box";
 
 // utility
 

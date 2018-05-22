@@ -29,7 +29,7 @@ button {
   text-decoration:      none; 
   text-transform:       uppercase; 
   transition:           $btn-transition; 
-  letter-spacing:       $btn-letter-spacing; 
+  letter-spacing:       .03rem; 
   cursor:               pointer; /* useful for <button> and <input type='submit'> elements */
 
   &:hover {
