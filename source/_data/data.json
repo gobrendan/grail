@@ -1,5 +1,13 @@
 {
 
+  "html-classXX" : "gr-t-dark", 
+
+  "body-class" : "sp-anonymous",
+
+
+
+
+
   "pl-color-palette" : [
 
     {
@@ -12,8 +20,8 @@
           "variable" : "$color-blue-saphire", 
           "hex-value" : "#1A546B", 
           "rgb-value" : "rgb(26,84,107)", 
-          "utility-class" : "u-c-blue-saphire", 
-          "bg-utility-class" : "u-bg-blue-saphire"
+          "utility-class" : "gr-u-c-blue-saphire", 
+          "bg-utility-class" : "gr-u-bg-blue-saphire"
 
         }, 
 
@@ -23,8 +31,8 @@
           "variable" : "$color-french-blue", 
           "hex-value" : "#0071BC", 
           "rgb-value" : "rgb(0,113,188)", 
-          "utility-class" : "u-c-french-blue", 
-          "bg-utility-class" : "u-bg-french-blue"
+          "utility-class" : "gr-u-c-french-blue", 
+          "bg-utility-class" : "gr-u-bg-french-blue"
 
         }, 
 
@@ -34,8 +42,8 @@
           "variable" : "$color-french-blue", 
           "hex-value" : "#BED9F6", 
           "rgb-value" : "rgb(190,217,246)", 
-          "utility-class" : "u-c-pale-aqua", 
-          "bg-utility-class" : "u-bg-pale-aqua"
+          "utility-class" : "gr-u-c-pale-aqua", 
+          "bg-utility-class" : "gr-u-bg-pale-aqua"
 
         }, 
 
@@ -45,8 +53,8 @@
           "variable" : "$color-deep-aqua", 
           "hex-value" : "#92c6fe", 
           "rgb-value" : "rgb(146,198,254)", 
-          "utility-class" : "u-c-deep-aqua", 
-          "bg-utility-class" : "u-bg-deep-aqua"
+          "utility-class" : "gr-u-c-deep-aqua", 
+          "bg-utility-class" : "gr-u-bg-deep-aqua"
 
         }, 
 
@@ -56,8 +64,8 @@
           "variable" : "$color-mikado-yellow", 
           "hex-value" : "#FECD0D", 
           "rgb-value" : "rgb(254,205,13)", 
-          "utility-class" : "u-c-mikado-yellow", 
-          "bg-utility-class" : "u-bg-mikado-yellow"
+          "utility-class" : "gr-u-c-mikado-yellow", 
+          "bg-utility-class" : "gr-u-bg-mikado-yellow"
 
         }, 
 
@@ -67,8 +75,8 @@
           "variable" : "$color-carmine-pink", 
           "hex-value" : "#F13741", 
           "rgb-value" : "rgb(241,55,65)", 
-          "utility-class" : "u-c-carmine-pink", 
-          "bg-utility-class" : "u-bg-carmine-pink"
+          "utility-class" : "gr-u-c-carmine-pink", 
+          "bg-utility-class" : "gr-u-bg-carmine-pink"
 
         }, 
 
@@ -78,8 +86,8 @@
           "variable" : "$color-burnt-orange", 
           "hex-value" : "#ff5b06", 
           "rgb-value" : "rgb(255,91,6)", 
-          "utility-class" : "u-c-burnt-orange", 
-          "bg-utility-class" : "u-bg-burnt-orange"
+          "utility-class" : "gr-u-c-burnt-orange", 
+          "bg-utility-class" : "gr-u-bg-burnt-orange"
 
         }, 
 
@@ -89,8 +97,8 @@
           "variable" : "$color-light-gray", 
           "hex-value" : "#D0D4E0", 
           "rgb-value" : "rgb(208,212,224)", 
-          "utility-class" : "u-c-light-gray", 
-          "bg-utility-class" : "u-bg-light-gray"
+          "utility-class" : "gr-u-c-light-gray", 
+          "bg-utility-class" : "gr-u-bg-light-gray"
 
         }, 
 
@@ -100,8 +108,8 @@
           "variable" : "$color-soft-white", 
           "hex-value" : "#fafafa", 
           "rgb-value" : "rgb(250,250,250)", 
-          "utility-class" : "u-c-soft-white", 
-          "bg-utility-class" : "u-bg-soft-white"
+          "utility-class" : "gr-u-c-soft-white", 
+          "bg-utility-class" : "gr-u-bg-soft-white"
 
         }, 
 
@@ -111,8 +119,8 @@
           "variable" : "$color-rare-black", 
           "hex-value" : "#343434", 
           "rgb-value" : "rgb(52,52,52)", 
-          "utility-class" : "u-c-rare-black", 
-          "bg-utility-class" : "u-bg-rare-black"
+          "utility-class" : "gr-u-c-rare-black", 
+          "bg-utility-class" : "gr-u-bg-rare-black"
 
         }
 
@@ -303,6 +311,13 @@
     {
 
       "item" : [
+
+        {
+          
+          "name" : "Grail", 
+          "class" : "gr-i-grail"
+
+        }, 
 
         {
           
@@ -757,7 +772,7 @@
     {
 
       "type" : "ul", 
-      "modifier" : "", 
+      "class" : "", 
       "item" : [
 
         {
@@ -799,7 +814,53 @@
         {
           
           "type" : "ol", 
-          "modifier" : "", 
+          "class" : "", 
+          "item" : [
+    
+            {
+              
+              "class" : "", 
+              "modifier" : "", 
+              "text" : "List item"
+    
+            }, 
+    
+            {
+              
+              "class" : "", 
+              "modifier" : "", 
+              "text" : "List item"
+    
+            }, 
+    
+            {
+              
+              "class" : "", 
+              "modifier" : "", 
+              "text" : "List item"
+    
+            }
+    
+          ]
+    
+        }
+    
+      ]
+
+    }
+
+  ], 
+
+  "custom-list" : [
+
+    {
+
+      "list" : [
+
+        {
+          
+          "type" : "ol", 
+          "class" : "gr-c-custom-list", 
           "item" : [
     
             {
@@ -1665,8 +1726,75 @@
 
   ], 
 
+  "nav" : [
 
+    {
 
+      "class" : "", 
+      "item" : [
+
+        {
+
+          "link-text" : "About"
+
+        }, 
+
+        {
+
+          "link-text" : "Source"
+
+        }, 
+
+        {
+
+          "link-text" : "Contact"
+
+        }
+
+      ]
+
+    }
+
+  ],
+
+  "site-header" : [
+
+    {
+
+      "nav" : [
+
+        {
+    
+          "class" : "gr-c-site-header__nav", 
+          "item" : [
+    
+            {
+    
+              "link-text" : "About"
+    
+            }, 
+    
+            {
+    
+              "link-text" : "Source"
+    
+            }, 
+    
+            {
+    
+              "link-text" : "Contact"
+    
+            }
+    
+          ]
+    
+        }
+    
+      ]      
+
+    }
+
+  ], 
 
 
 
@@ -1684,7 +1812,7 @@
 
   
 
-  "body-class" : "sp-anonymous",
+  
 
   "page-title": "Page Title",
 
@@ -1885,122 +2013,6 @@
   ],
 
   "sharepoint-ribbon" : true, 
-
-  "site-header" : [
-
-    {
-
-      "search-box" : [
-
-        {
-
-          "input-type" : "search", 
-          "icon-class" : "icon-search", 
-          "placeholder" : "Search&hellip;"
-
-        }
-
-      ],
-      "nav-list" : [
-        
-        {
-
-          "modifier" : "nav-list--header"
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "site-header-DMV" : [
-
-    {
-
-      "site-header" : [
-
-        {
-
-          "logo" : [
-
-            {
-
-              "url" : "",
-              "modifier" : "logo--DMV-full-new",
-              "text" : "North Carolina Division of Motor Vehicles"
-
-            }
-
-          ]
-
-        }
-
-      ]
-
-    }
-
-  ],
-
-  "site-header-GTP" : [
-
-    {
-
-      "modifier" : "site-header--white-bg",
-      "site-header" : [
-
-        {
-
-          "logo" : [
-
-            {
-
-              "url" : "",
-              "modifier" : "logo--global-transpark",
-              "text" : "North Carolina Global Transpark"
-
-            }
-
-          ],
-          "search-box" : [
-
-            {
-              
-              "input-type" : "search", 
-              "modifier" : "search-box--bordered",
-              "icon-class" : "icon-search", 
-              "placeholder" : "Search&hellip;"
-
-            }
-
-          ],
-          "nav-list" : [
-
-            {
-
-              "modifier" : "nav-list--header nav-list--dark"
-
-            }
-
-          ],
-          "alert-block" : [
-
-            {
-
-              "modifier" : "alert-toggle--dark"
-
-            }
-
-          ]
-
-        }
-
-      ]
-
-    }
-
-  ],
 
   "mobile-header" : [
 

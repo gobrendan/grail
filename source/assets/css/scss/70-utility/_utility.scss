@@ -54,116 +54,18 @@
 
 .u-required {
 
-  color: $note-red;
+  // color: $note-red;
 
 }
 
 .u-error {
 
-  color: $note-red;
+  // color: $note-red;
 
 }
 
 .u-no-top-margin {
 
   margin-top: 0;
-
-}
-
-/* NOTE: font sizes */
-
-.u-font-size {
-
-  margin: 0 0 1rem;
-
-  &:last-child {
-
-    margin: 0;
-
-  }
-
-  &--alpha {
-
-    font-size: $font-size--alpha;
-
-    &-alt {
-
-      font-size: $font-size--alpha-alt;
-
-    }
-
-  }
-
-  &--beta {
-
-    font-size: $font-size--beta;
-
-    &-alt {
-
-      font-size: $font-size--beta-alt;
-
-    }
-
-  }
-
-  &--gamma {
-
-    font-size: $font-size--gamma;
-
-    &-alt {
-
-      font-size: $font-size--gamma-alt;
-
-    }
-
-  }
-
-  &--delta {
-
-    font-size: $font-size--delta;
-
-    &-alt {
-
-      font-size: $font-size--delta-alt;
-
-    }
-
-  }
-
-  &--epsilon {
-
-    font-size: $font-size--epsilon;
-
-    &-alt {
-
-      font-size: $font-size--epsilon-alt;
-
-    }
-
-  }
-
-  &--zeta {
-
-    font-size: $font-size--zeta;
-
-    &-alt {
-
-      font-size: $font-size--zeta-alt;
-
-    }
-
-  }
-
-  &--eta {
-
-    font-size: $font-size--eta;
-
-  }
-
-}
-
-.u-color-white {
-
-  color: $white;
 
 }

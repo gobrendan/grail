@@ -81,15 +81,16 @@ module.exports = function (grunt) {
         files: {
           './public/assets/css/style.css': './source/assets/css/style.scss'
         }
-      }, 
-      sharepoint: {
-        options: {
-          style: 'expanded'
-        },
-        files: {
-          './public/assets/css/sharepoint-overrides.css': './source/assets/css/sharepoint-overrides.scss'
-        }
       }
+      // , 
+      // sharepoint: {
+      //   options: {
+      //     style: 'expanded'
+      //   },
+      //   files: {
+      //     './public/assets/css/sharepoint-overrides.css': './source/assets/css/sharepoint-overrides.scss'
+      //   }
+      // }
     }, 
 
     //

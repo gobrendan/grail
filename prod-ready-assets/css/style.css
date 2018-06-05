@@ -13,12 +13,22 @@
   --color-rare-black: #343434;
   --color-light-gray: #D0D4E0;
   --color-soft-white: #fafafa;
+  /* main */
+  --site-background-color: white;
+  --site-text-color: black;
+  --label-text-color: black;
   /* link */
   --link-color: var(--color-blue-saphire);
   --link-color-hover: var(--color-french-blue);
   /* button */
   --btn-text-color: var(--color-soft-white);
   --btn-bg-color: var(--color-blue-saphire);
+}
+
+html.gr-t-dark {
+  --site-background-color: #222;
+  --site-text-color: white;
+  --label-text-color: white;
 }
 
 /*
@@ -90,31 +100,6 @@ figure {
   padding: 0;
 }
 
-/*
- * base / main
- */
-html {
-  font-size: 1rem;
-}
-
-body {
-  font: normal normal normal 100%/1.5 "TransportNewLight_gdi", Helvetica, Arial, sans-serif;
-  color: #0b0c0c;
-  background: white;
-  /* NOTE: https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust */
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  /* NOTE: since the mobile header is sticky, the top padding here is used as a placeholder */
-  /* NOTE: Font smoothing (non-standard) -- https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth */
-  -webkit-font-smoothing: antialiased;
-  /* NOTE: IE Edge is giving wide horizontal scrollbar -- hide overflow to fix */
-  /* NOTE: the mobile nav is hidden at the $large-breakpoint, so the padding can be set to zero */
-}
-.mod_no-flexboxlegacy body {
-  overflow-x: hidden;
-}
-
 [class^="gr-i-"], [class*=" gr-i-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'gr-icon-set' !important;
@@ -127,6 +112,10 @@ body {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.gr-i-grail:before {
+  content: "\e903";
 }
 
 .gr-i-facebook:before {
@@ -337,7 +326,7 @@ body {
  * elements / text
  */
 a {
-  color: #397aac;
+  color: #1A546B;
   color: var(--link-color);
   text-decoration: underline;
 }
@@ -435,6 +424,7 @@ fieldset:last-child {
  */
 label {
   display: block;
+  color: var(--label-text-color);
   font-weight: normal;
   margin: 0 0 .5rem;
 }
@@ -486,7 +476,7 @@ table {
 }
 
 .table-heading {
-  color: #6a7681;
+  color: #343434;
   text-align: left;
   padding: 0;
   margin: 0 0 10px;
@@ -497,7 +487,6 @@ td {
   padding: .75rem 1rem;
   border-width: 0 0 1px;
   border-style: solid;
-  border-color: #1A546B;
 }
 
 th,
@@ -505,18 +494,15 @@ thead td {
   font-weight: bold;
   text-align: left;
   vertical-align: bottom;
+  border-color: #343434;
 }
 
 td {
-  border-color: #D0D4E0;
   vertical-align: top;
+  border-color: #D0D4E0;
 }
 
 /* zebra-striped rows */
-tbody tr:nth-child(even) {
-  background: #fafafa;
-}
-
 /*
  * hr
  */
@@ -528,6 +514,41 @@ hr {
   /* value should be in custom property */
   margin: 2rem auto;
   /* value should be in variable */
+}
+
+/*
+ * base / main
+ */
+html {
+  font-size: 1rem;
+  background-color: var(--site-background-color);
+  height: 100%;
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+html *,
+html *:before,
+html *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+body {
+  font: normal normal normal 100%/1.5 "TransportNewLight_gdi", Helvetica, Arial, sans-serif;
+  color: var(--site-text-color);
+  height: 100vh;
+  /* NOTE: https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust */
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  /* NOTE: since the mobile header is sticky, the top padding here is used as a placeholder */
+  /* NOTE: Font smoothing (non-standard) -- https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth */
+  -webkit-font-smoothing: antialiased;
+  /* NOTE: IE Edge is giving wide horizontal scrollbar -- hide overflow to fix */
+  /* NOTE: the mobile nav is hidden at the $large-breakpoint, so the padding can be set to zero */
+}
+.mod_no-flexboxlegacy body {
+  overflow-x: hidden;
 }
 
 /*
@@ -681,6 +702,24 @@ button {
 }
 
 /*
+ * custom list 
+ */
+.gr-c-custom-list {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  padding-left: 14px;
+  /* magic number -- lines up numbered bullets with default <ol> bullets */
+}
+.gr-c-custom-list li {
+  counter-increment: my-awesome-counter;
+}
+.gr-c-custom-list li:before {
+  content: counter(my-awesome-counter) ". ";
+  color: red;
+  font-weight: bold;
+}
+
+/*
  * card
  */
 .gr-c-card {
@@ -751,7 +790,7 @@ input[type=password],
 textarea,
 .gr-c-input-text {
   font-size: 1rem;
-  border: 1px solid #95a0ad;
+  border: 1px solid #D0D4E0;
   height: 2.5rem;
   width: 100%;
   padding: .75rem;
@@ -797,19 +836,16 @@ input[type=number]::-webkit-outer-spin-button {
 ::-webkit-input-placeholder {
   /* NOTE: Chrome/Opera/Safari */
   font-style: italic;
-  color: #5f6c7b;
 }
 
 ::-moz-placeholder {
   /* NOTE: Firefox 19+ */
   font-style: italic;
-  color: #5f6c7b;
 }
 
 :-ms-input-placeholder {
   /* NOTE: IE 10+ */
   font-style: italic;
-  color: #5f6c7b;
 }
 
 :-moz-placeholder {
@@ -880,141 +916,107 @@ input::-webkit-search-cancel-button {
 }
 
 /*
- * utility / icon modifiers -- icon-related rules/fixes
+ * nav
  */
-/* general */
-[class^="icon-"],
-[class*=" icon-"] {
-  text-align: center;
-  /* NOTE: resolves issue in IE 9 -- without this, some icons seem to left-align the icon character */
-}
-
-.icon--circled, .material-icons--circled {
-  -webkit-transition: all 0.15s ease-in-out;
-  -moz-transition: all 0.15s ease-in-out;
-  -ms-transition: all 0.15s ease-in-out;
-  -o-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
-  border: 2px solid;
-  border-radius: 50%;
-  padding: .5rem;
-  /* NOTE: use explicit dimensions in IE 9 -- otherwise, element displays as an oval  */
-}
-.no-csstransitions .icon--circled,
-.no-csstransitions .material-icons--circled {
-  font-size: 0;
-  display: inline-block;
-  width: 38px;
-  height: 38px;
-}
-.no-csstransitions .icon--circled:before,
-.no-csstransitions .material-icons--circled:before {
+.gr-c-nav__menu {
   display: block;
-  margin: 0 auto;
-  font-size: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.gr-c-nav__item {
+  display: inline-block;
+  margin: 0 1rem 0 0;
+}
+.gr-c-nav__item:last-child {
+  margin: 0;
 }
 
-.material-icons--circled {
-  /* NOTE: fix for padding issue in IE 11 */
-  /* NOTE: override IE 9-specific rule above dealing with dimensions */
+/*
+ * site header
+ */
+.gr-c-site-header {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: auto;
+  align-items: baseline;
+  padding: 1rem 0 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #D0D4E0;
+  border-bottom-color: var(--color-light-gray);
+  margin: 0 auto 1rem;
+  /* bottom margin should be in variable */
+  max-width: 1000px;
+  /* value should be in variable */
 }
-.no-flexboxlegacy .material-icons--circled {
-  padding: 10px 8px 6px;
-  /* NOTE: magic numbers */
+.gr-c-site-header__heading {
+  font-size: 2rem;
+  /* value should be in variable */
+  margin: 0;
+  /* override default '.gr-c-heading' property */
 }
-.no-csstransitions .material-icons--circled {
-  font-size: 1em;
-  text-align: center;
+.gr-c-site-header__heading-link {
+  text-decoration: none;
+  /* override default 'a' property */
 }
-
-a:hover .icon--circled,
-a:hover .material-icons--circled {
-  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-[class^="icon-"][class$="--success"],
-[class*=" icon-"][class$="--success"] {
-  color: #588023;
-}
-
-[class^="icon-"][class$="--error"],
-[class*=" icon-"][class$="--error"] {
-  color: #a83338;
-}
-
-[class^="icon-"][class$="--warning"],
-[class*=" icon-"][class$="--warning"] {
-  color: #9a6f09;
-}
-
-.icon--large {
+.gr-c-site-header__heading-link i {
   font-size: 1.5rem;
 }
+.gr-c-site-header__nav {
+  margin: 1rem 0;
+}
+@media (min-width: 20em) {
+  .gr-c-site-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .gr-c-site-header .gr-c-site-header__nav {
+    margin: 0;
+  }
+}
 
-/* NOTE: spinning icons */
-[class^="icon-"][class$="-spinning"],
-[class*=" icon-"][class$="-spinning"],
-[class^="material-icons"][class$="--spinning"],
-[class*=" material-icons"][class$="--spinning"] {
-  /* NOTE: In order to animate, must be set to display: -webkit-box;
-   * NOTE: IE doesn't require a 'display' value -- if set to display:block, IE 11 has display issues
-   */
-  display: -webkit-box;
-  width: 1em;
-  height: 1em;
-  /* NOTE: keep icon horizontally/vertically centered */
+/*
+ * hero
+ */
+.gr-c-hero {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: auto;
+  max-width: 1000px;
+  /* this value should be in a variable */
+  margin: auto;
+}
+.gr-c-hero__inner {
+  position: relative;
+  padding-top: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.gr-c-hero__img-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.gr-c-hero img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.gr-c-hero__text-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: grid;
+  align-items: center;
   text-align: center;
-  line-height: 1em;
-  -webkit-animation-name: icon-spin;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-name: icon-spin;
-  -moz-animation-duration: 1s;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: linear;
-  -ms-animation-name: icon-spin;
-  -ms-animation-duration: 1s;
-  -ms-animation-iteration-count: infinite;
-  -ms-animation-timing-function: linear;
-  animation-name: icon-spin;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
 }
 
-@-ms-keyframes icon-spin {
-  from {
-    -ms-transform: rotate(0deg);
-  }
-  to {
-    -ms-transform: rotate(-360deg);
-  }
-}
-@-moz-keyframes icon-spin {
-  from {
-    -moz-transform: rotate(0deg);
-  }
-  to {
-    -moz-transform: rotate(-360deg);
-  }
-}
-@-webkit-keyframes icon-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(-360deg);
-  }
-}
-@keyframes icon-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
-}
 /*
  * utility / visibility
  */
@@ -1100,67 +1102,8 @@ table td .u-text-left {
   white-space: nowrap;
 }
 
-.u-required {
-  color: #a83338;
-}
-
-.u-error {
-  color: #a83338;
-}
-
 .u-no-top-margin {
   margin-top: 0;
-}
-
-/* NOTE: font sizes */
-.u-font-size {
-  margin: 0 0 1rem;
-}
-.u-font-size:last-child {
-  margin: 0;
-}
-.u-font-size--alpha {
-  font-size: 3rem;
-}
-.u-font-size--alpha-alt {
-  font-size: 3.157rem;
-}
-.u-font-size--beta {
-  font-size: 2.25rem;
-}
-.u-font-size--beta-alt {
-  font-size: 2.369rem;
-}
-.u-font-size--gamma {
-  font-size: 1.5em;
-}
-.u-font-size--gamma-alt {
-  font-size: 1.777rem;
-}
-.u-font-size--delta {
-  font-size: 1.3125rem;
-}
-.u-font-size--delta-alt {
-  font-size: 1.333rem;
-}
-.u-font-size--epsilon {
-  font-size: 1.125rem;
-}
-.u-font-size--epsilon-alt {
-  font-size: 1rem;
-}
-.u-font-size--zeta {
-  font-size: 1rem;
-}
-.u-font-size--zeta-alt {
-  font-size: 0.75rem;
-}
-.u-font-size--eta {
-  font-size: 0.8rem;
-}
-
-.u-color-white {
-  color: white;
 }
 
 /*
@@ -1179,323 +1122,56 @@ table td .u-text-left {
 }
 
 /*
- * backgrounds
+ * background color
  */
-.u-bg-blue-saphire {
+.gr-u-bg-blue-saphire {
   background-color: #1A546B;
   background-color: var(--color-blue-saphire);
 }
 
-.u-bg-french-blue {
+.gr-u-bg-french-blue {
   background-color: #0071BC;
   background-color: var(--color-french-blue);
 }
 
-.u-bg-pale-aqua {
+.gr-u-bg-pale-aqua {
   background-color: #BED9F6;
   background-color: var(--color-pale-aqua);
 }
 
-.u-bg-deep-aqua {
+.gr-u-bg-deep-aqua {
   background-color: #92c6fe;
   background-color: var(--color-deep-aqua);
 }
 
-.u-bg-mikado-yellow {
+.gr-u-bg-mikado-yellow {
   background-color: #FECD0D;
   background-color: var(--color-mikado-yellow);
 }
 
-.u-bg-carmine-pink {
+.gr-u-bg-carmine-pink {
   background-color: #F13741;
   background-color: var(--color-carmine-pink);
 }
 
-.u-bg-burnt-orange {
+.gr-u-bg-burnt-orange {
   background-color: #ff5b06;
   background-color: var(--color-burnt-orange);
 }
 
-.u-bg-rare-black {
+.gr-u-bg-rare-black {
   background-color: #343434;
   background-color: var(--color-rare-black);
 }
 
-.u-bg-light-gray {
+.gr-u-bg-light-gray {
   background-color: #D0D4E0;
   background-color: var(--color-light-gray);
 }
 
-.u-bg-soft-white {
+.gr-u-bg-soft-white {
   background-color: #fafafa;
   background-color: var(--color-soft-white);
-}
-
-/* generic */
-.u-bg-white {
-  background-color: white;
-}
-
-.u-bg-black {
-  background-color: #0b0c0c;
-}
-
-.u-bg-dark-gray {
-  background-color: #5f6c7b;
-}
-
-.u-bg-medium-gray {
-  background-color: #95a0ad;
-}
-
-.u-bg-light-gray {
-  background-color: #ecf0f3;
-}
-
-/* core */
-.u-bg-core-black {
-  background-color: #0b0c0c;
-}
-
-.u-bg-core-blue {
-  background-color: #092940;
-}
-
-.u-bg-core-gray {
-  background-color: #5f6c7b;
-}
-
-.u-bg-core-light-gray {
-  background-color: #95a0ad;
-}
-
-.u-bg-core-off-white {
-  background-color: #ecf0f3;
-}
-
-.u-bg-core-white {
-  background-color: white;
-}
-
-/* accent */
-.u-bg-accent-cool-gray {
-  background-color: #6a7681;
-}
-
-.u-bg-accent-warm-gray {
-  background-color: #757575;
-}
-
-.u-bg-accent-light-blue {
-  background-color: #3f7d97;
-}
-
-.u-bg-accent-blue {
-  background-color: #397aac;
-}
-
-.u-bg-accent-indigo {
-  background-color: #00376d;
-}
-
-.u-bg-accent-deep-purple {
-  background-color: #662e6b;
-}
-
-.u-bg-accent-purple {
-  background-color: #701c45;
-}
-
-.u-bg-accent-red {
-  background-color: #a83338;
-}
-
-.u-bg-accent-orange {
-  background-color: #c05411;
-}
-
-.u-bg-accent-olive {
-  background-color: #9a6f09;
-}
-
-.u-bg-accent-green {
-  background-color: #588023;
-}
-
-.u-bg-accent-turquoise {
-  background-color: #3c807d;
-}
-
-.u-bg-accent-turquoise-light {
-  background-color: #4c9490;
-}
-
-.u-bg-accent-turquoise-dark {
-  background-color: #235f5d;
-}
-
-/* note -- reuses colors from accent palette */
-.u-bg-note-blue {
-  background-color: #397aac;
-}
-
-.u-bg-note-green {
-  background-color: #588023;
-}
-
-.u-bg-note-orange {
-  background-color: #c05411;
-}
-
-.u-bg-note-red {
-  background-color: #a83338;
-}
-
-/*
- * utility / background images
- */
-/* generic */
-.u-bg-img-white {
-  background-color: white;
-}
-
-.u-bg-img-black {
-  background-color: #0b0c0c;
-}
-
-.u-bg-img-dark-gray {
-  background-color: #5f6c7b;
-}
-
-.u-bg-img-medium-gray {
-  background-color: #95a0ad;
-}
-
-.u-bg-img-light-gray {
-  background-color: #ecf0f3;
-}
-
-/* core */
-.u-bg-img-core-black {
-  background-color: #0b0c0c;
-  background-image: url(../../assets/images/bg/bg_poly-core-black.jpg);
-}
-
-.u-bg-img-core-blue {
-  background-color: #092940;
-  background-image: url(../../assets/images/bg/bg_poly-core-blue.jpg);
-}
-
-.u-bg-img-core-gray {
-  background-color: #5f6c7b;
-  background-image: url(../../assets/images/bg/bg_poly-core-gray.jpg);
-}
-
-.u-bg-img-core-light-gray {
-  background-color: #95a0ad;
-  background-image: url(../../assets/images/bg/bg_poly-core-light-gray.jpg);
-}
-
-.u-bg-img-core-off-white {
-  background-color: #ecf0f3;
-  background-image: url(../../assets/images/bg/bg_poly-core-off-white.jpg);
-}
-
-.u-bg-img-core-white {
-  background-color: white;
-  background-image: url(../../assets/images/bg/bg_poly-core-white.jpg);
-}
-
-/* accent */
-.u-bg-img-accent-cool-gray {
-  background-color: #6a7681;
-  background-image: url(../../assets/images/bg/bg_poly-accent-cool-gray.jpg);
-}
-
-.u-bg-img-accent-warm-gray {
-  background-color: #757575;
-  background-image: url(../../assets/images/bg/bg_poly-accent-warm-gray.jpg);
-}
-
-.u-bg-img-accent-light-blue {
-  background-color: #3f7d97;
-  background-image: url(../../assets/images/bg/bg_poly-accent-light-blue.jpg);
-}
-
-.u-bg-img-accent-blue {
-  background-color: #397aac;
-  background-image: url(../../assets/images/bg/bg_poly-accent-blue.jpg);
-}
-
-.u-bg-img-accent-indigo {
-  background-color: #00376d;
-  background-image: url(../../assets/images/bg/bg_poly-accent-indigo.jpg);
-}
-
-.u-bg-img-accent-deep-purple {
-  background-color: #662e6b;
-  background-image: url(../../assets/images/bg/bg_poly-accent-deep-purple.jpg);
-}
-
-.u-bg-img-accent-purple {
-  background-color: #701c45;
-  background-image: url(../../assets/images/bg/bg_poly-accent-purple.jpg);
-}
-
-.u-bg-img-accent-red {
-  background-color: #a83338;
-  background-image: url(../../assets/images/bg/bg_poly-accent-red.jpg);
-}
-
-.u-bg-img-accent-orange {
-  background-color: #c05411;
-  background-image: url(../../assets/images/bg/bg_poly-accent-orange.jpg);
-}
-
-.u-bg-img-accent-olive {
-  background-color: #9a6f09;
-  background-image: url(../../assets/images/bg/bg_poly-accent-olive.jpg);
-}
-
-.u-bg-img-accent-green {
-  background-color: #588023;
-  background-image: url(../../assets/images/bg/bg_poly-accent-green.jpg);
-}
-
-.u-bg-img-accent-turquoise {
-  background-color: #3c807d;
-  background-image: url(../../assets/images/bg/bg_poly-accent-turquoise.jpg);
-}
-
-.u-bg-img-accent-turquoise-light {
-  background-color: #4c9490;
-  background-image: url(../../assets/images/bg/bg_poly-accent-turquoise-light.jpg);
-}
-
-.u-bg-img-accent-turquoise-dark {
-  background-color: #235f5d;
-  background-image: url(../../assets/images/bg/bg_poly-accent-turquoise-dark.jpg);
-}
-
-/* note -- reuses colors/images from accent palette */
-.u-bg-img-note-blue {
-  background-color: #397aac;
-  background-image: url(../../assets/images/bg/bg_poly-accent-blue.jpg);
-}
-
-.u-bg-img-note-green {
-  background-color: #588023;
-  background-image: url(../../assets/images/bg/bg_poly-accent-green.jpg);
-}
-
-.u-bg-img-note-orange {
-  background-color: #c05411;
-  background-image: url(../../assets/images/bg/bg_poly-accent-orange.jpg);
-}
-
-.u-bg-img-note-red {
-  background-color: #a83338;
-  background-image: url(../../assets/images/bg/bg_poly-accent-red.jpg);
 }
 
 /*
@@ -1579,53 +1255,52 @@ table td .u-text-left {
 }
 
 /*
- * utility / display -- show/hide depending on viewport width
+ * display -- show/hide depending on viewport width
  */
-.u-display--medium {
+.gr-u-display--medium {
   display: none;
 }
 @media (min-width: 48em) {
-  .u-display--medium {
+  .gr-u-display--medium {
     display: block;
   }
 }
 @media (min-width: 48em) {
-  .u-display--small-only {
+  .gr-u-display--small-only {
     display: none;
   }
 }
 @media (min-width: 64em) {
-  .u-display--medium-only {
+  .gr-u-display--medium-only {
     display: none;
   }
 }
-.u-display--large-only {
+.gr-u-display--large-only {
   display: none;
 }
 @media (min-width: 64em) {
-  .u-display--large-only {
+  .gr-u-display--large-only {
     display: block;
   }
 }
 @media (min-width: 64em) {
-  .u-display--small-medium-only {
+  .gr-u-display--small-medium-only {
     display: none;
   }
 }
 
-/* NOTE: IE 9/10 doesn't support media queries */
 /*
- * fonts
+ * font
  */
-.u-f-cabin {
+.gr-u-f-cabin {
   font: normal normal normal 100%/1.5 "Cabin", sans-serif;
 }
 
-.u-f-open-sans {
+.gr-u-f-open-sans {
   font: normal normal normal 100%/1.5 "Open Sans", sans-serif;
 }
 
-.u-f-italic {
+.gr-u-f-italic {
   font-style: italic;
 }
 

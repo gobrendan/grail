@@ -17,6 +17,12 @@
   --color-light-gray :      #{$color-light-gray}; 
   --color-soft-white :      #{$color-soft-white}; 
 
+  /* main */
+
+  --site-background-color : white; 
+  --site-text-color :       black; 
+  --label-text-color :      black; 
+
   /* link */
 
   --link-color :            var(--color-blue-saphire); 
@@ -26,5 +32,13 @@
 
   --btn-text-color :        var(--color-soft-white); 
   --btn-bg-color :          var(--color-blue-saphire); 
+
+}
+
+html.gr-t-dark {
+
+  --site-background-color : #222; 
+  --site-text-color :       white; 
+  --label-text-color :      white; 
 
 }

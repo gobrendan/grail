@@ -4,6 +4,8 @@
 
 .gr-c-card-set {
 
-  @include grid(true, 1rem, repeat(auto-fit, minmax(200px, 1fr)), auto);
+  @include grid(true, 1rem, repeat(auto-fit, minmax(200px, 1fr)), auto); 
+  // max-width: 1000px; /* value should be in variable */
+  // margin: 0 auto 2rem; /* bottom margin should be in variable */
 
 }

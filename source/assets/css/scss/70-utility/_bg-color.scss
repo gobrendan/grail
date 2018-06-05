@@ -1,250 +1,64 @@
 /*
- * backgrounds
+ * background color
  */
 
 
-.u-bg-blue-saphire {
+.gr-u-bg-blue-saphire {
 
   @include custom-property(background-color, --color-blue-saphire, $color-blue-saphire);
 
 }
 
-.u-bg-french-blue {
+.gr-u-bg-french-blue {
 
   @include custom-property(background-color, --color-french-blue, $color-french-blue);
 
 }
 
-.u-bg-pale-aqua {
+.gr-u-bg-pale-aqua {
 
   @include custom-property(background-color, --color-pale-aqua, $color-pale-aqua);
 
 }
 
-.u-bg-deep-aqua {
+.gr-u-bg-deep-aqua {
 
   @include custom-property(background-color, --color-deep-aqua, $color-deep-aqua);
 
 }
 
-.u-bg-mikado-yellow {
+.gr-u-bg-mikado-yellow {
 
   @include custom-property(background-color, --color-mikado-yellow, $color-mikado-yellow);
 
 }
 
-.u-bg-carmine-pink {
+.gr-u-bg-carmine-pink {
 
   @include custom-property(background-color, --color-carmine-pink, $color-carmine-pink);
 
 }
 
-.u-bg-burnt-orange {
+.gr-u-bg-burnt-orange {
 
   @include custom-property(background-color, --color-burnt-orange, $color-burnt-orange);
 
 }
 
-.u-bg-rare-black {
+.gr-u-bg-rare-black {
 
   @include custom-property(background-color, --color-rare-black, $color-rare-black);
 
 }
 
-.u-bg-light-gray {
+.gr-u-bg-light-gray {
 
   @include custom-property(background-color, --color-light-gray, $color-light-gray);
 
 }
 
-.u-bg-soft-white {
+.gr-u-bg-soft-white {
 
   @include custom-property(background-color, --color-soft-white, $color-soft-white);
-
-}
-
-
-////////////
-
-
-/* generic */
-
-.u-bg-white {
-
-  background-color: $core-white;
-
-}
-
-.u-bg-black {
-
-  background-color: $core-black;
-
-}
-
-.u-bg-dark-gray {
-
-  background-color: $core-gray;
-
-}
-
-.u-bg-medium-gray {
-
-  background-color: $core-light-gray;
-
-}
-
-.u-bg-light-gray {
-
-  background-color: $core-off-white;
-
-}
-
-/* core */
-
-.u-bg-core-black {
-
-  background-color: $core-black;
-
-}
-
-.u-bg-core-blue {
-
-  background-color: $core-blue;
-
-}
-
-.u-bg-core-gray {
-
-  background-color: $core-gray;
-
-}
-
-.u-bg-core-light-gray {
-
-  background-color: $core-light-gray;
-
-}
-
-.u-bg-core-off-white {
-
-  background-color: $core-off-white;
-
-}
-
-.u-bg-core-white {
-
-  background-color: $core-white;
-
-}
-
-/* accent */
-
-.u-bg-accent-cool-gray {
-
-  background-color: $accent-cool-gray;
-
-}
-
-.u-bg-accent-warm-gray {
-
-  background-color: $accent-warm-gray;
-
-}
-
-.u-bg-accent-light-blue {
-
-  background-color: $accent-light-blue;
-
-}
-
-.u-bg-accent-blue {
-
-  background-color: $accent-blue;
-
-}
-
-.u-bg-accent-indigo {
-
-  background-color: $accent-indigo;
-
-}
-
-.u-bg-accent-deep-purple {
-
-  background-color: $accent-deep-purple;
-
-}
-
-.u-bg-accent-purple {
-
-  background-color: $accent-purple;
-
-}
-
-.u-bg-accent-red {
-
-  background-color: $accent-red;
-
-}
-
-.u-bg-accent-orange {
-
-  background-color: $accent-orange;
-
-}
-
-.u-bg-accent-olive {
-
-  background-color: $accent-olive;
-
-}
-
-.u-bg-accent-green {
-
-  background-color: $accent-green;
-
-}
-
-.u-bg-accent-turquoise {
-
-  background-color: $accent-turquoise;
-
-}
-
-.u-bg-accent-turquoise-light {
-
-  background-color: $accent-turquoise-light;
-
-}
-
-.u-bg-accent-turquoise-dark {
-
-  background-color: $accent-turquoise-dark;
-
-}
-
-/* note -- reuses colors from accent palette */
-
-.u-bg-note-blue {
-
-  background-color: $note-blue;
-
-}
-
-.u-bg-note-green {
-
-  background-color: $note-green;
-
-}
-
-.u-bg-note-orange {
-
-  background-color: $note-orange;
-
-}
-
-.u-bg-note-red {
-
-  background-color: $note-red;
 
 }

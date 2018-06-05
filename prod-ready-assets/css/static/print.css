@@ -1,0 +1,63 @@
+/*
+ * print 
+ */
+
+
+/* utility  */
+
+.print-only {
+  display: none;
+}
+
+@media only print {
+  /* utility */
+  .print-only {
+    display: block;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+  /* Reduce font size for .page-wrapper container -- makes more room for components, especially tables */
+  .page-wrapper {
+    font-size: $font-size--zeta;
+  }
+  /* Remove left/right padding for .page-content container -- no need for padding since printed page has margins */
+  .page-content {
+    padding: 2rem 0 0;
+  }
+  /* Decrease font-size for tables to make more room on screen */
+  table {
+    //
+  }
+  /* Make adjustment for .table--alt components */
+  .table--alt {
+    /* Set border-radius to zero to resolve weird display in print view */
+    th,
+    td {
+      border-radius: 0 !important;
+    }
+  }
+
+  th,
+  td {
+    /* since pages generally print with margins, remove left padding from first cell and right padding from last cell */
+    &:first-child {
+      padding-left: 0 !important;
+    }
+
+    &:last-child {
+      padding-right: 0 !important;
+    }
+  }
+  /* For expandable tables, display foreground image for plus/minus button since BG images don't print by default */
+  .dataTable {
+    td.details-control {
+      position: relative;
+
+      &:after {
+        content: url(/assets/images/icon-plus.svg);
+      }
+    }
+  }
+}

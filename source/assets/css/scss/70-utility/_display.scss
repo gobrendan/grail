@@ -1,8 +1,8 @@
 /*
- * utility / display -- show/hide depending on viewport width
+ * display -- show/hide depending on viewport width
  */
 
-.u-display {
+.gr-u-display {
 
   //
 
@@ -77,13 +77,5 @@
     }
 
   }
-
-}
-
-/* NOTE: IE 9/10 doesn't support media queries */
-
-.no-flexbox {
-
-  //
 
 }

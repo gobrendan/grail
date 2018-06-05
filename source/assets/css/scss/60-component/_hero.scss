@@ -1,0 +1,53 @@
+/*
+ * hero
+ */
+
+.gr-c-hero {
+
+  @include grid(false, 0, auto, auto); 
+  max-width: 1000px; /* this value should be in a variable */ 
+  margin: auto; 
+
+  &__inner {
+
+    position: relative; 
+    padding-top: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+
+  }
+
+  &__img-wrapper {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+  }
+
+  img {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+  }
+
+  &__text-wrapper {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    
+  }
+
+}

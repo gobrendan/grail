@@ -1,1 +1,117 @@
-@import "imports";
+//
+// setting
+//
+
+// variable
+
+@import "scss/10-setting/10-variable/breakpoint";
+@import "scss/10-setting/10-variable/color";
+@import "scss/10-setting/10-variable/padding";
+@import "scss/10-setting/10-variable/font";
+@import "scss/10-setting/10-variable/numeric";
+@import "scss/10-setting/10-variable/text";
+@import "scss/10-setting/10-variable/transition";
+@import "scss/10-setting/10-variable/validation";
+@import "scss/10-setting/10-variable/custom-dropdown";
+@import "scss/10-setting/10-variable/width";
+@import "scss/10-setting/10-variable/custom-property";
+
+//
+// tool
+//
+
+// mixin
+
+@import "scss/20-tool/10-mixin/custom-property";
+@import "scss/20-tool/10-mixin/aspect-ratio";
+@import "scss/20-tool/10-mixin/clean-list";
+@import "scss/20-tool/10-mixin/clearfix";
+@import "scss/20-tool/10-mixin/font-face";
+@import "scss/20-tool/10-mixin/media-query";
+@import "scss/20-tool/10-mixin/media-query-ie-10-plus";
+@import "scss/20-tool/10-mixin/media-query-firefox";
+@import "scss/20-tool/10-mixin/rem-to-px";
+@import "scss/20-tool/10-mixin/retina";
+@import "scss/20-tool/10-mixin/scroll";
+@import "scss/20-tool/10-mixin/transition";
+@import "scss/20-tool/10-mixin/translate";
+@import "scss/20-tool/10-mixin/transition-transform";
+@import "scss/20-tool/10-mixin/vertical-align";
+@import "scss/20-tool/10-mixin/gradient";
+@import "scss/20-tool/10-mixin/flexbox";
+@import "scss/20-tool/10-mixin/text-input";
+@import "scss/20-tool/10-mixin/grid";
+
+// placeholder
+
+@import "scss/20-tool/20-placeholder/general";
+@import "scss/20-tool/20-placeholder/text";
+@import "scss/20-tool/20-placeholder/form";
+@import "scss/20-tool/20-placeholder/list";
+@import "scss/20-tool/20-placeholder/visually-hidden";
+
+// font
+
+@import "scss/20-tool/30-font/font";
+
+//
+// generic 
+//  
+
+@import "scss/30-generic/reset";
+
+//
+// base
+//
+
+@import "scss/40-base/icon";
+@import "scss/40-base/text";
+@import "scss/40-base/list";
+@import "scss/40-base/media";
+@import "scss/40-base/fieldset";
+@import "scss/40-base/label";
+@import "scss/40-base/checkbox";
+@import "scss/40-base/radio";
+@import "scss/40-base/select"; 
+@import "scss/40-base/table";
+@import "scss/40-base/hr";
+
+//
+// object
+//
+
+@import "scss/50-object/main";
+@import "scss/50-object/grid";
+// @import "scss/50-object/grid-resizable";
+
+//
+// component
+//
+
+@import "scss/60-component/heading"; 
+@import "scss/60-component/button"; 
+@import "scss/60-component/custom-list"; 
+@import "scss/60-component/card"; 
+@import "scss/60-component/card-set"; 
+@import "scss/60-component/video"; 
+@import "scss/60-component/text-input"; 
+@import "scss/60-component/form"; 
+@import "scss/60-component/nav"; 
+@import "scss/60-component/site-header"; 
+@import "scss/60-component/hero"; 
+
+// utility
+
+@import "scss/70-utility/visibility";
+@import "scss/70-utility/utility";
+@import "scss/70-utility/list";
+@import "scss/70-utility/bg-color";
+@import "scss/70-utility/text-color";
+@import "scss/70-utility/spacing";
+@import "scss/70-utility/media";
+@import "scss/70-utility/display";
+@import "scss/70-utility/font";
+
+// to be migrated to pl-specific stylesheet
+
+@import "scss/80-to-be-migrated/palette";

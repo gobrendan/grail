@@ -1,9 +1,9 @@
 // @font-face {
 //   font-family: 'gr-icon-set';
 //   src:
-//     url('fonts/gr-icon-set.ttf?lafoqm') format('truetype'),
-//     url('fonts/gr-icon-set.woff?lafoqm') format('woff'),
-//     url('fonts/gr-icon-set.svg?lafoqm#gr-icon-set') format('svg');
+//     url('fonts/gr-icon-set.ttf?e26890') format('truetype'),
+//     url('fonts/gr-icon-set.woff?e26890') format('woff'),
+//     url('fonts/gr-icon-set.svg?e26890#gr-icon-set') format('svg');
 //   font-weight: normal;
 //   font-style: normal;
 // }
@@ -23,6 +23,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gr-i-grail:before {
+  content: "\e903";
+}
 .gr-i-facebook:before {
   content: "\e601";
 }

@@ -1,0 +1,53 @@
+/*
+ * site header
+ */
+
+.gr-c-site-header {
+
+  @include grid(false, 0, auto, auto); 
+  align-items: baseline; 
+  padding: 1rem 0 0;
+  border-bottom-width: 1px; 
+  border-bottom-style: solid; 
+  @include custom-property(border-bottom-color, --color-light-gray, $color-light-gray); 
+  margin: 0 auto 1rem; /* bottom margin should be in variable */
+  max-width: 1000px; /* value should be in variable */
+
+  &__heading {
+
+    font-size: 2rem; /* value should be in variable */
+    margin: 0; /* override default '.gr-c-heading' property */
+
+  }
+
+  &__heading-link {
+
+    text-decoration: none; /* override default 'a' property */
+
+    i {
+
+      font-size: 1.5rem; 
+
+    }
+
+  }
+
+  &__nav {
+
+    margin: 1rem 0; 
+
+  }
+
+  @include mq(20em) {
+
+    grid-template-columns: minmax(0, 1fr) auto; 
+
+    .gr-c-site-header__nav {
+
+      margin: 0; 
+
+    }
+
+  }
+
+}

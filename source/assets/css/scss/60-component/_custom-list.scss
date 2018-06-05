@@ -1,0 +1,25 @@
+/*
+ * custom list 
+ */
+
+.gr-c-custom-list {
+
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  padding-left: 14px; /* magic number -- lines up numbered bullets with default <ol> bullets */
+
+  li {
+
+    counter-increment: my-awesome-counter; 
+
+    &:before {
+
+      content: counter(my-awesome-counter) ". ";
+      color: red;
+      font-weight: bold; 
+
+    }
+
+  }
+
+}
