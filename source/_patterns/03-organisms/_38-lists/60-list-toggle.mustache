@@ -1,0 +1,23 @@
+{{# list-toggle }}
+
+<ul class="list list-toggle {{ modifier }}">
+
+  {{# item }}
+
+  <li class="list__item list-toggle__item {{ modifier }}">
+
+    <a class="btn btn--ghost btn--w-icon btn--w-icon-left list-toggle__btn" href="#">
+      {{{ button-text }}}
+    </a>
+
+    <div class="list-toggle__details">
+      {{{ details }}}
+    </div>
+
+  </li>
+
+  {{/ item }}
+
+</ul>
+
+{{/ list-toggle }}

@@ -100,6 +100,47 @@ figure {
   padding: 0;
 }
 
+/*
+ * checkbox
+ */
+input[type=checkbox] {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+input[type=checkbox] + label {
+  display: inline-block;
+  padding-left: .25rem;
+  margin: 0;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/*
+ * fieldset
+ */
+fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0 0 .5rem;
+}
+fieldset:last-child {
+  margin: 0;
+}
+
+/*
+ * hr
+ */
+hr {
+  border: 0;
+  height: 2px;
+  /* value should be in variable */
+  background: #D0D4E0;
+  /* value should be in custom property */
+  margin: 2rem auto;
+  /* value should be in variable */
+}
+
 [class^="gr-i-"], [class*=" gr-i-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'gr-icon-set' !important;
@@ -323,68 +364,13 @@ figure {
 }
 
 /*
- * elements / text
+ * label
  */
-a {
-  color: #1A546B;
-  color: var(--link-color);
-  text-decoration: underline;
-}
-a:hover {
-  color: #0071BC;
-  color: var(--link-color-hover);
-  text-decoration: none;
-}
-
-p {
-  margin: 1rem 0;
-}
-
-blockquote {
-  margin: 1em 0 1em 2em;
-  padding: 0 0 0 1em;
-  border-left-width: 2px;
-  border-left-style: solid;
-  border-left-color: #D0D4E0;
-  border-left-color: var(--color-light-gray);
-}
-
-/* prevent 'sup' and 'sub' elements from affecting line-height 
-   https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height */
-sup,
-sub {
-  vertical-align: baseline;
-  position: relative;
-  top: -0.4em;
-}
-
-sub {
-  top: 0.4em;
-}
-
-abbr {
-  text-decoration: none;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #D0D4E0;
-  border-bottom-color: var(--color-light-gray);
-}
-
-mark,
-cite,
-kbd,
-code,
-samp,
-var,
-ins,
-dfn {
-  background-color: #D0D4E0;
-  background-color: var(--color-light-gray);
-  padding: .25em .5em;
-}
-
-ins {
-  text-decoration: none;
+label {
+  display: block;
+  color: var(--label-text-color);
+  font-weight: normal;
+  margin: 0 0 .5rem;
 }
 
 /*
@@ -405,44 +391,6 @@ img {
   width: 100%;
   max-width: 100%;
   height: auto;
-}
-
-/*
- * fieldset
- */
-fieldset {
-  padding: 0;
-  border: 0;
-  margin: 0 0 .5rem;
-}
-fieldset:last-child {
-  margin: 0;
-}
-
-/*
- * label
- */
-label {
-  display: block;
-  color: var(--label-text-color);
-  font-weight: normal;
-  margin: 0 0 .5rem;
-}
-
-/*
- * checkbox
- */
-input[type=checkbox] {
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-input[type=checkbox] + label {
-  display: inline-block;
-  padding-left: .25rem;
-  margin: 0;
-  vertical-align: middle;
-  cursor: pointer;
 }
 
 /*
@@ -504,51 +452,72 @@ td {
 
 /* zebra-striped rows */
 /*
- * hr
+ * elements / text
  */
-hr {
-  border: 0;
-  height: 2px;
-  /* value should be in variable */
-  background: #D0D4E0;
-  /* value should be in custom property */
-  margin: 2rem auto;
-  /* value should be in variable */
+a {
+  color: #1A546B;
+  color: var(--link-color);
+  text-decoration: underline;
+}
+a:hover {
+  color: #0071BC;
+  color: var(--link-color-hover);
+  text-decoration: none;
 }
 
-/*
- * base / main
- */
-html {
-  font-size: 1rem;
-  background-color: var(--site-background-color);
-  height: 100%;
-  transition: all 750ms !important;
-  transition-delay: 0 !important;
-}
-html *,
-html *:before,
-html *:after {
-  transition: all 750ms !important;
-  transition-delay: 0 !important;
+p {
+  margin: 1rem 0;
 }
 
-body {
-  font: normal normal normal 100%/1.5 "TransportNewLight_gdi", Helvetica, Arial, sans-serif;
-  color: var(--site-text-color);
-  height: 100vh;
-  /* NOTE: https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust */
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  /* NOTE: since the mobile header is sticky, the top padding here is used as a placeholder */
-  /* NOTE: Font smoothing (non-standard) -- https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth */
-  -webkit-font-smoothing: antialiased;
-  /* NOTE: IE Edge is giving wide horizontal scrollbar -- hide overflow to fix */
-  /* NOTE: the mobile nav is hidden at the $large-breakpoint, so the padding can be set to zero */
+blockquote {
+  margin: 1em 0 1em 2em;
+  padding: 0 0 0 1em;
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #D0D4E0;
+  border-left-color: var(--color-light-gray);
 }
-.mod_no-flexboxlegacy body {
-  overflow-x: hidden;
+
+/* prevent 'sup' and 'sub' elements from affecting line-height 
+   https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height */
+sup,
+sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+
+sub {
+  top: 0.4em;
+}
+
+abbr {
+  text-decoration: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #D0D4E0;
+  border-bottom-color: var(--color-light-gray);
+}
+
+mark,
+cite,
+kbd,
+code,
+samp,
+var,
+ins,
+dfn {
+  background-color: #fafafa;
+  background-color: var(--color-soft-white);
+  padding: 1rem;
+}
+
+ins {
+  text-decoration: none;
+}
+
+pre {
+  margin: 0;
 }
 
 /*
@@ -568,6 +537,33 @@ body {
   text-transform: uppercase;
   padding: 1rem;
   border: 1px solid #ccc;
+}
+
+/*
+ * base / main
+ */
+html {
+  font-size: 1rem;
+  background-color: var(--site-background-color);
+  height: 100%;
+}
+
+body {
+  font: normal normal normal 100%/1.5 "TransportNewLight_gdi", Helvetica, Arial, sans-serif;
+  color: var(--site-text-color);
+  height: 100vh;
+  /* NOTE: https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust */
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  /* NOTE: since the mobile header is sticky, the top padding here is used as a placeholder */
+  /* NOTE: Font smoothing (non-standard) -- https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth */
+  -webkit-font-smoothing: antialiased;
+  /* NOTE: IE Edge is giving wide horizontal scrollbar -- hide overflow to fix */
+  /* NOTE: the mobile nav is hidden at the $large-breakpoint, so the padding can be set to zero */
+}
+.mod_no-flexboxlegacy body {
+  overflow-x: hidden;
 }
 
 /*
@@ -616,6 +612,89 @@ h6 {
 }
 .gr-c-heading--zeta {
   font-size: 0.833em;
+}
+
+/*
+ * button
+ */
+button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  /* Safari fix -- the 'button' element has additional user-agent declarations */
+  align-items: center;
+  /* for some reason, Webkit adds Flex-related declaration */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+  outline: none;
+}
+
+.gr-c-btn {
+  display: inline-block;
+  font-size: .9rem;
+  font-weight: bold;
+  color: #fafafa;
+  color: var(--btn-text-color);
+  background-color: #1A546B;
+  background-color: var(--btn-bg-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: .25rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in-out;
+  letter-spacing: .03rem;
+  cursor: pointer;
+  /* useful for <button> and <input type='submit'> elements */
+}
+.gr-c-btn:hover {
+  color: #fafafa;
+  background: #0071BC;
+  text-decoration: none;
+}
+.gr-c-btn:focus {
+  outline: 2px solid #D0D4E0;
+}
+.gr-c-btn:disabled, .gr-c-btn:disabled:hover, .gr-c-btn--disabled, .gr-c-btn--disabled:hover {
+  color: #e6ecee;
+  background-color: #577f90;
+  cursor: default;
+}
+.gr-c-btn--light {
+  color: #1A546B;
+  background-color: #BED9F6;
+}
+.gr-c-btn--light:hover {
+  color: #1A546B;
+  background: #92c6fe;
+}
+.gr-c-btn--light:disabled, .gr-c-btn--light:disabled:hover, .gr-c-btn--light.gr-c-btn--disabled, .gr-c-btn--light.gr-c-btn--disabled:hover {
+  color: rgba(87, 127, 144, 0.8);
+  background-color: #BED9F6;
+}
+.gr-c-btn--secondary {
+  color: #fafafa;
+  background-color: #F13741;
+}
+.gr-c-btn--secondary:hover {
+  color: #fafafa;
+  background: #ff5b06;
+}
+.gr-c-btn--secondary:disabled, .gr-c-btn--secondary:disabled:hover, .gr-c-btn--secondary.gr-c-btn--disabled, .gr-c-btn--secondary.gr-c-btn--disabled:hover {
+  color: #e6ecee;
+  background-color: #f86f72;
+}
+.gr-c-btn--secondary.gr-c-btn--light {
+  color: #bc0711;
+  background-color: #ffa8aa;
+}
+.gr-c-btn--secondary.gr-c-btn--light:hover {
+  color: #bc0711;
+  background: #f3999b;
+}
+.gr-c-btn--secondary.gr-c-btn--light:disabled, .gr-c-btn--secondary.gr-c-btn--light:disabled:hover, .gr-c-btn--secondary.gr-c-btn--light.gr-c-btn--disabled, .gr-c-btn--secondary.gr-c-btn--light.gr-c-btn--disabled:hover {
+  color: #e6ecee;
+  background-color: #f3999b;
 }
 
 /*
@@ -1429,6 +1508,105 @@ table td .u-text-left {
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
+}
+
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+.hljs {
+  display: block;
+  overflow-x: auto;
+  /*padding: 0.5em;*/
+  color: #333;
+  /*background: #f8f8f8;*/
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #998;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #333;
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+  color: #008080;
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: #d14;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: #900;
+  font-weight: bold;
+}
+
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: #009926;
+}
+
+.hljs-symbol,
+.hljs-bullet {
+  color: #990073;
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #0086b3;
+}
+
+.hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  /*background: #fdd;*/
+}
+
+.hljs-addition {
+  background: #dfd;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

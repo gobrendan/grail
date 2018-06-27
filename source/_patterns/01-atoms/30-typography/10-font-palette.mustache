@@ -1,0 +1,54 @@
+{{# pl-font-palette }}
+
+<div class="gr-o-grid pl-palette gr-pl-o-palette--fonts">
+
+  {{# item }}
+
+  <div class="gr-o-grid__item gr-pl-o-palette__item">
+
+    <div class="gr-pl-o-palette__box gr-pl-o-palette__box--fonts">
+
+      <div class="gr-pl-o-palette__swatch gr-pl-o-palette__swatch--font">
+
+        <p class="gr-pl-o-palette__heading gr-pl-o-palette__heading--big {{ font-name-utility-class }}">
+          {{ name }} 
+        </p>
+        <p class="{{ font-name-utility-class }}">
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+          abcdefghijklmnopqrstuvwxyz<br>
+          0123456789
+        </p>
+        <p class="u-f-italic {{ font-name-utility-class }}">
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+          abcdefghijklmnopqrstuvwxyz<br>
+          0123456789
+        </p>
+        
+      </div>
+      
+      <div class="gr-pl-o-palette__details">
+        <ul class="gr-pl-o-palette__list">
+          <li class="gr-pl-o-palette__list-item">
+            {{ font-variable }}
+          </li>
+          <li class="pl-palette__list-item">
+            {{ font-family-variable }}
+          </li>
+          <li class="pl-palette__list-item">
+            {{ font-utility-class }}
+          </li>
+          <li class="pl-palette__list-item">
+            {{ font-family-utility-class }}
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+
+  </div>
+
+  {{/ item }}
+
+</div>
+
+{{/ pl-font-palette }}

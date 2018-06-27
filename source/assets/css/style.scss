@@ -90,6 +90,7 @@
 
 @import "scss/60-components/heading"; 
 @import "scss/60-components/button"; 
+@import "../../_patterns/00-atoms/20-button/10-button"; // HEY
 @import "scss/60-components/custom-list"; 
 @import "scss/60-components/card"; 
 @import "scss/60-components/card-set"; 
@@ -115,3 +116,4 @@
 // to be migrated to pl-specific stylesheet
 
 @import "scss/80-to-be-migrated/palette";
+@import "scss/80-to-be-migrated/syntax-highlight";

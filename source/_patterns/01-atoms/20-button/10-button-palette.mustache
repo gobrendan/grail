@@ -1,0 +1,65 @@
+{{# pl-button-palette }}
+
+<div class="gr-o-grid gr-pl-o-palette gr-pl-o-palette--buttons">
+
+  {{# item }}
+
+  <div class="gr-o-grid__item gr-pl-o-palette__item">
+
+    <div class="gr-pl-o-palette__box gr-pl-o-palette__box--buttons">
+
+      <div class="gr-pl-o-palette__swatch gr-pl-o-palette__swatch--button">
+        <a class="gr-c-btn{{#modifier }} {{ modifier }}{{/ modifier }}">
+          {{ text }}
+        </a>
+      </div>
+
+      <div class="gr-pl-o-palette__details">
+        <ul class="gr-pl-o-palette__list">
+          <!--
+          <li class="gr-pl-o-palette__list-item">
+            {{ class }}
+          </li>
+          -->
+          <li>
+
+<pre><code class="html">&lt;a class="gr-c-btn{{#modifier }} {{ modifier }}{{/ modifier }}"&gt;
+  Primary
+&lt;/a&gt;</code></pre>
+
+          </li>
+        </ul>
+      </div>
+    
+    </div>
+
+  </div>
+
+  {{/ item }}
+
+</div>
+
+{{/ pl-button-palette }}
+
+
+<!--
+
+<a class="btn btn--w-icon btn--w-icon-right">
+  Primary
+</a>
+
+<button class="btn btn--w-icon btn--w-icon-right">
+  Primary
+</button>
+
+<a class="btn btn--w-icon btn--w-icon-left">
+  Primary
+</a>
+
+<button class="btn btn--w-icon btn--w-icon-left">
+  Primary
+</button>
+
+<input type="submit" class="btn" value="Primary">
+
+-->

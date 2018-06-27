@@ -1,0 +1,35 @@
+{{# tabs }}
+
+<div class="tabs {{ modifier }}">
+
+  <nav role="tablist" class="tabs__nav {{ tablist-modifier }}">
+
+    {{# item }}
+
+    <a role="tab" aria-controls="{{ aria-controls }}" class="btn tabs__btn {{ btn-modifier }}" href="#{{ tab-id }}">
+      {{{ tab-text }}}
+    </a>
+
+    {{/ item }}
+
+  </nav>
+
+  {{# item }}
+
+  <div role="tabpanel" class="tabs__panel {{ tab-panel-modifier }}" id="{{ tab-id }}">
+
+    {{!> atoms-image }}
+
+    <!--
+    <iframe width="640" height="480" src="{{ iframe-URL }}" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    -->
+
+    {{> atoms-img-single-src }}
+
+  </div>
+
+  {{/ item }}
+
+</div>
+
+{{/ tabs }}

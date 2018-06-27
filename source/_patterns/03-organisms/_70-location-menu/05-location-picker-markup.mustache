@@ -1,0 +1,26 @@
+{{# location-picker }}
+
+<div class="location-picker {{ modifier }}">
+
+  {{# location-picker-label }}
+
+  <a class="location-picker__label" href="#">
+
+    <span class="location-picker__label-text" {{ attribute }}>
+      {{ label-text }}
+    </span>
+
+    <span class="location-picker__label-location {{ label-modifier }}">
+      {{ label-location }}
+      <i class="icon-pin location-picker__label-icon"></i>
+    </span>
+
+  </a>
+
+  {{/ location-picker-label }}
+
+  {{> organisms-location-picker-form-markup }}
+
+</div>
+
+{{/ location-picker }}

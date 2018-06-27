@@ -1,0 +1,68 @@
+{{# modal }}
+
+<div class="modal {{ modal-modifier }}" id="{{ modal-id }}" aria-hidden="true">
+  <div class="modal__dialog {{ modal-dialog-modifier }}">
+
+    <div class="modal__header">
+      <h2 class="heading heading gamma modal__heading">
+        {{ modal-heading }}
+      </h2>
+      <a href="#x" class="modal__btn modal__btn--x" aria-hidden="true"><i class="icon-close"></i></a>
+    </div>
+
+    <div class="modal__content">
+
+
+      {{# modal-form }}
+      {{!> molecules-paragraphs }}
+
+      <div class="validate-pass">
+        <input type="text" class="input-text validate-pass__input">
+        <a class="btn validate-pass__btn" href="">Validate</a>
+      </div>
+
+      {{/ modal-form }}
+
+
+      {{# modal-text }}
+      {{> molecules-paragraphs }}
+      {{/ modal-text }}
+
+
+      {{# modal-image }}
+      {{> atoms-img-single-src }}
+      {{/ modal-image }}
+
+
+      {{# modal-map }}
+      {{!> atoms-bing-interactive-map }}
+      {{/ modal-map }}
+
+
+      {{# modal-print-certificate }}
+      {{> molecules-certificate-download }}
+      {{/ modal-print-certificate }}
+
+
+      {{# modal-photo-block-carousel }}
+      {{> organisms-photo-block-carousel }}
+      {{/ modal-photo-block-carousel }}
+
+    </div>
+
+    {{# modal-footer }}
+
+    <div class="modal__footer">
+      <a href="#x" class="btn modal__btn modal__btn--close">Close</a>
+    </div>
+
+    {{/ modal-footer }}
+
+  </div>
+
+  <a class="modal__background" href="#x"> <!-- NOTE: clicking this element closes modal; hash for 'href' value is required  -->
+  </a>
+
+</div>
+
+{{/ modal }}

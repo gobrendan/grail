@@ -108,8 +108,9 @@ var,
 ins, 
 dfn {
 
-  @include custom-property(background-color, --color-light-gray, $color-light-gray);
-  padding: .25em .5em;
+  @include custom-property(background-color, --color-soft-white, $color-soft-white);
+  // padding: .25em .5em;
+  padding: 1rem;
 
 }
 
@@ -117,4 +118,10 @@ ins {
 
   text-decoration: none; 
 
+}
+
+pre {
+
+  margin: 0;
+  
 }

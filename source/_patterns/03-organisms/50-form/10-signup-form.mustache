@@ -1,0 +1,44 @@
+<div class="gr-o-grid gr-c-form gr-c-form--signup">
+
+  <fieldset class="gr-c-form__item">
+    <label for="first_name" class="gr-c-form__label">
+      First Name
+    </label>
+    <input type="text" name="first_name" class="gr-c-text-input gr-c-form__text-input" id="first_name" placeholder="Ben">
+  </fieldset>
+
+  <fieldset class="gr-c-form__item">
+    <label for="last_name" class="gr-c-form__label">
+      Last Name
+    </label>
+    <input type="text" name="last_name" class="gr-c-text-input gr-c-form__text-input" id="last_name" placeholder="Smith">
+  </fieldset>
+
+  <fieldset class="gr-c-form__item gr-c-form__item--fill">
+    <label for="email_address" class="gr-c-form__label">
+      Email address
+    </label>
+    <input type="email" name="email_address" class="gr-c-text-input gr-c-form__text-input" id="email_address" placeholder="ben@gmail.com">
+  </fieldset>
+
+  <fieldset class="gr-c-form__item gr-c-form__item--fill">
+    <label for="password" class="gr-c-form__label">
+      Password
+    </label>
+    <input type="password" name="password" class="gr-c-text-input gr-c-form__text-input" id="password" placeholder="">
+  </fieldset>
+
+  <fieldset class="gr-c-form__item gr-c-form__item--fill">
+    <label for="favorite_color" class="gr-c-form__label">
+      What's your favorite color?
+    </label>
+    {{> atoms-select }}
+  </fieldset>
+
+  <fieldset class="gr-c-form__item gr-c-form__item--fill gr-c-form__item--btn">
+    <a class="gr-c-btn gr-c-form__btn" href="">
+      Register
+    </a>
+  </fieldset>
+
+</div>

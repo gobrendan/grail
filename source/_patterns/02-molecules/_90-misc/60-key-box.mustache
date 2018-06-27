@@ -1,0 +1,31 @@
+{{# key-box }}
+
+<div class="key-box {{ modifier }}">
+
+  {{# heading-text }}
+  <{{ heading-level }} class="heading {{ heading-modifier }} key-box__heading">
+    {{ heading-text }}
+  </{{heading-level }}>
+  {{/ heading-text }}
+
+  <div class="grid key-box__grid {{ grid-modifier }}">
+
+    {{# item }}
+    <div class="grid__cell key-box__item">
+
+      <span class="key-box__label {{ label-modifer }}">
+        {{ label }}
+      </span>
+
+      <span class="key-box__meaning">
+        {{ meaning }}
+      </span>
+
+    </div>
+    {{/ item }}
+
+  </div>
+
+</div>
+
+{{/ key-box }}

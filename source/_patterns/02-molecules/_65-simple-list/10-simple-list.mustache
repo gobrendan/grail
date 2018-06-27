@@ -1,0 +1,65 @@
+{{# simple-list }}
+
+<ul class="simple-list {{ modifier }}">
+
+  {{# item }}
+
+  <li class="simple-list__item {{ modifier }}">
+
+    <!-- NOTE: If the "outer-div" property exists, wrap the text an icon with a <div>. Otherwise, wrap them in an <a>. -->
+
+    {{# outer-div }}
+    <div class="simple-list__item-inner">
+    {{/ outer-div }}
+
+    {{# date }}
+    <span class="simple-list__date">
+    {{ date }}
+    </span>
+    {{/ date }}
+
+    {{^ outer-div }}
+    <a class="simple-list__link {{ link-modifier }}" href="">
+    {{/ outer-div }}
+
+      {{# icon }}
+      <i class="icon-{{ icon }} icon--circled {{ icon-modifier }}">
+      </i>
+      {{/ icon }}
+
+      {{# icon-not-circled }}
+      <i class="icon-{{ icon-not-circled }} {{ icon-modifier }}">
+      </i>
+      {{/ icon-not-circled }}
+
+      {{# MD-icon }}
+      <i class="material-icons material-icons--circled">
+        {{{ MD-icon }}}
+      </i>
+      {{/ MD-icon }}
+
+      {{# simple-list-img }}
+      {{> atoms-image }}
+      {{/ simple-list-img }}
+
+      {{# text }}
+      <span class="simple-list__link-text {{ text-modifier }}">
+        {{{ text }}}
+      </span>
+      {{/ text }}
+
+    {{# outer-div }}
+    </div>
+    {{/ outer-div }}
+
+    {{^ outer-div }}
+    </a>
+    {{/ outer-div }}
+
+  </li>
+
+  {{/ item }}
+
+</ul>
+
+{{/ simple-list }}

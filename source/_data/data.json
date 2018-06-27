@@ -750,6 +750,18 @@
 
         {
           
+          "name" : "Date", 
+          "class" : "gr-c-input-text", 
+          "id" : "date", 
+          "type" : "date", 
+          "value" : "2018-07-22", 
+          "min" : "", 
+          "max" : ""
+
+        },
+        
+        {
+          
           "name" : "Multi-line Text", 
           "class" : "gr-c-input-text", 
           "id" : "", 
