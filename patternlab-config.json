@@ -16,7 +16,8 @@
       "video" : "./source/assets/video/",
       "fonts" : "./source/assets/fonts/",
       "css" : "./source/assets/css/",
-      "favicon" : "./source/"
+      "favicon" : "./source/", 
+      "unit_tests" : "./source/unit_tests"
     },
     "public" : {
       "root" : "./public/",
@@ -34,7 +35,8 @@
       "css" : "./public/assets/css/",
       "favicon" : "./public/",
       "js-concat" : "./public/assets/js/concat/",
-      "assets" : "./public/assets/"
+      "assets" : "./public/assets/", 
+      "unit_tests" : "./public/unit_tests"
     },
     "prodReadyAssets" : "./prod-ready-assets/"
   },

@@ -1,4 +1,10 @@
 //
+// unit testing
+// 
+
+@import "../../../node_modules/sass-true/sass/true";
+
+//
 // setting
 //
 
@@ -90,7 +96,7 @@
 
 @import "scss/60-components/heading"; 
 @import "scss/60-components/button"; 
-@import "../../_patterns/00-atoms/20-button/10-button"; // HEY
+// @import "../../_patterns/00-atoms/20-button/10-button"; // HEY
 @import "scss/60-components/custom-list"; 
 @import "scss/60-components/card"; 
 @import "scss/60-components/card-set"; 
@@ -117,3 +123,72 @@
 
 @import "scss/80-to-be-migrated/palette";
 @import "scss/80-to-be-migrated/syntax-highlight";
+
+//
+//
+//
+
+
+
+// // Test CSS output from mixins
+// @include it('Outputs the clearfix declaration block (property/value pairs)') {
+//   @include assert {
+
+//     @include output {
+//       @include clearfix();
+//     }
+
+//     @include expect {
+
+//       &:before,
+//       &:after {
+    
+//         content: " ";
+//         //display: table;
+//         display: block;
+    
+//       }
+    
+//       &:after {
+    
+//         clear: both;
+
+//       } 
+
+//     }
+//   }
+// }
+
+
+
+@mixin primary-header {
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #333;
+  text-decoration: underline;
+ }
+
+// Describe what you're testing
+@include describe('The primary-header mixin') {
+  // Explain what it should do
+  @include it('outputs the properties of our primary header.') {
+    // Assert the output of the mixin matches the expected result
+    @include assert {
+      @include output {
+        @include primary-header();
+      }
+      @include expect {
+        font-family: "Helvetica", Arial, sans-serif;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        color: red;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+$true-terminal-output: false;
+@include report;

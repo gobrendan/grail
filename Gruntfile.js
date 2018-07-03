@@ -138,6 +138,9 @@ module.exports = function (grunt) {
           { expand: true, cwd: path.resolve(paths().source.json), src: ['**/*.json'], dest: path.resolve(paths().public.json) },
           { expand: true, cwd: path.resolve(paths().source.xml), src: ['**/*.xml'], dest: path.resolve(paths().public.xml) },
           { expand: true, cwd: path.resolve(paths().source.text), src: ['**/*.txt'], dest: path.resolve(paths().public.text) },
+
+          { expand: true, cwd: path.resolve(paths().source.unit_tests), src: ['**/*'], dest: path.resolve(paths().public.unit_tests) },
+
           { expand: true, cwd: path.resolve(paths().source.images),
             src: [
               '**/*.png',

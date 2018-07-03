@@ -698,89 +698,6 @@ button {
 }
 
 /*
- * button
- */
-button {
-  cursor: pointer;
-  -webkit-appearance: none;
-  /* Safari fix -- the 'button' element has additional user-agent declarations */
-  align-items: center;
-  /* for some reason, Webkit adds Flex-related declaration */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-box-sizing: border-box;
-  outline: none;
-}
-
-.gr-c-btn {
-  display: inline-block;
-  font-size: .9rem;
-  font-weight: bold;
-  color: #fafafa;
-  color: var(--btn-text-color);
-  background-color: #1A546B;
-  background-color: var(--btn-bg-color);
-  padding: 0.75rem 1.5rem;
-  border-radius: .25rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all 0.15s ease-in-out;
-  letter-spacing: .03rem;
-  cursor: pointer;
-  /* useful for <button> and <input type='submit'> elements */
-}
-.gr-c-btn:hover {
-  color: #fafafa;
-  background: #0071BC;
-  text-decoration: none;
-}
-.gr-c-btn:focus {
-  outline: 2px solid #D0D4E0;
-}
-.gr-c-btn:disabled, .gr-c-btn:disabled:hover, .gr-c-btn--disabled, .gr-c-btn--disabled:hover {
-  color: #e6ecee;
-  background-color: #577f90;
-  cursor: default;
-}
-.gr-c-btn--light {
-  color: #1A546B;
-  background-color: #BED9F6;
-}
-.gr-c-btn--light:hover {
-  color: #1A546B;
-  background: #92c6fe;
-}
-.gr-c-btn--light:disabled, .gr-c-btn--light:disabled:hover, .gr-c-btn--light.gr-c-btn--disabled, .gr-c-btn--light.gr-c-btn--disabled:hover {
-  color: rgba(87, 127, 144, 0.8);
-  background-color: #BED9F6;
-}
-.gr-c-btn--secondary {
-  color: #fafafa;
-  background-color: #F13741;
-}
-.gr-c-btn--secondary:hover {
-  color: #fafafa;
-  background: #ff5b06;
-}
-.gr-c-btn--secondary:disabled, .gr-c-btn--secondary:disabled:hover, .gr-c-btn--secondary.gr-c-btn--disabled, .gr-c-btn--secondary.gr-c-btn--disabled:hover {
-  color: #e6ecee;
-  background-color: #f86f72;
-}
-.gr-c-btn--secondary.gr-c-btn--light {
-  color: #bc0711;
-  background-color: #ffa8aa;
-}
-.gr-c-btn--secondary.gr-c-btn--light:hover {
-  color: #bc0711;
-  background: #f3999b;
-}
-.gr-c-btn--secondary.gr-c-btn--light:disabled, .gr-c-btn--secondary.gr-c-btn--light:disabled:hover, .gr-c-btn--secondary.gr-c-btn--light.gr-c-btn--disabled, .gr-c-btn--secondary.gr-c-btn--light.gr-c-btn--disabled:hover {
-  color: #e6ecee;
-  background-color: #f3999b;
-}
-
-/*
  * custom list 
  */
 .gr-c-custom-list {
@@ -1608,5 +1525,43 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-strong {
   font-weight: bold;
 }
+
+/* # Module: The primary-header mixin */
+/* ------------------------------------ */
+/* Test: outputs the properties of our primary header. */
+/*   ASSERT:    */
+/*   OUTPUT   */
+.test-output {
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #333;
+  text-decoration: underline;
+}
+
+/*   END_OUTPUT   */
+/*   EXPECTED   */
+.test-output {
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: red;
+  text-decoration: underline;
+}
+
+/*   END_EXPECTED   */
+/*   END_ASSERT   */
+/*  */
+/*  */
+/* # SUMMARY ---------- */
+/* 1 Test: */
+/* - 0 Passed */
+/* - 0 Failed */
+/* - 1 Output to CSS */
+/* Stats: */
+/* - 1 Module */
+/* - 1 Test */
+/* - 1 Assertion */
+/* -------------------- */
 
 /*# sourceMappingURL=style.css.map */
