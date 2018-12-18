@@ -1,9 +1,0 @@
-//
-// Canvas Gauge
-//
-
-$(function(){
-
-  //
-
-}());

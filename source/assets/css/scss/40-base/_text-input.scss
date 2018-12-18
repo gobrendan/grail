@@ -1,0 +1,142 @@
+/*
+ * text input
+ */
+
+input[type=text],
+input[type=search],
+input[type=url],
+input[type=number],
+input[type=date],
+input[type=email],
+input[type=password],
+textarea, 
+.gr-c-input-text, 
+%text_input {
+
+  @include custom-property(border-color, --gr-light-gray, $gr-light-gray);
+  border-style: solid;
+  border-width: 1px; /* this value should be in variable -- same number used for <select>, checkbox and radio */
+  font: $gr-font-primary;
+
+  height: 2.875rem;
+  width: 100%;
+  padding: .6rem .75rem;
+  // line-height: 1;
+  outline: none;
+
+  /* remove/reset platform-specific styling, like Webkit on mobile */
+
+  // -webkit-appearance: none;
+  border-radius: 0;
+  appearance: none; 
+
+  // vertical-align: unset; // what is this?
+
+  &:hover {
+
+    @include custom-property(border-color, --gr-dark-gray, $gr-dark-gray);
+
+  }
+
+  &:focus {
+
+    @include custom-property(border-color, --gr-primary-blue, $gr-primary-blue);
+
+  }
+  
+  /* remove IE's "clear" button */
+
+  &::-ms-clear {
+
+    display: none; 
+
+  }
+
+}
+
+textarea, 
+textarea.gr-c-input-text {
+
+  display: block; /* removes unnecessary space below element */
+  min-height: 100px;
+  line-height: 1.4;
+  overflow: auto; /* without this, scrollbar placeholder is visible in IE 11- */
+  resize: vertical; 
+
+}
+
+input[type=file] {
+
+  width: 100%; /* NOTE: this input type had an explicit width by default; using "100%" allows it to to be squishy */
+
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+
+  -webkit-appearance: none;
+  margin: 0;
+
+}
+
+input:placeholder-shown {
+
+  //
+
+}
+
+::placeholder {
+
+  // font-style: italic;
+  // color: green;
+  // line-height: 1; /* should match text input line-height */
+
+}
+
+/* NOTE: Hide Webkit-added pseudo */
+/*       http://geek.michaelgrace.org/2011/06/webkit-seargr-input-styling/ */
+
+input[type=search] {
+
+  //
+
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+
+  display: none;
+
+}
+
+/* target IE 10 and 11 */
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  
+  /* in IE 11, without setting the line-height, the text seems to be closer to the bottom edge of the text input */
+
+  input[type=text],
+  input[type=search],
+  input[type=url],
+  input[type=number],
+  input[type=date],
+  input[type=email],
+  input[type=password],
+  textarea, 
+  .gr-c-input-text {
+
+    line-height: 1;
+
+  }
+
+}
+
+/* target firefox */
+
+::-moz-placeholder {  
+
+  /* firefox decreases placeholder opacity by default, so reset back to 1 */
+
+  opacity: 1;
+
+} 

@@ -1,0 +1,54 @@
+
+{{# card }}
+
+<div class="gr-c-card {{ class }}">
+
+  {{# date }}
+  <header class="gr-c-card__header">
+
+    <date class="gr-c-card__date">
+      <i class="{{ icon-class }} gr-c-card__icon">
+      </i>
+      {{ date }}
+    </date>
+
+    <div class="gr-c-card__label">
+      {{ label }}
+    </div>
+
+  </header>
+  {{/ date }}
+
+  {{# heading }}
+  <h1 class="gr-c-card__heading">
+    <a class="gr-c-card__heading-link" href="">
+      {{ heading }}
+    </a>
+  </h1>
+  {{/ heading }}
+
+  {{# details }}
+  <p class="gr-c-card__details">
+    {{{ details }}}
+  </p>
+  {{/ details }}
+
+  {{# button-text }}
+  <a class="gr-c-btn gr-c-card__btn" href="">
+    {{ button-text }}
+  </a>
+  {{/ button-text }}
+
+  {{# more }}
+  <a class="gr-c-card-set__more-link" href="">
+    <i class="gr-i-add gr-c-card-set__more-icon">
+    </i>
+    <span class="gr-c-card-set__more-text">
+      More
+    </span>
+  </a>
+  {{/ more }}
+
+</div>
+
+{{/ card }}

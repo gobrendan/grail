@@ -1,0 +1,50 @@
+/*
+ * request box
+ */
+
+.gr-c-request-box {
+
+  @include custom-property(background-color, --ch-dark-blue, $ch-dark-blue);
+  @include custom-property(min-width, --ch-component-min-width, $ch-component-min-width);
+  background-image: url(../../assets/images/bg-hexagon-lines-blue.png);
+  background-size: cover;
+  padding: 0 1rem; /* component side padding should be in a variable */  
+  margin: 0 0 1.5rem; /* component spacing should be handled with a variable  */
+
+  &__inner {
+
+    max-width: calc(#{$ch-component-max-width} - 2rem); /* this value should be in variable */
+    margin: auto;
+    display: flex; 
+
+
+  }
+
+  &__blurb {
+
+    font-size: $ch-font-size-epsilon;
+    font-style: italic;
+    color: $ch-white; 
+    align-self: center;
+    padding: 2rem 2rem 2rem 0;
+    margin: 0;
+
+  }
+
+  &__poll {
+
+    @include custom-property(background-color, --ch-light-blue, $ch-light-blue);
+    flex: 0 0 60%;
+    padding: 3rem 5rem;
+
+  }
+
+  &__heading {
+
+    font-size: $ch-font-size-gamma;
+    color: $ch-white; 
+    margin: 0 0 2rem;
+
+  }
+
+}

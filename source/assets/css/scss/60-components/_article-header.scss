@@ -1,0 +1,85 @@
+/*
+ * article header 
+ */
+
+.gr-c-article-header {
+
+  display: grid;
+  grid-gap: 1rem;
+
+  &__heading {
+
+    font-size: $gr-font-size-kilo;
+    color: $gr-dark-blue;
+    line-height: 1.4; /* should this be a global heading declaration? */
+    margin: 0;
+
+  }
+
+  &__filter-btn {
+    
+    justify-self: left;
+
+  }
+
+  &__search-box {
+
+    //
+
+  }
+
+  &__breadcrumbs {
+
+    //
+
+  }
+
+  &__select {
+
+    //
+
+  }
+
+  /* make text input border transparent when viewing this component on a page -- page has gray background and text input has white background */
+
+  .gr-l-page & {
+
+    //
+
+    .gr-c-search-box__text-input {
+
+      border-color: $gr-white;
+  
+    }
+
+  }
+
+  @include mq($gr-medium-breakpoint) { /* should be same as breakpoint used to show ".gr-l-main__side" element */
+
+    &__filter-btn {
+    
+      display: none; 
+  
+    }
+
+  }
+
+  /* browser fallbacks */
+
+  .gr-mod-no-cssgrid & {
+
+    > * {
+
+      margin-bottom: 1rem; 
+      
+      &:last-child {
+
+        margin: 0;
+
+      }
+
+    }
+
+  }
+
+}

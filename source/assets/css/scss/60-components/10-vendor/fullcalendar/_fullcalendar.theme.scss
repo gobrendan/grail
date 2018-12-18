@@ -1,0 +1,281 @@
+/*
+ * fullcalendar theme -- mostly overrides of fullcalendar defaults
+ */
+
+.gr-c-cal {
+
+  .fc-header-toolbar {
+
+    /* month heading */
+
+    h2 {
+
+      font-size: $gr-font-size-alpha;
+      color: $gr-dark-gray; 
+      // line-height: 1;
+
+    }
+
+  }
+
+  /* prev and next buttons */
+
+  .fc button {
+
+    height: auto; /* override */
+    font-size: 18px;
+    display: inline-block;
+    padding: 0 1.677rem;
+    line-height: 42px;
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+    border: 1px solid #069;
+    color: #069;
+    background-color: $gr-white;
+    background-image: none;
+    border-radius: 0; /* override */
+    text-transform: capitalize;
+
+    &:hover {
+
+      background-color: #ebf1f6;
+
+    }
+
+  }
+
+  .fc .fc-state-disabled, 
+  .fc .fc-state-disabled:hover {
+    
+    background-color: transparent; 
+    opacity: .65;
+
+  }
+
+  /* wrappers */
+
+  .fc-scroller.fc-day-grid-container {
+
+    // overflow: hidden !important; /* an inline "overflow: hidden scroll" is being applied for some reason */
+
+  }
+
+  .fc-row table {
+
+    margin: 0; /* override default table declaration */
+
+  }
+
+  .fc-event {
+
+    border-radius: 0; 
+    margin: 0 0 .25rem; 
+
+  }
+
+  .fc-day-grid-event .fc-content {
+
+    white-space: normal;
+    padding: .25rem; 
+
+  }
+
+  .fc-day-top, /* day number */ 
+  .fc-event-container /* day items */ {
+
+    // padding: .5rem;
+
+  }
+
+  .fc td, .fc th {
+
+    // padding: 0 .5rem; 
+
+  }
+
+  .fc-day-number {
+
+    // font-size: $gr-font-size-epsilon; 
+    font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300))); 
+    font-weight: normal; 
+    color: $gr-dark-gray;
+    line-height: 1;
+    padding: .5rem 0;
+
+  }
+
+  td.fc-event-container {
+    
+    padding: 0 .5rem;
+
+  }
+
+  .fc-day-header {
+
+    font-size: $gr-font-size-gamma; 
+    padding-bottom: 1rem;
+
+  }
+
+  .fc-widget-header table {
+
+    .fc-day-header {
+
+      color: $gr-dark-blue;
+      font-weight: normal;
+      border-width: 0; 
+
+    }
+    
+  }
+
+  .fc-head .fc-head-container {
+
+    border-width: 0;
+
+  }
+
+  .fc-day-number {
+
+    padding: .5rem;
+
+  }
+
+  .fc-body {
+
+    background-color: $gr-white;
+    
+  }
+
+  .fc td, .fc th {
+
+    border-color: $gr-medium-gray;
+
+  }
+
+  .fc button .fc-icon {
+
+    font-family: 'gr-icon-set';
+    top: auto; 
+    margin: 0; 
+    overflow: visible;
+
+  }
+
+  .fc-icon-left-single-arrow:after {
+
+    content: "\e909"; 
+    top: 0; 
+
+  }
+
+  .fc-icon-right-single-arrow:after {
+
+    content: "\e90a";
+    top: 0; 
+
+  }
+
+  .fc-unthemed td.fc-today {
+
+    // background: #EBF1F6;
+
+  }
+
+  .fc-header-toolbar {
+
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between; 
+
+  }
+
+  /* the negative top margin, and the padding on the "h2 and .fc-right" elements allow proper spacing between elements when they wrap */
+
+  .fc-header-toolbar {
+
+    margin-top: -.5rem; 
+
+  }
+
+  /* improve spacing when elements stack */
+
+  .fc-header-toolbar h2 {
+
+    padding: .5rem 0;
+    margin: 0 2rem 0 0;
+
+  }
+
+  .fc-header-toolbar .fc-right {
+
+    padding: .5rem 0;
+
+  }
+
+  /* hide empty elements -- this helps flexbox declarations for parent element (.fc-toolbar.fc-header-toolbar) */
+
+  .fc-clear, 
+  .fc-center {
+
+    &:empty {
+
+      display: none; 
+
+    }
+    
+  }
+
+  &--header-only {
+
+    // 
+
+    .gr-c-calendar__header {
+
+      //
+
+    }
+
+    .fc-header-toolbar {
+
+      margin-bottom: 0; 
+      
+    }
+
+    .fc-view-container {
+
+      display: none; 
+      
+    }
+
+  }
+
+}
+
+.fc-view-container {
+  
+  /* hide calendar on smaller screens */
+
+  @media (max-width: $gr-large-breakpoint) {
+
+    display: none !important; /* use !important to override inline style */
+
+  }
+
+  @include mq($gr-large-breakpoint) {
+
+    display: block; 
+
+  }
+
+  /* on wider screens, hide calendar by default -- use toggle to display it */
+
+  .gr-l-page &, 
+  .rl-l-template & {
+
+    display: none;
+
+  }
+
+}

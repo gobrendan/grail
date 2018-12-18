@@ -1,0 +1,174 @@
+/*
+ * hero box
+ */
+
+.gr-c-hero-box {
+
+  @include custom-property(background-color, --gr-medium-gray, $gr-medium-gray);
+
+  &__inner {
+
+    max-width: $gr-component-max-width;
+    margin: auto;
+    position: relative;
+    z-index: 0;
+
+  }
+
+  &__media-wrapper {
+
+    @include custom-property(background-color, --gr-medium-gray, $gr-medium-gray);
+    position: relative; 
+    height: 0; 
+    overflow: hidden; 
+    padding-top: 33.4375%; /* intrinsic ratio solution -- 214/640 */
+
+  }
+
+  &__picture, 
+  &__media {
+
+    position: absolute; /* do some browser testing -- make sure targeting both elements works OK in IE */
+    top: 0; 
+    left: 0; 
+    bottom: 0;
+    right: 0; 
+
+  }
+
+  &__logo-wrapper {
+
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%); 
+    left: 1rem; 
+    width: 127px;
+    z-index: 2; /* should be above "__tickers" */
+
+  }
+
+  &__logo-inner {
+
+    height: 0; 
+    overflow: hidden; 
+    padding-top: 31.034483%; /* intrinsic ratio solution -- 81/261 */
+    position: relative;
+
+  }
+
+  &__logo-media {
+
+    background-color: transparent; /* override */
+    width: auto; 
+    height: auto; 
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+
+  }
+
+  &__tickers {
+
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%); 
+    right: 1rem; 
+    justify-content: flex-end;
+    width: 100%;
+    z-index: 1; /* should be below "__logo-wrapper" */
+    
+  }
+
+  .gr-c-ticker-set__ticker {
+
+    width: 112px;
+
+    &:first-child {
+
+      display: none; 
+
+    }
+
+  }
+
+  @include mq(20em) {
+
+    &__logo-wrapper {
+
+      width: 40%;
+
+    }
+
+    .gr-c-ticker-set__ticker {
+
+      width: 32%;
+
+    }
+
+  }
+
+  @include mq(30em) {
+
+    .gr-c-ticker-set__ticker {
+
+      width: 20%;
+  
+      &:first-child {
+  
+        display: block; 
+  
+      }
+  
+    }
+
+  }
+
+  @include mq(48em) {
+
+    &__media-wrapper {
+
+      padding-top: 10.486111%; /* intrinsic ratio solution -- 151/1440 */
+
+    }
+
+    &__logo-wrapper {
+
+      left: 2rem; 
+      width: 18%;
+
+    }
+
+    &__tickers {
+
+      right: 2rem;
+      
+    }
+
+    .gr-c-ticker-set__ticker {
+
+      width: 13%;
+
+    }
+
+  }
+
+  @include mq(90em) {
+
+    &__logo-wrapper {
+
+      width: 261px;
+
+    }
+
+    .gr-c-ticker-set__ticker {
+
+      width: 182px;
+      height: 95px;
+
+    }
+
+  }
+
+}

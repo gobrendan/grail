@@ -1,0 +1,240 @@
+/*
+ * palette
+ */
+
+.gr-pl-o-palette {
+
+  @include grid(true, 1rem, repeat(auto-fill, minmax(250px, 1fr)), auto); 
+
+  &__item {
+
+    //
+
+  }
+
+  &__box {
+
+    @include custom-property(border-color, --gr-light-gray, $gr-light-gray);
+    border-style: solid; 
+    border-width: 1px;
+    height: 100%; /* gives consistent visual heights, specifically for <textarea> demo */
+    padding: 1rem;
+    
+    &--heading {
+
+      // display: grid; 
+      // height: 100%;
+      // grid-template-rows: minmax(min-content, 1fr) auto;
+
+      padding: 0; 
+      border: 0; 
+
+    }
+
+  }
+
+  &__swatch { 
+
+    //
+
+    &--color {
+
+      height: 0;
+      padding-top: 100%;
+      margin: 0 0 1rem; 
+
+      &.gr-u-bg-white {
+
+        @include custom-property(border-color, --gr-light-gray, $gr-light-gray);
+        border-style: solid; 
+        border-width: 1px; 
+
+      }
+
+    }
+
+    &--font {
+
+      @include custom-property(border-color, --gr-light-gray, $gr-light-gray);
+      border-style: solid; 
+      border-width: 0 0 1px; 
+      margin-bottom: 1rem; 
+      overflow-x: auto; 
+
+    }
+
+    &--button {
+
+      @include custom-property(border-color, --gr-light-gray, $gr-light-gray);
+      border-style: solid; 
+      border-width: 0 0 1px; 
+      padding-bottom: 1rem; 
+      margin-bottom: 1rem; 
+
+    } 
+
+    &--heading {
+
+      // border-bottom: 1px solid $color-light-gray; 
+      margin-bottom: 1rem; 
+      // overflow: scroll; 
+
+    }
+
+    &--icon {
+
+      @include custom-property(border-color, --gr-light-gray, $gr-light-gray);
+      border-style: solid; 
+      border-width: 0 0 1px; 
+      padding-bottom: 1rem; 
+      margin-bottom: 1rem; 
+
+    }
+
+    &--form-element {
+
+      @include custom-property(border-color, --gr-light-gray, $gr-light-gray);
+      border-style: solid; 
+      border-width: 0 0 1px; 
+      padding-bottom: 1rem; 
+      margin-bottom: 1rem; 
+
+    }
+
+  }
+
+  &__heading {
+
+    font-weight: bold; 
+    white-space: nowrap; 
+
+    &--big {
+
+      font-weight: normal; 
+      font-size: 2rem; 
+      margin: 0 0 1rem; /* this class is used on a <p> element for font palette -- might want to change to heading or list markup */
+
+    }
+
+  }
+
+  &__details {
+
+    //
+
+  }
+
+  &__list {
+
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+  
+  }
+
+  &__list-item {
+  
+    margin: 0 0 .25rem; 
+
+    &--heading {
+
+      font-weight: bold; 
+
+    }
+
+    &:last-child {
+
+      margin: 0; 
+
+    }
+
+  }
+
+  &--colors {
+
+    //
+    
+  }
+
+  &--fonts {
+    
+    /* adjust grid item width so more of alphabet is visible */
+
+    @include grid(false, 1rem, repeat(auto-fill, minmax(100%, 1fr)), auto); 
+
+    @include mq(40em) {
+
+      @include grid(false, 1rem, repeat(auto-fill, minmax(300px, 1fr)), auto); 
+
+    }
+
+  } 
+
+  &--buttons {
+
+    /* adjust grid item width so CSS classes remain on one line on wider screens */
+
+    @include grid(false, 1rem, repeat(auto-fill, minmax(100%, 1fr)), auto); 
+
+    @include mq(48em) {
+
+      @include grid(false, 1rem, repeat(auto-fill, minmax(340px, 1fr)), auto); 
+
+    }
+
+  }
+
+  &--headings {
+
+    display: block;
+
+    .gr-pl-o-palette__item {
+
+      margin: 0 0 2rem; 
+
+      &:last-child {
+
+        margin: 0; 
+
+      }
+
+    }
+
+    /* when viewing heading palette, use same margin value for all headings -- removes unnecessary whitepsace */
+
+    .gr-c-heading {
+
+      margin: 0 0 1rem; 
+
+    }
+
+  }
+
+  &--icons {
+
+    @include grid(false, 1rem, repeat(auto-fill, minmax(190px, 1fr)), auto); 
+    
+  }
+
+  &--form-elements {
+
+    /*  */
+
+    @include grid(false, 1rem, repeat(auto-fill, minmax(100%, 1fr)), auto); 
+
+    @include mq(18.75em) {
+
+      @include grid(false, 1rem, repeat(auto-fill, minmax(260px, 1fr)), auto); 
+
+    }
+  }
+
+  /* add margin below text inputs when viewing as "atoms" */
+
+  .gr-c-input-text {
+
+    margin: 0 0 1rem;
+
+  }
+
+}

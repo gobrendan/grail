@@ -3,13 +3,13 @@
  */
 
 [hidden],
-.hidden {
+.gr-u-hidden {
 
   display: none !important;
 
 }
 
-.u-visible {
+.gr-u-visible {
 
   display: block;
 
@@ -23,7 +23,7 @@
 /* NOTE: using both class names since they're both being used */
 
 //.visuallyhidden,
-.visually-hidden, 
+.gr-u-visually-hidden, 
 %visually-hidden {
 
   border: 0;
@@ -37,7 +37,7 @@
 
 }
 
-.visuallyhidden {
+.gr-u-visuallyhidden {
 
   @extend %visually-hidden;
 
@@ -48,8 +48,8 @@
  *       https://www.drupal.org/node/897638
  */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+.gr-u-visuallyhidden.focusable:active,
+.gr-u-visuallyhidden.focusable:focus {
 
   clip: auto;
   height: auto;
@@ -64,7 +64,7 @@
  * NOTE: hide visually and from screen readers, but maintain layout
  */
 
-.invisible {
+.gr-u-invisible {
 
   visibility: hidden;
 

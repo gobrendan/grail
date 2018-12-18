@@ -1,0 +1,89 @@
+{{# pl-text-input-palette }}
+
+<div class="gr-l-grid gr-pl-o-palette gr-pl-o-palette--form-elements">
+
+  {{# item }}
+
+  <div class="gr-l-grid__item gr-pl-o-palette__item">
+
+    <div class="gr-pl-o-palette__box gr-pl-o-palette__box--form-elements">
+
+      <div class="gr-pl-o-palette__swatch gr-pl-o-palette__swatch--form-element">
+
+        {{! if type is specified, it's an <input> element }}
+
+        {{# type }} 
+
+        <input name="{{ name }}" class="{{ class }}" id="{{ id }}" type="{{ type }}" 
+          {{# value }}value="{{ value }}"{{/ value }} 
+          {{# placeholder }}placeholder="{{ placeholder }}"{{/ placeholder }} 
+          {{# min }}min="{{ min }}"{{/ min }} 
+          {{# max }}max="{{ max }}"{{/ max }}>
+
+        {{/ type }}
+
+        {{! if type isn't specified, it's a <textarea> element }}
+        
+        {{^ type }} 
+
+        <textarea class="{{ class }}" id="{{ id }}" rows="{{ rows }}" cols="{{ cols }}" placeholder="{{ placeholder }}"></textarea>
+
+        {{/ type }}
+
+      </div>
+      
+      <div class="gr-pl-o-palette__details">
+        <ul class="gr-pl-o-palette__list">
+          <li class="gr-pl-o-palette__list-item gr-pl-o-palette__heading">
+            {{ name }} 
+          </li>
+          <li class="gr-pl-o-palette__list-item">
+            {{ class }}
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+
+  {{/ item }}
+
+</div>
+
+{{/ pl-text-input-palette }}
+
+<!--
+<fieldset class="fieldset">
+  <label class="label" for="input-telephone">
+    Telephone Input
+  </label>
+  <input class="input-text" type="tel" id="input-telephone" placeholder="(###) ###-####">
+  {{! <i class="fieldset__icon icon-error">
+  </i> }}
+</fieldset>
+
+<fieldset class="fieldset">
+  <label class="label" for="textarea">
+    Textarea
+  </label>
+  <textarea class="textarea" id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+  <i class="fieldset__icon icon-error">
+  </i>
+</fieldset>
+
+<fieldset class="fieldset">
+  <label class="label label--invalid" for="some-company">
+    Invalid
+  </label>
+  <input class="input-text input-text--invalid" type="text" value="Some kind of bad value" placeholder="Text Input" id="some-company">
+  {{! <i class="fieldset__icon icon-error">
+  </i> }}
+</fieldset>
+
+<fieldset class="fieldset">
+  <label class="label error" for="some-name">
+    Error
+  </label>
+  <input class="input-text error" type="text" value="Some kind of bad value" placeholder="Text Input" id="some-name">
+</fieldset>
+-->

@@ -1,0 +1,112 @@
+/* 
+ * pic box set
+ */
+
+.gr-c-pic-box-set {
+
+  //
+
+  &__heading {
+
+    font-size: $gr-font-size-delta;
+    font-family: $gr-font-family-primary;
+    color: $gr-primary-blue;
+    text-transform: uppercase;
+    flex: 0 0 100%;
+    margin: 0 0 .5rem;
+
+  }
+
+  &__content {
+
+    display: flex;
+
+  }
+
+  &__group {
+
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;  
+    width: 100%;
+
+  }
+
+  &__item {
+
+    flex: 0 0 33.33333333333333%; 
+    margin: 0 0 1rem;
+
+    &:nth-child(n+5) {
+
+      // margin: 0;
+
+    }
+
+  }
+
+  &__more {
+
+    padding-left: 1rem;
+    
+  }
+
+  &__more-link {
+
+    @include vertical-align;
+    display: block;
+    text-align: center;
+
+    &:hover {
+
+      text-decoration: none;
+
+      .gr-c-pic-box-set__more-text {
+
+        text-decoration: underline;
+
+      }
+
+    }
+
+  }
+
+  &__more-icon {
+
+    display: block;
+    background: $gr-orange;
+    color: $gr-white;
+    width: 41px;
+    line-height: 41px;
+    border-radius: 50%;
+    font-size: 1.5rem; /* magic number */
+    margin: auto;
+
+  }
+
+  &__more-text {
+
+    font-size: $gr-font-size-eta;
+    font-family: $gr-font-family-primary;
+    color: $gr-dark-gray;
+
+  }
+
+  .gr-c-pic-box {
+
+    margin: auto; 
+    
+  }
+
+  @include mq($gr-small-breakpoint) {
+
+    &__item {
+
+      flex: 0 0 25%; 
+      margin: 0 0 1rem;
+  
+    }
+
+  }
+
+}

@@ -1,0 +1,49 @@
+{{# primary-nav-menu }}
+
+<div class="gr-c-primary-nav__menu">
+  <div class="gr-c-primary-nav__menu-inner">
+    
+    {{# column }}
+
+    <div class="gr-c-primary-nav__col">
+
+      {{# box }}
+
+      <div class="gr-c-primary-nav__menu-box">
+
+        {{# heading }}
+        <h1 class="gr-c-heading gr-c-primary-nav__menu-heading">
+          {{ heading }}
+        </h1>
+        {{/ heading }}
+
+        {{# list }}
+
+        <ul class="gr-c-primary-nav__menu-list">
+          
+          {{# item }}
+
+          <li class="gr-c-primary-nav__menu-item">
+            <a class="gr-c-primary-nav__menu-link" href="{{ url }}">
+              {{ text }}
+            </a>
+          </li>
+
+          {{/ item }}
+
+        </ul>
+
+        {{/ list }}
+
+      </div>
+
+      {{/ box }}
+
+    </div>
+
+    {{/ column }}
+
+  </div>
+</div>
+
+{{/ primary-nav-menu }}

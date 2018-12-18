@@ -1,0 +1,119 @@
+/*
+ * mobile nav
+ */
+
+/* For the mobile nav, we're changing its position at a breakpoint rathern toggling its visibility (show/hide). This is because the Slinky menu component needs to be technically visible in order to display properly. */
+
+.gr-c-mobile-nav-wrapper {
+
+  //
+
+  @include mq($gr-large-breakpoint) {
+
+    /* push componet off screen */
+
+    position: absolute; 
+    top: -5000rem;
+    left: 0;
+    right: 0; 
+    height: 0;
+
+  }
+
+}
+
+.gr-c-mobile-nav {
+
+  background: $gr-dark-blue; 
+  position: relative; 
+  z-index: 1; /* this should be in a variable and be highest possible */
+
+  &__header {
+
+    display: flex; 
+    justify-content: space-between; 
+
+  }
+
+  &__btn {
+
+    display: flex; 
+    font-size: 2rem; 
+    color: $gr-white;
+    text-decoration: none;
+    padding: .5rem; 
+
+    &:hover {
+
+      text-decoration: none;
+
+    }
+
+  }
+
+  &__icon {
+
+    //
+
+  }
+
+  &__menu, 
+  &__search-box {
+
+    border-top: 1px solid #666; /* this value should be in a variable */ 
+
+  }
+
+  &__menu {
+
+    position: absolute;
+    top: -5000rem;
+    left: 0;
+    right: 0;
+
+    &.active {
+
+      top: 100%;
+
+    }
+
+  }
+
+  &__search-box {
+
+    display: none; 
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    max-width: 100%; /* override */
+
+  }
+
+  .gr-c-search-box__text-input {
+
+    //
+
+    &:hover, 
+    &:focus, 
+    &:focus:hover {
+
+      @include custom-property(border-color, --gr-light-gray, $gr-light-gray);
+  
+    }
+    
+  }
+
+  .gr-c-search-box__btn {
+
+    display: none;
+    
+  }
+
+  ::placeholder {
+
+    @include custom-property(color, --gr-dark-gray, $gr-dark-gray);
+
+  }
+
+}

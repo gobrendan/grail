@@ -4,9 +4,6 @@
 
 @mixin no-transition() {
 
-	-moz-transition: none;
-	-webkit-transition: none;
-	-o-transition: all 0 ease-in;
 	transition: none;
 
 }

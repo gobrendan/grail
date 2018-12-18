@@ -1,0 +1,246 @@
+/*
+ * result box
+ */
+
+.gr-c-result-box {
+
+  display: flex; 
+  flex-direction: column;
+  position: relative;
+
+  &__media-wrapper {
+
+    margin: 0 0 1rem;
+
+  }
+
+  &__media-inner {
+
+    height: 0;
+    padding-top: 73.493976%; /* intrinisic ratio solution -- height/width (610/830) */
+    overflow: hidden;
+    position: relative;
+    background-color: $gr-medium-gray;
+
+  }
+
+  &__media {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+  }
+
+  &__text {
+
+    position: relative;
+
+  }
+
+  &__date {
+
+    display: block;
+    font-size: $gr-font-size-delta;
+    color: $gr-orange;
+    margin: 0 0 .5rem;
+
+  }
+
+  &__heading {
+
+    @include line-height-crop(1.2); 
+    line-height: 1.2;
+
+    font-size: $gr-font-size-gamma;
+    color: $gr-dark-gray; 
+    margin: 0 0 1rem;
+
+    &--event {
+
+      font-size: 22px; /* this value should be in a variable */
+
+    }
+
+  }
+
+  &__list {
+
+    color: $gr-dark-gray; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+  }
+
+  &__item {
+
+    margin: 0 0 .15rem; /* this value should be in a variable */
+
+    &:last-child {
+
+      margin: 0; 
+
+    }
+
+    &--spaced {
+
+      margin: 0 0 1rem;
+
+    }
+
+  }
+
+  &__label {
+
+    font-size: $gr-font-size-epsilon;
+    color: $gr-medium-gray; 
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+  }
+
+  &__tooltip {
+
+    /* hide tooltip by default */
+
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 2; /* using "2" to make sure box appears above Pattern Lab's "Show Pattern Info" arrow */
+
+    top: 50%;
+    transform: translateY(-50%);
+
+  }
+
+  &--article {
+
+    //
+
+  }
+
+  &--person {
+
+    //
+
+    .gr-c-result-box__media-wrapper {
+
+      flex: 0 0 110px; /* value matches image width */ 
+  
+    }
+
+    .gr-c-result-box__media-inner {
+
+      padding-top: 100%; /* intrinisic ratio solution ("padding top" solution) -- 100% means it's a square */
+
+    }
+
+  }
+
+  &--event {
+
+    //
+
+  }
+
+  &--w-tooltip {
+
+    //
+
+  }
+
+  /* demo rule only -- demonstrates what tooltip looks like without hovering component */
+
+  &--active {
+
+    background: $gr-light-gray;
+
+    .gr-c-result-box__tooltip {
+
+      display: block;
+
+    }
+
+  } 
+
+  /* we might want to give icons a class name */
+
+  [class^="gr-i-"], 
+  [class*=" gr-i-"] {
+
+    color: $gr-primary-blue;
+
+  }
+
+  @include mq($gr-small-breakpoint) {
+
+    flex-direction: row;
+    padding: 2rem 0;
+
+    &__media-wrapper {
+
+      flex: 0 0 143px; /* value matches image width */ 
+      margin: 0 1.5rem 0 0;
+  
+    }
+
+    &__heading {
+
+      //
+  
+      &--event {
+        
+        font-size: $gr-font-size-alpha;
+  
+      }
+
+    }
+
+  }
+
+  @include mq($gr-medium-breakpoint) {
+
+    &__heading {
+
+      //
+  
+      &--event {
+  
+        font-size: $gr-font-size-kilo;
+  
+      }
+
+    }
+
+  }
+
+  @include mq($gr-large-breakpoint) {
+
+    &--w-tooltip {
+
+      //
+
+      &:hover {
+
+        background: $gr-light-gray;
+
+        /* show tooltip on hover */
+    
+        .gr-c-result-box__tooltip {
+    
+          display: block;
+    
+        }
+
+      }
+
+    }
+
+  }
+
+}

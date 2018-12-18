@@ -1,0 +1,44 @@
+/* 
+ * toggle 
+ */ 
+
+.gr-c-toggle {
+
+  font-size: 1.5rem;
+  display: flex; 
+  align-self: center;
+
+  &__link {
+
+    display: flex; /* display:flex helps vertically align the icon pseudo elements */
+    text-decoration: none;
+    padding: 0 1rem 0 0;
+    border-right: 1px solid $gr-medium-gray;
+    margin: 0 1rem 0 0;
+    color: $gr-dark-blue;
+
+    &:last-child {
+
+      padding: 0; 
+      border: 0; 
+      margin: 0; 
+
+    }
+
+    &--active, 
+    &:hover {
+
+      color: $gr-primary-blue;
+      text-decoration: none;
+
+    }
+
+  }
+
+  &__icon {
+
+    //
+
+  }
+
+}

@@ -1,0 +1,43 @@
+{{# img-advanced }}
+
+<picture class="{{ picture-class }}">
+
+  <!--[if IE 9]><video style="display: none;"><![endif]-->
+
+  {{# breakpoint-biggest }}
+
+  <source 
+    media="(min-width: {{{ breakpoint-biggest }}})" 
+    srcset="{{{ 1x-src-biggest }}} 1x, 
+            {{{ 2x-src-biggest }}} 2x">
+
+  {{/ breakpoint-biggest }}
+
+  {{# breakpoint-big }}
+
+  <source 
+    media="(min-width: {{{ breakpoint-big }}})" 
+    srcset="{{{ 1x-src-big }}} 1x, 
+            {{{ 2x-src-big }}} 2x">
+
+  {{/ breakpoint-big }}
+
+  <source 
+    srcset="{{{ 1x-src }}} 1x, 
+            {{{ 2x-src }}} 2x">
+
+  <!--[if IE 9]></video><![endif]-->
+
+  <img class="{{{ image-class }}}" src="
+    {{# breakpoint-biggest }}
+    {{{ 2x-src-biggest }}}
+    {{/ breakpoint-biggest }} 
+    
+    {{^ breakpoint-biggest }}
+    {{{ 2x-src-big }}}
+    {{/ breakpoint-biggest }} 
+    " alt=""> <!-- use largest size for this element -->
+
+</picture>
+
+{{/ img-advanced }}

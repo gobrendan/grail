@@ -1,0 +1,20 @@
+  {{# tooltip }}
+
+  <div class="gr-c-tooltip {{ class }}">
+    <h2 class="gr-c-tooltip__heading">
+      {{ heading }}
+    </h2>
+    <ul class="gr-c-tooltip__list">
+
+      {{# item }}
+
+      <li class="gr-c-tooltip__item {{ class }}">
+        {{{ text }}}
+      </li>
+
+      {{/ item }}
+
+    </ul>
+  </div>
+
+  {{/ tooltip }}

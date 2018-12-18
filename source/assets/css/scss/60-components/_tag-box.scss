@@ -1,0 +1,67 @@
+/*
+ * tag box
+ */
+
+.gr-c-tag-box {
+
+  display: flex; 
+
+  &__heading {
+
+    font-size: $gr-font-size-epsilon;
+    color: $gr-medium-gray;
+    font-family: $gr-font-family-primary;
+    display: flex;  
+    margin: 0 1rem 0 0;
+
+    &:after {
+
+      content: ":";
+      display: block; 
+
+    }
+
+  }
+
+  &__list {
+
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    flex-wrap: wrap;
+
+  }
+
+  &__item {
+
+    margin: 0 .5rem 0 0; 
+    display: flex; 
+
+    &:after {
+
+      content: ",";
+      display: block; 
+
+    }
+
+    &:last-child {
+
+      margin: 0; 
+
+      &:after {
+
+        display: none;
+
+      }
+
+    }
+  
+  }
+
+  &__link {
+
+    //
+  }
+
+}

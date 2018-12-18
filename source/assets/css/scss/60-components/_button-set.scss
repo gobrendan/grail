@@ -1,112 +1,100 @@
 /*
- * button group
+ * button set
  */
 
-.btn-group {
+.gr-c-btn-set {
+  
+  @include grid(false, 1rem, repeat(auto-fill, minmax(100%, 1fr)), auto);
+  justify-content: center;
 
-  text-align: center;
-  margin: 2rem 0;
+  &__btn {
 
-  &__icon {
-
-    font-size: 1.5rem;
-    display: inline-block;
-    vertical-align: middle;
+    text-align: center;
 
   }
 
-  .btn {
+  &--grid {
 
-    display: inline-block;
-    border-right-width: 0;
-    border-radius: 0;
-
-    &:not(:first-child) {
-
-      margin-left: -8px; /* NOTE: this account for the extra space in between "inline-block" elements */
-
-    }
-
-    &:first-child {
-
-      border-top-left-radius: 4px; /* NOTE: this value should be in a variable */
-      border-bottom-left-radius: 4px; /* NOTE: this value should be in a variable */
-
-    }
-
-    &:last-child {
-
-      border-top-right-radius: 4px; /* NOTE: this value should be in a variable */
-      border-bottom-right-radius: 4px; /* NOTE: this value should be in a variable */
-      border-right-width: 2px; /* NOTE: this value should be in a variable */
-
-    }
+    @include grid(false, 1rem, repeat(auto-fill, minmax(100%, 1fr)), auto);
 
   }
 
-  &--bordered {
+  @include mq($gr-small-breakpoint) {
 
-    padding-bottom: 2.5rem;
-    border-bottom: 1px solid $core-light-gray;
-
-  }
-
-  &--spaced {
-
-    @include clearfix;
-
-    .btn {
-
-      display: block;
-      float: left;
-      margin: 0 .5rem 0 0; /* NOTE: margin matches Isotope component -- perhaps that value should be put in a variable */
-      border-right-width: 2px; /* NOTE: we might want a variable for the border width value */
-      border-radius: 4px;
-
-      &:first-child,
-      &:last-child {
-
-        border-radius: 4px;
-
-      }
-
-      &:not(:first-child) {
-
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    &__btn {
+  
+      margin: 0 .75rem;
+  
+      &:first-child {
+  
         margin-left: 0;
+  
+      }
+  
+      &:last-child {
+  
+        margin-right: 0;
+        
+      }
+  
+    }
 
+    &--grid {
+
+      @include grid(false, 1rem, repeat(auto-fill, minmax(calc(50% - 1rem), 1fr)), auto); 
+
+      .gr-c-btn-set__btn {
+
+        margin: 0;
+        
       }
 
     }
 
   }
 
-  &--no-wrap {
+  /* browser fallbacks */
 
-    text-align: left;
-    white-space: nowrap;
+  .gr-mod-no-cssgrid & {
 
-    .btn {
+    //
 
-      display: inline-block; /* NOTE: overrides "--spaced" display declaration when both classes are used */
-      float: none; /* NOTE: overrides "--spaced" float declaration when both classes are used */
+    &--grid {
+
+      display: block; 
+      overflow: hidden; /* easy 'clearfix' solution (child elements are floated) */
+
+      .gr-c-btn {
+
+        width: calc(50% - .5rem); 
+        margin: 1rem 0 0; 
+
+        &:nth-child(odd) {
+
+          float: left;
+
+        }
+
+        &:nth-child(even) {
+
+          float: right;
+          
+        }
+
+        &:nth-child(-n+2) { /* remove unnecessary bottom margin from last two buttons */
+          
+          margin: 0;
+
+        }
+
+      }
 
     }
-
-  }
-
-  /* NOTE: we might want to refactor or add a new class name for the toggle, specifically the hide/show media query -- some toggles might be OK for smaller screens */
-
-  &--toggle {
-
-    display: none; /* NOTE: generally not necessary for smaller screens -- no need to toggle a grid layout on smaller screens */
-    margin: 0 0 1.875rem;
-
-    @include sb-media($medium-breakpoint) {
-
-      display: block;
-
-    }
-
+    
   }
 
 }

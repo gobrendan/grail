@@ -1,0 +1,44 @@
+{{# list-box }}
+
+<div class="gr-c-list-box {{ class }}">
+
+  <h1 class="gr-c-heading gr-c-list-box__heading">
+    {{ heading }}
+  </h1>
+
+  <div class="gr-c-list-box__content">
+
+    {{# list }}
+
+    {{> molecules-list }}
+
+    {{/ list }}
+
+
+    {{# checkbox-set-exists }}
+
+    {{> molecules-checkbox-set }}
+
+    {{/ checkbox-set-exists }}
+
+
+    {{# button-set-exists }}
+
+    {{> molecules-button-set }}
+
+    {{/ button-set-exists }}
+
+
+    {{# show-all }}
+
+    <a class="gr-c-list-box__more {{ class }}" href="">
+      {{ text }}
+    </a>
+
+    {{/ show-all }}
+
+  </div>
+
+</div>
+
+{{/ list-box }}

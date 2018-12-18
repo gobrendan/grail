@@ -1,0 +1,136 @@
+/*
+ * list box
+ */
+
+.gr-c-list-box {
+
+  //
+
+  &__heading {
+    
+    font-size: $gr-font-size-beta; 
+    margin: 0 0 1.5rem;
+
+  }
+
+  &__content {
+
+    display: flex; 
+    flex-direction: column;
+
+  }
+
+  &__item {
+
+    margin: 0 0 2rem;
+    // border: 1px solid red;
+
+    &:last-child {
+
+      margin: 0;
+      // border: 1px solid green;
+
+    }
+
+  }
+
+  &__list {
+
+    // background: violet;
+
+  }
+
+  &__checkbox-set {
+
+    margin: 0 0 2rem;
+    // background: green;
+    
+  }
+
+  &__btn-set {
+
+    justify-content: flex-start;
+    // background: orange;
+    
+  }
+
+  &__more {
+
+    align-self: flex-end; 
+    margin: 1rem 0 0;
+    // background: yellow;
+
+  }
+
+  &--bordered {
+
+    border: 1px solid $gr-light-gray; 
+
+    .gr-c-list-box__heading {
+
+      padding: 1rem;
+      border-bottom: 1px solid $gr-light-gray;
+      margin: 0;
+
+    }
+
+    .gr-c-list-box__content {
+
+      padding: 1.5rem 1rem;
+
+    }
+
+    .gr-c-list-box__more {
+
+      //
+
+    }
+
+    .gr-c-list {
+
+      //
+
+    } 
+
+    fieldset {
+
+      // padding: 1.5rem 1rem 0;
+      // margin: 0 0 1.5rem;
+
+      label {
+
+        margin-bottom: 1rem;
+
+        &:last-child {
+
+          margin: 0;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  /* when used in template/page */
+
+  .gr-l-main__side & {
+
+    background: $gr-white; 
+
+    &--bordered {
+
+      border-color: $gr-medium-gray; /* use darker border color for when ".gr-l-main__side" element is overlapping ".gr-l-main__content" area*/
+
+      @include mq($gr-medium-breakpoint) { /* same breakpoint as when __side element is displayed on wider screens */
+
+        border-width: 0;
+
+      }
+
+    }
+
+  }
+
+}

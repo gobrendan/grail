@@ -1,0 +1,139 @@
+/* 
+ * alert box
+ */
+
+.gr-c-alert-box {
+
+  background-color: $gr-black; 
+  padding: .5rem;
+  position: relative;
+  // margin-bottom: -1rem; /* this adds appearance that the component is slightly overlapping the component below it */
+  
+  &__inner {
+
+    //
+
+  }
+
+  &__text {
+
+    font-size: $gr-font-size-gamma; 
+    color: $gr-white; 
+    text-align: center;
+    position: relative;
+    padding: .5rem;
+    margin: auto;
+    max-width: $gr-component-max-width;
+
+  }
+
+  &__btn {
+
+    font-size: $gr-font-size-gamma; /* override */
+    display: table; /* allows element to break to next line and display like a block except it doesn't go full width */
+    background-color: $gr-white;
+    color: $gr-dark-gray; /* color should match component background */
+    padding: 0 1.677rem; /* padding should match default "btn" component */
+    margin: 1rem auto auto auto; 
+    
+    &:hover {
+
+      background-color: $gr-light-gray;
+
+    }
+
+  }
+
+  &__close-btn {
+
+    display: table;
+    font-size: $gr-font-size-epsilon;
+    color: $gr-white;
+    line-height: 44px; /* provides recommended clickable area */
+    padding: 0 .5rem; /* provides space between button and linear background */
+    margin: .5rem auto auto;
+
+  }
+
+  &--major {
+
+    background-color: $gr-red;
+    
+    .gr-c-alert-box__btn {
+
+      color: $gr-alert-primary-color;
+    
+    }
+
+    /* hide "dismiss" button for "major" alerts */
+
+    .gr-c-alert-box__close-btn {
+
+      display: none;
+
+    }
+
+  }
+
+  &--minor {
+
+    background-color: $gr-alert-minor-color;
+    background: repeating-linear-gradient(
+      135deg,
+      $gr-alert-minor-color,
+      $gr-alert-minor-color 10px,
+      $gr-light-orange 10px,
+      $gr-light-orange 20px
+    );
+
+    .gr-c-alert-box__inner {
+
+      background-color: $gr-alert-minor-color;
+
+    }
+
+    .gr-c-alert-box__btn {
+
+      color: $gr-alert-minor-color;
+    
+    }
+
+  }
+
+  @include mq($gr-large-breakpoint) {
+
+    &__text {
+
+      font-size: $gr-font-size-alpha; 
+      padding: .75rem 15rem; /* side padding should be wider than "More" buttons -- prevents button from overlapping text */ 
+  
+    }
+
+    &__btn {
+      
+      font-size: $gr-font-size-alpha; /* override */
+      display: flex; /* easy way to center the text vertically */
+      line-height: 66px; /* magic number -- matches height of "__text" element on wider screens when text is on one line */
+      position: absolute;
+      top: 50%; 
+      transform: translateY(-50%);
+      right: 0; 
+      padding: 0 3rem; /* override -- increase side padding and rely on line-height for top/bottom spacing */
+      margin: 0;
+  
+    }
+
+    &__close-btn {
+
+      display: block; 
+      position: absolute;
+      top: 50%;
+      left: 0; 
+      transform: translateY(-50%);
+      margin: 0;
+  
+    }
+
+  }
+
+}

@@ -1,0 +1,124 @@
+/*
+ * media box 
+ */
+
+.gr-c-media-box {
+
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: $gr-dark-gray;
+
+  &__media-wrapper {
+
+    @include custom-property(background-color, --gr-medium-gray, $gr-medium-gray);
+
+  }
+
+  &__media-inner {
+
+    position: relative;
+    padding-top: 78.319783%; /* intrinsic ratio solution -- width/height (279/369) */
+    height: 0;
+    overflow: hidden;
+
+  }
+
+  &__media {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+  }
+
+  &__text-wrapper {
+
+    padding: .5rem;
+    background-color: rgba(255,255,255,.8); /* this value should be in a variable */
+    position: absolute;
+    bottom: .5rem;
+    left: .5rem;
+    right: .5rem;
+
+  }
+
+  &__label {
+
+    @include custom-property(color, --gr-primary-blue, $gr-primary-blue);
+    font-size: 16px; /* this value should be in a variable */
+    font-family: $gr-font-family-primary;
+    display: inline-block;
+    margin: 0 .75rem 0 0;
+
+  }
+
+  &__date {
+
+    @include custom-property(color, --gr-primary-blue, $gr-primary-blue);
+    font-size: $gr-font-size-eta;
+    font-family: $gr-font-family-primary;
+    text-transform: uppercase;
+    display: inline-block;
+
+  }
+
+  &__heading {
+
+    @include custom-property(color, --gr-dark-blue, $gr-dark-blue);
+    font-size: $gr-font-size-gamma;
+    font-family: $gr-font-family-primary;
+    // line-height: 50px; /* should this be a default heading declaration? */
+
+  }
+
+  &__btn {
+
+    float: right;
+
+  }
+
+  @include mq($gr-medium-breakpoint) {
+
+    //
+
+    &__media-inner {
+
+      padding-top: 53.044872%; /* intrinsic ratio solution -- width/height (662/1248) */ 
+
+    }
+
+    &__text-wrapper {
+
+      padding: 1rem;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+  
+    }
+
+    &__label {
+
+      font-size: 24px; /* this value should be in a variable */
+      margin: 0 1rem 0 0;
+
+    }
+
+    &__date {
+
+      font-size: $gr-font-size-epsilon; 
+      
+    }
+
+    &__heading {
+
+      font-size: $gr-font-size-mega;
+
+    }
+
+  }
+
+}

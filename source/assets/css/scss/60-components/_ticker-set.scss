@@ -1,0 +1,25 @@
+/*
+ * ticker set
+ */
+
+.gr-c-ticker-set {
+
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  &__ticker {
+
+    width: 182px;
+    height: auto; 
+    margin-right: 1.25rem; 
+
+    &:last-child {
+
+      margin-right: 0;
+
+    }
+
+  }
+
+}

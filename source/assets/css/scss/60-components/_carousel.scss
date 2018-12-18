@@ -1,0 +1,254 @@
+/*
+ * carousel
+ */
+
+.gr-c-carousel-wrapper {
+
+  display: grid; /* display:grid appears to be needed for the component to display property when included in an "article block" component */
+
+}
+
+.gr-c-carousel {
+
+  position: relative;
+  overflow: hidden;
+
+  &__set {
+
+    position: relative;
+
+  }
+
+  &__item {
+
+    /* Slick adds "display:inline-block" declaration to this element
+       Change to "display:block" so unnecessary space doesn't show below element    
+    */
+
+    display: block !important; 
+
+  }
+
+  &__nav {
+
+    display: none;
+
+  }
+
+  &__thumb-wrapper {
+
+    width: 100px;
+    flex: 0 0 100px; 
+    margin: 0 1rem 0 0;
+    cursor: pointer;
+
+    &:last-child {
+
+      margin: 0;
+
+    }
+
+  }
+
+  &__thumb-inner {
+
+    position: relative;
+    padding-top: 53.03030303%; /* ... 420 / 792 */
+    background-color: $gr-dark-gray;
+
+  }
+
+  &__thumb {
+
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: 100%;
+
+  }
+
+  &__generic-content {
+
+    padding: 6rem 0; 
+    text-align: center;
+    background-color: $gr-light-gray;
+
+  }
+
+  &--default {
+
+    //
+
+  }
+
+  &--media-box {
+
+    //
+
+  }
+
+  &--cards {
+
+    padding: 2rem 0; 
+
+    .slick-dots {
+
+      li {
+
+        button {
+
+          box-shadow: 0px 0px 10px white;
+
+        }
+
+      }
+
+    }
+
+    /* adjustments to allow portion of next card to be visible -- works in conjunction with Slick's "centerMode" setting */
+
+    .gr-c-card {
+
+      //margin: 0 2rem 0 -1rem;
+      // border: 1px solid red;
+
+    }
+
+    .slick-slide {
+
+      // margin: 0 1rem;
+      // border: 1px solid green;
+
+    }
+
+    .gr-c-carousel__item {
+
+      padding: 0 .5rem;
+      // border: 1px solid blue;
+
+    }
+
+  }
+
+  &--w-thumbs {
+
+    //
+
+    .slick-dots {
+
+      // position: static;
+      display: none !important; /* we might want to initialize the "w thumbs" version separately, which would alleviate need for this rule */
+      
+    }
+
+    .gr-c-carousel__nav {
+
+      display: flex;  
+      padding: 1rem; 
+      background-color: $gr-light-gray;
+      overflow-x: auto; 
+
+    }
+
+    .gr-c-media-box__text-wrapper {
+
+      display: none;
+
+    }
+
+    .slick-prev, 
+    .slick-next {
+
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+
+    }
+
+    .slick-prev {
+
+      margin-left: -2.5rem;
+
+      &:before {
+
+        left: 3.2rem;
+
+      }
+
+    }
+
+    .slick-next {
+
+      margin-right: -2.5rem;
+
+      &:before {
+
+        left: auto;
+        right: 3.25rem;
+
+      }
+
+    }
+
+    .slick-prev:before, 
+    .slick-next:before {
+
+      top: 2rem;
+      color: $gr-dark-gray;
+
+    }
+    
+  }
+
+  @include mq($gr-medium-breakpoint) {
+
+    //
+
+    &--w-thumbs {
+
+      .slick-prev, 
+      .slick-next {
+
+        width: 10rem;
+        height: 10rem;
+
+      }
+
+      .slick-prev {
+
+        margin-left: -5rem;
+
+        &:before {
+
+          left: 6.5rem;
+
+        }
+
+      }
+
+      .slick-next {
+
+        margin-right: -5rem;
+
+        &:before {
+
+          right: 6.5rem;
+
+        }
+
+      }
+
+      .slick-prev:before, 
+      .slick-next:before {
+
+        top: 4rem;
+
+      }
+
+    }
+    
+  }
+
+}

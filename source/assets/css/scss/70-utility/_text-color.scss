@@ -2,62 +2,76 @@
  * text color
  */
 
-.gr-u-c-blue-saphire {
+.gr-u-primary-blue {
 
-  @include custom-property(color, --color-blue-saphire, $color-blue-saphire);
-
-}
-
-.gr-u-c-french-blue {
-
-  @include custom-property(color, --color-french-blue, $color-french-blue);
+  @include custom-property(color, --gr-primary-blue, $gr-primary-blue);
 
 }
 
-.gr-u-c-pale-aqua {
+.gr-u-dark-blue {
 
-  @include custom-property(color, --color-pale-aqua, $color-pale-aqua);
-
-}
-
-.gr-u-c-deep-aqua {
-
-  @include custom-property(color, --color-deep-aqua, $color-deep-aqua);
+  @include custom-property(color, --gr-dark-blue, $gr-dark-blue);
 
 }
 
-.gr-u-c-mikado-yellow {
+.gr-u-light-orange {
 
-  @include custom-property(color, --color-mikado-yellow, $color-mikado-yellow);
-
-}
-
-.gr-u-c-carmine-pink {
-
-  @include custom-property(color, --color-carmine-pink, $color-carmine-pink);
+  @include custom-property(color, --gr-light-orange, $gr-light-orange);
 
 }
 
-.gr-u-c-burnt-orange {
+.gr-u-orange {
 
-  @include custom-property(color, --color-burnt-orange, $color-burnt-orange);
-
-}
-
-.gr-u-c-rare-black {
-
-  @include custom-property(color, --color-rare-black, $color-rare-black);
+  @include custom-property(color, --gr-orange, $gr-orange);
 
 }
 
-.gr-u-c-light-gray {
+.gr-u-dark-orange {
 
-  @include custom-property(color, --color-light-gray, $color-light-gray);
+  @include custom-property(color, --gr-dark-orange, $gr-dark-orange);
+
+}
+
+.gr-u-red {
+
+  @include custom-property(color, --gr-red, $gr-red);
 
 }
 
-.gr-u-c-soft-white {
+.gr-u-green {
 
-  @include custom-property(color, --color-soft-white, $color-soft-white);
+  @include custom-property(color, --gr-green, $gr-green);
 
 }
+
+.gr-u-cool-gray {
+
+  @include custom-property(color, --gr-light-gray, $gr-light-gray);
+
+}
+
+.gr-u-medium-gray {
+
+  @include custom-property(color, --gr-medium-gray, $gr-medium-gray);
+
+}
+
+.gr-u-dark-gray {
+
+  @include custom-property(color, --gr-dark-gray, $gr-dark-gray);
+
+}
+
+.gr-u-black {
+
+  @include custom-property(color, --gr-black, $gr-black);
+
+}
+
+.gr-u-white {
+
+  @include custom-property(color, --gr-white, $gr-white);
+
+}
+
+

@@ -1,0 +1,147 @@
+/*
+ * wrapper
+ */
+
+.gr-l-wrapper {
+
+  //
+
+  &__item {
+
+    width: 100%;
+
+  }
+
+  &--60-40 {
+
+    display: flex;
+    justify-content: center;  
+    flex-wrap: wrap;
+
+    .gr-l-wrapper__item {
+      
+      flex: 0 0 100%;
+    
+      &:first-child {
+
+        margin: 0 0 3rem;
+
+      }
+
+      &:last-child {
+
+        //
+      
+      }
+
+    }
+
+    @include mq(80em) {
+
+      .gr-l-wrapper__item {
+      
+        //
+      
+        &:first-child {
+  
+          width: 60%; /* this seems to resolve flexbox issue with "gr-c-carousel" component */
+          flex: 0 0 60%;
+          padding-right: 3rem; /* this value should be in a variable */
+          margin: 0;
+  
+        }
+  
+        &:last-child {
+          
+          width: 40%;
+          flex: 0 0 40%;
+        
+        }
+  
+      }
+
+    }
+
+  }
+
+  &--40-60 {
+
+    display: flex;
+    justify-content: center;  
+    flex-wrap: wrap;
+
+    .gr-l-wrapper__item {
+      
+      flex: 0 0 100%;
+    
+      &:first-child {
+
+        margin: 0 0 3rem;
+
+      }
+
+      &:last-child {
+
+        //
+      
+      }
+
+    }
+
+    @include mq(80em) {
+
+      .gr-l-wrapper__item {
+      
+        //
+      
+        &:first-child {
+  
+          width: 40%; /* this seems to resolve flexbox issue with "gr-c-carousel" component */
+          flex: 0 0 40%;
+          padding-right: 3rem; /* this value should be in a variable */
+          margin: 0;
+  
+        }
+  
+        &:last-child {
+          
+          width: 50%;
+          flex: 0 0 60%;
+        
+        }
+  
+      }
+
+    }
+
+  }
+
+  /* browser fallbacks */
+
+  /* In IE 11, the split items (60/40 and 40/60 children) are wrapping unnecessarily. Rather than padding the childrem, pad the children of children. Also, override flex-wrap value. */
+
+  .gr-mod-no-cssgrid & {
+
+    flex-wrap: nowrap;
+
+    .gr-l-wrapper__item {
+
+      //
+
+      &:first-child {
+
+        padding-right: 0;
+
+        > * {
+
+          padding-right: 3rem; /* this value should be in a variable */
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,33 @@
+{{# tab-menu }}
+
+<div class="gr-c-tab-menu">
+  
+  <div class="gr-c-tab-menu__inner">
+
+    {{# item }}
+
+    <input class="gr-c-tab-menu__input" id="{{ id }}" type="checkbox" name="tabsMenu">
+    <label class="gr-c-tab-menu__tab" for="{{ id }}">
+      <i class="{{ icon }} gr-c-tab-menu__icon">
+      </i>
+      {{ label }}
+    </label>
+
+    {{/ item }}
+    
+
+    {{# item }}
+
+    <section class="gr-c-tab-menu__section" id="{{ section-id }}">
+      
+      {{> molecules-button-set-grid }}
+
+    </section>
+      
+    {{/ item }}
+
+  </div>
+
+</div>
+
+{{/ tab-menu }}

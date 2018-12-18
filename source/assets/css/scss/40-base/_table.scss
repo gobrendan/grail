@@ -5,6 +5,7 @@
 table, 
 %table {
 
+  width: 100%;
   border: 0;
   border-collapse: collapse;
   border-spacing: 0;
@@ -12,16 +13,20 @@ table,
 
 }
 
-caption {
+caption, 
+%caption {
 
-  //
+  font: $gr-font-secondary-italic;
+  font-size: $gr-font-size-eta;
 
 }
 
 .table-heading, 
-%table-heading {
+%table-heading, 
+th, 
+%th {
 
-  color: $color-rare-black; 
+  @include custom-property(color, --gr-black, $gr-black);
   text-align: left;
   padding: 0;
   margin: 0 0 10px;
@@ -35,6 +40,7 @@ td,
   padding: .75rem 1rem;
   border-width: 0 0 1px;
   border-style: solid;
+  text-align: left;
   
 }
 
@@ -42,22 +48,21 @@ th,
 thead td, /* prepare for scenario where 'td' is used in place of 'th'  */
 %th {
 
+  @include custom-property(border-color, --gr-black, $gr-black);
   font-weight: bold; 
-  text-align: left; 
   vertical-align: bottom; 
-  border-color: $color-rare-black; 
 
 }
 
 td, 
 %td {
 
+  @include custom-property(border-color, --gr-medium-gray, $gr-medium-gray);
   vertical-align: top; 
-  border-color: $color-light-gray; 
 
 }
 
-/* zebra-striped rows */
+/* zebgr-striped rows */
 
 tbody {
 
@@ -65,7 +70,7 @@ tbody {
 
     &:nth-child(even) {
 
-      // background: $color-soft-white; 
+      // @include custom-property(background-color, --gr-warm-gray, $gr-warm-gray);
 
     }
 

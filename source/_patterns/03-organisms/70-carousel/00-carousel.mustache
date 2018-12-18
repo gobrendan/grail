@@ -1,0 +1,57 @@
+{{# carousel }}
+
+<div class="gr-c-carousel-wrapper">
+
+  <div class="gr-c-carousel {{ class }}" id="{{ id }}">
+
+    <div class="gr-c-carousel__set">
+
+      {{# item }}
+
+      <div class="gr-c-carousel__item">
+
+        {{# generic }}
+        <div class="gr-c-carousel__generic-content">
+          {{ generic }}
+        </div>
+        {{/ generic }}
+
+        {{# media-box }}
+        {{> organisms-media-box }}
+        {{/ media-box }}
+
+        {{# card }}
+        {{> organisms-card }}
+        {{/ card }}
+        
+      </div>
+
+      {{/ item }}
+
+    </div>
+
+    <div class="gr-c-carousel__nav">
+
+      {{# item }}
+
+      <div class="gr-c-carousel__nav-item gr-c-carousel__thumb-wrapper">
+        <div class="gr-c-carousel__nav-item gr-c-carousel__thumb-inner">
+
+          <span class="gr-u-hidden">
+            {{ slide-number }}
+          </span>
+
+          {{> atoms-image }}
+
+        </div>
+      </div>
+
+      {{/ item }}
+      
+    </div>
+      
+  </div>
+
+</div>
+
+{{/ carousel }}

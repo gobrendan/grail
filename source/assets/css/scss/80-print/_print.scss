@@ -1,0 +1,74 @@
+/*
+ * print 
+ */
+
+/* utility  */
+
+.print-only {
+
+  // display: none;
+
+}
+
+@media only print {
+
+  /* utility */
+
+  .print-only {
+
+    // display: block;
+
+  }
+
+  .no-print {
+
+    // display: none !important;
+
+  }
+
+  /* Decrease font-size for tables to make more room on screen */
+
+  table {
+
+    //
+
+  }
+
+  th,
+  td {
+
+    /* since pages generally print with margins, remove left padding from first cell and right padding from last cell */
+
+    &:first-child {
+
+      // padding-left: 0 !important;
+
+    }
+
+    &:last-child {
+
+      // padding-right: 0 !important;
+
+    }
+
+  }
+
+  /* For expandable tables, display foreground image for plus/minus button since BG images don't print by default */
+
+  // .dataTable {
+
+  //   td.details-control {
+
+  //     position: relative;
+
+  //     &:after {
+
+  //       content: url(/assets/images/icon-plus.svg);
+
+  //     }
+
+  //   }
+
+  // }
+
+}

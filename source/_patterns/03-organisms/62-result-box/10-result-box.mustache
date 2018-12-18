@@ -1,0 +1,59 @@
+{{# result-box }}
+
+<div class="gr-c-result-box {{ class }}">
+
+  <div class="gr-c-result-box__media-wrapper">
+
+    <div class="gr-c-result-box__media-inner">
+      {{> atoms-image }}
+    </div>
+    
+  </div>
+
+  <div class="gr-c-result-box__text">
+
+    {{# date }}
+    <date class="gr-c-result-box__date">
+      {{ date }}
+    </date>
+    {{/ date }}
+
+    <h1 class="heading gr-c-result-box__heading {{ heading-class }}">
+
+      {{# heading-link }}
+      <a href="">
+      {{/ heading-link }}
+
+        {{ heading }}
+
+      {{# heading-link }}
+      </a>
+      {{/ heading-link }}
+
+    </h1>
+
+    <ul class="gr-c-result-box__list">
+
+      {{# item }}
+
+      <li class="gr-c-result-box__item {{ class }}">
+        {{{ text }}}
+      </li>
+
+      {{/ item }}
+
+    </ul>
+
+    {{# label }}
+    <div class="gr-c-result-box__label">
+      {{ label }}
+    </div>
+    {{/ label }}
+
+  </div>
+
+  {{> molecules-tooltip }}
+
+</div>
+
+{{/ result-box }}

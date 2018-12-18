@@ -1,0 +1,10 @@
+//
+// transitions
+//
+
+$gr-default-transition :  all .1s ease-in-out;
+
+$gr-text-transition :     $gr-default-transition; 
+$gr-btn-transition :      $gr-default-transition; 
+$gr-checkbox-transition : $gr-default-transition; 
+$gr-menu-transition :     opacity .1s ease-in-out; 

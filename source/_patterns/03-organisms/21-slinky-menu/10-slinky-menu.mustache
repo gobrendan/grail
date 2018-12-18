@@ -1,0 +1,63 @@
+{{# slinky-menu }}
+
+<div class="slinky-menu {{ class }}">
+
+  <ul>
+
+    {{# item }}
+
+    <li>
+
+      <a href="#">
+        {{ label }}
+      </a>
+
+      {{# sub-menu }}
+
+      <ul>
+
+        {{# item }}
+
+        <li>
+
+          <a href="#">
+            {{ label }}
+          </a>
+
+          {{# sub-menu }} 
+
+          <ul>
+
+            {{# item }}
+
+            <li>
+
+              <a href="#">
+                {{ label }}
+              </a>
+
+            </li>
+
+            {{/ item }}
+
+          </ul>
+
+          {{/ sub-menu }}
+
+        </li>
+
+        {{/ item }}
+
+      </ul>
+
+      {{/ sub-menu }}
+
+    </li>
+
+    {{/ item }}
+
+  </ul>
+  
+</div>
+
+{{/ slinky-menu }}

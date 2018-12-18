@@ -9,6 +9,8 @@
 // }
 //
 
+// $no-mq: false !default;
+
 @mixin mq($query) {
 
   @media ('min-width:' + $query) {
@@ -18,3 +20,21 @@
   }
   
 }
+
+// Make it so REM or PX can be used !!
+
+
+// $no-mq-support: false !default;
+// $no-mq-threshold:60em;
+
+// @mixin sb-media($query) {
+//   @if $no-mq-support{
+//     @if $query < $no-mq-threshold{
+//       @content;
+//     }
+//   } @else {
+//     @media ( 'min-width:' + $query ) {
+//       @content;
+//     }
+//   }
+// }

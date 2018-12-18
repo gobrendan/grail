@@ -1,0 +1,648 @@
+{
+
+  "viewing-page" : "true", 
+
+  "body-class" : "gr-l-page sp-anonymous", 
+
+  "alert-box" : false, 
+
+  "page-header-live-active" : true, 
+
+  "list-box-set" : [
+
+    {
+
+      "class" : "gr-c-list-box-set--stacked", 
+      "item" : [
+
+        {
+
+          "list-box" : [
+
+            {
+
+              "class" : "gr-c-list-box--bordered", 
+              "heading" : "Article Type", 
+              "list" : [
+
+                {
+                  
+                  "class" : "gr-c-list-box__list gr-c-list-box__item", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>News Article</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>CEO Blog</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Friday Spotlight</a>"
+            
+                    }
+            
+                  ]
+            
+                }
+            
+              ]
+
+            }
+
+          ]
+
+        }, 
+
+        {
+
+          "list-box" : [
+
+            {
+
+              "class" : "gr-c-list-box--bordered", 
+              "heading" : "Category", 
+              "list" : [
+
+                {
+                  
+                  "class" : "gr-c-list-box__list gr-c-list-box__item", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Category 1</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Category 2</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Category 3</a>"
+            
+                    }
+            
+                  ]
+            
+                }
+            
+              ]
+
+            }
+
+          ]
+          
+        }, 
+
+        {
+
+          "list-box" : [
+
+            {
+
+              "class" : "gr-c-list-box--bordered", 
+              "heading" : "Date", 
+              "list" : [
+
+                {
+                  
+                  "class" : "gr-c-list-box__list gr-c-list-box__item", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Today</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>This Week</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>This Month</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Last Month</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Older</a>"
+            
+                    }
+            
+                  ]
+            
+                }
+            
+              ]
+
+            }
+
+          ]
+          
+        }, 
+
+        {
+
+          "list-box" : [
+
+            {
+
+              "class" : "gr-c-list-box--bordered", 
+              "heading" : "Topic", 
+              "list" : [
+
+                {
+                  
+                  "class" : "gr-c-list-box__list gr-c-list-box__item", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Topic One</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Topic Two</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Topic Three</a>"
+            
+                    }
+            
+                  ]
+            
+                }
+            
+              ]
+
+            }
+
+          ]
+          
+        }
+
+      ]
+
+    }
+
+  ],
+
+  "article-header-exists" : [
+
+    {
+
+      "article-header" : [
+
+        {
+
+          "class" : "", 
+          "heading" : "News Archive", 
+          "filter-btn" : true, 
+          "search-box" : [
+        
+            {
+        
+              "placeholder" : "Search"
+              
+            }
+            
+          ], 
+          "breadcrumbs" : "", 
+          "select" : ""
+
+        }
+
+      ]
+
+    }
+
+  ], 
+
+  "result-box-set-1-exists" : [
+
+    {
+  
+      "result-box-set" : [
+
+        {
+
+          "item" : [
+
+            {
+
+              "result-box" : [
+
+                {
+            
+                  "class" : "gr-c-result-box--article", 
+                  "img" : [
+            
+                    {
+                
+                      "1x-src" : "../../assets/images/news-thumb@1x.jpg",
+                      "2x-src" : "../../assets/images/news-thumb@2x.jpg",
+                      "class" : "gr-c-result-box__media",
+                      "alt" : ""
+                
+                    }
+                
+                  ], 
+                  "heading" : "News Entry Title", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-result-box__item--date", 
+                      "text" : "9/10/2015"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-result-box__item--spaced", 
+                      "text" : "By: <a href=''>John Doe</a>"
+            
+                    }, 
+            
+                    { 
+                      
+                      "class" : "gr-c-result-box__item--spaced", 
+                      "text" : "Santa Claus is generally depicted as a portly, joyous, white-bearded man—sometimes with spectacles—wearing a red coat with white fur collar and cuffs, white fur-cuffed&hellip;"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "", 
+                      "text" : "<a href=''>Read More</a>"
+            
+                    }
+            
+                  ], 
+                  "tooltip" : ""
+            
+                }
+            
+              ]
+
+            }, 
+
+            {
+
+              "result-box" : [
+
+                {
+            
+                  "class" : "gr-c-result-box--article", 
+                  "img" : [
+            
+                    {
+                
+                      "1x-src" : "../../assets/images/news-thumb@1x.jpg",
+                      "2x-src" : "../../assets/images/news-thumb@2x.jpg",
+                      "class" : "gr-c-result-box__media",
+                      "alt" : ""
+                
+                    }
+                
+                  ], 
+                  "heading" : "News Entry Title", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-result-box__item--date", 
+                      "text" : "9/10/2015"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-result-box__item--spaced", 
+                      "text" : "By: <a href=''>John Doe</a>"
+            
+                    }, 
+            
+                    { 
+                      
+                      "class" : "gr-c-result-box__item--spaced", 
+                      "text" : "Santa Claus is generally depicted as a portly, joyous, white-bearded man—sometimes with spectacles—wearing a red coat with white fur collar and cuffs, white fur-cuffed&hellip;"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "", 
+                      "text" : "<a href=''>Read More</a>"
+            
+                    }
+            
+                  ], 
+                  "tooltip" : ""
+            
+                }
+            
+              ]
+
+            }, 
+
+            {
+
+              "result-box" : [
+
+                {
+            
+                  "class" : "gr-c-result-box--article", 
+                  "img" : [
+            
+                    {
+                
+                      "1x-src" : "../../assets/images/news-thumb@1x.jpg",
+                      "2x-src" : "../../assets/images/news-thumb@2x.jpg",
+                      "class" : "gr-c-result-box__media",
+                      "alt" : ""
+                
+                    }
+                
+                  ], 
+                  "heading" : "News Entry Title", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-result-box__item--date", 
+                      "text" : "9/10/2015"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-result-box__item--spaced", 
+                      "text" : "By: <a href=''>John Doe</a>"
+            
+                    }, 
+            
+                    { 
+                      
+                      "class" : "gr-c-result-box__item--spaced", 
+                      "text" : "Santa Claus is generally depicted as a portly, joyous, white-bearded man—sometimes with spectacles—wearing a red coat with white fur collar and cuffs, white fur-cuffed&hellip;"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "", 
+                      "text" : "<a href=''>Read More</a>"
+            
+                    }
+            
+                  ], 
+                  "tooltip" : ""
+            
+                }
+            
+              ]
+
+            }, 
+
+            {
+
+              "result-box" : [
+
+                {
+            
+                  "class" : "gr-c-result-box--article", 
+                  "img" : [
+            
+                    {
+                
+                      "1x-src" : "../../assets/images/news-thumb@1x.jpg",
+                      "2x-src" : "../../assets/images/news-thumb@2x.jpg",
+                      "class" : "gr-c-result-box__media",
+                      "alt" : ""
+                
+                    }
+                
+                  ], 
+                  "heading" : "News Entry Title", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-result-box__item--date", 
+                      "text" : "9/10/2015"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-result-box__item--spaced", 
+                      "text" : "By: <a href=''>John Doe</a>"
+            
+                    }, 
+            
+                    { 
+                      
+                      "class" : "gr-c-result-box__item--spaced", 
+                      "text" : "Santa Claus is generally depicted as a portly, joyous, white-bearded man—sometimes with spectacles—wearing a red coat with white fur collar and cuffs, white fur-cuffed&hellip;"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "", 
+                      "text" : "<a href=''>Read More</a>"
+            
+                    }
+            
+                  ], 
+                  "tooltip" : ""
+            
+                }
+            
+              ]
+
+            }, 
+
+            {
+
+              "result-box" : [
+
+                {
+            
+                  "class" : "gr-c-result-box--article", 
+                  "img" : [
+            
+                    {
+                
+                      "1x-src" : "../../assets/images/news-thumb@1x.jpg",
+                      "2x-src" : "../../assets/images/news-thumb@2x.jpg",
+                      "class" : "gr-c-result-box__media",
+                      "alt" : ""
+                
+                    }
+                
+                  ], 
+                  "heading" : "News Entry Title", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-result-box__item--date", 
+                      "text" : "9/10/2015"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-result-box__item--spaced", 
+                      "text" : "By: <a href=''>John Doe</a>"
+            
+                    }, 
+            
+                    { 
+                      
+                      "class" : "gr-c-result-box__item--spaced", 
+                      "text" : "Santa Claus is generally depicted as a portly, joyous, white-bearded man—sometimes with spectacles—wearing a red coat with white fur collar and cuffs, white fur-cuffed&hellip;"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "", 
+                      "text" : "<a href=''>Read More</a>"
+            
+                    }
+            
+                  ], 
+                  "tooltip" : ""
+            
+                }
+            
+              ]
+
+            }
+
+          ], 
+          "pagination" : [
+
+            {
+              
+              "class" : "gr-c-result-box-set__pagination", 
+              "item" :[
+                
+                {
+        
+                  "list-item-class" : "gr-c-pagination__item--left-arrow", 
+                  "link-class" : "gr-c-pagination__link--arrow", 
+                  "text" : "<"
+        
+                }, 
+        
+                {
+        
+                  "list-item-class" : "", 
+                  "link-class" : "gr-c-pagination__link--active", 
+                  "text" : "1"
+        
+                }, 
+        
+                {
+        
+                  "list-item-class" : "", 
+                  "link-class" : "", 
+                  "text" : "2"
+        
+                }, 
+        
+                {
+        
+                  "list-item-class" : "", 
+                  "link-class" : "", 
+                  "text" : "3"
+        
+                }, 
+        
+                {
+        
+                  "list-item-class" : "gr-c-pagination__item--right-arrow", 
+                  "link-class" : "gr-c-pagination__link--arrow", 
+                  "text" : ">"
+        
+                }
+        
+              ]
+        
+            }
+        
+          ]
+
+        }
+
+      ]
+      
+    }
+
+  ], 
+  
+  "result-box-set-2-exists" : "", 
+
+  "result-list-block-1-exists" : "", 
+
+  "article-block-exists" : "", 
+
+  "article-block-1-exists" : "", 
+
+  "article-block-2-exists" : "", 
+
+  "article-block-3-exists" : "", 
+
+  "article-block-4-exists" : "",
+
+  "article-block-5-exists" : "",
+
+  "calendar-exists" : "",
+
+  "page-footer-live-active" : true
+
+}

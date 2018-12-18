@@ -1,0 +1,43 @@
+/*
+ * section
+ */
+
+.gr-l-section {
+
+  width: 100%; 
+  margin: 0 0 3rem; 
+
+  &__inner {
+
+    max-width: calc(#{$gr-component-max-width} + 2rem); /* value takes padding into account -- this value should be in a variable */
+    padding: 0 1rem; 
+    margin: auto;
+
+  }
+
+  &:last-child {
+
+    margin: 0;
+
+  }
+
+  &--full {
+
+    max-width: 100%; 
+    background-color: $gr-light-gray;
+
+    .gr-l-section__inner {
+
+      padding: 0;
+
+    }
+
+  }
+
+  &--no-margin {
+
+    margin: auto; 
+
+  }
+
+}

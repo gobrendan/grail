@@ -1,0 +1,50 @@
+/* 
+ * result list block
+ */
+
+.gr-c-result-list-block {
+
+  background: $gr-white;
+  padding: 1rem; 
+  border: 1px solid $gr-light-gray; 
+
+  &__header {
+
+    padding: 0 0 2rem; 
+    border-bottom: 1px solid $gr-light-gray;
+    margin: 0 0 2rem; 
+
+
+  }
+
+  .gr-c-article-header__heading {
+
+    color: $gr-orange;
+
+  }
+
+  .gr-c-result-list {
+
+    //
+
+  }
+
+  &__pagination {
+
+    padding-top: 3rem; 
+
+  }
+
+  @include mq($gr-small-breakpoint) {
+
+    padding: 1rem 2rem;
+
+  }
+
+  @include mq($gr-medium-breakpoint) {
+
+    padding: 3rem;
+
+  }
+
+}

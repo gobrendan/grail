@@ -1,0 +1,21 @@
+{{#tile}}
+<a class="gr-c-tile {{tile-class}}" href="javascript:void(0)">
+	<div class="gr-c-tile__media-wrapper {{tile-media-class}}">
+		{{> atoms-image }}
+		{{#hasTag}}
+		{{> atoms-tag }}
+		{{/hasTag}}
+	</div>
+	<div class="gr-c-tile__content">
+		{{#hasIcon}}
+		<div class="gr-c-tile__icon">{{{tile-icon}}}</div>
+		{{/hasIcon}}
+
+		<h2 class="gr-c-tile__title {{tile-title-class}}">{{tile-title}}</h2>
+		
+		{{#hasSubtitle}}
+		<h3 class="gr-c-tile__subtitle {{tile-subtitle-class}}">{{tile-subtitle}}</h3>
+		{{/hasSubtitle}}
+	</div>
+</a>
+{{/tile}}

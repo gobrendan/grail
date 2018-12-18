@@ -8,7 +8,7 @@
 
         {
 
-          "modifier" : "pagination__link--back",
+          "class" : "pagination__link--back",
           "link" : true,
           "url" : "",
           "text" : "<i class='icon-keyboard-arrow-left pagination__icon'></i><span class='pagination__text'>Back</span>"
@@ -17,7 +17,7 @@
 
         {
 
-          "modifier" : "",
+          "class" : "",
           "link" : true,
           "text" : "1"
 
@@ -25,7 +25,7 @@
 
         {
 
-          "modifier" : "",
+          "class" : "",
           "link" : false,
           "url" : "",
           "text" : "<span class='pagination__hellip'>&hellip;</span>"
@@ -34,7 +34,7 @@
 
         {
 
-          "modifier" : "",
+          "class" : "",
           "link" : true,
           "url" : "",
           "text" : "6"
@@ -43,7 +43,7 @@
 
         {
 
-          "modifier" : "pagination__link--active",
+          "class" : "pagination__link--active",
           "link" : true,
           "url" : "",
           "text" : "7"
@@ -52,7 +52,7 @@
 
         {
 
-          "modifier" : "",
+          "class" : "",
           "link" : true,
           "url" : "",
           "text" : "8"
@@ -61,7 +61,7 @@
 
         {
 
-          "modifier" : "",
+          "class" : "",
           "link" : false,
           "url" : "",
           "text" : "<span class='pagination__hellip'>&hellip;</span>"
@@ -70,7 +70,7 @@
 
         {
 
-          "modifier" : "",
+          "class" : "",
           "link" : true,
           "url" : "",
           "text" : "131"
@@ -79,7 +79,7 @@
 
         {
 
-          "modifier" : "pagination__link--next",
+          "class" : "pagination__link--next",
           "link" : true,
           "url" : "",
           "text" : "<span class='pagination__text'>Next</span><i class='icon-keyboard-arrow-right pagination__icon'></i>"

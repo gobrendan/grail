@@ -4,41 +4,35 @@
 
 :root {
 
-  /* color palette */
+  /* primary palette */
 
-  --color-blue-saphire:     #{$color-blue-saphire}; 
-  --color-french-blue :     #{$color-french-blue}; 
-  --color-pale-aqua :       #{$color-pale-aqua}; 
-  --color-deep-aqua :       #{$color-deep-aqua}; 
-  --color-mikado-yellow :   #{$color-mikado-yellow}; 
-  --color-carmine-pink :    #{$color-carmine-pink}; 
-  --color-burnt-orange :    #{$color-burnt-orange}; 
-  --color-rare-black :      #{$color-rare-black}; 
-  --color-light-gray :      #{$color-light-gray}; 
-  --color-soft-white :      #{$color-soft-white}; 
+  --gr-primary-blue :  #{$gr-primary-blue}; 
+  --gr-dark-blue :     #{$gr-dark-blue}; 
+  --gr-light-orange :  #{$gr-light-orange}; 
+  --gr-orange :        #{$gr-orange}; 
+  --gr-dark-orange :   #{$gr-dark-orange}; 
+  --gr-red :           #{$gr-red}; 
+  --gr-green :         #{$gr-green}; 
+  --gr-light-gray :     #{$gr-light-gray}; 
+  --gr-medium-gray :   #{$gr-medium-gray}; 
+  --gr-dark-gray :     #{$gr-dark-gray}; 
+  --gr-black :         #{$gr-black}; 
+  --gr-white :         #{$gr-white}; 
 
-  /* main */
+  --gr-alert-major-color : #{$gr-alert-primary-color}; 
+  --gr-alert-minor-color : #{$gr-alert-minor-color}; 
 
-  --site-background-color : white; 
-  --site-text-color :       black; 
-  --label-text-color :      black; 
+  /* sizes */
 
-  /* link */
-
-  --link-color :            var(--color-blue-saphire); 
-  --link-color-hover :      var(--color-french-blue); 
-
-  /* button */
-
-  --btn-text-color :        var(--color-soft-white); 
-  --btn-bg-color :          var(--color-blue-saphire); 
+  --gr-component-min-width :    #{$gr-component-min-width}; 
+  --gr-component-max-width :    #{$gr-component-max-width}; 
 
 }
 
 html.gr-t-dark {
 
-  --site-background-color : #222; 
-  --site-text-color :       white; 
-  --label-text-color :      white; 
+  // --site-background : #222; 
+  // --site-text :       white; 
+  // --label-text :      white; 
 
 }

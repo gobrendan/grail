@@ -1,0 +1,55 @@
+/*
+ * list box set
+ */
+
+.gr-c-list-box-set {
+
+  //
+
+  &__inner {
+
+    display: flex;
+    // justify-content: space-between;
+    margin: auto;
+
+  }
+
+  &--stacked {
+
+    //
+    
+    .gr-c-list-box-set__inner {
+      
+      flex-direction: column; 
+
+    }
+
+    .gr-c-list-box {
+
+      margin: 0 0 2rem; 
+
+      &:last-child {
+
+        margin: 0;
+
+      }
+
+    }
+
+  }
+
+  &--on-dark {
+
+    @include custom-property(background-color, --gr-dark-blue, $gr-dark-blue);
+
+    .gr-c-list-box__heading, 
+    .gr-c-list__link {
+
+      @include custom-property(color, --gr-white, $gr-white);
+
+    }
+
+
+  }
+
+}

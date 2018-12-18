@@ -2,72 +2,32 @@
 // colors
 //
 
-// color palette
+// primary palette
 
-$color-blue-saphire :         #1A546B; 
-$color-french-blue :          #0071BC; 
-$color-pale-aqua :            #BED9F6; 
-$color-deep-aqua :            #92c6fe; 
-$color-mikado-yellow :        #FECD0D; 
-$color-carmine-pink :         #F13741; 
-$color-burnt-orange :         #ff5b06; 
-$color-rare-black :           #343434; 
-$color-light-gray :           #D0D4E0; 
-$color-soft-white :           #fafafa; 
+$gr-primary-blue :  #028abe;
+$gr-dark-blue :     #182962; 
+$gr-light-orange :  #ffb180;
+$gr-orange :        #f47c2e;
+$gr-dark-orange :   #ff6400; 
+$gr-red :           #ce0000; 
+$gr-green :         #98cb4e; 
+$gr-light-gray :    #ebeced; 
+$gr-medium-gray :   #ccc; 
+$gr-dark-gray :     #979797;
+$gr-darkest-gray :  #333; 
+$gr-black :         #000; 
+$gr-white :         #fff; 
 
-// button
+// buttons
 
-$btn-text-color :          $color-soft-white; 
-$btn-bg-color :            $color-blue-saphire; 
-$btn-hover-text-color :    $color-soft-white; 
-$btn-hover-bg-color :      $color-french-blue; 
+$gr-button-bg-color :                 $gr-primary-blue;
+$gr-button-text-color :               $gr-white;
+$gr-button-bg-color-hover :           $gr-dark-blue;
+$gr-button-text-color-hover :         $gr-white;
+$gr-button-disabled-text-color :      $gr-medium-gray;
+$gr-button-outline-color :            $gr-medium-gray;
 
-$btn-disabled-text-color : rgb(230, 236, 238); // no RGBA/opacity so button display is consistent when overlaying various colors/images
-$btn-disabled-bg-color :   rgb(87, 127, 144);  // no RGBA/opacity so button display is consistent when overlaying various colors/images
+// alerts 
 
-// button light 
-
-$btn-light-text-color :          $color-blue-saphire; 
-$btn-light-bg-color :            $color-pale-aqua; 
-$btn-light-hover-text-color :    $color-blue-saphire; 
-$btn-light-hover-bg-color :      $color-deep-aqua; 
-
-$btn-light-disabled-text-color : rgba(87, 127, 144, .8); 
-$btn-light-disabled-bg-color :   $color-pale-aqua; 
-
-// button secondary
-
-$btn-secondary-text-color :          $color-soft-white; 
-$btn-secondary-bg-color :            $color-carmine-pink; 
-$btn-secondary-hover-text-color :    $color-soft-white; 
-$btn-secondary-hover-bg-color :      $color-burnt-orange; 
-
-$btn-secondary-disabled-text-color : rgb(230, 236, 238); 
-$btn-secondary-disabled-bg-color :   #f86f72; 
-
-// button secondary light
-
-$btn-secondary-light-text-color :          #bc0711; 
-$btn-secondary-light-bg-color :            #ffa8aa; 
-$btn-secondary-light-hover-text-color :    #bc0711; 
-$btn-secondary-light-hover-bg-color :      #f3999b; 
-
-$btn-secondary-light-disabled-text-color : rgb(230, 236, 238);
-$btn-secondary-light-disabled-bg-color :   #f3999b; 
-
-// button general
-
-$btn-focus-outline-color : $color-light-gray; // used for all buttons styles
-
-
-
-
-$link-color :               $color-blue-saphire; 
-$link-color-hover :         $color-french-blue; 
-
-
-
-
-
-
-
+$gr-alert-primary-color : $gr-red; 
+$gr-alert-minor-color :   $gr-orange

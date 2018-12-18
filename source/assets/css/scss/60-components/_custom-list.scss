@@ -5,17 +5,17 @@
 .gr-c-custom-list {
 
   list-style: none;
-  counter-reset: my-awesome-counter;
+  counter-reset: list-counter;
   padding-left: 14px; /* magic number -- lines up numbered bullets with default <ol> bullets */
 
   li {
 
-    counter-increment: my-awesome-counter; 
+    counter-increment: list-counter; 
 
     &:before {
 
-      content: counter(my-awesome-counter) ". ";
-      color: red;
+      @include custom-property(color, --gr-orange, $gr-orange);
+      content: counter(list-counter) ". ";
       font-weight: bold; 
 
     }

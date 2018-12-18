@@ -1,0 +1,292 @@
+/* 
+ * spotlight
+ */
+
+ .gr-c-spotlight {
+
+  background-color: $gr-medium-gray;
+  position: relative;
+  overflow: hidden; 
+  width: 100%; /* note that we might want to set a max-width that correlates to image width */
+
+  &__content {
+
+    display: flex;
+    flex-direction: column;
+    background-color: transparentize($gr-light-gray, 0.1); /* this value should be in a variable, perhaps an RGBA value */
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+
+  }
+
+  &__header {
+
+    display: flex; 
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin: 0 0 .5rem;
+
+  }
+
+  &__category {
+
+    font-size: $gr-font-size-epsilon; 
+    color: $gr-orange;
+    margin: 0 1rem 0 0;
+
+  }
+
+  &__label {
+
+    font-size: $gr-font-size-eta;
+    color: $gr-primary-blue;
+    text-transform: uppercase;
+
+  }
+
+  &__icon {
+
+    font-size: 1.5rem; /* magic number -- matches comp */
+    color: $gr-dark-gray;
+    vertical-align: text-bottom;
+
+  }
+
+  &__heading {
+
+    font-size: $gr-font-size-gamma; 
+    line-height: 1.2; /* should heading line-heights be managed in _headings.scss? */
+    margin: 0 0 .5rem;
+
+  }
+
+  &__heading-link {
+
+    color: $gr-dark-blue;
+
+  }
+
+  &__details {
+
+    font-size: $gr-font-size-eta;
+    color: $gr-primary-blue; 
+    margin: 0 0 1rem;
+
+  }
+
+  &__btn {
+
+    font-size: $gr-font-size-zeta; 
+    padding: 0 1.2rem; 
+    align-self: flex-end;
+
+  }
+
+  &__media-wrapper {
+
+    position: absolute;
+    top: 0;
+
+  }
+
+  &__media {
+
+    /* on smaller screens, without adjusting max-width and width, image has space below it -- we might want to change dimensions for image */
+
+    // max-width: none;
+    // width: 145%; /* magic number -- see previous comment */
+
+  }
+
+  &--overlay {
+
+    background-color: transparent;
+    padding-right: 0;
+    overflow: visible;
+    display: flex;
+    flex-direction: row-reverse;
+
+    .gr-c-spotlight__content {
+
+      position: relative;
+      padding: 1rem;
+      
+    }
+
+    .gr-c-spotlight__media-wrapper {
+
+      z-index: 1;
+      height: auto;
+      padding: 0;
+      position: relative;
+      display: flex;
+      padding: 2rem 0;
+      flex: 0 0 34%;
+
+      &:after {
+
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 50%;
+        top: 0;
+        bottom: 0;
+        background-color: $gr-light-gray;
+        z-index: -1;
+
+      }
+
+    }
+
+    .gr-c-spotlight__media {
+
+      max-width: 100%; /* override default component */
+      width: 100%; /* override default component */
+      position: relative;
+      align-self: center;
+
+    }
+
+    .gr-c-spotlight__btn {
+      
+      position: relative; 
+      right: auto;
+      bottom: auto;
+      align-self: flex-end;
+      margin-top: auto;
+      
+    }
+
+  }
+
+  @include mq(26em) {
+
+    &__content {
+
+      width: 80%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 1rem 1rem 4rem 1rem;
+
+    }
+
+    &__media-wrapper {
+
+      position: relative;
+
+    }
+
+    &__media {
+
+      max-width: 100%;
+      width: 100%;
+
+    }
+
+    &__btn {
+
+      position: absolute;
+      right: -15%;
+      bottom: 1rem;
+      align-self: auto;
+
+    }
+
+  }
+
+  @include mq($gr-small-breakpoint) {
+
+    padding-right: 10%; /* provides partial view of image (__media-wrapper element) */
+
+    &__content {
+
+      width: 100%;
+      padding: 2rem;
+      position: relative;
+  
+    }
+  
+    &__category {
+  
+      font-size: $gr-font-size-beta; 
+      margin: 0 2rem 0 0;
+  
+    }
+  
+    &__icon {
+  
+      font-size: 1.5rem; /* magic number -- matches comp */
+  
+    }
+  
+    &__heading {
+  
+      font-size: $gr-font-size-mega; 
+      line-height: 1.2; /* should heading line-heights be managed in _headings.scss? */
+      margin: 0 0 .5rem;
+  
+    }
+
+    &__label {
+  
+      font-size: $gr-font-size-epsilon;
+  
+    }
+  
+    &__details {
+  
+      font-size: $gr-font-size-delta;
+  
+    }
+  
+    &__btn {
+      
+      font-size: $gr-font-size-delta;
+      position: relative; 
+      right: auto;
+      bottom: auto; 
+      align-self: flex-end;
+      padding: 0 1.677rem; 
+  
+    }
+  
+    &__media-wrapper {
+  
+      height: 0;
+      padding-top: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+  
+    }
+  
+    &__media {
+  
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+  
+    }
+
+    &--overlay {
+
+      padding-right: 0;
+
+      .gr-c-spotlight__media-wrapper {
+
+        flex: 0 0 234px;
+        
+      }
+
+    }
+  
+  }
+
+}

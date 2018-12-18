@@ -1,6 +1,0 @@
-<DeliveryRateStatistics xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/NCDOT.WebApps.DOT.Dashboard.Objects">
-    <DeliveryRate>86</DeliveryRate>
-    <EnvironmentalScore>8.69</EnvironmentalScore>
-    <NonSTIPProjectDevelopmentSuccessRate>90</NonSTIPProjectDevelopmentSuccessRate>
-    <STIPProjectDevelopmentSuccessRate>81</STIPProjectDevelopmentSuccessRate>
-</DeliveryRateStatistics>

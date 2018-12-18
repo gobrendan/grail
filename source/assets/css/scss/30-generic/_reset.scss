@@ -1,5 +1,5 @@
 /*
- * base / reset
+ * reset
  */
 
 html {
@@ -13,6 +13,12 @@ html {
 *:after {
 
   box-sizing: inherit;
+
+}
+
+:focus:not(:focus-visible) { // https://twitter.com/leaverou/status/1045768279753666562?s=11
+  
+  outline: none 
 
 }
 
@@ -55,7 +61,7 @@ nav,
 section,
 figure {
 
-	margin: 0;
-	padding: 0;
+  padding: 0;
+  margin: 0;
 
 }

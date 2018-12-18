@@ -1,0 +1,4462 @@
+/*
+ * custom properties
+ */
+:root {
+  /* primary palette */
+  --gr-primary-blue: #028abe;
+  --gr-dark-blue: #182962;
+  --gr-light-orange: #ffb180;
+  --gr-orange: #f47c2e;
+  --gr-dark-orange: #ff6400;
+  --gr-red: #ce0000;
+  --gr-green: #98cb4e;
+  --gr-light-gray: #ebeced;
+  --gr-medium-gray: #ccc;
+  --gr-dark-gray: #979797;
+  --gr-black: #000;
+  --gr-white: #fff;
+  --gr-alert-major-color: #ce0000;
+  --gr-alert-minor-color: #f47c2e;
+  /* sizes */
+  --gr-component-min-width: 1440px;
+  --gr-component-max-width: 1440px;
+}
+
+/*
+ * fonts
+ */
+@font-face {
+  font-family: "gr-icon-set";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../assets/fonts/gr-icon-set.eot");
+  src: url("../../assets/fonts/gr-icon-set.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/gr-icon-set.ttf") format("truetype"), url("../../assets/fonts/gr-icon-set.woff") format("woff"), url("../../assets/fonts/gr-icon-set.svg#svggr-icon-set") format("svg");
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+}
+/*
+ * reset
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header,
+nav,
+section,
+picture,
+iframe {
+  display: block;
+}
+
+html,
+body,
+div,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+li,
+form,
+legend,
+label,
+table,
+header,
+nav,
+section {
+  padding: 0;
+  margin: 0;
+}
+
+/*
+ * fieldset
+ */
+fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0 0 .5rem;
+}
+fieldset:last-child {
+  margin: 0;
+}
+
+/*
+ * hr
+ */
+hr {
+  background-color: #ccc;
+  background-color: var(--gr-medium-gray);
+  border: 0;
+  height: 1px;
+  margin: 0 auto 1rem;
+  max-width: calc(1440px - 2rem);
+  /* this value should be in a variable */
+}
+
+[class^="gr-i-"], [class*=" gr-i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'gr-icon-set' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gr-i-grail:before {
+  content: "\e903";
+}
+
+.gr-i-facebook:before {
+  content: "\e601";
+}
+
+.gr-i-twitter:before {
+  content: "\e603";
+}
+
+.gr-i-instagram:before {
+  content: "\e90d";
+}
+
+.gr-i-google-plus:before {
+  content: "\e913";
+}
+
+.gr-i-youtube:before {
+  content: "\e954";
+}
+
+.gr-i-linkedin:before {
+  content: "\e916";
+}
+
+.gr-i-glassdoor:before {
+  content: "\e917";
+}
+
+.gr-i-news:before {
+  content: "\e932";
+}
+
+.gr-i-online:before {
+  content: "\e933";
+}
+
+.gr-i-arrow-up:before {
+  content: "\e900";
+}
+
+.gr-i-arrow-down:before {
+  content: "\e901";
+}
+
+.gr-i-arrow-left:before {
+  content: "\e909";
+}
+
+.gr-i-arrow-right:before {
+  content: "\e90a";
+}
+
+.gr-i-check:before {
+  content: "\e902";
+}
+
+.gr-i-search:before {
+  content: "\e60b";
+}
+
+.gr-i-launch:before {
+  content: "\e895";
+}
+
+.gr-i-align-bottom:before {
+  content: "\e904";
+}
+
+.gr-i-align-top:before {
+  content: "\e905";
+}
+
+.gr-i-align-center:before {
+  content: "\e906";
+}
+
+.gr-i-download:before {
+  content: "\e94d";
+}
+
+.gr-i-arrow-backward:before {
+  content: "\e90e";
+}
+
+.gr-i-arrow-forward:before {
+  content: "\e90f";
+}
+
+.gr-i-hamburger:before {
+  content: "\e907";
+}
+
+.gr-i-close:before {
+  content: "\e908";
+}
+
+.gr-i-hellip:before {
+  content: "\e90b";
+}
+
+.gr-i-play-circle:before {
+  content: "\e910";
+}
+
+.gr-i-loop:before {
+  content: "\e918";
+}
+
+.gr-i-loop-alt:before {
+  content: "\e912";
+}
+
+.gr-i-mail:before {
+  content: "\e91e";
+}
+
+.gr-i-list:before {
+  content: "\e91f";
+}
+
+.gr-i-module:before {
+  content: "\e920";
+}
+
+.gr-i-arrow-rounded:before {
+  content: "\e924";
+}
+
+.gr-i-label:before {
+  content: "\e950";
+}
+
+.gr-i-remove:before {
+  content: "\e951";
+}
+
+.gr-i-add:before {
+  content: "\e914";
+}
+
+.gr-i-add-slim:before {
+  content: "\e952";
+}
+
+.gr-i-event:before {
+  content: "\e953";
+}
+
+.gr-i-info:before {
+  content: "\e922";
+}
+
+.gr-i-time:before {
+  content: "\e928";
+}
+
+.gr-i-circle:before {
+  content: "\e925";
+}
+
+.gr-i-circle-filled:before {
+  content: "\e926";
+}
+
+.gr-i-pin:before {
+  content: "\e935";
+}
+
+.gr-i-checkbox:before {
+  content: "\e911";
+}
+
+.gr-i-checked:before {
+  content: "\e936";
+}
+
+.gr-i-close-box:before {
+  content: "\e948";
+}
+
+.gr-i-create:before {
+  content: "\e955";
+}
+
+.gr-i-account:before {
+  content: "\e957";
+}
+
+.gr-i-document:before {
+  content: "\e958";
+}
+
+.gr-i-photo:before {
+  content: "\e921";
+}
+
+.gr-i-cancel:before {
+  content: "\e94c";
+}
+
+.gr-i-error:before {
+  content: "\e90c";
+}
+
+.gr-i-comment:before {
+  content: "\e91c";
+}
+
+.gr-i-pie:before {
+  content: "\e934";
+}
+
+.gr-i-card:before {
+  content: "\e91a";
+}
+
+.gr-i-check-circle:before {
+  content: "\e949";
+}
+
+.gr-i-home:before {
+  content: "\e94a";
+}
+
+.gr-i-location:before {
+  content: "\e94f";
+}
+
+.gr-i-cog:before {
+  content: "\e915";
+}
+
+.gr-i-grid:before {
+  content: "\e919";
+}
+
+.gr-i-grid-off:before {
+  content: "\e91b";
+}
+
+.gr-i-file-code:before {
+  content: "\e91d";
+}
+
+.gr-i-file-excel:before {
+  content: "\e923";
+}
+
+.gr-i-file-word:before {
+  content: "\e927";
+}
+
+.gr-i-file-pdf:before {
+  content: "\e929";
+}
+
+.gr-i-file-powerpoint:before {
+  content: "\e92a";
+}
+
+/*
+ * label
+ */
+label {
+  display: table;
+  /* prevents element from spanning width of available space */
+  color: var(--label-text-color);
+  font-weight: normal;
+  margin: 0 0 .5rem;
+}
+
+/*
+ * list
+ */
+ul,
+ol {
+  padding: 0 0 0 2rem;
+}
+
+/* NOTE: target li elements whose parent ul/ol elements don't have a class attribute -- targeting this way prevents specificity issues */
+/*
+ * media
+ */
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+a img {
+  border: 0;
+}
+
+/*
+ * select
+ */
+/*
+ * table
+ */
+table {
+  width: 100%;
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 1rem;
+  /* bottom margin should be in variable */
+}
+
+caption {
+  font: italic normal 400 100%/1.5 "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+
+th {
+  color: #000;
+  color: var(--gr-black);
+  text-align: left;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+th,
+td {
+  padding: .75rem 1rem;
+  border-width: 0 0 1px;
+  border-style: solid;
+  text-align: left;
+}
+
+th,
+thead td {
+  border-color: #000;
+  border-color: var(--gr-black);
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+td {
+  border-color: #ccc;
+  border-color: var(--gr-medium-gray);
+  vertical-align: top;
+}
+
+/* zebgr-striped rows */
+/*
+ * text
+ */
+a {
+  color: #028abe;
+  color: var(--gr-primary-blue);
+  transition: all 0.1s ease-in-out;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin: 0 0 1.3rem;
+}
+
+blockquote {
+  border-left-color: #ccc;
+  border-left-color: var(--gr-medium-gray);
+  border-left-style: solid;
+  border-left-width: 2px;
+  margin: 1em 0 1em 2em;
+  padding: 0 0 0 1em;
+}
+
+small {
+  font-size: 12px;
+}
+
+/* prevent 'sup' and 'sub' elements from affecting line-height 
+   https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height */
+sup,
+sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+
+sub {
+  top: 0.4em;
+}
+
+abbr {
+  text-decoration: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+mark,
+cite,
+kbd,
+code,
+samp,
+var,
+ins,
+dfn {
+  background-color: #ccc;
+  background-color: var(--gr-medium-gray);
+  padding: .25em .5em;
+}
+
+ins {
+  text-decoration: none;
+}
+
+pre {
+  margin: 0;
+}
+
+/*
+ * text input
+ */
+input[type=text],
+input[type=search],
+input[type=url],
+input[type=number],
+input[type=date],
+input[type=email],
+input[type=password],
+textarea,
+.gr-c-input-text {
+  border-color: #ebeced;
+  border-color: var(--gr-light-gray);
+  border-style: solid;
+  border-width: 1px;
+  /* this value should be in variable -- same number used for <select>, checkbox and radio */
+  font: normal normal 400 100%/1.5 "Open Sans", sans-serif;
+  height: 2.875rem;
+  width: 100%;
+  padding: .6rem .75rem;
+  outline: none;
+  /* remove/reset platform-specific styling, like Webkit on mobile */
+  border-radius: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* remove IE's "clear" button */
+}
+input[type=text]:hover,
+input[type=search]:hover,
+input[type=url]:hover,
+input[type=number]:hover,
+input[type=date]:hover,
+input[type=email]:hover,
+input[type=password]:hover,
+textarea:hover,
+.gr-c-input-text:hover {
+  border-color: #979797;
+  border-color: var(--gr-dark-gray);
+}
+input[type=text]:focus,
+input[type=search]:focus,
+input[type=url]:focus,
+input[type=number]:focus,
+input[type=date]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+textarea:focus,
+.gr-c-input-text:focus {
+  border-color: #028abe;
+  border-color: var(--gr-primary-blue);
+}
+input[type=text]::-ms-clear,
+input[type=search]::-ms-clear,
+input[type=url]::-ms-clear,
+input[type=number]::-ms-clear,
+input[type=date]::-ms-clear,
+input[type=email]::-ms-clear,
+input[type=password]::-ms-clear,
+textarea::-ms-clear,
+.gr-c-input-text::-ms-clear {
+  display: none;
+}
+
+textarea,
+textarea.gr-c-input-text {
+  display: block;
+  /* removes unnecessary space below element */
+  min-height: 100px;
+  line-height: 1.4;
+  overflow: auto;
+  /* without this, scrollbar placeholder is visible in IE 11- */
+  resize: vertical;
+}
+
+input[type=file] {
+  width: 100%;
+  /* NOTE: this input type had an explicit width by default; using "100%" allows it to to be squishy */
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* NOTE: Hide Webkit-added pseudo */
+/*       http://geek.michaelgrace.org/2011/06/webkit-seargr-input-styling/ */
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+/* target IE 10 and 11 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* in IE 11, without setting the line-height, the text seems to be closer to the bottom edge of the text input */
+  input[type=text],
+  input[type=search],
+  input[type=url],
+  input[type=number],
+  input[type=date],
+  input[type=email],
+  input[type=password],
+  textarea,
+  .gr-c-input-text {
+    line-height: 1;
+  }
+}
+/* target firefox */
+::-moz-placeholder {
+  /* firefox decreases placeholder opacity by default, so reset back to 1 */
+  opacity: 1;
+}
+
+/*
+ * main
+ */
+html {
+  font-size: 1rem;
+  background-color: #fff;
+  /* temporary "sticky" footer solution -- keep until non-header/non-footer components are prototyped */
+  height: 100%;
+}
+
+body {
+  color: #000;
+  color: var(--gr-black);
+  font: normal normal 400 100%/1.5 "Open Sans", sans-serif;
+  min-height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  /* NOTE: text-size-adjust (non-standard) -- https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust */
+  text-size-adjust: 100%;
+  /* NOTE: font smoothing (non-standard) -- https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth */
+  -webkit-font-smoothing: antialiased;
+  /* hide horizontal overflow -- prevents mega menu from adding horizontal scrollbar */
+  overflow-x: hidden;
+}
+
+.gr-l-page {
+  /* temporary min-width -- use until we get into responsiveness */
+}
+
+.gr-l-main {
+  padding: 2rem 0 4rem;
+  position: relative;
+  /* "relative" is necesssary here -- provides constraint for "__content" element's pseudo element  */
+  z-index: 1;
+  /* this element should be lower than the "gr-l-main" element */
+  -ms-flex: 1;
+      flex: 1;
+  /* helps keep footer "sticky" */
+  /* browser fallbacks */
+  /* In IE 11, the solution for the "sticky footer" is causing the footer to overlap other content. Reset "flex" property on ".gr-l-main" element to resolve. Footer will not be sticky in IE 11. */
+}
+.gr-l-main__inner {
+  margin: auto;
+  display: -ms-flexbox;
+  display: flex;
+}
+.gr-l-main__inner--stacked {
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.gr-l-main__inner--split {
+  -ms-flex-direction: row;
+      flex-direction: row;
+  max-width: calc(1440px + 2rem);
+  /* value takes padding into account -- this value should be in a variable */
+  padding: 0 1rem;
+  margin: auto;
+}
+.gr-l-main__inner--split .gr-l-section {
+  margin: 0 0 2rem;
+}
+.gr-l-main__inner--split .gr-l-section__inner {
+  padding: 0;
+}
+.gr-l-main__side {
+  position: absolute;
+  z-index: 1;
+  left: -100%;
+  transition: all 300ms ease-out;
+  /* speed value should be in variable -- shared with Slinky nav */
+  width: calc(100% - 2rem);
+}
+.gr-l-main__content {
+  width: 100%;
+}
+.gr-l-main__content-inner {
+  transition: all 300ms ease-out;
+  /* speed value should be in variable -- shared with Slinky nav */
+  transform-origin: top center;
+}
+.gr-l-main--w-bg {
+  background: #ebeced;
+}
+@media (min-width: 48em) {
+  .gr-l-main__side {
+    position: relative;
+    transition: none;
+    left: auto;
+    -ms-flex: 0 0 26%;
+        flex: 0 0 26%;
+    margin: 0 2rem 0 0;
+  }
+  .gr-l-main__side + .gr-l-main__content:after {
+    display: none;
+  }
+  .gr-l-main__content {
+    transition: none;
+  }
+  .gr-l-main__content:after {
+    display: none;
+  }
+  .gr-l-main__content-inner {
+    transform: none;
+  }
+}
+
+/*
+ * section
+ */
+.gr-l-section {
+  width: 100%;
+  margin: 0 0 3rem;
+}
+.gr-l-section__inner {
+  max-width: calc(1440px + 2rem);
+  /* value takes padding into account -- this value should be in a variable */
+  padding: 0 1rem;
+  margin: auto;
+}
+.gr-l-section:last-child {
+  margin: 0;
+}
+.gr-l-section--full {
+  max-width: 100%;
+  background-color: #ebeced;
+}
+.gr-l-section--full .gr-l-section__inner {
+  padding: 0;
+}
+
+/*
+ * wrapper
+ */
+.gr-l-wrapper {
+  /* browser fallbacks */
+  /* In IE 11, the split items (60/40 and 40/60 children) are wrapping unnecessarily. Rather than padding the childrem, pad the children of children. Also, override flex-wrap value. */
+}
+.gr-l-wrapper__item {
+  width: 100%;
+}
+.gr-l-wrapper--60-40 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.gr-l-wrapper--60-40 .gr-l-wrapper__item {
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+}
+.gr-l-wrapper--60-40 .gr-l-wrapper__item:first-child {
+  margin: 0 0 3rem;
+}
+@media (min-width: 80em) {
+  .gr-l-wrapper--60-40 .gr-l-wrapper__item:first-child {
+    width: 60%;
+    /* this seems to resolve flexbox issue with "gr-c-carousel" component */
+    -ms-flex: 0 0 60%;
+        flex: 0 0 60%;
+    padding-right: 3rem;
+    /* this value should be in a variable */
+    margin: 0;
+  }
+  .gr-l-wrapper--60-40 .gr-l-wrapper__item:last-child {
+    width: 40%;
+    -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+  }
+}
+.gr-l-wrapper--40-60 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.gr-l-wrapper--40-60 .gr-l-wrapper__item {
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+}
+.gr-l-wrapper--40-60 .gr-l-wrapper__item:first-child {
+  margin: 0 0 3rem;
+}
+@media (min-width: 80em) {
+  .gr-l-wrapper--40-60 .gr-l-wrapper__item:first-child {
+    width: 40%;
+    /* this seems to resolve flexbox issue with "gr-c-carousel" component */
+    -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+    padding-right: 3rem;
+    /* this value should be in a variable */
+    margin: 0;
+  }
+  .gr-l-wrapper--40-60 .gr-l-wrapper__item:last-child {
+    width: 50%;
+    -ms-flex: 0 0 60%;
+        flex: 0 0 60%;
+  }
+}
+
+/*
+ * grid
+ */
+.gr-l-grid {
+  display: grid;
+}
+
+/* addition */
+
+/* end addition */
+
+select[data-dkcacheid] {
+  display: none;
+}
+
+/* addition -- "dark" modifier */
+/* end addition -- "dark" modifier */
+/*
+ * Table styles
+ */
+
+/* commented-out */
+/*
+table.dataTable thead .sorting_asc_disabled {
+  background-image: url("../images/sort_asc_disabled.png");
+}
+table.dataTable thead .sorting_desc_disabled {
+  background-image: url("../images/sort_desc_disabled.png");
+}
+*/
+
+/*
+ * Control feature layout
+ */
+/* Slider */
+
+/* Slider */
+/* Icons */
+@font-face {}
+/* arrows */
+
+/* dot pagination */
+
+/* slick.scss overrides */
+
+/* carousel types */
+.gr-c-carousel .gr-c-card--more {
+  position: absolute;
+  right: .5rem;
+  left: .5rem;
+  width: auto;
+  bottom: 0;
+  top: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+/* responsive */
+.slinky-menu {
+  overflow: hidden;
+  transform: translateZ(0);
+}
+.slinky-menu > ul {
+  left: 0;
+  position: relative;
+  transform: translateZ(0);
+}
+.slinky-menu ul,
+.slinky-menu li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.slinky-menu ul {
+  width: 100%;
+}
+.slinky-menu a {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+}
+.slinky-menu a span {
+  -ms-flex: 1;
+      flex: 1;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #fff;
+}
+.slinky-menu li ul {
+  display: none;
+  left: 100%;
+  position: absolute;
+  top: 0;
+}
+.slinky-menu .header {
+  display: -ms-flexbox;
+  display: flex;
+}
+.slinky-menu .header .title {
+  -ms-flex: 1;
+      flex: 1;
+  line-height: 1.4;
+  margin: 0;
+  -ms-flex-order: 1;
+      order: 1;
+  padding: 1rem 0;
+  text-transform: uppercase;
+}
+
+/*!
+ * FullCalendar v3.9.0
+ * Docs & License: https://fullcalendar.io/
+ * (c) 2018 Adam Shaw
+ */
+
+ a[data-goto] {
+  cursor: pointer;
+}
+
+a[data-goto]:hover {
+  text-decoration: underline;
+}
+
+/*
+ * fullcalendar theme -- mostly overrides of fullcalendar defaults
+ */
+.gr-c-cal {
+  /* prev and next buttons */
+  /* wrappers */
+  /* the negative top margin, and the padding on the "h2 and .fc-right" elements allow proper spacing between elements when they wrap */
+  /* improve spacing when elements stack */
+  /* hide empty elements -- this helps flexbox declarations for parent element (.fc-toolbar.fc-header-toolbar) */
+}
+
+/* 
+ * toggle 
+ */
+.gr-c-toggle {
+  font-size: 1.5rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.gr-c-toggle__link {
+  display: -ms-flexbox;
+  display: flex;
+  /* display:flex helps vertically align the icon pseudo elements */
+  text-decoration: none;
+  padding: 0 1rem 0 0;
+  border-right: 1px solid #ccc;
+  margin: 0 1rem 0 0;
+  color: #182962;
+}
+.gr-c-toggle__link:last-child {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+.gr-c-toggle__link--active, .gr-c-toggle__link:hover {
+  color: #028abe;
+  text-decoration: none;
+}
+
+/*
+ * heading
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* reset default declarations and use modifiers for styling */
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.gr-c-heading {
+  margin: 0 0 0.5em;
+}
+.gr-c-heading--alpha, .gr-c-heading--beta, .gr-c-heading--gamma, .gr-c-heading--delta {
+  line-height: 1.2;
+}
+.gr-c-heading--alpha {
+  color: #182962;
+  color: var(--gr-dark-blue);
+  font-size: 28px;
+}
+.gr-c-heading--beta {
+  font-size: 26px;
+}
+.gr-c-heading--gamma {
+  font-size: 20px;
+}
+.gr-c-heading--delta {
+  font-size: 18px;
+}
+.gr-c-heading--epsilon {
+  font-size: 16px;
+}
+.gr-c-heading--zeta {
+  font-size: 14px;
+}
+
+/*
+ * logo
+ */
+.gr-c-logo {
+  background-color: #182962;
+  background-color: var(--gr-dark-blue);
+  display: block;
+  width: 261px;
+  height: 81px;
+  background-size: cover;
+  background-image: url(../../assets/images/the-hub-logo@2x.png);
+  background-repeat: no-repeat;
+  position: relative;
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/*
+ * button
+ */
+.gr-c-btn {
+  display: inline-block;
+  font-size: 18px;
+  background-color: #028abe;
+  color: #fff;
+  line-height: 42px;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  /* useful for <button> and <input type='submit'> elements */
+  -webkit-appearance: none;
+  /* Safari fix -- the 'button' element has additional user-agent declarations */
+  -ms-flex-align: center;
+      align-items: center;
+  /* for some reason, Webkit adds Flex-related declaration */
+  outline: none;
+  padding: 0 1.677rem;
+}
+.gr-c-btn::-moz-selection {
+  background-color: transparent;
+}
+.gr-c-btn::selection {
+  background-color: transparent;
+}
+.gr-c-btn:hover {
+  background-color: #182962;
+  color: #fff;
+  text-decoration: none;
+}
+.gr-c-btn:focus, .gr-c-btn:focus:hover, .gr-c-btn:active, .gr-c-btn:active:hover {
+  background-color: #182962;
+  box-shadow: 0 0 0 0.2rem #ccc;
+  /* thickness value should be in a variable */
+}
+.gr-c-btn__icon {
+  font-size: 1.25rem;
+  vertical-align: text-top;
+}
+.gr-c-btn--big {
+  font-size: 18px;
+  background-color: #028abe;
+  color: #fff;
+  line-height: 1.25;
+  padding: 1rem 4rem;
+}
+.gr-c-btn--trans {
+  background-color: #fff;
+  color: #028abe;
+  border: 1px solid #028abe;
+}
+.gr-c-btn--trans:hover {
+  background-color: #ebeced;
+  color: #028abe;
+}
+.gr-c-btn--trans:focus, .gr-c-btn--trans:focus:hover, .gr-c-btn--trans:active, .gr-c-btn--trans:active:hover {
+  background-color: #ebeced;
+  color: #028abe;
+}
+.gr-c-btn:disabled, .gr-c-btn:disabled:hover, .gr-c-btn:disabled:hover:focus, .gr-c-btn:disabled:active, .gr-c-btn:disabled:focus, .gr-c-btn--disabled, .gr-c-btn--disabled:hover, .gr-c-btn--disabled:hover:focus, .gr-c-btn--disabled:active, .gr-c-btn--disabled:focus {
+  background-color: #028abe;
+  /* should match default background color */
+  box-shadow: none;
+  opacity: .65;
+  /* this value should be in a variable */
+  cursor: default;
+}
+.gr-c-btn:disabled.gr-c-btn--trans, .gr-c-btn:disabled:hover.gr-c-btn--trans, .gr-c-btn:disabled:hover:focus.gr-c-btn--trans, .gr-c-btn:disabled:active.gr-c-btn--trans, .gr-c-btn:disabled:focus.gr-c-btn--trans, .gr-c-btn--disabled.gr-c-btn--trans, .gr-c-btn--disabled:hover.gr-c-btn--trans, .gr-c-btn--disabled:hover:focus.gr-c-btn--trans, .gr-c-btn--disabled:active.gr-c-btn--trans, .gr-c-btn--disabled:focus.gr-c-btn--trans {
+  border: 1px solid #d5d5d5;
+  /* this value should be in a variable */
+  color: #d5d5d5;
+  /* this value should be in a variable */
+  background: transparent;
+}
+
+/*
+ * button set
+ */
+.gr-c-btn-set {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  -ms-flex-pack: center;
+      justify-content: center;
+  /* browser fallbacks */
+}
+.gr-c-btn-set__btn {
+  text-align: center;
+}
+.gr-c-btn-set--grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+}
+@media (min-width: 30em) {
+  .gr-c-btn-set {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .gr-c-btn-set__btn {
+    margin: 0 .75rem;
+  }
+  .gr-c-btn-set__btn:first-child {
+    margin-left: 0;
+  }
+  .gr-c-btn-set__btn:last-child {
+    margin-right: 0;
+  }
+  .gr-c-btn-set--grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 1rem), 1fr));
+  }
+  .gr-c-btn-set--grid .gr-c-btn-set__btn {
+    margin: 0;
+  }
+}
+
+/*
+ * button set block
+ */
+.gr-c-btn-set-block {
+  background-color: #ebeced;
+  padding: 1rem;
+}
+.gr-c-btn-set-block__heading {
+  color: #182962;
+  font-size: 20px;
+  margin: 0 0 1rem;
+}
+.gr-c-btn-set-block__more {
+  text-align: right;
+  padding: 1rem 0 0;
+  margin: 0;
+}
+.gr-c-btn-set-block__more-link {
+  font-size: 14px;
+  color: #979797;
+}
+@media (min-width: 30em) {
+  .gr-c-btn-set-block__heading {
+    font-size: 26px;
+  }
+  .gr-c-btn-set-block__more-link {
+    font-size: 16px;
+  }
+}
+
+/*
+ * nav box
+ */
+.gr-c-nav-box__heading {
+  color: #979797;
+  color: var(--gr-dark-gray);
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 0 0.5rem;
+}
+.gr-c-nav-box__list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.gr-c-nav-box__item {
+  margin-right: 1rem;
+  position: relative;
+}
+.gr-c-nav-box__item:last-child {
+  margin-right: 0;
+}
+.gr-c-nav-box__item--bordered {
+  padding-left: calc(2rem + 4px);
+  /* value takes into account width of pseudo element below */
+  /* use pseudo elements for line */
+  position: relative;
+  overflow: hidden;
+}
+.gr-c-nav-box__item--bordered:before {
+  background-color: #ccc;
+  background-color: var(--gr-medium-gray);
+  display: block;
+  content: "";
+  width: 4px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.gr-c-nav-box__link {
+  color: #979797;
+  color: var(--gr-dark-gray);
+  font-size: 16px;
+}
+@media (min-width: 64em) {
+  .gr-c-nav-box__item {
+    margin-right: 2rem;
+  }
+  .gr-c-nav-box__item:last-child {
+    margin-right: 0;
+  }
+}
+
+/*
+ * nav box block 
+ */
+.gr-c-nav-box-block {
+  /* use linear background to visually use different background colors on each side of component */
+  /* background-image: linear-gradient(to right, $gr-medium-gray, $gr-medium-gray 50%, $gr-light-gray 50%); */
+  background-color: #ebeced;
+  /* when used in template/page */
+}
+.gr-c-nav-box-block__inner {
+  background-color: #ebeced;
+  background-color: var(--gr-light-gray);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1440px;
+  margin: auto;
+}
+.gr-c-nav-box-block__item {
+  padding: 1rem;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+}
+.gr-c-nav-box-block__item:first-child {
+  background-color: #ccc;
+  background-color: var(--gr-medium-gray);
+}
+.gr-c-nav-box-block__item:last-child {
+  -ms-flex-positive: 100;
+      flex-grow: 100;
+}
+.gr-c-nav-box-block__item .gr-c-nav-box__item--bordered {
+  /* line */
+}
+.gr-l-template .gr-c-nav-box-block, .gr-l-page .gr-c-nav-box-block {
+  margin-bottom: 1rem;
+}
+
+/*
+ * primary nav
+ */
+.gr-c-primary-nav {
+  background-color: #182962;
+  background-color: var(--gr-dark-blue);
+  /* should menu element be maintained in separate partial? */
+}
+.gr-c-primary-nav__list {
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  max-width: 1440px;
+  padding: 0 2rem;
+  /* the side padding should be in a variable since it's widely used */
+  margin: auto;
+}
+.gr-c-primary-nav__link {
+  display: block;
+  font-size: 26px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 1.5rem 1rem;
+  white-space: nowrap;
+}
+.gr-c-primary-nav__link:hover {
+  background-color: #028abe;
+  text-decoration: none;
+}
+.gr-c-primary-nav__menu {
+  background-color: #ebeced;
+  padding: 1rem;
+}
+.gr-c-primary-nav__menu-inner {
+  max-width: 1440px;
+  padding: 1rem 0;
+  margin: auto;
+  /* grid fallback */
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@supports (display: grid) {
+  .gr-c-primary-nav__menu-inner {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
+.gr-c-primary-nav__col {
+  /* grid fallback */
+  -ms-flex: 0 0 25%;
+      flex: 0 0 25%;
+  min-width: 300px;
+  margin-bottom: 2rem;
+  /* matches grid gap */
+}
+@supports (display: grid) {
+  .gr-c-primary-nav__col {
+    margin-bottom: 0;
+    /* overrides grid fallback value */
+  }
+}
+.gr-c-primary-nav__menu-box {
+  margin: 0 0 2rem;
+}
+.gr-c-primary-nav__menu-box:last-child {
+  margin: 0;
+}
+.gr-c-primary-nav__menu-heading {
+  font-size: 22px;
+  /* this value should be in a variable */
+  font-weight: bold;
+  line-height: 1.2;
+  /* should this be global? */
+  color: #f47c2e;
+  padding: 0 0 1.25rem;
+  margin: 0 0 1rem;
+  position: relative;
+}
+.gr-c-primary-nav__menu-heading:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 5rem;
+  height: .25rem;
+  background: #028abe;
+}
+.gr-c-primary-nav__menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.gr-c-primary-nav__menu-item {
+  margin: 0 0 1rem;
+}
+.gr-c-primary-nav__menu-item:last-child {
+  margin: 0;
+}
+.gr-c-primary-nav__menu-link {
+  color: #182962;
+}
+@media (min-width: 48em) {
+  .gr-c-primary-nav__menu-inner {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(47%, 1fr));
+  }
+}
+@media (min-width: 64em) {
+  .gr-c-primary-nav__menu-inner {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+  }
+}
+
+/* make "__menu" available for independent review -- requires using full class names when nesting */
+.gr-c-primary-nav .gr-c-primary-nav__menu {
+  transition: opacity 0.1s ease-in-out;
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+  /* without this, the page ends up super tall -- not sure why, yet */
+  top: 100%;
+  left: -100%;
+  opacity: 0;
+  z-index: 1;
+  /* this should be top-most value */
+}
+.gr-c-primary-nav .gr-c-primary-nav__menu:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  left: -100%;
+  background: #ebeced;
+  border-bottom: 1px solid #ccc;
+  z-index: -1;
+}
+
+/*
+ * primary nav block
+ */
+.gr-c-primary-nav-block {
+  background-color: #182962;
+  background-color: var(--gr-dark-blue);
+}
+.gr-c-primary-nav-block__inner {
+  max-width: 1440px;
+  padding: 0;
+  margin: auto;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.gr-c-primary-nav-block .gr-c-primary-nav__list {
+  padding: 0;
+}
+.gr-c-primary-nav-block .gr-c-primary-nav + .gr-c-search-box {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 1rem;
+}
+.gr-c-primary-nav-block .gr-c-search-box {
+  border-width: 0;
+  /* override */
+  -ms-flex: 1 0 0;
+      flex: 1 0 0;
+  /* allows element to shrunk a bit on resize, just before the mobile nav kicks in */
+  /* gradient to slightly overlay nav links */
+}
+.gr-c-primary-nav-block .gr-c-search-box__text-input {
+  border-width: 0;
+}
+.gr-c-primary-nav-block .gr-c-search-box__text-input:hover {
+  border-width: 0;
+  /* override */
+}
+
+/*
+ * search form
+ */
+.gr-c-search-form {
+  min-width: 1440px;
+  min-width: var(--gr-component-min-width);
+  background-image: linear-gradient(to right, #144675, #0f669b);
+  background-size: cover;
+  border-color: #028abe;
+  border-color: var(--gr-primary-blue);
+  border-style: solid;
+  border-width: 0 0 1px;
+  padding: 2rem 0;
+}
+.gr-c-search-form__inner {
+  max-width: 1440px;
+  max-width: var(--gr-component-max-width);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding: 0 1rem;
+  margin: auto;
+}
+.gr-c-search-form__inner > * {
+  margin: 0 .5rem;
+}
+.gr-c-search-form .gr-c-heading {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 .5rem;
+}
+.gr-c-search-form .gr-c-search-box {
+  border-width: 0;
+}
+
+/*
+ * search box
+ */
+.gr-c-search-box {
+  background-color: #fff;
+  background-color: var(--gr-white);
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  /* NOTE: override default text input declarations */
+}
+.gr-c-search-box__text-input {
+  background-color: #fff;
+  background-color: var(--gr-white);
+  /* override default text input background color */
+  color: #000;
+}
+.gr-c-search-box__btn {
+  color: #028abe;
+  color: var(--gr-primary-blue);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  /* magic number -- matches comp */
+  cursor: pointer;
+  padding: 0 1rem 0 .5rem;
+  width: 2.75rem;
+  /* value matches right padding of "__text-input" element */
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+}
+.gr-c-search-box__btn:hover {
+  text-decoration: none;
+}
+.gr-c-search-box ::-webkit-input-placeholder {
+  color: #028abe;
+  color: var(--gr-primary-blue);
+}
+.gr-c-search-box :-ms-input-placeholder {
+  color: #028abe;
+  color: var(--gr-primary-blue);
+}
+.gr-c-search-box ::placeholder {
+  color: #028abe;
+  color: var(--gr-primary-blue);
+}
+.gr-c-search-box--big {
+  border-color: #979797;
+  border-color: var(--gr-dark-gray);
+}
+.gr-c-search-box--big .gr-c-search-box__text-input[type=text],
+.gr-c-search-box--big .gr-c-search-box__text-input[type=search] {
+  font-size: 1.5rem;
+  /* magic number -- matches comp */
+  height: 50px;
+}
+.gr-c-search-box--big .gr-c-search-box__btn {
+  color: #979797;
+  color: var(--gr-dark-gray);
+  font-size: 1.75rem;
+  /* magic number -- matches comp */
+}
+.gr-c-search-box--big ::-webkit-input-placeholder {
+  color: #979797;
+  color: var(--gr-dark-gray);
+}
+.gr-c-search-box--big :-ms-input-placeholder {
+  color: #979797;
+  color: var(--gr-dark-gray);
+}
+.gr-c-search-box--big ::placeholder {
+  color: #979797;
+  color: var(--gr-dark-gray);
+}
+
+/*
+ * table
+ */
+/*
+ * list
+ */
+.gr-c-list {
+  list-style: none;
+  padding: 0;
+  /* override */
+  margin: 0;
+  /* override */
+}
+.gr-c-list__item {
+  margin-bottom: 1rem;
+}
+.gr-c-list__item:last-child {
+  margin-bottom: 0;
+}
+.gr-c-list__link {
+  font-size: 16px;
+}
+.gr-c-list--split {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.gr-c-list--split .gr-c-list__item {
+  -ms-flex: 1 0 50%;
+      flex: 1 0 50%;
+  /* remove bottom margin from last two items */
+}
+.gr-c-list--on-dark {
+  background-color: #182962;
+  background-color: var(--gr-dark-blue);
+}
+.gr-c-list--on-dark .gr-c-list__link {
+  color: #fff;
+  color: var(--gr-white);
+}
+
+/*
+ * list box
+ */
+.gr-c-list-box {
+  /* when used in template/page */
+}
+.gr-c-list-box__heading {
+  font-size: 26px;
+  margin: 0 0 1.5rem;
+}
+.gr-c-list-box__content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.gr-c-list-box__item {
+  margin: 0 0 2rem;
+}
+.gr-c-list-box__item:last-child {
+  margin: 0;
+}
+.gr-c-list-box__checkbox-set {
+  margin: 0 0 2rem;
+}
+.gr-c-list-box__btn-set {
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+.gr-c-list-box__more {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 1rem 0 0;
+}
+.gr-c-list-box--bordered {
+  border: 1px solid #ebeced;
+}
+.gr-c-list-box--bordered .gr-c-list-box__heading {
+  padding: 1rem;
+  border-bottom: 1px solid #ebeced;
+  margin: 0;
+}
+.gr-c-list-box--bordered .gr-c-list-box__content {
+  padding: 1.5rem 1rem;
+}
+.gr-c-list-box--bordered fieldset label {
+  margin-bottom: 1rem;
+}
+.gr-c-list-box--bordered fieldset label:last-child {
+  margin: 0;
+}
+.gr-l-main__side .gr-c-list-box {
+  background: #fff;
+}
+.gr-l-main__side .gr-c-list-box--bordered {
+  border-color: #ccc;
+  /* use darker border color for when ".gr-l-main__side" element is overlapping ".gr-l-main__content" area*/
+}
+@media (min-width: 48em) {
+  .gr-l-main__side .gr-c-list-box--bordered {
+    /* same breakpoint as when __side element is displayed on wider screens */
+    border-width: 0;
+  }
+}
+
+/*
+ * list box set
+ */
+.gr-c-list-box-set__inner {
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+.gr-c-list-box-set--stacked .gr-c-list-box-set__inner {
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.gr-c-list-box-set--stacked .gr-c-list-box {
+  margin: 0 0 2rem;
+}
+.gr-c-list-box-set--stacked .gr-c-list-box:last-child {
+  margin: 0;
+}
+.gr-c-list-box-set--on-dark {
+  background-color: #182962;
+  background-color: var(--gr-dark-blue);
+}
+.gr-c-list-box-set--on-dark .gr-c-list-box__heading,
+.gr-c-list-box-set--on-dark .gr-c-list__link {
+  color: #fff;
+  color: var(--gr-white);
+}
+
+/* 
+ * ticker
+ */
+.gr-c-ticker {
+  /* third-party widget adds inline styles -- override with !important */
+  /* https://www.theweather.com/widget */
+  border: 1px solid red !important;
+  width: 177px !important;
+}
+
+/*
+ * ticker set
+ */
+.gr-c-ticker-set {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+.gr-c-ticker-set__ticker {
+  width: 182px;
+  height: auto;
+  margin-right: 1.25rem;
+}
+.gr-c-ticker-set__ticker:last-child {
+  margin-right: 0;
+}
+
+/*
+ * hero box
+ */
+.gr-c-hero-box {
+  background-color: #ccc;
+  background-color: var(--gr-medium-gray);
+}
+.gr-c-hero-box__inner {
+  max-width: 1440px;
+  margin: auto;
+  position: relative;
+  z-index: 0;
+}
+.gr-c-hero-box__media-wrapper {
+  background-color: #ccc;
+  background-color: var(--gr-medium-gray);
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-top: 33.4375%;
+  /* intrinsic ratio solution -- 214/640 */
+}
+.gr-c-hero-box__picture, .gr-c-hero-box__media {
+  position: absolute;
+  /* do some browser testing -- make sure targeting both elements works OK in IE */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.gr-c-hero-box__logo-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+  width: 127px;
+  z-index: 2;
+  /* should be above "__tickers" */
+}
+.gr-c-hero-box__logo-inner {
+  height: 0;
+  overflow: hidden;
+  padding-top: 31.034483%;
+  /* intrinsic ratio solution -- 81/261 */
+  position: relative;
+}
+.gr-c-hero-box__logo-media {
+  background-color: transparent;
+  /* override */
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.gr-c-hero-box__tickers {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  width: 100%;
+  z-index: 1;
+  /* should be below "__logo-wrapper" */
+}
+.gr-c-hero-box .gr-c-ticker-set__ticker {
+  width: 112px;
+}
+.gr-c-hero-box .gr-c-ticker-set__ticker:first-child {
+  display: none;
+}
+@media (min-width: 20em) {
+  .gr-c-hero-box__logo-wrapper {
+    width: 40%;
+  }
+  .gr-c-hero-box .gr-c-ticker-set__ticker {
+    width: 32%;
+  }
+}
+@media (min-width: 30em) {
+  .gr-c-hero-box .gr-c-ticker-set__ticker {
+    width: 20%;
+  }
+  .gr-c-hero-box .gr-c-ticker-set__ticker:first-child {
+    display: block;
+  }
+}
+@media (min-width: 48em) {
+  .gr-c-hero-box__media-wrapper {
+    padding-top: 10.486111%;
+    /* intrinsic ratio solution -- 151/1440 */
+  }
+  .gr-c-hero-box__logo-wrapper {
+    left: 2rem;
+    width: 18%;
+  }
+  .gr-c-hero-box__tickers {
+    right: 2rem;
+  }
+  .gr-c-hero-box .gr-c-ticker-set__ticker {
+    width: 13%;
+  }
+}
+@media (min-width: 90em) {
+  .gr-c-hero-box__logo-wrapper {
+    width: 261px;
+  }
+  .gr-c-hero-box .gr-c-ticker-set__ticker {
+    width: 182px;
+    height: 95px;
+  }
+}
+
+/*
+ * media box 
+ */
+.gr-c-media-box {
+  position: relative;
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  background-color: #979797;
+}
+.gr-c-media-box__media-wrapper {
+  background-color: #ccc;
+  background-color: var(--gr-medium-gray);
+}
+.gr-c-media-box__media-inner {
+  position: relative;
+  padding-top: 78.319783%;
+  /* intrinsic ratio solution -- width/height (279/369) */
+  height: 0;
+  overflow: hidden;
+}
+.gr-c-media-box__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.gr-c-media-box__text-wrapper {
+  padding: .5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* this value should be in a variable */
+  position: absolute;
+  bottom: .5rem;
+  left: .5rem;
+  right: .5rem;
+}
+.gr-c-media-box__label {
+  color: #028abe;
+  color: var(--gr-primary-blue);
+  font-size: 16px;
+  /* this value should be in a variable */
+  font-family: "Open Sans", sans-serif;
+  display: inline-block;
+  margin: 0 .75rem 0 0;
+}
+.gr-c-media-box__date {
+  color: #028abe;
+  color: var(--gr-primary-blue);
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.gr-c-media-box__heading {
+  color: #182962;
+  color: var(--gr-dark-blue);
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+.gr-c-media-box__btn {
+  float: right;
+}
+@media (min-width: 48em) {
+  .gr-c-media-box__media-inner {
+    padding-top: 53.044872%;
+    /* intrinsic ratio solution -- width/height (662/1248) */
+  }
+  .gr-c-media-box__text-wrapper {
+    padding: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+  }
+  .gr-c-media-box__label {
+    font-size: 24px;
+    /* this value should be in a variable */
+    margin: 0 1rem 0 0;
+  }
+  .gr-c-media-box__date {
+    font-size: 16px;
+  }
+  .gr-c-media-box__heading {
+    font-size: 38px;
+  }
+}
+
+/*
+ * carousel
+ */
+.gr-c-carousel-wrapper {
+  display: grid;
+  /* display:grid appears to be needed for the component to display property when included in an "article block" component */
+}
+
+.gr-c-carousel {
+  position: relative;
+  overflow: hidden;
+}
+.gr-c-carousel__set {
+  position: relative;
+}
+.gr-c-carousel__item {
+  /* Slick adds "display:inline-block" declaration to this element
+     Change to "display:block" so unnecessary space doesn't show below element    
+  */
+  display: block !important;
+}
+.gr-c-carousel__nav {
+  display: none;
+}
+.gr-c-carousel__thumb-wrapper {
+  width: 100px;
+  -ms-flex: 0 0 100px;
+      flex: 0 0 100px;
+  margin: 0 1rem 0 0;
+  cursor: pointer;
+}
+.gr-c-carousel__thumb-wrapper:last-child {
+  margin: 0;
+}
+.gr-c-carousel__thumb-inner {
+  position: relative;
+  padding-top: 53.03030303%;
+  /* ... 420 / 792 */
+  background-color: #979797;
+}
+.gr-c-carousel__thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 100%;
+}
+.gr-c-carousel__generic-content {
+  padding: 6rem 0;
+  text-align: center;
+  background-color: #ebeced;
+}
+.gr-c-carousel--cards {
+  padding: 2rem 0;
+  /* adjustments to allow portion of next card to be visible -- works in conjunction with Slick's "centerMode" setting */
+}
+.gr-c-carousel--cards .gr-c-carousel__item {
+  padding: 0 .5rem;
+}
+.gr-c-carousel--w-thumbs .gr-c-carousel__nav {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  background-color: #ebeced;
+  overflow-x: auto;
+}
+.gr-c-carousel--w-thumbs .gr-c-media-box__text-wrapper {
+  display: none;
+}
+
+/*
+ * pic box
+ */
+.gr-c-pic-box {
+  max-width: 100px;
+  /* value is larger than "__media-wrapper" max-width to provide additional space for longer headings */
+}
+.gr-c-pic-box__media-wrapper, .gr-c-pic-box__more-wrapper {
+  min-width: 61px;
+  max-width: calc(100% - 19px);
+  margin: 0 auto .5rem;
+}
+.gr-c-pic-box__media-link {
+  display: block;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-top: 100%;
+  /* provide empty background for when images don't load */
+}
+.gr-c-pic-box__media-link:before {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ccc;
+}
+.gr-c-pic-box__media {
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.gr-c-pic-box__more-link {
+  display: block;
+  background: #f47c2e;
+  border-radius: 50%;
+  height: 0;
+  padding-top: 100%;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+.gr-c-pic-box__more-link-icon {
+  position: absolute;
+  left: 50%;
+  margin-left: -21px;
+  width: 42px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: #fff;
+}
+.gr-c-pic-box__text-wrapper {
+  text-align: center;
+}
+.gr-c-pic-box__heading {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: #979797;
+  margin: 0;
+  /* override */
+}
+.gr-c-pic-box__label {
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+  color: #ccc;
+  line-height: 1;
+  margin: 0;
+}
+.gr-c-pic-box__date {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: #028abe;
+}
+.gr-c-pic-box--more:hover .gr-c-pic-box__heading {
+  text-decoration: underline;
+}
+@media (min-width: 64em) {
+  .gr-c-pic-box__media-wrapper, .gr-c-pic-box__more-wrapper {
+    min-width: 81px;
+    /* magic number -- matches comp */
+  }
+  .gr-c-pic-box__heading {
+    font-size: 14px;
+  }
+  .gr-c-pic-box__label {
+    font-size: 12px;
+  }
+}
+
+/* 
+ * pic box set
+ */
+.gr-c-pic-box-set__heading {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  color: #028abe;
+  text-transform: uppercase;
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+  margin: 0 0 .5rem;
+}
+.gr-c-pic-box-set__content {
+  display: -ms-flexbox;
+  display: flex;
+}
+.gr-c-pic-box-set__group {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+.gr-c-pic-box-set__item {
+  -ms-flex: 0 0 33.33333333333333%;
+      flex: 0 0 33.33333333333333%;
+  margin: 0 0 1rem;
+}
+.gr-c-pic-box-set__more {
+  padding-left: 1rem;
+}
+.gr-c-pic-box-set__more-link {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  text-align: center;
+}
+.gr-c-pic-box-set__more-link:hover {
+  text-decoration: none;
+}
+.gr-c-pic-box-set__more-link:hover .gr-c-pic-box-set__more-text {
+  text-decoration: underline;
+}
+.gr-c-pic-box-set__more-icon {
+  display: block;
+  background: #f47c2e;
+  color: #fff;
+  width: 41px;
+  line-height: 41px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  /* magic number */
+  margin: auto;
+}
+.gr-c-pic-box-set__more-text {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: #979797;
+}
+.gr-c-pic-box-set .gr-c-pic-box {
+  margin: auto;
+}
+@media (min-width: 30em) {
+  .gr-c-pic-box-set__item {
+    -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+    margin: 0 0 1rem;
+  }
+}
+
+/* 
+ * pic box block
+ */
+.gr-c-pic-box-block__header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: .5rem;
+  background-color: #ebeced;
+}
+.gr-c-pic-box-block__heading {
+  font-size: 26px;
+  font-family: "Open Sans", sans-serif;
+  color: #182962;
+  margin: 0 1rem 0 0;
+}
+.gr-c-pic-box-block__content {
+  padding: .5rem;
+}
+.gr-c-pic-box-block .gr-c-search-box {
+  max-width: 213px;
+  /* magic number -- matches comp */
+  /* NOTE: override default text input and ".gr-c-search-box" declarations */
+}
+.gr-c-pic-box-block .gr-c-pic-box-set {
+  max-width: 100%;
+  /* override */
+}
+.gr-c-pic-box-block .gr-c-pic-box-set:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+/* 
+ * card
+ */
+.gr-c-card {
+  padding: 1rem;
+  border: 1px solid #ebeced;
+  background-color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 100%;
+}
+.gr-c-card__header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  margin: -.25rem 0 .5rem;
+  /* top value takes into account top margins for "__date" and "__label" elements */
+}
+.gr-c-card__date {
+  font-size: 12px;
+  color: #f47c2e;
+  margin: .25rem 0;
+}
+.gr-c-card__icon {
+  font-size: 1rem;
+  color: #979797;
+  vertical-align: text-bottom;
+  margin: .25rem 0;
+}
+.gr-c-card__label {
+  font-size: 10px;
+  color: #ccc;
+  text-transform: uppercase;
+}
+.gr-c-card__heading {
+  font-size: 20px;
+  line-height: 1.2;
+  /* should heading line-heights be managed in _headings.scss? */
+  margin: 0 0 .5rem;
+}
+.gr-c-card__details {
+  font-size: 12px;
+  color: #ccc;
+  margin: 0 0 1rem;
+}
+.gr-c-card__btn {
+  font-size: 14px;
+  padding: 0 1.2rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+@media (min-width: 30em) {
+  .gr-c-card {
+    padding: 1rem;
+  }
+  .gr-c-card__date {
+    font-size: 18px;
+  }
+  .gr-c-card__icon {
+    font-size: 1.5rem;
+    /* magic number -- matches comp */
+  }
+  .gr-c-card__label {
+    font-size: 16px;
+  }
+  .gr-c-card__heading {
+    font-size: 32px;
+    margin: 0 0 .5rem;
+  }
+  .gr-c-card__details {
+    font-size: 18px;
+    margin: 0 0 1rem;
+  }
+  .gr-c-card__btn {
+    font-size: 18px;
+    padding: 0 1.677rem;
+  }
+}
+
+/* 
+ * card set
+ */
+.gr-c-card-set {
+  background-color: #ebeced;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+.gr-c-card-set__inner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+}
+.gr-c-card-set__more {
+  background-color: #fff;
+  margin: 1rem 0 1rem 1rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 0 0 140px;
+      flex: 0 0 140px;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.gr-c-card-set__more-link {
+  display: block;
+  text-align: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.gr-c-card-set__more-link:hover {
+  text-decoration: none;
+}
+.gr-c-card-set__more-link:hover .gr-c-card-set__more-text {
+  text-decoration: underline;
+}
+.gr-c-card-set__more-icon {
+  display: block;
+  background: #f47c2e;
+  color: #fff;
+  width: 41px;
+  line-height: 41px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  /* magic number */
+  margin: auto;
+}
+.gr-c-card-set__more-text {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: #979797;
+}
+.gr-c-card-set .gr-c-card {
+  border-width: 0;
+  margin: 1rem;
+}
+.gr-c-card-set .gr-c-card:first-child {
+  margin-left: 0;
+}
+.gr-c-card-set .gr-c-card__btn {
+  margin-top: auto;
+  /* pulls button to bottom of card */
+}
+
+/* 
+ * spotlight
+ */
+.gr-c-spotlight {
+  background-color: #ccc;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* note that we might want to set a max-width that correlates to image width */
+}
+.gr-c-spotlight__content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  background-color: rgba(235, 236, 237, 0.9);
+  /* this value should be in a variable, perhaps an RGBA value */
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.gr-c-spotlight__header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: baseline;
+      align-items: baseline;
+  margin: 0 0 .5rem;
+}
+.gr-c-spotlight__category {
+  font-size: 16px;
+  color: #f47c2e;
+  margin: 0 1rem 0 0;
+}
+.gr-c-spotlight__label {
+  font-size: 12px;
+  color: #028abe;
+  text-transform: uppercase;
+}
+.gr-c-spotlight__heading {
+  font-size: 20px;
+  line-height: 1.2;
+  /* should heading line-heights be managed in _headings.scss? */
+  margin: 0 0 .5rem;
+}
+.gr-c-spotlight__heading-link {
+  color: #182962;
+}
+.gr-c-spotlight__details {
+  font-size: 12px;
+  color: #028abe;
+  margin: 0 0 1rem;
+}
+.gr-c-spotlight__btn {
+  font-size: 14px;
+  padding: 0 1.2rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.gr-c-spotlight__media-wrapper {
+  position: absolute;
+  top: 0;
+}
+.gr-c-spotlight__media {
+  /* on smaller screens, without adjusting max-width and width, image has space below it -- we might want to change dimensions for image */
+}
+.gr-c-spotlight--overlay {
+  background-color: transparent;
+  padding-right: 0;
+  overflow: visible;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+}
+.gr-c-spotlight--overlay .gr-c-spotlight__content {
+  position: relative;
+  padding: 1rem;
+}
+.gr-c-spotlight--overlay .gr-c-spotlight__media-wrapper {
+  z-index: 1;
+  height: auto;
+  padding: 0;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem 0;
+  -ms-flex: 0 0 34%;
+      flex: 0 0 34%;
+}
+.gr-c-spotlight--overlay .gr-c-spotlight__media-wrapper:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  top: 0;
+  bottom: 0;
+  background-color: #ebeced;
+  z-index: -1;
+}
+.gr-c-spotlight--overlay .gr-c-spotlight__media {
+  max-width: 100%;
+  /* override default component */
+  width: 100%;
+  /* override default component */
+  position: relative;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.gr-c-spotlight--overlay .gr-c-spotlight__btn {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: auto;
+}
+@media (min-width: 26em) {
+  .gr-c-spotlight__content {
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem 1rem 4rem 1rem;
+  }
+  .gr-c-spotlight__media-wrapper {
+    position: relative;
+  }
+  .gr-c-spotlight__media {
+    max-width: 100%;
+    width: 100%;
+  }
+  .gr-c-spotlight__btn {
+    position: absolute;
+    right: -15%;
+    bottom: 1rem;
+    -ms-flex-item-align: auto;
+        align-self: auto;
+  }
+}
+@media (min-width: 30em) {
+  .gr-c-spotlight {
+    padding-right: 10%;
+    /* provides partial view of image (__media-wrapper element) */
+  }
+  .gr-c-spotlight__content {
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+  }
+  .gr-c-spotlight__category {
+    font-size: 26px;
+    margin: 0 2rem 0 0;
+  }
+  .gr-c-spotlight__heading {
+    font-size: 38px;
+    line-height: 1.2;
+    /* should heading line-heights be managed in _headings.scss? */
+    margin: 0 0 .5rem;
+  }
+  .gr-c-spotlight__label {
+    font-size: 16px;
+  }
+  .gr-c-spotlight__details {
+    font-size: 18px;
+  }
+  .gr-c-spotlight__btn {
+    font-size: 18px;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    padding: 0 1.677rem;
+  }
+  .gr-c-spotlight__media-wrapper {
+    height: 0;
+    padding-top: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .gr-c-spotlight__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .gr-c-spotlight--overlay {
+    padding-right: 0;
+  }
+  .gr-c-spotlight--overlay .gr-c-spotlight__media-wrapper {
+    -ms-flex: 0 0 234px;
+        flex: 0 0 234px;
+  }
+}
+
+/*
+ * tile
+ */
+.gr-c-tile {
+  position: relative;
+  display: block;
+  /* transparent overlay */
+}
+.gr-c-tile__text {
+  font-size: 26px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  z-index: 1;
+  color: #182962;
+  padding: 0 2rem;
+  line-height: 1.2;
+  /* this value should be in a variable */
+}
+.gr-c-tile__media-wrapper {
+  height: 0;
+  overflow: hidden;
+  padding-top: 59.868421%;
+  /* intrinisic ration solution -- height/width (364/608) */
+  position: relative;
+  background-color: #979797;
+}
+.gr-c-tile__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.gr-c-tile:after {
+  content: "";
+  display: block;
+  background: rgba(255, 255, 255, 0.86);
+  /* this value should be in a variable */
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  top: 1rem;
+  bottom: 1rem;
+}
+.gr-c-tile:hover:after {
+  content: "";
+  display: block;
+  background: #fff;
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  top: 1rem;
+  bottom: 1rem;
+}
+
+/*
+ * tile set 
+ */
+.gr-c-tile-set {
+  display: -ms-flexbox;
+  display: flex;
+  /* browser fallbacks */
+}
+.gr-c-tile-set .gr-c-tile {
+  width: 100%;
+  /* declaration needed when .gr-c-tile-set uses "display: flex" */
+  margin: 0 2rem 0 0;
+}
+.gr-c-tile-set .gr-c-tile:last-child {
+  margin-right: 0;
+}
+.gr-c-tile-set--grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(calc(50% - 1rem), 1fr));
+}
+.gr-c-tile-set .gr-c-tile {
+  /* transparent overlay */
+}
+.gr-c-tile-set .gr-c-tile__text {
+  font-size: 20px;
+  padding: 0 1rem;
+}
+.gr-c-tile-set .gr-c-tile:after {
+  left: .5rem;
+  right: .5rem;
+  top: .5rem;
+  bottom: .5rem;
+}
+.gr-c-tile-set .gr-c-tile:hover:after {
+  left: .5rem;
+  right: .5rem;
+  top: .5rem;
+  bottom: .5rem;
+}
+@media (min-width: 30em) {
+  .gr-c-tile-set--grid {
+    grid-gap: 2rem;
+  }
+  .gr-c-tile-set .gr-c-tile {
+    /* transparent overlay */
+  }
+  .gr-c-tile-set .gr-c-tile__text {
+    font-size: 26px;
+    padding: 0 2rem;
+  }
+  .gr-c-tile-set .gr-c-tile:after {
+    left: 1.5rem;
+    right: 1.5rem;
+    top: 1rem;
+    bottom: 1rem;
+  }
+  .gr-c-tile-set .gr-c-tile:hover:after {
+    left: 1.5rem;
+    right: 1.5rem;
+    top: 1rem;
+    bottom: 1rem;
+  }
+}
+
+/* 
+ * alert box
+ */
+.gr-c-alert-box {
+  background-color: #000;
+  padding: .5rem;
+  position: relative;
+}
+.gr-c-alert-box__text {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding: .5rem;
+  margin: auto;
+  max-width: 1440px;
+}
+.gr-c-alert-box__btn {
+  font-size: 20px;
+  /* override */
+  display: table;
+  /* allows element to break to next line and display like a block except it doesn't go full width */
+  background-color: #fff;
+  color: #979797;
+  /* color should match component background */
+  padding: 0 1.677rem;
+  /* padding should match default "btn" component */
+  margin: 1rem auto auto auto;
+}
+.gr-c-alert-box__btn:hover {
+  background-color: #ebeced;
+}
+.gr-c-alert-box__close-btn {
+  display: table;
+  font-size: 16px;
+  color: #fff;
+  line-height: 44px;
+  /* provides recommended clickable area */
+  padding: 0 .5rem;
+  /* provides space between button and linear background */
+  margin: .5rem auto auto;
+}
+.gr-c-alert-box--major {
+  background-color: #ce0000;
+  /* hide "dismiss" button for "major" alerts */
+}
+.gr-c-alert-box--major .gr-c-alert-box__btn {
+  color: #ce0000;
+}
+.gr-c-alert-box--major .gr-c-alert-box__close-btn {
+  display: none;
+}
+.gr-c-alert-box--minor {
+  background-color: #f47c2e;
+  background: repeating-linear-gradient(135deg, #f47c2e, #f47c2e 10px, #ffb180 10px, #ffb180 20px);
+}
+.gr-c-alert-box--minor .gr-c-alert-box__inner {
+  background-color: #f47c2e;
+}
+.gr-c-alert-box--minor .gr-c-alert-box__btn {
+  color: #f47c2e;
+}
+@media (min-width: 64em) {
+  .gr-c-alert-box__text {
+    font-size: 28px;
+    padding: .75rem 15rem;
+    /* side padding should be wider than "More" buttons -- prevents button from overlapping text */
+  }
+  .gr-c-alert-box__btn {
+    font-size: 28px;
+    /* override */
+    display: -ms-flexbox;
+    display: flex;
+    /* easy way to center the text vertically */
+    line-height: 66px;
+    /* magic number -- matches height of "__text" element on wider screens when text is on one line */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    padding: 0 3rem;
+    /* override -- increase side padding and rely on line-height for top/bottom spacing */
+    margin: 0;
+  }
+  .gr-c-alert-box__close-btn {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin: 0;
+  }
+}
+
+/* 
+ * breadcrumbs
+ */
+.gr-c-breadcrumbs__list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.gr-c-breadcrumbs__item {
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: .5rem;
+}
+.gr-c-breadcrumbs__item:before {
+  content: "/";
+  display: block;
+  margin: 0 .5rem 0 0;
+}
+
+/* 
+ * pagination
+ */
+.gr-c-pagination__list {
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.gr-c-pagination__item--left-arrow {
+  margin-right: .5rem;
+}
+.gr-c-pagination__item--right-arrow {
+  margin-left: .5rem;
+}
+.gr-c-pagination__link {
+  display: block;
+  line-height: 34px;
+  padding: 0 .75rem;
+  border: 1px solid transparent;
+  /* improves horizonal alignment of text links and arrow links */
+}
+.gr-c-pagination__link--arrow {
+  padding: 0;
+  width: 36px;
+  /* matches with line-height but with added 2px to take border into account -- causes element to display as square */
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #ccc;
+}
+.gr-c-pagination__link--arrow:hover {
+  text-decoration: none;
+  background-color: #ebeced;
+}
+.gr-c-pagination__link--active {
+  background-color: #ebeced;
+}
+.gr-c-pagination__link--active:hover {
+  text-decoration: none;
+}
+
+/*
+ * article header 
+ */
+.gr-c-article-header {
+  display: grid;
+  grid-gap: 1rem;
+  /* make text input border transparent when viewing this component on a page -- page has gray background and text input has white background */
+  /* browser fallbacks */
+}
+.gr-c-article-header__heading {
+  font-size: 32px;
+  color: #182962;
+  line-height: 1.4;
+  /* should this be a global heading declaration? */
+  margin: 0;
+}
+.gr-c-article-header__filter-btn {
+  justify-self: left;
+}
+.gr-l-page .gr-c-article-header .gr-c-search-box__text-input {
+  border-color: #fff;
+}
+@media (min-width: 48em) {
+  .gr-c-article-header {
+    /* should be same as breakpoint used to show ".gr-l-main__side" element */
+  }
+  .gr-c-article-header__filter-btn {
+    display: none;
+  }
+}
+
+/*
+ * tooltip
+ */
+.gr-c-tooltip {
+  padding: 2rem;
+  background: #028abe;
+  display: inline-block;
+  /* prevents element from displaying full width when viewed independently */
+  position: relative;
+}
+.gr-c-tooltip:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: .75rem solid transparent;
+  border-bottom: .75rem solid transparent;
+  border-right: 0.75rem solid #028abe;
+  position: absolute;
+  left: -.75rem;
+  top: 2rem;
+}
+.gr-c-tooltip__heading {
+  font-size: 18px;
+  color: #fff;
+  margin: 0 0 1rem;
+}
+.gr-c-tooltip__list {
+  color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.gr-c-tooltip__item {
+  margin: 0 0 .25rem;
+}
+.gr-c-tooltip__item:last-child {
+  margin: 0;
+}
+
+/*
+ * result box
+ */
+.gr-c-result-box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  position: relative;
+  /* demo rule only -- demonstrates what tooltip looks like without hovering component */
+  /* we might want to give icons a class name */
+}
+.gr-c-result-box__media-wrapper {
+  margin: 0 0 1rem;
+}
+.gr-c-result-box__media-inner {
+  height: 0;
+  padding-top: 73.493976%;
+  /* intrinisic ratio solution -- height/width (610/830) */
+  overflow: hidden;
+  position: relative;
+  background-color: #ccc;
+}
+.gr-c-result-box__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.gr-c-result-box__text {
+  position: relative;
+}
+.gr-c-result-box__date {
+  display: block;
+  font-size: 18px;
+  color: #f47c2e;
+  margin: 0 0 .5rem;
+}
+.gr-c-result-box__heading {
+  line-height: 1.2;
+  font-size: 20px;
+  color: #979797;
+  margin: 0 0 1rem;
+}
+.gr-c-result-box__heading::before {
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+  margin-top: calc((1 - 1.2) * 0.5em);
+}
+.gr-c-result-box__heading--event {
+  font-size: 22px;
+  /* this value should be in a variable */
+}
+.gr-c-result-box__list {
+  color: #979797;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.gr-c-result-box__item {
+  margin: 0 0 .15rem;
+  /* this value should be in a variable */
+}
+.gr-c-result-box__item:last-child {
+  margin: 0;
+}
+.gr-c-result-box__item--spaced {
+  margin: 0 0 1rem;
+}
+.gr-c-result-box__label {
+  font-size: 16px;
+  color: #ccc;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.gr-c-result-box__tooltip {
+  /* hide tooltip by default */
+  display: none;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  /* using "2" to make sure box appears above Pattern Lab's "Show Pattern Info" arrow */
+  top: 50%;
+  transform: translateY(-50%);
+}
+.gr-c-result-box--person .gr-c-result-box__media-wrapper {
+  -ms-flex: 0 0 110px;
+      flex: 0 0 110px;
+  /* value matches image width */
+}
+.gr-c-result-box--person .gr-c-result-box__media-inner {
+  padding-top: 100%;
+  /* intrinisic ratio solution ("padding top" solution) -- 100% means it's a square */
+}
+.gr-c-result-box--active {
+  background: #ebeced;
+}
+.gr-c-result-box--active .gr-c-result-box__tooltip {
+  display: block;
+}
+.gr-c-result-box [class^="gr-i-"],
+.gr-c-result-box [class*=" gr-i-"] {
+  color: #028abe;
+}
+@media (min-width: 30em) {
+  .gr-c-result-box {
+    -ms-flex-direction: row;
+        flex-direction: row;
+    padding: 2rem 0;
+  }
+  .gr-c-result-box__media-wrapper {
+    -ms-flex: 0 0 143px;
+        flex: 0 0 143px;
+    /* value matches image width */
+    margin: 0 1.5rem 0 0;
+  }
+  .gr-c-result-box__heading--event {
+    font-size: 28px;
+  }
+}
+@media (min-width: 48em) {
+  .gr-c-result-box__heading--event {
+    font-size: 32px;
+  }
+}
+@media (min-width: 64em) {
+  .gr-c-result-box--w-tooltip:hover {
+    background: #ebeced;
+    /* show tooltip on hover */
+  }
+  .gr-c-result-box--w-tooltip:hover .gr-c-result-box__tooltip {
+    display: block;
+  }
+}
+
+/*
+ * result box set
+ */
+.gr-c-result-box-set {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ebeced;
+  /* when used in template/page */
+}
+.gr-c-result-box-set__heading {
+  font-size: 32px;
+  color: #f47c2e;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+.gr-c-result-box-set__item {
+  padding: 0 0 1rem;
+  border-bottom: 1px solid #ebeced;
+  margin: 0 0 1rem;
+}
+.gr-c-result-box-set__item:last-of-type {
+  /* using "last of type" here since there may be other elements after the "__item" elements (using "last child" would affect those) */
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+.gr-c-result-box-set__pagination {
+  padding: 2rem 0;
+}
+.gr-l-page .gr-c-result-box-set {
+  background: #fff;
+}
+@media (min-width: 30em) {
+  .gr-c-result-box-set {
+    padding: 1rem 2rem;
+  }
+  .gr-c-result-box-set__heading {
+    padding: 2rem 0 0;
+    margin: 0;
+  }
+}
+@media (min-width: 48em) {
+  .gr-c-result-box-set {
+    padding: 1rem 3rem;
+  }
+}
+
+/* 
+ * result list
+ */
+.gr-c-result-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.gr-c-result-list__item {
+  margin: 0 0 2rem;
+}
+.gr-c-result-list__item:last-child {
+  margin: 0;
+}
+.gr-c-result-list__details {
+  word-break: break-word;
+  /* this works well for long URLs */
+}
+
+/* 
+ * result list block
+ */
+.gr-c-result-list-block {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ebeced;
+}
+.gr-c-result-list-block__header {
+  padding: 0 0 2rem;
+  border-bottom: 1px solid #ebeced;
+  margin: 0 0 2rem;
+}
+.gr-c-result-list-block .gr-c-article-header__heading {
+  color: #f47c2e;
+}
+.gr-c-result-list-block__pagination {
+  padding-top: 3rem;
+}
+@media (min-width: 30em) {
+  .gr-c-result-list-block {
+    padding: 1rem 2rem;
+  }
+}
+@media (min-width: 48em) {
+  .gr-c-result-list-block {
+    padding: 3rem;
+  }
+}
+
+/*
+ * article block
+ */
+.gr-c-article-block {
+  padding: 1rem 0 3rem;
+  background: #fff;
+  border: 1px solid #ebeced;
+  overflow: hidden;
+  /* this component might contain floated elements -- this resolves overflow issues */
+}
+.gr-c-article-block__header {
+  padding: 0 1rem;
+  margin: 0 0 1rem;
+}
+.gr-c-article-block__heading {
+  font-size: 18px;
+  color: #182962;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid #ebeced;
+  margin: 0 0 1rem;
+}
+.gr-c-article-block__filter-btn {
+  font-size: 18px;
+  float: right;
+  text-decoration: underline;
+}
+.gr-c-article-block__byline {
+  font-size: 18px;
+  color: #f47c2e;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.gr-c-article-block__date {
+  font-size: 18px;
+  color: #979797;
+  margin: 0 2rem 0 0;
+}
+.gr-c-article-block__author {
+  font-size: 18px;
+  margin: 0;
+}
+.gr-c-article-block__title {
+  font-size: 22px;
+  /* this value should be in a variable */
+  color: #000;
+  padding: 0 1rem;
+  margin: 0 0 2rem;
+}
+.gr-c-article-block__section-title {
+  font-size: 18px;
+  color: #979797;
+  padding: 1rem;
+  /* matches padding used in "__tag-box" element */
+  margin: 0 0 1.3rem;
+  /* currently matches "p" margin */
+}
+.gr-c-article-block__p {
+  color: #979797;
+  padding: 0 1rem;
+  /* matches padding used in "__tag-box" element */
+}
+.gr-c-article-block__p:last-of-type {
+  margin-bottom: 1.3rem;
+  /* reset to default "p" margin */
+}
+.gr-c-article-block__media-wrapper {
+  background-color: #979797;
+  margin: 0 0 1.3rem;
+  /* value matches default "p" element */
+}
+.gr-c-article-block__media-wrapper--floated, .gr-c-article-block__media-wrapper--left {
+  /* While in development phase, use border instead of padding so we can keep the background color. The background color is helpful for the demo site since the placeholder images won't show up there. */
+  border-left: 1rem solid #fff;
+  border-right: 1rem solid #fff;
+}
+.gr-c-article-block__media-wrapper--floated .gr-c-article-block__media-inner, .gr-c-article-block__media-wrapper--left .gr-c-article-block__media-inner {
+  padding-top: 75%;
+  /* intrinsic ration solution -- image height / width = percentage -- 297 / 396 */
+}
+.gr-c-article-block__media-inner {
+  height: 0;
+  padding-top: 31.25%;
+  /* intrinsic ration solution -- image height / width = percentage -- 320 / 1024 */
+  overflow: hidden;
+  position: relative;
+}
+.gr-c-article-block__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.gr-c-article-block .gr-c-carousel {
+  padding: 0 1rem;
+  /* matches padding used in "__tag-box" element */
+  margin-bottom: 1.3rem;
+}
+.gr-c-article-block__tag-box {
+  clear: both;
+  padding: 1.7rem 1rem 0;
+}
+.gr-c-article-block__pic-box-set {
+  padding: 0 1rem;
+  /* temporary margins until all rows are in the same component */
+  margin: 0 0 1rem;
+}
+.gr-c-article-block__pic-box-set:last-of-type {
+  margin: 0;
+}
+.gr-l-template .gr-c-article-block, .gr-l-page .gr-c-article-block {
+  border-width: 0;
+}
+@media (min-width: 30em) {
+  .gr-c-article-block__heading {
+    font-size: 26px;
+  }
+  .gr-c-article-block__filter-btn {
+    font-size: 26px;
+  }
+  .gr-c-article-block__title {
+    font-size: 32px;
+  }
+  .gr-c-article-block__section-title {
+    font-size: 26px;
+  }
+}
+@media (min-width: 48em) {
+  .gr-c-article-block__filter-btn {
+    display: none;
+  }
+  .gr-c-article-block__section-title {
+    padding: 0 7.2rem;
+    /* matches padding used in "__tag-box" element */
+  }
+  .gr-c-article-block__p {
+    padding: 0 7.2rem;
+    /* matches padding used in "__tag-box" element */
+  }
+  .gr-c-article-block__media-wrapper {
+    background-color: #979797;
+    margin: 0 0 1.3rem;
+    /* value matches default "p" element */
+  }
+  .gr-c-article-block__media-wrapper--floated, .gr-c-article-block__media-wrapper--left {
+    /* While in development phase, use border instead of padding so we can keep the background color. The background color is helpful for the demo site since the placeholder images won't show up there. */
+    border-left: 2rem solid #fff;
+    border-right: 2rem solid #fff;
+  }
+  .gr-c-article-block__pic-box-set {
+    padding: 0 7.2rem;
+  }
+  .gr-c-article-block__tag-box {
+    padding: 1.7rem 7.2rem 0;
+  }
+  .gr-c-article-block .gr-c-carousel {
+    padding: 0 2rem;
+    /* matches padding used in "__tag-box" element */
+  }
+}
+@media (min-width: 75em) {
+  .gr-c-article-block__p {
+    /* improves alignment of text and floated media -- value should match element line-height */
+    margin: 0 0 calc(1.3rem + 4px);
+    /* additional pixels make up for space lost due to line-height-crop mixin */
+  }
+  .gr-c-article-block__p::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: calc((1 - 1.5) * 0.5em);
+  }
+  .gr-c-article-block__media-wrapper--floated, .gr-c-article-block__media-wrapper--left {
+    float: left;
+    width: 100%;
+    max-width: 396px;
+    padding: 0;
+    border: 0;
+    /* remove this once not in active development -- see related note above */
+    margin: 0 2rem .5rem 3rem;
+  }
+  .gr-c-article-block__media-wrapper--right {
+    float: right;
+    margin: 0 2rem .5rem 3rem;
+  }
+  .gr-c-article-block .gr-c-carousel {
+    padding: 0 7.2rem;
+    /* matches padding used in "__tag-box" element */
+  }
+}
+
+/*
+ * tag box
+ */
+.gr-c-tag-box {
+  display: -ms-flexbox;
+  display: flex;
+}
+.gr-c-tag-box__heading {
+  font-size: 16px;
+  color: #ccc;
+  font-family: "Open Sans", sans-serif;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 1rem 0 0;
+}
+.gr-c-tag-box__heading:after {
+  content: ":";
+  display: block;
+}
+.gr-c-tag-box__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.gr-c-tag-box__item {
+  margin: 0 .5rem 0 0;
+  display: -ms-flexbox;
+  display: flex;
+}
+.gr-c-tag-box__item:after {
+  content: ",";
+  display: block;
+}
+.gr-c-tag-box__item:last-child {
+  margin: 0;
+}
+.gr-c-tag-box__item:last-child:after {
+  display: none;
+}
+
+/*
+ * checkbox
+ */
+.gr-c-checkbox [type="checkbox"]:not(:checked),
+.gr-c-checkbox [type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+.gr-c-checkbox [type="checkbox"]:not(:checked) + label,
+.gr-c-checkbox [type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+.gr-c-checkbox [type="checkbox"]:not(:checked) + label:before,
+.gr-c-checkbox [type="checkbox"]:checked + label:before {
+  border-color: #ebeced;
+  border-color: var(--gr-light-gray);
+  border-style: solid;
+  border-width: 1px;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: .1rem;
+  /* magic number */
+  width: 1.25em;
+  /* magic number */
+  height: 1.25em;
+  /* magic number */
+  background: #fff;
+}
+.gr-c-checkbox [type="checkbox"]:not(:checked) + label:after,
+.gr-c-checkbox [type="checkbox"]:checked + label:after {
+  position: absolute;
+  top: -.3em;
+  /* magic number */
+  left: .7em;
+  /* magic number */
+  content: '';
+  display: block;
+  width: 9px;
+  height: 20px;
+  border-style: solid;
+  border-color: #028abe;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.gr-c-checkbox [type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+.gr-c-checkbox [type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+.gr-c-checkbox [type="checkbox"]:disabled:checked + label:after {
+  color: #ebeced;
+  color: var(--gr-light-gray);
+}
+.gr-c-checkbox [type="checkbox"]:disabled:checked + label:before {
+  border-color: #ebeced;
+  border-color: var(--gr-light-gray);
+}
+.gr-c-checkbox [type="checkbox"]:disabled + label {
+  color: #ebeced;
+  color: var(--gr-light-gray);
+}
+.gr-c-checkbox--flipped {
+  /* display checkmark after the text */
+}
+.gr-c-checkbox--flipped [type="checkbox"]:not(:checked) + label,
+.gr-c-checkbox--flipped [type="checkbox"]:checked + label {
+  padding-left: 0;
+  padding-right: 1.95em;
+}
+.gr-c-checkbox--flipped [type="checkbox"]:not(:checked) + label:before,
+.gr-c-checkbox--flipped [type="checkbox"]:checked + label:before {
+  left: auto;
+  right: 0;
+}
+.gr-c-checkbox--flipped [type="checkbox"]:not(:checked) + label:after,
+.gr-c-checkbox--flipped [type="checkbox"]:checked + label:after {
+  left: auto;
+  /* override default */
+  right: -.075em;
+}
+.gr-c-checkbox--filter {
+  font-size: 20px;
+}
+.gr-c-checkbox--filter [type="checkbox"]:not(:checked) + label:before,
+.gr-c-checkbox--filter [type="checkbox"]:checked + label:before {
+  /* no placeholder square */
+  display: none;
+}
+.gr-c-checkbox--filter [type="checkbox"]:not(:checked) + label,
+.gr-c-checkbox--filter [type="checkbox"]:checked + label {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+.gr-c-checkbox--filter [type="checkbox"]:not(:checked) + label:after,
+.gr-c-checkbox--filter [type="checkbox"]:checked + label:after {
+  left: auto;
+  right: 0;
+  top: 0;
+}
+.gr-c-checkbox--blue {
+  color: #028abe;
+}
+.gr-c-checkbox--blue [type="checkbox"]:not(:checked) + label:after,
+.gr-c-checkbox--blue [type="checkbox"]:checked + label:after {
+  border-color: #028abe;
+}
+.gr-c-checkbox--green {
+  color: #98cb4e;
+}
+.gr-c-checkbox--green [type="checkbox"]:not(:checked) + label:after,
+.gr-c-checkbox--green [type="checkbox"]:checked + label:after {
+  border-color: #98cb4e;
+}
+.gr-c-checkbox--orange {
+  color: #f47c2e;
+}
+.gr-c-checkbox--orange [type="checkbox"]:not(:checked) + label:after,
+.gr-c-checkbox--orange [type="checkbox"]:checked + label:after {
+  border-color: #f47c2e;
+}
+.gr-c-checkbox--red {
+  color: #ce0000;
+}
+.gr-c-checkbox--red [type="checkbox"]:not(:checked) + label:after,
+.gr-c-checkbox--red [type="checkbox"]:checked + label:after {
+  border-color: #ce0000;
+}
+
+/* 
+ * checkbox set
+ */
+.gr-c-checkbox-set .gr-c-checkbox {
+  margin: 0 0 1rem;
+}
+.gr-c-checkbox-set .gr-c-checkbox:last-child {
+  margin: 0;
+}
+
+/*
+ * paginator
+ */
+.gr-c-paginator {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.gr-c-paginator__heading {
+  font-size: 28px;
+  color: #979797;
+  line-height: 1;
+}
+.gr-c-paginator__btn {
+  font-size: 32px;
+  color: #028abe;
+  margin: 0 1rem 0 0;
+  line-height: 1;
+}
+.gr-c-paginator__btn--next {
+  margin: 0 0 0 1rem;
+}
+.gr-c-paginator__btn:hover {
+  text-decoration: none;
+  color: #028abe;
+}
+
+/*
+ * calendar
+ */
+.gr-c-calendar__header {
+  margin: 0 0 2rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid #ccc;
+  margin: 0 0 3rem;
+}
+.gr-c-calendar__heading {
+  font-size: 32px;
+  color: #182962;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+}
+.gr-c-cal .gr-c-calendar__heading {
+  margin: 0;
+}
+.gr-c-calendar__paginator {
+  margin-left: -10px;
+  /* magic number -- visually aligns left edge of arrow with edge of component */
+}
+.gr-c-calendar__reset-btn {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-left: auto;
+  /* pull element to right */
+}
+.gr-c-calendar__weekdays, .gr-c-calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 0;
+  margin: 0 auto;
+}
+.gr-c-calendar__weekdays li, .gr-c-calendar__grid li {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+}
+.gr-c-calendar__weekdays {
+  margin-bottom: 1rem;
+}
+.gr-c-calendar__weekdays li {
+  content: attr(title);
+  text-align: center;
+  font-size: 20px;
+  line-height: 1;
+  color: #182962;
+}
+.gr-c-calendar__weekdays abbr[title] {
+  border: none;
+  text-decoration: none;
+}
+.gr-c-calendar__grid {
+  border-width: 1px 0 0 1px;
+  border-style: solid;
+  border-color: #ccc;
+}
+.gr-c-calendar__grid li {
+  background-color: #fff;
+  padding: 1rem;
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  border-color: #ccc;
+  position: relative;
+}
+.gr-c-calendar__grid li:nth-child(1) .gr-c-calendar__day-number, .gr-c-calendar__grid li:nth-child(2) .gr-c-calendar__day-number, .gr-c-calendar__grid li:nth-child(3) .gr-c-calendar__day-number, .gr-c-calendar__grid li:nth-child(4) .gr-c-calendar__day-number {
+  color: #ccc;
+}
+.gr-c-calendar__day-number {
+  color: #979797;
+  line-height: 1;
+  position: absolute;
+  right: 1rem;
+  top: .85rem;
+}
+.gr-c-calendar__day-box {
+  height: 0;
+  padding-top: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+.gr-c-calendar__toggle {
+  /* display toggle on wider screens only */
+  display: none;
+}
+@media (min-width: 64em) {
+  .gr-c-calendar__toggle {
+    display: -ms-flexbox;
+    display: flex;
+    /* use display value used in ".gr-c-toggle" component */
+  }
+}
+
+/* temporary */
+/* make sure calendar list view is always visible on smaller screens */
+@media (max-width: 64em) {
+  .calendar-list {
+    display: block !important;
+    /* use !important to override inline style */
+  }
+}
+
+/*
+ * mobile nav
+ */
+/* For the mobile nav, we're changing its position at a breakpoint rathern toggling its visibility (show/hide). This is because the Slinky menu component needs to be technically visible in order to display properly. */
+@media (min-width: 64em) {
+  .gr-c-mobile-nav-wrapper {
+    /* push componet off screen */
+    position: absolute;
+    top: -5000rem;
+    left: 0;
+    right: 0;
+    height: 0;
+  }
+}
+
+.gr-c-mobile-nav {
+  background: #182962;
+  position: relative;
+  z-index: 1;
+  /* this should be in a variable and be highest possible */
+}
+.gr-c-mobile-nav__header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.gr-c-mobile-nav__btn {
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  padding: .5rem;
+}
+.gr-c-mobile-nav__btn:hover {
+  text-decoration: none;
+}
+.gr-c-mobile-nav__menu, .gr-c-mobile-nav__search-box {
+  border-top: 1px solid #666;
+  /* this value should be in a variable */
+}
+.gr-c-mobile-nav__menu {
+  position: absolute;
+  top: -5000rem;
+  left: 0;
+  right: 0;
+}
+.gr-c-mobile-nav__menu.active {
+  top: 100%;
+}
+.gr-c-mobile-nav__search-box {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  max-width: 100%;
+  /* override */
+}
+.gr-c-mobile-nav .gr-c-search-box__text-input:hover, .gr-c-mobile-nav .gr-c-search-box__text-input:focus, .gr-c-mobile-nav .gr-c-search-box__text-input:focus:hover {
+  border-color: #ebeced;
+  border-color: var(--gr-light-gray);
+}
+.gr-c-mobile-nav .gr-c-search-box__btn {
+  display: none;
+}
+.gr-c-mobile-nav ::-webkit-input-placeholder {
+  color: #979797;
+  color: var(--gr-dark-gray);
+}
+.gr-c-mobile-nav :-ms-input-placeholder {
+  color: #979797;
+  color: var(--gr-dark-gray);
+}
+.gr-c-mobile-nav ::placeholder {
+  color: #979797;
+  color: var(--gr-dark-gray);
+}
+
+/*
+ * float label
+ */
+.field--wrapper {
+  position: relative;
+}
+.field--wrapper label {
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  font-size: 12px;
+  color: #ccc;
+  transition: all .1s linear;
+  opacity: 0;
+  font-weight: bold;
+}
+.field--wrapper label.on {
+  color: #028abe;
+}
+
+/*
+ * video
+ */
+.gr-c-video {
+  height: 0;
+  position: relative;
+  padding-top: 56.25%;
+  /* 56.25% is used for '560 x 315' dimensions (YouTube videos) */
+}
+.gr-c-video__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+ * form
+ */
+
+/*
+ * modal
+ */
+.gr-c-modal {
+  /* NOTE: customizations for modal that includes "photo block" carousel -- these might be changed to be default settings */
+  /* NOTE: the purpose of the cusomizations is make sure hidden modal content can be viewed by scrolling the page */
+}
+.gr-c-modal__header {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: 1fr auto;
+  border-color: #ccc;
+  border-color: var(--gr-medium-gray);
+  border-style: solid;
+  border-width: 0 0 1px;
+  padding: 0 0 1rem;
+  margin: 0 0 1rem;
+}
+.gr-c-modal__dialog {
+  transform: translate(0, -500%);
+  transition: transform 0.3s ease-out;
+  background: #fff;
+  padding: 1rem;
+  width: 100%;
+  max-width: 700px;
+  /* magic number -- this should be in a variable? */
+  margin-right: auto;
+  margin-left: auto;
+  position: fixed;
+  top: -100%;
+  z-index: 11;
+  /* should this value be in a variable? */
+  right: 0;
+  left: 0;
+}
+.gr-c-modal__heading {
+  margin: 0;
+}
+.gr-c-modal__close-btn {
+  font-weight: bold;
+  justify-self: end;
+}
+.gr-c-modal__close-btn:hover {
+  text-decoration: none;
+}
+.gr-c-modal:before {
+  /* modal background */
+  content: "";
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  /* should this value be in a variable? */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  /* should this value be in a variable? */
+}
+.gr-c-modal:target:before {
+  display: block;
+}
+.gr-c-modal:target .gr-c-modal__dialog {
+  transform: translate(0, 0);
+  top: 20%;
+  /* should this value be in a variable? */
+}
+
+/*
+ * icon box
+ */
+.gr-c-icon-box {
+  list-style: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+.gr-c-icon-box__item {
+  margin-right: 1.5rem;
+}
+.gr-c-icon-box__item:last-child {
+  margin-right: 0;
+}
+.gr-c-icon-box__link {
+  color: #f47c2e;
+  color: var(--gr-orange);
+  font-size: 2rem;
+}
+.gr-c-icon-box__link:hover {
+  text-decoration: none;
+}
+
+/*
+ * nav menu
+ * https://inclusive-components.design/tabbed-interfaces/
+ */
+.gr-c-tab-menu {
+  background-color: #ccc;
+  position: relative;
+  z-index: 999;
+  /* this value should be in a variable, and should be highest possible (must overlap everything else) */
+}
+.gr-c-tab-menu__inner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  /* this appeared to be needed for Safari on iPhone X */
+}
+.gr-c-tab-menu__section {
+  display: none;
+  background-color: #ccc;
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+  position: absolute;
+  top: 49px;
+  /* value matches height of "__tab" element */
+  width: 100%;
+  border-top: 2px solid #ccc;
+}
+.gr-c-tab-menu__input {
+  display: none;
+}
+.gr-c-tab-menu__input:checked + label {
+  color: #fff;
+  background-color: #028abe;
+  -ms-flex: 0 0 calc(50% - 1px);
+      flex: 0 0 calc(50% - 1px);
+}
+.gr-c-tab-menu__tab {
+  font-size: 14px;
+  color: #979797;
+  background-color: #ebeced;
+  -ms-flex: 0 0 calc(50% - 1px);
+      flex: 0 0 calc(50% - 1px);
+  width: calc(50% - 1px);
+  text-align: center;
+  padding: 0 1rem;
+  /* rely on line-height to control height of element */
+  line-height: 49px;
+  /* value should match "__section" element */
+  margin: 0 1px 0 0;
+}
+.gr-c-tab-menu__tab:last-of-type {
+  /* using "last of type" since there are hidden elements in between labels (inputs) */
+  margin: 0 0 0 1px;
+}
+.gr-c-tab-menu__tab:hover {
+  color: #979797;
+  background-color: #ebeced;
+  cursor: pointer;
+}
+.gr-c-tab-menu__icon {
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
+.gr-c-tab-menu #tab1:checked ~ #content1,
+.gr-c-tab-menu #tab2:checked ~ #content2 {
+  display: block;
+}
+.gr-c-tab-menu .gr-c-btn-set--grid {
+  grid-gap: 2px;
+}
+.gr-c-tab-menu .gr-c-btn {
+  font-size: 14px;
+  padding: 1rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.gr-l-template .gr-c-tab-menu, .gr-l-page .gr-c-tab-menu {
+  margin: 0 0 1rem;
+}
+
+/*
+ * page header
+ */
+.gr-c-page-header {
+  position: relative;
+  z-index: 2;
+  /* this element should be higher than the "gr-l-main" element */
+}
+
+/*
+ * utility / visibility
+ */
+[hidden],
+.gr-u-hidden {
+  display: none !important;
+}
+
+/*
+ * NOTE: hide only visually, but have it available for screen readers:
+ *       http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+/* NOTE: using both class names since they're both being used */
+.gr-u-visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * NOTE: extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard:
+ *       https://www.drupal.org/node/897638
+ */
+
+/*
+ * NOTE: hide visually and from screen readers, but maintain layout
+ */
+
+/*
+ * utility
+ */
+
+/*
+ * background color
+ */
+.gr-u-bg-primary-blue {
+  background-color: #028abe;
+  background-color: var(--gr-primary-blue);
+}
+
+.gr-u-bg-dark-blue {
+  background-color: #182962;
+  background-color: var(--gr-dark-blue);
+}
+
+.gr-u-bg-light-orange {
+  background-color: #ffb180;
+  background-color: var(--gr-light-orange);
+}
+
+.gr-u-bg-orange {
+  background-color: #f47c2e;
+  background-color: var(--gr-orange);
+}
+
+.gr-u-bg-dark-orange {
+  background-color: #ff6400;
+  background-color: var(--gr-dark-orange);
+}
+
+.gr-u-bg-red {
+  background-color: #ce0000;
+  background-color: var(--gr-red);
+}
+
+.gr-u-bg-green {
+  background-color: #98cb4e;
+  background-color: var(--gr-green);
+}
+
+.gr-u-bg-cool-gray {
+  background-color: #ebeced;
+  background-color: var(--gr-light-gray);
+}
+
+.gr-u-bg-medium-gray {
+  background-color: #ccc;
+  background-color: var(--gr-medium-gray);
+}
+
+.gr-u-bg-dark-gray {
+  background-color: #979797;
+  background-color: var(--gr-dark-gray);
+}
+
+.gr-u-bg-black {
+  background-color: #000;
+  background-color: var(--gr-black);
+}
+
+.gr-u-bg-white {
+  background-color: #fff;
+  background-color: var(--gr-white);
+}
+
+/*
+ * text color
+ */
+.gr-u-primary-blue {
+  color: #028abe;
+  color: var(--gr-primary-blue);
+}
+
+.gr-u-dark-blue {
+  color: #182962;
+  color: var(--gr-dark-blue);
+}
+
+.gr-u-light-orange {
+  color: #ffb180;
+  color: var(--gr-light-orange);
+}
+
+.gr-u-orange {
+  color: #f47c2e;
+  color: var(--gr-orange);
+}
+
+.gr-u-dark-orange {
+  color: #ff6400;
+  color: var(--gr-dark-orange);
+}
+
+.gr-u-red {
+  color: #ce0000;
+  color: var(--gr-red);
+}
+
+.gr-u-green {
+  color: #98cb4e;
+  color: var(--gr-green);
+}
+
+.gr-u-cool-gray {
+  color: #ebeced;
+  color: var(--gr-light-gray);
+}
+
+.gr-u-medium-gray {
+  color: #ccc;
+  color: var(--gr-medium-gray);
+}
+
+.gr-u-dark-gray {
+  color: #979797;
+  color: var(--gr-dark-gray);
+}
+
+.gr-u-black {
+  color: #000;
+  color: var(--gr-black);
+}
+
+.gr-u-white {
+  color: #fff;
+  color: var(--gr-white);
+}
+
+/*
+ * display
+ */
+.gr-u-display-contents {
+  display: contents;
+}
+
+/* show/hide based on viewport width */
+.gr-u-display--medium {
+  display: none;
+}
+@media (min-width: 48em) {
+  .gr-u-display--medium {
+    display: block;
+  }
+}
+@media (min-width: 48em) {
+  .gr-u-display--small-only {
+    display: none;
+  }
+}
+.gr-u-display--large-only {
+  display: none;
+}
+@media (min-width: 64em) {
+  .gr-u-display--large-only {
+    display: block;
+  }
+}
+@media (min-width: 64em) {
+  .gr-u-display--small-medium-only {
+    display: none;
+  }
+}
+
+/*
+ * font
+ */
+.gr-u-f-primary {
+  font: normal normal 400 100%/1.5 "Open Sans", sans-serif;
+}
+
+.gr-u-f-primary-light {
+  font: normal normal 300 100%/1.5 "Open Sans", sans-serif;
+}
+
+.gr-u-f-primary-bold {
+  font: normal normal 700 100%/1.5 "Open Sans", sans-serif;
+}
+
+.gr-u-f-primary-italic {
+  font: italic normal 400 100%/1.5 "Open Sans", sans-serif;
+}
+
+.gr-u-f-secondary {
+  font: normal normal 400 100%/1.5 "Roboto", sans-serif;
+}
+
+.gr-u-f-secondary-bold {
+  font: normal normal 500 100%/1.5 "Roboto", sans-serif;
+}
+
+.gr-u-f-secondary-italic {
+  font: italic normal 400 100%/1.5 "Roboto", sans-serif;
+}
+
+/*
+ * text
+ */
+
+/*
+ * palette
+ */
+.gr-pl-o-palette {
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* add margin below text inputs when viewing as "atoms" */
+}
+.gr-pl-o-palette__box {
+  border-color: #ebeced;
+  border-color: var(--gr-light-gray);
+  border-style: solid;
+  border-width: 1px;
+  height: 100%;
+  /* gives consistent visual heights, specifically for <textarea> demo */
+  padding: 1rem;
+}
+.gr-pl-o-palette__box--heading {
+  padding: 0;
+  border: 0;
+}
+.gr-pl-o-palette__swatch--color {
+  height: 0;
+  padding-top: 100%;
+  margin: 0 0 1rem;
+}
+.gr-pl-o-palette__swatch--color.gr-u-bg-white {
+  border-color: #ebeced;
+  border-color: var(--gr-light-gray);
+  border-style: solid;
+  border-width: 1px;
+}
+.gr-pl-o-palette__swatch--font {
+  border-color: #ebeced;
+  border-color: var(--gr-light-gray);
+  border-style: solid;
+  border-width: 0 0 1px;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+.gr-pl-o-palette__swatch--button {
+  border-color: #ebeced;
+  border-color: var(--gr-light-gray);
+  border-style: solid;
+  border-width: 0 0 1px;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.gr-pl-o-palette__swatch--heading {
+  margin-bottom: 1rem;
+}
+.gr-pl-o-palette__swatch--icon {
+  border-color: #ebeced;
+  border-color: var(--gr-light-gray);
+  border-style: solid;
+  border-width: 0 0 1px;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.gr-pl-o-palette__swatch--form-element {
+  border-color: #ebeced;
+  border-color: var(--gr-light-gray);
+  border-style: solid;
+  border-width: 0 0 1px;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.gr-pl-o-palette__heading {
+  font-weight: bold;
+  white-space: nowrap;
+}
+.gr-pl-o-palette__heading--big {
+  font-weight: normal;
+  font-size: 2rem;
+  margin: 0 0 1rem;
+  /* this class is used on a <p> element for font palette -- might want to change to heading or list markup */
+}
+.gr-pl-o-palette__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.gr-pl-o-palette__list-item {
+  margin: 0 0 .25rem;
+}
+.gr-pl-o-palette__list-item:last-child {
+  margin: 0;
+}
+.gr-pl-o-palette--fonts {
+  /* adjust grid item width so more of alphabet is visible */
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+}
+@media (min-width: 40em) {
+  .gr-pl-o-palette--fonts {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+.gr-pl-o-palette--buttons {
+  /* adjust grid item width so CSS classes remain on one line on wider screens */
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+}
+@media (min-width: 48em) {
+  .gr-pl-o-palette--buttons {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  }
+}
+.gr-pl-o-palette--headings {
+  display: block;
+  /* when viewing heading palette, use same margin value for all headings -- removes unnecessary whitepsace */
+}
+.gr-pl-o-palette--headings .gr-pl-o-palette__item {
+  margin: 0 0 2rem;
+}
+.gr-pl-o-palette--headings .gr-pl-o-palette__item:last-child {
+  margin: 0;
+}
+.gr-pl-o-palette--headings .gr-c-heading {
+  margin: 0 0 1rem;
+}
+.gr-pl-o-palette--icons {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+}
+.gr-pl-o-palette--form-elements {
+  /*  */
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+}
+@media (min-width: 18.75em) {
+  .gr-pl-o-palette--form-elements {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}
+.gr-pl-o-palette .gr-c-input-text {
+  margin: 0 0 1rem;
+}
+
+/*# sourceMappingURL=style.autoprefixed.css.map */

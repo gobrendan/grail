@@ -1,0 +1,921 @@
+{
+
+  "viewing-page" : "true", 
+
+  "body-class" : "gr-l-page sp-anonymous", 
+
+  "alert-box" : false, 
+
+  "page-header-live-active" : true, 
+
+  "list-box-set" : [
+
+    {
+
+      "class" : "gr-c-list-box-set--stacked", 
+      "item" : [
+
+        {
+
+          "list-box" : [
+
+            {
+
+              "class" : "gr-c-list-box--bordered", 
+              "heading" : "Result Types", 
+              "list" : "", 
+              "checkbox-set-exists" : [
+
+                {
+                  
+                  "checkbox-set" : [
+
+                    {
+                      
+                      "class" : "gr-c-list-box__item gr-c-list-box__checkbox-set", 
+                      "item" : [
+                
+                        {
+                
+                          "checkbox" : [
+                
+                            {
+                        
+                              "checkbox-class" : "", 
+                              "name" : "checkbox", 
+                              "value" : "checkbox-option-1",
+                              "id" : "checkbox-option-1", 
+                              "label-class" : "",
+                              "label-text" : "xlsx", 
+                              "disabled" : "", 
+                              "checked" : ""
+                        
+                            }
+                        
+                          ]
+                
+                        }, 
+                        
+                        {
+                
+                          "checkbox" : [
+                
+                            {
+                        
+                              "checkbox-class" : "", 
+                              "name" : "checkbox", 
+                              "value" : "checkbox-option-2",
+                              "id" : "checkbox-option-2", 
+                              "label-class" : "",
+                              "label-text" : "pptx", 
+                              "disabled" : "", 
+                              "checked" : ""
+                        
+                            }
+                        
+                          ]
+                
+                        },
+                
+                        {
+                
+                          "checkbox" : [
+                
+                            {
+                        
+                              "checkbox-class" : "", 
+                              "name" : "checkbox", 
+                              "value" : "checkbox-option-3",
+                              "id" : "checkbox-option-3", 
+                              "label-class" : "",
+                              "label-text" : "pdf", 
+                              "disabled" : "", 
+                              "checked" : ""
+                        
+                            }
+                        
+                          ]
+                
+                        }, 
+    
+                        {
+                
+                          "checkbox" : [
+                
+                            {
+                        
+                              "checkbox-class" : "", 
+                              "name" : "checkbox", 
+                              "value" : "checkbox-option-4",
+                              "id" : "checkbox-option-4", 
+                              "label-class" : "",
+                              "label-text" : "html", 
+                              "disabled" : "", 
+                              "checked" : ""
+                        
+                            }
+                        
+                          ]
+                
+                        }, 
+    
+                        {
+                
+                          "checkbox" : [
+                
+                            {
+                        
+                              "checkbox-class" : "", 
+                              "name" : "checkbox", 
+                              "value" : "checkbox-option-5",
+                              "id" : "checkbox-option-5", 
+                              "label-class" : "",
+                              "label-text" : "docx", 
+                              "disabled" : "", 
+                              "checked" : ""
+                        
+                            }
+                        
+                          ]
+                
+                        }, 
+    
+                        {
+                
+                          "checkbox" : [
+                
+                            {
+                        
+                              "checkbox-class" : "", 
+                              "name" : "checkbox", 
+                              "value" : "checkbox-option-6",
+                              "id" : "checkbox-option-6", 
+                              "label-class" : "",
+                              "label-text" : "other value", 
+                              "disabled" : "", 
+                              "checked" : ""
+                        
+                            }
+                        
+                          ]
+                
+                        }
+                
+                      ]
+                
+                    }
+                
+                  ]
+            
+                }
+            
+              ], 
+              "button-set-exists" : [
+    
+                {
+        
+                  "button-set" : [
+        
+                    {
+                
+                      "class" : "gr-c-list-box__item gr-c-list-box__btn-set",
+                      "item" : [
+                
+                        {
+                
+                          "button" : [
+                
+                            {
+                          
+                              "class" : "gr-c-btn-set__btn gr-c-btn--trans", 
+                              "button-icon" : "",
+                              "text" : "Apply"
+                
+                            }
+                
+                          ]
+                
+                        }, 
+                
+                        {
+                
+                          "button" : [
+                
+                            {
+                          
+                              "class" : "gr-c-btn-set__btn gr-c-btn--trans", 
+                              "button-icon" : "",
+                              "text" : "Clear"
+                
+                            }
+                
+                          ]
+                
+                        }
+                
+                      ]
+                
+                    }
+                
+                  ]
+        
+                }
+        
+              ]
+
+            }
+
+          ]
+
+        }, 
+
+        {
+
+          "list-box" : [
+
+            {
+
+              "class" : "gr-c-list-box--bordered", 
+              "heading" : "Tile Title", 
+              "list" : [
+
+                {
+                  
+                  "class" : "gr-c-list-box__list gr-c-list-box__item", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>First Item</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Second Item</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Third Item</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Fourth Item</a>"
+            
+                    }
+            
+                  ]
+            
+                }
+            
+              ], 
+              "checkbox" : "", 
+              "show-all" : [
+
+                {
+
+                  "class" : "gr-c-list-box__item", 
+                  "text" : "Show All"
+
+                }
+
+              ]
+
+            }
+
+          ]
+          
+        }, 
+
+        {
+
+          "list-box" : [
+
+            {
+
+              "class" : "gr-c-list-box--bordered", 
+              "heading" : "Tile Title", 
+              "list" : [
+
+                {
+                  
+                  "class" : "gr-c-list-box__list gr-c-list-box__item", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>First Item</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Second Item</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Third Item</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Fourth Item</a>"
+            
+                    }
+            
+                  ]
+            
+                }
+            
+              ], 
+              "checkbox" : "", 
+              "show-all" : [
+
+                {
+                  
+                  "class" : "gr-c-list-box__item", 
+                  "text" : "Show All"
+
+                }
+                
+              ]
+
+            }
+
+          ]
+          
+        }, 
+
+        {
+
+          "list-box" : [
+
+            {
+
+              "class" : "gr-c-list-box--bordered", 
+              "heading" : "Content Type", 
+              "list" : [
+
+                {
+                  
+                  "class" : "gr-c-list-box__list gr-c-list-box__item", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Document</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Item</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Task</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Picture</a>"
+            
+                    }
+            
+                  ]
+            
+                }
+            
+              ], 
+              "checkbox" : "", 
+              "show-all" : [
+
+                {
+
+                  "class" : "gr-c-list-box__item", 
+                  "text" : "Show All"
+
+                }
+                
+              ]
+
+            }
+
+          ]
+          
+        }, 
+
+        {
+
+          "list-box" : [
+
+            {
+
+              "class" : "gr-c-list-box--bordered", 
+              "heading" : "Tags", 
+              "list" : [
+
+                {
+                  
+                  "class" : "gr-c-list-box__list gr-c-list-box__item", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Tag 1</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Tag 2</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Tag 3</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Tag 4</a>"
+            
+                    }
+            
+                  ]
+            
+                }
+            
+              ], 
+              "checkbox" : "", 
+              "show-all" : [
+
+                {
+
+                  "class" : "gr-c-list-box__item", 
+                  "text" : "Show All"
+
+                }
+                
+              ]
+
+            }
+
+          ]
+          
+        }
+        
+      ]
+
+    }
+
+  ],
+
+  "article-header-exists" : [
+
+    {
+
+      "article-header" : [
+
+        {
+
+          "class" : "gr-c-article-header--inline", 
+          "heading" : "Search Results", 
+          "filter-btn" : true, 
+          "search-box" : "", 
+          "breadcrumbs" : "", 
+          "select" : [
+
+            {
+              
+              "class" : "", 
+              "option" : [
+        
+                {
+        
+                  "value" : "", 
+                  "text" : "Relevance", 
+                  "disabled" : ""
+        
+                },
+        
+                {
+        
+                  "value" : "", 
+                  "text" : "Option 2", 
+                  "disabled" : ""
+        
+                },
+        
+                {
+        
+                  "value" : "", 
+                  "text" : "Option 3", 
+                  "disabled" : ""
+        
+                }
+        
+              ]
+        
+            }
+        
+          ]
+
+        }
+
+      ]
+
+    }
+  
+  ], 
+
+  "result-box-set-1-exists" : [
+
+    {
+
+      "result-box-set" : [
+
+        {
+
+          "heading-exists" : [
+
+            {
+
+              "heading" : "People Search Results for “Santa”"
+
+            }
+
+          ],
+          "item" : [
+
+            {
+
+              "result-box" : [
+
+                {
+            
+                  "class" : "gr-c-result-box--person", 
+                  "img" : [
+            
+                    {
+                
+                      "1x-src" : "../../assets/images/santa-thumb@1x.jpg",
+                      "2x-src" : "../../assets/images/santa-thumb@2x.jpg",
+                      "class" : "gr-c-result-box__media",
+                      "alt" : ""
+                
+                    }
+                
+                  ], 
+                  "heading" : "Lorem Ipsum Santa", 
+                  "item" : [
+        
+                    {
+                      
+                      "class" : "", 
+                      "text" : "By: <a href=''>John Doe</a>"
+        
+                    }, 
+        
+                    {
+                      
+                      "class" : "gr-c-result-box__item--spaced", 
+                      "text" : "9/10/2015"
+        
+                    }, 
+        
+                    { 
+                      
+                      "class" : "gr-c-result-box__item--spaced", 
+                      "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dui mi, ullamcorper non odio et, auctor eleifend tellus. Duis id turpis aliquam, pulvinar quam ut, sagittis dui&hellip;"
+        
+                    }, 
+        
+                    {
+                      
+                      "class" : "", 
+                      "text" : "<i class='gr-i-file-excel'></i> <a href=''>View File</a>"
+        
+                    }
+        
+                  ], 
+                  "tooltip" : ""
+            
+                }
+            
+              ]
+
+            }, 
+
+            {
+
+              "result-box" : [
+
+                {
+            
+                  "class" : "gr-c-result-box--person", 
+                  "img" : [
+            
+                    {
+                
+                      "1x-src" : "../../assets/images/mrs-santa-thumb@1x.jpg",
+                      "2x-src" : "../../assets/images/mrs-santa-thumb@2x.jpg",
+                      "class" : "gr-c-result-box__media",
+                      "alt" : ""
+                
+                    }
+                
+                  ], 
+                  "heading" : "Dolor Sit Amet Santa", 
+                  "item" : [
+        
+                    {
+                      
+                      "class" : "", 
+                      "text" : "By: <a href=''>John Doe</a>"
+        
+                    }, 
+        
+                    {
+                      
+                      "class" : "gr-c-result-box__item--spaced", 
+                      "text" : "9/10/2015"
+        
+                    }, 
+        
+                    { 
+                      
+                      "class" : "gr-c-result-box__item--spaced", 
+                      "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dui mi, ullamcorper non odio et, auctor eleifend tellus. Duis id turpis aliquam, pulvinar quam ut, sagittis dui&hellip;"
+        
+                    }, 
+        
+                    {
+                      
+                      "class" : "", 
+                      "text" : "<i class='gr-i-file-word'></i> <a href=''>View File</a>"
+        
+                    }
+        
+                  ], 
+                  "tooltip" : ""
+            
+                }
+            
+              ]
+
+            }
+
+          ], 
+          "show-more-exists" : true
+
+        }
+
+      ], 
+      "pagination" : "", 
+      "show-more-exists" : true
+
+    }
+
+  ], 
+
+  "result-box-set-2-exists" : "", 
+
+  "result-list-block-1-exists" : [
+
+    {
+
+      "result-list-block" : [
+
+        {
+    
+          "article-header" : [
+    
+            {
+              
+              "class" : "gr-c-result-list-block__header", 
+              "heading" : "About 1,045 Results", 
+              "search-box" : "", 
+              "breadcrumbs" : [
+    
+                {
+                  
+                  "class" : "", 
+                  "item" :[
+                    
+                    {
+            
+                      "text" : "Alert Me"
+            
+                    }, 
+            
+                    {
+            
+                      "text" : "Preferences"
+            
+                    }, 
+            
+                    {
+            
+                      "text" : "Advanced Search"
+            
+                    }
+            
+                  ]
+            
+                }
+            
+              ], 
+              "select" : ""
+        
+            }
+        
+          ], 
+          "result-list" : [
+    
+            {
+        
+              "class" : "", 
+              "item" : [
+        
+                {
+        
+                  "link-text" : "Santa Folder (Link)", 
+                  "details" : "raiportal.sharepoint.com/.../foldername/foldername/foldername"
+        
+                }, 
+        
+                {
+        
+                  "link-text" : "Santa’s Christmas List", 
+                  "details" : "raiportal.sharepoint.com/…/foldername/foldername/foldername/document.one"
+        
+                }, 
+        
+                {
+        
+                  "link-text" : "Secret Santa", 
+                  "details" : "raiportal.sharepoint.com/…/foldername/foldername/foldername/document.one"
+        
+                }, 
+
+                {
+        
+                  "link-text" : "Santa Folder (Link)", 
+                  "details" : "raiportal.sharepoint.com/.../foldername/foldername/foldername"
+        
+                }, 
+        
+                {
+        
+                  "link-text" : "Santa’s Christmas List", 
+                  "details" : "raiportal.sharepoint.com/…/foldername/foldername/foldername/document.one"
+        
+                }, 
+        
+                {
+        
+                  "link-text" : "Secret Santa", 
+                  "details" : "raiportal.sharepoint.com/…/foldername/foldername/foldername/document.one"
+        
+                }, 
+
+                {
+        
+                  "link-text" : "Santa Folder (Link)", 
+                  "details" : "raiportal.sharepoint.com/.../foldername/foldername/foldername"
+        
+                }, 
+        
+                {
+        
+                  "link-text" : "Santa’s Christmas List", 
+                  "details" : "raiportal.sharepoint.com/…/foldername/foldername/foldername/document.one"
+        
+                }, 
+        
+                {
+        
+                  "link-text" : "Secret Santa", 
+                  "details" : "raiportal.sharepoint.com/…/foldername/foldername/foldername/document.one"
+        
+                }, 
+
+                {
+        
+                  "link-text" : "Secret Santa", 
+                  "details" : "raiportal.sharepoint.com/…/foldername/foldername/foldername/document.one"
+        
+                }
+        
+              ]
+        
+            }
+        
+          ], 
+          "pagination" : [
+    
+            {
+              
+              "class" : "gr-c-result-list-block__pagination", 
+              "item" :[
+                
+                {
+        
+                  "list-item-class" : "gr-c-pagination__item--left-arrow", 
+                  "link-class" : "gr-c-pagination__link--arrow", 
+                  "text" : "<"
+        
+                }, 
+        
+                {
+        
+                  "list-item-class" : "", 
+                  "link-class" : "gr-c-pagination__link--active", 
+                  "text" : "1"
+        
+                }, 
+        
+                {
+        
+                  "list-item-class" : "", 
+                  "link-class" : "", 
+                  "text" : "2"
+        
+                }, 
+        
+                {
+        
+                  "list-item-class" : "", 
+                  "link-class" : "", 
+                  "text" : "3"
+        
+                }, 
+        
+                {
+        
+                  "list-item-class" : "gr-c-pagination__item--right-arrow", 
+                  "link-class" : "gr-c-pagination__link--arrow", 
+                  "text" : ">"
+        
+                }
+        
+              ]
+        
+            }
+        
+          ]
+    
+        }
+    
+      ]
+
+    }
+
+  ], 
+
+  "article-block-exists" : "", 
+
+  "article-block-1-exists" : "", 
+
+  "article-block-2-exists" : "", 
+
+  "article-block-3-exists" : "", 
+
+  "article-block-4-exists" : "",
+
+  "article-block-5-exists" : "",
+
+  "calendar-exists" : "",
+  
+  "page-footer-live-active" : true
+
+}

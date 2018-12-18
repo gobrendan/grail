@@ -1,0 +1,88 @@
+/*
+ * nav box
+ */
+
+.gr-c-nav-box {
+
+  //
+
+  &__heading {
+
+    @include custom-property(color, --gr-dark-gray, $gr-dark-gray);
+    font-size: $gr-font-size-eta;
+    font-family: $gr-font-family-primary;
+    margin: 0 0 0.5rem; 
+
+  }
+
+  &__list {
+
+    display: flex; 
+    flex-wrap: wrap;
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+
+  }
+
+  &__item {
+
+    margin-right: 1rem; 
+    position: relative;
+
+    &:last-child {
+
+      margin-right: 0; 
+      
+    }
+
+    &--bordered {
+
+      padding-left: calc(2rem + 4px); /* value takes into account width of pseudo element below */
+
+      /* use pseudo elements for line */
+
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+
+        @include custom-property(background-color, --gr-medium-gray, $gr-medium-gray);
+        display: block;
+        content: "";
+        width: 4px; 
+        height: 100px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+      }
+
+    }
+
+  }
+
+  &__link {
+
+    @include custom-property(color, --gr-dark-gray, $gr-dark-gray);
+    font-size: $gr-font-size-epsilon;
+
+  }
+
+  @include mq($gr-large-breakpoint) {
+
+    &__item {
+
+      margin-right: 2rem;
+
+      &:last-child {
+
+        margin-right: 0; 
+        
+      }
+      
+    }
+
+  }
+
+}

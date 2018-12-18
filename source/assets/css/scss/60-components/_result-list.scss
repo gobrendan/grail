@@ -1,0 +1,35 @@
+/* 
+ * result list
+ */
+
+.gr-c-result-list {
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+
+    margin: 0 0 2rem;
+
+    &:last-child {
+
+      margin: 0;
+
+    }
+
+  }
+
+  &__link {
+
+    //
+
+  }
+
+  &__details {
+
+    word-break: break-word; /* this works well for long URLs */
+
+  }
+
+}

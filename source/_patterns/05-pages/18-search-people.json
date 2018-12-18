@@ -1,0 +1,809 @@
+{
+
+  "viewing-page" : "true", 
+
+  "body-class" : "gr-l-page sp-anonymous", 
+
+  "alert-box" : false, 
+
+  "page-header-live-active" : true, 
+
+  "list-box-set" : [
+
+    {
+
+      "class" : "gr-c-list-box-set--stacked", 
+      "item" : [
+
+        {
+
+          "list-box" : [
+
+            {
+
+              "class" : "gr-c-list-box--bordered", 
+              "heading" : "City", 
+              "list" : [
+
+                {
+                  
+                  "class" : "gr-c-list-box__item gr-c-list-box__list", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Cincinnati</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Chicago</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>New York</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Portland</a>"
+            
+                    }
+            
+                  ]
+            
+                }
+            
+              ], 
+              "checkbox" : ""
+
+            }
+
+          ]
+
+        }, 
+
+        {
+
+          "list-box" : [
+
+            {
+
+              "class" : "gr-c-list-box--bordered", 
+              "heading" : "Department", 
+              "list" : [
+
+                {
+                  
+                  "class" : "gr-c-list-box__list gr-c-list-box__item", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Department Name</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Department Name</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Department Name</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Department Name</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Department Name</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Department Name</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Department Name</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Department Name</a>"
+            
+                    }
+            
+                  ]
+            
+                }
+            
+              ], 
+              "checkbox" : ""
+
+            }
+
+          ]
+          
+        }
+        
+      ]
+
+    }
+
+  ],
+
+  "article-header-exists" : [
+
+    {
+
+      "article-header" : [
+
+        {
+
+          "class" : "", 
+          "heading" : "People Search", 
+          "filter-btn" : true, 
+          "search-box" : [
+        
+            {
+        
+              "placeholder" : "Search"
+              
+            }
+            
+          ], 
+          "breadcrumbs" : [
+
+            {
+              
+              "class" : "", 
+              "item" :[
+                
+                {
+        
+                  "text" : "People"
+        
+                }, 
+        
+                {
+        
+                  "text" : "Groups"
+        
+                }, 
+        
+                {
+        
+                  "text" : "Offices"
+        
+                }
+        
+              ]
+        
+            }
+        
+          ], 
+          "select" : ""
+
+        }
+
+      ]
+
+    }
+
+  ],
+
+  "result-box-set-1-exists" : [
+
+    {
+
+      "result-box-set" : [
+
+        {
+
+          "item" : [
+
+            {
+
+              "result-box" : [
+
+                {
+            
+                  "class" : "gr-c-result-box--person gr-c-result-box--w-tooltip", 
+                  "img" : [
+            
+                    {
+                
+                      "1x-src" : "../../assets/images/santa-thumb@1x.jpg",
+                      "2x-src" : "../../assets/images/santa-thumb@2x.jpg",
+                      "class" : "gr-c-result-box__media",
+                      "alt" : ""
+                
+                    }
+                
+                  ], 
+                  "heading" : "John Williams", 
+                  "item" : [
+            
+                    {
+            
+                      "class" : "", 
+                      "text" : "Director"
+            
+                    }, 
+            
+                    {
+            
+                      "class" : "", 
+                      "text" : "HR"
+            
+                    }, 
+        
+                    {
+            
+                      "class" : "", 
+                      "text" : "513-299-2351"
+            
+                    }, 
+        
+                    {
+            
+                      "class" : "", 
+                      "text" : "<a href=''>john@website.com</a>"
+            
+                    }, 
+        
+                    {
+        
+                      "class" : "gr-u-display--small-medium-only", 
+                      "text" : "Location: Winston Salem"
+        
+                    }, 
+        
+                    {
+        
+                      "class" : "gr-u-display--small-medium-only", 
+                      "text" : "Manager: John Doe"
+        
+                    }, 
+            
+                  ], 
+                  "tooltip" : [
+            
+                    {
+                
+                      "class" : "gr-c-result-box__tooltip",
+                      "heading" : "John Williams", 
+                      "item" : [
+                
+                        {
+                
+                          "class" : "", 
+                          "text" : "Location: Winston Salem"
+                
+                        }, 
+        
+                        {
+                
+                          "class" : "", 
+                          "text" : "Manager: John Doe"
+                
+                        }
+                
+                      ]
+                
+                    }
+                
+                  ]
+            
+                }
+            
+              ]
+
+            }, 
+
+            {
+
+              "result-box" : [
+
+                {
+            
+                  "class" : "gr-c-result-box--person gr-c-result-box--w-tooltip", 
+                  "img" : [
+            
+                    {
+                
+                      "1x-src" : "../../assets/images/santa-thumb@1x.jpg",
+                      "2x-src" : "../../assets/images/santa-thumb@2x.jpg",
+                      "class" : "gr-c-result-box__media",
+                      "alt" : ""
+                
+                    }
+                
+                  ], 
+                  "heading" : "John Williams", 
+                  "item" : [
+            
+                    {
+            
+                      "class" : "", 
+                      "text" : "Director"
+            
+                    }, 
+            
+                    {
+            
+                      "class" : "", 
+                      "text" : "HR"
+            
+                    }, 
+        
+                    {
+            
+                      "class" : "", 
+                      "text" : "513-299-2351"
+            
+                    }, 
+        
+                    {
+            
+                      "class" : "", 
+                      "text" : "<a href=''>john@website.com</a>"
+            
+                    }, 
+        
+                    {
+        
+                      "class" : "gr-u-display--small-medium-only", 
+                      "text" : "Location: Winston Salem"
+        
+                    }, 
+        
+                    {
+        
+                      "class" : "gr-u-display--small-medium-only", 
+                      "text" : "Manager: John Doe"
+        
+                    }, 
+            
+                  ], 
+                  "tooltip" : [
+            
+                    {
+                
+                      "class" : "gr-c-result-box__tooltip",
+                      "heading" : "John Williams", 
+                      "item" : [
+                
+                        {
+                
+                          "class" : "", 
+                          "text" : "Location: Winston Salem"
+                
+                        }, 
+        
+                        {
+                
+                          "class" : "", 
+                          "text" : "Manager: John Doe"
+                
+                        }
+                
+                      ]
+                
+                    }
+                
+                  ]
+            
+                }
+            
+              ]
+
+            }, 
+
+            {
+
+              "result-box" : [
+
+                {
+            
+                  "class" : "gr-c-result-box--person gr-c-result-box--w-tooltip", 
+                  "img" : [
+            
+                    {
+                
+                      "1x-src" : "../../assets/images/santa-thumb@1x.jpg",
+                      "2x-src" : "../../assets/images/santa-thumb@2x.jpg",
+                      "class" : "gr-c-result-box__media",
+                      "alt" : ""
+                
+                    }
+                
+                  ], 
+                  "heading" : "John Williams", 
+                  "item" : [
+            
+                    {
+            
+                      "class" : "", 
+                      "text" : "Director"
+            
+                    }, 
+            
+                    {
+            
+                      "class" : "", 
+                      "text" : "HR"
+            
+                    }, 
+        
+                    {
+            
+                      "class" : "", 
+                      "text" : "513-299-2351"
+            
+                    }, 
+        
+                    {
+            
+                      "class" : "", 
+                      "text" : "<a href=''>john@website.com</a>"
+            
+                    }, 
+        
+                    {
+        
+                      "class" : "gr-u-display--small-medium-only", 
+                      "text" : "Location: Winston Salem"
+        
+                    }, 
+        
+                    {
+        
+                      "class" : "gr-u-display--small-medium-only", 
+                      "text" : "Manager: John Doe"
+        
+                    }, 
+            
+                  ], 
+                  "tooltip" : [
+            
+                    {
+                
+                      "class" : "gr-c-result-box__tooltip",
+                      "heading" : "John Williams", 
+                      "item" : [
+                
+                        {
+                
+                          "class" : "", 
+                          "text" : "Location: Winston Salem"
+                
+                        }, 
+        
+                        {
+                
+                          "class" : "", 
+                          "text" : "Manager: John Doe"
+                
+                        }
+                
+                      ]
+                
+                    }
+                
+                  ]
+            
+                }
+            
+              ]
+
+            }, 
+
+            {
+
+              "result-box" : [
+
+                {
+            
+                  "class" : "gr-c-result-box--person gr-c-result-box--w-tooltip", 
+                  "img" : [
+            
+                    {
+                
+                      "1x-src" : "../../assets/images/santa-thumb@1x.jpg",
+                      "2x-src" : "../../assets/images/santa-thumb@2x.jpg",
+                      "class" : "gr-c-result-box__media",
+                      "alt" : ""
+                
+                    }
+                
+                  ], 
+                  "heading" : "John Williams", 
+                  "item" : [
+            
+                    {
+            
+                      "class" : "", 
+                      "text" : "Director"
+            
+                    }, 
+            
+                    {
+            
+                      "class" : "", 
+                      "text" : "HR"
+            
+                    }, 
+        
+                    {
+            
+                      "class" : "", 
+                      "text" : "513-299-2351"
+            
+                    }, 
+        
+                    {
+            
+                      "class" : "", 
+                      "text" : "<a href=''>john@website.com</a>"
+            
+                    }, 
+        
+                    {
+        
+                      "class" : "gr-u-display--small-medium-only", 
+                      "text" : "Location: Winston Salem"
+        
+                    }, 
+        
+                    {
+        
+                      "class" : "gr-u-display--small-medium-only", 
+                      "text" : "Manager: John Doe"
+        
+                    }, 
+            
+                  ], 
+                  "tooltip" : [
+            
+                    {
+                
+                      "class" : "gr-c-result-box__tooltip",
+                      "heading" : "John Williams", 
+                      "item" : [
+                
+                        {
+                
+                          "class" : "", 
+                          "text" : "Location: Winston Salem"
+                
+                        }, 
+        
+                        {
+                
+                          "class" : "", 
+                          "text" : "Manager: John Doe"
+                
+                        }
+                
+                      ]
+                
+                    }
+                
+                  ]
+            
+                }
+            
+              ]
+
+            }, 
+
+            {
+
+              "result-box" : [
+
+                {
+            
+                  "class" : "gr-c-result-box--person gr-c-result-box--w-tooltip", 
+                  "img" : [
+            
+                    {
+                
+                      "1x-src" : "../../assets/images/santa-thumb@1x.jpg",
+                      "2x-src" : "../../assets/images/santa-thumb@2x.jpg",
+                      "class" : "gr-c-result-box__media",
+                      "alt" : ""
+                
+                    }
+                
+                  ], 
+                  "heading" : "John Williams", 
+                  "item" : [
+            
+                    {
+            
+                      "class" : "", 
+                      "text" : "Director"
+            
+                    }, 
+            
+                    {
+            
+                      "class" : "", 
+                      "text" : "HR"
+            
+                    }, 
+        
+                    {
+            
+                      "class" : "", 
+                      "text" : "513-299-2351"
+            
+                    }, 
+        
+                    {
+            
+                      "class" : "", 
+                      "text" : "<a href=''>john@website.com</a>"
+            
+                    }, 
+        
+                    {
+        
+                      "class" : "gr-u-display--small-medium-only", 
+                      "text" : "Location: Winston Salem"
+        
+                    }, 
+        
+                    {
+        
+                      "class" : "gr-u-display--small-medium-only", 
+                      "text" : "Manager: John Doe"
+        
+                    }, 
+            
+                  ], 
+                  "tooltip" : [
+            
+                    {
+                
+                      "class" : "gr-c-result-box__tooltip",
+                      "heading" : "John Williams", 
+                      "item" : [
+                
+                        {
+                
+                          "class" : "", 
+                          "text" : "Location: Winston Salem"
+                
+                        }, 
+        
+                        {
+                
+                          "class" : "", 
+                          "text" : "Manager: John Doe"
+                
+                        }
+                
+                      ]
+                
+                    }
+                
+                  ]
+            
+                }
+            
+              ]
+
+            }
+
+          ]
+
+        }
+
+      ], 
+      "pagination" : [
+
+        {
+          
+          "class" : "gr-c-result-box-set__pagination", 
+          "item" :[
+            
+            {
+    
+              "list-item-class" : "gr-c-pagination__item--left-arrow", 
+              "link-class" : "gr-c-pagination__link--arrow", 
+              "text" : "<"
+    
+            }, 
+    
+            {
+    
+              "list-item-class" : "", 
+              "link-class" : "gr-c-pagination__link--active", 
+              "text" : "1"
+    
+            }, 
+    
+            {
+    
+              "list-item-class" : "", 
+              "link-class" : "", 
+              "text" : "2"
+    
+            }, 
+    
+            {
+    
+              "list-item-class" : "", 
+              "link-class" : "", 
+              "text" : "3"
+    
+            }, 
+    
+            {
+    
+              "list-item-class" : "gr-c-pagination__item--right-arrow", 
+              "link-class" : "gr-c-pagination__link--arrow", 
+              "text" : ">"
+    
+            }
+    
+          ]
+    
+        }
+    
+      ]
+
+    }
+
+  ], 
+
+  "result-box-set-2-exists" : "", 
+
+  "result-list-block-1-exists" : "", 
+
+  "article-block-1-exists" : "", 
+
+  "article-block-2-exists" : "", 
+
+  "article-block-3-exists" : "", 
+
+  "article-block-4-exists" : "",
+
+  "article-block-5-exists" : "",
+
+  "calendar-exists" : "",
+  
+  "page-footer-live-active" : true
+
+}

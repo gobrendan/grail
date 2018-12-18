@@ -1,0 +1,16 @@
+/*
+ * promo button set
+ */
+
+.gr-c-promo-btn-set {
+
+  display: flex; 
+  justify-content: space-between;
+
+  .gr-c-promo-btn {
+
+    flex: 0 0 calc(50% - 1rem);
+
+  }
+
+}

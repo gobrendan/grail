@@ -1,0 +1,199 @@
+/*
+ * modal
+ */
+
+ .gr-c-modal {
+
+  //
+
+  &__header {
+
+    @include grid(false, 0, 1fr auto, auto);
+    @include custom-property(border-color, --gr-medium-gray, $gr-medium-gray);
+    border-style: solid; 
+    border-width: 0 0 1px; 
+    padding: 0 0 1rem;
+    margin: 0 0 1rem;
+
+  }
+
+  &__dialog {
+
+    @include translate(0, -500%);
+    @include transition-transform(0.3s ease-out);
+
+    background: $gr-white;
+    padding: 1rem;
+    width: 100%;
+    max-width: 700px; /* magic number -- this should be in a variable? */
+    margin-right: auto;
+    margin-left: auto;
+
+    position: fixed;
+    top: -100%;
+    z-index: 11; /* should this value be in a variable? */
+    right: 0;
+    left: 0;
+
+  }
+
+  &__heading {
+
+    margin: 0;
+
+  }
+
+  &__close-btn {
+
+    // position: absolute;
+    // right: 1rem;
+    // top: 1rem;
+    font-weight: bold;
+    justify-self: end;
+
+    &:hover {
+
+      text-decoration: none; 
+
+    }
+
+  }
+
+  &__content {
+
+    //
+
+  }
+
+  &__video {
+
+    //
+    
+  }
+
+  &:before { 
+    
+    /* modal background */
+
+    content: "";
+    display: none;
+    background: rgba(0,0,0,.5); /* should this value be in a variable? */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10; /* should this value be in a variable? */
+
+  }
+
+  &:target {
+
+    &:before {
+
+      display: block;
+
+    }
+
+    .gr-c-modal__dialog {
+
+      @include translate(0, 0);
+      top: 20%; /* should this value be in a variable? */
+
+    }
+
+  }
+
+  /* NOTE: customizations for modal that includes "photo block" carousel -- these might be changed to be default settings */
+  /* NOTE: the purpose of the cusomizations is make sure hidden modal content can be viewed by scrolling the page */
+
+  &--tall {
+
+    // position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: -999; /* NOTE: this value should be in a variable */
+
+    .modal__dialog {
+
+      position: absolute;
+
+      &--full-width {
+        
+        // max-width: 75rem;
+        // max-width: calc(94vh - 50px);
+        max-width: 815px;
+  
+      }
+
+    }
+
+    /* NOTE: the "__background" element should replace the :before pseudo element -- markup edits/additions will be needed in dev */
+
+    .modal__background {
+
+      display: none;
+      background: rgba(orange, .5);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      cursor: default; 
+
+    }
+
+    &:target {
+
+      z-index: 999; 
+      
+      .modal__dialog {
+        
+        //
+
+        &--full-width {
+
+          top: 60px; /* NOTE: magic number -- mimics height of mobile header */
+    
+        }
+  
+      }
+
+      &:before {
+        
+        display: none; /* NOTE: this will ultimately be removed -- see note about "__background" element above */
+  
+      }
+
+      .modal__background {
+
+        display: block;
+
+      }
+
+    }
+      
+    @media (min-width: 75rem) and (min-height: 1024px) {
+
+      .modal__dialog {
+        
+        //
+  
+        &--full-width {
+          
+          max-width: 75rem;
+    
+        }
+  
+      }
+
+    }
+  
+  }
+
+}

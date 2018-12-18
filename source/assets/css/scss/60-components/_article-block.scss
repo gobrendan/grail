@@ -1,0 +1,320 @@
+/*
+ * article block
+ */
+
+.gr-c-article-block {
+
+  padding: 1rem 0 3rem; 
+  background: $gr-white;
+  border: 1px solid $gr-light-gray; 
+  overflow: hidden; /* this component might contain floated elements -- this resolves overflow issues */
+
+  &__header {
+
+    padding: 0 1rem; 
+    margin: 0 0 1rem; 
+
+  }
+
+  &__heading {
+
+    font-size: $gr-font-size-delta; 
+    color: $gr-dark-blue;
+    padding: 0 0 1rem; 
+    border-bottom: 1px solid $gr-light-gray;
+    margin: 0 0 1rem; 
+    
+  }
+
+  &__filter-btn {
+
+    font-size: $gr-font-size-delta;  
+    float: right;
+    text-decoration: underline;
+
+  }
+
+  &__byline {
+
+    font-size: $gr-font-size-delta;
+    color: $gr-orange; 
+    display: flex; 
+    flex-wrap: wrap;
+
+  }
+
+  &__date {
+
+    font-size: $gr-font-size-delta;
+    color: $gr-dark-gray;
+    margin: 0 2rem 0 0; 
+ 
+  }
+
+  &__author {
+
+    font-size: $gr-font-size-delta;
+    margin: 0; 
+
+  }
+
+  &__title {
+    
+    font-size: 22px; /* this value should be in a variable */
+    color: $gr-black;
+    padding: 0 1rem; 
+    margin: 0 0 2rem;
+
+  }
+
+  &__section-title {
+
+    font-size: $gr-font-size-delta;
+    color: $gr-dark-gray; 
+    padding: 1rem; /* matches padding used in "__tag-box" element */
+    margin: 0 0 1.3rem; /* currently matches "p" margin */
+
+  }
+
+  &__p {
+
+    color: $gr-dark-gray; 
+    padding: 0 1rem; /* matches padding used in "__tag-box" element */
+    // @include line-height-crop(1.5); /* improves alignment of text and floated media -- value should match element line-height */
+    // line-height: 1.5; /* should this be the default <p> value? */
+    // margin: 0 0 calc(1.3rem + 4px); /* additional pixels make up for space lost due to line-height-crop mixin */
+
+    &:last-of-type {
+
+      margin-bottom: 1.3rem; /* reset to default "p" margin */
+
+    }
+
+  }
+
+  &__media-wrapper {
+
+    background-color: $gr-dark-gray;
+    margin: 0 0 1.3rem; /* value matches default "p" element */
+
+    &--floated, 
+    &--left {
+
+      // padding: 1rem;
+
+      /* While in development phase, use border instead of padding so we can keep the background color. The background color is helpful for the demo site since the placeholder images won't show up there. */
+
+      border-left: 1rem solid $gr-white;
+      border-right: 1rem solid $gr-white;
+
+      .gr-c-article-block__media-inner {
+
+        padding-top: 75%; /* intrinsic ration solution -- image height / width = percentage -- 297 / 396 */
+
+      }
+
+    }
+
+    &--right {
+
+      //
+
+    }
+
+  }
+
+  &__media-inner {
+
+    height: 0; 
+    padding-top: 31.25%; /* intrinsic ration solution -- image height / width = percentage -- 320 / 1024 */
+    overflow: hidden;   
+    position: relative;
+
+  }
+
+  &__media {
+
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+  }
+
+  .gr-c-carousel {
+
+    padding: 0 1rem; /* matches padding used in "__tag-box" element */
+    margin-bottom: 1.3rem;
+
+  }
+
+  &__tag-box {
+
+    clear: both;
+
+    // padding: calc(3rem - 1.3rem) 1rem 0; /* top padding keeps equal distance above and below component, calc function takes "p" bottom margin into account; side padding matches padding used in "__p" element */
+    padding: 1.7rem 1rem 0; 
+
+  }
+
+  &__pic-box-set {
+
+    padding: 0 1rem; 
+
+    /* temporary margins until all rows are in the same component */
+
+    margin: 0 0 1rem;
+
+    &:last-of-type {
+
+      margin: 0;
+
+    }
+
+  }
+
+  .gr-l-template &, 
+  .gr-l-page & {
+
+    border-width: 0;
+
+  }
+  
+  @include mq($gr-small-breakpoint) {
+
+    &__heading {
+
+      font-size: $gr-font-size-beta; 
+      
+    }
+
+    &__filter-btn {
+
+      font-size: $gr-font-size-beta; 
+
+    }
+
+    &__title {
+    
+      font-size: $gr-font-size-kilo;
+  
+    }
+
+    &__section-title {
+
+      font-size: $gr-font-size-beta;
+  
+    }
+
+  }
+
+  @include mq($gr-medium-breakpoint) {
+
+    &__filter-btn {
+
+      display: none;
+
+    }
+
+    &__section-title {
+
+      padding: 0 7.2rem; /* matches padding used in "__tag-box" element */
+  
+    }
+
+    &__p {
+
+      padding: 0 7.2rem; /* matches padding used in "__tag-box" element */
+  
+    }
+
+    &__media-wrapper {
+
+      background-color: $gr-dark-gray;
+      margin: 0 0 1.3rem; /* value matches default "p" element */
+  
+      &--floated, 
+      &--left {
+  
+        // padding: 2rem;
+  
+        /* While in development phase, use border instead of padding so we can keep the background color. The background color is helpful for the demo site since the placeholder images won't show up there. */
+  
+        border-left: 2rem solid $gr-white;
+        border-right: 2rem solid $gr-white;
+
+      }
+
+    }
+
+    &__pic-box-set {
+
+      padding: 0 7.2rem; 
+  
+    }
+
+    &__tag-box {
+
+      // padding: calc(3rem - 1.3rem) 7.2rem 0; /* top padding keeps equal distance above and below component, calc function takes "p" bottom margin into account; side padding matches padding used in "__p" element */
+      padding: 1.7rem 7.2rem 0; 
+  
+    }
+
+    .gr-c-carousel {
+
+      padding: 0 2rem; /* matches padding used in "__tag-box" element */
+  
+    }
+
+  }
+
+  @include mq($gr-large-breakpoint) {
+
+    //
+
+  }
+
+  @include mq(75em) {
+
+    &__p {
+
+      @include line-height-crop(1.5); /* improves alignment of text and floated media -- value should match element line-height */
+      margin: 0 0 calc(1.3rem + 4px); /* additional pixels make up for space lost due to line-height-crop mixin */
+
+    }
+
+    &__media-wrapper {
+
+      //
+  
+      &--floated, 
+      &--left {
+  
+        float: left;
+        width: 100%;
+        max-width: 396px; 
+        padding: 0; 
+        border: 0; /* remove this once not in active development -- see related note above */
+        margin: 0 2rem .5rem 3rem; 
+  
+      }
+  
+      &--right {
+  
+        float: right;
+        margin: 0 2rem .5rem 3rem; 
+  
+      }
+  
+    }
+
+    .gr-c-carousel {
+
+      padding: 0 7.2rem; /* matches padding used in "__tag-box" element */
+  
+    }
+
+  }
+
+}

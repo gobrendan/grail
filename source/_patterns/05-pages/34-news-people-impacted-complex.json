@@ -1,0 +1,497 @@
+{
+
+  "viewing-page" : "true", 
+
+  "body-class" : "gr-l-page sp-anonymous", 
+
+  "alert-box" : false, 
+
+  "page-header-live-active" : true, 
+
+  "list-box-set" : [
+
+    {
+
+      "class" : "gr-c-list-box-set--stacked", 
+      "item" : [
+
+        {
+
+          "list-box" : [
+
+            {
+
+              "class" : "gr-c-list-box--bordered", 
+              "heading" : "Article Type", 
+              "list" : [
+
+                {
+                  
+                  "class" : "gr-c-list-box__list gr-c-list-box__item", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>News Article</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>CEO Blog</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Friday Spotlight</a>"
+            
+                    }
+            
+                  ]
+            
+                }
+            
+              ]
+
+            }
+
+          ]
+          
+        }, 
+
+        {
+
+          "list-box" : [
+
+            {
+
+              "class" : "gr-c-list-box--bordered", 
+              "heading" : "Category", 
+              "list" : [
+
+                {
+                  
+                  "class" : "gr-c-list-box__list gr-c-list-box__item", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Category 1</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Category 2</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Category 3</a>"
+            
+                    }
+            
+                  ]
+            
+                }
+            
+              ]
+
+            }
+
+          ]
+          
+        }, 
+
+        {
+
+          "list-box" : [
+
+            {
+
+              "class" : "gr-c-list-box--bordered", 
+              "heading" : "Date", 
+              "list" : [
+
+                {
+                  
+                  "class" : "gr-c-list-box__list gr-c-list-box__item", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Today</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>This Week</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>This Month</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Last Month</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Older</a>"
+            
+                    }
+            
+                  ]
+            
+                }
+            
+              ]
+
+            }
+
+          ]
+          
+        }, 
+
+        {
+
+          "list-box" : [
+
+            {
+
+              "class" : "gr-c-list-box--bordered", 
+              "heading" : "Topic", 
+              "list" : [
+
+                {
+                  
+                  "class" : "gr-c-list-box__list gr-c-list-box__item", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Topic One</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Topic Two</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>Topic Three</a>"
+            
+                    }
+            
+                  ]
+            
+                }
+            
+              ]
+
+            }
+
+          ]
+          
+        }
+
+      ]
+
+    }
+
+  ],
+  
+  "article-header-exists" : "", 
+
+  "result-box-set-1-exists" : "", 
+
+  "result-list-block-1-exists" : "", 
+
+  "article-block-1-exists" : "", 
+
+  "article-block-2-exists" : "",
+
+  "article-block-3-exists" : [
+
+    {
+
+      "article-block-3" : [
+
+        {
+    
+          "class" : "", 
+          "heading" : "Reorganization", 
+          "date" : "7/1/2016", 
+          "author" : "Author's Name",
+          "title" : "Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment",
+          "many-pic-box-sets" : [
+
+            {
+
+              "pic-box-set" : [
+
+                {
+                  
+                  "class" : "gr-c-article-block__pic-box-set", 
+                  "heading" : "", 
+                  "item" : [
+            
+                    {
+            
+                      "pic-box" : [
+            
+                        {
+                          
+                          "class" : "", 
+                          "img" : [
+                    
+                            {
+                        
+                              "1x-src" : "../../assets/images/kathy-dunn-thumb@1x.jpg",
+                              "2x-src" : "../../assets/images/kathy-dunn-thumb@2x.jpg",
+                              "class" : "gr-c-pic-box__media",
+                              "alt" : ""
+                        
+                            }
+                        
+                          ],
+                          "heading" : "Kathy Dunn", 
+                          "label" : "Function Title", 
+                          "date" : "Sep. 28"
+                    
+                        }
+                    
+                      ]
+            
+                    }, 
+            
+                    {
+            
+                      "pic-box" : [
+            
+                        {
+
+                          "class" : "", 
+                          "img" : [
+                    
+                            {
+                        
+                              "1x-src" : "../../assets/images/diane-daniels-thumb@1x.jpg",
+                              "2x-src" : "../../assets/images/diane-daniels-thumb@2x.jpg",
+                              "class" : "gr-c-pic-box__media",
+                              "alt" : ""
+                        
+                            }
+                        
+                          ],
+                          "heading" : "Diane Daniels", 
+                          "label" : "Function Title", 
+                          "date" : "Sep. 24"
+                    
+                        }
+                    
+                      ]
+            
+                    }, 
+            
+                    {
+            
+                      "pic-box" : [
+            
+                        {
+
+                          "class" : "", 
+                          "img" : [
+                    
+                            {
+                        
+                              "1x-src" : "../../assets/images/brenda-ray-thumb@1x.jpg",
+                              "2x-src" : "../../assets/images/brenda-ray-thumb@2x.jpg",
+                              "class" : "gr-c-pic-box__media",
+                              "alt" : ""
+                        
+                            }
+                        
+                          ],
+                          "heading" : "Brenda Ray", 
+                          "label" : "Function Title", 
+                          "date" : "Sep. 14"
+                    
+                        }
+                    
+                      ]
+            
+                    }, 
+            
+                    {
+            
+                      "pic-box" : [
+            
+                        {
+
+                          "class" : "", 
+                          "img" : [
+                    
+                            {
+                        
+                              "1x-src" : "../../assets/images/james-burton-thumb@1x.jpg",
+                              "2x-src" : "../../assets/images/james-burton-thumb@2x.jpg",
+                              "class" : "gr-c-pic-box__media",
+                              "alt" : ""
+                        
+                            }
+                        
+                          ],
+                          "heading" : "James Burton", 
+                          "label" : "Function Title", 
+                          "date" : "Sep. 9"
+                    
+                        }
+                    
+                      ]
+            
+                    }, 
+        
+                    {
+            
+                      "pic-box" : [
+            
+                        {
+
+                          "class" : "", 
+                          "img" : [
+                    
+                            {
+                        
+                              "1x-src" : "../../assets/images/kathy-dunn-thumb@1x.jpg",
+                              "2x-src" : "../../assets/images/kathy-dunn-thumb@2x.jpg",
+                              "class" : "gr-c-pic-box__media",
+                              "alt" : ""
+                        
+                            }
+                        
+                          ],
+                          "heading" : "Kathy Dunn", 
+                          "label" : "Function Title", 
+                          "date" : "Sep. 28"
+                    
+                        }
+                    
+                      ]
+            
+                    }, 
+            
+                    {
+            
+                      "pic-box" : [
+            
+                        {
+
+                          "class" : "", 
+                          "img" : [
+                    
+                            {
+                        
+                              "1x-src" : "../../assets/images/diane-daniels-thumb@1x.jpg",
+                              "2x-src" : "../../assets/images/diane-daniels-thumb@2x.jpg",
+                              "class" : "gr-c-pic-box__media",
+                              "alt" : ""
+                        
+                            }
+                        
+                          ],
+                          "heading" : "Diane Daniels", 
+                          "label" : "Function Title", 
+                          "date" : "Sep. 24"
+                    
+                        }
+                    
+                      ]
+            
+                    }, 
+            
+                    {
+            
+                      "pic-box" : [
+            
+                        {
+
+                          "class" : "", 
+                          "img" : [
+                    
+                            {
+                        
+                              "1x-src" : "../../assets/images/brenda-ray-thumb@1x.jpg",
+                              "2x-src" : "../../assets/images/brenda-ray-thumb@2x.jpg",
+                              "class" : "gr-c-pic-box__media",
+                              "alt" : ""
+                        
+                            }
+                        
+                          ],
+                          "heading" : "Brenda Ray", 
+                          "label" : "Function Title", 
+                          "date" : "Sep. 14"
+                    
+                        }
+                    
+                      ]
+            
+                    }
+            
+                  ], 
+                  "more-button" : ""
+            
+                }
+            
+              ]
+
+            }
+
+          ]
+    
+        }
+    
+      ]
+
+    }
+
+  ], 
+
+  "article-block-4-exists" : "",
+
+  "article-block-5-exists" : "",
+
+  "calendar-exists" : "",
+
+  "result-box-set-2-exists" : "", 
+  
+  "page-footer-live-active" : true
+
+}

@@ -1,0 +1,49 @@
+/*
+ * button set block
+ */
+
+.gr-c-btn-set-block {
+
+  background-color: $gr-light-gray;
+  padding: 1rem;
+
+  &__heading {
+
+    color: $gr-dark-blue;
+    font-size: $gr-font-size-gamma;
+    margin: 0 0 1rem;
+
+  }
+
+  &__more {
+
+    text-align: right;
+    padding: 1rem 0 0;
+    margin: 0;
+
+  }
+
+  &__more-link {
+
+    font-size: $gr-font-size-zeta;
+    color: $gr-dark-gray;
+
+  }
+
+  @include mq($gr-small-breakpoint) {
+
+    &__heading {
+
+      font-size: $gr-font-size-beta;
+  
+    }
+
+    &__more-link {
+
+      font-size: $gr-font-size-epsilon;
+  
+    }
+
+  }
+
+}

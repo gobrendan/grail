@@ -1,0 +1,45 @@
+{{# modal }}
+
+<div class="gr-c-modal" id="{{ modal-id }}" aria-hidden="true">
+
+  <div class="gr-c-modal__dialog">
+
+    <header class="gr-c-modal__header">
+
+      <h2 class="gr-c-heading gr-c-heading--gamma gr-c-modal__heading">
+        {{ modal-heading }}
+      </h2>
+
+      <a href="#x" class="gr-c-modal__close-btn">
+        <i class="gr-i-close">
+        </i>
+        <span class="gr-u-visually-hidden">
+          Close Modal
+        </span>
+      </a>
+
+    </header>
+
+    <div class="gr-c-modal__content">
+
+      {{# video }}
+
+      {{> atoms-video }}
+
+      {{/ video }}
+
+      {{^ video }}
+
+      <p>
+        Modal content
+      </p>
+
+      {{/ video }}
+
+    </div>
+
+  </div>
+
+</div>
+
+{{/ modal }}

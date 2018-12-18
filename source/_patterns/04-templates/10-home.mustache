@@ -1,0 +1,98 @@
+{{> molecules-alert-box }}
+
+{{# page-header-live-active }}
+{{> organisms-page-header-live }}
+{{/ page-header-live-active }}
+
+{{^ page-header-live-active }}
+{{> organisms-page-header }}
+{{/ page-header-live-active }}
+
+<main class="gr-l-main">
+  <div class="gr-l-main__inner gr-l-main__inner--stacked">
+
+
+    <section class="gr-l-section">
+      <div class="gr-l-section__inner">
+
+        <div class="gr-l-wrapper gr-l-wrapper--60-40">
+
+          <div class="gr-l-wrapper__item">
+            {{> organisms-carousel }}
+          </div>
+
+          <div class="gr-l-wrapper__item">
+            {{> organisms-pic-box-block }}
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    {{# section-b }}
+
+    <section class="gr-l-section gr-l-section--full">
+      <div class="gr-l-section__inner">
+
+        <div class="gr-l-section__item gr-u-display gr-u-display--small-medium-only">
+          {{> organisms-carousel }}
+        </div>
+
+        <div class="gr-l-section__item gr-u-display gr-u-display--large-only">
+          {{> organisms-card-set }}
+        </div>
+
+      </div>
+    </section>
+    
+    {{/ section-b }}
+
+
+    {{# section-c }}
+
+    <section class="gr-l-section">
+      <div class="gr-l-section__inner">
+
+        <div class="gr-l-wrapper gr-l-wrapper--60-40">
+
+          <div class="gr-l-wrapper__item">
+            {{> organisms-spotlight }}
+          </div>
+
+          <div class="gr-l-wrapper__item gr-u-bg-cool-gray">
+            {{> organisms-button-set-block }}
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    {{/ section-c }}
+
+
+    {{# section-d }}
+
+    <section class="gr-l-section">
+      <div class="gr-l-section__inner">
+
+        <div class="gr-l-wrapper gr-l-wrapper--40-60">
+
+          <div class="gr-l-wrapper__item">
+            {{> organisms-tile-set-grid }}
+          </div>
+
+          <div class="gr-l-wrapper__item">
+            {{> organisms-spotlight }}
+          </div>
+
+        </div>
+        
+      </div>
+    </section>
+    
+    {{/ section-d }}
+
+  </div>
+</main>

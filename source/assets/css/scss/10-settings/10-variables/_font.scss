@@ -2,33 +2,21 @@
 // fonts
 //
 
-$font-family-cabin :        'Cabin', sans-serif;
-$font-cabin :               normal normal normal 100%/1.5 $font-family-cabin;
+// Help: 
+// https://developer.mozilla.org/en-US/docs/Web/CSS/font
 
-$font-family-open-sans :    'Open Sans', sans-serif;
-$font-open-sans :           normal normal normal 100%/1.5 $font-family-open-sans;
+// Google Fonts URL:
+// https://fonts.google.com/specimen/Roboto?selection.family=Open+Sans:300,400,700|Roboto:500
 
+// fonts
 
-//////////
+$gr-font-family-primary :       'Open Sans', sans-serif;
+$gr-font-primary :              normal normal 400 100%/1.5 $gr-font-family-primary;
+$gr-font-primary-italic :       italic normal 400 100%/1.5 $gr-font-family-primary;
+$gr-font-primary-light :        normal normal 300 100%/1.5 $gr-font-family-primary;
+$gr-font-primary-bold :         normal normal 700 100%/1.5 $gr-font-family-primary;
 
-
-// font families
-
-$font-normal-family : 'TransportNewLight_gdi', Helvetica, Arial, sans-serif;
-$font-medium-family : 'TransportNewMedium_gdi', Helvetica, Arial, sans-serif;
-$font-heavy-family :  'TransportNewHeavy_gdi', Helvetica, Arial, sans-serif;
-$font-italic-family : 'Georgia', serif;
-
-// font shorthands
-
-$font :        normal normal normal 100%/1.5 $font-normal-family;
-$font-light :  $font;
-
-// use built-in italicization in web font, hence use of 'normal' in the value
-
-$font-medium : normal normal normal 100%/1.5 $font-medium-family;
-$font-heavy :  normal normal normal 100%/1.5 $font-heavy-family;
-
-// since Georgia is a system font, use of 'italic' in value makes is OK */
-
-$font-italic : italic normal normal 100%/1.5 $font-italic-family;
+$gr-font-family-secondary :     'Roboto', sans-serif;
+$gr-font-secondary :            normal normal 400 100%/1.5 $gr-font-family-secondary;
+$gr-font-secondary-italic :     italic normal 400 100%/1.5 $gr-font-family-secondary;
+$gr-font-secondary-bold :       normal normal 500 100%/1.5 $gr-font-family-secondary;

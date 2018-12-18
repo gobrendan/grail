@@ -1,0 +1,163 @@
+/*
+ * tile set 
+ */
+
+.gr-c-tile-set {
+
+  display: flex;
+
+  .gr-c-tile {
+
+    width: 100%; /* declaration needed when .gr-c-tile-set uses "display: flex" */
+    margin: 0 2rem 0 0;
+
+    &:last-child {
+
+      margin-right: 0;
+
+    }
+
+  }
+
+  &--grid { 
+
+    @include grid(false, 1rem, repeat(auto-fill, minmax(calc(50% - 1rem), 1fr)), auto); 
+
+  }
+
+  .gr-c-tile {
+
+    //
+  
+    &__text {
+  
+      font-size: $gr-font-size-gamma;
+      padding: 0 1rem;
+      
+    }
+  
+    /* transparent overlay */
+  
+    &:after {
+  
+      left: .5rem;
+      right: .5rem;
+      top: .5rem;
+      bottom: .5rem;
+  
+    }
+  
+    &:hover {
+  
+      //
+  
+      &:after {
+  
+        left: .5rem;
+        right: .5rem;
+        top: .5rem;
+        bottom: .5rem;
+    
+      }
+  
+    }
+  
+  }
+
+  @include mq($gr-small-breakpoint) {
+
+    &--grid { 
+
+      grid-gap: 2rem;
+  
+    }
+
+    .gr-c-tile {
+
+      //
+    
+      &__text {
+    
+        font-size: $gr-font-size-beta;
+        padding: 0 2rem;
+        
+      }
+    
+      /* transparent overlay */
+    
+      &:after {
+
+        left: 1.5rem;
+        right: 1.5rem;
+        top: 1rem;
+        bottom: 1rem;
+    
+      }
+    
+      &:hover {
+    
+        //
+    
+        &:after {
+    
+          left: 1.5rem;
+          right: 1.5rem;
+          top: 1rem;
+          bottom: 1rem;
+      
+        }
+    
+      }
+    
+    }
+
+  }
+
+  /* browser fallbacks */
+
+  .gr-mod-no-cssgrid & {
+
+    margin: 0 -1rem;
+
+    .gr-c-tile {
+
+      margin: 0 1rem;
+
+    }
+
+    &--grid {
+
+      display: block; 
+      overflow: hidden; /* easy 'clearfix' solution (child elements are floated) */
+      margin: 0;
+
+      .gr-c-tile {
+
+        width: calc(50% - 1rem); 
+        margin: 2rem 0 0; 
+
+        &:nth-child(odd) {
+
+          float: left;
+
+        }
+
+        &:nth-child(even) {
+
+          float: right;
+          
+        }
+
+        &:nth-child(-n+2) { /* remove unnecessary bottom margin from last two buttons */
+          
+          margin: 0;
+
+        }
+
+      }
+
+    }
+    
+  }
+
+}

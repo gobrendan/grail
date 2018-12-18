@@ -1,0 +1,145 @@
+// required styles
+
+.slinky-menu {
+  overflow: hidden;
+  transform: translateZ(0);
+
+  > ul {
+    left: 0;
+    position: relative;
+    transform: translateZ(0);
+  }
+
+  ul,
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul {
+    width: 100%;
+  }
+
+  a {
+    align-items: center;
+    display: flex;
+
+    span {
+      flex: 1;
+      line-height: 1.4;
+      // padding: 0 1rem;
+      text-transform: uppercase; 
+      color: $gr-white;
+    }
+  }
+
+  li ul {
+    display: none;
+    left: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .header {
+    display: flex;
+
+    .title {
+      flex: 1;
+      line-height: 1.4;
+      margin: 0;
+      order: 1;
+      padding: 1rem 0;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// default theme
+
+.slinky-theme-default {
+  background: $gr-dark-blue;
+
+  .title {
+    color: $gr-white;
+    padding: 1rem;
+  }
+
+  li {
+    line-height: 1;
+  }
+
+  a:not(.back) {
+    // color: #333;
+    padding: 1rem;
+    align-items: center;
+
+    &:hover {
+      background-color: $gr-primary-blue;
+      text-decoration: none;
+    }
+
+    &:active {
+      background-color: $gr-primary-blue;
+    }
+  }
+
+  .next, 
+  .back {
+
+    &:before, 
+    &:after {
+
+      align-self: baseline;
+
+    }
+
+    &:hover {
+
+      text-decoration: none; 
+
+    }
+
+  }
+
+  .next::after,
+  .back::before {
+    // background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+ICAgIDxwYXRoIGQ9Ik0xMi4yMTkgMi4yODFMMTAuNzggMy43MiAxOC4wNjIgMTFIMnYyaDE2LjA2M2wtNy4yODIgNy4yODEgMS40MzggMS40MzggOS05IC42ODctLjcxOS0uNjg3LS43MTl6IiAvPjwvc3ZnPg==); 
+    background-position: center; 
+    background-repeat: no-repeat;
+    // background-size: 1rem;
+    font-family: 'gr-icon-set' !important;
+    content: "\e90f";
+    height: 1rem;
+    // opacity: 0.25;
+    transition: 200ms;
+    // width: 1rem;
+    // min-width: 2rem; 
+    color: $gr-white;
+    // outline: 1px solid red;
+    height: 22px;
+    display: flex;
+    align-items: center;
+  }
+
+  .next::after {
+    margin-left: 1rem;
+    content: "\e90f";
+  }
+
+  .back::before {
+    padding: 1rem;
+    transform: scaleX(-1);
+    min-height: 54px; 
+  }
+
+  .next:hover::after,
+  .back:hover::before {
+    // opacity: 0.75;
+  }
+
+  .next:active::after,
+  .back:active::before {
+    // opacity: 1;
+  }
+}

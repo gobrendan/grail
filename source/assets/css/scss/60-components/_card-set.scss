@@ -1,11 +1,95 @@
-/*
+/* 
  * card set
  */
 
 .gr-c-card-set {
 
-  @include grid(true, 1rem, repeat(auto-fit, minmax(200px, 1fr)), auto); 
-  // max-width: 1000px; /* value should be in variable */
-  // margin: 0 auto 2rem; /* bottom margin should be in variable */
+  background-color: $gr-light-gray;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 1rem;
 
+  &__inner {
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: $gr-component-max-width;
+    margin: auto;
+
+  }
+
+  &__more {
+
+    background-color: $gr-white;
+    // padding: 3rem;
+    margin: 1rem 0 1rem 1rem;
+    display: flex;
+
+    flex: 0 0 140px;
+    justify-content: center;
+
+  }
+
+  &__more-link {
+
+    display: block;
+    text-align: center;
+    align-self: center;
+
+    &:hover {
+
+      text-decoration: none;
+
+      .gr-c-card-set__more-text {
+
+        text-decoration: underline;
+
+      }
+
+    }
+
+  }
+
+  &__more-icon {
+
+    display: block;
+    background: $gr-orange;
+    color: $gr-white;
+    width: 41px;
+    line-height: 41px;
+    border-radius: 50%;
+    font-size: 1.5rem; /* magic number */
+    margin: auto;
+
+  }
+
+  &__more-text {
+
+    font-size: $gr-font-size-eta;
+    font-family: $gr-font-family-primary;
+    color: $gr-dark-gray;
+
+  }
+
+  .gr-c-card {
+
+    border-width: 0;
+    margin: 1rem;
+
+    &:first-child {
+
+      margin-left: 0;
+
+    }
+
+  }
+
+  .gr-c-card__btn {
+
+    margin-top: auto; /* pulls button to bottom of card */
+    
+  }
+  
 }

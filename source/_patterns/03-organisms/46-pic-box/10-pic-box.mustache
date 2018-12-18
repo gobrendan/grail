@@ -1,0 +1,49 @@
+{{# pic-box }}
+
+<div class="gr-c-pic-box {{ class }}">
+
+  {{# img }}
+  <div class="gr-c-pic-box__media-wrapper">
+    <a class="gr-c-pic-box__media-link" href="">
+      {{> atoms-image }}
+    </a>
+  </div>
+  {{/ img }}
+
+  {{# more }}
+  <div class="gr-c-pic-box__more-wrapper">
+    <a class="gr-c-pic-box__more-link" href="">
+      <span class="gr-u-visually-hidden">
+        More
+      </span>
+      <i class="gr-i-add gr-c-pic-box__more-link-icon">
+      </i>
+    </a>
+  </div>
+  {{/ more }}
+
+  <div class="gr-c-pic-box__text-wrapper">
+
+    {{# heading }}
+    <h1 class="gr-c-heading gr-c-pic-box__heading">
+      {{{ heading }}}
+    </h1>
+    {{/ heading }}
+
+    {{# label }}
+    <p class="gr-c-pic-box__label">
+      {{ label }}
+    </p>
+    {{/ label }}
+
+    {{# date }}
+    <a class="gr-c-pic-box__date" href="">
+      {{ date }}
+    </a>
+    {{/ date }}
+
+  </div>
+
+</div>
+
+{{/ pic-box }}

@@ -1,9 +1,9 @@
 // @font-face {
 //   font-family: 'gr-icon-set';
 //   src:
-//     url('fonts/gr-icon-set.ttf?e26890') format('truetype'),
-//     url('fonts/gr-icon-set.woff?e26890') format('woff'),
-//     url('fonts/gr-icon-set.svg?e26890#gr-icon-set') format('svg');
+//     url('fonts/gr-icon-set.ttf?lp00hp') format('truetype'),
+//     url('fonts/gr-icon-set.woff?lp00hp') format('woff'),
+//     url('fonts/gr-icon-set.svg?lp00hp#gr-icon-set') format('svg');
 //   font-weight: normal;
 //   font-style: normal;
 // }
@@ -35,8 +35,17 @@
 .gr-i-instagram:before {
   content: "\e90d";
 }
+.gr-i-google-plus:before {
+  content: "\e913";
+}
 .gr-i-youtube:before {
   content: "\e954";
+}
+.gr-i-linkedin:before {
+  content: "\e916";
+}
+.gr-i-glassdoor:before {
+  content: "\e917";
 }
 .gr-i-news:before {
   content: "\e932";
@@ -98,6 +107,9 @@
 .gr-i-loop:before {
   content: "\e918";
 }
+.gr-i-loop-alt:before {
+  content: "\e912";
+}
 .gr-i-mail:before {
   content: "\e91e";
 }
@@ -117,6 +129,9 @@
   content: "\e951";
 }
 .gr-i-add:before {
+  content: "\e914";
+}
+.gr-i-add-slim:before {
   content: "\e952";
 }
 .gr-i-event:before {
@@ -136,6 +151,9 @@
 }
 .gr-i-pin:before {
   content: "\e935";
+}
+.gr-i-checkbox:before {
+  content: "\e911";
 }
 .gr-i-checked:before {
   content: "\e936";
@@ -178,4 +196,28 @@
 }
 .gr-i-location:before {
   content: "\e94f";
+}
+.gr-i-cog:before {
+  content: "\e915";
+}
+.gr-i-grid:before {
+  content: "\e919";
+}
+.gr-i-grid-off:before {
+  content: "\e91b";
+}
+.gr-i-file-code:before {
+  content: "\e91d";
+}
+.gr-i-file-excel:before {
+  content: "\e923";
+}
+.gr-i-file-word:before {
+  content: "\e927";
+}
+.gr-i-file-pdf:before {
+  content: "\e929";
+}
+.gr-i-file-powerpoint:before {
+  content: "\e92a";
 }

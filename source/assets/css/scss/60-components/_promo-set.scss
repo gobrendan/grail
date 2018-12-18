@@ -1,0 +1,65 @@
+/*
+* promo set
+*/
+
+.gr-c-promo-set {
+
+  @include grid(true, 2rem, repeat(auto-fit, minmax(200px, 1fr)), auto); 
+  min-width: $ch-component-min-width;
+
+  &__promo-wrapper {
+
+    //
+
+  }
+
+  /* browser support */
+
+//   .gr-mod-cssgridlegacy & {
+
+//     //
+
+//     .gr-c-promo-set__promo-wrapper {
+
+//       display: flex; /* helps keep promo height equal */
+
+//     }
+
+//   }
+
+//   .gr-mod-flexbox.gr-mod-no-cssgrid & { 
+
+//     display: flex; 
+//     justify-content: space-between; 
+
+//     .gr-c-promo-set__promo-wrapper {
+
+//       display: flex; /* helps keep promo height equal */
+
+//       &:not(:last-child) {
+
+//         margin-right: 2rem; /* value matches the ".gr-c-promo-set" element's grid-gap value */
+
+//       }
+
+//     }
+
+//   }
+
+//   .gr-mod-no-flexbox & {
+
+//     display: table; 
+//     width: calc(100% + 2rem); /* second value matches .gr-c-promo-set "grid-gap" value */
+//     margin-left: -1rem;       /* numeric value matches half of .gr-c-promo-set "grid-gap" value */
+//     margin-right: -2rem;      /* numeric value matches .gr-c-promo-set "grid-gap" value */
+
+//     .gr-c-promo-set__promo-wrapper {
+
+//       display: table-cell;
+//       padding: 0 1rem; /* scond value matches half of .gr-c-promo-set "grid-gap" value */
+
+//     }
+
+//   }
+
+}

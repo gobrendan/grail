@@ -2,154 +2,128 @@
  * button
  */
 
-button {
-
-  cursor: pointer;
-  -webkit-appearance: none; /* Safari fix -- the 'button' element has additional user-agent declarations */
-  align-items: center; /* for some reason, Webkit adds Flex-related declaration */
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-box-sizing: border-box;
-
-  outline: none;
-
-}
-
 .gr-c-btn {
 
-  display:              inline-block; 
-  font-size:            .9rem; 
-  font-weight:          bold; 
-  @include              custom-property(color, --btn-text-color, $btn-text-color);
-  @include              custom-property(background-color, --btn-bg-color, $btn-bg-color);
-  padding:              $btn-padding; 
-  border-radius:        .25rem;
-  text-decoration:      none; 
-  text-transform:       uppercase; 
-  transition:           $btn-transition; 
-  letter-spacing:       .03rem; 
-  cursor:               pointer; /* useful for <button> and <input type='submit'> elements */
+  display: inline-block; 
+  font-size: $gr-font-size-delta;
+  background-color: $gr-button-bg-color;
+  color: $gr-button-text-color;
+  line-height: 42px; 
+  text-decoration: none; 
+  transition: $gr-btn-transition; 
+  cursor: pointer; /* useful for <button> and <input type='submit'> elements */
+  -webkit-appearance: none; /* Safari fix -- the 'button' element has additional user-agent declarations */
+  align-items: center; /* for some reason, Webkit adds Flex-related declaration */
+  outline: none;
+  padding: 0 1.677rem; 
 
-  &:hover {
-    
-    color:              $btn-hover-text-color;
-    background:         $btn-hover-bg-color;
-    text-decoration:    none; 
+  &::selection {
+
+    background-color: transparent;
 
   }
 
-  &:focus {
-
-    outline:            $btn-focus-outline-width solid $btn-focus-outline-color; 
-
+  &:hover {
+  
+    background-color: $gr-button-bg-color-hover;
+    color: $gr-button-text-color-hover;
+    text-decoration: none; 
+    
   }
 
   &:visited { 
 
-    // @include            custom-property(color, --btn-text-color, $btn-text-color);
-    // @include            custom-property(background-color, --btn-bg-color, $btn-bg-color);
-  
+    // @include custom-property(background-color, --gr-primary-blue, $gr-primary-blue);
+    // @include custom-property(color, --gr-white, $gr-white);
+        
   } 
+
+  &:focus, 
+  &:focus:hover, 
+  &:active, 
+  &:active:hover {
+
+    background-color: $gr-button-bg-color-hover;
+    box-shadow: 0 0 0 0.2rem $gr-button-outline-color; /* thickness value should be in a variable */
+    
+  }
+
+  &__icon {
+
+    font-size: 1.25rem;
+    vertical-align: text-top;
+
+  }
+
+  // &__icon, 
+  // [class^="gr-i-"], 
+  // [class*=" gr-i-"] {
+
+  &--big {
+
+    font-size: $gr-font-size-delta;
+    background-color: $gr-primary-blue; 
+    color: $gr-white;
+    line-height: 1.25;
+    padding: 1rem 4rem;
+
+  }
+
+  &--trans {
+
+    background-color: $gr-white;
+    color: $gr-primary-blue; 
+    border: 1px solid $gr-primary-blue;
+
+    &:hover {
+
+      background-color: $gr-light-gray;
+      color: $gr-primary-blue; 
+
+    }
+  
+    &:visited { 
+  
+      // background-color: $gr-white;
+      // color: $gr-primary-blue; 
+  
+    } 
+
+    &:focus, 
+    &:focus:hover, 
+    &:active, 
+    &:active:hover {
+      
+      background-color: $gr-light-gray;
+      color: $gr-primary-blue; 
+
+  
+    }
+
+  }
 
   &:disabled, 
   &:disabled:hover, 
+  &:disabled:hover:focus, 
+  &:disabled:active, 
+  &:disabled:focus, 
   &--disabled, 
-  &--disabled:hover {
+  &--disabled:hover,
+  &--disabled:hover:focus,  
+  &--disabled:active, 
+  &--disabled:focus {
 
-    color:              $btn-disabled-text-color; 
-    background-color:   $btn-disabled-bg-color; 
+    background-color: $gr-button-bg-color; /* should match default background color */
+    box-shadow: none; 
+    opacity: .65; /* this value should be in a variable */
     cursor: default; 
 
-  }
+    &.gr-c-btn--trans {
 
-  &--light {
+      border: 1px solid #d5d5d5; /* this value should be in a variable */
+      color: #d5d5d5; /* this value should be in a variable */
+      background: transparent;
 
-    color:              $btn-light-text-color; 
-    background-color:   $btn-light-bg-color; 
-
-    &:hover {
-
-      color:            $btn-light-hover-text-color;
-      background:       $btn-light-hover-bg-color;  
-
-    }
-
-    &:focus {
-
-      //
-
-    }
-
-    &:disabled, 
-    &:disabled:hover, 
-    &.gr-c-btn--disabled, 
-    &.gr-c-btn--disabled:hover {
-
-      color:            $btn-light-disabled-text-color; 
-      background-color: $btn-light-disabled-bg-color; 
-  
-    }
-
-  }
-
-  &--secondary {
-
-    color:              $btn-secondary-text-color; 
-    background-color:   $btn-secondary-bg-color; 
-
-    &:hover {
-
-      color:            $btn-secondary-hover-text-color;
-      background:       $btn-secondary-hover-bg-color;  
-
-    }
-
-    &:focus {
-
-      //
-
-    }
-
-    &:disabled, 
-    &:disabled:hover, 
-    &.gr-c-btn--disabled, 
-    &.gr-c-btn--disabled:hover {
-
-      color:            $btn-secondary-disabled-text-color; 
-      background-color: $btn-secondary-disabled-bg-color; 
-  
-    }
-
-    &.gr-c-btn--light {
-
-      color:            $btn-secondary-light-text-color; 
-      background-color: $btn-secondary-light-bg-color; 
-  
-      &:hover {
-  
-        color:          $btn-secondary-light-hover-text-color; 
-        background:     $btn-secondary-light-hover-bg-color; 
-  
-      }
-  
-      &:focus {
-  
-        //
-  
-      }
-  
-      &:disabled, 
-      &:disabled:hover, 
-      &.gr-c-btn--disabled, 
-      &.gr-c-btn--disabled:hover {
-  
-        color:            $btn-secondary-light-disabled-text-color; 
-        background-color: $btn-secondary-light-disabled-bg-color; 
-    
-      }
-  
     }
 
   }

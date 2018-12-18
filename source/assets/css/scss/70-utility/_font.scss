@@ -2,20 +2,44 @@
  * font
  */
 
-.gr-u-f-cabin {
+.gr-u-f-primary {
 
-  font: $font-cabin;
-
-}
-
-.gr-u-f-open-sans {
-
-  font: $font-open-sans;
+  font: $gr-font-primary;
 
 }
 
-.gr-u-f-italic {
+.gr-u-f-primary-light {
 
-  font-style: italic;
+  font: $gr-font-primary-light;
+
+}
+
+.gr-u-f-primary-bold {
+
+  font: $gr-font-primary-bold;
+
+}
+
+.gr-u-f-primary-italic {
+
+  font: $gr-font-primary-italic;
+
+}
+
+.gr-u-f-secondary {
+
+  font: $gr-font-secondary;
+
+}
+
+.gr-u-f-secondary-bold {
+
+  font: $gr-font-secondary-bold;
+
+}
+
+.gr-u-f-secondary-italic {
+
+  font: $gr-font-secondary-italic;
 
 }

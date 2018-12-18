@@ -18,7 +18,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-bell');
   grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-ftp-push');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-purgecss')
 
   //
   // Pattern Lab config
@@ -76,7 +77,8 @@ module.exports = function (grunt) {
     sass: {
       dist: {
         options: {
-          style: 'expanded'
+          style: 'expanded', 
+          sourcemap: 'inline'
         },
         files: {
           './public/assets/css/style.css': './source/assets/css/style.scss'
@@ -94,6 +96,25 @@ module.exports = function (grunt) {
     }, 
 
     //
+    // Autoprefix (add prefixes to CSS properties/values)
+    //
+
+    // https://github.com/browserslist/browserslist#queries
+
+    autoprefixer: {
+      options: {
+        browsers: ['ie 10', 'ie 11', 'edge >10', 'chrome >50', 'firefox >50', 'opera >50', 'safari >9'], 
+        map: true
+      },
+      target: {
+        files: {
+          './public/assets/css/style.autoprefixed.css': ['./public/assets/css/style.css'], 
+          './public/assets/css/style.css': ['./public/assets/css/style.css']
+        }
+      }
+    },
+
+    //
     // CSS min
     //
 
@@ -109,16 +130,48 @@ module.exports = function (grunt) {
       }
     },
 
-    autoprefixer: {
+    //
+    // Purge -- remove CSS rules not being used in .html files (for CSS analyzing only -- don't use this in production!)
+    //
+
+    purgecss: {
       options: {
-        browsers: ['ie 9', 'ie 10', 'ie 11']
+        content: ['./public/**/*.html']
       },
-      your_target: {
+      unminified: {
         files: {
-          './public/assets/css/style.autoprefixed.css': ['./public/assets/css/style.css']
+          './public/assets/css/style.autoprefixed.purged.css': './public/assets/css/style.autoprefixed.css'
         }
       }
-    },
+    }, 
+
+    //
+    // Minify JS
+    //
+
+    uglify: {
+      plugins: {
+        files: {
+          'public/assets/js/plugins.combined.min.js': ['source/assets/js/plugins/**/*.js']
+        }
+      }, 
+      scripts: {
+        options: {
+          // beautify: true
+        },
+        files: {
+          'public/assets/js/scripts.combined.min.js': ['source/assets/js/scripts/**/*.js']
+        }
+      }, 
+      all: {
+        options: {
+          // beautify: true
+        },
+        files: {
+          'public/assets/js/all.min.js': ['public/assets/js/plugins.combined.min.js', 'public/assets/js/scripts.combined.min.js']
+        }
+      }
+    }, 
 
     //
     // Copy
@@ -130,8 +183,6 @@ module.exports = function (grunt) {
 
           { expand: true, cwd: path.resolve(paths().source.root), src: 'favicon.ico', dest: path.resolve(paths().public.root) },
           { expand: true, cwd: path.resolve(paths().source.favicon), src: ['favicon.ico'], dest: path.resolve(paths().public.favicon) },
-          { expand: true, cwd: path.resolve(paths().source.js), src: '**/*.js', dest: path.resolve(paths().public.js) },
-          { expand: true, cwd: path.resolve(paths().source.js), src: '**/*.js.map', dest: path.resolve(paths().public.js) },
           { expand: true, cwd: path.resolve(paths().source.css), src: '**/*.css', dest: path.resolve(paths().public.css) },
           { expand: true, cwd: path.resolve(paths().source.css), src: '**/*.css.map', dest: path.resolve(paths().public.css) },
           { expand: true, cwd: path.resolve(paths().source.fonts), src: '**/*', dest: path.resolve(paths().public.fonts) },
@@ -172,6 +223,12 @@ module.exports = function (grunt) {
           { expand: true, flatten: true, cwd: path.resolve(paths().source.styleguide, 'styleguide', 'css', 'custom'), src: '*.css)', dest: path.resolve(paths().public.styleguide, 'css') }
 
         ]
+      }, 
+      js: {
+        files: [
+          { expand: true, cwd: path.resolve(paths().source.js), src: '**/*.js', dest: path.resolve(paths().public.js) },
+          { expand: true, cwd: path.resolve(paths().source.js), src: '**/*.js.map', dest: path.resolve(paths().public.js) }
+        ]
       }
     },
 
@@ -187,12 +244,7 @@ module.exports = function (grunt) {
         files: [
           {
             src: [
-              'public/assets/**',
-              '!public/assets/images/people/*',
-              '!public/assets/js/**/_*.*',
-              '!public/assets/js/pattern-lab-only',
-              '!public/assets/js/pattern-lab-only.*',
-              '!public/assets/js/pattern-lab-only/*'
+              'public/assets/**/*'
             ],
             dest: 'prod-ready-assets/'
           }
@@ -267,31 +319,6 @@ module.exports = function (grunt) {
 
     bsReload: {
       css: path.resolve(paths().public.root + '**/*.css')
-    }, 
-
-    //
-    // FTP Push
-    //
-
-    ftp_push: {
-      your_target: {
-        options: {
-          authKey: "serverA",
-          host: "ftp.gobrendan.com",
-          dest: "/lab/grail/pattern-lab/",
-          port: 21, 
-          incrementalUpdates: true
-        },
-        files: [
-          {
-            expand: true,
-            cwd: '.', 
-            src: [
-              "*"
-            ]
-          }
-        ]
-      }
     }
 
   });
@@ -300,18 +327,16 @@ module.exports = function (grunt) {
   // Compound tasks
   //
 
-  grunt.registerTask('default', ['patternlab', 'sass', 'cssmin', 'copy', 'compress', 'bell']);
+  grunt.registerTask('default', ['patternlab', 'sass', 'autoprefixer', 'cssmin', 'purgecss', 'copy', 'uglify', 'compress', 'bell']);
   grunt.registerTask('pl', ['patternlab', 'bell']);
-  grunt.registerTask('css', ['sass', 'cssmin', 'copy', 'compress', 'bell']);
-  grunt.registerTask('pl_css', ['pl', 'css']);  
-  grunt.registerTask('assets', ['sass', 'cssmin', 'copy', 'compress', 'bell']);
+  grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin', 'purgecss', 'copy', 'compress', 'bell']);
+  grunt.registerTask('pl_css', ['pl', 'css', 'bell']);  
+  grunt.registerTask('js', ['copy:js', 'uglify', 'bell']);  
+  grunt.registerTask('assets', ['sass', 'autoprefixer', 'cssmin', 'purgecss', 'copy', 'uglify', 'compress', 'bell']);
   grunt.registerTask('c', ['copy', 'bell']); 
-  grunt.registerTask('ftp', ['ftp_push']); 
 
-  grunt.registerTask('postcss', ['postcss:dist']); 
-
-  grunt.registerTask('patternlab:build', ['patternlab', 'copy:main', 'compress']);
-  grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'compress', 'watch:all']);
-  grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'compress', 'browserSync', 'watch:all']);
+  grunt.registerTask('patternlab:build', ['patternlab', 'copy:main', 'compress', 'bell']);
+  grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'compress', 'watch:all', 'bell']);
+  grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'compress', 'browserSync', 'watch:all', 'bell']);
 
 };

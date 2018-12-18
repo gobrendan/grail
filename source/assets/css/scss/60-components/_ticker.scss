@@ -1,0 +1,13 @@
+/* 
+ * ticker
+ */ 
+
+.gr-c-ticker {
+
+  /* third-party widget adds inline styles -- override with !important */
+  /* https://www.theweather.com/widget */
+
+  border: 1px solid red !important; 
+  width: 177px !important;  
+
+}

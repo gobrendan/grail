@@ -1,0 +1,47 @@
+/*
+ * logo
+ */
+
+.gr-c-logo {
+
+  @include custom-property(background-color, --gr-dark-blue, $gr-dark-blue);
+  display: block;
+  width: 261px;
+  height: 81px;
+  background-size: cover;
+  background-image: url(../../assets/images/the-hub-logo@2x.png);
+  background-repeat: no-repeat;
+  position: relative;
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:after {
+
+    // display: block;
+    // content: "";
+    // background: #092940;
+    // opacity: 0;
+    // transition: opacity 0.15s ease-in-out;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 100%;
+
+  }
+
+  &:hover {
+
+    //
+
+    &:after {
+
+      // opacity: .2;
+
+    }
+    
+  }
+
+}

@@ -1,0 +1,65 @@
+/*
+ * nav box block 
+ */
+
+.gr-c-nav-box-block {
+
+  /* use linear background to visually use different background colors on each side of component */
+  /* background-image: linear-gradient(to right, $gr-medium-gray, $gr-medium-gray 50%, $gr-light-gray 50%); */
+
+  background-color: $gr-light-gray;
+
+  &__inner {
+
+    @include custom-property(background-color, --gr-light-gray, $gr-light-gray);
+    display: flex; 
+    flex-wrap: wrap;
+    max-width: $gr-component-max-width;
+    margin: auto;
+
+  }
+
+  &__item {
+
+    padding: 1rem;
+    flex-grow: 1;
+    
+    &:first-child {
+
+      @include custom-property(background-color, --gr-medium-gray, $gr-medium-gray);
+
+    }
+
+    &:last-child {
+
+      //@include custom-property(background-color, --gr-medium-gray, $gr-medium-gray);
+      flex-grow: 100;
+
+    }
+
+    .gr-c-nav-box__item--bordered {
+
+      // overflow: visible; /* override -- allows line to grow taller */
+
+      /* line */
+
+      &:before {
+
+        // height: 54px; /* magic number -- keeps line 1rem from top edge of ".gr-c-nav-box-block" component */
+
+      }
+
+    }
+
+  }
+
+  /* when used in template/page */
+
+  .gr-l-template &, 
+  .gr-l-page & {
+
+    margin-bottom: 1rem;
+
+  }
+
+}

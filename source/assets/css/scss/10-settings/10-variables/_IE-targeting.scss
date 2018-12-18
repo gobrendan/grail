@@ -8,10 +8,10 @@
 // IE 9   no-flexbox  no-flexboxlegacy  no-flexboxtweener no-flexwrap no-csstransitions 
 
 
-// $ie_11 :          .flexbox.flexboxtweener;
-// $ie_10 :          .no-flexbox.flexboxtweener;
-// $ie_9 :           .no-flexbox.no-flexwrap;
-// $ie_9-10 :        .no-flexbox;
-// $ie_9-10-11       .no-flexbox, .flexbox.flexboxtweener;
-// $ie_10-11 :      .flexboxtweener;
-// $ie_10-11-Edge : .flexwrap;
+// $ie_11 :          .gr-mod-flexbox.gr-mod-no-cssgrid;
+// $ie_10 :          .gr-mod-no-flexbox;
+// $ie_9 :           .gr-mod-no-flexbox.gr-mod-no-flexwrap;
+// $ie_9-10 :        .gr-mod-no-flexbox;
+// $ie_9-10-11       .gr-mod-no-flexbox, .gr-mod-flexbox.gr-mod-flexboxtweener;
+// $ie_10-11 :      .gr-mod-flexboxtweener;
+// $ie_10-11-Edge : .gr-mod-flexwrap;

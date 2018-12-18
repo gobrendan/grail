@@ -1,0 +1,29 @@
+{{# article-header }}
+
+<header class="gr-c-article-header {{ class }}">
+
+  <h1 class="gr-c-heading gr-c-article-header__heading">
+    {{ heading }}
+  </h1>
+
+  {{# filter-btn }}
+  <a class="gr-c-btn gr-c-btn--trans gr-c-article-header__filter-btn" href="#">
+    Show Filter
+  </a>
+  {{/ filter-btn }}
+
+  {{# search-box }}
+  {{> molecules-search-box }}
+  {{/ search-box }}
+
+  {{# breadcrumbs }}
+  {{> molecules-breadcrumbs }}
+  {{/ breadcrumbs }}
+
+  {{# select }}
+  {{> atoms-select }}
+  {{/ select }}
+
+</header>
+
+{{/ article-header }}

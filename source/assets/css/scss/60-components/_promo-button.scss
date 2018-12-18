@@ -1,0 +1,39 @@
+/*
+ * promo btn
+ */
+
+.gr-c-promo-btn {
+
+  @include custom-property(border-top-color, --ch-dark-purple, $ch-dark-purple);
+  @include custom-property(border-bottom-color, --ch-cool-gray, $ch-cool-gray);
+  background-color: $ch-white;
+  border-style: solid; 
+  border-width: .5rem 0 1px;
+  filter: drop-shadow(0px 1px 6px rgba(0,0,0,0.18)); /* this value should be in a variable -- also used for "promo" component */
+
+  padding: 1rem 2rem;
+  display: inline-flex;
+  align-items: center;
+
+  &__icon {
+
+    width: 24px;
+    margin: 0 1rem 0 0;
+
+  }
+
+  &__text {
+
+    font-size: $ch-font-size-delta;
+    font-weight: bold;
+    @include custom-property(color, --ch-black, $ch-black);
+
+  }
+
+  &--light-blue {
+
+    @include custom-property(border-top-color, --ch-light-blue, $ch-light-blue);
+
+  }
+
+}

@@ -1,3 +1,0 @@
-//
-// amtrak hero -- responsive iframe
-//

@@ -1,0 +1,85 @@
+{{# article-block }}
+
+<div class="gr-c-article-block {{ class }}">
+
+  <header class="gr-c-article-block__header">
+
+    <a class="gr-c-article-block__filter-btn" href="#">
+      Filter
+    </a>
+
+    <h1 class="gr-c-heading gr-c-article-block__heading">
+      {{ heading }}
+    </h1>
+
+    <div class="gr-c-article-block__byline">
+
+      <h2 class="gr-c-heading gr-c-article-block__date">
+        {{ date }}
+      </h2>
+
+      <h2 class="gr-c-heading gr-c-article-block__author">
+        {{ author }}
+      </h2>
+
+    </div>
+
+  </header>
+
+  <h3 class="gr-c-heading gr-c-article-block__title">
+    {{ title }}
+  </h3> 
+
+  <div class="gr-c-article-block__media-wrapper">
+    <div class="gr-c-article-block__media-inner">
+
+      {{> atoms-image }}
+
+    </div>
+  </div>
+
+  <p class="gr-c-article-block__p">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac magna augue. Donec vitae quam sit amet tortor laoreet vestibulum. Mauris tincidunt purus nulla, ut vulputate eros ornare ut. Morbi quis fermentum nisl. Suspendisse sit amet dictum diam. Sed venenatis nulla id metus blandit ullamcorper. 
+  </p> 
+
+  <p class="gr-c-article-block__p">
+    Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+  </p>
+
+  {{# floated-image }}
+
+  <div class="gr-c-article-block__media-wrapper {{ class }}">
+    <div class="gr-c-article-block__media-inner">
+
+      {{> atoms-image }}
+
+    </div>
+  </div>
+
+  {{/ floated-image }}
+
+  <p class="gr-c-article-block__p">
+    Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+  </p>
+
+  <p class="gr-c-article-block__p">
+    Podcasting operational change management inside of workflows to establish a framework. Taking seamless leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+  </p>
+
+  <p class="gr-c-article-block__p">
+    Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+  </p>
+
+  {{# carousel-exists }}
+
+  <div style="display: grid;">
+  {{> organisms-media-box-carousel-2 }}
+  </div>
+
+  {{/ carousel-exists }}
+
+  {{> organisms-tag-box }}
+
+</div>
+
+{{/ article-block }}

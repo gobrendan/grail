@@ -2,63 +2,74 @@
  * background color
  */
 
+.gr-u-bg-primary-blue {
 
-.gr-u-bg-blue-saphire {
-
-  @include custom-property(background-color, --color-blue-saphire, $color-blue-saphire);
-
-}
-
-.gr-u-bg-french-blue {
-
-  @include custom-property(background-color, --color-french-blue, $color-french-blue);
+  @include custom-property(background-color, --gr-primary-blue, $gr-primary-blue);
 
 }
 
-.gr-u-bg-pale-aqua {
+.gr-u-bg-dark-blue {
 
-  @include custom-property(background-color, --color-pale-aqua, $color-pale-aqua);
-
-}
-
-.gr-u-bg-deep-aqua {
-
-  @include custom-property(background-color, --color-deep-aqua, $color-deep-aqua);
+  @include custom-property(background-color, --gr-dark-blue, $gr-dark-blue);
 
 }
 
-.gr-u-bg-mikado-yellow {
+.gr-u-bg-light-orange {
 
-  @include custom-property(background-color, --color-mikado-yellow, $color-mikado-yellow);
-
-}
-
-.gr-u-bg-carmine-pink {
-
-  @include custom-property(background-color, --color-carmine-pink, $color-carmine-pink);
+  @include custom-property(background-color, --gr-light-orange, $gr-light-orange);
 
 }
 
-.gr-u-bg-burnt-orange {
+.gr-u-bg-orange {
 
-  @include custom-property(background-color, --color-burnt-orange, $color-burnt-orange);
-
-}
-
-.gr-u-bg-rare-black {
-
-  @include custom-property(background-color, --color-rare-black, $color-rare-black);
+  @include custom-property(background-color, --gr-orange, $gr-orange);
 
 }
 
-.gr-u-bg-light-gray {
+.gr-u-bg-dark-orange {
 
-  @include custom-property(background-color, --color-light-gray, $color-light-gray);
+  @include custom-property(background-color, --gr-dark-orange, $gr-dark-orange);
 
 }
 
-.gr-u-bg-soft-white {
+.gr-u-bg-red {
 
-  @include custom-property(background-color, --color-soft-white, $color-soft-white);
+  @include custom-property(background-color, --gr-red, $gr-red);
+
+}
+
+.gr-u-bg-green {
+
+  @include custom-property(background-color, --gr-green, $gr-green);
+
+}
+
+.gr-u-bg-cool-gray {
+
+  @include custom-property(background-color, --gr-light-gray, $gr-light-gray);
+
+}
+
+.gr-u-bg-medium-gray {
+
+  @include custom-property(background-color, --gr-medium-gray, $gr-medium-gray);
+
+}
+
+.gr-u-bg-dark-gray {
+
+  @include custom-property(background-color, --gr-dark-gray, $gr-dark-gray);
+
+}
+
+.gr-u-bg-black {
+
+  @include custom-property(background-color, --gr-black, $gr-black);
+
+}
+
+.gr-u-bg-white {
+
+  @include custom-property(background-color, --gr-white, $gr-white);
 
 }

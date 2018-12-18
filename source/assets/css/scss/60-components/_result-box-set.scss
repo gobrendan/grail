@@ -1,0 +1,75 @@
+/*
+ * result box set
+ */
+
+.gr-c-result-box-set {
+
+  background: $gr-white;
+  padding: 1rem; 
+  border: 1px solid $gr-light-gray; 
+
+  &__heading {
+
+    font-size: $gr-font-size-kilo;
+    color: $gr-orange; 
+    padding: 0; 
+    margin: 0 0 1rem; 
+
+  }
+
+  &__item {
+
+    padding: 0 0 1rem;
+    border-bottom: 1px solid $gr-light-gray;
+    margin: 0 0 1rem;
+
+    &:last-of-type { /* using "last of type" here since there may be other elements after the "__item" elements (using "last child" would affect those) */
+
+      padding: 0;
+      border: 0;
+      margin: 0;
+
+    }
+
+  }
+
+  &__pagination {
+
+    padding: 2rem 0;
+
+  }
+
+  &__more {
+
+    margin: 0 0 2rem;
+
+  }
+
+  /* when used in template/page */
+
+  .gr-l-page & {
+
+    background: $gr-white;
+
+  }
+
+  @include mq($gr-small-breakpoint) {
+
+    padding: 1rem 2rem; 
+
+    &__heading {
+
+      padding: 2rem 0 0; 
+      margin: 0; 
+  
+    }
+
+  }
+
+  @include mq($gr-medium-breakpoint) {
+
+    padding: 1rem 3rem; 
+
+  }
+
+}

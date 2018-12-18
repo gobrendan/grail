@@ -1,59 +1,130 @@
-/*
+/* 
  * card
  */
 
 .gr-c-card {
 
-  max-width: 600px; /* magic numer */
+  padding: 1rem;
+  border: 1px solid $gr-light-gray; 
+  background-color: $gr-white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
-  &__media-wrapper {
+  &__header {
 
-    //
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    align-items: center;
+    margin: -.25rem 0 .5rem; /* top value takes into account top margins for "__date" and "__label" elements */
 
   }
 
-  &__media {
+  &__date {
 
-    margin: 0 0 1rem;
+    font-size: $gr-font-size-eta; 
+    color: $gr-orange;
+    margin: .25rem 0;
+
+  }
+
+  &__icon {
+
+    font-size: 1rem; 
+    color: $gr-dark-gray;
+    vertical-align: text-bottom;
+    margin: .25rem 0;
+
+  }
+
+  &__label {
+
+    font-size: $gr-font-size-iota;
+    color: $gr-medium-gray;
+    text-transform: uppercase;
 
   }
 
   &__heading {
 
-    font-size: 1.25rem; 
+    font-size: $gr-font-size-gamma; 
+    line-height: 1.2; /* should heading line-heights be managed in _headings.scss? */
     margin: 0 0 .5rem;
 
   }
 
-  &__p {
+  &__heading-link {
 
-    margin: 0;
-
-  }
-
-  &--bordered {
-
-    border: 1px solid #ccc;
-
-    .gr-c-card__heading {
-
-      margin-left: 1rem;
-      margin-right: 1rem;
-
-    }
-    .gr-c-card__p {
-
-      margin: 0 1rem 1rem;
-
-    }
+    //
 
   }
 
-  &--padded {
- 
-    padding: 1rem;
-    border: 1px solid #ccc;
+  &__details {
+
+    font-size: $gr-font-size-eta;
+    color: $gr-medium-gray; 
+    margin: 0 0 1rem;
 
   }
+
+  &__btn {
+
+    font-size: $gr-font-size-zeta; 
+    padding: 0 1.2rem; 
+    align-self: flex-end; 
+
+  }
+
+  &--more {
   
+    //
+
+  }
+
+  @include mq($gr-small-breakpoint) {
+
+    padding: 1rem;
+
+    &__date {
+
+      font-size: $gr-font-size-delta; 
+  
+    }
+  
+    &__icon {
+  
+      font-size: 1.5rem; /* magic number -- matches comp */
+  
+    }
+  
+    &__label {
+  
+      font-size: $gr-font-size-epsilon;
+  
+    }
+  
+    &__heading {
+  
+      font-size: $gr-font-size-kilo; 
+      margin: 0 0 .5rem;
+  
+    }
+
+    &__details {
+
+      font-size: $gr-font-size-delta;
+      margin: 0 0 1rem;
+  
+    }
+
+    &__btn {
+
+      font-size: $gr-font-size-delta;
+      padding: 0 1.677rem; 
+
+    }
+
+  }
+
 }

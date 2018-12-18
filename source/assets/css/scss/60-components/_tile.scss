@@ -1,0 +1,81 @@
+/*
+ * tile
+ */
+
+.gr-c-tile {
+
+  position: relative;
+  display: block;
+
+  &__text {
+
+    font-size: $gr-font-size-beta;
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0; 
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    z-index: 1;
+    color: $gr-dark-blue;
+    padding: 0 2rem;
+    line-height: 1.2; /* this value should be in a variable */
+    
+  }
+
+  &__media-wrapper {
+
+    height: 0; 
+    overflow: hidden; 
+    padding-top: 59.868421%; /* intrinisic ration solution -- height/width (364/608) */
+    position: relative;
+    background-color: $gr-dark-gray;
+
+  }
+
+  &__media {
+
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+  }
+
+  /* transparent overlay */
+
+  &:after {
+
+    content: "";
+    display: block;
+    background: rgba(255,255,255,.86); /* this value should be in a variable */
+    position: absolute;
+    left: 1.5rem;
+    right: 1.5rem;
+    top: 1rem;
+    bottom: 1rem;
+
+  }
+
+  &:hover {
+
+    //
+
+    &:after {
+
+      content: "";
+      display: block;
+      background: $gr-white;
+      position: absolute;
+      left: 1.5rem;
+      right: 1.5rem;
+      top: 1rem;
+      bottom: 1rem;
+  
+    }
+
+  }
+
+}

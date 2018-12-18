@@ -1,0 +1,57 @@
+{{# pl-button-palette }}
+
+<div class="gr-l-grid gr-pl-o-palette gr-pl-o-palette--buttons">
+
+  {{# item }}
+
+  {{# button }}
+
+  <div class="gr-l-grid__item gr-pl-o-palette__item">
+
+    <div class="gr-pl-o-palette__box gr-pl-o-palette__box--buttons">
+
+      <div class="gr-pl-o-palette__swatch gr-pl-o-palette__swatch--button">
+        {{> atoms-button }}
+      </div>
+
+      <div class="gr-pl-o-palette__details">
+        <ul class="gr-pl-o-palette__list">
+          <li class="gr-pl-o-palette__list-item">
+            {{ display-class }}
+          </li>
+        </ul>
+      </div>
+    
+    </div>
+
+  </div>
+
+  {{/ button }}
+
+  {{/ item }}
+
+</div>
+
+{{/ pl-button-palette }}
+
+{{!
+
+<a class="btn btn--w-icon btn--w-icon-right">
+  Primary
+</a>
+
+<button class="btn btn--w-icon btn--w-icon-right">
+  Primary
+</button>
+
+<a class="btn btn--w-icon btn--w-icon-left">
+  Primary
+</a>
+
+<button class="btn btn--w-icon btn--w-icon-left">
+  Primary
+</button>
+
+<input type="submit" class="btn" value="Primary">
+
+}}

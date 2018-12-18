@@ -1,0 +1,42 @@
+
+{{# spotlight }}
+
+<div class="gr-c-spotlight {{ class }}">
+
+  <div class="gr-c-spotlight__content">
+
+    <header class="gr-c-spotlight__header">
+
+      <div class="gr-c-spotlight__category">
+        {{ category }}
+      </div>
+
+      <div class="gr-c-spotlight__label">
+        {{ label }}
+      </div>
+
+    </header>
+
+    <h1 class="gr-c-spotlight__heading">
+      <a class="gr-c-spotlight__heading-link" href="">
+        {{ heading }}
+      </a>
+    </h1>
+
+    <p class="gr-c-spotlight__details">
+      {{{ details }}}
+    </p>
+
+    <a class="gr-c-btn gr-c-spotlight__btn" href="">
+      {{ button-text }}
+    </a>
+
+  </div>
+
+  <div class="gr-c-spotlight__media-wrapper">
+    {{> atoms-image }}
+  </div>
+
+</div>
+
+{{/ spotlight }}

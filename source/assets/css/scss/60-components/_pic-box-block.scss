@@ -1,0 +1,62 @@
+/* 
+ * pic box block
+ */
+
+.gr-c-pic-box-block {
+
+  //
+
+  &__header {
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: .5rem;
+    background-color: $gr-light-gray; 
+
+  }
+
+  &__heading {
+
+    font-size: $gr-font-size-beta;
+    font-family: $gr-font-family-primary;
+    color: $gr-dark-blue;
+    margin: 0 1rem 0 0;
+
+  }
+
+  &__content {
+
+    padding: .5rem;
+
+  }
+
+  .gr-c-search-box {
+
+    max-width: 213px; /* magic number -- matches comp */
+
+    /* NOTE: override default text input and ".gr-c-search-box" declarations */
+
+    &__text-input[type=text], 
+    &__text-input[type=search] {
+
+      // line-height: 40px;
+
+    }
+
+  }
+
+  .gr-c-pic-box-set {
+
+    max-width: 100%; /* override */
+
+    &:not(:last-child) {
+
+      margin-bottom: .5rem; 
+
+    }
+
+  }
+  
+}

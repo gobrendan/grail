@@ -4,31 +4,17 @@
 
 .gr-c-video {
 
-  //
+  height: 0; 
+  position: relative;   
+  padding-top: 56.25%; /* 56.25% is used for '560 x 315' dimensions (YouTube videos) */
 
   &__media {
 
-    //
-
-  }
-
-  &--fluid-width {
-
-    /* 'padding-top' solution */
-
-    height: 0; 
-    position: relative;   
-    padding-top: 56.25%; /* 56.25% is used for '560 x 315' dimensions (YouTube videos) */
-
-    .gr-c-video__media {
-
-      position: absolute; 
-      top: 0; 
-      left: 0; 
-      width: 100%; 
-      height: 100%; 
-
-    }
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
 
   }
 

@@ -1,0 +1,137 @@
+/*
+ * promo
+ */
+
+.gr-c-promo {
+
+  @include custom-property(border-color, --ch-purple, $ch-purple);
+  border-style: solid; 
+  border-width: 0 0 1px;
+  filter: drop-shadow(0px 1px 6px rgba(0,0,0,0.18)); /* this valie should be in a variable -- also used for "card" component */
+
+  &__header {
+
+    @include custom-property(background-color, --ch-purple, $ch-purple);
+    @include custom-property(color, --ch-white, $ch-white);
+    font-weight: bold;
+    font-size: $ch-font-size-delta;
+    text-transform: uppercase;
+    line-height: 2.45rem;
+    padding: 0 .75rem 0 3rem;
+    position: relative; 
+
+    &:before {
+
+      @include custom-property(background-color, --ch-dark-purple, $ch-dark-purple);
+      display: block; 
+      content: "";
+      position: absolute; 
+      left: 0; 
+      top: 0; 
+      bottom: 0; 
+      width: 2.45rem; /* this value should match line-height of "__header" element -- this should be a square */
+      background-image: url(../../assets/images/rings-icon.svg);
+      background-size: calc(100% - .85rem); /* this value allows space around the icon (so it's not touching edges) */
+      background-repeat: no-repeat;
+      background-position: center center;
+
+    }
+      
+  }
+
+  &__content {
+
+    @include custom-property(border-color, --ch-cool-gray, $ch-cool-gray);
+    @include custom-property(background-color, --ch-white, $ch-white);
+    border-style: solid; 
+    border-width: 0 1px;
+    @include grid(false, 0, auto 1fr, auto);
+    grid-template-areas:
+      'date X' 
+      'date heading'
+      'date link';
+
+    padding: 1rem 1rem 1rem 3rem; /* right value is equivalent to "__header" element's left padding */
+
+  }
+
+  &__date {
+
+    display: block; 
+    text-align: center;
+    margin-right: 1.25rem; 
+    grid-area: date;
+
+  }
+
+  &__month {
+
+    font-size: 1.25rem; /* magic number */
+    font-weight: bold; 
+    text-transform: uppercase;
+
+  }
+
+  &__day {
+
+    @include custom-property(color, --ch-dark-purple, $ch-dark-purple);
+    font-size: 3rem; /* magic number */
+    line-height: 1;
+    font-weight: bold; 
+    text-transform: uppercase;
+
+  }
+
+  &__heading {
+
+    font-weight: bold; 
+    font-size: $ch-font-size-delta;
+    line-height: 2; 
+    margin: 0;
+    grid-area: heading;
+    align-self: end;
+
+  }
+
+  &__link {
+
+    text-transform: lowercase;
+    text-decoration: underline; 
+    grid-area: link;
+    align-self: end; 
+
+    &:hover {
+
+      text-decoration: none; 
+
+    }
+
+  }
+
+  &--teal {
+
+    @include custom-property(border-color, --ch-teal, $ch-teal);
+
+    .gr-c-promo__header {
+
+      @include custom-property(background-color, --ch-teal, $ch-teal);
+
+      &:before {
+
+        @include custom-property(background-color, --ch-dark-teal, $ch-dark-teal);
+        background-image: url(../../assets/images/sun-rings-icon.svg);
+
+      }
+
+    }
+
+    .gr-c-promo__day {
+
+      @include custom-property(color, --ch-dark-teal, $ch-dark-teal);
+  
+    }
+
+  }
+
+}
+

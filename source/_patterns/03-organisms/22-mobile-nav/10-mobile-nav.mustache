@@ -1,0 +1,30 @@
+{{# mobile-nav }}
+
+<div class="gr-c-mobile-nav">
+
+  <header class="gr-c-mobile-nav__header">
+    <a href="#" class="gr-c-mobile-nav__btn gr-c-mobile-nav__btn--menu">
+      <span class="gr-u-hidden">
+        Menu
+      </span>
+      <i class="gr-i-hamburger gr-c-mobile-nav__icon">
+      </i>
+    </a>
+    <a href="#" class="gr-c-mobile-nav__btn gr-c-mobile-nav__btn--search">
+      <span class="gr-u-hidden">
+        Search
+      </span>
+      <i class="gr-i-search gr-c-mobile-nav__icon">
+      </i>
+    </a>
+  </header>
+
+  <div class="gr-c-mobile-nav__menu">
+    {{> organisms-slinky-menu }}
+  </div>
+
+  {{> molecules-search-box }}
+
+</div>
+
+{{/ mobile-nav }}

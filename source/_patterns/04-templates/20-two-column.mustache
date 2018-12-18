@@ -1,0 +1,211 @@
+{{# viewing-page }}
+{{> molecules-alert-box }}
+{{/ viewing-page }}
+
+{{# page-header-live-active }}
+{{> organisms-page-header-live }}
+{{/ page-header-live-active }}
+
+{{^ page-header-live-active }}
+{{> organisms-page-header }}
+{{/ page-header-live-active }}
+
+<main class="gr-l-main gr-l-main--w-bg">
+  <div class="gr-l-main__inner gr-l-main__inner--split">
+
+    <nav class="gr-l-main__side">
+
+      <section class="gr-l-section">
+        <div class="gr-l-section__inner">
+
+          <div class="gr-l-section__item">
+
+            {{# viewing-page }}
+
+            {{> organisms-list-box-set }}
+
+            {{/ viewing-page }}
+
+            {{^ viewing-page }}
+
+            {{> organisms-list-box-bordered }}
+
+            {{/ viewing-page }}
+
+          </div>
+
+        </div>
+      </section>
+
+    </nav>
+
+    <div class="gr-l-main__content">
+      <div class="gr-l-main__content-inner">
+
+        {{# article-header-exists }}
+
+        <section class="gr-l-section">
+          <div class="gr-l-section__inner">
+
+            <div class="gr-l-section__item">
+              {{> organisms-article-header }}
+            </div>
+
+          </div>
+        </section>
+
+        {{/ article-header-exists }}
+
+        
+        {{# result-box-set-1-exists }}
+
+        <section class="gr-l-section">
+          <div class="gr-l-section__inner">
+
+            <div class="gr-l-section__item">
+              {{> organisms-result-box-set }}
+            </div>
+            
+          </div>
+        </section>
+
+        {{/ result-box-set-1-exists }}
+
+
+        {{# result-list-block-1-exists }}
+
+        <section class="gr-l-section">
+          <div class="gr-l-section__inner">
+
+            <div class="gr-l-section__item">
+              {{> organisms-result-list-block }}
+            </div>
+            
+          </div>
+        </section>
+
+        {{/ result-list-block-1-exists }}
+
+
+        {{# article-block-1-exists }}
+
+        <section class="gr-l-section">
+          <div class="gr-l-section__inner">
+
+            <div class="gr-l-section__item">
+
+              {{> organisms-article-block }}
+
+            </div>
+            
+          </div>
+        </section>
+
+        {{/ article-block-1-exists }}
+
+
+        {{# article-block-2-exists }}
+
+        <section class="gr-l-section">
+          <div class="gr-l-section__inner">
+
+            <div class="gr-l-section__item">
+
+              {{> organisms-article-block-2 }}
+              
+            </div>
+            
+          </div>
+        </section>
+
+        {{/ article-block-2-exists }}
+
+
+        {{# article-block-3-exists }}
+
+        <section class="gr-l-section">
+          <div class="gr-l-section__inner">
+
+            <div class="gr-l-section__item">
+
+              {{> organisms-article-block-3 }}
+              
+            </div>
+            
+          </div>
+        </section>
+
+        {{/ article-block-3-exists }}
+
+
+        {{# article-block-4-exists }}
+
+        <section class="gr-l-section">
+          <div class="gr-l-section__inner">
+
+            <div class="gr-l-section__item">
+
+              {{> organisms-article-block-4 }}
+              
+            </div>
+            
+          </div>
+        </section>
+
+        {{/ article-block-4-exists }}
+
+
+        {{# article-block-5-exists }}
+
+        <section class="gr-l-section">
+          <div class="gr-l-section__inner">
+
+            <div class="gr-l-section__item">
+
+              {{> organisms-article-block-5 }}
+              
+            </div>
+            
+          </div>
+        </section>
+
+        {{/ article-block-5-exists }}
+
+
+        {{# calendar-exists }}
+
+        <section class="gr-l-section">
+          <div class="gr-l-section__inner">
+
+            <div class="gr-l-section__item">
+
+              {{!> organisms-calendar }}
+              {{> organisms-calendar-advanced }}
+              
+            </div>
+            
+          </div>
+        </section>
+
+        {{/ calendar-exists }}
+
+
+        {{# result-box-set-2-exists }}
+
+        <section class="gr-l-section calendar-list">
+          <div class="gr-l-section__inner">
+
+            <div class="gr-l-section__item">
+              {{> organisms-result-box-set }}
+            </div>
+            
+          </div>
+        </section>
+
+        {{/ result-box-set-2-exists }}
+
+      </div>
+    </div>
+
+  </div>
+</main>

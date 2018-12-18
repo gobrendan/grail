@@ -1,0 +1,10 @@
+/*
+ * page header
+ */
+
+.gr-c-page-header {
+
+  position: relative;
+  z-index: 2; /* this element should be higher than the "gr-l-main" element */
+
+}

@@ -1,0 +1,169 @@
+/*
+ * pic box
+ */
+ 
+.gr-c-pic-box {
+
+  max-width: 100px; /* value is larger than "__media-wrapper" max-width to provide additional space for longer headings */
+
+  &__media-wrapper, 
+  &__more-wrapper {
+
+    min-width: 61px; 
+    max-width: calc(100% - 19px);
+    margin: 0 auto .5rem;
+
+  }
+
+  &__media-link {
+
+    display: block;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-top: 100%;
+
+    /* provide empty background for when images don't load */
+
+    &:before {
+
+      content: "";
+      display: block;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $gr-medium-gray;
+
+    }
+    
+  }
+
+  &__media {
+
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+  }
+
+  &__more-wrapper {
+
+    //
+
+  }
+
+  &__more-link {
+
+    display: block;
+    background: $gr-orange;
+    border-radius: 50%;
+    height: 0;
+    padding-top: 100%;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+
+  }
+
+  &__more-link-icon {
+
+    position: absolute;
+    left: 50%;
+    margin-left: -21px;
+    width: 42px;
+    top: 50%;
+    transform: translateY(-50%);    
+    font-size: 1.5rem;
+    color: $gr-white; 
+
+  }
+
+  &__text-wrapper {
+
+    text-align: center;
+
+  }
+
+  &__heading {
+
+    font-size: $gr-font-size-eta;
+    font-family: $gr-font-family-primary;
+    color: $gr-dark-gray;
+    margin: 0; /* override */
+
+  }
+
+  &__label {
+
+    font-size: $gr-font-size-iota;
+    font-family: $gr-font-family-primary;
+    color: $gr-medium-gray;
+    line-height: 1;
+    margin: 0;
+
+  }
+
+  &__date {
+
+    font-size: $gr-font-size-eta;
+    font-family: $gr-font-family-primary;
+    color: $gr-primary-blue;
+
+  }
+
+  &--more {
+
+    // 
+
+    &:hover {
+
+      .gr-c-pic-box__heading {
+
+        text-decoration: underline;
+
+      }
+
+    }
+
+  }
+
+  @include mq($gr-large-breakpoint) {
+
+    &__media-wrapper, 
+    &__more-wrapper {
+
+      min-width: 81px; /* magic number -- matches comp */
+  
+    }
+
+    &__heading {
+
+      font-size: $gr-font-size-zeta;
+  
+    }
+  
+    &__label {
+  
+      font-size: $gr-font-size-eta;
+  
+    }
+
+  }
+
+  @include mq($gr-large-breakpoint) {
+
+    &__media-wrapper {
+
+      // min-width: 81px; /* magic number -- matches comp */
+  
+    }
+
+  }
+  
+}

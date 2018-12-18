@@ -12,15 +12,13 @@
 
 @import "scss/10-settings/10-variables/breakpoint";
 @import "scss/10-settings/10-variables/color";
-@import "scss/10-settings/10-variables/custom-dropdown";
-@import "scss/10-settings/10-variables/custom-property";
 @import "scss/10-settings/10-variables/font";
-@import "scss/10-settings/10-variables/numeric";
-@import "scss/10-settings/10-variables/padding";
-@import "scss/10-settings/10-variables/text";
-@import "scss/10-settings/10-variables/transition";
-@import "scss/10-settings/10-variables/validation";
+@import "scss/10-settings/10-variables/font-size";
+@import "scss/10-settings/10-variables/transitions";
 @import "scss/10-settings/10-variables/width";
+@import "scss/10-settings/10-variables/spacing";
+@import "scss/10-settings/10-variables/IE-targeting";
+@import "scss/10-settings/10-variables/custom-property"; // must be last in 'variables' @imports list
 
 //
 // tool
@@ -47,18 +45,17 @@
 @import "scss/20-tools/10-mixins/transition-transform";
 @import "scss/20-tools/10-mixins/translate";
 @import "scss/20-tools/10-mixins/vertical-align";
+@import "scss/20-tools/10-mixins/line-height-crop";
 
 // placeholders
 
 @import "scss/20-tools/20-placeholders/form";
 @import "scss/20-tools/20-placeholders/general";
-@import "scss/20-tools/20-placeholders/list";
-@import "scss/20-tools/20-placeholders/text";
 @import "scss/20-tools/20-placeholders/visually-hidden";
 
 // fonts
 
-@import "scss/20-tools/30-fonts/font";
+@import "scss/20-tools/30-fonts/fonts";
 
 //
 // generic 
@@ -70,125 +67,132 @@
 // base
 //
 
-@import "scss/40-base/checkbox";
-@import "scss/40-base/fieldset";
-@import "scss/40-base/hr";
-@import "scss/40-base/icon";
-@import "scss/40-base/label";
-@import "scss/40-base/list";
-@import "scss/40-base/media";
-@import "scss/40-base/radio";
-@import "scss/40-base/select"; 
-@import "scss/40-base/table";
-@import "scss/40-base/text";
+// .csg {
+
+  @import "scss/40-base/fieldset";
+  @import "scss/40-base/hr";
+  @import "scss/40-base/icon";
+  @import "scss/40-base/label";
+  @import "scss/40-base/list";
+  @import "scss/40-base/media";
+  // @import "scss/40-base/radio";
+  @import "scss/40-base/select"; 
+  @import "scss/40-base/table";
+  @import "scss/40-base/text";
+  @import "scss/40-base/text-input"; 
+
+// }
 
 //
-// objects
+// layout
 //
 
-@import "scss/50-objects/grid";
-// @import "scss/50-object/grid-resizable";
-@import "scss/50-objects/main";
+@import "scss/50-layouts/main";
+@import "scss/50-layouts/section";
+@import "scss/50-layouts/wrapper";
+@import "scss/50-layouts/grid";
+// @import "scss/50-layouts/flexbox";
 
 //
-// components
+// components -- try ordering these: atoms then molecules then organisms
 //
 
+@import "scss/60-components/10-vendor/dropkick/dropkick.edited"; 
+@import "scss/60-components/10-vendor/datatables/jquery.dataTables.1.10.19.edited"; 
+@import "scss/60-components/10-vendor/slick/slick"; 
+@import "scss/60-components/10-vendor/slick/slick-theme"; 
+@import "scss/60-components/10-vendor/slinky/slinky"; 
+
+@import "scss/60-components/10-vendor/fullcalendar/fullcalendar.min"; 
+@import "scss/60-components/10-vendor/fullcalendar/fullcalendar.theme"; 
+// @import "scss/60-components/10-vendor/fullcalendar/fullcalendar.print"; 
+
+@import "scss/60-components/toggle"; 
 @import "scss/60-components/heading"; 
-@import "scss/60-components/button"; 
-// @import "../../_patterns/00-atoms/20-button/10-button"; // HEY
-@import "scss/60-components/custom-list"; 
-@import "scss/60-components/card"; 
-@import "scss/60-components/card-set"; 
-@import "scss/60-components/video"; 
-@import "scss/60-components/text-input"; 
-@import "scss/60-components/form"; 
-@import "scss/60-components/nav"; 
-@import "scss/60-components/site-header"; 
-@import "scss/60-components/hero"; 
+@import "scss/60-components/logo";
+@import "scss/60-components/button";
+@import "scss/60-components/button-set";
+@import "scss/60-components/button-set-block";
+@import "scss/60-components/nav-box"; 
+@import "scss/60-components/nav-box-block"; 
+@import "scss/60-components/primary-nav"; 
+@import "scss/60-components/primary-nav-block"; 
+@import "scss/60-components/search-form";
+@import "scss/60-components/search-box"; 
+@import "scss/60-components/table"; 
+@import "scss/60-components/list"; 
+@import "scss/60-components/list-box"; 
+@import "scss/60-components/list-box-set";
+@import "scss/60-components/ticker";
+@import "scss/60-components/ticker-set";
 
+@import "scss/60-components/hero-box"; 
+@import "scss/60-components/media-box"; 
+@import "scss/60-components/carousel"; 
+@import "scss/60-components/pic-box"; 
+@import "scss/60-components/pic-box-set"; 
+@import "scss/60-components/pic-box-block"; 
+@import "scss/60-components/card"; 
+@import "scss/60-components/card-set";
+@import "scss/60-components/spotlight"; 
+@import "scss/60-components/tile"; 
+@import "scss/60-components/tile-set"; 
+@import "scss/60-components/alert-box"; 
+@import "scss/60-components/breadcrumbs"; 
+@import "scss/60-components/pagination"; 
+@import "scss/60-components/article-header"; 
+@import "scss/60-components/tooltip"; 
+@import "scss/60-components/result-box"; 
+@import "scss/60-components/result-box-set"; 
+@import "scss/60-components/result-list"; 
+@import "scss/60-components/result-list-block"; 
+@import "scss/60-components/article-block"; 
+@import "scss/60-components/tag-box"; 
+@import "scss/60-components/checkbox"; 
+@import "scss/60-components/checkbox-set"; 
+@import "scss/60-components/paginator"; 
+@import "scss/60-components/calendar"; 
+@import "scss/60-components/mobile-nav"; 
+@import "scss/60-components/float-label"; 
+
+@import "scss/60-components/video"; 
+@import "scss/60-components/form"; 
+@import "scss/60-components/modal";  
+@import "scss/60-components/icon-box"; 
+
+@import "scss/60-components/tab-menu";
+
+@import "scss/60-components/page-header"; 
+
+// @import "scss/60-components/custom-list"; 
+// @import "scss/60-components/promo-button"; 
+// @import "scss/60-components/promo-button-set"; 
+// @import "scss/60-components/promo-group"; 
+// @import "scss/60-components/promo"; 
+// @import "scss/60-components/promo-set";
+// @import "scss/60-components/tag";  
+// @import "scss/60-components/request-box"; 
+
+// 
 // utility
+//
 
 @import "scss/70-utility/visibility";
 @import "scss/70-utility/utility";
-@import "scss/70-utility/list";
 @import "scss/70-utility/bg-color";
 @import "scss/70-utility/text-color";
-@import "scss/70-utility/spacing";
-@import "scss/70-utility/media";
 @import "scss/70-utility/display";
 @import "scss/70-utility/font";
+@import "scss/70-utility/text";
 
+// 
+// print
+//
+
+// @import "scss/80-print/print";
+
+// 
 // to be migrated to pl-specific stylesheet
-
-@import "scss/80-to-be-migrated/palette";
-@import "scss/80-to-be-migrated/syntax-highlight";
-
-//
-//
 //
 
-
-
-// // Test CSS output from mixins
-// @include it('Outputs the clearfix declaration block (property/value pairs)') {
-//   @include assert {
-
-//     @include output {
-//       @include clearfix();
-//     }
-
-//     @include expect {
-
-//       &:before,
-//       &:after {
-    
-//         content: " ";
-//         //display: table;
-//         display: block;
-    
-//       }
-    
-//       &:after {
-    
-//         clear: both;
-
-//       } 
-
-//     }
-//   }
-// }
-
-
-
-@mixin primary-header {
-  font-family: "Helvetica", Arial, sans-serif;
-  font-size: 2rem;
-  line-height: 2.5rem;
-  color: #333;
-  text-decoration: underline;
- }
-
-// Describe what you're testing
-@include describe('The primary-header mixin') {
-  // Explain what it should do
-  @include it('outputs the properties of our primary header.') {
-    // Assert the output of the mixin matches the expected result
-    @include assert {
-      @include output {
-        @include primary-header();
-      }
-      @include expect {
-        font-family: "Helvetica", Arial, sans-serif;
-        font-size: 2rem;
-        line-height: 2.5rem;
-        color: red;
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-
-$true-terminal-output: false;
-@include report;
+@import "scss/90-to-be-migrated/palette";

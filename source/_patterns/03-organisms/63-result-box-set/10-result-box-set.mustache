@@ -1,0 +1,36 @@
+{{# result-box-set }}
+
+<div class="gr-c-result-box-set {{ class }}">
+
+  {{# heading-exists }}
+
+  <h1 class="gr-c-heading gr-c-result-box-set__heading">
+    {{ heading }}
+  </h1>
+
+  {{/ heading-exists }}
+
+  {{# item }}
+
+  <div class="gr-c-result-box-set__item">
+    {{> organisms-result-box }}
+  </div>
+
+  {{/ item }} 
+
+  {{> molecules-pagination }}
+
+  {{# show-more-exists }}
+
+  <p class="gr-c-result-set-box__more">
+    <a href="">
+      Show More
+    </a><br>
+    About 6 Results
+  </p>
+
+  {{/ show-more-exists }}
+  
+</div>
+
+{{/ result-box-set }}

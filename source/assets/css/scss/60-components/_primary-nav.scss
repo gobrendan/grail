@@ -1,0 +1,232 @@
+/*
+ * primary nav
+ */
+
+.gr-c-primary-nav {
+
+  @include custom-property(background-color, --gr-dark-blue, $gr-dark-blue);
+  // position: relative;
+
+  &__list {
+
+    display: flex; 
+    list-style: none; 
+    max-width: $gr-component-max-width;
+    padding: 0 2rem; /* the side padding should be in a variable since it's widely used */ 
+    margin: auto; 
+
+  }
+
+  &__item {
+
+    // margin-right: 2rem;
+
+    &:last-child {
+
+      // margin-right: 0; 
+      
+    }
+
+  }
+
+  &__link {
+
+    display: block; 
+    font-size: $gr-font-size-beta;
+    color: $gr-white;
+    text-transform: uppercase; 
+    padding: 1.5rem 1rem; 
+    white-space: nowrap;
+
+    &:hover, 
+    &--active {
+
+      background-color: $gr-primary-blue; 
+      text-decoration: none; 
+
+    } 
+
+  }
+
+  /* should menu element be maintained in separate partial? */
+
+  &__menu {
+    
+    background-color: $gr-light-gray; 
+    padding: 1rem;
+    
+  }
+
+  &__menu-inner {
+
+    @supports (display: grid) {
+
+      @include grid(false, 2rem, repeat(auto-fill, minmax(100%, 1fr)), auto); 
+
+    }
+
+    max-width: $gr-component-max-width;
+    padding: 1rem 0; 
+    margin: auto;
+
+    /* grid fallback */
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  &__col {
+
+    @supports (display: grid) {
+
+      margin-bottom: 0; /* overrides grid fallback value */
+
+    }
+
+    /* grid fallback */
+    flex: 0 0 25%;
+    min-width: 300px;
+    margin-bottom: 2rem; /* matches grid gap */
+
+  }
+
+  &__menu-box {
+
+    margin: 0 0 2rem;
+
+    &:last-child {
+
+      margin: 0;
+
+    }
+
+  }
+
+  &__menu-heading {
+
+    font-size: 22px; /* this value should be in a variable */ 
+    font-weight: bold; 
+    line-height: 1.2; /* should this be global? */
+    color: $gr-orange; 
+    padding: 0 0 1.25rem; 
+    margin: 0 0 1rem;
+    position: relative;
+
+    &:after {
+
+      content: ""; 
+      display: block; 
+      position: absolute; 
+      left: 0; 
+      bottom: 0; 
+      width: 5rem;
+      height: .25rem; 
+      background: $gr-primary-blue;
+
+    }
+
+  }
+
+  &__menu-list {
+
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+
+  }
+
+  &__menu-item {
+
+    margin: 0 0 1rem; 
+
+    &:last-child {
+
+      margin: 0;
+
+    }
+
+  }
+
+  &__menu-link {
+
+    color: $gr-dark-blue;
+
+  }
+
+  @include mq($gr-medium-breakpoint) {
+
+    &__menu-inner {
+
+      @include grid(false, 2rem, repeat(auto-fill, minmax(47%, 1fr)), auto); 
+
+    }
+
+  }
+
+  @include mq($gr-large-breakpoint) {
+
+    &__menu-inner {
+
+      @include grid(false, 2rem, repeat(auto-fill, minmax(23%, 1fr)), auto);
+      
+    }
+
+  }
+
+}
+
+/* make "__menu" available for independent review -- requires using full class names when nesting */
+
+.gr-c-primary-nav {
+
+  // 
+
+  .gr-c-primary-nav__menu {
+
+    transition: $gr-menu-transition; 
+    position: absolute; 
+    height: 0;
+    overflow: hidden; /* without this, the page ends up super tall -- not sure why, yet */
+    top: 100%; 
+    left: -100%; 
+    opacity: 0;
+    z-index: 1; /* this should be top-most value */
+
+    &:before {
+
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -100%;
+      left: -100%;
+      background: $gr-light-gray; 
+      border-bottom: 1px solid $gr-medium-gray;
+      z-index: -1;
+
+    }
+
+  }
+
+  .gr-c-primary-nav__link {
+
+    //
+
+    &--active {
+
+      & ~ .gr-c-primary-nav__menu {
+
+        height: auto;
+        overflow: visible;
+        left: 0; 
+        right: 0; 
+        opacity: 1; 
+
+      }
+
+    }
+
+  }
+
+}

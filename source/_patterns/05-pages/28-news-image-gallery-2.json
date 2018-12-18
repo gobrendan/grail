@@ -1,0 +1,108 @@
+{
+
+  "viewing-page" : "true", 
+
+  "body-class" : "gr-l-page sp-anonymous", 
+
+  "alert-box" : false, 
+  
+  "page-header-live-active" : true, 
+
+  "list-box-set" : [
+
+    {
+
+      "class" : "gr-c-list-box-set--stacked", 
+      "item" : [
+
+        {
+
+          "list-box" : [
+
+            {
+
+              "class" : "gr-c-list-box--bordered", 
+              "heading" : "Navigation", 
+              "list" : [
+
+                {
+                  
+                  "class" : "gr-c-list-box__list gr-c-list-box__item", 
+                  "item" : [
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>item 1</a>"
+            
+                    }, 
+            
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>item 2</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>item 3</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>item 4</a>"
+            
+                    }, 
+
+                    {
+                      
+                      "class" : "gr-c-list__item", 
+                      "text" : "<a class='gr-c-list__link' href=''>item 5</a>"
+            
+                    }
+            
+                  ]
+            
+                }
+            
+              ]
+
+            }
+
+          ]
+
+        }
+
+      ]
+
+    }
+
+  ],
+  
+  "article-header-exists" : "", 
+
+  "result-box-set-1-exists" : "", 
+
+  "result-box-set-2-exists" : "", 
+
+  "result-list-block-1-exists" : "", 
+
+  "article-block-1-exists" : "", 
+
+  "article-block-2-exists" : true,
+
+  "article-block-3-exists" : "", 
+
+  "article-block-4-exists" : "",
+
+  "article-block-5-exists" : "",
+
+  "calendar-exists" : "",
+    
+  "page-footer-live-active" : true
+
+}

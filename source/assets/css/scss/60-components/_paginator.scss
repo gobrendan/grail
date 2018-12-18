@@ -1,0 +1,40 @@
+/*
+ * paginator
+ */
+
+.gr-c-paginator {
+
+  display: flex; 
+  align-items: center;
+
+  &__heading {
+
+    font-size: $gr-font-size-alpha;
+    color: $gr-dark-gray; 
+    line-height: 1;
+
+  }
+
+  &__btn {
+
+    font-size: $gr-font-size-kilo;
+    color: $gr-primary-blue;
+    margin: 0 1rem 0 0; 
+    line-height: 1;
+
+    &--next {
+
+      margin: 0 0 0 1rem;
+
+    }
+
+    &:hover {
+
+      text-decoration: none;
+      color: $gr-primary-blue;
+
+    }
+
+  }
+
+}

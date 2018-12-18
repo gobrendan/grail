@@ -1,0 +1,62 @@
+/*
+ * list
+ */
+
+.gr-c-list {
+
+  list-style: none; 
+  padding: 0; /* override */
+  margin: 0; /* override */
+
+  &__item {
+
+    margin-bottom: 1rem;
+
+    &:last-child {
+
+      margin-bottom: 0;
+
+    }
+
+  }
+
+  &__link {
+
+    font-size: $gr-font-size-epsilon;
+
+  }
+
+  &--split {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .gr-c-list__item {
+
+      flex: 1 0 50%; 
+
+      /* remove bottom margin from last two items */
+
+      &:nth-last-child(-n + 2) {
+
+        // margin-bottom: 0;
+
+      }
+
+    }
+
+  }
+
+  &--on-dark {
+
+    @include custom-property(background-color, --gr-dark-blue, $gr-dark-blue);
+
+    .gr-c-list__link {
+
+      @include custom-property(color, --gr-white, $gr-white);
+
+    }
+
+  }
+
+}

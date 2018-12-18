@@ -1,0 +1,25 @@
+/*
+ * tag
+ */
+
+.gr-c-tag {
+
+  @include custom-property(background-color, --ch-dark-orange, $ch-dark-orange);
+  color: $ch-white;
+  text-transform: uppercase;
+  font-weight: bold; 
+  padding: .25rem .75rem;
+
+  &--new {
+
+    //
+
+  }
+
+  &--pin {
+
+    @include custom-property(background-color, --ch-light-blue, $ch-light-blue);
+
+  }
+
+}

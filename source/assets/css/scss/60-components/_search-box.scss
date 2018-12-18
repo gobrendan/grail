@@ -1,0 +1,105 @@
+/*
+ * search box
+ */
+
+.gr-c-search-box {
+
+  // @include grid(false, 0, auto 36px, auto);
+  // align-items: center;
+  @include custom-property(background-color, --gr-white, $gr-white);
+  // @include custom-property(border-color, --gr-light-gray, $gr-light-gray);
+  // border-style: solid; 
+  // border-width: 1px;
+  position: relative;
+  width: 100%;
+  max-width: 350px; 
+
+  &__text-input {
+
+    @include custom-property(background-color, --gr-white, $gr-white); /* override default text input background color */
+    color: $gr-black; 
+
+  }
+
+  /* NOTE: override default text input declarations */
+
+  &__text-input[type=text], 
+  &__text-input[type=search] {
+
+    // height: auto;
+    // border-width: 0; 
+    // font-size: $gr-font-size-epsilon; 
+    // padding: 0 2.75rem 0 .75rem; /* right value matches width of "__btn" element */
+    // line-height: 3rem;
+    // padding: .75rem 2.75rem .75rem .75rem;
+    // line-height: 1.5;
+
+  }
+
+  &__btn {
+
+    @include custom-property(color, --gr-primary-blue, $gr-primary-blue);
+    display: flex; 
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px; /* magic number -- matches comp */
+    cursor: pointer;
+    padding: 0 1rem 0 .5rem;
+    width: 2.75rem; /* value matches right padding of "__text-input" element */
+    // display: flex; /* improved vertical alignment -- keeps icon vertically-aligned with placeholder text */
+
+    position: absolute; 
+    right: 1px; 
+    top: 1px; 
+    bottom: 1px; 
+
+    [class^="gr-i-"], [class*=" gr-i-"] {
+
+      //
+
+    }
+
+    &:hover {
+
+      text-decoration: none; 
+
+    }
+
+  }
+
+  ::placeholder {
+
+    @include custom-property(color, --gr-primary-blue, $gr-primary-blue);
+
+  }
+
+  &--big {
+
+    @include custom-property(border-color, --gr-dark-gray, $gr-dark-gray);
+
+    .gr-c-search-box__text-input[type=text], 
+    .gr-c-search-box__text-input[type=search] {
+
+      font-size: 1.5rem; /* magic number -- matches comp */
+      height: 50px;
+      // line-height: 1; /* improves vertical alignment in IE */
+
+    }
+
+    .gr-c-search-box__btn {
+
+      @include custom-property(color, --gr-dark-gray, $gr-dark-gray);
+      font-size: 1.75rem; /* magic number -- matches comp */
+
+    }
+
+    ::placeholder {
+
+      @include custom-property(color, --gr-dark-gray, $gr-dark-gray);
+  
+    }
+  
+    
+  }
+
+}

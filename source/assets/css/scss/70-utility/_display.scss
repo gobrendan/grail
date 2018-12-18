@@ -1,6 +1,14 @@
 /*
- * display -- show/hide depending on viewport width
+ * display
  */
+
+.gr-u-display-contents {
+
+  display: contents;
+
+}
+
+/* show/hide based on viewport width */
 
 .gr-u-display {
 
@@ -16,7 +24,7 @@
     
     display: none;
     
-    @include mq($medium-breakpoint) {
+    @include mq($gr-medium-breakpoint) {
       
       display: block;
     
@@ -33,11 +41,11 @@
   &--small-only {
 
     //
-    
-    @media (min-width: $medium-breakpoint) {
-      
+
+    @include mq($gr-medium-breakpoint) {
+
       display: none;
-    
+
     }
   
   }
@@ -46,10 +54,10 @@
     
     //
     
-    @media (min-width: $large-breakpoint) {
-      
+    @include mq($gr-large-breakpoint) {
+
       display: none;
-    
+
     }
 
   }
@@ -58,10 +66,10 @@
 
     display: none;
     
-    @media (min-width: $large-breakpoint) {
-      
+    @include mq($gr-large-breakpoint) {
+
       display: block;
-    
+
     }
 
   }
@@ -70,10 +78,10 @@
     
     //
     
-    @media (min-width: $large-breakpoint) {
-      
+    @include mq($gr-large-breakpoint) {
+
       display: none;
-    
+
     }
 
   }

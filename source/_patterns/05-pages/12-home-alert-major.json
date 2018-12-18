@@ -1,0 +1,925 @@
+{
+
+  "viewing-page" : "true", 
+
+  "body-class" : "gr-l-page sp-anonymous", 
+  
+  "alert-box" : [
+
+    {
+
+      "class" : "gr-c-alert-box--major", 
+      "text" : "SS Alert, a steamship that sank off Victoria, Australia in 1893.", 
+      "button-text" : "More Info"
+
+    }
+
+  ], 
+
+  "page-header-live-active" : true, 
+
+  "carousel" : [
+
+    {
+
+      "class" : "gr-c-carousel--media-box", 
+      "id" : "", 
+      "item" : [
+
+        {
+
+          "media-box" : [
+
+            {
+        
+              "img-advanced" : [
+
+                {
+            
+                  "1x-src" : "../../assets/images/grass@1x.jpg",
+                  "2x-src" : "../../assets/images/grass@2x.jpg",
+                  "1x-src-big" : "../../assets/images/grass-biggest@1x.jpg",
+                  "2x-src-big" : "../../assets/images/grass-biggest@2x.jpg",
+                  "1x-src-biggest" : "",
+                  "2x-src-biggest" : "",
+                  "breakpoint-big" : "48em",
+                  "breakpoint-biggest" : "",
+                  "picture-class" : "gr-c-media-box__media",
+                  "image-class" : "gr-c-media-box__media",
+                  "alt" : ""
+            
+                }
+            
+              ], 
+              "label" : "News", 
+              "date" : "Yesterday", 
+              "heading" : "So strongly and  did conceive of my situation.", 
+              "button-text" : "More"
+        
+            }
+        
+          ],  
+          "slide-number" : "1", 
+          "card" : ""
+
+        }, 
+
+        {
+
+          "media-box" : [
+
+            {
+        
+              "img-advanced" : [
+
+                {
+            
+                  "1x-src" : "../../assets/images/369x279.png",
+                  "2x-src" : "../../assets/images/738x558.png",
+                  "1x-src-big" : "../../assets/images/1248x662.png",
+                  "2x-src-big" : "../../assets/images/2496x1324.png",
+                  "1x-src-biggest" : "",
+                  "2x-src-biggest" : "",
+                  "breakpoint-big" : "48em",
+                  "breakpoint-biggest" : "",
+                  "picture-class" : "gr-c-media-box__media",
+                  "image-class" : "gr-c-media-box__media",
+                  "alt" : ""
+            
+                }
+            
+              ], 
+              "label" : "News", 
+              "date" : "Yesterday", 
+              "heading" : "Nullam a lacus interdum, lobortis sem in, tincidunt sem. Phasellus efficit.", 
+              "button-text" : "More"
+        
+            }
+        
+          ], 
+          "slide-number" : "2", 
+          "card" : ""
+
+        }, 
+
+        {
+
+          "media-box" : [
+
+            {
+        
+              "img-advanced" : [
+
+                {
+            
+                  "1x-src" : "../../assets/images/369x279.png",
+                  "2x-src" : "../../assets/images/738x558.png",
+                  "1x-src-big" : "../../assets/images/1248x662.png",
+                  "2x-src-big" : "../../assets/images/2496x1324.png",
+                  "1x-src-biggest" : "",
+                  "2x-src-biggest" : "",
+                  "breakpoint-big" : "48em",
+                  "breakpoint-biggest" : "",
+                  "picture-class" : "gr-c-media-box__media",
+                  "image-class" : "gr-c-media-box__media",
+                  "alt" : ""
+            
+                }
+            
+              ], 
+              "label" : "News", 
+              "date" : "Yesterday", 
+              "heading" : "Duis porta finibus arcu, id dictum ipsum luctus id. Etiam placerat nunc nunc.", 
+              "button-text" : "More"
+        
+            }
+        
+          ], 
+          "slide-number" : "3", 
+          "card" : ""
+
+        }, 
+
+        {
+
+          "media-box" : [
+
+            {
+        
+              "img-advanced" : [
+
+                {
+            
+                  "1x-src" : "../../assets/images/369x279.png",
+                  "2x-src" : "../../assets/images/738x558.png",
+                  "1x-src-big" : "../../assets/images/1248x662.png",
+                  "2x-src-big" : "../../assets/images/2496x1324.png",
+                  "1x-src-biggest" : "",
+                  "2x-src-biggest" : "",
+                  "breakpoint-big" : "48em",
+                  "breakpoint-biggest" : "",
+                  "picture-class" : "gr-c-media-box__media",
+                  "image-class" : "gr-c-media-box__media",
+                  "alt" : ""
+            
+                }
+            
+              ],  
+              "label" : "News", 
+              "date" : "Yesterday", 
+              "heading" : "Nullam a lacus interdum, lobortis sem in, tincidunt sem. Phasellus efficit.", 
+              "button-text" : "More"
+        
+            }
+        
+          ], 
+          "slide-number" : "4", 
+          "card" : ""
+
+        }, 
+
+        {
+
+          "media-box" : [
+
+            {
+        
+              "img-advanced" : [
+
+                {
+            
+                  "1x-src" : "../../assets/images/369x279.png",
+                  "2x-src" : "../../assets/images/738x558.png",
+                  "1x-src-big" : "../../assets/images/1248x662.png",
+                  "2x-src-big" : "../../assets/images/2496x1324.png",
+                  "1x-src-biggest" : "",
+                  "2x-src-biggest" : "",
+                  "breakpoint-big" : "48em",
+                  "breakpoint-biggest" : "",
+                  "picture-class" : "gr-c-media-box__media",
+                  "image-class" : "gr-c-media-box__media",
+                  "alt" : ""
+            
+                }
+            
+              ], 
+              "label" : "News", 
+              "date" : "Yesterday", 
+              "heading" : "Duis porta finibus arcu, id dictum ipsum luctus id. Etiam placerat nunc nunc.", 
+              "button-text" : "More"
+        
+            }
+        
+          ], 
+          "slide-number" : "5", 
+          "card" : ""
+
+        }
+
+      ]
+
+    }
+
+  ],
+
+  "pic-box-block" : [
+
+    {
+
+      "heading" : "People", 
+      "search-box" : [
+    
+        {
+    
+          "placeholder" : "People Search"
+          
+        }
+        
+      ], 
+      "set" : [
+
+        {
+
+          "pic-box-set" : [
+
+            {
+        
+              "heading" : "Moves", 
+              "item" : [
+        
+                {
+        
+                  "pic-box" : [
+        
+                    {
+                
+                      "img" : [
+                
+                        {
+                    
+                          "1x-src" : "../../assets/images/kathy-dunn-thumb@1x.jpg",
+                          "2x-src" : "../../assets/images/kathy-dunn-thumb@2x.jpg",
+                          "class" : "gr-c-pic-box__media",
+                          "alt" : ""
+                    
+                        }
+                    
+                      ],
+                      "heading" : "Kathy Dunn", 
+                      "label" : "Function Title", 
+                      "date" : "Sep. 28"
+                
+                    }
+                
+                  ]
+        
+                }, 
+        
+                {
+        
+                  "pic-box" : [
+        
+                    {
+                
+                      "img" : [
+                
+                        {
+                    
+                          "1x-src" : "../../assets/images/diane-daniels-thumb@1x.jpg",
+                          "2x-src" : "../../assets/images/diane-daniels-thumb@2x.jpg",
+                          "class" : "gr-c-pic-box__media",
+                          "alt" : ""
+                    
+                        }
+                    
+                      ],
+                      "heading" : "Diane Daniels", 
+                      "label" : "Function Title", 
+                      "date" : "Sep. 24"
+                
+                    }
+                
+                  ]
+        
+                }, 
+        
+                {
+        
+                  "pic-box" : [
+        
+                    {
+                
+                      "img" : [
+                
+                        {
+                    
+                          "1x-src" : "../../assets/images/brenda-ray-thumb@1x.jpg",
+                          "2x-src" : "../../assets/images/brenda-ray-thumb@2x.jpg",
+                          "class" : "gr-c-pic-box__media",
+                          "alt" : ""
+                    
+                        }
+                    
+                      ],
+                      "heading" : "Brenda Ray", 
+                      "label" : "Function Title", 
+                      "date" : "Sep. 14"
+                
+                    }
+                
+                  ]
+        
+                }, 
+        
+                {
+        
+                  "pic-box" : [
+        
+                    {
+                
+                      "img" : [
+                
+                        {
+                    
+                          "1x-src" : "../../assets/images/james-burton-thumb@1x.jpg",
+                          "2x-src" : "../../assets/images/james-burton-thumb@2x.jpg",
+                          "class" : "gr-c-pic-box__media",
+                          "alt" : ""
+                    
+                        }
+                    
+                      ],
+                      "heading" : "James Burton", 
+                      "label" : "Function Title", 
+                      "date" : "Sep. 9"
+                
+                    }
+                
+                  ]
+        
+                }, 
+
+                {
+        
+                  "pic-box" : [
+        
+                    {
+                
+                      "img" : [
+                
+                        {
+                    
+                          "1x-src" : "../../assets/images/kathy-dunn-thumb@1x.jpg",
+                          "2x-src" : "../../assets/images/kathy-dunn-thumb@2x.jpg",
+                          "class" : "gr-c-pic-box__media",
+                          "alt" : ""
+                    
+                        }
+                    
+                      ],
+                      "heading" : "Kathy Dunn", 
+                      "label" : "Function Title", 
+                      "date" : ""
+                
+                    }
+                
+                  ]
+        
+                }, 
+        
+                {
+        
+                  "pic-box" : [
+        
+                    {
+                
+                      "img" : [
+                
+                        {
+                    
+                          "1x-src" : "../../assets/images/diane-daniels-thumb@1x.jpg",
+                          "2x-src" : "../../assets/images/diane-daniels-thumb@2x.jpg",
+                          "class" : "gr-c-pic-box__media",
+                          "alt" : ""
+                    
+                        }
+                    
+                      ],
+                      "heading" : "Diane Daniels", 
+                      "label" : "Function Title", 
+                      "date" : ""
+                
+                    }
+                
+                  ]
+        
+                }, 
+        
+                {
+        
+                  "pic-box" : [
+        
+                    {
+                
+                      "img" : [
+                
+                        {
+                    
+                          "1x-src" : "../../assets/images/brenda-ray-thumb@1x.jpg",
+                          "2x-src" : "../../assets/images/brenda-ray-thumb@2x.jpg",
+                          "class" : "gr-c-pic-box__media",
+                          "alt" : ""
+                    
+                        }
+                    
+                      ],
+                      "heading" : "Brenda Ray", 
+                      "label" : "Function Title", 
+                      "date" : ""
+                
+                    }
+                
+                  ]
+        
+                }, 
+
+                {
+        
+                  "pic-box" : [
+        
+                    {
+                      
+                      "class" : "gr-c-pic-box--more", 
+                      "img" : "", 
+                      "more" : true, 
+                      "heading" : "More", 
+                      "label" : "", 
+                      "date" : ""
+                
+                    }
+                
+                  ]
+        
+                }
+        
+              ], 
+              "more-button" : ""
+        
+            }
+        
+          ]
+
+        }
+
+      ]
+
+    }
+
+  ], 
+
+  "section-b" : [
+
+    {
+
+      "carousel" : [
+
+        {
+    
+          "class" : "gr-c-carousel--cards", 
+          "id" : "", 
+          "item" : [
+    
+            {
+              
+              "media-box" : "", 
+              "card" : [
+
+                {
+            
+                  "class" : "", 
+                  "icon-class" : "gr-i-event", 
+                  "date" : "January 1, 2018", 
+                  "label" : "Lorem Ipsum" ,
+                  "heading" : "Lorem ipsum dolor sit amet, consectetur elit.", 
+                  "details" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nunc justo. Nunc lorem diam, dapibus.", 
+                  "button-text" : "More"
+            
+                }
+            
+              ]
+                  
+            }, 
+    
+            {
+    
+              "media-box" : "", 
+              "card" : [
+
+                {
+            
+                  "class" : "", 
+                  "icon-class" : "gr-i-event", 
+                  "date" : "January 1, 2018", 
+                  "label" : "Lorem Ipsum" ,
+                  "heading" : "Lorem ipsum dolor sit amet, consectetur elit.", 
+                  "details" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nunc justo. Nunc lorem diam, dapibus.", 
+                  "button-text" : "More"
+            
+                }
+            
+              ]
+
+            }, 
+    
+            {
+    
+              "media-box" : "", 
+              "card" : [
+
+                {
+
+                  "class" : "", 
+                  "icon-class" : "gr-i-event", 
+                  "date" : "January 1, 2018", 
+                  "label" : "Lorem Ipsum" ,
+                  "heading" : "Lorem ipsum dolor sit amet, consectetur elit.", 
+                  "details" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nunc justo. Nunc lorem diam, dapibus.", 
+                  "button-text" : "More"
+
+                }
+
+              ]
+
+            }
+    
+          ]
+    
+        }
+    
+      ]
+
+    }
+
+  ], 
+
+  "card-set" : [
+
+    {
+
+      "item" : [
+
+        {
+
+          "card" : [
+
+            {
+        
+              "class" : "", 
+              "icon-class" : "gr-i-event", 
+              "date" : "August 2, 2018", 
+              "label" : "Training" ,
+              "heading" : "The monkey-rope is found in all whalers; but.", 
+              "details" : "The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder.", 
+              "button-text" : "More"
+        
+            }
+        
+          ]
+
+        }, 
+
+        {
+
+          "card" : [
+
+            {
+        
+              "class" : "", 
+              "icon-class" : "gr-i-event", 
+              "date" : "August 12, 2018", 
+              "label" : "Gathering" ,
+              "heading" : "Being the savage's bowsman, that is, the per.", 
+              "details" : "The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder.", 
+              "button-text" : "More"
+        
+            }
+        
+          ]
+
+        }, 
+
+        {
+
+          "card" : [
+
+            {
+        
+              "class" : "", 
+              "icon-class" : "gr-i-event", 
+              "date" : "August 22, 2018", 
+              "label" : "Social" ,
+              "heading" : "So strongly and  did conceive of my situation.", 
+              "details" : "The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder.", 
+              "button-text" : "More"
+        
+            }
+        
+          ]
+
+        }
+
+      ]
+
+    }
+
+  ], 
+
+  "section-c" : [
+
+    {
+
+      "spotlight" : [
+
+        {
+    
+          "class" : "gr-c-spotlight--overlay", 
+          "category" : "Friday Spotlight", 
+          "label" : "" ,
+          "heading" : "Being the savage's bowsman, that is, the person who pulled the bow-oar.", 
+          "details" : "So strongly and metaphysically did I conceive of my situation, that while earnestly watching his motions, I seemed distinctly to perceive that of my own", 
+          "button-text" : "More", 
+          "img" : [
+    
+            {
+        
+              "1x-src" : "../../assets/images/kathy-dunn@1x.jpg",
+              "2x-src" : "../../assets/images/kathy-dunn@2x.jpg",
+              "class" : "gr-c-spotlight__media",
+              "alt" : ""
+        
+            }
+        
+          ]
+    
+        }
+    
+      ], 
+
+      "button-set-block" : [
+
+        {
+    
+          "class" : "", 
+          "heading" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere vel augue vitae posuere. Phasellus ac elit vel.", 
+          "button-set" : [
+    
+            {
+              
+              "class" : "gr-c-btn-set--grid", 
+              "item" : [
+        
+                {
+        
+                  "button" : [
+        
+                    {
+                  
+                      "class" : "gr-c-btn-set__btn gr-c-btn--big", 
+                      "button-icon" : "",
+                      "text" : "Answer"
+        
+                    }
+        
+                  ]
+        
+                }, 
+        
+                {
+        
+                  "button" : [
+        
+                    {
+                  
+                      "class" : "gr-c-btn-set__btn gr-c-btn--big", 
+                      "button-icon" : "",
+                      "text" : "Answer"
+        
+                    }
+        
+                  ]
+        
+                }, 
+    
+                {
+        
+                  "button" : [
+        
+                    {
+                  
+                      "class" : "gr-c-btn-set__btn gr-c-btn--big", 
+                      "button-icon" : "",
+                      "text" : "Answer"
+        
+                    }
+        
+                  ]
+        
+                }, 
+        
+                {
+        
+                  "button" : [
+        
+                    {
+                  
+                      "class" : "gr-c-btn-set__btn gr-c-btn--big", 
+                      "button-icon" : "",
+                      "text" : "Answer"
+        
+                    }
+        
+                  ]
+        
+                }
+        
+              ]
+        
+            }
+        
+          ]
+    
+        }
+    
+      ]
+
+    }
+
+  ],
+
+  "section-d" : [
+
+    {
+
+      "tile-set-grid" : [
+
+        {
+    
+          "tile-set" : [
+    
+            {
+    
+              "class" : "gr-c-tile-set--grid", 
+              "item" : [
+    
+                {
+    
+                  "tile" : [
+    
+                    {
+                      
+                      "class" : "",
+                      "text" : "Ethics", 
+                      "img" : [
+                
+                        {
+                    
+                          "1x-src" : "../../assets/images/tile2@1x.jpg",
+                          "2x-src" : "../../assets/images/tile2@2x.jpg",
+                          "class" : "gr-c-tile__media",
+                          "alt" : ""
+                    
+                        }
+                    
+                      ]
+                
+                    }
+                
+                  ]
+    
+                }, 
+
+                {
+    
+                  "tile" : [
+    
+                    {
+                      
+                      "class" : "", 
+                      "text" : "Jobs", 
+                      "img" : [
+                
+                        {
+                    
+                          "1x-src" : "../../assets/images/tile1@1x.jpg",
+                          "2x-src" : "../../assets/images/tile1@2x.jpg",
+                          "class" : "gr-c-tile__media",
+                          "alt" : ""
+                    
+                        }
+                    
+                      ]
+                
+                    }
+                
+                  ]
+    
+                }, 
+    
+                {
+    
+                  "class" : "",
+                  "tile" : [
+    
+                    {
+                
+                      "text" : "Bulletin Board", 
+                      "img" : [
+                
+                        {
+                    
+                          "1x-src" : "../../assets/images/tile3@1x.jpg",
+                          "2x-src" : "../../assets/images/tile3@2x.jpg",
+                          "class" : "gr-c-tile__media",
+                          "alt" : ""
+                    
+                        }
+                    
+                      ]
+                
+                    }
+                
+                  ]
+    
+                }, 
+    
+                {
+    
+                  "class" : "",
+                  "tile" : [
+    
+                    {
+                
+                      "text" : "HR", 
+                      "img" : [
+                
+                        {
+                    
+                          "1x-src" : "../../assets/images/tile4@1x.jpg",
+                          "2x-src" : "../../assets/images/tile4@2x.jpg",
+                          "class" : "gr-c-tile__media",
+                          "alt" : ""
+                    
+                        }
+                    
+                      ]
+                
+                    }
+                
+                  ]
+    
+                }
+    
+              ]
+    
+            }
+    
+          ]
+    
+        }
+    
+      ],
+
+      "spotlight" : [
+
+        {
+    
+          "class" : "", 
+          "category" : "Community", 
+          "label" : "Adventure, Travel" ,
+          "heading" : "Being the savage's bowsman, that is, the person who pulled the bow-oar.", 
+          "details" : "So strongly and metaphysically did I conceive of my situation, that while earnestly watching his motions, I seemed distinctly to perceive that of my own", 
+          "button-text" : "More", 
+          "img" : [
+    
+            {
+        
+              "1x-src" : "../../assets/images/spotlight@1x.jpg",
+              "2x-src" : "../../assets/images/spotlight@2x.jpg",
+              "class" : "gr-c-spotlight__media",
+              "alt" : ""
+        
+            }
+        
+          ]
+    
+        }
+    
+      ]
+
+    }
+
+  ],
+
+  "page-footer-live-active" : true
+  
+}

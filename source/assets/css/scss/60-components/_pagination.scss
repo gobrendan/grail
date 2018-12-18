@@ -1,0 +1,74 @@
+/* 
+ * pagination
+ */
+
+.gr-c-pagination {
+
+  //
+
+  &__list {
+
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+  }
+
+  &__item {
+
+    //
+
+    &--left-arrow {
+
+      margin-right: .5rem;
+
+    }
+
+    &--right-arrow {
+
+      margin-left: .5rem;
+
+    }
+
+  }
+
+  &__link {
+
+    display: block; 
+    line-height: 34px; 
+    padding: 0 .75rem; 
+    border: 1px solid transparent; /* improves horizonal alignment of text links and arrow links */
+
+    &--arrow {
+
+      padding: 0; 
+      width: 36px; /* matches with line-height but with added 2px to take border into account -- causes element to display as square */
+      text-align: center; 
+      text-decoration: none;
+      border: 1px solid $gr-medium-gray; 
+
+      &:hover {
+
+        text-decoration: none;
+        background-color: $gr-light-gray;
+
+      }
+
+    } 
+
+    &--active {
+
+      background-color: $gr-light-gray;
+
+      &:hover {
+
+        text-decoration: none;
+        
+      }
+
+    }
+
+  }
+
+}

@@ -1,45 +1,94 @@
 {{# pl-font-palette }}
 
-<div class="gr-o-grid pl-palette gr-pl-o-palette--fonts">
+<div class="gr-l-grid pl-palette gr-pl-o-palette--fonts">
 
   {{# item }}
 
-  <div class="gr-o-grid__item gr-pl-o-palette__item">
+  <div class="gr-l-grid__item gr-pl-o-palette__item">
 
     <div class="gr-pl-o-palette__box gr-pl-o-palette__box--fonts">
 
       <div class="gr-pl-o-palette__swatch gr-pl-o-palette__swatch--font">
 
-        <p class="gr-pl-o-palette__heading gr-pl-o-palette__heading--big {{ font-name-utility-class }}">
+        <p class="gr-pl-o-palette__heading gr-pl-o-palette__heading--big {{ font-class }}">
           {{ name }} 
         </p>
-        <p class="{{ font-name-utility-class }}">
+
+        <p class="{{ font-class }}">
           ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
           abcdefghijklmnopqrstuvwxyz<br>
           0123456789
         </p>
-        <p class="u-f-italic {{ font-name-utility-class }}">
+
+        <p class="{{ font-italic-class }}">
           ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
           abcdefghijklmnopqrstuvwxyz<br>
           0123456789
         </p>
-        
+
+        {{# font-light-class }}
+        <p class="{{ font-light-class }}">
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+          abcdefghijklmnopqrstuvwxyz<br>
+          0123456789
+        </p>
+        {{/ font-light-class }}
+
+        {{# font-bold-class }}
+        <p class="{{ font-bold-class }}">
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+          abcdefghijklmnopqrstuvwxyz<br>
+          0123456789
+        </p>
+        {{/ font-bold-class }}
+
+        {{# font-heavy-class }}
+        <p class="{{ font-heavy-class }}">
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+          abcdefghijklmnopqrstuvwxyz<br>
+          0123456789
+        </p>
+        {{/ font-heavy-class }}
+
       </div>
       
       <div class="gr-pl-o-palette__details">
         <ul class="gr-pl-o-palette__list">
+
           <li class="gr-pl-o-palette__list-item">
             {{ font-variable }}
           </li>
+
           <li class="pl-palette__list-item">
             {{ font-family-variable }}
           </li>
+
           <li class="pl-palette__list-item">
-            {{ font-utility-class }}
+            {{ font-class }}
           </li>
+
           <li class="pl-palette__list-item">
-            {{ font-family-utility-class }}
+            {{ font-family-class }}
           </li>
+
+          {{# font-italic-class }}
+          <li class="pl-palette__list-item">
+            {{ font-italic-class }}
+          </li>
+          {{/ font-italic-class }}
+
+          {{# font-light-class }}
+          <li class="pl-palette__list-item">
+            {{ font-light-class }}
+          </li>
+          {{/ font-light-class }}
+
+          {{# font-bold-class }}
+          <li class="pl-palette__list-item">
+            {{ font-bold-class }}
+          </li>
+          {{/ font-bold-class }}
+
         </ul>
       </div>
       

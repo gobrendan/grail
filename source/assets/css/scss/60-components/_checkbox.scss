@@ -1,0 +1,241 @@
+/*
+ * checkbox
+ */
+
+.gr-c-checkbox {
+
+  // border: 1px solid red;
+
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+
+    position: absolute;
+    left: -9999px;
+
+  }
+
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer;
+
+  }
+
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+
+    @include custom-property(border-color, --gr-light-gray, $gr-light-gray);
+    border-style: solid;
+    border-width: 1px;
+    content: '';
+    position: absolute;
+    left: 0; 
+    top: .1rem; /* magic number */
+    width: 1.25em; /* magic number */
+    height: 1.25em; /* magic number */
+    background: $gr-white;
+
+  }
+
+  [type="checkbox"]:checked + label:before {
+
+    // @include custom-property(border-color, --gr-primary-blue, $gr-primary-blue);
+
+  }
+
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after {
+
+    // @include custom-property(color, --gr-primary-blue, $gr-primary-blue);
+    // content: '✔';
+    // transition: $gr-checkbox-transition;
+    position: absolute;
+    top: -.3em; /* magic number */
+    left: .7em; /* magic number */
+    // font-size: 1.4em; /* magic number */
+    // line-height: 0.8; /* magic number */
+
+
+    content: '';
+    display: block;
+    width: 9px;
+    height: 20px;
+    border-style: solid;
+    border-color: $gr-primary-blue;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    // left: auto;
+    // right: 0;
+
+  }
+
+
+  [type="checkbox"]:not(:checked) + label:after {
+
+    opacity: 0;
+    transform: scale(0);
+
+  }
+
+  [type="checkbox"]:checked + label:after {
+
+    opacity: 1;
+    // transform: scale(1);
+
+  }
+
+  [type="checkbox"]:disabled:not(:checked) + label:before,
+  [type="checkbox"]:disabled:checked + label:before {
+
+    // @include custom-property(background-color, --gr-light-gray, $gr-light-gray);
+
+  }
+
+  [type="checkbox"]:disabled:checked + label:after {
+
+    @include custom-property(color, --gr-light-gray, $gr-light-gray);
+
+  }
+
+  [type="checkbox"]:disabled:checked + label:before {
+
+    @include custom-property(border-color, --gr-light-gray, $gr-light-gray);
+
+  }
+
+  [type="checkbox"]:disabled + label {
+
+    @include custom-property(color, --gr-light-gray, $gr-light-gray);
+
+  }
+
+  [type="checkbox"]:checked:focus + label:before {
+
+    // @include custom-property(border-color, --gr-primary-blue, $gr-primary-blue);
+
+  }
+
+  [type="checkbox"]:not(:checked):hover + label:before, 
+  [type="checkbox"]:not(:checked):focus + label:before {
+
+    // @include custom-property(border-color, --gr-medium-gray, $gr-medium-gray);
+
+  }
+
+  &--flipped {
+
+    /* display checkmark after the text */
+
+    [type="checkbox"]:not(:checked) + label,
+    [type="checkbox"]:checked + label {
+
+      padding-left: 0;
+      padding-right: 1.95em;
+
+    }
+
+    [type="checkbox"]:not(:checked) + label:before,
+    [type="checkbox"]:checked + label:before {
+  
+      left: auto; 
+      right: 0; 
+  
+    }
+
+    [type="checkbox"]:not(:checked) + label:after,
+    [type="checkbox"]:checked + label:after {
+  
+      left: auto; /* override default */
+      right: -.075em;
+  
+    }
+
+  }
+
+  &--filter {
+
+    font-size: $gr-font-size-gamma;
+
+    [type="checkbox"]:not(:checked) + label:before,
+    [type="checkbox"]:checked + label:before {
+
+      /* no placeholder square */
+
+      display: none;
+
+    }
+
+    [type="checkbox"]:not(:checked) + label, 
+    [type="checkbox"]:checked + label {
+
+      padding-left: 0;
+      padding-right: 1.5rem; 
+
+    }
+
+    [type="checkbox"]:not(:checked) + label:after,
+    [type="checkbox"]:checked + label:after {
+
+      left: auto;
+      right: 0;
+      top: 0;
+
+    }
+
+  }
+
+  &--blue {
+
+    color: $gr-primary-blue; 
+
+    [type="checkbox"]:not(:checked) + label:after,
+    [type="checkbox"]:checked + label:after {
+
+      border-color: $gr-primary-blue;
+
+    }
+
+  }
+
+  &--green {
+
+    color: $gr-green; 
+
+    [type="checkbox"]:not(:checked) + label:after,
+    [type="checkbox"]:checked + label:after {
+
+      border-color: $gr-green;
+
+    }
+
+  }
+
+  &--orange {
+
+    color: $gr-orange; 
+
+    [type="checkbox"]:not(:checked) + label:after,
+    [type="checkbox"]:checked + label:after {
+
+      border-color: $gr-orange;
+
+    }
+
+  }
+
+  &--red {
+
+    color: $gr-red; 
+
+    [type="checkbox"]:not(:checked) + label:after,
+    [type="checkbox"]:checked + label:after {
+
+      border-color: $gr-red;
+
+    }
+
+  }
+
+}

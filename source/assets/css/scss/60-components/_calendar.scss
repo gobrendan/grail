@@ -1,0 +1,180 @@
+/*
+ * calendar
+ */
+
+.gr-c-calendar {
+
+  //
+
+  &__header {
+
+    margin: 0 0 2rem; 
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    padding: 0 0 1rem;
+    border-bottom: 1px solid $gr-medium-gray;
+    margin: 0 0 3rem; 
+
+  }
+
+  &__heading {
+
+    font-size: $gr-font-size-kilo;
+    color: $gr-dark-blue;
+    line-height: 1;
+    padding: 0; 
+    margin: 0;
+
+    .gr-c-cal & {
+
+      margin: 0;
+
+    }
+
+  }
+
+  &__paginator {
+
+    margin-left: -10px; /* magic number -- visually aligns left edge of arrow with edge of component */
+
+  }
+
+  &__reset-btn {
+
+    align-self: center; 
+    margin-left: auto; /* pull element to right */
+
+  }
+
+  &__weekdays, 
+  &__grid {
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    // grid-gap: 1em;
+    padding: 0;
+    margin: 0 auto;
+  
+    li {
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+
+    }
+
+  }
+
+  &__weekdays {
+
+    margin-bottom: 1rem;
+    
+    li {
+
+      content: attr(title);
+      // font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+      text-align: center;
+      font-size: $gr-font-size-gamma;
+      line-height: 1;
+      color: $gr-dark-blue;
+
+    }
+
+    abbr[title] {
+
+      border: none;
+      text-decoration: none;
+  
+    }
+
+  }
+
+  &__grid {
+
+    border-width: 1px 0 0 1px; 
+    border-style: solid; 
+    border-color: $gr-medium-gray;
+    
+    li {
+    
+      background-color: $gr-white;
+      // align-items: flex-start;
+      // justify-content: flex-end;
+      // height: 8vw; /* magic number -- look into using intrinsic ration solution to keep days square */
+      // max-height: 125px; /* magic number */
+      padding: 1rem;
+      border-width: 0 1px 1px 0; 
+      border-style: solid; 
+      border-color: $gr-medium-gray;
+      position: relative;
+
+      &:nth-child(1), 
+      &:nth-child(2), 
+      &:nth-child(3), 
+      &:nth-child(4) {
+        
+        .gr-c-calendar__day-number {
+
+          color: $gr-medium-gray;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  &__day-number {
+
+    color: $gr-dark-gray;
+    line-height: 1;
+    position: absolute;
+    right: 1rem;
+    top: .85rem;
+
+  }
+
+  &__day-box {
+
+    height: 0;
+    padding-top: 100%;
+    overflow: hidden;
+    width: 100%; 
+    // background: red;
+
+  }
+
+  &__toggle {
+    
+    /* display toggle on wider screens only */
+
+    display: none;
+
+    @include mq($gr-large-breakpoint) {
+
+      display: flex; /* use display value used in ".gr-c-toggle" component */
+
+    }
+
+  }
+
+}
+
+/* temporary */
+
+/* make sure calendar list view is always visible on smaller screens */
+
+.calendar-list {
+
+  //
+
+  @media (max-width: $gr-large-breakpoint) {
+
+    display: block !important; /* use !important to override inline style */
+
+  }
+
+}

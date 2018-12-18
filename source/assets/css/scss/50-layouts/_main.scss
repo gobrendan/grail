@@ -1,0 +1,236 @@
+/*
+ * main
+ */
+
+html {
+
+  font-size: 1rem; 
+  background-color: $gr-white;
+
+  /* temporary "sticky" footer solution -- keep until non-header/non-footer components are prototyped */
+  
+  height: 100%;
+
+}
+
+body {
+
+  @include custom-property(color, --gr-black, $gr-black);
+  font: $gr-font-primary;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  /* NOTE: text-size-adjust (non-standard) -- https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust */
+
+  text-size-adjust: 100%;
+
+  /* NOTE: font smoothing (non-standard) -- https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth */
+
+  -webkit-font-smoothing: antialiased;
+
+  /* hide horizontal overflow -- prevents mega menu from adding horizontal scrollbar */
+
+  overflow-x: hidden;
+
+}
+
+.gr-l-template {
+
+  //
+
+}
+
+.gr-l-page {
+
+  //
+
+}
+
+.gr-l-page, 
+.rl-l-template {
+
+  /* temporary min-width -- use until we get into responsiveness */
+
+  // min-width: $gr-component-min-width;
+
+}
+
+.gr-l-main {
+
+  padding: 2rem 0 4rem;
+  position: relative; /* "relative" is necesssary here -- provides constraint for "__content" element's pseudo element  */
+  z-index: 1; /* this element should be lower than the "gr-l-main" element */
+  flex: 1; /* helps keep footer "sticky" */
+  
+  &__inner {
+
+    margin: auto;
+    display: flex;
+
+    &--stacked {
+
+      flex-direction: column;
+
+    }
+
+    &--split {
+
+      flex-direction: row; 
+      max-width: calc(#{$gr-component-max-width} + 2rem); /* value takes padding into account -- this value should be in a variable */
+      padding: 0 1rem;
+      margin: auto; 
+
+      .gr-l-section {
+
+        margin: 0 0 2rem;
+
+      }
+
+      .gr-l-section--no-margin {
+
+        margin: auto; 
+        
+      }
+
+      .gr-l-section__inner {
+
+        padding: 0;
+
+      }
+
+    }
+  
+  }
+
+  &__side {
+
+    position: absolute;
+    z-index: 1;
+    left: -100%;
+    transition: all 300ms ease-out; /* speed value should be in variable -- shared with Slinky nav */
+    width: calc(100% - 2rem);
+
+    &--active {
+
+      left: 1rem;
+
+      & + .gr-l-main__content {
+
+        &:after {
+
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(000, 000, 000, .5); /* this value should be in a variable */
+  
+        }
+
+      }
+
+    }
+
+  }
+
+  &__content {
+
+    width: 100%;
+
+    &--inactive {
+
+      .gr-l-main__content-inner {
+
+        transform: scale(0.95); /* this value should be in a variable */
+      
+      }
+
+      &:after {
+
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: transparent;
+        transition: all 300ms ease-out; /* speed value should be in variable -- shared with Slinky nav */
+  
+      }
+
+    }
+
+  }
+
+  &__content-inner {
+
+    transition: all 300ms ease-out; /* speed value should be in variable -- shared with Slinky nav */
+    transform-origin: top center;
+
+  }
+
+  &--w-bg {
+
+    background: $gr-light-gray;
+
+  }
+
+  @include mq($gr-medium-breakpoint) {
+
+    &__side, 
+    &__side--active {
+
+      position: relative;
+      transition: none; 
+      left: auto; 
+      flex: 0 0 26%;
+      margin: 0 2rem 0 0;
+
+      & + .gr-l-main__content {
+  
+        &:after {
+
+          display: none;
+
+        }
+
+      }
+      
+    }
+
+    &__content, 
+    &__content--inactive {
+
+      transition: none; 
+
+      &:after {
+
+        display: none;
+
+      }
+
+    }
+
+    &__content-inner {
+
+      transform: none;
+
+    }
+
+  }
+
+  /* browser fallbacks */
+
+  /* In IE 11, the solution for the "sticky footer" is causing the footer to overlap other content. Reset "flex" property on ".gr-l-main" element to resolve. Footer will not be sticky in IE 11. */
+
+  .gr-mod-no-cssgrid & {
+
+    flex: auto;
+
+  }
+
+}

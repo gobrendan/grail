@@ -1,0 +1,49 @@
+{{# pic-box-set }}
+
+<div class="gr-c-pic-box-set {{ class }}">
+
+  {{# heading }}
+
+  <h1 class="gr-c-heading gr-c-pic-box-set__heading">
+
+    {{ heading }}
+    
+  </h1>
+
+  {{/ heading }}
+
+  <div class="gr-c-pic-box-set__content">
+
+    <div class="gr-c-pic-box-set__group">
+
+      {{# item }}
+
+      <div class="gr-c-pic-box-set__item">
+
+        {{> organisms-pic-box }}
+
+      </div>
+
+      {{/ item }}
+
+    </div>
+
+    {{# more-button }}
+
+    <div class="gr-c-pic-box-set__more">
+      <a class="gr-c-pic-box-set__more-link" href="">
+        <i class="gr-i-add gr-c-pic-box-set__more-icon">
+        </i>
+        <span class="gr-c-pic-box-set__more-text">
+          More
+        </span>
+      </a>
+    </div>
+
+    {{/ more-button }}
+
+  </div>
+
+</div>
+
+{{/ pic-box-set }}
